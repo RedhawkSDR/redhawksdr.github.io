@@ -1,6 +1,6 @@
 ---
 title: "Exploring SDRROOT Using the REDHAWK IDE"
-weight: 160
+weight: 170
 ---
 
 The REDHAWK IDE provides a visualization of the file system contained within the SDR Root in the **REDHAWK Explorer View** The `SDRROOT` is referred to within the IDE as the Target SDR. The Target SDR location may be changed from within the IDE preferences page.

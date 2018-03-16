@@ -39,7 +39,7 @@ To launch a REDHAWK component or device in the Sandbox:
 
 #### Releasing a Component/Device from the REDHAWK Sandbox
 
-There are two ways to release a component using the IDE and one to release a device:
+Releasing a resource invokes a graceful shutdown, which follows the object lifecycle sequence. Release makes a call to the resource’s `releaseObject()` method to initiate the sequence. There are two ways to release a component using the IDE and one to release a device:
 
   - Releasing using REDHAWK Explorer View:
 
@@ -53,7 +53,7 @@ There are two ways to release a component using the IDE and one to release a dev
 
 #### Terminating a Component from the REDHAWK Sandbox
 
-Sometimes a REDHAWK component fails to respond to input. In these cases the component may need to be terminated.
+Sometimes a REDHAWK component fails to respond to input. In these cases the component may need to be terminated. Terminate kills the processes of the resource.
 
 To terminate a component:
 

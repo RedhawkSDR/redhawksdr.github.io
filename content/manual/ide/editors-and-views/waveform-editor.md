@@ -5,7 +5,7 @@ weight: 20
 
 ![Waveform Editor](../../images/sadDiagram.png)
 
- To open the Waveform Editor, double-click a SAD file from the Project Explorer View. It presents all the content that can be found within the `sad.xml` file in an editing environment designed for ease of use. The Waveform Editor contains an **Overview**, **Properties**, **Diagram**, and a raw XML tab, which contains the SAD file content.
+ To open the Waveform Editor, double-click a SAD file from the Project Explorer View. It presents all the content that can be found within the `sad.xml` file in an editing environment designed for ease of use. The Waveform Editor contains an **Overview**, **Properties**, **Components**, **Diagram**, and a raw XML tab, which contains the SAD file content.
 
 ### Overview Tab
 

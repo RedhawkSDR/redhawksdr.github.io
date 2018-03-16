@@ -11,7 +11,7 @@ Each of the editor tabs, with the exception of the raw XML tabs, have the follow
 
   - **Generate All Implementations** Button: This button is used to generate the code implementation of the SPD file. The generated code is based on the code generator template that was chosen during the **New Project Wizard** and the content found within the SPD, PRF, and SCD files.
     {{% notice note %}}
-The code generators are not exhaustive. There are edge case port types that may not compile.
+Code generation is not exhaustive, and custom port types may not compile.
     {{% /notice%}}
   - **New Control Panel** Button: This button is used to generate a new control panel.
 
@@ -29,8 +29,8 @@ The following sections describe each of these tabs.
 The **Overview** tab is a representation of the content found within the SPD file and contains five sections:
 
 1.  The **General Information** section provides the ability to view and set (if write permissions are granted) the resource’s **ID** and **Name** as well as the location of the PRF and SCD files. The initial content of these fields is auto-generated when the project is created and is generally left unaltered. The optional fields, **Version**, **Title**, and **Description**, may be set to aid in the project’s documentation.
-2.  The **Interfaces** section lists the IDLs that this resource inherits. This includes IDLs used by the resource’s ports, lifecycle, and properties. This table is *read only*, and additional IDL interfaces cannot be added here.
-3. The Component Content section displays hyperlinks to navigate to the Properties and Implementations tabs of the SoftPkg Editor.
+2.  The **Project Documentation** section displays a Header hyperlink, which if clicked, provides the option to create and edit the file "HEADER" in the project. When code generation is performed, the header is applied to your project files.
+3.  The **Interfaces** section lists the IDLs that this resource inherits. This includes IDLs used by the resource’s ports, lifecycle, and properties. This table is *read only*, and additional IDL interfaces cannot be added here.
 4.  The **Testing** section displays two hyperlinks. **Launch a local component** launches a local instantiation of this resource within the Sandbox. **Launch a local component in debug mode** provides additional runtime control, including the ability to place breakpoints, pause execution, and inspect and modify variables. See [Debugging REDHAWK Components and Devices with Eclipse]({{< relref "manual/ide/debugging.md" >}}) for more information.
 5.  The **Exporting** section provides a hyperlink for deploying a project to the SDR Root.
     Use the following procedure to export a project using the **Export Wizard**:
@@ -46,7 +46,7 @@ The **Overview** tab is a representation of the content found within the SPD fil
 
 Within the **Properties** tab, the **All Properties** section displays all of the [properties]({{< relref "manual/components/creating-a-component.md#properties" >}}) defined for the component or device.
 
-To add a property, click on one of **Add Simple**, **Add Sequence**, **Add Struct** or **Add StructSeq** to create a new property of the corresponding type. To remove a property, select it in the **All Properties** section and click the **Remove** button on the right.
+To add a property, click on one of **Add Simple**, **Add Sequence**, **Add Struct** or **Add StructSeq** to create a new property of the corresponding type. To remove a property, select it in the **All Properties** section and click the **Remove** button on the right. To clone existing properties, click **Browse...** and select from items in the SDRROOT, projects in the workspace, or well-known properties.
 In addition to creating a new property from scratch, a user may also copy an existing property from a deployed resource:
 
 1.  In the **All Properties** Section, click **Browse…**.
@@ -56,8 +56,8 @@ In addition to creating a new property from scratch, a user may also copy an exi
 
 When a property is selected in the **All Properties** section, a type-specific details section appears on the right-hand side of the tab. All property types include a few common fields:
 
-  - **ID** is required, and must be unique within the component or device.
   - **Name** is optional, but if given, is favored over the **ID** for generated code.
+  - **ID** is an identifier that is unique from all other properties within the component or device. It must be used when accessing the property via APIs.
   - **Kind** describes the intended use of the property. The default is `property`.
   - **Mode** determines whether the property can be read and/or written. The default is `readwrite`.
   - **Description** is optional; it documents the intended use of the property. User interfaces may present the description as help text.

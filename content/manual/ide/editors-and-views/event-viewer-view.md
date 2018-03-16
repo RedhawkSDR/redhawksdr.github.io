@@ -5,6 +5,10 @@ weight: 80
 
 The **Event Viewer** view is used to listen to any event channel (for example, the default **IDM_Channel** or **ODM_Channel** for a domain) as well as message events emitted by **MessageEvent** ports. It also provides a means of filtering, sorting, and exporting the event traffic collected.
 
+The following figure displays the **Event Viewer View** for the ODM channel.
+##### Event Viewer View
+![The Event Viewer View](../../images/eventViewer.png)
+
 To listen to a channel from the REDHAWK Explorer View:
 
 1.  Expand the domain.
@@ -23,24 +27,23 @@ To listen to a channel from the **CORBA Name Browser View View**:
 
 3.  Right-click the desired channel, and select **Listen to Event Channel**.
 
-    The **Event Viewer View** for the selected channel is displayed, and new events are added to the table:
-    ##### Event Viewer View for ODM Channel
-    ![The Event Viewer View for the ODM Channel](../../images/eventViewer.png)
+    The **Event Viewer View** for the selected channel is displayed, and new events are added to the table.
+
+To listen to message events emitted by a uses (out) port from the Diagram tab:
+
+1.  Right-click the port and select **Listen to Message Events**.
+
+    The **Event Viewer View** for the selected port is displayed and the message events are added to the table.
 
 The controls in the upper right of the **Event Viewer View** provide the following functionality:
 
+  - To view details for events, click the **See Details** icon. The Properties tab is displayed with the all of the details for the selected event.
+  ##### Properties tab with Event Details for the ODM Channel
+  ![Properties tab with Event Details for the ODM Channel](../../images/eventviewer2.png)
+
+  - To stop listening to a channel, click the **Disconnect** icon.
   - To clear the logs, click the **Clear** icon.
-  - To ensure the view doesn’t scroll automatically to the top as new events are received, click the **Scroll Lock** icon.
-
-  - To customize the Table:
-    1.  Click the **Customize Table** icon.
-    2.  Enter the desired changes in the **Customize Table** Dialog.
-    3.  Click **OK**.
-
-  - To stop listening to a channel:
-    1.  From the **View Menu**, select **Remove…**.
-    2.  In the Dialog, select the channel listeners to remove.
-    3.  Click **OK**.
+  - To ensure the view does not scroll automatically to the top as new events are received, click the **Scroll Lock** icon.
 
 The controls at the bottom of the **Event Viewer View** enable the user to filter and search the event log.
 

@@ -37,6 +37,7 @@ Information that is covered in this file includes:
   - References to required services SPD files
   - The Domain Manager’s Naming Service name
   - Any required device connections
+  - Start order of the devices/services
 
 ### Nodes
 

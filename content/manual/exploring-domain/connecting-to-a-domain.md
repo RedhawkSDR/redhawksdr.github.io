@@ -60,23 +60,25 @@ To connect to a running domain through the IDE use the following procedure:
     ##### New Domain Manager
     ![New Domain Manager Dialog](../images/REDHAWK_New_Domain_Wizard.png)
 
-2.  Enter a **Display Name**. This is a unique name for the domain and does not need to match the name used to register the domain on the Naming Service.
+2.  Enter the Name Service. This is the CORBA URI of the Naming Service where the domain is registered. By default, this is populated with the value from the IDE’s preferences (set by selecting **Window > Preferences**, **REDHAWK > Domain Connections**, **Default Naming Service**).
 
-3.  Enter a **Domain Name**. This is the name of the domain on the Naming Service. By default this field is populated with the value from the **Display Name** field.
+3.  To specify the domain to which you want to connect, chose one of the following options:
 
-4.  Enter the **Name Service**. This is the CORBA URI to the desired Naming Service. By default this is populated with the value from the IDE’s properties (i.e. **Window > Preferences**, **REDHAWK > Domain Connections**, **Default Naming Service**).
+      - Enter a **Display Name** and a **Domain Name**. The Display Name is a used only in the IDE and does not need to match the Domain Name. The Domain Name is the actual name of the domain in the Naming Service.
 
-5.  Click one of the following options under **Connection Settings**:
+      - Wait for the IDE to scan the name service for running domains. When the button next to **Display Name** shows a + icon, click it and select a running domain from the list.
 
-      - **Don’t connect**: This adds the domain to the REDHAWK Explorer View but leaves the domain in the disconnected state. When the IDE is restarted, the domain remains in the **REDHAWK Explorer** and is in the disconnected state. After adding a disconnected domain to the **REDHAWK Explorer View**, the domain may be connected by right-clicking the domain and selecting **Connect**.
+4.  Click one of the following options under **Connection Settings**:
 
-      - **Connect Once**: This adds the domain to the REDHAWK Explorer View and connects the IDE with the domain. When the REDHAWK IDE is restarted, the domain remains in the **REDHAWK Explorer** but is in the disconnected state.
+      - **Don’t connect**: This adds the domain to the **REDHAWK Explorer View** but leaves the domain in the disconnected state. When the IDE is restarted, the domain remains in the **REDHAWK Explorer** and is in the disconnected state. After adding a disconnected domain to the **REDHAWK Explorer View**, the domain may be connected by right-clicking the domain and selecting **Connect**.
 
-      - **Always Connect**: This adds the domain to the REDHAWK Explorer View and connects the IDE with the domain. When the REDHAWK IDE is restarted, the domain remains in the **REDHAWK Explorer** and attempts to connect with this domain.
+      - **Connect Once**: This adds the domain to the **REDHAWK Explorer View** and connects the IDE with the domain. When the **REDHAWK IDE** is restarted, the domain remains in the **REDHAWK Explorer** but is in the disconnected state.
 
-6.  Select **Finish** to close the wizard.
+      - **Always Connect**: This adds the domain to the **REDHAWK Explorer View** and connects the IDE with the domain. When the **REDHAWK IDE** is restarted, the domain remains in the **REDHAWK Explorer** and attempts to connect with this domain.
 
-7.  The domain now appears in the REDHAWK Explorer View. If **Connect Once** or **Always Connect** was chosen, the domain is connected. If **Don’t Connect** was selected, right-click the domain and select **Connect**.
+5.  Select **Finish** to close the wizard.
+
+6.  The domain now appears in the **REDHAWK Explorer View**. If **Connect Once** or **Always Connect** was chosen, the domain is connected. If **Don’t Connect** was selected, right-click the domain and select **Connect**.
 
     {{% notice tip %}}
 Many of these options may be changed later through the Properties View.

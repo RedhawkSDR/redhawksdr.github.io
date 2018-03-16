@@ -11,7 +11,7 @@ The Domain Manager and Device Manager normally remain running during the creatio
 
 Below is a description of how to create a waveform:
 
-1.  Select **File > New > REDHAWK waveform Project**
+1.  Select **File > New > REDHAWK Waveform Project**
 
 2.  Set the **Project name** to *demo*
 
@@ -21,29 +21,29 @@ This opens an editor on the `demo.sad.xml` file.
 
 To add components to this waveform:
 
-1.  Select the **Diagram** tab
+1.  Select the **Diagram** tab.
 
-2.  In the **Palette**, drag the `SigGen` component onto the diagram
+2.  In the **Palette**, drag the `SigGen` component onto the diagram.
 
-3.  In the **Palette**, drag the `HardLimit` component onto the diagram
+3.  In the **Palette**, drag the `HardLimit` component onto the diagram.
 
-4.  Drag a connection between the `SigGen_1` **dataFloat_out** port and the `HardLimit_1` **dataFloat_in** port
+4.  Drag a connection between the `SigGen_1` **dataFloat_out** port and the `HardLimit_1` **dataFloat_in** port.
 
 5.  The waveform looks like :
     ##### Demo Waveform
     ![Demo Waveform](../images/Demo_waveform.png)
 
-6.  If `SigGen_1` does not have a yellow 0, right-click the component and select **Set As Assembly Controller**
+6.  If `SigGen_1` does not have a yellow 0, right-click the component and select **Set As Assembly Controller**/
 
-7.  Press `Ctrl+S` to save or select **File > Save**
+7.  Press `Ctrl+S` to save or select **File > Save**.
 
-8.  Close the waveform editor by selecting the **X** or by selecting **File > Close All**
+8.  Close the waveform editor by selecting the **X** or by selecting **File > Close All**.
 
 ### Export the Waveform
 
 Below is a description of how to export the waveform in the IDE:
 
-1.  In the Project Explorer View (typically on the left-side) select *demo*
+1.  In the Project Explorer View (typically on the left-side) select *demo*.
 
 2.  Drag the *demo* project onto the **Target SDR** in the REDHAWK Explorer View.
 

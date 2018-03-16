@@ -1,6 +1,6 @@
 ---
 title: "Sharing REDHAWK Projects With Others"
-weight: 150
+weight: 160
 ---
 
 The REDHAWK IDE provides a set of tools that allow for the collaborative development of REDHAWK capabilities. Projects can be exported or imported from the IDE or can be shared via a source code version-control system. The base REDHAWK IDE installation includes support for [CVS]({{< relref "manual/appendices/acronyms.md#cvs" >}}), and Git and can easily be extended to include support for other systems, such as Mercurial.

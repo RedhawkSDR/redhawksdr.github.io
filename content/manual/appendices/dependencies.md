@@ -118,7 +118,7 @@ The following dependencies are required for development with the REDHAWK Framewo
   - `cppunit-devel`
   - `expat-devel`
   - `gcc-c++`
-  - `java-1.7.0-openjdk-devel`
+  - `java-1.8.0-openjdk-devel`
   - `junit4`
   - `python-devel`
   - `python-matplotlib`
@@ -141,7 +141,7 @@ sudo yum install libuuid-devel \
      cppunit-devel \
      expat-devel \
      gcc-c++ \
-     java-1.7.0-openjdk-devel \
+     java-1.8.0-openjdk-devel \
      junit4 \
      python-devel \
      python-matplotlib \
@@ -165,7 +165,7 @@ sudo yum install libuuid-devel \
   - `autoconf automake libtool`
   - `expat-devel`
   - `gcc-c++`
-  - `java-1.7.0-openjdk-devel`
+  - `java-1.8.0-openjdk-devel`
   - `python-devel`
   - `python-matplotlib-qt4`
   - `numpy`
@@ -190,7 +190,7 @@ sudo yum install gstreamer-python \
      autoconf automake libtool \
      expat-devel \
      gcc-c++ \
-     java-1.7.0-openjdk-devel \
+     java-1.8.0-openjdk-devel \
      python-devel \
      python-matplotlib-qt4 \
      numpy \

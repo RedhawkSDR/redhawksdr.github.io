@@ -67,9 +67,11 @@ The following Python code demonstrates a successful allocation using the allocat
 
 For allocations against an FEI device, the `allocatedDevice` member of the `AllocationStatusType` can be used to inspect the tuner status structure. The tuner status structure provides the actual values that were allocated, which may be different from what was originally requested.
 
-#### Inspecting Allocations
+#### Inspecting Allocations through the Python Sandbox
 
-Any allocation made through the Allocation Manager is available for inspection. Inspecting the current allocations is simple through the Python Sandbox. First, a reference to the running domain is needed. From the Domain Manager, the Allocation Manager can be retrieved:
+To inspect the current allocations through the Python Sandbox:
+
+First, a reference to the running domain is needed. From the Domain Manager, the Allocation Manager can be retrieved:
 
 ```py
  >>> from ossie.utils import redhawk
@@ -81,6 +83,7 @@ If no applications are running, an application must be specified.
 
 ```py
  >>> domain.createApplication('/waveforms/rh/basic_components_demo/basic_components_demo.sad.xml','hello')
+ <ossie.utils.redhawk.core.App object at 0x33092d0>
 ```
 
 In this case, the default `basic_components_demo` application was selected. This application instance was given the name "hello" to simplify the subsequent output.
@@ -105,6 +108,33 @@ Each allocation description returned is a `CF.AllocationManager.AllocationStatus
 ```
 
 In this example, `allocationProperties` is an empty list because the deployment required the device to match an allocation requirement and no explicit capacity allocation was made. The source ID is a concatenation of the application’s `sad.xml` file `softwareassembly id` (the file’s globally unique identifier), a ":", and the application name followed by an instance number.
+
+### Inspecting Allocations using the IDE
+
+To inspect the current allocations using the IDE:
+
+1.  In the REDHAWK Explorer view, right-click a Domain Manager and select **Allocation Manager**.
+
+    The Allocation Manager view is displayed. The following figure displays the allocation manager view based on the results of following the instructions in [Inspecting Allocations through the Python Sandbox](#inspecting-allocations-through-the-python-sandbox)
+
+    ##### Allocation Manager
+    ![Allocation Manager](../images/AllocationManager.png)
+2.  To view the allocation properties associated with an allocation, select the allocation in the Allocation Manager view.
+
+    The Properties view displays the allocation properties.
+
+    The following figure displays the allocation properties from an FEI device allocation.
+
+    ##### Allocation Manager Properties
+    ![Allocation Manager Properties](../images/AllocMgrPropertiesView.png)
+3.  To view the device associated with an allocation, from the Allocation Manager view, right-click the allocation and select **Find Device**.
+
+    The device is highlighted in the REDHAWK Explorer View.
+
+4.  To view the Device Manager associated with an allocation, from the Allocation Manager view, right-click the allocation and select **Find Device Manager**.
+
+    The Device Manager is highlighted in the REDHAWK Explorer View.
+
 
 #### Delegating Allocations
 

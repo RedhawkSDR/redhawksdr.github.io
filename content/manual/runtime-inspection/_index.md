@@ -2,7 +2,7 @@
 title: "Runtime Environment Inspection"
 tags:
   - sandbox
-weight: 120
+weight: 130
 ---
 
 During runtime, there are a large number of operations that are handled under the hood by the REDHAWK Core Framework. At times though, it becomes necessary to take a closer look at these underlying parts to ensure that they are working properly or to inspect what kind of a state they are currently in. REDHAWK provides tools to help accomplish this task.
@@ -198,7 +198,63 @@ The device list is the concatenation of the devices for all Device Managers.
 
 The REDHAWK module `device` class supports the same interfaces as Sandbox devices.
 
-### Using With the Sandbox
+#### Event Channels
+
+[Event Channels]({{< relref "manual/glossary/_index.md#event-channel" >}}) can be accessed through the `eventChannels` member of the domain object. Each of the returned objects contains the name of the channel and a reference to the channel object.
+
+```py
+>>> evt = dom.eventChannels
+>>> evt[0].name
+ODM_Channel
+>>> evt[0].ref
+<CosEventChannelAdmin._objref_EventChannel object at 0x1608550>
+```
+
+Event Channels can be created through the [Event Channel Manager]({{< relref "manual/glossary/_index.md#event-channel-manager" >}}):
+
+```py
+>>> channel = dom.eventChannelMgr.create("TestChan")
+```
+
+Subscribers and publishers to event channels can also be created in the Python Sandbox. They can be created as entities in the Python environment, with the constructor argument being the channel that they are to publish or subscribe to.
+
+```py
+>>> from ossie.events import Subscriber, Publisher
+>>> def my_callback(data):
+       print data
+>>> sub=Subscriber(evt[0], dataArrivedCB=callback)
+>>> pub=Publisher(evt[0])
+>>> pub.push(data)
+```
+
+#### Managing Allocations
+
+The domain has an [Allocation Manager]({{< relref "manual/glossary/_index.md#allocation-manager" >}}) that allows the developer to offload some of the bookkeeping tasks associated with capacity allocation. Interactions with the Allocation Manager are exercised through requests and responses. The Allocation Manager responds to requests by searching through all available devices to find Devices that can satisfy the request. An example of interactions with the Allocation Manager follows:
+
+```py
+>>> am = dom.allocationMgr
+>>> from ossie.utils import allocations
+>>> prop =  allocations.createProps({'s_prop':{'s_prop::a':'hello','s_prop::b':5}})
+>>> request = am.createRequest('request id', prop)
+>>> response = am.allocate([request])
+>>> am.listAllocations(CF.AllocationManager.LOCAL_ALLOCATIONS, 100)
+[...]
+>>> am.deallocate([response[0].allocationID])
+```
+
+#### Managing Connections
+
+While it is simple to establish point-to-point connections, sometimes it is desirable for a connection to be established as domain objects come and go. To manage these types of connections, the domain contains a Connection Manager. Helpers have been created to make it easy to create endpoints from Python objects connected to domain objects.
+
+```py
+>>> from ossie.utils import rhconnection
+>>> endpoint_1 = rhconnection.makeEndPoint(dom.apps[0], dom.apps[0].ports[0].name)
+>>> endpoint_2 = rhconnection.makeEndPoint(dom.apps[1], '')
+>>> cm = dom.connectionMgr
+>>> cm.connect(endpoint_1, endpoint_2)
+```
+
+### Using the Sandbox
 
 As shown briefly in section [Applications](#applications), Sandbox and domain objects are inter-operable and can be connected together. This allows for inspection of different parts of the domain and more sophisticated testing of components.
 

@@ -186,3 +186,40 @@ Once these dependencies have been declared, port connections can be made in the 
   </connectinterface>
 </connections>
 ```
+
+### HostCollocation and *usesdevice* Relationship
+
+To further refine the deployment of an Application, the SAD file allows for the specification of a usesdeviceref within the context of a HostCollocation. If a HostCollocation is defined with a set of Components and a usesdeviceref, all the Components can be deployed on the ExecutableDevice that resides on the same host as the Device that was satisfied by the usesdevicedependency section.
+
+```xml
+<hostcollocation name="collocation_1">
+  <componentplacement>
+    <componentfileref refid="Component_1"/>
+    <componentinstantiation id="Component_1" startorder="0">
+      <usagename>Component_1</usagename>
+      <findcomponent>
+        <namingservice name="Component_1"/>
+      </findcomponent>
+    </componentinstantiation>
+  </componentplacement>
+  <usesdeviceref refid="uses_device_2"/>
+</hostcollocation>
+```
+
+To add a *usesdevice* to or remove a *usesdevice* from a host collocation:
+
+1.  Double-click the the host collocation area.
+
+    The **Edit Host Collocation** dialog is displayed.
+
+    ##### Edit Host Collocation
+    ![Edit Host Collocation](../images/EditHostCollocation.png)
+
+2.  To add a Device, under **Available uses devices**, select the Device, click **Add**, and click **Finish**. The Device is added to the host collocation.
+
+    ##### Host Collocation Including a *usesdevice*
+    ![Host Collocation Including a *usesdevice*](../images/hostcollocationusesdeviceref.png)
+
+3.  To remove a Device, under **Collocated uses devices**, select the Device, click **Remove**, and click **Finish**. The Device is removed.
+    ##### Host Collocation without a *usesdevice*
+    ![Host Collocation without a *usesdevice*](../images/hostcollocationwithoutusesdevice.png)

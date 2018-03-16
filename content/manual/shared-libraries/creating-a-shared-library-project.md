@@ -1,6 +1,6 @@
 ---
 title: "Creating a REDHAWK Shared Library Project"
-weight: 80
+weight: 10
 ---
 
 The **REDHAWK Shared Library Project Wizard** enables users to quickly create a C++ shared library for use in REDHAWK. In the wizard, the user specifies the project name and can then generate a simple set of code files to begin adding in library functions. The following procedure explains how to use the **Shared Library Project Wizard**.
@@ -17,11 +17,11 @@ The **REDHAWK Shared Library Project Wizard** enables users to quickly create a 
     ##### Create a REDHAWK Shared Library Project
     ![Create a REDHAWK Shared Library Project Dialog](../images/NewSharedLibraryProject.png)
 
-3.  In the **Project name** field, enter a project name.
+3.  In the **Project Name** field, enter a project name.
 
 4.  Click **Finish**.
 
-    The Shared Library Project is created and the Overview tab is displayed:
+    The Shared Libary Project is created and the Overview tab is displayed.:
     ##### Shared Library Project Overview
     ![The Shared Library Project Overview tab](../images/SharedLibProjOverview.png)
 

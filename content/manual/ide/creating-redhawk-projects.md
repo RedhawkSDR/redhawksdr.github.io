@@ -114,7 +114,7 @@ If you upgrade to REDHAWK version 2.0, and your custom IDL project references th
 
 ### REDHAWK Node Project
 
-The **New node Project Wizard** is a one to two page wizard that walks the user through creating a new REDHAWK node and optionally, placing devices into the new node. Fields common to all new project wizards are defined in [Common Fields](#common-fields).
+The **New Node Project Wizard** is a one to two page wizard that walks the user through creating a new REDHAWK node and optionally, placing devices/services into the new node. Fields common to all new project wizards are defined in [Common Fields](#common-fields).
 
 Page one of the wizard contains:
 
@@ -126,7 +126,7 @@ Page one of the wizard contains:
 
 The wizard may be completed at this point by clicking **Finish** or the user may continue to the optional second page.
 
-On page two the user chooses what devices make up this node. This may be changed after the node’s creation from the node’s Editor.
+On page two the user chooses what devices/services make up this node. This may be changed after the node’s creation from the node’s Editor.
 
 Select **Finish** to complete the new project creation wizard.
 
@@ -166,7 +166,7 @@ Select **Finish** to complete the new project creation wizard.
 
 ## REDHAWK Shared Library Project
 
-The [**REDHAWK Shared Library Project Wizard**]({{< relref "manual/component-structure/create-shared-library.md" >}}) enables users to quickly create a C++ shared library for use in REDHAWK. In the wizard, the user specifies the project name and can then generate a simple set of code files to begin adding in library functions.
+The [**REDHAWK Shared Library Project Wizard**]({{< relref "manual/shared-libraries/creating-a-shared-library-project.md" >}}) enables users to quickly create a C++ shared library for use in REDHAWK. In the wizard, the user specifies the project name and can then generate a simple set of code files to begin adding in library functions.
 
 ## REDHAWK Waveform Project
 

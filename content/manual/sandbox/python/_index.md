@@ -62,3 +62,19 @@ In non-interactive scripts, the Python interpreter exits after the last statemen
 {{% notice note %}}
 When using plots, calling `raw_input()` instead of `time.sleep()` allows the UI thread to continue updating.
 {{% /notice %}}
+
+Items launched in the Sandbox are registered in the Sandbox’s internal state. To view the items that are deployed in the Sandbox, use the `show` command:
+
+ ```py
+ >>> sb.show()
+ ```
+
+ The items shown by the `show` command are referenced by a unique name. To recover an item by its Sandbox internal name, use the `getComponent` function:
+
+ ```py
+ >>> comp = sb.getComponent("name")
+ ```
+
+#### Connecting to a Running Domain
+
+ The Python Sandbox allows a developer to not only launch components, but it also allows one to interact with a live Domain. This is accomplished through the [redhawk package]({{< relref "manual/runtime-inspection/_index.md#redhawk-module" >}}).

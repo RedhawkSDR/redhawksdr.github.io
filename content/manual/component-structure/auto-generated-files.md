@@ -27,7 +27,7 @@ The code generators create the following files for building and installing the c
 
   - `build.sh` - Two of these files are generated: one of them resides in the top-level component directory and the other resides in the source directory. The first of the two calls the `build.sh` script in the source directory.
 
-    The `build.sh` script in the source directory runs `./reconf; ./configure; make`. The Autotools documentation can provide more information on these commands: in short, this process creates the component executable.
+    The `build.sh` script in the source directory runs `./reconf; ./configure; make`. The Autotools documentation can provide more information on these commands: in short, this process creates the component entry point.
 
     {{% notice note %}}
 If you use this script, you must install the dependency rpm-build by entering the following command: `sudo yum install rpm-build`.
@@ -48,7 +48,7 @@ If you use this script, you must install the dependency rpm-build by entering th
 
   - `componentName.scd.xml` - Describes the component’s ports and interfaces. More information on the component’s `scd.xml` file can be found in the REDHAWK specification.
 
-  - `componentName.spd.xml` - Provides a top-level description of the component, including the names and locations of the component executable and XML files. More information on the component’s `spd.xml` file can be found in the REDHAWK specification.
+  - `componentName.spd.xml` - Provides a top-level description of the component, including the names and locations of the component entry point and XML files. More information on the component’s `spd.xml` file can be found in the REDHAWK specification.
 
 ### Unit Tests File
 
@@ -72,7 +72,7 @@ If you use this script, you must install the dependency rpm-build by entering th
 
 If these files are modified, then your ability to regenerate the component is affected.
 
-  - `main.cpp` - Contains the main routine for the process that is started when the component is instantiated. Modification of this file is not recommended.
+  - `main.cpp` - Contains the function that is used to create an instance of the component. For shared library components, this is a dynamically-loadable function called `make_component()`. For executable components, this is the `main()` function for the process. Modification of this file is not recommended.
 
   - `struct_props.h` - Contains support classes for struct properties that are defined in the code-generation interface. Modification of this file is discouraged.
 

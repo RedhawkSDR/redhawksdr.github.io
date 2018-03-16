@@ -74,6 +74,24 @@ If the connections are ambiguous (multiple uses ports or multiple provides ports
 >>> my_comp.connect(another_comp, providesPortName="float_in_1")
 ```
 
+#### Connection Manager
+
+A REDHAWK DomainManager contains a Connection Manager that provides systemic benefits for the management of connections between endpoints that can come and go. The underlying endpoints are specialized data strutures and CORBA references required to complete the connection, which complicates the creation of endpoints. The Python Sandbox already contains Pythonic representations of these Domain objects, which reduce the need to retrieve the CORBA references. The Python Sandbox contains helpers that use these representations for the creation of endpoints.
+
+```py
+>>> from ossie.utils import rhconnection
+>>> dom = redhawk.attach()
+>>> app = dom.createApplication('/waveforms/my_app/my_app.sad.xml')
+>>> dev = dom.devices[0]
+>>> uses = rhconnection.makeEndPoint(app, 'out_portname')
+>>> prov = rhconnection.makeEndPoint(dev, 'in_portname')
+>>> dom.getConnectionMgr().connect(uses,prov,'user_id','connection_id')
+```
+
+#### Sending and Receiving Data
+
+Multiple [helpers]({{< relref "manual/sandbox/python/sources-and-sinks.md" >}}) are available in the Sandbox that can be connected to running components and devices.
+
 #### Setting Component Log Levels
 
 The log level of the component may be set using the `execparams` argument in the component constructor.

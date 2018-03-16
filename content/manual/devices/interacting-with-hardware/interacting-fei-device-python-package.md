@@ -19,7 +19,13 @@ To connect to an allocated tuner, use the allocation ID as the connection id:
 >>> dev.connect(comp, connectionId="someid")
 ```
 
-where `comp` is a reference to the component being connected to an allocated tuner.
+where `comp` is a reference to the component being connected to an allocated tuner. If the connection id corresponding to an allocation is not provided and the possible sources of data are not ambiguous, the Python package will create a connection that delivers the allocated stream.
+
+When a device contains a single allocated tuner and there is a single output bulkio port, it is possible to unambiguously determine what tuner to connect to and over which Port to connect. In such instances, the Python package creates a listener allocation against the allocated tuner and establishes a connection between the FEI device and the destination using the listener allocation id as the connection id. The created listener enables the owner of the allocation to establish a connection to the data source with the given allocation id. When the connection is removed, the Python package automatically deallocates the listener allocation. In such instances, the following call can be used to connect:
+
+```py
+>>> dev.connect(comp)
+```
 
 To deallocate the tuner, use the following call:
 

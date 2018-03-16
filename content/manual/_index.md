@@ -1,5 +1,5 @@
 ---
-title: "REDHAWK Manual - 2.0.9"
+title: "REDHAWK Manual - 2.1.3"
 weight: 10
 alwaysopen: true
 ---

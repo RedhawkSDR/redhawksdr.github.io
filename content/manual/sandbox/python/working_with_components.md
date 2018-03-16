@@ -23,6 +23,7 @@ The `catalog()` command displays which components, devices, and services are ava
 >>> sb.catalog(objType="devices")
 >>> sb.catalog(objType="services")
 ```
+An alternative to `catalog()` is `browse()`. The function `browse()` provides formatted human-readable text that describes the items that are installed on the system rather than the computer-friendly list that `catalog()` provides.
 
 The `api()` method displays the ports and properties for a running component:
 
@@ -82,13 +83,26 @@ By default, the Sandbox selects the first component implementation whose entry p
 
 The Sandbox includes limited support for attaching a debugger to a component process. The debugger console opens in a new XTerm window to allow continued interaction on the Sandbox console.
 
-To launch a component and attach gdb to the process, enter the following command:
+In the case of C++, to launch a component and attach `gdb` to the process, enter the following command:
 
 ```py
 >>> my_comp = sb.launch("./MyComponent.spd.xml", debugger="gdb")
 ```
 
-The component and gdb are run in separate processes. Exiting gdb closes the window, but the component continues to function.
+ The component and `gdb` are run in separate processes. Exiting gdb closes the window, but the component continues to function.
+
+ The debugger argument also supports `jdb` (Java), `pdb` (Python), and `valgrind` (Valgrind, a tool used for diagnostics such as memory leak detection).
+
+ To provide arguments to the supported debuggers, the debugger needs to be instantiated outside the scope of the launch function. For example, to perform a full leak check using Valgrind, use the following argument:
+
+ ```py
+ >>> from ossie.utils.sandbox.debugger import GDB, JDB, PDB, Valgrind
+ >>> vg_option = {'--leak-check':'full'}
+ >>> vg = Valgrind(**vg_option)
+ >>> my_comp = sb.launch("./MyComponent.spd.xml", debugger=vg)
+ ```
+
+ If incorrect arguments are passed, the component fails to deploy. Note that the Python debugger does not take arguments.
 
 #### Properties
 
@@ -215,3 +229,14 @@ The Sandbox generates a low-level CORBA `configure()` call each time a property 
 ```
 
 The keys may be either the property names or ids. The values are converted in the same manner as setting the individual property directly.
+
+#### Property Listener
+
+ It is possible to asynchronously listen to changes in properties such that it is not necessary to poll the component to see the state of a particular property. This is done through property change listeners. To implement this listener, create a property change listener and register it with the component. Note that the listener can be a local object or an eventchannel
+
+ ```py
+ >>> def property_change_callback(self, event_id, registration_id, resource_id, properties, timestamp):
+         print event_id, registration_id, resource_id, properties, timestamp
+ >>> listener = sb.PropertyChangeListener(changeCallbacks={'prop_1':callback_fn})
+ >>> comp.registerPropertyListener(listener, ['prop_1'], 0.5)  # check the property every 0.5 seconds
+ ```

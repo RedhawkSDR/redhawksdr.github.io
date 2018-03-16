@@ -1,6 +1,6 @@
 ---
 title: "Distributed Computing and RF Devices"
-weight: 20
+weight: 30
 ---
 
 ### Dependencies
@@ -44,6 +44,26 @@ The user can force components to deploy to specific GPPs. To force a specific pl
 #### The Deployment Process
 
 The runtime environment scans all non-busy executable devices registered in the domain to determine which GPP matches the processor/operating system dependency. A device is busy when its state is returned as **BUSY**, otherwise it is either **IDLE** or **ACTIVE**. When a device is found that satisfies all component dependencies, it marks that device as assigned to the deployment of that component and moves on to whatever other components make up the waveform. Once all components have been found an assigned GPP, the components are deployed to all those GPPs.
+
+#### Binding a Component’s Deployments to Executable Devices
+
+When deploying Components, you may want to bind a Component’s deployment to a specific Executable Device without going through the allocation process. For more information about binding a Component’s deployment to an Executable Device, refer to . The Node definition file (DCD) provides the necessary `deployerrequires` id/value pairs to be associated with an Executable Device. These id/value pairs are alphanumeric strings that are matched during a Component’s deployments. If a Component defines a set of `devicerrequires`, then the Domain is searched for ExecutableDevices that have a matching set. For Components that do not have an id/value set, but request to deploy on an ExecutableDevice with an id/value set, that request for deployment fails.
+
+The following example describes the new xml elements `deployerrequires` that can be assigned to a GPP device (ExecutableDevice):
+
+```xml
+<!-- example of ID/value pairs for a GPP in a DCD file
+<componentplacement>
+  <componentfileref refid="GPP1_SPD_1"/>
+  <componentinstantiation id="RED_NODE:GPP_1">
+     <usagename>RED_NODE:GPP_1</usagename>
+     <deployerrequires>
+         <requires id="color" value="RED"/>
+         <requires id="rank" value="15"/>
+     </deployerrequires>
+  </componentinstantiation>
+</componentplacement>
+```
 
 #### Distribution of Files
 

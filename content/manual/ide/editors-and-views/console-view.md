@@ -3,7 +3,7 @@ title: "Console View"
 weight: 120
 ---
 
-The **Console** view is a part of Eclipse and the basic use is well documented by the [Eclipse documentation](http://help.eclipse.org/mars/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fconsole%2Fref-console_view.htm). The REDHAWK IDE uses multiple consoles for different purposes.
+The **Console** view is a part of Eclipse and the basic use is well documented by the [Eclipse documentation](http://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fconsole%2Fref-console_view.htm). The REDHAWK IDE uses multiple consoles for different purposes.
 
 The primary consoles found in the REDHAWK IDE are:
 

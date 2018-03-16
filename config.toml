@@ -13,7 +13,7 @@ canonifyURLs = true
 copyright = "&copy; 2012-{year}"
 
 [params]
-rhver = "2.0.9"
+rhver = "2.1.3"
 editURL = ""
 showVisitedLinks = true # default is false
 themeStyle = "flex" # "original" or "flex" # default "original"

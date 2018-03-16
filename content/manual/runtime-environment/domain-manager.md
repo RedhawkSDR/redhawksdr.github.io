@@ -48,7 +48,7 @@ Capabilities are managed through a series of data structure sequences. Lists are
 By default the Domain Manager will output messages to the console. You can provide a custom logging configuration file and logging level using the following options:
 
 ```bash
-nodeBooter -D -logcfgfile <config file>  -debug <5=TRACE,4=DEBUG,3=INFO,2=WARN,1=ERROR,0=FATAL>
+nodeBooter -D -endlogcfgfile <config file>  -enddebug <5=TRACE,4=DEBUG,3=INFO,2=WARN,1=ERROR,0=FATAL>
 ```
 
 This file location will be used as the default value when resolving the `LOGGING_CONFIG_URI` as well as the `DEBUG_LEVEL` during deployments. For further details about logging configuration files and `LOGGING_CONFIG_URI` resolution, consult [Logging]({{< relref "manual/logging/_index.md">}}).
@@ -69,4 +69,10 @@ With this feature enabled, all bookkeeping data structures that are used to main
 nodeBooter -D --dburl $SDRROOT/dom/persistence.sqlite
 ```
 
-Then, upon failure of the Domain Manager, all IDs and references to objects within it domain are stored. Since these objects themselves are actually separate processes, the Domain Manager can be relaunched with the same arguments, and it is restored to the previous state. When the Domain Manager gets launched, it calls the `restoreState()` function with a file path string as an argument. It then opens the given database file and attempts to parse out any stored information in order to reconnect those processes with the domain. Once this is finished, the domain is rebuilt to the state it was in before it died.
+Then, upon failure of the Domain Manager, all ids and references to objects within it domain are stored. Since these objects themselves are actually separate processes, the Domain Manager can be relaunched with the same arguments, and it is restored to the previous state. When the Domain Manager gets launched, it calls the `restoreState()` function with a file path string as an argument. It then opens the given database file and attempts to parse out any stored information in order to reconnect those processes with the domain. Once this is finished, the domain is rebuilt to the state it was in before it died.
+
+#### System-Wide Reset
+
+When persistence is enabled and the Domain Manager suffers a catastrophic failure, the data storage functions may lose synchronization. (For example, the Naming Service may be out of sync with the object database.) If this occurs, it is necessary to erase the database, clean out the Event Service, and clean out the Naming Service. In such instances, the Device Managers that are operating in the system, which may span multiple computers, also need to be reset to an idle state.
+
+To deal with such instances, each Device Manager contains a separate thread that checks to see if the Domain Manager contains a reference to this Device Manager. If the reference is missing, the Device Manager assumes that the Domain Manager has been restarted to a blank state, and the Device Manager resets itself (as well as all devices and services that it controls). After resetting itself, the Device Manager re-associates with the Domain Manager. The frequency with which the Device Manager checks with the Domain Manager is controlled by the Device Manager property, `DOMAIN_REFRESH`. This property’s default value is 10 seconds but can be set to any system-appropriate setting.

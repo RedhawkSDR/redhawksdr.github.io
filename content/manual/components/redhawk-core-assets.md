@@ -48,6 +48,7 @@ The following Basic components have been updated to use the new shared library d
 | **Device**          | **Version** | **Description**   |
 | :------------------ | :---------: | :------- |
 | `rh.FmRdsSimulator` |     2.0     | Designed to be used in conjunction with the `libRfSimulators` library. Using the simulator library, this FrontEnd Interfaces compliant REDHAWK device will generate FM modulated mono or stereo audio with RDS encoded PI (Call Sign), PS (Short Text), and RT (Full Text) data. |
+| `rh.MSDD`           |     3.0     | FrontEnd Interfaces compliant device for the MSDD-X000 series receivers. Supports multiple FPGA loads for the target hardware. The device provides an RX_DIGITIZER and an RX_DIGITIZER_CHANNELIZER capability.  |
 | `rh.RTL2832U`       |     2.0     | Interfaces with the Realtek RTL2832U usb dongle device using the `librtlsdr` Device dependency. Supports various tuners, including Elonics E4000, Rafael Micro R820T and R828D, Fitipower FC0012 and FC0013, and FCI FC2580.   |
 | `rh.USRP_UHD`       |     4.0     | FrontEnd Interfaces compliant device for the USRP that requires the UHD host code and supporting libraries to be installed. |
 

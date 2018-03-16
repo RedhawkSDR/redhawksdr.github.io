@@ -1,6 +1,6 @@
 ---
 title: "Sandbox"
-weight: 100
+weight: 110
 ---
 
 [Components can run]({{< relref "manual/components/running-a-component.md" >}}) in either the sandbox or in a domain. The Sandbox is an environment to run components and devices without artifacts like a domain, device manager, name service, or event service.

@@ -1,6 +1,6 @@
 ---
 title: "Nodes"
-weight: 90
+weight: 100
 ---
 In [The Runtime Environment]({{< relref "manual/runtime-environment/_index.md" >}}), the [Device Manager]({{< relref "manual/glossary/_index.md#device-manager" >}}) is introduced along with its primary role: to deploy and manage [device]({{< relref "manual/glossary/_index.md#device" >}}) proxies in whatever host the Device Manager has been launched. The term [Node]({{< relref "manual/glossary/_index.md#node" >}}) is used to refer to the Device Manager and its associated devices and [services]({{< relref "manual/glossary/_index.md#service" >}}).
 

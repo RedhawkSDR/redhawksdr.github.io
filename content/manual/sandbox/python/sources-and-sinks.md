@@ -65,35 +65,28 @@ The default message ID is `sb_struct`:
 
 #### Data Sinks
 
-The Sandbox provides a `DataSink` module, which simply reads data from a uses (output) port. Below is an example instantiation and use of the `DataSink` module. In this example, data sent from `myComponent`’s uses (output) port is written to the `received_data` variable.
-
-SRI associated with the packet can be viewed using the `SRI()` method:
+The Sandbox provides a `DataSink` module, which simply reads data from a uses (output) port. Below is an example instantiation and use of the `DataSink` module. In this example, data sent from `myComponent`’s uses (output) port is assembled to the stream object. The stream object can be used for actions like retrieving data or viewing the SRI.
 
 ```py
 >>> output_data = sb.DataSink()
 >>> myComponent.connect(output_data)
->>> received_data = output_data.getData()
->>> received_SRI  = output_data.SRI()
+>>> stream = output_data.getCurrentStream()
+>>> received_data = stream.read()
+>>> received_SRI = stream.SRI()
 ```
-
-To block until a certain amount of data is received, specify the data length as an argument to the `getData()` method:
+To block until a certain amount of data is received, specify the data length as an argument to the `read()` method:
 
 ```py
->>> received_data = output_data.getData(100)
+>>> received_data = stream.read(100)
 ```
 
 The `eos()` method indicates whether or not an eos was received:
 
 ```py
->>> output_data.eos()
+>>> stream.eos()
 False
 ```
-
-The `eos_block` argument may be used to configure the `getData()` method to block until an eos is received:
-
-```py
->>> received_data = output_data.getData(eos_block=True)
-```
+The `consume` argument may be used to configure the `read()` method to move the read pointer forward a different length than what was read.
 
 Similar to the `DataSource`’s `FileSource` counterpart, the `DataSink` has an associated `FileSink` module for writing data to a file:
 
@@ -110,8 +103,25 @@ Below is an example of `MessageSink` usage:
 >>> myComponent = sb.launch("test_message_send_cpp")
 >>> myMessageSink = sb.MessageSink()
 >>> myComponent.connect(myMessageSink)
->>> sb.start()
+>>> sb.start() # assume that message_src sends a message
 ```
+
+In the above example, the received message is printed to the screen. MessageSink can either use a callback or a polling mechanism to retrieve messages.
+
+```py
+>>> from ossie.utils import sb
+>>> message_src = sb.launch('test_message_send_cpp')
+>>> def msgCallback(msg_id, msg):
+...   print msg_id, msg
+>>> callback_msg = sb.MessageSink(messageCallback=msgCallback)
+>>> retrieve_msg = sb.MessageSink(messageCallback=None, storeMessages=True)
+>>> message_src.connect(callback_msg)
+>>> message_src.connect(retrieve_msg)
+>>> sb.start() # assume that message_src sends a message
+>>> rcv_message = retrieve_msg.getMessages()
+```
+
+In the above example, a message source component (created at some previous time), is connected to two instances of `MessageSink`, one instance implements a callback function and the other instance does not. When the message sink implementing the callback function receives a message, it triggers the callback function. The message sink that does not have a callback implementation stores the messages until they are retrieved through the `getMessage` function.
 
 #### Plotting Data Example
 
@@ -200,4 +210,26 @@ b = sb.launch("test_message_rx_cpp")
 a.connect(b)
 sb.start()
 a.sendMessage(testmessage)
+```
+
+#### Custom Sinks
+
+If there is a need to create a custom sink with specialized behavior, the `DataSink` object can be modified with a customized sink service function that allows tailoring the `DataSink` instance to special circumstances. The sink service function needs to inherit from `bulkio_data_helpers.ArraySink`, and can overload whatever functions’ functionality needs to be specialized.
+
+The following example is a sink specialization in which the effective xdelta for the received data needs to change by a factor of two.
+
+```py
+>>> from ossie.utils.bulkio import bulkio_data_helpers
+>>> class customSink(bulkio_data_helpers.ArraySink):
+...   def __init__(self, porttype):
+...      bulkio_data_helpers.ArraySink.__init__(self, porttype)
+...   def pushSRI(self, H):
+...      _H = H
+...      _H.xdelta = H.xdelta * 2
+...      self.SRI = _H
+...      self.SRIs.append([len(self.data), _H])
+
+>>> src=sb.DataSource(dataFormat='float')
+>>> snk = sb.DataSink(sinkClass=customSink)
+>>> src.connect(snk)
 ```

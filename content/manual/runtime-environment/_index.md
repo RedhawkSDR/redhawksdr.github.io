@@ -1,6 +1,6 @@
 ---
 title: "The Runtime Environment"
-weight: 110
+weight: 120
 ---
 
 The REDHAWK runtime environment provides a mechanism for managing the life cycle (creation/tear down/initialization) of  [components]({{< relref "manual/glossary/_index.md#component" >}}) as well as the interconnection of deployed components.

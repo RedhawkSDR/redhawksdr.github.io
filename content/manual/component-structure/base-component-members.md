@@ -59,6 +59,43 @@ this.foo
 
 Note that no automated check is performed on the code generation to avoid a name collision between properties or ports.
 
+### Enumerations
+
+`simple` properties can have enumerated values, which associate symbolic names with values. Code generation creates constants for these values, allowing the component developer to use the symbolic name instead of the literal value. For `simple` properties in `struct` or `struct sequence` properties, the generated constants are nested under the name of the struct.
+
+#### C++
+In C++, the generated constants for enumerations are static variables in nested namespaces, under the top-level namespace `enums`:
+
+```c++
+enums::simple::LABEL
+enums::structprop::field::LABEL
+enums::structseq_struct::field::LABEL
+```
+
+Enumerated values for `simple` properties are in the component base class header, while those in `struct` or `struct sequence` properties are in `struct_props.h` along with the struct definitions.
+
+#### Java
+In Java, the generated constants for enumerations are public static variables in nested static classes, under a top-level class named `enums`:
+
+```java
+enums.simple.LABEL
+enums.structprop.field.LABEL
+enums.structseq_struct.field.LABEL
+```
+
+The `enums` class is a static nested class in the component base class.
+
+#### Python
+In Python, the generated constants for enumerations are class attributes in nested classes, under a top-level class named `enums`:
+
+```py
+enums.simple.LABEL
+enums.structprop.field.LABEL
+enums.structseq_struct.field.LABEL
+```
+
+The `enums` class is imported from the component base class module.
+
 ### Domain Awareness
 
 Each component has two members that provide a reference to the domain and application in which the component is operating. To retrieve the Domain Manager and Application, access the member functions `getDomainManager()` and `getApplication()`, which return a `DomainManagerContainer` and `ApplicationContainer`, respectively. `DomainManagerContainer` has the member `getRef()`, which returns the CORBA pointer to the Domain Manager object. `ApplicationContainer` has the member `getRef()`, which returns the CORBA pointer to the Application object.

@@ -221,3 +221,44 @@ log4j.appender.pse.producer_FQN=@@@DOMAIN.NAME@@@.@@@WAVEFORM.NAME@@@.@@@COMPONE
 log4j.appender.pse.layout=org.apache.log4j.PatternLayout
 log4j.appender.pse.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n
 ```
+
+### Synchronous Logging for C++ Devices and Components
+
+For C++ Devices and Components, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the `org.ossie.logging.RH_SyncRollingAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
+
+##### RH_SyncRollingAppender Configuration Options
+| **Appender Option** | **Description**                                                                       |
+| :------------------ | :------------------------------------------------------------------------------------ |
+| `Retries`           | Number of retries when waiting for the lock fails. (Integer)                          |
+| `WaitOnLock`        | Time in milliseconds to wait when attempting to take ownership of the lock. (Integer) |
+| `MaxFileSize`       | Maximum file size before rolling to the next file.                                    |
+| `MaxBackupIndex`    | Maximum number of files to keep. (Integer)                                            |
+| `File`              | Full local file system path.                                                          |
+| `Cleanup`           | Clean up synchronization resources when the process ends. (Value is True or False.)   |
+
+
+In the following example, a component configured with this log4j properties file publishes a log message to the file `MP_RedhawkTest`.
+
+```bash
+log4j.rootLogger=INFO,stdout,mp
+
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+log4j.appender.mp=org.ossie.logging.RH_SyncRollingAppender
+log4j.appender.mp.Retries=2
+log4j.appender.mp.WaitOnLock=30
+log4j.appender.mp.MaxFileSize=5MB
+log4j.appender.mp.MaxBackupIndex=10
+log4j.appender.mp.File=MP_RedhawkTest
+log4j.appender.mp.Cleanup=False
+log4j.appender.mp.layout=org.apache.log4j.PatternLayout
+log4j.appender.mp.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n
+```
+
+{{% notice note %}}
+The synchronous appender only works for single GPP systems. The synchronization resources used require all the processes to reside on the same host.
+{{% /notice %}}

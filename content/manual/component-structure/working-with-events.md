@@ -1,6 +1,6 @@
 ---
 title: "Working with Events"
-weight: 70
+weight: 80
 ---
 
 In addition to using message event Properties and message Ports, the REDHAWK library enables developers to interface with Event Channels to send and receive non-REDHAWK structured messages using the CORBA Any object. The library provides both Publisher and Subscriber interfaces for sending and receiving data. The libraries make use of existing marshaling and unmarshaling support for simple data types (i.e., int, float, string, etc.), REDHAWK Core Framework event messages, and defined structured messages used by your Component. For custom structured data, it is the developer’s responsibility to implement the marshaling and unmarshaling methods into and out of a CORBA Any or serialize the data structure into string type that can be marshaled. This API is considered an advanced topic to support custom behavior using CORBA’s Event Channels.

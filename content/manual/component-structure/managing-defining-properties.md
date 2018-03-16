@@ -1,6 +1,6 @@
 ---
 title: "Managing and Defining Properties"
-weight: 60
+weight: 70
 ---
 
 Properties are defined by their structure, kind, and type. The four different property structures include:
@@ -20,7 +20,13 @@ The property’s type corresponds with basic programming language primitive type
 
 Through the use of generated code and the REDHAWK libraries, manipulation of properties uses fundamental types provided by C++, Python, or Java, as seen in [Properties]({{< relref "base-component-members.md#properties" >}}).  For example, a `simple sequence`, complex-float property is manipulated via a `std::vector< std::complex<float> >` variable in C++ and a list of Python complex objects in Python. Generated component code provides a class data field representing each property for that component.
 
-The primitive data types supported for `simple` and `simple sequence` properties are: `boolean`, `octet`, `float`, `double`, `short`, `ushort`, `long`, `longlong`, `ulong`, `ulonglong`, `string`, `objref`, and `char`.
+The primitive data types supported for `simple` and `simple sequence` properties are: `boolean`, `octet`, `float`, `double`, `short`, `ushort`, `long`, `longlong`, `ulong`, `ulonglong`, `string`, `objref`, `char`, and `utctime`. The `utctime` type is used to describe time and can be used to synchronize property change events and queries on the component or device. To set a default value for a time as a property, use a string of the form "YYYY:MM:DD::hh:mm:ss.sss". Where YYYY is the year, MM is the month, DD is the day, hh is the hour (0-23), mm is the minutes, and ss.sss is the fractional seconds".
+
+In some cases, it is desirable for the `utctime` property to be initialized to the current time. To do so, the default value (in either the component’s default property value or as an overload at the waveform level) is set to "now", which is the time when the component is deployed. The string "now" can also be used in the Python Sandbox to set the `utctime` property’s value to the current time. Inside the component code, helpers are available to set the `utctime` property value to the current time; for example, in C++, the following code sets the property to now:
+
+```c++
+my_prop = redhawk::time::utils::now();
+```
 
 The following primitive data types can be marked as complex values: `boolean`, `octet`, `float`, `double`, `short`, `ushort`, `long`, `longlong`, `ulong`, and `ulonglong`.
 
@@ -325,3 +331,10 @@ When a configure callback is set, the member variable is not updated automatical
 #### Overriding the `configure()` Method
 
 For the vast majority of cases, the standard `configure()` implementation is sufficient. Developers are strongly discouraged from overriding `configure()`. However, in the event that additional functionality beyond what is provided is required, the overridden method should call the base class `configure()` method to ensure that the behavior expected by the library and framework is preserved. Whether the base class method is pre- or post-extended is left to the discretion of the component developer.
+
+
+### Synchronization
+
+External listeners to properties can be informed of changes in component properties by using the `registerPropertyListener` function on the component. The `registerPropertyListener` function allows an event consumer to register with the component. Upon registration, the component begins a thread that monitors the value of the requested properties. When the value of any of the monitored properties changes, an event is issued notifying the consumer what property changed on what component, when, and to what new value.
+
+To maintain synchronization between property change events and `query` calls to the component, it is possible to add a `QUERY_TIMESTAMP` property to the query. The `QUERY_TIMESTAMP` property on the `query()` is populated with the timestamp for this `query`. The returned timestamp can be compared to asynchronously received property change events to assess what is the most recent known value for the requested property

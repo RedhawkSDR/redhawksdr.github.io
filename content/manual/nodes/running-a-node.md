@@ -38,19 +38,3 @@ As part of the REDHAWK install, a domain and node are setup by default. To launc
 1.  On the running domain, select **GPP_\<localhost\>_localdomain** and note the value for **memCapacity** on the [**Properties** tab for the GPP device](#properties-view-of-a-running-gpp).
 2.  Launch the application *sample_deploy* on the running domain (right-click domain, select **Launch Waveform... \> sample\_deploy > Finish**). Note **memCapacity** for **GPP_\<localhost\>_localdomain** again; it is 1000 less than before the launch of the application.
 3.  Release the application (**REDHAWK_DEV > Waveforms > sample\_deploy\_\<\#\>** right-click **Release**). Note memCapacity for **GPP_\<localhost\>_localdomain** again; it is restored to the original value.
-
-### Creating a New Node
-
-As shown in [Exploring the Running Node](#exploring-the-running-node) a node is a Device Manager instance with an associated set of devices and services. A node is completely defined by a DMD XML file. A Device Manager uses the information in this XML file to deploy, configure, and inter-connect devices and [services]({{< relref "manual/services/_index.md" >}}).
-
-The **REDHAWK Node Project** in the REDHAWK IDE provides a mechanism for generating these DMD files. By invoking the **REDHAWK Node Project**, a wizard is started where the developer selects different characteristics for the node like the project name. In the wizard, the developer must provide both a project name and a Domain Manager name. The Domain Manager name is the name of the domain that the Device Manager automatically associates with upon startup. At runtime, the Domain Manager name that the Device Manager associates with can be overridden.
-
-The node project has multiple tabs. The most intuitive tab is the Diagram tab, which allows a developer to drag devices available in `$SDRROOT` into the node, as shown below.  Once the set of members for a particular node is determined, save the project and drag it to **Target SDR** to install it.
-
-##### Node Design Diagram
-![Node design diagram](../images/NodeDesign.png)
-
-To launch this new node:
-
-1.  Right-click the node descriptor, **Target SDR  > nodes > sample_node**.
-2.  Select **Launch Device Manager**. The running node is now visible under the running domain’s **Device Managers** section.
