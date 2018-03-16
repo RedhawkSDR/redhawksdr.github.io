@@ -1,0 +1,48 @@
+baseURL = "/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+title = "REDHAWK"
+theme = "docdock"
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = false
+pygmentsStyle = "monokai"
+relativeURLs = true
+canonifyURLs = true
+#googleAnalytics = "UA-114112954-1"
+copyright = "&copy; 2012-{year}"
+
+[params]
+rhver = "2.0.9"
+editURL = ""
+showVisitedLinks = true # default is false
+themeStyle = "flex" # "original" or "flex" # default "original"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+pre = "<h3>Home</h3>"
+name = "<i class='fa fa-book'></i> Documentation"
+identifier = "home"
+url = "/"
+weight = 5
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-download'></i> Downloads"
+identifier = "download"
+url = "https://github.com/redhawksdr/redhawk/releases"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-github'></i> GitHub"
+identifier = "github"
+url = "https://github.com/redhawksdr/docs"
+weight = 15

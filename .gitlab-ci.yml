@@ -1,0 +1,35 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+build:
+  image: jojomi/hugo:0.36
+  stage: build
+  script:
+    - sed -i "s|baseURL.*|baseURL = \"$deploy_url/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME\"|" config.toml
+    - sed -i "s|editURL.*|editURL = \"$gitlab_url/$CI_PROJECT_PATH/edit/$CI_COMMIT_REF_NAME/content/\"|" config.toml
+    - cat config.toml
+    - hugo
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 day
+
+deploy:
+  image: ${docker_registry}redhawk/deploy:latest
+  stage: deploy
+  dependencies:
+    - build
+  tags:
+    - deployment
+  script:
+    - eval "$(ssh-agent -s)"
+    - ssh-add
+    - mkdir -p $CI_PROJECT_NAME
+    - cd $CI_PROJECT_NAME
+    - mv ../public $CI_COMMIT_REF_NAME
+    - rsync -avzP --delete $CI_COMMIT_REF_NAME $PUBLISH_URL:$PUBLISH_PATH/$CI_PROJECT_NAME
+    #Trigger redhawk website build
+    - curl --insecure -X POST
+                      -F ref=master
+                      -F token=$token
+                      $gitlab_url/api/v4/projects/$CI_PROJECT_NAMESPACE%2F$CI_PROJECT_NAME/trigger/pipeline
