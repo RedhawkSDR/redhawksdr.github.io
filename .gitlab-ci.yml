@@ -14,11 +14,25 @@ build:
       - public
     expire_in: 1 day
 
+ide-build:
+  image: jojomi/hugo:0.36
+  stage: build
+  script:
+    - apk add --no-cache zip
+    - hugo
+    - mv public html
+    - zip -r redhawksdr-org.zip html
+  artifacts:
+    paths:
+      - redhawksdr-org.zip
+    expire_in: 1 day
+
 deploy:
   image: ${docker_registry}redhawk/deploy:latest
   stage: deploy
   dependencies:
     - build
+    - ide-build
   tags:
     - deployment
   script:
@@ -27,6 +41,7 @@ deploy:
     - mkdir -p $CI_PROJECT_NAME
     - cd $CI_PROJECT_NAME
     - mv ../public $CI_COMMIT_REF_NAME
+    - mv ../redhawksdr-org.zip $CI_COMMIT_REF_NAME
     - rsync -avzP --delete $CI_COMMIT_REF_NAME $PUBLISH_URL:$PUBLISH_PATH/$CI_PROJECT_NAME
     #Trigger redhawk website build
     - curl --insecure -X POST
