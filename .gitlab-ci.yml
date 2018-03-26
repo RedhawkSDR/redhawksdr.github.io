@@ -7,6 +7,7 @@ build:
   script:
     - sed -i "s|baseURL.*|baseURL = \"$deploy_url/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME\"|" config.toml
     - sed -i "s|editURL.*|editURL = \"$gitlab_url/$CI_PROJECT_PATH/edit/$CI_COMMIT_REF_NAME/content/\"|" config.toml
+    - sed -i '/<title>/d' themes/docdock/layouts/_default/baseof.html
     - cat config.toml
     - hugo
   artifacts:
