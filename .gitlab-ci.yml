@@ -20,6 +20,15 @@ ide-build:
   stage: build
   script:
     - apk add --no-cache zip
+    - sed -i "s|<a href=\"{{ .RelPermalink}}\"|<a href=\"{{ .RelPermalink}}index.html\"|g" themes/docdock/layouts/partials/menu.html
+    - sed -i "s|.Page -}}|.Page -}}index.html|g" themes/docdock/layouts/shortcodes/relref.html
+    - sed -i "s|URL -}}|URL -}}index.html|g" themes/docdock/layouts/shortcodes/relref.html
+    - sed -i "s|URL}}|URL}}index.html|g" themes/docdock/layouts/shortcodes/children.html
+    - sed -i '/<title>/d' themes/docdock/layouts/_default/baseof.html
+    - sed -i "s|disableSearch = false|disableSearch = true|g" config.toml
+    - sed -i "s|disableHomeIcon = false|disableHomeIcon = true|g" config.toml
+    - sed -i "s|disableNavChevron = false|disableNavChevron = true|g" config.toml
+    - sed -i "s|editURL|#editURL|g" config.toml
     - hugo
     - mv public html
     - zip -r redhawksdr-org.zip html
