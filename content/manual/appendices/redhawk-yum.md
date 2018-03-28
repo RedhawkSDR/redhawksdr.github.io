@@ -11,7 +11,7 @@ The following sections describe the REDHAWK packages and provided dependencies.
 
 ## REDHAWK Yum Repository
 
-All of the REDHAWK packages are included in a yum repository, which can be configured as described in [Setting Up the REDHAWK Repository]({{< relref "manual/installation/_index.md#setting-up-the-redhawk-repository" >}}). The repository contains three yum groups (REDHAWK Runtime, REDHAWK Development, and REDHAWK Enterprise Integration) and additional OS dependencies. The yum groups and additional OS dependencies are described in the following sections:
+All of the REDHAWK packages are included in a yum repository, which can be configured as described in [Setting Up the REDHAWK Repository]({{< relref "manual/installation/_index.md#setting-up-the-redhawk-repository" >}}). The repository contains two yum groups (REDHAWK Runtime, and REDHAWK Development) and additional OS dependencies. The yum groups and additional OS dependencies are described in the following sections:
 
 ### REDHAWK Yum Groups
 
@@ -40,12 +40,6 @@ All of the REDHAWK packages are included in a yum repository, which can be confi
 {{% notice note %}}
 The Development group will install the Runtime group packages as dependencies.
 {{% /notice %}}
-
-#### REDHAWK Enterprise Integration
-
-  - `redhawk-enterprise-integration-demo-dist`
-  - `redhawk-enterprise-integration-dist`
-  - `redhawk-enterprise-integration-docs`
 
 ### Dependencies Packaged with REDHAWK
 

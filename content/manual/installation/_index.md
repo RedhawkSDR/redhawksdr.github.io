@@ -3,7 +3,7 @@ title: "Installation"
 weight: 10
 ---
 
-This chapter explains how to install the Core Framework, the IDE, the basic assets, and the REDHAWK Enterprise Integration software. The Core Framework is the software back-end of REDHAWK. The IDE is a GUI for development and interaction with REDHAWK systems. The basic assets are a collection of components, devices, and waveforms that developers can use to create simple software-defined radio applications. The REDHAWK Enterprise Integration software is a suite of software for interacting with a REDHAWK Domain in the Java Runtime Environment.
+This chapter explains how to install the Core Framework, the IDE, and the basic assets. The Core Framework is the software back-end of REDHAWK. The IDE is a GUI for development and interaction with REDHAWK systems. The basic assets are a collection of components, devices, and waveforms that developers can use to create simple software-defined radio applications.
 
 To configure and install REDHAWK and associated dependencies, you must have root permissions. The REDHAWK installation is compatible with RHEL or CentOS 6 (32-and 64-bit) and RHEL or CentOS 7 (64-bit). The current REDHAWK release was tested against CentOS 6.9 (32-and 64-bit) and CentOS 7.4 (64-bit).
 
@@ -86,7 +86,7 @@ wget https://github.com/RedhawkSDR/redhawk/releases/download/<version>/redhawk-y
 
 ### Installing REDHAWK
 
-Use one of the following options to install the IDE, Core Framework, REDHAWK Enterprise Integration, and accompanying dependencies from RPMs.
+Use one of the following options to install the IDE, Core Framework, and accompanying dependencies from RPMs.
 
   - To install only the runtime REDHAWK software, enter the following command:
 
@@ -99,13 +99,6 @@ Use one of the following options to install the IDE, Core Framework, REDHAWK Ent
 
     ```bash
     sudo yum groupinstall "REDHAWK Development"
-
-    ```
-
-  - To install the REDHAWK Enterprise Integration software, enter the following command:
-
-    ```bash
-    sudo yum groupinstall "REDHAWK Enterprise Integration"
 
     ```
 
