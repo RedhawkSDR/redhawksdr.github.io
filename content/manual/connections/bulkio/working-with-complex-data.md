@@ -3,23 +3,32 @@ title: "Working with Complex Data"
 weight: 40
 ---
 
-If the StreamSRI mode field of the incoming data is set to 1, the associated input data is complex (i.e., it is comprised of real and imaginary parts). Complex data is sent as alternating real and imaginary values. A developer can work with this data in any fashion; however, this section provides common methods for converting the data into a more workable form.
+If the StreamSRI mode field of the incoming data is set to 1, the associated input data is complex (i.e., it is composed of real and imaginary parts). Complex data is sent as alternating real and imaginary values. A developer can work with this data in any fashion; however, this section provides common methods for converting the data into a more workable form.
 
 ### Converting Complex Data in C++
 
-In C++, the incoming BulkIO data block provides a `complex()` method to check whether the data is complex, and `cxdata()` and `cxsize()` methods to provide access to the sample data as an array of `std::complex` values. For example:
+In C++, the incoming BulkIO data block provides a `complex()` method to check whether the data is complex, and a `cxbuffer()` method to reinterpret the sample data as a `redhawk::shared_buffer` of `std::complex` values.
+For example:
 
 ```c++
-bulkio::ShortDataBlock = stream.read();
+bulkio::ShortDataBlock block = stream.read();
 if (block.complex()) {
-    const std::complex<short>* data = block.cxdata();
-    const size_t size = block.cxsize();
+    redhawk::shared_buffer<std::complex<short> > data = block.cxbuffer();
+    const size_t size = data.size();
 }
 ```
 
 ### Converting Complex Data in Python
 
-The helper functions `bulkioComplexToPythonComplexList` and `pythonComplexListToBulkioComplex`, defined in the module `ossie.utils.bulkio.bulkio_helpers`, provide an efficient translation to and from lists of Python complex numbers.
+In Python, the incoming BulkIO data block provides a `complex` attribute to check whether the data is complex, and a `cxbuffer` attribute that gives the sample data as a list of Python `complex` values.
+For example:
+
+```py
+block = stream.read()
+if block.complex:
+    data = block.cxbuffer
+    size = len(data)
+```
 
 ### Converting Complex Data in Java
 
