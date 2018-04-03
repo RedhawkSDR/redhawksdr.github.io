@@ -32,6 +32,14 @@ my_msg.some_float = 1.0;
 this->message_out->sendMessage(my_msg);
 ```
 
+A specific connection may be targeted by providing a `connectionId` argument:
+
+```c++
+this->message_out->sendMessage(my_msg, "connection_1");
+```
+
+If `connectionId` does not match any connection, an `std::illegal_argument` exception is thrown.
+
 #### Java
 
 Whenever a message needs to be generated (e.g., in the `serviceFunction()` method):
@@ -43,6 +51,14 @@ my_msg.some_float.setValue((float)1.0);
 this.port_message_out.sendMessage(my_msg);
 ```
 
+A specific connection may be targeted by providing a `connectionId` argument:
+
+```Java
+this.port_message_out.sendMessage(my_msg, "connection_1");
+```
+
+If `connectionId` does not match any connection, an `IllegalArgumentException` is thrown.
+
 #### Python
 
 Whenever a message needs to be generated (e.g., in the `process()` method of the implementation file):
@@ -53,3 +69,11 @@ my_msg.some_string = "hello"
 my_msg.some_float = 1.0
 self.port_message_out.sendMessage(my_msg)
 ```
+
+A specific connection may be targeted by providing a `connectionId` argument:
+
+```py
+self.port_message_out.sendMessage(my_msg, "connection_1")
+```
+
+If `connectionId` does not match any connection, a `ValueError` is raised.
