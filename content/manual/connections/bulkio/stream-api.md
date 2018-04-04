@@ -154,7 +154,7 @@ stream.write(data, bulkio.timestamp.now())
 
 #### Writing Complex Data
 
-In C++, if the stream is configured for complex data, `write()` should be given a complex data type:
+In C++, if the stream is configured for complex data, give `write()` a complex data type:
 
 ```c++
 redhawk::buffer< std::complex<float> > data(1024);
@@ -164,7 +164,7 @@ stream.write(buffer, size, bulkio::time::utils::now());
 
 When writing scalar data to a complex stream, make sure that the size is a multiple of 2.
 
-In Python, data written to a complex stream is assumed to be list of complex values.
+In Python, data written to a complex stream is assumed to be a list of complex values.
 If an element in the list is not a Python `complex`, its imaginary component is treated as 0.
 
 #### Write Buffering
@@ -183,13 +183,13 @@ To disable buffering once it has been enabled, set the buffer size to 0.
 
 {{% notice info %}}
 Write buffering does not preserve every time stamp.
-If precise time information is required, write buffering should be disabled. 
+If precise time information is required, disable write buffering.
 {{% /notice %}}
 
 #### Closing
 
-When an output stream is complete, it should be closed.
-The `close()` method sends and end-of-stream packet and dissociates the stream from the output port.
+When an output stream is complete, close the stream.
+The `close()` method sends an end-of-stream packet and dissociates the stream from the output port.
 
 ### Input Streams
 
@@ -441,7 +441,7 @@ Python:
 block = stream.tryread(2048)
 ```
 
-`tryread()` will only return a valid block of data if the entire request can be satisfied, or if no more data will be received.
+`tryread()` will only return a valid block of data if the entire request can be satisfied or if no more data will be received.
 In the case that the stream has ended or that component has been stopped, all remaining queued data in the stream will be returned.
 
 ### Interacting with Data Blocks
