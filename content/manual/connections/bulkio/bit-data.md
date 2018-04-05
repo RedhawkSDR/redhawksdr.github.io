@@ -113,10 +113,10 @@ redhawk::shared_bitbuffer history = data;
 
 The `shared_bitbuffer` class includes several features useful for bit-level processing:
 
- - `distance()` returns the Hamming distance between two bitbuffers.
- - `find()` searches for a bit pattern within a minimum Hamming distance.
+ - `distance(other)` returns the Hamming distance between two bitbuffers.
+ - `find(pattern, maxDistance)` searches for a bit pattern within a maximum Hamming distance.
  - `popcount()` returns the population count (number of 1 bits).
- - `takeskip()` performs a take/skip, copying M bits and skipping N bits.
+ - `takeskip(M,N)` performs a take/skip, iteratively copying M bits and skipping N bits until the end of the data.
 
 ### Python
 
@@ -165,10 +165,10 @@ data2 = bitbuffer(x & 1 for x in xrange(96))
 
 The `bitbuffer` class includes several features useful for bit-level processing:
 
- - `distance()` returns the Hamming distance between two bitbuffers.
- - `find()` searches for a bit pattern within a minimum Hamming distance.
+ - `distance(other)` returns the Hamming distance between two bitbuffers.
+ - `find(pattern, maxDistance)` searches for a bit pattern within a maximum Hamming distance.
  - `popcount()` returns the population count (number of 1 bits).
- - `takeskip()` performs a take/skip, copying M bits and skipping N bits.
+ - `takeskip(M,N)` performs a take/skip, iteratively copying M bits and skipping N bits until the end of the data.
 
 ### Java
 
@@ -219,6 +219,9 @@ The legacy DataSink helper does not support packed bit data.
 
 Within REDHAWK IDE, packed bit ports can be monitored and plotted just like any other BulkIO type.
 By default, plotting a packed bit port automatically brings up a raster plot.
+
+![Packed Bit Raster](../images/PackedBitPlot.png)
+
 General IDE plot use is described in [REDHAWK Plot View]({{< relref "manual/ide/editors-and-views/redhawk-plot-view.md" >}}).
 
 The Python sandbox plots also support displaying packed bit data.
