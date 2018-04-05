@@ -106,7 +106,7 @@ To find a resource in the domain by name:
 ##### Find By Name
     ![Find By Name](../images/FindByName.png)
 2.  Enter the name of the component you want to find.
-3.  Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click **Add Provides Port**. For Uses ports, enter the name and click **Add Uses Port**.
+3.  Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click **+** next to **Provides Port**. For Uses ports, enter the name and click **+** next to **Uses Port**.
 4.  Click **Finish**.
 
     The **Find By Name** is displayed in the diagram.
@@ -120,7 +120,7 @@ To find a service in the domain:
 ![Find By Service](../images/Findbyservice.png)
 2.  If you want to search for a service Name, select the **Service Name** radio button and enter the service Name you want to find.
 3.  If you want to search for a service Type, select the **Service Type** radio button and enter the service Type you want to find. The service Type indicates the interface (IDL) provided by the service. Click **Browse** to select an IDL type the IDE recognizes.
-4.  Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click **Add Provides Port**. For Uses ports, enter the name and click **Add Uses Port**.
+4.  Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click **+** next to **Provides Port**. For Uses ports, enter the name and click **+** next to **Uses Port**.
 5.  Click **Finish**.
 
     The **Service Name** or **Service Type** is displayed in the diagram.
