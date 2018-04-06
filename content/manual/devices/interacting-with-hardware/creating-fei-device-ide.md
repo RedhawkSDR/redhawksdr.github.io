@@ -12,42 +12,42 @@ The **FEI Wizard** enables users to quickly create an FEI compliant RX or TX tun
     The **Select a wizard** dialog is displayed:
 
     ##### Select a Wizard
-    ![Select a Wizard Dialog](../../images/selectawizardDiag2.png)
+    ![Select a Wizard Dialog](../../images/NewFEIDeviceWizard1.png)
 2.  Select **REDHAWK Front End Device Project** and click **Next**.
 
     The **Create a REDHAWK Device Project** dialog is displayed:
 
     ##### Create a REDHAWK Device Project
-    ![Create a REDHAWK Device Project Dialog](../../images/NewDevProjDiag.png)
+    ![Create a REDHAWK Device Project Dialog](../../images/NewFEIDeviceWizard2.png)
 3.  In the **Project name** field, enter a project name and click **Next**.
 
     The **New Implementation** dialog is displayed:
 
     ##### New Implementation
-    ![New Implementation Dialog](../../images/NewImplDiag2.png)
+    ![New Implementation Dialog](../../images/NewFEIDeviceWizard3.png)
 4.  Select the programming language used, the code generation template, and ID for the device’s implementation; enter a description for this implementation; and click **Next**.
 
     The **Setup Code Generation** dialog is displayed:
     ##### Setup Code Generation
-    ![The Setup Code Generation Dialog](../../images/FEIDeviceSetupCodeGeneration.png)
+    ![The Setup Code Generation Dialog](../../images/NewFEIDeviceWizard4.png)
 5.  Set the configuration values of the implementation’s code generation properties and click **Next**.
 
     The **FrontEnd Interfaces Device Type Selection** dialog is displayed:
 
     ##### FrontEnd Interfaces Device Type Selection
-    ![The FrontEnd Interfaces device Type Selection Dialog](../../images/FEIDevTypSelDiag.png)
+    ![The FrontEnd Interfaces device Type Selection Dialog](../../images/NewFEIDeviceWizard5.png)
 6.  Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receiver, transmitter, or transceiver). Click **Next**.
 
     The **FrontEnd Interface Tuner Options** dialog is displayed:
 
     ##### FrontEnd Interface Tuner Options Dialog
-    ![The FrontEnd Interface Tuner Options Dialog](../../images/FEITunOptDiag.png)
+    ![The FrontEnd Interface Tuner Options Dialog](../../images/NewFEIDeviceWizard6.png)
 7.  Specify the types of inputs and outputs that the device supports (analog, digital float) and click **Next**.
 
     The **FrontEnd Interfaces Tuner Status Customization** dialog is displayed:
 
     ##### FrontEnd Interfaces Tuner Status Customization Dialog
-    ![The FrontEnd Interfaces Tuner Status Customization Dialog](../../images/FEITunStatDiag.png)
+    ![The FrontEnd Interfaces Tuner Status Customization Dialog](../../images/NewFEIDeviceWizard7.png)
 
       - To add an optional tuner status properties, click **+**, select the checkboxes for the properties, and click **OK**.
       - To remove optional tuner status properties, under **Tuner Status Property Selection**, select the properties to remove, and click **X**. If a required property is selected, the **X** button is disabled.
