@@ -87,5 +87,6 @@ The FEI module defines a number of interfaces to enable users to interact with s
   - Digital Down Converter (DDC) tuner
   - Receiver Digitizer Channelizer (RX_DIGITIZER_CHANNELIZER) tuner
   - Transmitter (TX) tuner
+  - Receiver With Scanning Capability (RX_SCANNER_DIGITIZER) tuner
 
-Before you can interact with the tuners, you must create a REDHAWK device that is FEI compliant. The following procedure explains how to make a REDHAWK device that is compliant with FEI version 2.2.
+Before you can interact with the tuners, you must create a REDHAWK device that is FEI compliant. The following procedure explains how to make a REDHAWK device that is compliant with FEI version 2.4.

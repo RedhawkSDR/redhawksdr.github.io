@@ -1,35 +1,25 @@
 ---
-title: "Using an FEI Device in a Domain"
+title: "Using an FEI Device in the IDE"
 weight: 30
 ---
 
-After you have created the FEI device, it must be deployed before you can begin to use it. The following procedure explains how to deploy the FEI device.
+After you have created the FEI device, you can launch the device in the sandbox, or launch it in a domain as part of a node. See [Launching Components in the IDE Sandbox]({{< relref "manual/sandbox/ide/_index.md#launching-components-in-the-ide-sandbox" >}}), or [Creating a New Node]({{< relref "manual/nodes/creating-a-new-node" >}}) and [Launching a Domain]({{< relref "manual/runtime-environment/launching-a-domain" >}}). After launching, a folder named **FrontEnd Tuners** will display under the device in the **REDHAWK Explorer** view, and the available tuners will be displayed under it with a tuning fork icon:
 
-1.  [Create a new node]({{< relref "manual/nodes/running-a-node#creating-a-new-node" >}}) or use an existing node and add your FEI device to the node.
-
-2.  Launch the node (also known as a Device Manager) onto a running domain.
-
-    The node is displayed in the REDHAWK Explorer View.
-
-3.  From the REDHAWK Explorer View, expand the node and navigate to your device.
-
-    The available tuners are displayed with a Tuning fork icon within a folder under your device:
-
-    ##### Available FEI Tuners
-    ![Available FEI Tuners](../../images/FEItuningfork.png)
+##### Available FEI Tuners
+![Available FEI Tuners](../../images/FEItuningfork.png)
 
 #### Allocating a FrontEnd Tuner
 
 The usage status of a FrontEnd Tuner device is IDLE until a successful allocation has been made. Allocation is the process where a specific tuner is requested for use, and initial setup of the tuner is performed. When at least one channel has been allocated, but there is one channel not allocated, the device is ACTIVE. If all channels have been allocated, the device is BUSY.
 
-The following procedure explains how to allocate a FrontEnd tuner using the **Tuner Allocation** dialog.
+The following procedure explains how to allocate a FrontEnd tuner using the **Allocate Tuner** wizard.
 
 1.  Right-click the **FrontEnd Tuners** folder and select **Allocate**:
 
     ##### Allocating an FEI Tuner
     ![Allocating an FEI Tuner](../../images/FEITunerAllocate.png)
 
-    The **Allocate Tuner** wizard is displayed. In this dialog, you specify the desired tuner properties such as frequency, bandwidth, and so forth.
+    The **Allocate Tuner** wizard is displayed. In this wizard, you specify the desired tuner properties such as frequency, bandwidth, and so forth.
 
     ##### Allocate Tuner Wizard
     ![Allocate Tuner Wizard](../../images/TunerAllocationPage.png)
@@ -46,6 +36,7 @@ The following procedure explains how to allocate a FrontEnd tuner using the **Tu
       - RX
       - RX_DIGITIZER_CHANNELIZER
       - TX
+      - RX_SCANNER_DIGITIZER
 
 5.  In **Center Frequency (MHz)**, specify the center frequency.
     {{% notice note %}}
@@ -56,13 +47,28 @@ Bandwidth and sample rate must be specified during allocation. For an allocation
 
 7.  In **Sample Rate (Msps)**, specify the sample rate, or if a specific sample rate is not required, select the **Any Value** checkbox.
 
-8.  Optionally, in **Bandwidth Tolerance (%)**, enter the [bandwidth tolerance]({{< relref "manual/appendices/fei.md#optional-status-elements">}}).
+8.  Optionally, adjust the **Bandwidth Tolerance (%)** or **Sample Rate Tolerance (%)** (see [Optional Status Elements]({{< relref "manual/appendices/fei.md#optional-status-elements">}}).
 
-9.  Optionally, in **Sample Rate Tolerance (%)**, enter the [sample rate tolerance]({{< relref "manual/appendices/fei.md#optional-status-elements">}}).
+9. Optionally, specify the ID of the analog feed in [**RF Flow ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}), or the device's [**Group ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}).
 
-10. Optionally, in [**RF Flow ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}), enter the tag for the analog feed for which you are looking.
+10. For any allocation other than a scanner allocation, click **Finish**.
 
-11. Click Finish.
+For a scanner allocation, another page is added to the wizard which must be completed.
+
+1. Click **Next**. The **Scanner Allocation** page is displayed:
+
+    ##### Scanner Allocation
+    ![Scanner Allocation](../../images/ScannerAllocationPage.png)
+
+2. In **Minimum Frequency (MHz)** and **Maximum Frequency (MHz)**, specify the lower and upper bounds of the frequencies that will be scanned.
+
+3. In **Mode**, select **SPAN_SCAN** to request scanning ranges of frequencies, or **DISCRETE_SCAN** to enumerate individual frequencies.
+
+4. In **Control Mode**, select **TIME_BASED** to specify the minimum dwell time of the scanner in seconds, or **SAMPLE_BASED** to specify the minimum dwell time in samples.
+
+5. In **Control Limit** specify a lower bound on the dwell time.
+
+6. Click Finish.
 
     The tuner is allocated and is displayed under the **FrontEnd Tuners** folder with the truncated Allocation ID and an active tuning fork icon. If you left-click or hover over the allocated tuner, the full Allocation ID is displayed. A successful allocation tunes the hardware to the requested frequency and establishes a BulkIO data stream containing the content. In the case of a multi-out BulkIO port, the data stream will only be pushed over a connection with a Connection ID that is identical to the Allocation ID associated with the data stream. In cases where the BulkIO port is not a multi-out port, all data streams are pushed over all connections, regardless of Connection id.
 
@@ -102,6 +108,42 @@ An FEI device provides metadata along with its data stream. This metadata is att
 #### Deallocating a Listener
 
 If a listener was previously allocated, you can deallocate it. To deallocate a listener, right-click the allocated listener and select **Deallocate**.
+
+#### Performing a Scan
+
+After a tuner has been allocated in a scanning mode (**RX_SCANNER_DIGITIZER**), it can be given a scanning plan to execute.
+
+1. Right-click the allocated FrontEnd tuner and select **Scan**. The **Tuner Scan** dialog is displayed:
+
+    ##### Tuner Scan
+    ![Tuner Scan](../../images/ScanPage.png)
+
+2. In **Mode**, select the type of scan to be performed. Use **MANUAL_SCAN** to specify a single frequency, **DISCRETE_SCAN** to provide a list of frequencies, or **SPAN_SCAN** to provide ranges of frequencies to step through.
+
+3. In **Control Mode**, select **TIME_BASED** to specify the minimum dwell time of the scanner in seconds, or **SAMPLE_BASED** to specify the minimum dwell time in samples.
+
+4. In **Control Value** specify the dwell time.
+
+5. In **Delay (s)**, provide the number of seconds until the scan should start.
+
+6. Click **Next**. For **MANUAL_SCAN**, a page is shown where the single dwell frequency can be provided:
+
+    ##### Manual Scan
+    ![Manual Scan](../../images/ManualScanPage.png)
+
+7. For **DISCRETE_SCAN**, a page is shown where a list of frequencies can be provided:
+
+    ##### Discrete Scan
+    ![Discrete Scan](../../images/DiscreteScanPage.png)
+
+8. For **SPAN_SCAN**, a page is shown where ranges of frequencies can be provided. Each range has a low (start) frequency, and a high (ending) frequency, and the step width the scanner should use while scanning the range:
+
+    ##### Span Scan
+    ![Span Scan](../../images/SpanScanPage.png)
+
+9. After entering the scan plan, click **Finish**. The scanning will start after the delay specified on the first page.
+
+The wizard also provides the ability to save the data entered in the wizard to an XML file that can later be loaded. Use the load and save buttons at the bottom of the wizard for this functionality.
 
 #### Controlling a Tuned Receiver
 

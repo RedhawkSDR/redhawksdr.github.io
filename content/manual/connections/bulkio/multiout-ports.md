@@ -26,7 +26,7 @@ The multi-out capability is supported only for BulkIO and BurstIO output (uses) 
 
 ### Multi-out Port Support in the IDE
 
-When interacting with FrontEnd devices, it is easiest to perform an operation (for example, Plot Port Data) directly on the desired tuner. For more information, refer to [Plotting a Tuned Receiver]({{< relref "manual/devices/interacting-with-hardware/using-fei-device-in-a-domain.md#plotting-a-tuned-receiver" >}}).
+When interacting with FrontEnd devices, it is easiest to perform an operation (for example, Plot Port Data) directly on the desired tuner. For more information, refer to [Plotting a Tuned Receiver]({{< relref "manual/devices/interacting-with-hardware/using-fei-device-ide.md#plotting-a-tuned-receiver" >}}).
 
 Otherwise, the REDHAWK IDE provides support for the following operations using multi-out ports:
 

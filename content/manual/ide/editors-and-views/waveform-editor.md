@@ -110,7 +110,7 @@ To add a dependency on a FrontEnd Tuner device that the waveform needs to use at
 
 3.  Enter the **Uses Device ID** and optionally, enter the **Device Model**, and then click **Next**.
 
-4.  Enter the appropriate information and click **Next**. See [**Allocate Tuner**]({{< relref "manual/devices/interacting-with-hardware/using-fei-device-in-a-domain.md#allocating-a-frontend-tuner" >}}) for more details.
+4.  Enter the appropriate information and click **Next**. See [**Allocating a FrontEnd Tuner**]({{< relref "manual/devices/interacting-with-hardware/using-fei-device-ide.md#allocating-a-frontend-tuner" >}}) for more details.
     ##### Identify Ports
     ![Identify Ports](../../images/IdentifyPorts.png)
 

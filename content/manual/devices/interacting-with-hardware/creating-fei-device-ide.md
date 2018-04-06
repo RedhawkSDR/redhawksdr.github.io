@@ -5,49 +5,49 @@ weight: 10
 
 #### Using the FEI Wizard to Create an FEI Device
 
-The **FEI Wizard** enables users to quickly create an FEI compliant RX or TX tuner device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties. The following procedure explains how to use the **FrontEnd Interfaces Wizard**.
+The **New Front End Device Project** wizard enables users to quickly create an FEI compliant receiver or transmitter device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties.
 
-1.  To open the **FrontEnd Interfaces Wizard**, select **File > New > Other**.
+1.  To open the wizard and create a new device, select **File > New > Other**.
 
-    The **Select a wizard** dialog is displayed:
+    The **Select a wizard** page is displayed:
 
     ##### Select a Wizard
-    ![Select a Wizard Dialog](../../images/NewFEIDeviceWizard1.png)
+    ![Select a Wizard](../../images/NewFEIDeviceWizard1.png)
 2.  Select **REDHAWK Front End Device Project** and click **Next**.
 
-    The **Create a REDHAWK Device Project** dialog is displayed:
+    The **Create a REDHAWK Device Project** page is displayed:
 
     ##### Create a REDHAWK Device Project
-    ![Create a REDHAWK Device Project Dialog](../../images/NewFEIDeviceWizard2.png)
+    ![Create a REDHAWK Device Project](../../images/NewFEIDeviceWizard2.png)
 3.  In the **Project name** field, enter a project name and click **Next**.
 
-    The **New Implementation** dialog is displayed:
+    The **New Implementation** page is displayed:
 
     ##### New Implementation
-    ![New Implementation Dialog](../../images/NewFEIDeviceWizard3.png)
-4.  Select the programming language used, the code generation template, and ID for the device’s implementation; enter a description for this implementation; and click **Next**.
+    ![New Implementation](../../images/NewFEIDeviceWizard3.png)
+4.  Select the programming language; enter a description for this implementation; and click **Next**.
 
-    The **Setup Code Generation** dialog is displayed:
+    The **Setup Code Generation** page is displayed:
     ##### Setup Code Generation
-    ![The Setup Code Generation Dialog](../../images/NewFEIDeviceWizard4.png)
-5.  Set the configuration values of the implementation’s code generation properties and click **Next**.
+    ![Setup Code Generation](../../images/NewFEIDeviceWizard4.png)
+5.  Click **Next**.
 
-    The **FrontEnd Interfaces Device Type Selection** dialog is displayed:
+    The **FrontEnd Interfaces Device Type Selection** page is displayed:
 
     ##### FrontEnd Interfaces Device Type Selection
-    ![The FrontEnd Interfaces device Type Selection Dialog](../../images/NewFEIDeviceWizard5.png)
-6.  Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receiver, transmitter, or transceiver). Click **Next**.
+    ![FrontEnd Interfaces device Type Selection](../../images/NewFEIDeviceWizard5.png)
+6.  Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receive / transmit, scanning capability). Click **Next**.
 
-    The **FrontEnd Interface Tuner Options** dialog is displayed:
+    The **FrontEnd Interface Tuner Options** page is displayed:
 
-    ##### FrontEnd Interface Tuner Options Dialog
-    ![The FrontEnd Interface Tuner Options Dialog](../../images/NewFEIDeviceWizard6.png)
+    ##### FrontEnd Interface Tuner Options
+    ![FrontEnd Interface Tuner Options](../../images/NewFEIDeviceWizard6.png)
 7.  Specify the types of inputs and outputs that the device supports (analog, digital float) and click **Next**.
 
-    The **FrontEnd Interfaces Tuner Status Customization** dialog is displayed:
+    The **FrontEnd Interfaces Tuner Status Customization** page is displayed:
 
-    ##### FrontEnd Interfaces Tuner Status Customization Dialog
-    ![The FrontEnd Interfaces Tuner Status Customization Dialog](../../images/NewFEIDeviceWizard7.png)
+    ##### FrontEnd Interfaces Tuner Status Customization
+    ![FrontEnd Interfaces Tuner Status Customization](../../images/NewFEIDeviceWizard7.png)
 
       - To add an optional tuner status properties, click **+**, select the checkboxes for the properties, and click **OK**.
       - To remove optional tuner status properties, under **Tuner Status Property Selection**, select the properties to remove, and click **X**. If a required property is selected, the **X** button is disabled.
@@ -86,12 +86,14 @@ To add or remove optional FEI Tuner Status properties using the **FrontEnd Inter
 
 2.  Select the files to be generated and click **OK**.
 
-    Files are generated that define the classes for the FEI device. The FEI base class inherits from the `FrontendTunerDevice` class to provide much of the FEI capability. The generated FEI device class must be modified or customized to interact with the target device. During generation, intentional compiler warnings are inserted in the main class to indicate where code should be modified to reflect the behavior of the device. The output of the make command for a C++ device, including the compiler warnings, is displayed in the Console view
+    Files are generated that define the classes for the FEI device. In C++, the FEI base class inherits from the `frontend::FrontendTunerDevice` class  (or `frontend::FrontendScanningTunerDevice` for a scanner) to provide much of the FEI capability. The generated FEI device class must be modified to interact with the target device. During generation, intentional compiler warnings are inserted in the main class to indicate where code should be modified to reflect the behavior of the device. The output of the make command for a C++ device, including the compiler warnings, is displayed in the Console view:
 
     ##### FEI Device Compiler Warnings
     ![FEI Device Compiler Warnings](../../images/FEICompilerWarns.png)
 
-    There are five functions that contain a default implementation that should be modified to match the desired behavior, each with an intentional compiler warning inserted in place of the function implementation. These functions are `constructor`, `deviceEnable`, `deviceDisable`, ` deviceSetTuning`, and `deviceDeleteTuning`. The `constructor` function is called when the device is instantiated. During allocation of an FEI device, ` deviceSetTuning` is called and, if successful, `deviceEnable` is called. During deallocation, `deviceDisable` is called followed by a call to `deviceDeleteTuning`.
+    There are five functions that contain a default implementation that should be modified to match the desired behavior. These functions are `constructor`, `deviceEnable`, `deviceDisable`, ` deviceSetTuning`, and `deviceDeleteTuning`. The `constructor` function is called when the device is instantiated. During allocation of an FEI device, `deviceSetTuning` is called and, if successful, `deviceEnable` is called. During deallocation, `deviceDisable` is called followed by a call to `deviceDeleteTuning`.
+
+    For scanners, the additional methods `deviceSetTuningScan`, `setScanStrategy`, `setScanStartTime`, `getScanStatus` must be modified to provide the scanner capability.
 
 3.  Add source code to allocate and setup a tuner channel.
 
@@ -107,8 +109,16 @@ Each of the following functions have `fts` and `tuner_id` passed in as parameter
     | `constructor`        | This is the REDHAWK constructor. All properties are initialized prior to this function being invoked. The default behavior when implementing a tuner is to create 1 RX_DIGITIZER channel.|
     | `deviceEnable`       | Command the hardware to enable the output and begin generating data. The FEI tuner status element `fts.enabled` is updated to reflect the current state of the tuner output. This is a good place to call `start` to start the service function. |
     | `deviceDisable`      | Command the hardware to disable the output and stop generating data. The FEI tuner status element `fts.enabled` is updated to reflect the current state of the tuner output. This is a good place to call `stop` to start the service function. |
-    | ` deviceSetTuning`   | Validate that the request parameters can be satisfied by the tuner indicated by `tuner_id`. There are several helper functions (`validateRequest`, `validateRequestVsSRI`, `validateRequestVsRFInfo`, and `validateRequestVsDevice`) provided in the inherited `FrontendTunerDevice` class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a `BadParameterException` if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. `fts.center_frequency`, `fts.bandwidth`, `fts.sample_rate`) with the actual values queried from the hardware rather than with the requested values. Push new SRI within this function. Finally, when using the multi-out capability for BulkIO ports, it is recommended that the `matchAllocationIdToStreamId` function be called at this point with the stream ID and Allocation id. Return `True` upon successful configuration of the tuner according to the request, or `False` otherwise. |
+    | `deviceSetTuning`    | Validate that the request parameters can be satisfied by the tuner indicated by `tuner_id`. There are several helper functions (`validateRequest`, `validateRequestVsSRI`, `validateRequestVsRFInfo`, and `validateRequestVsDevice`) provided in the inherited `FrontendTunerDevice` class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a `BadParameterException` if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. `fts.center_frequency`, `fts.bandwidth`, `fts.sample_rate`) with the actual values queried from the hardware rather than with the requested values. Push new SRI within this function. Finally, when using the multi-out capability for BulkIO ports, it is recommended that the `matchAllocationIdToStreamId` function be called at this point with the stream ID and Allocation id. Return `True` upon successful configuration of the tuner according to the request, or `False` otherwise. |
     | `deviceDeleteTuning` | Prior to `deallocateCapacity` return, a `pushPacket` call with eos set to `True` must be called, and `deviceDeleteTuning` is where this should occur. Also, update the appropriate FEI tuner status elements (i.e `fts.center_frequency`, `fts.bandwidth`, `fts.sample_rate`) if desired. Return `True` upon success, or `False` otherwise.|
+
+    ##### Additional functions/methods in the generated scanner code
+    | **Function/Method**   | **Description**  |
+    | :-------------------- | :---------------------- |
+    | `deviceSetTuningScan` | Called instead of `deviceSetTuning` when a scanner allocation is made. |
+    | `setScanStrategy`     | Called by the user to provide a plan for how the frequencies the scanner will cover. Validate the request and store the plan. |
+    | `setScanStartTime`    | Called by the user to specify when a scan should start. At the specified time, the scanner should begin outputting data according to the scan plan. |
+    | `getScanStatus`       | Provide the status of all current and scheduled scans |
 
     In addition to the code required for allocation and deallocation, information used to identify the target device at run-time must be added to the main class. The recommended method for dynamically identifying a target device is through configuration of a property. For example, configuring a property with an IP address or some other unique identifier allows the FEI device to identify the specific target device.
 4.  Add source code to interact with the target hardware.
