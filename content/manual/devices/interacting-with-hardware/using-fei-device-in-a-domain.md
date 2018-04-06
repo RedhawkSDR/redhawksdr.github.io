@@ -29,10 +29,10 @@ The following procedure explains how to allocate a FrontEnd tuner using the **Tu
     ##### Allocating an FEI Tuner
     ![Allocating an FEI Tuner](../../images/FEITunerAllocate.png)
 
-    The **Tuner Allocation** dialog is displayed. In this dialog, you specify the desired tuner properties such as frequency, bandwidth, and so forth.
+    The **Allocate Tuner** wizard is displayed. In this dialog, you specify the desired tuner properties such as frequency, bandwidth, and so forth.
 
-    ##### Tuner Allocation Dialog
-    ![The Tuner Allocation dialog](../../images/TunerAllocationDialog.png)
+    ##### Allocate Tuner Wizard
+    ![Allocate Tuner Wizard](../../images/TunerAllocationPage.png)
 
 2.  In the **Allocation** drop-down box, verify **Control New Tuner** is selected.
 
