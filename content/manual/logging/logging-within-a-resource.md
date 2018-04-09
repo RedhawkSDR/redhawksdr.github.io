@@ -53,7 +53,7 @@ The following example creates a new logger object (`myLogger`) and adds `DEBUG`-
 
 ```c++
 // local named logger
-LOGGER myLogger = rh_logger::getLogger("AnotherLogger");
+LOGGER myLogger = rh_logger::Logger::getLogger("AnotherLogger");
 ...
 RH_DEBUG(myLogger, "serviceFunction() example log message");
 ```
