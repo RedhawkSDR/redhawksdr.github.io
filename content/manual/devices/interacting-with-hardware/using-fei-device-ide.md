@@ -3,7 +3,7 @@ title: "Using an FEI Device in the IDE"
 weight: 30
 ---
 
-After you have created the FEI device, you can launch the device in the sandbox, or launch it in a domain as part of a node. See [Launching Components in the IDE Sandbox]({{< relref "manual/sandbox/ide/_index.md#launching-components-in-the-ide-sandbox" >}}), or [Creating a New Node]({{< relref "manual/nodes/creating-a-new-node" >}}) and [Launching a Domain]({{< relref "manual/runtime-environment/launching-a-domain" >}}). After launching, a folder named **FrontEnd Tuners** will display under the device in the **REDHAWK Explorer** view, and the available tuners will be displayed under it with a tuning fork icon:
+After you have created the FEI device, you can launch the device in the sandbox or launch it in a domain as part of a node. For more information, refer to [Launching Components in the IDE Sandbox]({{< relref "manual/sandbox/ide/_index.md#launching-components-in-the-ide-sandbox" >}}) or [Creating a New Node]({{< relref "manual/nodes/creating-a-new-node" >}}) and [Launching a Domain]({{< relref "manual/runtime-environment/launching-a-domain" >}}). After launching the device, the **FrontEnd Tuners** folder is displayed under the device in the **REDHAWK Explorer** view and the available tuners are displayed under it with a tuning fork icon:
 
 ##### Available FEI Tuners
 ![Available FEI Tuners](../../images/FEItuningfork.png)
@@ -47,33 +47,32 @@ Bandwidth and sample rate must be specified during allocation. For an allocation
 
 7.  In **Sample Rate (Msps)**, specify the sample rate, or if a specific sample rate is not required, select the **Any Value** checkbox.
 
-8.  Optionally, adjust the **Bandwidth Tolerance (%)** or **Sample Rate Tolerance (%)** (see [Optional Status Elements]({{< relref "manual/appendices/fei.md#optional-status-elements">}}).
+8.  Optionally, adjust the **Bandwidth Tolerance (%)** or **Sample Rate Tolerance (%)** (Refer to [Optional Status Elements]({{< relref "manual/appendices/fei.md#optional-status-elements">}})).
 
-9. Optionally, specify the ID of the analog feed in [**RF Flow ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}), or the device's [**Group ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}).
+9. Optionally, specify the ID of the analog feed in [**RF Flow ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}) or the device's [**Group ID**]({{< relref "manual/appendices/fei.md#required-status-elements">}}).
 
-10. For any allocation other than a scanner allocation, click **Finish**.
+10. If allocating a scanner, click **Next**. For any other allocation, click **Finish**.
 
-For a scanner allocation, another page is added to the wizard which must be completed.
-
-1. Click **Next**. The **Scanner Allocation** page is displayed:
+    For a scanner allocation, the **Scanner Allocation** page is displayed:
 
     ##### Scanner Allocation
     ![Scanner Allocation](../../images/ScannerAllocationPage.png)
 
-2. In **Minimum Frequency (MHz)** and **Maximum Frequency (MHz)**, specify the lower and upper bounds of the frequencies that will be scanned.
+    You must complete the following for the scanner:
+    - In **Minimum Frequency (MHz)** and **Maximum Frequency (MHz)**, specify the lower and upper bounds of the frequencies that will be scanned.
 
-3. In **Mode**, select **SPAN_SCAN** to request scanning ranges of frequencies, or **DISCRETE_SCAN** to enumerate individual frequencies.
+    - In **Mode**, select **SPAN_SCAN** to request scanning ranges of frequencies, or **DISCRETE_SCAN** to enumerate individual frequencies.
 
-4. In **Control Mode**, select **TIME_BASED** to specify the minimum dwell time of the scanner in seconds, or **SAMPLE_BASED** to specify the minimum dwell time in samples.
+    - In **Control Mode**, select **TIME_BASED** to specify the minimum dwell time of the scanner in seconds, or **SAMPLE_BASED** to specify the minimum dwell time in samples.
 
-5. In **Control Limit** specify a lower bound on the dwell time.
+    - In **Control Limit**, specify a lower bound on the dwell time.
 
-6. Click Finish.
+    - Click **Finish**.
 
-    The tuner is allocated and is displayed under the **FrontEnd Tuners** folder with the truncated Allocation ID and an active tuning fork icon. If you left-click or hover over the allocated tuner, the full Allocation ID is displayed. A successful allocation tunes the hardware to the requested frequency and establishes a BulkIO data stream containing the content. In the case of a multi-out BulkIO port, the data stream will only be pushed over a connection with a Connection ID that is identical to the Allocation ID associated with the data stream. In cases where the BulkIO port is not a multi-out port, all data streams are pushed over all connections, regardless of Connection id.
+    The tuner is allocated and is displayed under the **FrontEnd Tuners** folder with the truncated Allocation ID and an active tuning fork icon. If you left-click or hover over the allocated tuner, the full Allocation ID is displayed. A successful allocation tunes the hardware to the requested frequency and establishes a BulkIO data stream containing the content. In the case of a multi-out BulkIO port, the data stream will only be pushed over a connection with a Connection ID that is identical to the Allocation ID associated with the data stream. In cases where the BulkIO port is not a multi-out port, all data streams are pushed over all connections, regardless of Connection id. 
 
-    ##### Allocated Tuner
-    ![Allocated Tuner](../../images/FEITunerAllocated.png)
+##### Allocated Tuner
+![Allocated Tuner](../../images/FEITunerAllocated.png)
 
 #### Deallocating a Tuner
 
@@ -113,7 +112,7 @@ If a listener was previously allocated, you can deallocate it. To deallocate a l
 
 After a tuner has been allocated in a scanning mode (**RX_SCANNER_DIGITIZER**), it can be given a scanning plan to execute.
 
-1. Right-click the allocated FrontEnd tuner and select **Scan**. The **Tuner Scan** dialog is displayed:
+1. Right-click the allocated FrontEnd tuner and select **Scan**. The **Tuner Scan** wizard is displayed:
 
     ##### Tuner Scan
     ![Tuner Scan](../../images/ScanPage.png)
@@ -122,28 +121,31 @@ After a tuner has been allocated in a scanning mode (**RX_SCANNER_DIGITIZER**), 
 
 3. In **Control Mode**, select **TIME_BASED** to specify the minimum dwell time of the scanner in seconds, or **SAMPLE_BASED** to specify the minimum dwell time in samples.
 
-4. In **Control Value** specify the dwell time.
+4. In **Control Value**, specify the dwell time.
 
 5. In **Delay (s)**, provide the number of seconds until the scan should start.
 
-6. Click **Next**. For **MANUAL_SCAN**, a page is shown where the single dwell frequency can be provided:
+6. Click **Next**.
+
+       If **MANUAL_SCAN** was selected, the **Manual Scan** page is displayed and the single dwell frequency can be provided:
 
     ##### Manual Scan
     ![Manual Scan](../../images/ManualScanPage.png)
 
-7. For **DISCRETE_SCAN**, a page is shown where a list of frequencies can be provided:
+       If **DISCRETE_SCAN** was selected, the **Discrete Scan** page is displayed and a list of frequencies can be provided:
 
     ##### Discrete Scan
     ![Discrete Scan](../../images/DiscreteScanPage.png)
 
-8. For **SPAN_SCAN**, a page is shown where ranges of frequencies can be provided. Each range has a low (start) frequency, and a high (ending) frequency, and the step width the scanner should use while scanning the range:
+      If **SPAN_SCAN** was selected, the **Span Scan** page is displayed and ranges of frequencies can be provided. Each range has a low (start) frequency, a high (ending) frequency, and the step width the scanner should use while scanning the range:
 
     ##### Span Scan
     ![Span Scan](../../images/SpanScanPage.png)
 
-9. After entering the scan plan, click **Finish**. The scanning will start after the delay specified on the first page.
+7. After entering the scan plan, click **Finish**.
+The scanning starts after the delay specified on the first page.
 
-The wizard also provides the ability to save the data entered in the wizard to an XML file that can later be loaded. Use the load and save buttons at the bottom of the wizard for this functionality.
+To save the data entered in the wizard to an XML file that can later be loaded, click the save button at the bottom of the wizard. To load a previously saved XML file, click the load button at the bottom of the wizard.
 
 #### Controlling a Tuned Receiver
 

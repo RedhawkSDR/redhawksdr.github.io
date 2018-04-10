@@ -5,7 +5,7 @@ weight: 10
 
 #### Using the FEI Wizard to Create an FEI Device
 
-The **New Front End Device Project** wizard enables users to quickly create an FEI compliant receiver or transmitter device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties.
+The **REDHAWK Front End Device Project** wizard enables users to quickly create an FEI compliant receiver or transmitter device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties.
 
 1.  To open the wizard and create a new device, select **File > New > Other**.
 
@@ -36,7 +36,7 @@ The **New Front End Device Project** wizard enables users to quickly create an F
 
     ##### FrontEnd Interfaces Device Type Selection
     ![FrontEnd Interfaces device Type Selection](../../images/NewFEIDeviceWizard5.png)
-6.  Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receive / transmit, scanning capability). Click **Next**.
+6.  Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receive/transmit, scanning capability). Click **Next**.
 
     The **FrontEnd Interface Tuner Options** page is displayed:
 
