@@ -1,9 +1,67 @@
 ---
-title: "Configuring Logging Capabilities"
-weight: 10
+title: "Configuring Logger Settings"
+weight: 20
 ---
 
-A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of increasing verbosity. `FATAL` messages describe events that are unrecoverable to the resource, whereas `DEBUG` messages enable developers to understand the processing behavior.
+A logger is configured through two mechanisms: a log configuration file, and a global log level.
+
+The log configuration file provides the user with the ability to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows the user to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the appenders and named loggers are configured as described in the log file, while the resource's main logger's log level is set to the given log level.
+
+A log configuration file can be:
+
+  1. Passed as a command-line argument when the Domain Manager is started
+```bash
+nodeBooter -D -logcfgfile logconfiguration.cfg
+```
+{{% notice note %}}
+When passed through the Domain Manager, every Component that does not have a logging configuration set will use the given logging configuration.
+{{% /notice %}}
+
+  2. Passed as an initialization property when an Application is created
+```bash
+>>> app = dom.createApplication("/waveforms/example/example.sad.xml", initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
+```
+{{% notice note %}}
+When passed through the createApplication function, the LOGGING_CONFIG_URI is passed to all components in the Application.
+{{% /notice %}}
+
+  3. Hard-coded into a component instance in a SAD file
+
+    ##### Add Logging Configuration to a Component
+    ![Add Logging Configuration to a Component](../images/LoggingApp.png)
+
+  4. Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}})
+
+For backwards-compatibility, it is also possible to hard-code the property configuration uri as a property for the component, but this approach is deprecated.
+
+For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
+
+  1. Passed as a command-line argument when the Device Manager is started
+```bash
+nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
+```
+
+  2. Hard-coded under the device componentinstantiation element as element loggingconfig in the DCD file
+  3. Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file
+
+The URI is resolved through 2 different methods:
+
+  1. Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): sca://myfile.cfg is equivalent to $SDRROOT/dom/myfile.cfg
+
+  2. Logger found through the local file system: file:///tmp/myfile.cfg is equivalent to /tmp/myfile.cfg
+
+If relative path to the file is provided as a command-line argument to nodeBooter, that file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
+
+If no log configuration file is provided, the default log configuration file is used. The following code displays the default log4j configuration settings used by all REDHAWK resources.
+
+```bash
+log4j.rootLogger=INFO,STDOUT
+log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
+log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
+log4j.appender.STDOUT.layout.ConversionPattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n"
+```
+
+A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of increasing verbosity. `FATAL` messages describe events that are unrecoverable to the resource through a decreasing level to `TRACE`, which is used to log fine-grained behavior.
 
   - `FATAL`
   - `ERROR`
@@ -16,15 +74,6 @@ Each different logging implementation library uses a log4j configuration file fo
 
   - `OFF`: Suppress all logging messages from the log
   - `ALL`: Allow all logging messages
-
-The following code displays the default log4j configuration settings used by all REDHAWK resources.
-
-```bash
-log4j.rootLogger=INFO,STDOUT
-log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
-log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
-log4j.appender.STDOUT.layout.ConversionPattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n"
-```
 
 This configuration suppresses logging levels above `INFO` and writes those messages to the standard out console.
 
@@ -88,7 +137,7 @@ This table lists the availability of token definitions for each REDHAWK resource
 
 In the following example, the root most logger passes logging messages with a severity level `INFO` or less. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
 
-If the resource uses a named logger, `EDET_cpp_impl1_i`, then log messages with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
+If the resource uses a named logger, `EDET_1`, and an additional user-defined logger `detections` is created in the `user` namespace, then log messages to this logger with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
 
 ```bash
 # Set root logger default levels and appender
@@ -126,8 +175,8 @@ log4j.appender.edetLog.layout.ConversionPattern=%d{ISO8601}:
 log4j.appender.NULL.layout=org.apache.log4j.PatternLayout
 log4j.appender.NULL.layout.ConversionPattern=%n
 
-log4j.category.EDET_cpp_impl1_i=DEBUG, edetLog
-log4j.additivity.EDET_cpp_impl1_i=false
+log4j.category.EDET_1.user.detections=DEBUG, edetLog
+log4j.additivity.EDET_1.user.detections=false
 ```
 
 ### Log Configuration Example - Configuring a Component with Token Macros
@@ -224,7 +273,7 @@ log4j.appender.pse.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L -
 
 ### Synchronous Logging for C++ Devices and Components
 
-For C++ Devices and Components, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the `org.ossie.logging.RH_SyncRollingAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
+In versions of log4cxx older than 0.10.0, logging messages from different sources could be interleaved in the same line when using the default file appender. To deal with this issue, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the `org.ossie.logging.RH_SyncRollingAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
 
 ##### RH_SyncRollingAppender Configuration Options
 | **Appender Option** | **Description**                                                                       |

@@ -1,6 +1,6 @@
 ---
 title: "Viewing Logging Events"
-weight: 50
+weight: 60
 ---
 
 A live view of events logged by components or devices can be displayed in the IDE. The component or device provides logging events to an event channel, and the IDE displays them as it receives them. To view the log:
