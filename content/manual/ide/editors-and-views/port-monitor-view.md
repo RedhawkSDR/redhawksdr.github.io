@@ -19,9 +19,9 @@ The View displays the following information:
 
   - **Name**: The name of the port or port connection.
   - **Elements/sec**: The rate of CORBA elements transferred in the pushPacket data call.
-  - **mbps**: Mega Bytes transferred per second.
-  - **calls/sec**: Number of push calls per second to the port.
-  - **Stream ids**: List of all active stream ids.
+  - **Bytes/sec**: Bytes transferred per second.
+  - **Calls/sec**: Number of push calls per second to the port.
+  - **Stream ID(s)**: List of all active stream ids.
   - **Avg. Queue Depth**: For components that queue data before processing/sending, the average queue depth measured as a percentage. If a port does not queue data, this value is set to zero.
   - **Time**: The elapsed time, in seconds, since the last packet was transferred via a push packet call.
 
