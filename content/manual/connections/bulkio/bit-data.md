@@ -220,7 +220,7 @@ The legacy DataSink helper does not support packed bit data.
 Within REDHAWK IDE, packed bit ports can be monitored and plotted just like any other BulkIO type.
 By default, plotting a packed bit port automatically brings up a raster plot.
 
-![Packed Bit Raster](../images/PackedBitPlot.png)
+![Packed Bit Raster](../../images/PackedBitPlot.png)
 
 General IDE plot use is described in [REDHAWK Plot View]({{< relref "manual/ide/editors-and-views/redhawk-plot-view.md" >}}).
 
