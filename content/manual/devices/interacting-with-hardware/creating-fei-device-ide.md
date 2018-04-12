@@ -177,9 +177,9 @@ To test-run the device, follow these steps:
 2.  In the **Sandbox** item, expand the **Device Manager** item. The devices running in the Sandbox are displayed.
 
 3.  Right-click the device’s output Port (probably called `dataShort_out`) and select **Plot Port Data**.
-4.  Right-click the running device and and select **Allocate**. The Tuner Allocation dialog is displayed.
-##### Tuner Allocation
-![The Tuner Allocation dialog](../../images/TunerAllocationDialog.png)
+4.  Right-click the running device and and select **Allocate**. The **Allocate Tuner** wizard is displayed.
+##### Allocate Tuner Wizard
+![Allocate Tuner Wizard](../../images/TunerAllocationPage.png)
 5.  Enter any arbitrary number in the **Center Frequency**, **Bandwidth**, and **Sample Rate** fields.
 6.  To have the wizard perform the allocation as a background job, check the Run in background checkbox. If this checkbox is not checked, the wizard does not close until the allocation is complete.
 
