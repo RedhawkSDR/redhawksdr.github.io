@@ -63,7 +63,7 @@ The following example sets a 24-bit integer value at bit 36:
 buf.setint(36, 0xABCDEF, 24);
 ```
 
-The least significant N bits of the value are stored.
+The least significant 24 bits of the value are stored.
 
 #### Creating
 
@@ -96,7 +96,7 @@ The following example creates a 36-bit `bitbuffer` from a hexadecimal literal:
 redhawk::bitbuffer data = redhawk::bitbuffer::from_int(0x123456789, 36);
 ```
 
-Only the least significant N bits are taken from the literal; any bits above the least significant N bits are discarded.
+Only the least significant 36 bits are taken from the literal; any bits above the least significant 36 bits are discarded.
 
 #### Sharing
 
