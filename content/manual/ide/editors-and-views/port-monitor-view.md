@@ -3,7 +3,7 @@ title: "Port Monitor View"
 weight: 100
 ---
 
-The **Port Monitor** view enables you to monitor the amount of data flowing out of or in to a particular port. These [link statistics]({{< relref "manual/exploring-domain/displaying-port-statistics.md" >}}) are helpful when debugging and can help identify which component is slowing down or dropping information during data processing.
+The **Port Monitor** view enables you to monitor the amount of data flowing out of or in to a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing. For more information, refer to [Port Monitoring in a Diagram](#port-monitoring-in-a-diagram).
 
 To open the **Port Monitor** view, right-click the port of a started component and select **Monitor Ports** from the context menu:
 
@@ -13,7 +13,7 @@ To open the **Port Monitor** view, right-click the port of a started component a
 The **Port Monitor** view is opened:
 
 ##### Port Monitor View
-![The Port Monitor View with Monitor Ports Selected](../../images/portMonitorView.png)
+![Port Monitor View](../../images/portMonitorView.png)
 
 The View displays the following information:
 
@@ -52,7 +52,7 @@ The following actions are available in the **Port Monitor** view.
       - Right-click the item.
       - Select **Stop Monitoring**.
 
-### Port Monitoring in a Waveform
+### Port Monitoring in a Diagram
 If a diagram is open while monitoring ports, the diagram display changes the colors of connections and provides (in) ports to reflect the statistics. A green connection indicates that data is flowing. A yellow connection indicates it has been more than 1 second since data was pushed over the connection, which may indicate a data flow issue.
 
 For provides (in) ports, a green port indicates the port's queue has plenty of space left. After the queue depth reaches 60 percent, the port color changes to yellow, and the port color slowly changes to red as the queue depth approaches 100 percent. Additionally, if there is a queue flush, the port remains red for 30 seconds after that queue flush.
