@@ -152,6 +152,8 @@ After successfully matching the allocation properties, the FrontEnd device needs
 
 After a successful allocation, the tuner is enabled and data is flowing though the device and out the output port. It is not required that the `allocateCapacity()` call return prior to the first data packet being pushed through the device.
 
+In the event that a device has an RFInfo input port, the center frequency for allocation should be the true RF frequency of the signal even if the RFInfo port indicates that some frequency translation has occurred before input to the device. In this case, the tuner allocation frequency and status frequency will be different than the actual tuned frequency to which the hardware device was tuned. The center frequency and bandwidth of the RFInfo packet should be used to validate the requested center frequency. The requested center frequency should fit within the bandwidth of the incoming analog signal as described by the RFInfo packet. However, the requested bandwidth from the FEI allocation should be interpreted as the requested bandwidth of the receiver or receiver digitizer and can include bandwidth that is outside the bandwidth specified by the RFInfo packet. 
+
 ### Listener Allocation Properties
 
 There are two methods used to perform listener allocations. The first method is to use a standard FrontEnd Allocation Structure as shown in [Tuner Allocation Properties](#tuner-allocation-properties) with the control property set to False. Setting the control property to False causes the device to look for existing tuners that meet the required properties in the rest of the FrontEnd Allocation Structure and assign a new listener tuner to that master tuner. If no tuners already exist, the request fails.
