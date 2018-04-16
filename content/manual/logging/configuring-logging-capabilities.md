@@ -9,46 +9,46 @@ The log configuration file provides the user with the ability to manage appender
 
 A log configuration file can be:
 
-  1. Passed as a command-line argument when the Domain Manager is started
+  - Passed as a command-line argument when the Domain Manager is started.
 ```bash
 nodeBooter -D -logcfgfile logconfiguration.cfg
 ```
 {{% notice note %}}
-When passed through the Domain Manager, every Component that does not have a logging configuration set will use the given logging configuration.
+When passed through the Domain Manager, every component that does not have a logging configuration set will use the given logging configuration.
 {{% /notice %}}
 
-  2. Passed as an initialization property when an Application is created
+  - Passed as an initialization property when an application is created.
 ```bash
 >>> app = dom.createApplication("/waveforms/example/example.sad.xml", initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
 ```
 {{% notice note %}}
-When passed through the createApplication function, the LOGGING_CONFIG_URI is passed to all components in the Application.
+When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` is passed to all components in the application.
 {{% /notice %}}
 
-  3. Hard-coded into a component instance in a SAD file
+  - Hard-coded into a component instance in a SAD file.
 
     ##### Add Logging Configuration to a Component
     ![Add Logging Configuration to a Component](../images/LoggingApp.png)
 
-  4. Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}})
+  - Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}}).
 
 For backwards-compatibility, it is also possible to hard-code the property configuration uri as a property for the component, but this approach is deprecated.
 
 For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
 
-  1. Passed as a command-line argument when the Device Manager is started
+  1. Passed as a command-line argument when the Device Manager is started.
 ```bash
 nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
 ```
 
-  2. Hard-coded under the device componentinstantiation element as element loggingconfig in the DCD file
-  3. Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file
+  2. Hard-coded under the device `componentinstantiation` element as element `loggingconfig` in the DCD file.
+  3. Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file.
 
 The URI is resolved through 2 different methods:
 
-  1. Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): sca://myfile.cfg is equivalent to $SDRROOT/dom/myfile.cfg
+  1. Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): `sca://myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
 
-  2. Logger found through the local file system: file:///tmp/myfile.cfg is equivalent to /tmp/myfile.cfg
+  2. Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
 
 If relative path to the file is provided as a command-line argument to nodeBooter, that file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
 
