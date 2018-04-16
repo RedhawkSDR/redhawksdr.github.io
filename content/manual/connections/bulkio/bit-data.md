@@ -81,7 +81,7 @@ To create a writable copy of an existing `shared_bitbuffer`:
 redhawk::bitbuffer data = shared.copy();
 ```
 
-To parse string literal, use the static class method `from_string()`:
+To parse a string literal, use the static class method `from_string()`:
 
 ```c++
 redhawk::bitbuffer data = redhawk::bitbuffer::from_string("0101101010101");
