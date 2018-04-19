@@ -3,21 +3,21 @@ title: "Configuring Logger Settings"
 weight: 20
 ---
 
-A logger is configured through two mechanisms: a log configuration file, and a global log level.
+A logger is configured through two mechanisms: a log configuration file and a global log level.
 
-The log configuration file provides the user with the ability to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows the user to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the appenders and named loggers are configured as described in the log file, while the resource's main logger's log level is set to the given log level.
+The log configuration file enables users to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows users to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the configuration file describes the settings for appenders and named loggers, while the log level is applied to the resource's main logger.
 
 A log configuration file can be:
 
-  - Passed as a command-line argument when the Domain Manager is started.
+- Passed as a command-line argument when the Domain Manager is started.
 ```bash
 nodeBooter -D -logcfgfile logconfiguration.cfg
 ```
 {{% notice note %}}
-When passed through the Domain Manager, every component that does not have a logging configuration set will use the given logging configuration.
+When passed through the Domain Manager, every component that does not have a logging configuration set will use the domain's logging configuration.
 {{% /notice %}}
 
-  - Passed as an initialization property when an application is created.
+- Passed as an initialization property when an application is created.
 ```bash
 >>> app = dom.createApplication("/waveforms/example/example.sad.xml", initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
 ```
@@ -25,32 +25,32 @@ When passed through the Domain Manager, every component that does not have a log
 When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` is passed to all components in the application.
 {{% /notice %}}
 
-  - Hard-coded into a component instance in a SAD file.
+- Hard-coded into a component instance in a SAD file.
 
     ##### Add Logging Configuration to a Component
     ![Add Logging Configuration to a Component](../images/LoggingApp.png)
 
-  - Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}}).
+- Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}}).
 
 For backwards-compatibility, it is also possible to hard-code the property configuration uri as a property for the component, but this approach is deprecated.
 
 For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
 
-  1. Passed as a command-line argument when the Device Manager is started.
+- Passed as a command-line argument when the Device Manager is started.
 ```bash
 nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
 ```
 
-  2. Hard-coded under the device `componentinstantiation` element as element `loggingconfig` in the DCD file.
-  3. Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file.
+- Hard-coded under the device `componentinstantiation` element as element `loggingconfig` in the DCD file.
+- Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file.
 
 The URI is resolved through 2 different methods:
 
-  1. Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): `sca://myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
+- Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): `sca://myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
 
-  2. Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
+- Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
 
-If relative path to the file is provided as a command-line argument to nodeBooter, that file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
+If the relative path to the file is provided as a command-line argument to `nodeBooter`, the file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
 
 If no log configuration file is provided, the default log configuration file is used. The following code displays the default log4j configuration settings used by all REDHAWK resources.
 
@@ -61,7 +61,7 @@ log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
 log4j.appender.STDOUT.layout.ConversionPattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n"
 ```
 
-A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of increasing verbosity. `FATAL` messages describe events that are unrecoverable to the resource through a decreasing level to `TRACE`, which is used to log fine-grained behavior.
+A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of decreasing severity. `FATAL` messages describe events that are unrecoverable to the resource through a decreasing level to `TRACE`, which is used to log fine-grained behavior. Setting a lower severity threshold increases verbosity.
 
   - `FATAL`
   - `ERROR`
