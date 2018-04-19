@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on REDHAWK</title>
+    <link>https://redhawksdr.github.io/</link>
+    <description>Recent content in Home on REDHAWK</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://redhawksdr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.8</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.8/</guid>
+      <description>The effort in REDHAWK 2.0.8 focused on:
+ Core Framework
+ Preventing sb.DataSink from adding an empty timestamp when it receives EOS in an empty packet. Adding inline header comments documenting C++ BulkIO input stream, output stream, and data block APIs. Fixing improperly scoped locks in Core Framework control. Implementing several C++ fixes to allow REDHAWK to compile on newer compilers. Correcting default property kinds in the DTD and XSD so they are no longer out of sync with the behavior of the Core Framework and the ICD.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.7</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/</guid>
+      <description>The effort in REDHAWK 2.0.7 focused on:
+ Core Framework
+ Resolving soft package dependency issue so DeviceManager resolves run time environment settings when deploying Devices and Services that have soft package dependencies. Resolving issue so that during Application release, calls to the Application object no longer result in misleading errors. Improving flexibility to ignore GPP threshold checks when determining if the GPP should go into a BUSY state. Resolving issue where processes with spaces in the names would cause the GPP to terminate.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.6</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.6/</guid>
+      <description>The effort in REDHAWK 2.0.6 focused on:
+ Initial FOSS Release of REDHAWK Enterprise Integration Assets, which provide the ability to interact with REDHAWK in a JRE environment. The REDHAWK Enterprise Integration Assets include:  REDHAWK Driver: Provides simplified access to REDHAWK via standard Java interfaces. This Asset shields all interaction with the underlying REDHAWK Components and provides a simplified API for Java developers interacting with a REDHAWK Domain. The REDHAWK Driver can be leveraged as a standalone Java Archive (JAR) file.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.5</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.5/</guid>
+      <description>The effort in REDHAWK 2.0.5 focused on:
+ Maintaining the correct time stamp when pushing data from the Sandbox DataSource. Improving a Component&amp;rsquo;s response to messages irrespective of whether or not the Component is started or stopped. Improving FileSink support for framed data and timecode with BLUE file output. Improving the handling of missing event message fields in C++ and Python. Ensuring external Port names are recognized. Addressing numerous bug fixes.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.4</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.4/</guid>
+      <description>The effort in REDHAWK 2.0.4 focused on:
+ Adding support for the CentOS 7 operating system. Updating the REDHAWK IDE to require Java 8. Adding support for two new Core Assets, SinkSDDS and SourceSDDS, which convert between SDDS and BulkIO data formats. Adding messages to indicate to the user the reason why the GPP is busy. Adding more IDE XML validation to help users catch issues sooner when designing projects.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.3</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.3/</guid>
+      <description>The effort in REDHAWK 2.0.3 focused on fixing the following bugs.
+ Improvements to GPP automatic resource monitoring caused a memory leak. Incorrect return type in the GPS interface implementation of FrontEnd Interfaces. Python Devices failed to launch when a logging config file is specified.  Fixes The following Core Framework fixes were completed in REDHAWK 2.0.3.
+ The correct current logging level is now reported in the Logging Level wizard in the Sandbox.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.2</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.2/</guid>
+      <description>The effort in REDHAWK 2.0.2 focused on:
+ Improving how error messages are displayed to the user in the IDE. Adding new abilities to interact with logging for Components and Devices in the IDE. Providing better awareness of resource utilization on the host computer. Addressing numerous Discrepancy Reports (DRs). Adding better support for creating FEI Devices written in Python.  New Features  Enhanced IDE to use new Domain Manager method for launching Waveforms.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.1</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.1/</guid>
+      <description>The effort in REDHAWK 2.0.1 focused on:
+ Enhancing the level of control that a system deployer has to customize the reservation schema used to manage computing resources. Adding Python operators and Java methods to simplify common arithmetic operations on BulkIO time stamps.  IDE Improvements  In Diagrams, duplicate connections between the same two Ports are displayed in yellow and show a warning. In the Sandbox, Components and Devices now display the Component or Device usage name rather than the Component’s or Device’s name.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.0.0</title>
+      <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.0/</guid>
+      <description>Core Framework Changes BulkIO stream-based API  Provide structures to manage data flows based on streams rather than individual data pushes. Allow the retrieval of arbitrary amounts of information from the incoming data flow.  Domain Awareness  Provide Components with a pointer as part of the base class to their Domain Manager and Application objects. Provide Devices with a pointer as part of the base class to their Domain Manager and Device Manager.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.1.3</title>
+      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.3/</guid>
+      <description>The effort in REDHAWK 2.1.3 focused on:
+ Adding snapshot capability of network data and performing SDDS packet analysis on the captured data. Adding scripts and configuration files that allow REDHAWK core services to run as system services. In addition to these services, integrators can define REDHAWK waveforms that are deployed during the system boot process. Extending the tool, rh_net_diag, to provide read/write/execute permissions checks on directories important for running a REDHAWK system.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.1.2</title>
+      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.2/</guid>
+      <description>The effort in REDHAWK 2.1.2 focused on:
+ Core REDHAWK Features and APIs
+ Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O. Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available at https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-address. This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.1.1</title>
+      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.1/</guid>
+      <description>Core REDHAWK Features and APIs  Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O. Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available here.  This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.  Adding the API for a new type of tuner, a scanning Device.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.1.0</title>
+      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.0/</guid>
+      <description>The effort in REDHAWK 2.1.0 focused on:
+ Adding support for Components to be deployed on a specific GPP, and conversely allowing the GPP to restrict deployments through a matching set of id/value pairs. These id/value pairs are defined in the Software Assembly Descriptor and Device Configuration Definition files respectively. Users may refer to this feature as the &amp;ldquo;special snowflake&amp;rdquo; deployment Property. Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://redhawksdr.github.io/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/_footer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://redhawksdr.github.io/_header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/_header/</guid>
+      <description>REDHAWK</description>
+    </item>
+    
+  </channel>
+</rss>

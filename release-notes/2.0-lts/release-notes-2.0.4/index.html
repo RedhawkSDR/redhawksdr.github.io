@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>REDHAWK Release Notes - 2.0.4 :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+    
+  </head>
+  <body data-url="/release-notes/2.0-lts/release-notes-2.0.4/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-book'></i> Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../manual/">REDHAWK Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.0-lts/">2.0 - (LTS)</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.1-beta/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.1-beta/">2.1 - (Beta)</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../specifications/">REDHAWK Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   REDHAWK Manuals</option> 
+    <option value="/manual/2.0-lts/" >
+  - 
+   2.0 - (LTS)</option>
+    <option value="/manual/2.1-beta/" >
+  - 
+   2.1 - (Beta)</option>
+  
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   2.0 - (LTS)</option> 
+      <option value="/release-notes/2.0-lts/release-notes-2.0.8/" >-- REDHAWK Release Notes - 2.0.8</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.7/" >-- REDHAWK Release Notes - 2.0.7</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.6/" >-- REDHAWK Release Notes - 2.0.6</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.5/" >-- REDHAWK Release Notes - 2.0.5</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.4/"  selected>-- REDHAWK Release Notes - 2.0.4</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.3/" >-- REDHAWK Release Notes - 2.0.3</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.2/" >-- REDHAWK Release Notes - 2.0.2</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.1/" >-- REDHAWK Release Notes - 2.0.1</option>
+      <option value="/release-notes/2.0-lts/release-notes-2.0.0/" >-- REDHAWK Release Notes - 2.0.0</option>
+  
+    <option value="/release-notes/2.1-beta/" >
+  - 
+   2.1 - (Beta)</option>
+  
+    <option value="/specifications/" >
+   REDHAWK Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>REDHAWK Release Notes - 2.0.4</h1>
+    
+    
+    
+    
+
+<p>The effort in REDHAWK 2.0.4 focused on:</p>
+
+<ul>
+<li>Adding support for the CentOS 7 operating system.</li>
+<li>Updating the REDHAWK IDE to require Java 8.</li>
+<li>Adding support for two new Core Assets, SinkSDDS and SourceSDDS, which convert between SDDS and BulkIO data formats.</li>
+<li>Adding messages to indicate to the user the reason why the GPP is busy.</li>
+<li>Adding more IDE XML validation to help users catch issues sooner when designing projects.</li>
+<li>Corrected issues with Redhawk-generated build scripts that prevented errors from being displayed.</li>
+<li>Adding ’Connect’ and ’Show Properties View’ in the Graphiti diagram context menus.</li>
+<li>Adding GPP label to the Domain Manager log message when deploying Components or Waveforms to enable quick identification of which GPP the Domain Manager is attempting to launch Components on.</li>
+<li>Improving the REDHAWK Explorer product to use the new Graphiti diagrams introduced in the REDHAWK 2.0.0 IDE.</li>
+<li>Improving IDE namespace support to give users an error if they have multiple resources with conflicting IDs in the SDRROOT.</li>
+<li>Addressing numerous bug fixes.</li>
+</ul>
+
+<h2 id="core-framework-api-changes">Core Framework API Changes</h2>
+
+<p>The following API changes have been made.</p>
+
+<ul>
+<li>GPP <code>sys_limits</code> structure Property identifiers have changed. This is a <code>readonly</code> Property reported by the GPP during a query call. The resulting <code>sys_limits</code> Property identifiers returned from the query call now correspond to the <strong>New ID</strong> column.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>Old ID</strong></th>
+<th><strong>New ID</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>current_threads</code></td>
+<td><code>sys_limits:current_threads</code></td>
+</tr>
+
+<tr>
+<td><code>max_threads</code></td>
+<td><code>sys_limits:max_threads</code></td>
+</tr>
+
+<tr>
+<td><code>current_open_files</code></td>
+<td><code>sys_limits:current_open_files</code></td>
+</tr>
+
+<tr>
+<td><code>max_open_files</code></td>
+<td><code>sys_limits:max_open_files</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="improvements">Improvements</h2>
+
+<p>The following Core Framework and IDE improvements were completed in REDHAWK 2.0.4.</p>
+
+<h3 id="core-framework-improvements">Core Framework Improvements</h3>
+
+<ul>
+<li>Improved build support files so IDL references in an IDL project can be listed in any order.</li>
+<li>Improved support for Components with multiple implementations. When the local file for a secondary implementation is missing, that implementation is ignored.</li>
+<li>Fixed omniEvents to run on CentOS 7.</li>
+</ul>
+
+<h3 id="ide-improvements">IDE Improvements</h3>
+
+<ul>
+<li>Improved XML validation.</li>
+<li>Improved namespace support to display an error when multiple elements in the SDR root have the same DCE ID.</li>
+<li>Improved Graphiti diagram context menus by adding Connect option.</li>
+<li>Improved warning dialogs by adding warnings for deallocate all and New Control Panel.
+el6-i686</li>
+<li>Added a warning message for properties that have kind message that are not a struct.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<p>The following IDE, Core Framework, and Core Asset fixes were completed in REDHAWK 2.0.4.</p>
+
+<h3 id="core-framework-fixes">Core Framework Fixes</h3>
+
+<ul>
+<li>If the Sandbox is started when a plot is created, the plot’s initial state is set to started.</li>
+<li>Python SPD parser correctly exports capitalization for softpkg.</li>
+<li>Python Codegen can handle camel-case structure definitions.</li>
+<li>Exceptions in <code>port_impl</code> code are now passed to the caller instead of ignoring them.</li>
+<li>When a call to runTest on the Application has unknown properties, it lists the unknown properties.</li>
+<li>In GPP, merged <code>create_node.py</code> and <code>devconfig.py</code> into <code>gpp_setup</code> script, updated the install scripts to use <code>gpp_setup</code>, changed the model to REDHAWK GPP, and updated GPP properties to 2.0 property kinds.</li>
+<li>Better error is given when <code>redhawk.attach</code> is invoked with no visible Domains.</li>
+<li>Improved error message when missing dependency is a softpkg.</li>
+<li>Java unit tests are disabled when the core build does not have Java enabled.</li>
+<li>Python Sandbox <code>createApplication</code> call includes Device assignment sequence as an argument.</li>
+<li>Fixed PartialConfiguration error for init of properties with kindtype of both property and allocation.</li>
+<li>Deallocating a listener sends an EOS out of the BulkIO Port.</li>
+<li>If the Device Manager does not have write access to the cache directory, it logs an error instead of having a segmentation fault.</li>
+<li>Corrected giop:unix endPoint format in <code>rh_net_diag</code> utility.</li>
+<li>Added the name of the missing file to the error message when parsing spd files.</li>
+<li>Sandbox DataSDDSSink stores the latest SRI received.</li>
+<li>Code generator correctly handles programming language element in the implementation element.</li>
+<li>SDDS Ports push SRI on new connections.</li>
+<li>If omniEvents is stopped, and the Domain is shutdown, a correct message is generated.</li>
+<li>Added namespace qualifiers for <code>sys_limits</code> structure property members in GPP.</li>
+<li>Enhanced error handling for problems during Device registration.</li>
+<li>Python library does not release Applications on exit by default.</li>
+<li>External property overrides are allowed for <code>loadSADFile</code> call in the Sandbox.</li>
+<li>Sandbox <code>loadSADFile</code> allows for namespaced property names.</li>
+<li>Default values are correctly generated for sequence of structures in C++.</li>
+<li>Calls to <code>FileSystem::exists()</code> no longer cause the Domain Manager process to abort.</li>
+<li>Fixed issue with GPP statistics type conversion for large numbers that resulted in occasional errors in the usage statistics.</li>
+<li>Spec file for namespaced Components, Devices, and Services includes complete directory paths.</li>
+<li>Fixed compatability issue with partial configuration during <code>initializeProperties</code>.</li>
+<li>Missing read permissions on Component installations no longer crash the Domain Manager.</li>
+<li>Python FEI infrastructure matches C++ FEI infrastructure.</li>
+<li>Java FEI infrastructure matches C++ FEI infrastructure.</li>
+<li>Fixed the <code>proc</code> function in the Python Sandbox by updating DataConverter to <code>rh.DataConverter</code>.</li>
+<li>Unit tests do not deadlock on 32-bit CentOS 6.</li>
+<li><code>cleanomni</code> script correctly determines root privileges.</li>
+<li><code>cleanomni</code> only attempts to start omniEvents once if the omniEvents service startup fails.</li>
+<li>Tests run manually (via <code>runtests.py</code>) and tests run as part of the continuous integration infrastructure use the same test environment.</li>
+<li>Readonly property kind properties are initialized through <code>initializeProperties</code>.</li>
+<li>DeviceManager can correctly parse Device spd files when they contain dependency elements.</li>
+<li>Automake warnings are not issued when compiling on CentOS 7.</li>
+<li>In Python <code>ExecutableDevice.terminate()</code>, wait until the entire process group has exited before checking the process status and returning.</li>
+<li><code>rhlauncher</code> has the updated REDHAWK logo.</li>
+<li>omniEvents waits for omniNames to be ready before deploying.</li>
+<li>Components launch in the Sandbox with GNU debugger.</li>
+</ul>
+
+<h4 id="special-resolutions">Special Resolutions</h4>
+
+<ul>
+<li>Won’t Fix
+
+<ul>
+<li>Core framework runtime failure if basic Components are not installed - The Sandbox requires the DataConverter Component be installed for format conversion.</li>
+<li>Limited IDL path search for IDL - Previous code generators did not allow for additional search paths. This has been resolved in newer releases.</li>
+<li>Java Devices do not deal well with a NULL IDM channel - The normal Java Device startup will handle all Null Pointer Exceptions (NPE). Developers are encouraged to use Publisher and Subscriber interfaces and not the internal <code>connectEventChannel()</code>, which will cause an NPE.</li>
+<li>Sandbox initial configure call includes execparams - execparam and configure are both deprecated. Therefore, changing the behavior would not be beneficial because new Components are not created with these properties, and there is a chance that existing Components would be broken.</li>
+<li>C++ Appender prints error on stderr - This behavior is intrinsic to log4cxx. The message is sent during a reconfiguration request when an error is encountered.</li>
+<li>Incorrect use of daemon function in omniNames <code>init.d script</code> - This defect is part of the EPEL distributed package of omniOrb.</li>
+</ul></li>
+<li>Fixed By Other Issue
+
+<ul>
+<li>Python service generator throws an exception with non-namespaced IDL interface - Fixed by REDHAWK release 1.9.</li>
+</ul></li>
+<li>Cannot Reproduce
+
+<ul>
+<li>Python Device Codegen uses incorrect name in <code>Makefile.am</code>.</li>
+<li>Multiple message out Ports in C++ causes malformed <code>port_impl.h</code>.</li>
+<li>If more than one Application is created with the same name using <code>createApplication</code> on the Python package, the tracking of the Applications breaks.</li>
+</ul></li>
+<li>Duplicate
+
+<ul>
+<li>Spelling error in Application error message - Duplicate of CF-1550 (Log message says “Abormal”).</li>
+<li>SAD validation fails when an implementation is missing - Duplicate of CF-1556 (Improved support for Components with multiple implementations. When the local file for a secondary implementation is missing, that implementation is ignored.).</li>
+</ul></li>
+</ul>
+
+<h3 id="ide-fixes">IDE Fixes</h3>
+
+<ul>
+<li>FindBy Wizards no longer allow mulitple Ports with the same name to be added.</li>
+<li>Fixed null pointer exception (NPE) with SAD file properties and assembly controller actual properties.</li>
+<li>Ports no longer can be added for Service projects with an interface that does not extend CF/PortSupplier.</li>
+<li>Indexer now imports BurstIO information.</li>
+<li>Fixed issue causing an error when deallocating a Python FEI Device.</li>
+<li>FindBy direct edit dialog only enables the Delete button after a Port is selected.</li>
+<li>Graphiti diagrams were refactored between repositories.</li>
+<li>Fixed NPE with SAD referencing Port names that do not exist when launching in Sandbox.</li>
+<li>Corrected warning message displayed when overwriting modified files.</li>
+<li>Property View inner tab name now always displays “Properties”.</li>
+<li>An error no longer occurs when invoking shutdown on Sandbox Device Manager.</li>
+<li>REDHAWK IDE RPM now requires necessary development packages.</li>
+<li>Sources in the <code>Makefile.am.ide</code> are ordered lexicographically.</li>
+<li>Code generation no longer unsets C++ build exclusions.</li>
+<li>Devices launched in Sandbox are now configured during <code>registerDevice</code>.</li>
+<li>Toolbar buttons (start/stop/release) are now enabled for local Waveform editors.</li>
+<li>DCD model does not allow invalid <code>domainmanager</code> element.</li>
+<li>IDE now sends the correct properties when a Component/Device is launched in the Sandbox.</li>
+<li>EMF validation error now occurs if a Struct does not contain at least one simple or simple sequence property.</li>
+<li>Code was refactored so IDL path sources use preference.</li>
+<li>Fixed NPE with Waveform/Node project references to a non-existent SPD.</li>
+<li>Removed references to several plug-ins that are not necessary as dependencies.</li>
+<li>Required PyDev dependency was added for Sandbox console.</li>
+<li>Correct exec param properties are now used when launching in the Sandbox.</li>
+<li>SoftPkg elements are no longer expandable in Explorer view.</li>
+<li>The FEI Device wizard no longer creates the <code>frontend_tuner_allocation</code> property as a partially-configured struct.</li>
+<li>Corrected diagram titles and tooltips.</li>
+<li>When generating a namespaced Waveform or Node, the .spec file now owns parent directories.</li>
+<li>The message property kind is only displayed for struct properties or if the property is already a message kind.</li>
+<li>Fixed omniORB IDL parsing errors.</li>
+<li>Diagram icons now match Explorer view icons.</li>
+<li>Dependencies were added to the IDE RPM for necessary GTK libraries.</li>
+<li>Fixed display issues on CentOS 7.</li>
+<li>Waveforms with more than one declared namespace launch in the IDE Sandbox.</li>
+<li>Launching a Device in the Device Chalkboard with the Device Chalkboard open no longer causes an error.</li>
+<li>The IDE now uses the stable release of Nebula (1.0.0).</li>
+<li>The IDE now uses the latest PyDev update (4.5.5) for Eclipse Mars.</li>
+<li>The IDE’s NeXtMidas version was locked to 3.6.</li>
+</ul>
+
+<h3 id="core-asset-fixes">Core Asset Fixes</h3>
+
+<h4 id="redhawk-basic-components">REDHAWK Basic Components</h4>
+
+<ul>
+<li>FileReader - bluefile <code>byteswap</code> hardcoded to false.</li>
+<li>Sourcesocket - Properly handles FIN in client mode when server closes connection.</li>
+<li>SourceVITA49 - Expanded unit tests.</li>
+<li>SourceVITA49 - Corrected to assume payload is big endian if not specified.</li>
+<li>SourceVITA49 - Fixed so <code>destroy_rx_thread</code> is threadsafe.</li>
+</ul>
+
+<h4 id="redhawk-basic-devices">REDHAWK Basic Devices</h4>
+
+<ul>
+<li>FmRdsSimulator - <code>nodeconfig.py</code> script now modifies the <code>rh.FmRdsSimulator</code> profile in-place.</li>
+<li>RTL2832U - <code>nodeconfig.py</code> script now modifies the <code>rh.RTL2832U</code> profile in-place.</li>
+<li>USRP and RTL - Updated <code>nodeconfig.py</code> script to use new Sandbox API <code>get_simple</code> instead of <code>get_props</code>.</li>
+<li>USRP_UHD - <code>nodeconfig.py</code> script now modifies the <code>rh.USRP_UHD</code> profile in-place.</li>
+</ul>
+
+<h3 id="documentation-improvements-fixes">Documentation Improvements/Fixes</h3>
+
+<ul>
+<li>Updated the dependency list for installing from source on CentOS 7.</li>
+<li>Corrected information about creating REDHAWK Projects in the IDE.</li>
+<li>Added information about new warning dialog displayed when deallocate all is selected.</li>
+<li>Updated graphics to display Monitor Ports on context menu for resources in Graphiti diagrams.</li>
+<li>Updated graphics to display Connect in Graphiti diagram context menus.</li>
+<li>Updated graphics displaying Show Properties in Graphiti diagram context menus.</li>
+<li>Updated REDHAWK installation instructions.</li>
+<li>Updated image on REDHAWK home screen.</li>
+<li>Removed incorrect/obsolete upgrade instructions.</li>
+<li>Updated steps in Allocating a FrontEnd Tuner procedure.</li>
+<li>Modified Configuring omniORB heading to Configuring JacORB for the IDE.</li>
+<li>Removed Installing RH on Ubuntu appendix.</li>
+<li>Removed invalid IDE dependencies.</li>
+<li>Added information about SourceSDDS and SinkSDDS.</li>
+<li>Updated Figure 17.17 Running Waveform in the Chalkboard with graphiti diagram.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/master/content/release-notes/2.0-lts/release-notes-2.0.4.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<link href="../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
