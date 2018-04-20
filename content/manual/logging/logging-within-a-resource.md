@@ -14,7 +14,7 @@ All the following logging statements work with `_baseLog`. However, to declare a
 rh_logger::LoggerPtr my_logger;
 ```
 
-To activate the new logger, use the following code:
+To instantiate the new logger, use the following code:
 ```c++
 my_logger = this->_baseLog->getChildLogger("my_logger");
 ```
@@ -54,7 +54,7 @@ All the following logging statements work with `_baseLog`. However, to declare a
 private RHLogger my_logger;
 ```
 
-To activate the new logger, use the following code:
+To instantiate the new logger, use the following code:
 ```java
 my_logger = this._baseLog.getChildLogger("my_logger");
 ```

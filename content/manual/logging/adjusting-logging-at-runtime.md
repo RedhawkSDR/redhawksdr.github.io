@@ -65,17 +65,17 @@ Assuming that there is a reference to an instance of a component called "`comp_1
     >>> c.resetLog()
     ```
 
-- Use `_get_log_level` to get the log level for the base logger.
+- Use `log_level` to get the log level for the base logger.
 
     ```py
-    >>> c._get_log_level()
+    >>> c.log_level()
     5000
     ```
 
-- Use `_set_log_level` to set the log level for the base logger.
+- Use `log_level` to set the log level for the base logger.
 
     ```py
-    >>> c._set_log_level(10000)
+    >>> c.log_level(10000)
     ```
 
 These commands are also available for the Domain Manager, Device Manager, and Application objects. In the case of the Domain Manager and Device Manager, they affect the specific object. In the case of the Application, the logging API aggregates all components' loggers through a single interface. For example, calling `getNamedLoggers` on the Application object returns a list of all the named loggers in all components in the Application.

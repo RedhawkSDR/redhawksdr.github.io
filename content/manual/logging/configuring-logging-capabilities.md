@@ -32,8 +32,6 @@ When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` i
 
 - Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}}).
 
-For backwards-compatibility, it is also possible to hard-code the property configuration uri as a property for the component, but this approach is deprecated.
-
 For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
 
 - Passed as a command-line argument when the Device Manager is started.
