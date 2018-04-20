@@ -65,14 +65,14 @@ Assuming that there is a reference to an instance of a component called "`comp_1
     >>> c.resetLog()
     ```
 
-- Use `log_level` to get the log level for the base logger.
+- Use `log_level` with no arguments to get the log level for the base logger.
 
     ```py
     >>> c.log_level()
     5000
     ```
 
-- Use `log_level` to set the log level for the base logger.
+- Use `log_level` with an argument to set the log level for the base logger.
 
     ```py
     >>> c.log_level(10000)

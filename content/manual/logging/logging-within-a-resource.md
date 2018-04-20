@@ -116,5 +116,5 @@ self._baseLog.trace(...)
 As with the other logging capabilities, you can programatically change the logging level.
 
 ```py
-self._log.setLevel(logging.WARN)
+self._baseLog.setLevel(logging.WARN)
 ```
