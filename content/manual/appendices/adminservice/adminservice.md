@@ -7,27 +7,19 @@ weight: 10
 
 Since the AdminService is based on Supervisor, all the Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
 
-##### REDHAWK Service Configuration Directories
-| **Section**          | **Description**                                               |
-| :------------------- | :------------------------------------------------------------ |
-| `[unix_http_server]` | Defines the Unix socket interface to the AdminService         |
-| `[inet_http_server]` | Defines the TCP socket interface to the AdminService          |
-| `[adminserviced]`    | Settings for running the AdminService server                  |
-| `[rhadmin]`          | Settings for running the rhadmin client                       |
-| `[rpcinterface]`     | Defines listeners for external interfaces to the AdminService |
+##### REDHAWK Service Configuration File Sections
 
-The DomainManager and DeviceManager configurations directly correspond to a process that runs on a system. On the other hand, the Waveform configurations tell the AdminService how to interact with the running REDHAWK Domain to start and stop Waveforms during system start up and shutdown. The contents of the INI files for each specific service are explained in the following sections:
-
-  - [unix_http_server]({{< relref "#unix-http-server" >}})
-  - [inet_http_server]({{< relref "#inet-http-server" >}})
-  - [adminserviced]({{< relref "#adminserviced" >}})
-  - [rhadmin]({{< relref "#rhadmin" >}})
-  - [rpcinterface]({{< relref "#rpcinterface" >}})
-
+| **Section**                                                | **Description**                                               |
+| :--------------------------------------------------------- | :------------------------------------------------------------ |
+| [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService         |
+| [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService          |
+| [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Settings for running the AdminService server                  |
+| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Settings for running the rhadmin client                       |
+| [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService |
 
 ## unix_http_server
 
-The AdminService can listen on a local Unix socket or on the network using a TCP socket. The unix_http_server section defines the local socket that the rhadmin can use for remote control of the AdminService. The local socket is configured and used by default.
+The AdminService can listen on a local Unix socket or on the network using a TCP socket. The unix_http_server section defines the local socket that the rhadmin can use for remote control of the AdminService. The default configuration uses a local Unix socket.
 
 The following section describes all the available configuration parameters for the unix_http_server process.
 
@@ -92,6 +84,17 @@ The following section describes all the available configuration parameters for t
 
 ### Configuration Parameters
 
+parameter: `pidfile`  
+required: No  
+default value: adminserviced.pid  
+description: Path to the pid file for the AdminService - relative to `directory` or absolute path.
+
+parameter: `loglevel`  
+required: No  
+default value: info  
+format: critical, error, warn,  info, debug, trace, blather  
+description: DomainManager’s logging level at startup.
+
 parameter: `logfile`  
 required: No  
 default value: adminserviced.log  
@@ -106,42 +109,6 @@ parameter: `logfile_backups`
 required: No  
 default value: 10  
 description: Number of backups of the logfiles to keep.
-
-parameter: `loglevel`  
-required: No  
-default value: info  
-format: critical, error, warn,  info, debug, trace, blather  
-description: DomainManager’s logging level at startup.
-
-parameter: `pidfile`  
-required: No  
-default value: adminserviced.pid  
-description: Path to the pid file for the AdminService - relative to `directory` or absolute path.
-
-parameter: `umask`  
-required: No  
-default value: 022  
-description: umask for the AdminService process.
-
-parameter: `nodaemon`  
-required: No  
-default value: false  
-description: Set to true to start the AdminService in the foreground.
-
-parameter: `minfds`  
-required: No  
-default value: 1024  
-description: Minimum number of file descriptors that need to be available for the AdminService to start.
-
-parameter: `minprocs`  
-required: No  
-default value: 200  
-description: Minimum number of process descriptors that need to be available for the AdminService to start.
-
-parameter: `nocleanup`  
-required: No  
-default value: False  
-description: Prevent removal of child log files at startup.  This only effects processes that run as children of the AdminService, not detached processes.
 
 parameter: `childlogdir`  
 required: No  
@@ -174,16 +141,6 @@ required: No
 default value: `$SDRROOT`  
 description: Change directory to `directory` before running the AdminService as a daemon.
 
-parameter: `strip_ansi`  
-required: No  
-default value: False  
-description: Strip ANSI escape sequences from child log files of processes that run as children of the AdminService.
-
-parameter: `identifier`  
-required: No  
-default value: adminserviced  
-description: The identifier string used by the RPC interface.
-
 parameter: `config_dir`  
 required: No  
 default value: /etc/redhawk  
@@ -209,10 +166,45 @@ required: No
 default value: waveforms.d  
 description: Relative path from `config_dir` to the directory that has the Waveform `.ini` configuration files.
 
+parameter: `umask`  
+required: No  
+default value: 022  
+description: umask for the AdminService process.
+
+parameter: `minfds`  
+required: No  
+default value: 1024  
+description: Minimum number of file descriptors that need to be available for the AdminService to start.
+
+parameter: `minprocs`  
+required: No  
+default value: 200  
+description: Minimum number of process descriptors that need to be available for the AdminService to start.
+
+parameter: `nocleanup`  
+required: No  
+default value: False  
+description: Prevent removal of child log files at startup. This only effects processes that run as children of the AdminService, not detached processes.
+
+parameter: `nodaemon`  
+required: No  
+default value: false  
+description: Set to true to start the AdminService in the foreground.
+
+parameter: `strip_ansi`  
+required: No  
+default value: False  
+description: Strip ANSI escape sequences from child log files of processes that run as children of the AdminService.
+
+parameter: `identifier`  
+required: No  
+default value: adminserviced  
+description: The identifier string used by the RPC interface.
+
 
 ## rhadmin
 
-The rhadmin remote control program can be configured in the main AdminService configuration file.  The `-c <file>` option can be used to specify an alternate configuration file.
+The rhadmin control script can be configured in the main AdminService configuration file.
 
 The following section describes all the available configuration parameters for the rhadmin process.
 
@@ -248,7 +240,7 @@ description: Absolute path to a file for storing commands run in interactive mod
 
 ## rpcinterface
 
-The AdminService can be extended to add more functionality with the RPC interface. This section defines the additional functionality.  The interface rhadmin uses is implemented as an RPC interface.
+The AdminService can be extended to add more functionality with the RPC interface. This section defines the additional functionality. The interface rhadmin uses is implemented as an RPC interface.
 
 The only required parameter is `adminservice.rpcinterface_factory`, however, any additional defined parameters will be passed to the described RPC interface.
 

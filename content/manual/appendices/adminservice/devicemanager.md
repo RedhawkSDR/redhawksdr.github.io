@@ -1,16 +1,17 @@
 ---
-title: "DeviceManager Configuration"
+title: "DeviceManager Service Configuration"
 weight: 30
 ---
 
-The REDHAWK DeviceManagers are controlled by files in the `/etc/redhawk/nodes.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example DeviceManager configuration with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK DeviceManager.
+The REDHAWK DeviceManager service is controlled by files in the `/etc/redhawk/nodes.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example DeviceManager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK DeviceManager service.
 
-The following section describes all the available configuration parameters for the DeviceManager process. System-wide default configuration settings can be stored in `/etc/redhawk/init.d/node.defaults`.
+Default service configuration parameters are stored in `/etc/redhawk/init.d/node.defaults`. The following section describes all the available configuration parameters for the DeviceManager process.
 
 ## Configuration Parameters
 
 {{% notice note %}}
- For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
+Parameter names are case sensitive.
+For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
 True: 1 or true  
 False: 0 or false
 {{% /notice %}}
@@ -108,11 +109,6 @@ default value: None
 format: Standard shell environment variable.  
 description: Used to set `OMNIORB_CONFIG` variable before running the process. Consult omniORB documentation for further details.
 
-parameter: `ORB_ENDPOINT`  
-required: No  
-default value: None  
-description: Set the endpoint definition for this process. Consult omniORB documentation for further details.
-
 parameter: `ORB_INITREF`  
 required: No  
 default value: None  
@@ -138,7 +134,7 @@ description: Allows conditional startup of services based on the `enable` parame
 parameter: `priority`  
 required: No  
 default value: 400  
-description: Relative priority of the DeviceManager in the group of processes to start for this domain.
+description: Relative priority of the DeviceManager in the group of processes to start for this domain. Lower values will be started earlier - priority 100 will be started before priority 400.
 
 parameter: `autostart`  
 required: No  

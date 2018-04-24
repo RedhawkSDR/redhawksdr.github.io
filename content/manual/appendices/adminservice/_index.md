@@ -7,24 +7,27 @@ weight: 55
 
 ## Introduction
 
-For system integrators, REDHAWK provides an optional RPM with the necessary scripts and configuration files to manage DomainManager, DeviceManager (includes devices and services), and Waveforms. The RPM, <br>`redhawk-adminservice-<version>.<os>.noarch.rpm`, is provided as part of the REDHAWK Runtime yum respository, but is not installed by default.
+For system integrators, REDHAWK provides an optional RPM with the necessary scripts and configuration files to manage the REDHAWK core services: DomainManager, DeviceManager (includes devices and services), and Waveforms. The RPM, <br>`redhawk-adminservice-<version>.<os>.noarch.rpm`, is provided as part of the REDHAWK Runtime yum respository, but is not installed by default.
 
-The REDHAWK AdminService is built on [Supervisor](<http://supervisord.org>) and uses an INI style configuration file (name=value) to define the command line arguments and execution environment for the service. The configuration files and service scripts provide enough flexibility to manage the REDHAWK core services for most use cases. For specialized cases, the REDHAWK source repository (`core-framework/adminservice`) provides an RPM spec file, `redhawk-adminservice.spec`, and all the source scripts for integrators to build and customize their own service scripts and installation RPM.
+The AdminService groups all configured services and Waveforms by domain and then start one domain at a time. By default, the start order, defined by the `priority` setting, is DomainManager, DeviceManager, and then Waveform. An inverted order is used during system shutdown.
 
-The following table describes the three main REDHAWK services and their configuration directories that contain the INI style configuration files.
+The REDHAWK AdminService is built on [Supervisor](<http://supervisord.org>) and uses an INI style configuration file (name=value) to define the command line arguments and execution environment for the service. The configuration files and service scripts provide enough flexibility to manage the REDHAWK core services for most use cases. For specialized cases, the REDHAWK source repository (`adminservice`, `redhawk-adminservice` branch) provides an RPM spec file, `redhawk-adminservice.spec`, and all the source scripts for integrators to build and customize their own service scripts and installation RPM.
+
+The following table describes the configuration directories that contain the INI style configuration files.
 
 ##### REDHAWK AdminService Configuration Directories
+
 | **Service**   | **Configuration Directory** |
 | :------------ | :-------------------------- |
 | AdminService  | /etc/redhawk                |
 | Defaults      | /etc/redhawk/init.d         |
 | DomainManager | /etc/redhawk/domains.d      |
 | DeviceManager | /etc/redhawk/nodes.d        |
-| Waveforms     | /etc/redhawk/waveforms.d    |
+| Waveform      | /etc/redhawk/waveforms.d    |
 
-The AdminService is controlled by a single `adminserviced.conf` file residing in `/etc/redhawk`.  This configures both the AdminService and the rhadmin client. The default configurations for the DomainManagers, DeviceManagers and Waveforms are stored in the corresponding `.defaults` file in `/etc/redhawk/init.d`.
+The AdminService is controlled by a single `adminserviced.conf` file residing in `/etc/redhawk`. REDHAWK core services and Waveforms that are to start on system startup are stored in the corresponding `.d` directory. Each REDHAWK core service has a corresponding `.defaults` file in the `/etc/redhawk/init.d` directory.
 
-The DomainManager and DeviceManager configurations directly correspond to a process that runs on a system. On the other hand, the Waveform configurations tell the AdminService how to interact with the running REDHAWK Domain to start and stop Waveforms. The contents of the INI files for each specific service are explained in the following sections:
+The DomainManager and DeviceManager configurations directly correspond to a process that runs on a system. On the other hand, the Waveform configurations tell the AdminService how to interact with the running REDHAWK Domain to start and stop Waveforms. The INI content for each specific service is explained in the following sections:
 
   - [DomainManagers]({{< relref "#domainmanagers" >}})
 
@@ -32,17 +35,14 @@ The DomainManager and DeviceManager configurations directly correspond to a proc
 
   - [Waveforms]({{< relref "#waveforms" >}})
 
-The following table describes the system service scripts provided by REDHAWK. REDHAWK supports both CentOS 6.x and 7.x system service frameworks.
-
 ### AdminService Configuration File
 
-The AdminService configuration file follow a standard INI file format. This file is divided into five sections to configure the various aspects of the AdminService and rhadmin client. The defaults in the file should be sufficient for most cases. By default, the AdminService always uses the `/etc/redhawk/adminserviced.conf` configuration file. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/adminservice.md" >}}) section describes all the available configuration parameters for the AdminService.
+The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService, these values should be sufficient for most cases. By default, the AdminService always uses a Unix socket for remote control, but it has the option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/adminservice.md" >}}) section describes all the available configuration parameters for the AdminService.
 
 To create a new AdminService configuration file and start the service, perform the following commands.  
 {{% notice note %}}
- The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
-
 
 ```
 cd /etc/redhawk
@@ -51,7 +51,10 @@ vi myadminserviced.cfg
 adminserviced -c /etc/redhawk/myadminserviced.cfg
 ```
 
-##### REDHAWK AdminService Scripts
+##### REDHAWK AdminService System Service Scripts
+
+The following table lists the system service scripts that are used to control the AdminService.
+
 | **Service**            | **System Service Script**                              |
 | :--------------------- | :----------------------------------------------------- |
 | **CentOS 6 (SysV)**    |                                                        |
@@ -60,17 +63,21 @@ adminserviced -c /etc/redhawk/myadminserviced.cfg
 | AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
 | AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
 
-The AdminService will group all configured services and Waveforms by domain and then start one domain at a time. By default, the start order, defined by the `priority` setting, is DomainManager, DeviceManager, and then Waveforms. An inverted order is used during system shutdown. As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. It is assumed the system integrators will enable the  service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
+ As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. It is assumed the system integrators will enable the  service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
 
-### rhadmin client
-User interaction with the AdminService is through the rhadmin script. The rhadmin connects to the AdminService through a socket and issues commands to start, stop, status and shut down the REDHAWK Services and Waveforms.
+### rhadmin Client
 
-The configuration of the rhadmin is through the `/etc/redhawk/adminserviced.conf` file. You can use the following command to use a different configuration file.
+The rhadmin script is used outside of system startup/shutdown to manage REDHAWK core service lifecycle from the command line. The rhadmin script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart` and `status`.
+
+The configuration of the rhadmin is through the `[rhadmin]` section in the `/etc/redhawk/adminserviced.conf` file. You can use the following command to run the rhadmin script using a different configuration file.
 ```
 rhadmin -c /etc/redhawk/myadminserviced.conf
 ```
 
 ##### rhadmin Commands
+
+The following table describes the rhadmin client script commands that are used to control the AdminService.
+
 | **Command** | **Argument**           | **Description**                                                                                                |
 | :---------- | :--------------------- | :------------------------------------------------------------------------------------------------------------- |
 | `add`       | Domain or Process      | Activates any updates to the configuration that were made by reread.                                           |
@@ -85,19 +92,25 @@ rhadmin -c /etc/redhawk/myadminserviced.conf
 | `stop`      | Domain, Process, all   | Stop the specified Domain, Process or everything. Can specify multiple arguments.                              |
 | `update`    | blank, Domain          | Reload the configuration and start/stop any domain groupings that have changed. Can specify multiple arguments |
 
+The rhadmin client script can be run in interactive mode by invoking:
+```
+rhadmin<enter>
+rh_admin> status
+```
+or as a one time command by invoking
+```
+rhadmin status
+```
+
 ## DomainManagers
 
-The REDHAWK DomainManagers are controlled by files in the `/etc/redhawk/domains.d` directory. The rhadmin can generate an example DomainManager configuration with the complete set of parameters that can be used to control the setup and execution of a REDHAWK DomainManager.
+The REDHAWK DomainManager configuration is controlled by files in the `/etc/redhawk/domains.d` directory. The rhadmin script can generate an example DomainManager configuration file with the complete set of parameters to manage the execution of a REDHAWK DomainManager service.
 
-The [DomainManager Configuration File]({{< relref "manual/appendices/adminservice/domainmanager.md" >}}) section describes all the available configuration parameters for the DomainManager process.
+To create and start new DomainManager services, perform the following commands.
 
-### Configuration File
-
-The configuration files follow a standard INI file format. This file can be divided into sections `[domain:domainname]` that can be used to define different instances of a DomainManager service. With this format, it is possible to define multiple DomainManager service instances. It is recommended that you define only one DomainManager service per configuration file. To create and start new DomainManager services, perform the following commands.  
 {{% notice note %}}
- The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
-
 
 ```
 cd /etc/redhawk/domains.d
@@ -106,21 +119,21 @@ vi mydom.cfg
 sudo service redhawk-adminservice restart
 ```
 
-## DeviceManagers
-The REDHAWK DeviceManagers are controlled by files in the `/etc/redhawk/nodes.d` directory. The rhadmin can generate an example DeviceManager configuration with the complete set of parameters that can used to the control the setup and execution of a REDHAWK DeviceManager. There are no rules on partitioning nodes for a REDHAWK system. REDHAWK’s only guidance is that you define one GPP per computing host.
-
-The [DeviceManager Configuration File]({{< relref "manual/appendices/adminservice/devicemanager.md" >}}) section describes all the available configuration parameters for the DeviceManager process.
-
 ### Configuration File
 
-The configuration files follow a standard INI file format. This file can be divided into sections `[node:nodename]` that can be used to define different DeviceManager instances. If you have multiple Nodes defined for a computing host, it is recommended that you have one configuration file per Node definition.
+The configuration file follows a standard INI file format. A DomainManager is defined within a section that has a `[domain:domainname]` header. By adding multiple sections like this, it is possible to define multiple DomainManager services in one file. It is recommended that you define only one DomainManager service per configuration file.
+
+The [DomainManager Configuration File]({{< relref "manual/appendices/adminservice/domainmanager.md" >}}) section describes all the available configuration parameters for the DomainManager process.
+
+## DeviceManagers
+
+The REDHAWK DeviceManager configuration is controlled by files in the `/etc/redhawk/nodes.d` directory. The rhadmin script can generate an example DeviceManager configuration file with the complete set of parameters to manage the execution of a REDHAWK DeviceManager service. There are no rules on partitioning nodes for a REDHAWK system. REDHAWK’s only guidance is that you define one GPP per computing host.
 
 To create and start new DeviceManager services, perform the following commands.
 
 {{% notice note %}}
- The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
-
 
 ```
 cd /etc/redhawk/nodes.d
@@ -129,17 +142,23 @@ vi redhawk_dev.gpp.node.cfg
 sudo service redhawk-adminservice restart
 ```
 
-## Waveforms
-
-REDHAWK Waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. The rhadmin can generate an example Waveform configuration with the complete set of parameters that can used to the control the setup and execution of a REDHAWK Waveform. The AdminService facilitates starting a Waveform at system startup for your REDHAWK system.
-
-The [Waveform Configuration File]({{< relref "manual/appendices/adminservice/waveform.md" >}}) section describes all the available configuration parameters when launching a REDHAWK Waveform at system startup.
-
 ### Configuration File
 
-The configuration files follow a standard INI file format. This file can be broken up into sections `[waveform:waveformname]` that can be used to define different Waveform instances.
+The configuration file follows a standard INI file format. A DeviceManager is defined within a section that has a `[node:nodename]` header, each section corresponds to a DCD file describing a [Node]({{< relref "manual/nodes">}}). By adding multiple sections like this, it is possible to define multiple DeviceManager services in one file. If you have multiple Nodes defined for a computing host, it is recommended that you have one configuration file per Node definition.
 
-To create and start a new Waveform, perform the following commands. The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The DeviceManager can be configured to start after the DomainManager has started up, or it can start up at the same time as the DomainManager and it will wait for the domain to be available and register its [Devices]({{< relref "manual/devices">}}) and [Services]({{< relref "manual/services">}}). If there are many Devices or Services that need to start, it is recommended to add a custom script for verifying that the DeviceManager has started all Devices and Services and registered them with the DomainManager(see `start_pre_script` in the [DeviceManager Configuration]({{< relref "manual/appendices/adminservice/devicemanager.md" >}})).
+
+The [DeviceManager Configuration File]({{< relref "manual/appendices/adminservice/devicemanager.md" >}}) section describes all the available configuration parameters for the DeviceManager process.
+
+## Waveforms
+
+REDHAWK Waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. The rhadmin script can generate an example Waveform configuration with the complete set of parameters to manage the execution of a REDHAWK Waveform.
+
+To create and start a new Waveform, perform the following commands.
+
+{{% notice note %}}
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+{{% /notice %}}
 
 ```
 cd /etc/redhawk/waveforms.d
@@ -147,6 +166,14 @@ rhadmin config waveform > redhawk_dev.controller.cfg
 vi redhawk_dev.controller.cfg
 sudo service redhawk-adminservice restart
 ```
+
+### Configuration File
+
+The configuration file follows a standard INI file format. This file is broken up into `[waveform:waveformname]` sections that correspond to a SAD file describing a Waveform.  By adding multiple sections like this, it is possible to define multiple Waveform instances in one file.
+
+The Waveform can be configured to start after the DeviceManager has started up, it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the Waveform. If the waveform depends on Devices or Services, it is recommended to add a custom script to verify that those Devices and Services have started and registered with the DomainManager(see `start_pre_script` in the [Waveform Configuration]({{< relref "manual/appendices/adminservice/waveform.md" >}})).
+
+The [Waveform Configuration File]({{< relref "manual/appendices/adminservice/waveform.md" >}}) section describes all the available configuration parameters for launching a REDHAWK Waveform.
 
 ## Linux Support Files
 
@@ -177,7 +204,7 @@ description: Common kernel tuning parameters for network buffers and core file g
 The following sequence of commands can be used to build a `redhawk-adminservice` RPM file. In this example, the version is `2.1.3`, the user name is `someuser`, and the `adminservice` repo has been cloned in the directory, `/home/someuser/repos`.
 
 {{% notice note %}}
- The following script will remove the `rpmbuild` directory from your home directory.
+The following script will remove the `rpmbuild` directory from your home directory.
 {{% /notice %}}
 
 

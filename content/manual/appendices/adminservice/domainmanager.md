@@ -1,16 +1,17 @@
 ---
-title: "DomainManager Configuration"
+title: "DomainManager Service Configuration"
 weight: 20
 ---
 
-The REDHAWK DomainManager service is controlled by files in the `/etc/redhawk/domains.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example DomainManager configuration with the complete set of parameters that can be used to control the setup and execution of a REDHAWK DomainManager.
+The REDHAWK DomainManager service is controlled by files in the `/etc/redhawk/domains.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example DomainManager configuration with the complete set of parameters that can be used to control the setup and execution of a REDHAWK DomainManager service.
 
-The following section describes all the available configuration parameters for the DomainManager process. System-wide default configuration settings can be stored in `/etc/redhawk/init.d/domain.defaults`.
+Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`. The following section describes all the available configuration parameters for the DomainManager process.
 
 ## Configuration Parameters
 
 {{% notice note %}}
- For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
+Parameter names are case sensitive.
+For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
 True: 1 or true  
 False: 0 or false
 {{% /notice %}}
@@ -99,11 +100,6 @@ required: No
 default value: None  
 format: Standard shell environment variable.  
 description: Used to set `OMNIORB_CONFIG` variable before running the process. Consult omniORB documentation for further details.
-
-parameter: `ORB_ENDPOINT`  
-required: No  
-default value: None  
-description: Set the endpoint definition for the DomainManager process. Can be used with persistence enabled. Consult omniORB documentation for further details.
 
 parameter: `ORB_INITREF`  
 required: No  
@@ -201,7 +197,7 @@ description: umask for the process.
 parameter: `priority`  
 required: No  
 default value: 100  
-description: Priority of this domain relative to other configured domains.  Controls which domain gets started first on the system.
+description: Priority of this domain relative to other configured domains. Controls which domain gets started first on the system. Lower values will be started earlier - priority 10 will be started before priority 100.
 
 parameter: `nicelevel`  
 required: No  

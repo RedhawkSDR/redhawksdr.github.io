@@ -3,14 +3,15 @@ title: "Waveform Configuration"
 weight: 40
 ---
 
-REDHAWK Waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example Waveform configuration with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Waveform. The AdminService facilitates starting a Waveform at system startup for your REDHAWK system.
+REDHAWK Waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example Waveform configuration with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Waveform.
 
-The following section describes all the available configuration parameters when launching a REDHAWK Waveform at system startup. System-wide default configuration settings can be stored in `/etc/redhawk/init.d/waveform.defaults`.
+Default service configuration parameters are stored in `/etc/redhawk/init.d/waveform.defaults`. The following section describes all the available configuration parameters when launching a REDHAWK Waveform.
 
 ## Configuration Parameters
 
 {{% notice note %}}
- For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
+Parameter names are case sensitive.
+For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
 True: 1 or true  
 False: 0 or false
 {{% /notice %}}
@@ -77,24 +78,6 @@ required: No
 default value: `-o remove`  
 description: Option to use with the waveform control script to stop the waveform.
 
-parameter: `ORB_CFG`  
-required: No  
-default value: None  
-format: Standard shell environment variable.  
-description: Used to set `OMNIORB_CONFIG` variable before running the process. Consult omniORB documentation for further details.
-
-parameter: `ORB_INITREF`  
-required: No  
-default value: None  
-description: Used as omniORB ORBInitRef command line argument when starting process.  
-(For example, `NameService=corbaname::127.0.0.1:2809` <br>`EventService=corbaloc::127.0.0.1:11169/omniEvents` would override orb config files for specific service locations.) Consult omniORB documentation for further details.
-
-parameter: `ORB_ENDPOINT`  
-required: No  
-default value: None  
-description: Used as omniORB ORBendPoint command line argument when starting process.  
-(For example, `giop:tcp:127.0.0.1:2809` would override orb config files for the specific endpoint to listen.) Consult omniORB documentation for further details.
-
 parameter: `enable`  
 required: No  
 default value: True  
@@ -109,7 +92,7 @@ description: Allows conditional startup of services based on the `enable` parame
 parameter: `priority`  
 required: No  
 default value: 900  
-description: Relative priority of the Waveform in the group of processes to start for this domain.
+description: Relative priority of the Waveform in the group of processes to start for this domain. Lower values will be started earlier - priority 800 will be started before priority 900.
 
 parameter: `autostart`  
 required: No  
