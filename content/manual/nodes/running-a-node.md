@@ -18,18 +18,18 @@ As part of the REDHAWK install, a domain and node are setup by default. To launc
 
 ### Creating a Component that Consumes Resources
 
-All components consume processor resources such as memory and cpu capacity. These resources are automatically tracked by the GPP, and when those thresholds are exceeded, the GPP enters the BUSY state, preventing further [deployments onto the computer]({{< relref "manual/waveforms/deployment-resources.md" >}}). However, in some cases it is desirable for the component to consume some other capacity on the computer that is not part of the standard REDHAWK deployment model. The GPP contains several "allocation" properties such as mcastnicIngressCapacity or mcastnicVLANs that are available as a deployment constraint but are not used by the default component builds.
+All components consume processor resources such as memory and cpu capacity. These resources are automatically tracked by the GPP, and when its thresholds are exceeded, the GPP enters the BUSY state, preventing further [deployments onto the computer]({{< relref "manual/waveforms/deployment-resources.md" >}}). However, in some cases, it is desirable for the component to consume some other capacity on the computer that is not part of the standard REDHAWK deployment model. The GPP contains several `allocation` properties such as `mcastnicIngressCapacity` or `mcastnicVLANs` that are available as a deployment constraint but are not used by the default component builds.
 
-In a more generalized way, when a device's specialized capacity is added to the device as a property of kind "allocation", components can be created that will allocate this attribute of the device, making this "allocation" property a deployment constraint for the component.
+In a more generalized way, when a device's specialized capacity is added to the device as a property of kind `allocation`, components can be created that will allocate this attribute of the device, making this `allocation` property a deployment constraint for the component.
 
 {{% notice note %}}
 Extending the GPP with new properties requires a modification of the GPP's source code and risks compatibility with other developer's components.
 {{% /notice %}}
 
-To create a component that consumes these kind of "allocation" resources:
+To create a component that consumes these kind of `allocation` resources:
 
 1.  Create a Python component called `sample`.
-2.  On the Project View, select the **Implementations** tab.
+2.  In the Project View, select the **Implementations** tab.
 3.  On the bottom-right of this view, the **Dependencies** section is visible. Click **Add...** on the **Dependency** subsection of the **Dependencies** section.
 4.  In the **Dependency Wizard**, select **Kind=Property Reference** and **Type=allocation**.
 5.  The `Refid` field is more complicated; the component needs to be given some property that the component consumes when it is running on a device. An example of such a property is memory. For this example, memory is an attribute (property) of the device that the component consumes. To describe this, click the **Browse** button on the **Refid** field and select **GPP:memCapacity** (do not worry if there are multiple instances of the same property on the list, just pick one).
