@@ -60,6 +60,6 @@ For provides (in) ports, a green port indicates the port's queue has plenty of s
 To configure the threshold values that trigger color changes for port statistics:
 
    1. Select **Window > Preferences**.
-   2. Select the **REDHAWK > Port Statistics page**.
+   2. Select the **REDHAWK > Diagrams > Port Statistics page**.
    3. Change the values.
    4. Click **Apply and Close**.
