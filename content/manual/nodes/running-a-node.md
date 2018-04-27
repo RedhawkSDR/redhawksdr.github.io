@@ -29,13 +29,14 @@ Extending the GPP with new properties requires a modification of the GPP's sourc
 To create a component that consumes these kind of `allocation` resources:
 
 1.  Create a Python component called `sample`.
-2.  In the Project View, select the **Implementations** tab.
-3.  On the bottom-right of this view, the **Dependencies** section is visible. Click **Add...** on the **Dependency** subsection of the **Dependencies** section.
-4.  In the **Dependency Wizard**, select **Kind=Property Reference** and **Type=allocation**.
-5.  The `Refid` field is more complicated; the component needs to be given some property that the component consumes when it is running on a device. An example of such a property is memory. For this example, memory is an attribute (property) of the device that the component consumes. To describe this, click the **Browse** button on the **Refid** field and select **GPP:memCapacity** (do not worry if there are multiple instances of the same property on the list, just pick one).
-6.  After selecting this property, the globally unique ID of the property populates the **Refid** field, which in this case is: **DCE:8dcef419-b440-4bcf-b893-cab79b6024fb** (this is the `id` of the corresponding property of the gpp). To complete the dependency definition, provide a value for the consumption of this property: in this case, set **Value=***1000*.
-7.  Click **Finish**.
-8.  Save the project, generate the code and drag the component project to **REDHAWK Explorer > Target SDR**.
+2.  In the Project Explorer View, double-click the `sample.spd.xml` file.
+3.  Select the **Implementations** tab.
+4.  In the **Dependencies** section, next to the **Dependency** list, click **Add...**.
+5.  In the **Dependency Wizard**, select **Kind=Property Reference** and **Type=allocation**.
+6.  The `Refid` field is more complicated; the component needs to be given some property that the component consumes when it is running on a device. An example of such a property is memory. For this example, memory is an attribute (property) of the device that the component consumes. To describe this, click the **Browse** button on the **Refid** field and select **GPP:memCapacity** (do not worry if there are multiple instances of the same property on the list, just pick one).
+7.  After selecting this property, the globally unique ID of the property populates the **Refid** field, which in this case is: **DCE:8dcef419-b440-4bcf-b893-cab79b6024fb** (this is the `id` of the corresponding property of the gpp). To complete the dependency definition, provide a value for the consumption of this property: in this case, set **Value=***1000*.
+8.  Click **Finish**.
+9.  Save the project, generate the code and drag the component project to **REDHAWK Explorer > Target SDR**.
 
 ### Create a Waveform for the New Component
 
