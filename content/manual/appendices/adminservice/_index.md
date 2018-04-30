@@ -82,6 +82,7 @@ The following table describes the rhadmin client script commands that are used t
 | :---------- | :--------------------- | :------------------------------------------------------------------------------------------------------------- |
 | `add`       | Domain or Process      | Activates any updates to the configuration that were made by reread.                                           |
 | `avail`     |                        | Shows Domains/Processes that can be started.                                                                   |
+| `getconfig` | Process                | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
 | `maintail`  | -f,<br> -\<bytes\>     | Displays the AdminService log. -f for continuous or -\<bytes\> for amount of log to retrieve                   |
 | `reload`    |                        | Restart the AdminService, implicitly causes it to reread the configuration files.                              |
 | `reread`    |                        | Rereads the configuration files, doesn't apply changes.                                                        |
@@ -114,9 +115,15 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 ```
 cd /etc/redhawk/domains.d
-rhadmin config domain > mydom.cfg
-vi mydom.cfg
+
+# This will generate a generic domain configuration
+rhadmin config domain > domain.ini
+vi domain.ini
 sudo service redhawk-adminservice restart
+```
+```
+# To generate a domain configuration from an existing project, use the following command
+rhadmin config domain <path/to/domain>/DomainManager.dmd.xml <optional DomainName> > domain.ini
 ```
 
 ### Configuration File
@@ -137,9 +144,16 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 ```
 cd /etc/redhawk/nodes.d
-rhadmin config node > redhawk_dev.gpp.node.cfg
-vi redhawk_dev.gpp.node.cfg
+
+# This will generate a generic node configuration
+rhadmin config node > node.ini
+
+vi node.ini
 sudo service redhawk-adminservice restart
+```
+```
+# To generate a node configuration from an existing project, use the following command
+rhadmin config node <path/to/node>/DeviceManager.dmd.xml <optional DomainName> > node.ini
 ```
 
 ### Configuration File
@@ -162,9 +176,16 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 ```
 cd /etc/redhawk/waveforms.d
-rhadmin config waveform > redhawk_dev.controller.cfg
-vi redhawk_dev.controller.cfg
+
+# This will generate a generic waveform configuration
+rhadmin config waveform > waveform.ini
+
+vi waveform.ini
 sudo service redhawk-adminservice restart
+```
+```
+# To generate a waveform configuration from an existing project, use the following command
+rhadmin config waveform <path/to/waveform>/<file>.sad.xml <DomainName> > waveform.ini
 ```
 
 ### Configuration File

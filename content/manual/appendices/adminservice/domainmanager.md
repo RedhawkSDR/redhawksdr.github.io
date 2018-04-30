@@ -216,12 +216,13 @@ description: Controls core file generation from the REDHAWK Domain Service.
 
 parameter: `ulimit`  
 required: No  
-default value: User’s enviroment  
+default value: User’s environment  
 description: Provide any additional ulimit settings before running the process. Consult ulimit documentation for further details.
 
 parameter: `environment`  
 required: No  
 default value: None  
+note: These values are available as a replacement(eg. `%(ENV_SDRROOT)s`) for most parameters in the UPPERCASE  
 description: Provide additional environment variables to set before executing the service. Format is NAME=Value, for Value that contains spaces, it must be enclosed with double quotes.
 
 parameter: `directory`  

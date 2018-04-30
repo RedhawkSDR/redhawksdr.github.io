@@ -229,12 +229,13 @@ description: Controls core file generation from the REDHAWK DeviceManager Servic
 
 parameter: `ulimit`  
 required: No  
-default value: user’s enviroment  
+default value: user’s environment  
 description: Provide any additional ulimit settings before running the process.
 
 parameter: `environment`  
 required: No  
 default value: None  
+note: These values are available as a replacement(eg. `%(ENV_SDRROOT)s`) for most parameters in the UPPERCASE  
 description: Provide additional environment variables before executing service. Format is NAME=Value, for Value that contain spaces it must be enclosed with double quotes.
 
 parameter: `directory`  

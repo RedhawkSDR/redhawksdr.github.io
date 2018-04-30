@@ -187,12 +187,14 @@ description: Controls core file generation from the REDHAWK Waveform Service.
 
 parameter: `ulimit`  
 required: No  
-default value: User’s enviroment  
+default value: User’s environment  
 description: Provide any additional ulimit settings before running the process.
 
 parameter: `environment`  
 required: No  
-default value: none description: Provide additional environment variables to set before executing service. Format is NAME=Value, for Values that contain spaces, it must be enclosed with double quotes.
+default value: none  
+note: These values are available as a replacement(eg. `%(ENV_SDRROOT)s`) for most parameters in the UPPERCASE  
+description: Provide additional environment variables to set before executing service. Format is NAME=Value, for Values that contain spaces, it must be enclosed with double quotes.
 
 parameter: `directory`  
 required: No  
