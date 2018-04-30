@@ -44,7 +44,7 @@ nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfi
 
 The URI is resolved through 2 different methods:
 
-- Logger found through the SCA file system using the Domain Manager's root SCA directory ($SDRROOT/dom): `sca://myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
+- Logger found through the SCA file system. For the Domain Manager, this is `$SDRROOT/dom`; for the Device Manager, this is `$SDRROOT/dev`. For example, with the Domain Manager, the URI `sca:///myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
 
 - Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
 
@@ -181,23 +181,22 @@ log4j.additivity.EDET_1.user.detections=false
 
 The logging configuration information for component `MEGA_WORKER` is configured from `$SDRROOT/dom/logcfg/component.log4j.cfg`. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, `@@@WAVEFORM.NAME@@@`, `@@@COMPONENT.NAME@@@` and `@@@COMPONENT.PID@@@`). The root most logger passes logging messages with a severity level `INFO` or less, to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. For the `FILE` appender, the destination file is: `/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log`.
 
-```bash
-Waveform: MY_EXAMPLE
-Component: MEGA_WORKER
- property: LOGGING_CONFIG_URI = "sca://logcfg/component.log4j.cfg"
+Waveform: MY_EXAMPLE  
+Component: MEGA_WORKER  
+ property: LOGGING_CONFIG_URI = "sca:///logcfg/component.log4j.cfg"
 
- \$SDRROOT/
-          dev/
-             ...
-          deps/
-             ..
-          dom/
-              ...
-             logcfg/
-                    component.log4j.cfg
 
-  /data/logdir/
-```
+ $SDRROOT/  
+ &nbsp;&nbsp;&nbsp;&nbsp; dev/  
+ &nbsp;&nbsp;&nbsp;&nbsp; deps/  
+ &nbsp;&nbsp;&nbsp;&nbsp; dom/
+ &nbsp;&nbsp;&nbsp;&nbsp;    
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logcfg/
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; component.log4j.cfg
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ /data/logdir/
 
 ```bash
 # Set root logger default levels and appender
@@ -215,7 +214,7 @@ log4j.appender.FILE.layout.ConversionPattern=%d{ISO8601}: %p:%c - %m [%F:%L]%n
 
 When the waveform `MY_EXAMPLE` is deployed on the domain, the component is launched with the following logging configuration:
 
-`MEGA_WORKER "....." LOGGING_CONFIG_URI sca://logcfg/component.log4j.cfg?fs= <br>IOR:010…`
+`MEGA_WORKER "....." LOGGING_CONFIG_URI sca:///logcfg/component.log4j.cfg?fs=IOR:010…`
 
 ### Logging with Event Channels for Components, Devices and Services
 
@@ -224,18 +223,12 @@ For REDHAWK resources, the underlying logging functionality has been extended to
 ##### RH_LogEventAppender Configuration Options
 | **Appender Option** | **Description**                                                                            |
 | :------------------ | :----------------------------------------------------------------------------------------- |
-| `EVENT_CHANNEL`     | Event Channel name where logging messages are published.                                    |
-| `NAME_CONTEXT`      | Directory in `omniNames` to lookup Event Channel (domain name - `REDHAWK_DEV`).             |
+| `EVENT_CHANNEL`     | Event Channel name where logging messages are published.             |
 | `PRODUCER_ID`       | Identifier of the resource producing the log message (resource name).                      |
 | `PRODUCER_NAME`     | Name of the resource producing the log message.                                            |
 | `PRODUCER_FQN`      | Fully qualified name of the resource (domain-name/waveform-name/resource-name). |
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
-
-
-{{% notice note %}}
-The `NAME_CONTEXT` option, is required for C++ resources to maintain backwards compatibility. For REDHAWK 2.0 and greater resources developed in Python or Java, the `EVENT_CHANNEL` is acquired using the `EventChannelManager` interface that is available to resources with domain awareness and ignores the `NAME_CONTEXT` option.
-{{% /notice %}}
 
 {{% notice note %}}
 Eventable logging is currently not supported for the Domain Manager and Device Manager. The following messages may occur during start up of these services with configurations that use eventable logging.

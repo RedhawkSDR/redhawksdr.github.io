@@ -5,7 +5,7 @@ weight: 40
 
 Every resource capable of hosting custom logging (component, device, service) includes the class member `_baseLog`. The `_baseLog` member is a logger instance that has the same logging name as the resource instance. For example, the first instance of `comp` in a waveform is `comp_1`. For all practical purposes, `_baseLog` is the resource's "root" logger, even though there is a log4j root logger as well whose name is the empty string and is also the parent for the named logger.
 
-Each logger object has a member function, `(getChildLogger)`, that takes 1 required argument and a second optional argument. The first argument is the name for the child logger and the second argument is an optional namespace for this logger. If `_baseLog` belongs to component `comp_1`, calling `(getChildLogger)` with the first argument set to `mylog` and no second argument, the logger name `comp_1.user.mylog` is created. Calling `(getChildLogger)` with the first argument set to `mylog` and the second argument set to `some.namespace` creates the logger name `comp_1.some.namespace.mylog`.
+Each logger object has a member function, `getChildLogger()`, that takes 1 required argument and a second optional argument. The first argument is the name for the child logger and the second argument is an optional namespace for this logger. If `_baseLog` belongs to component `comp_1`, calling `getChildLogger()` with the first argument set to `mylog` and no second argument, the logger name `comp_1.user.mylog` is created. Calling `getChildLogger()` with the first argument set to `mylog` and the second argument set to `some.namespace` creates the logger name `comp_1.some.namespace.mylog`.
 
 ### C++ Use
 
