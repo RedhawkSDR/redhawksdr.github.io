@@ -135,7 +135,7 @@ This table lists the availability of token definitions for each REDHAWK resource
 
 In the following example, the root most logger passes logging messages with a severity level `INFO` or less. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
 
-If the resource uses a named logger, `EDET_1`, and an additional user-defined logger `detections` is created in the `user` namespace, then log messages to this logger with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
+If the resource uses a named logger, `EDET_1.user.detections`, then log messages to this logger with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
 
 ```bash
 # Set root logger default levels and appender
