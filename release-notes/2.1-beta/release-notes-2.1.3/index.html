@@ -295,6 +295,7 @@ ga('send', 'pageview');
 <li>Adding documentation to the REDHAWK Manual regarding naming elements in structures such that element names can be reused across different structures.</li>
 <li>Updating FEI unit tests.</li>
 <li>Updating the <code>rh.VITA49</code> REDHAWK shared library to include support for VITA 49.2. Initial release adheres to the draft specification, revision 00.51 dated 5 Dec 2016, which was available during development.</li>
+<li>The IDE now installs the diagram layout when installing a SAD/DCD file (either by drag-drop or via its RPM <code>.spec</code> file). At runtime, the IDE will check for the diagram layout and if present, preserve the developer&rsquo;s layout.</li>
 <li>Adding an option to enable the Domain Manager&rsquo;s logging level to be dynamically changed.</li>
 <li>Adding a new packed bit data port type and data format for BulkIO:
 
@@ -329,13 +330,14 @@ ga('send', 'pageview');
 <li>Resolving issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.</li>
 <li>Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The <code>validateRequest</code> function in the <code>frontendInterfaces</code> support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.</li>
 <li>Patching omniORBpy to prevent possible segfaults in multithreaded code.</li>
+<li>Updated Version of SourceSDDS that includes use of shared memory API</li>
 <li>Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.</li>
 <li>Correcting behavior so readonly property kind properties for Devices and Services can now be modified during deployment using Device Configuration Descriptor (dcd.xml) file.</li>
 <li>Correcting an issue where a bad XML file in the SDRROOT caused loading of the SDRROOT to stop and report an error.</li>
 <li>Updating <code>rh.VITA49</code> to adhere to approved version of V49.2 Standard (August 2017).</li>
 <li>Adding an option for <code>MessageSupplierPort</code> to send messages to a specific connection.</li>
 <li>Deprecating REDHAWK Enterprise Integration and removing all references to it within the documentation.</li>
-<li>Providing the ability to generate configuration files for waveforms and nodes to be started by the system at boot-up time.</li>
+<li>Providing the ability to generate configuration files for waveforms and nodes for use by the REDHAWK admin service.</li>
 </ul>
 
 <h3 id="new-features">New Features</h3>
@@ -347,6 +349,7 @@ ga('send', 'pageview');
 <ul>
 <li>All Components and Devices now contain the <code>getLogLevel</code> function that allows the caller to retrieve a named logger&rsquo;s log level.</li>
 <li>Added FEI scanner Device base class and code generator support in C++, Python, and Java.</li>
+<li>Added VITA49 transport support to BulkIO library for  inter-host data transfers.</li>
 <li>Added <code>getLogLevel</code>, <code>getNamedLoggers</code>, and <code>getLogConfig</code> to the resource API.</li>
 <li>C++ Components and Devices now support hierarchical naming for loggers.</li>
 <li>Java Components and Devices now support hierarchical naming for loggers.</li>
@@ -374,12 +377,12 @@ ga('send', 'pageview');
 <li>Added validation for mistyped property refs.</li>
 <li>The Properties View now displays information about negotiated BulkIO connections.</li>
 <li>For Ports that support transport negotiation, the IDE now displays available transports in the Advanced tab of the Properties view.</li>
-<li>Added support for monitoring port statistics for BULKIO packed bit ports.</li>
-<li>Added support for displaying SRI from BULKIO packed bit ports.</li>
-<li>Added support for plotting BULKIO packed bit port data as a bit raster.</li>
-<li>Added support for performing a snapshot of data from a BULKIO packed bit port.</li>
+<li>Added support for monitoring port statistics for BulkIO packed bit ports.</li>
+<li>Added support for displaying SRI from BulkIO packed bit ports.</li>
+<li>Added support for plotting BulkIO packed bit port data as a bit raster.</li>
+<li>Added support for performing a snapshot of data from a BulkIO packed bit port.</li>
 <li>Updated the REDHAWK help contents within the IDE to display the newly redesigned help.</li>
-<li>Added support for viewing a data list from BULKIO packed bit ports.</li>
+<li>Added support for viewing a data list from BulkIO packed bit ports.</li>
 <li>Providing a preference that can disable automatic property scoping in the PRF editor.</li>
 <li>Providing the ability to allocate scanner devices.</li>
 </ul>
@@ -413,10 +416,13 @@ ga('send', 'pageview');
 <li>Created a new icon for the Shared Libraries container in the Target SDR.</li>
 <li>Waveform &amp; Device Manager Properties are now displayed in the Properties View when the associated editor is selected.</li>
 <li>Adding &ldquo;in&rdquo; and &ldquo;out&rdquo; icons to Ports in the Find By wizards in SAD diagrams.</li>
+<li>The diagram layout when designing a SAD or DCD file is now installed to the SDRROOT along with the SAD/DCD file.</li>
 <li>Logging functionality in the IDE (log level, edit log config, tail log) can now be used with a running Domain Manager as well.</li>
 <li>The IDE now updates its model in response to events from the Domain indicating an event channel was added or removed.</li>
 <li>Added unique SPD implementation icons for each programming language.</li>
 <li>If a connection is selected in a runtime diagram, connection properties are now displayed.</li>
+<li>At runtime, diagrams now respect the diagram layout if it was installed along with the SAD/DCD file.</li>
+<li>The IDE now allows specifying the connection ID when listening to messages from a message event port.</li>
 </ul>
 
 <h4 id="documentation-improvements">Documentation Improvements</h4>
@@ -440,20 +446,22 @@ ga('send', 'pageview');
 <li>Modified log message so when pushing data, if Python Bulk IO Ports encounter a communications exception, the message in the exception is included in the log message.</li>
 <li>Persona and programmable device pattern code generators compile correctly.</li>
 <li>Changing <code>log_level</code> on the Domain Manager now affects all classes in the Domain Manager process space.</li>
+<li>Resolved issue so the Domain Manager can use the <code>RH_LogEventAppender</code>.</li>
 <li>Clarified the conditions under which scanning is toggled in FEI scanners.</li>
 <li>Assembly controller properties can be renamed (and overridden) at the Application level.</li>
-<li>When structures have a default value that is mixed simple values and sequences, if the sequence is empty, it is not treated as nil.</li>
+<li>Resolved issue for structures with a default value that is mixed simple values and sequences. If the sequence is empty, it is not treated as nil.</li>
 <li>Fixed improperly scoped locks in Core Framework control.</li>
 <li>Fixed several C++ constructs that do not compile on newer versions of gcc.</li>
 <li>Added Python help documentation to <code>SDDSAnalyzer</code> module.</li>
 <li>To maintain backwards compatibility, updated the XSD/DTD default value for kind and configurationkind from &ldquo;property&rdquo; to &ldquo;configure&rdquo;.</li>
 <li>Removed additional log message from Python base class when an invalid property is queried.</li>
 <li>Listing registrants for an unknown event channel returns an empty list.</li>
-<li>createTunerAllocation in the Python sandbox provides 0 as the default value for sample_rate (rather than 1)</li>
-<li>If a component crashes, the application object in the Python sandbox does not lose its comps member</li>
+<li>Resolved issue with <code>createTunerAllocation</code> in the Python sandbox. It now provides 0 as the default value for <code>sample_rate</code> (rather than 1).</li>
+<li>Resolved issue so if a component crashes, the application object in the Python sandbox does not lose its comps member.</li>
 <li>Readonly property kind properties for Devices and Services can now be modified during deployment using Device Configuration Descriptor (dcd.xml) file.</li>
 <li>Changed <code>ArraySink</code>&rsquo;s <code>retrieveData</code> method to always return a tuple of values to match prior API versions.</li>
 <li>Fixed an issue to ensure that <code>LOGGING_CONFIG_URI</code> is allowed as a Property, even when the Property is not explicitly declared for the Component or Device.</li>
+<li>Resolved issue so external writeonly properties are not part of the query set when the application object receives a query all.</li>
 <li>Added support to clean artifacts from omniEvents 2.7 and 2.8+ to the cleanomni script.</li>
 </ul>
 
@@ -469,6 +477,7 @@ ga('send', 'pageview');
 <li>Resolved title text discrepancies in the Properties View.</li>
 <li>The context menu for a Domain Manager no longer shows &ldquo;Connect&rdquo; if the Domain Manager is already connected.</li>
 <li>Fixed issue to ensure that simple properties that are not of type &ldquo;property&rdquo; cannot be assigned the command-line attribute.</li>
+<li>An issue with long refresh times when opening diagrams was corrected.</li>
 <li>In the Properties tab of the SAD editor, the members of properties belonging to the assembly controller no longer display an external ID.</li>
 <li>Corrected a code issue internal to the IDE during the code generation process.</li>
 <li>When attempting to perform a &ldquo;Display SRI&rdquo; action on a Tuner with no applicable Ports, an error message is now displayed.</li>
@@ -502,7 +511,7 @@ ga('send', 'pageview');
 <li>When selecting a Port in the DCD or Device Manager diagrams, the IDL tree browser is displayed in the Properties View.</li>
 <li>A code quality issue was addressed to ensure resources within the IDE are always properly closed.</li>
 <li>A code quality issue was addressed to prevent a potential NPE.</li>
-<li>The &lsquo;Play Port&rsquo; action on a BULKIO::dataLongLong Port now works correctly.</li>
+<li>The &lsquo;Play Port&rsquo; action on a <code>BULKIO::dataLongLong</code> port now works correctly.</li>
 <li>Addressed a code quality issue to prevent errors when handling REDHAWK time property values.</li>
 <li>Resolved a code quality issue to prevent errors when handling REDHAWK complex number property values.</li>
 <li>Addressed a code quality issue by removing redundant or unused code.</li>
@@ -512,14 +521,14 @@ ga('send', 'pageview');
 <li>When editing SAD files, usesdevice naming is now more consistent with device naming in DCD diagrams.</li>
 <li>Fixed data list to display all values correctly.</li>
 <li>Corrected an NPE which could occur during drag-drop in a diagram.</li>
-<li>Text now displays correctly when selecting an entry in a drop-down in the properties editor</li>
+<li>Text now displays correctly when selecting an entry in a drop-down in the properties editor.</li>
 </ul>
 
 <h4 id="documentation-fixes">Documentation Fixes</h4>
 
 <ul>
 <li>Added Octave information to installation information in the REDHAWK Manual.</li>
-<li>Make fonts consistent in REDHAWK Manual, Overview, Release Notes, and Known Issues - Fixed by CCB-544 Create Documentation framework and tooling based on GITLAB.</li>
+<li>Fonts in REDHAWK Manual, Overview, Release Notes, and Known Issues are now consistent.</li>
 <li>Updated HTML links in the Further Reading section of Getting Started Guide.</li>
 </ul>
 
@@ -531,7 +540,6 @@ ga('send', 'pageview');
 
 <ul>
 <li>In REDHAWK 2.1.3, the new <code>StreamSource</code> sandbox helper provides better performance than the legacy <code>DataSource</code> helper when pushing real sample data. <code>DataSource.push()</code> will not be updated in the 2.0.x series to address this performance concern.</li>
-<li>GPP Valgrind Results - Fixed by improvements made to the GPP during development in the REDHAWK 2.0 series.</li>
 <li>Struct_from_props fails during allocate_capacity in python device - This behavior is not an error.</li>
 <li><code>log_level</code> api does not appear to work for C++ components - Duplicate of and fixed by CF-1894, Add hierarchical logging support in C++, as the <code>log_level</code> attribute for component interfaces is now tied to <code>_baseLog</code> and the resource logger.</li>
 </ul>
@@ -540,6 +548,7 @@ ga('send', 'pageview');
 
 <ul>
 <li>Generate button temporarily disabled on SPD editor - Cannot Reproduce</li>
+<li>Uses FEI Device wizard overwrites existing allocation ID - Duplicate of  IDE-2177, FEI uses device wizard doesn&rsquo;t preserve existing XML values.</li>
 <li>SAD editor properties tab allows setting external IDs on struct / struct seq members - Cannot Reproduce.</li>
 </ul>
 

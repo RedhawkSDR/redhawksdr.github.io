@@ -1043,13 +1043,6 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/displaying-port-statistics/" class="dd-item">
-        <div>
-          <a href="../../../../manual/exploring-domain/displaying-port-statistics/">
-            Displaying Port Statistics
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/exploring-domain/getting-error-condition-details/" class="dd-item">
         <div>
           <a href="../../../../manual/exploring-domain/getting-error-condition-details/">
@@ -1286,6 +1279,10 @@ ga('send', 'pageview');
 <span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>start()</code></pre></div>
 <p>Before displaying data, plots must be started either by calling their <code>start()</code> method or by calling <code>sb.start()</code>. If the Sandbox is already started when the plot is created, then the plot’s initial state is started.</p>
 
+<h5 id="example-of-lineplot">Example of LinePlot</h5>
+
+<p><img src="../../images/LinePlot.png" alt="Example of LinePlot" /></p>
+
 <h4 id="frame-size">Frame Size</h4>
 
 <p>By default, all the plots display 1024 input samples at a time. To override this default setting, set the frame size by using the <code>frameSize</code> argument:</p>
@@ -1299,6 +1296,10 @@ ga('send', 'pageview');
 <p>Plots that display the psd of input data use a default fft size of 1024 points. To increase the frequency resolution, set the <code>nfft</code> argument to a larger fft size:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>LinePSD(nfft<span style="color:#f92672">=</span><span style="color:#ae81ff">8192</span>)</code></pre></div>
 <p>The frame size defaults to the fft size, but can be overridden with <code>frameSize</code>. It may be smaller than the fft size; however, it cannot exceed the fft size. If the frame size is smaller than the fft size, the data is zero-padded.</p>
+
+<h5 id="example-of-linepsd">Example of LinePSD</h5>
+
+<p><img src="../../images/LinePSD.png" alt="Example of LinePSD" /></p>
 
 <h4 id="line-plots">Line Plots</h4>
 
@@ -1322,6 +1323,10 @@ ga('send', 'pageview');
 
 <p>All raster plots allow configuration of the image size at creation time. The default image size is 1024x1024; height and width can be overridden with the <code>imageHeight</code> and <code>imageWidth</code> arguments:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>RasterPSD(imageHeight<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span>, imageWidth<span style="color:#f92672">=</span><span style="color:#ae81ff">768</span>)</code></pre></div>
+<h5 id="example-of-rasterpsd">Example of RasterPSD</h5>
+
+<p><img src="../../images/RasterPSD.png" alt="Example of RasterPSD" /></p>
+
 <p>The plot X and Y ranges are fixed based on the fft or frame size (X) and image height (Y). The Z range (magnitude) can be set at creation time or changed dynamically with the <code>zmin</code> and <code>zmax</code> attributes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>RasterPSD(zmin<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-12</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>zmax <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e4</span></code></pre></div>
@@ -1336,6 +1341,10 @@ ga('send', 'pageview');
 <p>By default, the plot is centered at the origin, and both the X and Y ranges are [-1, 1]. The minimum and maximum X and Y values may be set at creation time or changed dynamically with any combination of the <code>xmin</code>, <code>xmax</code>, <code>ymin</code> and <code>ymax</code> attributes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>XYPlot(xmin<span style="color:#f92672">=-</span><span style="color:#ae81ff">2.0</span>, xmax<span style="color:#f92672">=</span><span style="color:#ae81ff">2.0</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>ymin, plot<span style="color:#f92672">.</span>ymax <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">2.0</span></code></pre></div>
+<h5 id="example-of-xyplot">Example of XYPlot</h5>
+
+<p><img src="../../images/XYPlot.png" alt="Example of XYPlot" /></p>
+
 
     
     

@@ -1043,13 +1043,6 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/displaying-port-statistics/" class="dd-item">
-        <div>
-          <a href="../../../../manual/exploring-domain/displaying-port-statistics/">
-            Displaying Port Statistics
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/exploring-domain/getting-error-condition-details/" class="dd-item">
         <div>
           <a href="../../../../manual/exploring-domain/getting-error-condition-details/">
@@ -1427,12 +1420,7 @@ ga('send', 'pageview');
 
 <tr>
 <td align="left"><code>deviceSetTuning</code></td>
-<td align="left">Validate that the request parameters can be satisfied by the tuner indicated by <code>tuner_id</code>. There are several helper functions (<code>validateRequest</code>, <code>validateRequestVsSRI</code>, <code>validateRequestVsRFInfo</code>, and <code>validateRequestVsDevice</code>) provided in the inherited <code>FrontendTunerDevice</code> class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a <code>BadParameterException</code> if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. <code>fts.center_frequency</code>, <code>fts.bandwidth</code>, <code>fts.sample_rate</code>) with the actual values queried from the hardware rather than with the requested values. Push new SRI within this function. Finally, when using the multi-out capability for BulkIO ports, it is recommended that the <code>matchAllocationIdToStreamId</code> function be called at this point with the stream ID and Allocation id. Return <code>True</code> upon successful configuration of the tuner according to the request, or <code>False</code> otherwise.</td>
-</tr>
-
-<tr>
-<td align="left"><code>deviceDeleteTuning</code></td>
-<td align="left">Prior to <code>deallocateCapacity</code> return, a <code>pushPacket</code> call with eos set to <code>True</code> must be called, and <code>deviceDeleteTuning</code> is where this should occur. Also, update the appropriate FEI tuner status elements (i.e <code>fts.center_frequency</code>, <code>fts.bandwidth</code>, <code>fts.sample_rate</code>) if desired. Return <code>True</code> upon success, or <code>False</code> otherwise.</td>
+<td align="left">When an allocation is requested against the FEI device, the base class checks to see which tuners are currently available that match the tuner type (for example, <code>RX_DIGITIZER</code>) and that are currently not set. The base class cycles through this list of available tuners by calling <code>deviceSetTuning</code> with a tuner as an argument for the callback. The search is broken when <code>deviceSetTuning</code> returns true. For example, if there are ten available tuners, <code>deviceSetTuning</code> could potentially be called ten times. The tuner is unset when a successful allocation is deallocated; <code>deviceDeleteTuning</code> is the notification that a particular tuner has been deallocated. <br> There are several helper functions (<code>validateRequest</code>, <code>validateRequestVsSRI</code>, <code>validateRequestVsRFInfo</code>, and <code>validateRequestVsDevice</code>) provided in the inherited <code>FrontendTunerDevice</code> class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a <code>BadParameterException</code> if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. <code>fts.center_frequency</code>, <code>fts.bandwidth</code>, <code>fts.sample_rate</code>) with the actual values queried from the hardware rather than with the requested values. Push new SRI within this function. Finally, when using the multi-out capability for BulkIO ports, it is recommended that the <code>matchAllocationIdToStreamId</code> function be called at this point with the stream ID and Allocation id. Return <code>True</code> upon successful configuration of the tuner according to the request, or <code>False</code> otherwise.</td>
 </tr>
 </tbody>
 </table>
