@@ -133,9 +133,9 @@ This table lists the availability of token definitions for each REDHAWK resource
 
 ### Log Configuration Example - Simple Appender with a Named Logger
 
-In the following example, the root most logger passes logging messages with a severity level `INFO` or less. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
+In the following example, the root most logger passes logging messages with a severity level `INFO` or higher. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
 
-If the resource uses a named logger, `EDET_1.user.detections`, then log messages to this logger with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
+If the resource uses a named logger, `EDET_1.user.detections`, then log messages to this logger with a severity of `DEBUG` or higher are diverted to a file called `edet_log.out`.
 
 ```bash
 # Set root logger default levels and appender
@@ -179,7 +179,7 @@ log4j.additivity.EDET_1.user.detections=false
 
 ### Log Configuration Example - Configuring a Component with Token Macros
 
-The logging configuration information for component `MEGA_WORKER` is configured from `$SDRROOT/dom/logcfg/component.log4j.cfg`. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, `@@@WAVEFORM.NAME@@@`, `@@@COMPONENT.NAME@@@` and `@@@COMPONENT.PID@@@`). The root most logger passes logging messages with a severity level `INFO` or less, to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. For the `FILE` appender, the destination file is: `/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log`.
+The logging configuration information for component `MEGA_WORKER` is configured from `$SDRROOT/dom/logcfg/component.log4j.cfg`. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, `@@@WAVEFORM.NAME@@@`, `@@@COMPONENT.NAME@@@` and `@@@COMPONENT.PID@@@`). The root most logger passes logging messages with a severity level `INFO` or higher, to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. For the `FILE` appender, the destination file is: `/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log`.
 
 Waveform: MY_EXAMPLE  
 Component: MEGA_WORKER  
@@ -239,7 +239,7 @@ log4cxx: Could not instantiate appender named "pse".
 ```
 {{% /notice %}}
 
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or less to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse
