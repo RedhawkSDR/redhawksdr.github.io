@@ -25,7 +25,7 @@ When passed through the Domain Manager, every component that does not have a log
 When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` is passed to all components in the application.
 {{% /notice %}}
 
-- Hard-coded into a component instance in a SAD file.
+- Added to the component instance in a SAD file
 
     ##### Add Logging Configuration to a Component
     ![Add Logging Configuration to a Component](../images/LoggingApp.png)
@@ -39,8 +39,8 @@ For devices and services, the log configuration URI is resolved using a slightly
 nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
 ```
 
-- Hard-coded under the device `componentinstantiation` element as element `loggingconfig` in the DCD file.
-- Hard-coded into a device instance as property `LOGGING_CONFIG_URI` in the DCD file.
+- Added to the device componentinstantiation element as element loggingconfig in the DCD file
+- Added to a device instance as property `LOGGING_CONFIG_URI` in the DCD file
 
 The URI is resolved through 2 different methods:
 
@@ -50,7 +50,7 @@ The URI is resolved through 2 different methods:
 
 If the relative path to the file is provided as a command-line argument to `nodeBooter`, the file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
 
-If no log configuration file is provided, the default log configuration file is used. The following code displays the default log4j configuration settings used by all REDHAWK resources.
+If no log configuration file is provided, the following log configuration is used by default:
 
 ```bash
 log4j.rootLogger=INFO,STDOUT
@@ -230,16 +230,7 @@ For REDHAWK resources, the underlying logging functionality has been extended to
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
 
-{{% notice note %}}
-Eventable logging is currently not supported for the Domain Manager and Device Manager. The following messages may occur during start up of these services with configurations that use eventable logging.
-```bash
-log4cxx: Could not instantiate class [org.ossie.logging.RH_LogEventAppender].
-log4cxx: Class not found: org.ossie.logging.RH_LogEventAppender
-log4cxx: Could not instantiate appender named "pse".
-```
-{{% /notice %}}
-
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or less to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse
