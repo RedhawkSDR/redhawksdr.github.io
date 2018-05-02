@@ -7,7 +7,7 @@ Java logging is based on log4j, and C++ logging is based on log4cxx, a C++ mappi
 
 Loggers provide the ability to associate a particular logger identifier by its string name with one or more appenders (for example, standard out) and a log level (for example, TRACE).
 
-Loggers are identified by their string names, and the name selected for the logger determines the lineage for the logger. The root logger is the empty string, and all loggers in the hierarchy are derived from this root logger; thus, all child loggers inherit the root logger settings unless the child logger is given its own configuration, in which case the settings inheritance tree is broken.
+Loggers are identified by their names, and the name selected for the logger determines the lineage for the logger. The root logger is the parent of all loggers. All loggers in the hierarchy are derived from this root logger; thus, all child loggers inherit the root logger settings unless the child logger is given its own configuration, in which case the settings inheritance tree is broken.
 
 Logger names follow the Java naming pattern, where the logger `abc.def.ghi` inherits from the logger `abc.def`, which inherits from the logger `abc`, which in turn inherits from the root logger.
 
