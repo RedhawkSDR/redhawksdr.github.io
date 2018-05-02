@@ -11,9 +11,9 @@ Default service configuration parameters are stored in `/etc/redhawk/init.d/node
 
 {{% notice note %}}
 Parameter names are case sensitive.
-For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
-True: 1 or true  
-False: 0 or false
+For boolean configuration parameters, the following values can used or no value will disable the feature:  
+True: 1, true, True  
+False: 0, false, False
 {{% /notice %}}
 
 
@@ -33,35 +33,37 @@ parameter: `DCD_FILE`
 required: No  
 default: `$SDRROOT/dev/nodes/$NODE_NAME/DeviceManager.dcd.xml`  
 format: Absolute path to a DCD file.  
-description: Absolute path to a DCD file (`DeviceManger.dcd.xm`l file).
+description: Absolute path to a DCD file (`DeviceManger.dcd.xm`l file).  
 
 parameter: `SDRCACHE`  
 required: No  
 default value: None  
-format: Absolute path to use as cache directory for DeviceManager and its devices.  
-description: Absolute path to use as cache directory for DeviceManager and its devices.
+format: Absolute path to use as cache directory.  
+description: Absolute path to use as cache directory for DeviceManager and its devices.  
 
 parameter: `SPD`  
 required: No  
 default value: `$SDRROOT/dev/mgr/DeviceManager.spd.xml`  
-format: Absolute path to file the `DeviceManager.spd.xml` file. description: Absolute path to the DeviceManager’s SPD file.
+format: Absolute path to the `DeviceManager.spd.xml` file.  
+description: Absolute path to the DeviceManager’s SPD file.  
 
 parameter: `CLIENT_WAIT_TIME`  
 required: No  
 default value: 10000 (milliseconds)  
-format: A number description: Wait time, in milliseconds, for the DeviceManager when making remote calls.
+format: number in milliseconds  
+description: Wait time, in milliseconds, for the DeviceManager when making remote calls.  
 
 parameter: `USELOGCFG`  
 required: No  
 default value: None  
-format: true : enables option, blank: disables option  
-description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve <br>`LOGGING_CONFIG_URI` command line argument.
+format: True : enables option, blank: disables option  
+description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.  
 
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file or file name.  
-description: Logging configuration file for DeviceManager to use. Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others, will be resolved as a qualified path to a logging properties files.
+format: Absolute path to a file, file://<path> URI or sca://<path> URI.  
+description: Logging configuration file for the DeviceManager to use. Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others, will be resolved as an absolute path or URI to a logging properties files.
 
 parameter: `DEBUG_LEVEL`  
 required: No  
@@ -112,18 +114,18 @@ description: Used to set `OMNIORB_CONFIG` variable before running the process. C
 parameter: `ORB_INITREF`  
 required: No  
 default value: None  
-description: Used as omniORB ORBInitRef command line argument when starting process. (For example, `NameService=corbaname::127.0.0.1:2809` <br>`EventService=corbaloc::127.0.0.1:11169/omniEvents` would override orb config files for specific service locations.) Consult omniORB documentation for further details.
+description: Used as omniORB ORBInitRef command line argument when starting process. (for example, `NameService=corbaname::127.0.0.1:2809` <br>`EventService=corbaloc::127.0.0.1:11169/omniEvents` would override orb config files for specific service locations.) Consult omniORB documentation for further details.
 
 parameter: `ORB_ENDPOINT`  
 required: No  
 default value: None  
 description: Used as omniORB ORBendPoint command line argument when starting process.  
-(For example, `giop:tcp:127.0.0.1:2809` would override orb config files for the specific endpoint to listen.) Consult omniORB documentation for further details.
+(for example, `giop:tcp:127.0.0.1:2809` would override orb config files for the specific endpoint to listen.) Consult omniORB documentation for further details.
 
 parameter: `enable`  
 required: No  
 default value: True  
-format: true (enabled) or false (disabled) (see exception with `conditional_config`)  
+format: True (enabled) or False (disabled) (see exception with `conditional_config`)  
 description: Specifies if service is started.
 
 parameter: `conditional_config`  

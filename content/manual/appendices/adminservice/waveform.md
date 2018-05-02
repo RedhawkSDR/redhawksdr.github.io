@@ -11,9 +11,9 @@ Default service configuration parameters are stored in `/etc/redhawk/init.d/wave
 
 {{% notice note %}}
 Parameter names are case sensitive.
-For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
-True: 1 or true  
-False: 0 or false
+For boolean configuration parameters, the following values can used or no value will disable the feature:  
+True: 1, true, True  
+False: 0, false, False
 {{% /notice %}}
 
 
@@ -23,23 +23,16 @@ default value: None
 format: A name with no spaces or periods (for example, `REDHAWK_DEV`).  
 description: Domain name to associate with this Waveform.
 
-parameter: `WAVEFORM_INSTANCE_ID`  
-required: Yes, unless WAVEFORM_URI is specified  
+parameter: `WAVEFORM`  
+required: Yes  
 default value: None  
-format: Valid directory Waveform name under `$SDRROOT/dom/waveforms`.
-description: Directory name of the Waveform to launch.  This value may be namespaced (For example, `rh.MyWaveform`)
+format: Valid directory under `$SDRROOT/dom/waveforms`.  
+description: Name of the Waveform to launch (for example, `rh.MyWaveform`)
 
-parameter: `WAVEFORM_URI`  
-required: Yes, unless WAVEFORM_INSTANCE_ID is specified  
-default: `$SDRROOT/dom/waveforms/<waveform_name>/<waveform_name>.sad.xml`  
-format: Fully qualified path  
-description: Fully qualified path to a SAD file. (For example,  
-`$SDRROOT/dom/waveforms/Controller/Controller.sad.xml`)  
-
-parameter: `WAVEFORM_NAME`  
+parameter: `INSTANCE_NAME`  
 required: No  
-format: A name with no spaces or periods (For example, `REDHAWK_DEV`)  
-description: Waveform ID to pass when launching the Waveform in a Domain.
+format: A name with no spaces or periods (for example, `REDHAWK_DEV`)  
+description: Used to rename the Waveform when launching in a Domain.
 
 parameter: `SDRROOT`  
 required: No  
@@ -81,7 +74,7 @@ description: Option to use with the waveform control script to stop the waveform
 parameter: `enable`  
 required: No  
 default value: True  
-format: true (enabled) or false (disabled) (see exception with `conditional_config`)  
+format: True (enabled) or False (disabled) (see exception with `conditional_config`)  
 description: Specifies if service is started.
 
 parameter: `conditional_config`  

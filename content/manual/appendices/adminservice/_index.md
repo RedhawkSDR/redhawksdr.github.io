@@ -9,7 +9,7 @@ weight: 55
 
 For system integrators, REDHAWK provides an optional RPM with the necessary scripts and configuration files to manage the REDHAWK core services: DomainManager, DeviceManager (includes devices and services), and Waveforms. The RPM, <br>`redhawk-adminservice-<version>.<os>.noarch.rpm`, is provided as part of the REDHAWK Runtime yum respository, but is not installed by default.
 
-The AdminService groups all configured services and Waveforms by domain and then start one domain at a time. By default, the start order, defined by the `priority` setting, is DomainManager, DeviceManager, and then Waveform. An inverted order is used during system shutdown.
+The AdminService groups all configured core services and Waveforms by domain and then starts one domain at a time. By default, the start order, defined by the `priority` setting, is DomainManager, DeviceManager, and then Waveform. An inverted order is used during system shutdown.
 
 The REDHAWK AdminService is built on [Supervisor](<http://supervisord.org>) and uses an INI style configuration file (name=value) to define the command line arguments and execution environment for the service. The configuration files and service scripts provide enough flexibility to manage the REDHAWK core services for most use cases. For specialized cases, the REDHAWK source repository (`adminservice`, `redhawk-adminservice` branch) provides an RPM spec file, `redhawk-adminservice.spec`, and all the source scripts for integrators to build and customize their own service scripts and installation RPM.
 
@@ -58,16 +58,16 @@ The following table lists the system service scripts that are used to control th
 | **Service**            | **System Service Script**                              |
 | :--------------------- | :----------------------------------------------------- |
 | **CentOS 6 (SysV)**    |                                                        |
-| AdminService           | `/etc/init.d/redhawk-adminservice`                     |
+| AdminService           | `/etc/rc.d/init.d/redhawk-adminservice`                |
 | **CentOS 7 (systemd)** |                                                        |
 | AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
 | AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
 
  As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. It is assumed the system integrators will enable the  service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
 
-### rhadmin Client
+### rhadmin
 
-The rhadmin script is used outside of system startup/shutdown to manage REDHAWK core service lifecycle from the command line. The rhadmin script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart` and `status`.
+rhadmin is a script used outside of system startup/shutdown to manage REDHAWK core service lifecycle from the command line. The rhadmin script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart` and `status`.
 
 The configuration of the rhadmin is through the `[rhadmin]` section in the `/etc/redhawk/adminserviced.conf` file. You can use the following command to run the rhadmin script using a different configuration file.
 ```
@@ -160,7 +160,7 @@ rhadmin config node <path/to/node>/DeviceManager.dmd.xml <optional DomainName> >
 
 The configuration file follows a standard INI file format. A DeviceManager is defined within a section that has a `[node:nodename]` header, each section corresponds to a DCD file describing a [Node]({{< relref "manual/nodes">}}). By adding multiple sections like this, it is possible to define multiple DeviceManager services in one file. If you have multiple Nodes defined for a computing host, it is recommended that you have one configuration file per Node definition.
 
-The DeviceManager can be configured to start after the DomainManager has started up, or it can start up at the same time as the DomainManager and it will wait for the domain to be available and register its [Devices]({{< relref "manual/devices">}}) and [Services]({{< relref "manual/services">}}). If there are many Devices or Services that need to start, it is recommended to add a custom script for verifying that the DeviceManager has started all Devices and Services and registered them with the DomainManager(see `start_pre_script` in the [DeviceManager Configuration]({{< relref "manual/appendices/adminservice/devicemanager.md" >}})).
+The DeviceManager can be configured to start after the DomainManager has started up, or it can start up at the same time as the DomainManager and it will wait for the domain to be available and register its [Devices]({{< relref "manual/devices">}}) and [Services]({{< relref "manual/services">}}). If there are many Devices or Services that need to start, it is recommended to add a custom script for verifying that the DeviceManager has started all Devices and Services and registered them with the DomainManager (see `start_pre_script` in the [DeviceManager Configuration]({{< relref "manual/appendices/adminservice/devicemanager.md" >}})).
 
 The [DeviceManager Configuration File]({{< relref "manual/appendices/adminservice/devicemanager.md" >}}) section describes all the available configuration parameters for the DeviceManager process.
 
@@ -198,7 +198,7 @@ The [Waveform Configuration File]({{< relref "manual/appendices/adminservice/wav
 
 ## Linux Support Files
 
-In addition to running REDHAWK services, the following support files are provided for REDHAWK logging properties, managing logging output files, system limit definitions, and kernel setup.
+In addition to running REDHAWK core services, the following support files are provided for REDHAWK logging properties, managing logging output files, system limit definitions, and kernel setup.
 
 ### Support Files
 
@@ -217,25 +217,8 @@ description: Logging configuration with example appenders that are supported by 
 file: `/etc/redhawk/security/limits.d/99-redhawk-limits.conf`  
 description: Controls file and process limits associated with the redhawk group.
 
-file: `/etc/redhawk/security/sysctl.d/sysctl.conf`  
+file: `/etc/redhawk/sysctl.d/sysctl.conf`  
 description: Common kernel tuning parameters for network buffers and core file generation.
 
-## Build Customized RPM
-
-The following sequence of commands can be used to build a `redhawk-adminservice` RPM file. In this example, the version is `2.1.3`, the user name is `someuser`, and the `adminservice` repo has been cloned in the directory, `/home/someuser/repos`.
-
-{{% notice note %}}
-The following script will remove the `rpmbuild` directory from your home directory.
-{{% /notice %}}
-
-
-```
-tar -C ~/repos/adminservice -czf ~/redhawk-adminservice-2.1.3.tar.gz .
-rm -rf ~/rpmbuild
-mkdir -p rpmbuild/{BUILD,RPMS/noarch,SOURCES,SPECS,SRPMS}
-cp ~/redhawk-adminservice-2.1.3.tar.gz ~/rpmbuild/SOURCES/
-cp  ~/repo/adminservice/redhawk-adminservice.spec ~/rpmbuild/SPECS/
-rpmbuild -bb --define "_topdir /home/someuser/rpmbuild" --define "_sourcedir /home/someuser/rpmbuild/SOURCES"  ~/rpmbuild/SPECS/redhawk-adminservice.spec
-```
 
 {{% children depth="999" %}}

@@ -11,9 +11,9 @@ Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defau
 
 {{% notice note %}}
 Parameter names are case sensitive.
-For configuration parameters that are controlled with boolean constructs (True or False), the following values can used or no value will disable the feature:  
-True: 1 or true  
-False: 0 or false
+For boolean configuration parameters, the following values can used or no value will disable the feature:  
+True: 1, true, True  
+False: 0, false, False
 {{% /notice %}}
 
 
@@ -32,13 +32,13 @@ description: Fully qualified path to a DMD file (`DomainManager.dmd.xml` file).
 parameter: `FORCE_REBIND`  
 required: No  
 default value: 0 (no rebind)  
-format: false : no rebind, true : rebind  
+format: False : no rebind, True : rebind  
 description: If the naming context already exists for the `DOMAIN_NAME`, rebinds the DomainManager to an existing naming context in the NamingService.
 
 parameter: `PERSISTENCE`  
 required: No  
 default value: False (no persistence)  
-format: true enables persistence option, false disables  
+format: True enables persistence option, False disables  
 description: Enables persistence for the domain. Requires REDHAWK to be compiled with persistence.
 
 parameter: `DB_URL`  
@@ -47,23 +47,23 @@ default value: None
 format: Absolute path to a database file.  
 description: URL to database file (for example, `/data/mysqlite.db`). Requires REDHAWK to be compiled with persistence.
 
-parameter: `USELOGCFG`  
-required: No  
-default value: None  
-format: true : enables option, blank: disables option  
-description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve <br>`LOGGING_CONFIG_URI` command line argument. For more information, refer to .
-
 parameter: `BINDAPPS`  
 required: No  
 default value: blank  
-format: true : enables option, blank: disables option  
+format: True : enables option, blank: disables option  
 description: All running Applications and Components will bind to the DomainManager Process instead of the NamingService. This assists with high frequency deployments of Waveforms and Components.
+
+parameter: `USELOGCFG`  
+required: No  
+default value: None  
+format: True : enables option, blank: disables option  
+description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.
 
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file or file name.  
-description: Logging configuration file for DomainManager to use. Simple file names are resolved to files in `/etc/redhawk/logging` directory. All others, are resolved as a qualified path to a logging properties files.
+format: Absolute path to a file, file://<path> URI or sca://<path> URI.  
+description: Logging configuration file for the DomainManager to use. Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others, will be resolved as an absolute path or URI to a logging properties files.
 
 parameter: `DEBUG_LEVEL`  
 required: No  
@@ -105,18 +105,18 @@ parameter: `ORB_INITREF`
 required: No  
 default value: none  
 description: Used as omniORB ORBInitRef command line argument when starting process.  
-(For example, `NameService=corbaname::127.0.0.1:2809` <br>`EventService=corbaloc::127.0.0.1:11169/omniEvents` would override orb config files for specific service locations). Consult omniORB documentation for further details.
+(for example, `NameService=corbaname::127.0.0.1:2809` <br>`EventService=corbaloc::127.0.0.1:11169/omniEvents` would override orb config files for specific service locations). Consult omniORB documentation for further details.
 
 parameter: `ORB_ENDPOINT`  
 required: No  
 default value: None  
 description: Used as omniORB ORBendPoint command line argument when starting process.  
-(For example, `giop:tcp:127.0.0.1:2809` would override orb config files for the specific endpoint to listen.) Consult omniORB documentation for further details.
+(for example, `giop:tcp:127.0.0.1:2809` would override orb config files for the specific endpoint to listen.) Consult omniORB documentation for further details.
 
 parameter: `enable`  
 required: No  
 default value: True  
-format: true (enabled) or false (disabled) (see exception with `conditional_config`)  
+format: True (enabled) or False (disabled) (see exception with `conditional_config`)  
 description: Specifies if service is started.
 
 parameter: `conditional_config`  

@@ -83,6 +83,13 @@ The AdminService configuration is listed in the `[adminserviced]` section of the
 The following section describes all the available configuration parameters for the AdminService.
 
 ### Configuration Parameters
+{{% notice note %}}
+Parameter names are case sensitive.
+For boolean configuration parameters, the following values can used or no value will disable the feature:  
+True: 1, true, True  
+False: 0, false, False
+{{% /notice %}}
+
 
 parameter: `pidfile`  
 required: No  
@@ -93,7 +100,7 @@ parameter: `loglevel`
 required: No  
 default value: info  
 format: critical, error, warn,  info, debug, trace, blather  
-description: DomainManager’s logging level at startup.
+description: The logging level, dictating what is written to the AdminService activity log.
 
 parameter: `logfile`  
 required: No  
@@ -188,8 +195,8 @@ description: Prevent removal of child log files at startup. This only effects pr
 
 parameter: `nodaemon`  
 required: No  
-default value: false  
-description: Set to true to start the AdminService in the foreground.
+default value: False  
+description: Set to True to start the AdminService in the foreground.
 
 parameter: `strip_ansi`  
 required: No  
