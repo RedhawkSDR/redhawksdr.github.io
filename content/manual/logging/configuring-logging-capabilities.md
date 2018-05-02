@@ -230,7 +230,7 @@ For REDHAWK resources, the underlying logging functionality has been extended to
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
 
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or less to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse
