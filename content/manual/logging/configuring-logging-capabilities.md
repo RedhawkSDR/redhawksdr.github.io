@@ -9,7 +9,7 @@ The log configuration file enables users to manage appenders and configure the s
 
 A log configuration file can be:
 
-- Passed as a command-line argument when the Domain Manager is started.
+- Passed as a command-line argument when the Domain Manager is started
 ```bash
 nodeBooter -D -logcfgfile logconfiguration.cfg
 ```
@@ -17,7 +17,7 @@ nodeBooter -D -logcfgfile logconfiguration.cfg
 When passed through the Domain Manager, every component that does not have a logging configuration set will use the domain's logging configuration.
 {{% /notice %}}
 
-- Passed as an initialization property when an application is created.
+- Passed as an initialization property when an application is created
 ```bash
 >>> app = dom.createApplication("/waveforms/example/example.sad.xml", initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
 ```
@@ -30,16 +30,16 @@ When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` i
     ##### Add Logging Configuration to a Component
     ![Add Logging Configuration to a Component](../images/LoggingApp.png)
 
-- Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}}).
+- Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}})
 
 For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
 
-- Passed as a command-line argument when the Device Manager is started.
+- Passed as a command-line argument when the Device Manager is started
 ```bash
 nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
 ```
 
-- Added to the device componentinstantiation element as element loggingconfig in the DCD file
+- Added to the device `componentinstantiation` element as element `loggingconfig` in the DCD file
 - Added to a device instance as property `LOGGING_CONFIG_URI` in the DCD file
 
 The URI is resolved through 2 different methods:
@@ -73,7 +73,7 @@ Each different logging implementation library uses a log4j configuration file fo
   - `OFF`: Suppress all logging messages from the log
   - `ALL`: Allow all logging messages
 
-This configuration suppresses logging levels above `INFO` and writes those messages to the standard out console.
+The previous configuration suppresses logging levels above `INFO` and writes those messages to the standard out console.
 
 ### Configuration Context Tokens
 
@@ -230,7 +230,7 @@ For REDHAWK resources, the underlying logging functionality has been extended to
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
 
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the `rootLogger`’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse
