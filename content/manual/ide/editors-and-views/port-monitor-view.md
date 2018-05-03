@@ -18,7 +18,7 @@ The **Port Monitor** view is opened:
 The View displays the following information:
 
   - **Name**: The name of the port or port connection.
-  - **Elements/sec**: The rate of CORBA elements transferred in the pushPacket data call.
+  - **Elements/sec**: The rate of elements transferred in the pushPacket data call.
   - **Bytes/sec**: Bytes transferred per second.
   - **Calls/sec**: Number of push calls per second to the port.
   - **Stream ID(s)**: List of all active stream ids.
