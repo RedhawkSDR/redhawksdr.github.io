@@ -22,7 +22,7 @@ Log messages are processed through appenders. An appender is a mechanism that pr
 
 There are four main aspects to managing loggers in REDHAWK:
 
- - [configuring a logger's start settings]({{< relref "manual/logging/configuring-logging-capabilities.md" >}})
- - [creating log messages]({{< relref "manual/logging/logging-within-a-resource.md" >}})
+ - [configuring a logger's start settings]({{< relref "manual/logging/configuring-logging-capabilities.md" >}}),
+ - [creating log messages]({{< relref "manual/logging/logging-within-a-resource.md" >}}),
  - [adjusting a logger during runtime]({{< relref "manual/logging/adjusting-logging-at-runtime.md" >}}), and
  - [viewing logging events]({{< relref "manual/logging/viewing-logging-events.md" >}}).

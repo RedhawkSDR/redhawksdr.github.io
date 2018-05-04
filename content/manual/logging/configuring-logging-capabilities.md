@@ -48,7 +48,7 @@ The URI is resolved through 2 different methods:
 
 - Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
 
-If the relative path to the file is provided as a command-line argument to `nodeBooter`, the file location is converted to an absolute path directory and then passed as file:// URI to subsequent processes.
+If the relative path to the file is provided as a command-line argument to `nodeBooter`, the file location is converted to an absolute path directory and then passed as a file URI to subsequent processes.
 
 If no log configuration file is provided, the following log configuration is used by default:
 
@@ -88,7 +88,7 @@ For REDHAWK release 1.10 and above, the log4j configuration file can contain spe
 | `@@@INSTANCE@@@`                | Instance name given to the resource on the command line.                              |
 | `@@@PID@@@`                     | pid of the running resource.                                                          |
 | `@@@DOMAIN.NAME@@@`             | Name of the domain under which your resource is running.                              |
-| `@@@DOMAIN.PATH@@@`             | The contents of the DOM_PATH parameter on the command line.                          |
+| `@@@DOMAIN.PATH@@@`             | The contents of the `DOM_PATH` parameter on the command line.                          |
 | `@@@DEVICE_MANAGER.NAME@@@`     | Name of the Device Manager that started the device or service.                         |
 | `@@@DEVICE_MANAGER.INSTANCE@@@` | Instance name of the Device Manager from the command line.                             |
 | `@@@SERVICE.NAME@@@`            | Name of the service as specified on the command line.                                 |
@@ -97,8 +97,8 @@ For REDHAWK release 1.10 and above, the log4j configuration file can contain spe
 | `@@@DEVICE.NAME@@@`             | Name of the device as specified on the command line.                                  |
 | `@@@DEVICE.INSTANCE@@@`         | Instance name of the device as specified on the command line.                         |
 | `@@@DEVICE.PID@@@`              | pid of the device.                                                                    |
-| `@@@WAVEFORM.NAME@@@`           | Name of the waveform from the DOM_PATH command line variable.             |
-| `@@@WAVEFORM.INSTANCE@@@`       | Instance name of the waveform from the DOM_PATH command line variable.    |
+| `@@@WAVEFORM.NAME@@@`           | Name of the waveform from the `DOM_PATH` command line variable.             |
+| `@@@WAVEFORM.INSTANCE@@@`       | Instance name of the waveform from the `DOM_PATH` command line variable.    |
 | `@@@COMPONENT.NAME@@@`          | Name of the component binding parameter as specified on the command line.             |
 | `@@@COMPONENT.INSTANCE@@@`      | Instance name of the component identifier parameter as specified on the command line. |
 | `@@@COMPONENT.PID@@@`           | pid of the component. |
@@ -112,11 +112,11 @@ This table lists the availability of token definitions for each REDHAWK resource
 | `@@@HOST.IP@@@`                      | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@HOST.NAME@@@`                    | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@NAME@@@`                         | Domain Manager            | Y                        | Y          | Y           | Y             |
-| `@@@INSTANCE@@@`                     | DOMAIN_MANAGER_1          | Y                        | Y          | Y           | Y             |
+| `@@@INSTANCE@@@`                     | `DOMAIN_MANAGER_1`          | Y                        | Y          | Y           | Y             |
 | `@@@PID@@@`                          | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@DOMAIN.NAME@@@`                  | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@DOMAIN.PATH@@@`                  | Y                         | Y                        | Y          | Y           | Y             |
-| `@@@DEVICE_MANAGER.NAME@@@`          | N                         | DEVICE\_MANAGER          | Y          | Y           | N             |
+| `@@@DEVICE_MANAGER.NAME@@@`          | N                         | `DEVICE_MANAGER`          | Y          | Y           | N             |
 | `@@@DEVICE_MANAGER.INSTANCE@@@`      | N                         | Y                        | Y          | Y           | N             |
 | `@@@SERVICE.NAME@@@`                 | N                         | Y                        | N          | Y           | N             |
 | `@@@SERVICE.INSTANCE@@@`             | N                         | Y                        | N          | Y           | N             |
@@ -216,7 +216,7 @@ When the waveform `MY_EXAMPLE` is deployed on the domain, the component is launc
 
 `MEGA_WORKER "....." LOGGING_CONFIG_URI sca:///logcfg/component.log4j.cfg?fs=IOR:010…`
 
-### Logging with Event Channels for Components, Devices and Services
+### Logging with Event Channels for Components, Devices, and Services
 
 For REDHAWK resources, the underlying logging functionality has been extended to include support for publishing log messages to a specified Event Channel. To include this capability, add the `org.ossie.logging.RH_LogEventAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
 
@@ -230,7 +230,7 @@ For REDHAWK resources, the underlying logging functionality has been extended to
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
 
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the `rootLogger`’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain `REDHAWK_DEV`. The threshold level for the appender supersedes the `rootLogger`’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse

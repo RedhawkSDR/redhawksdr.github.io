@@ -30,7 +30,7 @@ The logging API provides fine-grained access to the various loggers. The logging
 
 This API is available directly to the resources; one way of accessing this API is through the Python package.
 
-Assuming that there is a reference to an instance of a component called "`comp_1`" associated with variable "`c`", the following Python examples can be exercised:
+Assuming that there is a reference to an instance of a component called `comp_1` associated with variable `c`, the following Python examples can be exercised:
 
 - Use `getNamedLoggers` to get a list of the named loggers in a system.
 

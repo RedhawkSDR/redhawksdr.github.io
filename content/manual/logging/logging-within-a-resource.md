@@ -3,7 +3,7 @@ title: "Logging Within A Resource"
 weight: 40
 ---
 
-Every resource capable of hosting custom logging (component, device, service) includes the class member `_baseLog`. The `_baseLog` member is a logger instance that has the same logging name as the resource instance. For example, the first instance of `comp` in a waveform is `comp_1`. For all practical purposes, `_baseLog` is the resource's "root" logger, even though there is a log4j root logger as well whose name is the empty string and is also the parent for the named logger.
+Every resource capable of hosting custom logging (component, device, service) includes the class member `_baseLog`. The `_baseLog` member is a logger instance that has the same logging name as the resource instance. For example, the first instance of `comp` in a waveform is `comp_1`. For logging within a REDHAWK resource, `_baseLog` is the resource's "root" logger. The log4j root logger still exits and is the parent for the resource's "root" logger. The log4j root logger is referred to as the empty string.
 
 Each logger object has a member function, `getChildLogger()`, that takes 1 required argument and a second optional argument. The first argument is the name for the child logger and the second argument is an optional namespace for this logger. If `_baseLog` belongs to component `comp_1`, calling `getChildLogger()` with the first argument set to `mylog` and no second argument, the logger name `comp_1.user.mylog` is created. Calling `getChildLogger()` with the first argument set to `mylog` and the second argument set to `some.namespace` creates the logger name `comp_1.some.namespace.mylog`.
 
@@ -40,7 +40,7 @@ The following example adds `DEBUG`-level logging messages to the logger `my_logg
 RH_DEBUG(this->my_logger, "example log message");
 ```
 
-The message text can be combined with stream operations, so variable `my_variable` can be added to the logging message:
+The message text can be combined with stream operations, so the variable `my_variable` can be added to the logging message:
 
 ```c++
 RH_DEBUG(this->my_logger, "The variable my_variable has the value: "<<my_variable);
@@ -48,7 +48,7 @@ RH_DEBUG(this->my_logger, "The variable my_variable has the value: "<<my_variabl
 
 ### Java Use
 
-All the following logging statements work with `_baseLog`. However, to declare a new logger, use the following code:
+All of the following logging statements work with `_baseLog`. However, to declare a new logger, use the following code:
 
 ```java
 private RHLogger my_logger;
