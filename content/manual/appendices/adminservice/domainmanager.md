@@ -65,6 +65,12 @@ default value: None
 format: `True` : enables option, blank : disables option  
 description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.
 
+parameter: `USELOGCFG`  
+required: No  
+default value: None  
+format: True : enables option, blank: disables option  
+description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.
+
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  

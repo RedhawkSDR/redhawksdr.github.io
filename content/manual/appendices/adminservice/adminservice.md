@@ -139,8 +139,8 @@ description: Executes process with Group ID.
 parameter: `environment`  
 required: No  
 default value: None  
-format: NAME=Value,NAME2="Value 2" for a value that contains spaces, it must be enclosed with double quotes.
-description: Additional environment variables to set for all processes that the AdminService starts, both children and detached processes.
+format: A list of key/value pairs in the form `key="value",key2="value2"`.  
+description: Override existing environment variables or set new ones to be used when starting children.
 
 parameter: `directory`  
 required: No  
