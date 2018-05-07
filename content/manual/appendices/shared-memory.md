@@ -1,0 +1,129 @@
+---
+title: "Shared Memory Maintenance"
+weight: 75
+---
+
+REDHAWK uses POSIX shared memory to provide optimized data transfer for BulkIO connections between C++ components or devices on the same host.
+On Linux systems, POSIX shared memory is visible as a filesystem of type `tmpfs` mounted at `/dev/shm`.
+Files on this filesystem are backed by RAM and are not written to disk.
+
+The shared memory used by REDHAWK is organized into heaps, one per process, that exist as files in `/dev/shm`.
+In normal operation, when a component or device exits it removes the heap file that it created, if any.
+Additionally, the REDHAWK GPP monitors its child processes and removes their heap files when the process crashes or is terminated abnormally.
+As such, heaps are typically only left behind when a component or device crashes in the Python sandbox or IDE chalkboard.
+When this occurs, the heap is considered "orphaned."
+
+If shared memory is fully utilized, performance may be degraded because C++ components and device will not be able to allocate additional shared memory for BulkIO data transfers.
+REDHAWK provides tools to help system maintainers view the state of their shared memory filesystem, and remove unwanted files that are using shared memory.
+
+## Inspecting Shared Memory State
+
+The `redhawk-shminfo` program, installed with REDHAWK, allows system maintainers to view the current state of their shared memory filesystem.
+
+By default, it shows the total and current free shared memory amounts on the system, followed by a listing of REDHAWK heaps:
+```bash
+redhawk-shminfo
+```
+
+Example output:
+```
+/dev/shm:
+  size: 7.7G
+  free: 7.6G (98.7%)
+
+heap-2286
+  type:        REDHAWK heap
+  file size:   60.1M
+  heap size:   60.0M
+  heap used:   32.0K (0.1%)
+  creator:     2286
+  orphaned:    false
+  refcount:    2
+  user:        redhawk
+  group:       redhawk
+  mode:        640
+```
+
+{{% notice note %}}
+Viewing REDHAWK heaps owned by other users may require superuser privileges.
+{{% /notice %}}
+
+If a heap is listed as orphaned, the process that created it is no longer alive.
+Under normal circumstances, the creating process or REDHAWK GPP will remove the heap upon exit.
+
+{{% notice note %}}
+When a shared memory file is removed, other processes that have mapped the memory will still be able to access it, but no new processes may attach to it.
+The memory will not be returned to the free shared memory total until all attached processes have unmapped the memory or exited.
+{{% /notice %}}
+
+### Viewing All Shared Memory Files
+
+Other programs on the system may use shared memory as well.
+Although they are not listed when using `redhawk-shminfo` in its default mode, any memory that is in use by these files is counted against the free shared memory.
+
+To view all shared memory files, use the `--all` or `-a` flag:
+```bash
+redhawk-shminfo -a
+```
+
+Example output:
+```
+/dev/shm
+  size: 7.7G
+  free: 7.6G (98.4%)
+
+<...output elided...>
+
+pulse-shm-2249902370
+  type:        other
+  file size:   64.0M
+  allocated:   4.0K
+  user:        gdm
+  group:       gdm
+  mode:        400
+```
+
+REDHAWK heaps that cannot be read by the current user will appear as "other" files when using `--all`.
+
+{{% notice note %}}
+Only the allocated size of files is counted against free memory.
+Shared memory files are sparse, meaning that no physical memory is dedicated until it is used.
+The total of all file sizes may therefore exceed the total shared memory on the system.
+{{% /notice %}}
+
+The free shared memory may be less than than the total shared memory minus the sum of all REDHAWK heaps and other shared memory files, because it takes into account files that were removed but are still mapped by active processes.
+This memory will be reclaimed when the processes exit.
+
+## Cleaning Shared Memory With `redhawk-shmclean`
+
+The `redhawk-shmclean` tool, installed with REDHAWK, can remove orphaned heaps and other shared memory files.
+With no arguments, it scans the entire shared memory filesystem and removes all orphaned heaps.
+
+```bash
+redhawk-shmclean
+```
+
+Example output:
+```
+unlinking heap-2286
+```
+
+{{% notice note %}}
+Removing REDHAWK heaps and shared memory files owned by other users may require superuser privileges.
+{{% /notice %}}
+
+### Removing Individual Heaps
+
+It is possible to remove one or more individual heaps by giving the heap names as arguments to `redhawk-shmclean`:
+
+```bash
+redhawk-shmclean heap-2286
+```
+
+If the heap is not orphaned (that is, its creating process is still alive), `redhawk-shmclean` will refuse to remove it unless the `--force` or `-f` flag is given.
+
+### Removing Non-REDHAWK Files
+
+Because `/dev/shm` behaves like a regular UNIX filesystem, shared memory files can be removed with `rm`.
+It is also possible to remove these files with `redhawk-shmclean` using the `--force` or `-f` flag.
+Filenames must be relative to `/dev/shm`.
