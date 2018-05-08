@@ -18,7 +18,7 @@ REDHAWK provides tools to help system maintainers view the state of their shared
 
 ## Inspecting Shared Memory State
 
-The `redhawk-shminfo` program, installed with REDHAWK, allows system maintainers to view the current state of their shared memory filesystem.
+The `redhawk-shminfo` program allows system maintainers to view the current state of their shared memory filesystem.
 
 By default, it shows the total and current free shared memory amounts on the system, followed by a listing of REDHAWK heaps:
 ```bash
@@ -83,7 +83,7 @@ pulse-shm-2249902370
   mode:        400
 ```
 
-REDHAWK heaps that cannot be read by the current user will appear as "other" files when using `--all`.
+REDHAWK heaps that cannot be read by the current user will appear as files of type "other" when using `--all`.
 
 {{% notice note %}}
 Only the allocated size of files is counted against free memory.
@@ -96,7 +96,7 @@ This memory will be reclaimed when the processes exit.
 
 ## Cleaning Shared Memory With `redhawk-shmclean`
 
-The `redhawk-shmclean` tool, installed with REDHAWK, can remove orphaned heaps and other shared memory files.
+The `redhawk-shmclean` tool can remove orphaned heaps and other shared memory files.
 With no arguments, it scans the entire shared memory filesystem and removes all orphaned heaps.
 
 ```bash
