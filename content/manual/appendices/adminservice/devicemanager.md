@@ -18,7 +18,7 @@ rhadmin config node <path/to/node>/DeviceManager.dmd.xml <optional DomainName> >
 
 {{% notice note %}}
 Parameter names are case sensitive.  
-The following are the valid values for boolean configuration parameters. No value will disable the feature.  
+The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
 True: 1, true, True  
 False: 0, false, False
 {{% /notice %}}
@@ -271,12 +271,12 @@ description: Signal to send when stopping the Device Manager.
 parameter: `stopasgroup`  
 required: No  
 default value: `False`  
-description: Send stop signal to the unix group when stopping.
+description: Send stop signal to the process group when stopping.
 
 parameter: `killasgroup`  
 required: No  
 default value: `False`  
-description: Send SIGKILL to the unix group when forcibly killing the Device Manager.
+description: Send SIGKILL to the process group when forcibly killing the Device Manager.
 
 parameter: `start_pre_script`  
 required: No  

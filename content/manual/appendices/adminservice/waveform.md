@@ -18,7 +18,7 @@ rhadmin config waveform <path/to/waveform>/<file>.sad.xml <DomainName> > wavefor
 
 {{% notice note %}}
 Parameter names are case sensitive.  
-The following are the valid values for boolean configuration parameters. No value will disable the feature.  
+The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
 True: 1, true, True  
 False: 0, false, False
 {{% /notice %}}
@@ -203,12 +203,12 @@ description: Signal to send when stopping the waveform.
 parameter: `stopasgroup`  
 required: No  
 default value: `False`  
-description: Send stop signal to the unix group when stopping.
+description: Send stop signal to the process group when stopping.
 
 parameter: `killasgroup`  
 required: No  
 default value: `False`  
-description: Send SIGKILL to the unix group when forcibly killing the waveform.
+description: Send SIGKILL to the process group when forcibly killing the waveform.
 
 parameter: `start_pre_script`  
 required: No  

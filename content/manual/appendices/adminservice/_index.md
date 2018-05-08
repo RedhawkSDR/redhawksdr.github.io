@@ -83,7 +83,7 @@ The following table describes the `rhadmin` client script commands that are used
 | `add`       | Domain or Process      | Activates any updates to the configuration that were made by `reread`.                                         |
 | `avail`     |                        | Shows Domains/Processes that can be started.                                                                   |
 | `getconfig` | Process                | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
-| `maintail`  | `-f`, `-\<bytes\>`     | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve                 |
+| `maintail`  | `-f`, `-<bytes>`       | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
 | `reload`    |                        | Restart the AdminService, implicitly causes it to reread the configuration files.                              |
 | `reread`    |                        | Rereads the configuration files, doesn't apply changes.                                                        |
 | `restart`   | `all`, Domain, Process | Restart the specified Domain, Process or everything(`all`). Can specify multiple arguments.                    |
@@ -91,7 +91,7 @@ The following table describes the `rhadmin` client script commands that are used
 | `start`     | `all`, Domain, Process | Start the specified Domain, Process or everything(`all`). Can specify multiple arguments.                      |
 | `status`    | none, Domain, Process  | Shows the status for the specified Domain, Process or everything(none).                                        |
 | `stop`      | `all`, Domain, Process | Stop the specified Domain, Process or everything(`all`). Can specify multiple arguments.                       |
-| `update`    | none, Domain           | Reload the configuration and optionally start/stop any domain groupings that have changed. Can specify multiple arguments |
+| `update`    | none, Domain           | Reload the configuration and optionally start/stop any domain groupings that have changed. Can specify multiple arguments. |
 
 The `rhadmin` client script can be run in interactive mode with the `-i` flag:
 ```sh
@@ -192,7 +192,7 @@ sudo service redhawk-adminservice restart
 
 The configuration file follows a standard INI file format. This file is broken up into `[waveform:waveformname]` sections that correspond to a SAD file describing a waveform.  By adding multiple sections like this, it is possible to define multiple waveform instances in one file.
 
-The waveform can be configured to start after the Device Manager has started up, it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the waveform. If the waveform depends on Devices or Services, it is recommended to add a custom script to verify that those Devices and Services have started and registered with the Domain Manager(see `start_pre_script` in the [Waveform Configuration]({{< relref "manual/appendices/adminservice/waveform.md" >}})).
+The waveform can be configured to start after the Device Manager has started up, it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the waveform. If the waveform depends on Devices or Services, it is recommended to add a custom script to verify that those Devices and Services have started and registered with the Domain Manager (see `start_pre_script` in the [Waveform Configuration]({{< relref "manual/appendices/adminservice/waveform.md" >}})).
 
 The [Waveform Configuration File]({{< relref "manual/appendices/adminservice/waveform.md" >}}) section describes all the available configuration parameters for launching a REDHAWK waveform.
 

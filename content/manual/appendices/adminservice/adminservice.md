@@ -46,7 +46,7 @@ description: Username for remote control of the AdminServer.
 parameter: `password`  
 required: No  
 default value: `redhawk`  
-format: Cleartext password, or can be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.
+format: Cleartext password, or can be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.  
 description: Password for remote control of the AdminServer.
 
 ## inet_http_server
@@ -83,7 +83,7 @@ The following section describes all the available configuration parameters.
 ### Configuration Parameters
 {{% notice note %}}
 Parameter names are case sensitive.
-The following are the valid values for boolean configuration parameters. No value will disable the feature.  
+The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
 True: `1`, `true`, `True`  
 False: `0`, `false`, `False`
 {{% /notice %}}

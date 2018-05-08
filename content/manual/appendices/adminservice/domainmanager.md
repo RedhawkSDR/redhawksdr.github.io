@@ -18,7 +18,7 @@ rhadmin config domain <path/to/domain>/DomainManager.dmd.xml <optional DomainNam
 
 {{% notice note %}}
 Parameter names are case sensitive.  
-The following are the valid values for boolean configuration parameters. No value will disable the feature.  
+The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
 True: 1, true, True  
 False: 0, false, False
 {{% /notice %}}
@@ -63,12 +63,6 @@ parameter: `USELOGCFG`
 required: No  
 default value: None  
 format: `True` : enables option, blank : disables option  
-description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.
-
-parameter: `USELOGCFG`  
-required: No  
-default value: None  
-format: True : enables option, blank: disables option  
 description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `LOGGING_CONFIG_URI` command line argument.
 
 parameter: `LOGGING_CONFIG_URI`  
@@ -268,12 +262,12 @@ description: Signal to send when stopping the Domain Manager.
 parameter: `stopasgroup`  
 required: No  
 default value: `False`  
-description: Send stop signal to the unix group when stopping.
+description: Send stop signal to the process group when stopping.
 
 parameter: `killasgroup`  
 required: No  
 default value: `False`  
-description: Send SIGKILL to the unix group when forcibly killing the Domain Manager.
+description: Send SIGKILL to the process group when forcibly killing the Domain Manager.
 
 parameter: `start_pre_script`  
 required: No  
