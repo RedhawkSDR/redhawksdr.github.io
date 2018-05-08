@@ -17,13 +17,13 @@ sb.start()
 ```
 #### Output:
 ```py
-foo 0 hello
 foo 1 hello
-foo 2 hello
-foo 3 hello
-foo 4 hello
-foo 5 hello
-foo 6 hello
+foo 1 hello
+foo 1 hello
+foo 1 hello
+foo 1 hello
+foo 1 hello
+foo 1 hello
 ```
 
 Connecting producers to consumers through an Event Channel requires an application. An application can also support point-to-point connections.
