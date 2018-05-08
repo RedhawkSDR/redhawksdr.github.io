@@ -44,14 +44,12 @@ description: Used to give the waveform an instance-specific name.
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
-format: Absolute path to the SDR directory.  
 description: Path to use as the SDRROOT for this waveform.
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
-format: Absolute path to the REDHAWK installation directory.  
-description: Path to use as the OSSIEHOME for this waveform.
+description: Absolute path to use as the OSSIEHOME for this waveform.
 
 parameter: `PYTHONPATH`  
 required: No  
