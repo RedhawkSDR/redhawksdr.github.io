@@ -4,6 +4,8 @@ variables:
 build:
   image: jojomi/hugo:0.36
   stage: build
+  tags:
+    - net
   script:
     - sed -i "s|baseURL.*|baseURL = \"$deploy_url/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME\"|" config.toml
     - sed -i "s|editURL.*|editURL = \"$gitlab_url/$CI_PROJECT_PATH/edit/$CI_COMMIT_REF_NAME/content/\"|" config.toml
@@ -18,6 +20,8 @@ build:
 ide-build:
   image: jojomi/hugo:0.36
   stage: build
+  tags:
+    - net
   script:
     - apk add --no-cache zip
     - sed -i "s|<a href=\"{{ .RelPermalink}}\"|<a href=\"{{ .RelPermalink}}index.html\"|g" themes/docdock/layouts/partials/menu.html
