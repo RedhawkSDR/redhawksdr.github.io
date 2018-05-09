@@ -78,20 +78,20 @@ rhadmin -c /etc/redhawk/myadminserviced.conf
 
 The following table describes the `rhadmin` client script commands that are used to control the AdminService.
 
-| **Command** | **Argument**                         | **Description**                                                                                                |
-| :---------- | :----------------------------------- | :------------------------------------------------------------------------------------------------------------- |
-| `add`       | <domain name>, <process name>        | Activates any updates to the configuration that were made by `reread`.                                         |
-| `avail`     |                                      | Shows Domains/Processes that can be started.                                                                   |
-| `getconfig` | <process name>                       | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
-| `maintail`  | `-f`, `-<bytes>`                     | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
-| `reload`    |                                      | Restart the AdminService, implicitly causes it to reread the configuration files.                              |
-| `reread`    |                                      | Rereads the configuration files, doesn't apply changes.                                                        |
-| `restart`   | `all`, <domain name>, <process name> | Restart the specified Domain, Process or everything(`all`). Can specify multiple arguments.                    |
-| `shutdown`  |                                      | Stop the AdminService.                                                                                         |
-| `start`     | `all`, <domain name>, <process name> | Start the specified Domain, Process or everything(`all`). Can specify multiple arguments.                      |
-| `status`    | none, <domain name>, <process name>  | Shows the status for the specified Domain, Process or everything(none).                                        |
-| `stop`      | `all`, <domain name>, <process name> | Stop the specified Domain, Process or everything(`all`). Can specify multiple arguments.                       |
-| `update`    | none, <domain name>                  | Reload the configuration and optionally start/stop any domain groupings that have changed. Can specify multiple arguments. |
+| **Command** | **Argument**                             | **Description**                                                                                                |
+| :---------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `add`       | `<domain name>`, `<process name>`        | Activates any updates to the configuration that were made by `reread`.                                         |
+| `avail`     |                                          | Shows Domains/Processes that can be started.                                                                   |
+| `getconfig` | `<process name>`                         | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
+| `maintail`  | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
+| `reload`    |                                          | Restart the AdminService, implicitly causes it to reread the configuration files.                              |
+| `reread`    |                                          | Rereads the configuration files, doesn't apply changes.                                                        |
+| `restart`   | `all`, `<domain name>`, `<process name>` | Restart the specified Domain, Process or everything(`all`). Can specify multiple arguments.                    |
+| `shutdown`  |                                          | Stop the AdminService.                                                                                         |
+| `start`     | `all`, `<domain name>`, `<process name>` | Start the specified Domain, Process or everything(`all`). Can specify multiple arguments.                      |
+| `status`    | none, `<domain name>`, `<process name>`  | Shows the status for the specified Domain, Process or everything(none).                                        |
+| `stop`      | `all`, `<domain name>`, `<process name>` | Stop the specified Domain, Process or everything(`all`). Can specify multiple arguments.                       |
+| `update`    | none, `<domain name>`                    | Reload the configuration and optionally start/stop any domain groupings that have changed. Can specify multiple arguments. |
 
 The `rhadmin` client script can be run in interactive mode with the `-i` flag:
 ```sh
