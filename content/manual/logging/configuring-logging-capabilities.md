@@ -1,9 +1,65 @@
 ---
-title: "Configuring Logging Capabilities"
-weight: 10
+title: "Configuring Logger Settings"
+weight: 20
 ---
 
-A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of increasing verbosity. `FATAL` messages describe events that are unrecoverable to the resource, whereas `DEBUG` messages enable developers to understand the processing behavior.
+A logger is configured through two mechanisms: a log configuration file and a global log level.
+
+The log configuration file enables users to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows users to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the configuration file describes the settings for appenders and named loggers, while the log level is applied to the resource's main logger.
+
+A log configuration file can be:
+
+- Passed as a command-line argument when the Domain Manager is started
+```bash
+nodeBooter -D -logcfgfile logconfiguration.cfg
+```
+{{% notice note %}}
+When passed through the Domain Manager, every component that does not have a logging configuration set will use the domain's logging configuration.
+{{% /notice %}}
+
+- Passed as an initialization property when an application is created
+```bash
+>>> app = dom.createApplication("/waveforms/example/example.sad.xml", initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
+```
+{{% notice note %}}
+When passed through the `createApplication` function, the `LOGGING_CONFIG_URI` is passed to all components in the application.
+{{% /notice %}}
+
+- Added to the component instance in a SAD file
+
+    ##### Add Logging Configuration to a Component
+    ![Add Logging Configuration to a Component](../images/LoggingApp.png)
+
+- Passed at runtime through the [logging API]({{< relref "adjusting-logging-at-runtime.md" >}})
+
+For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.
+
+- Passed as a command-line argument when the Device Manager is started
+```bash
+nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
+```
+
+- Added to the device `componentinstantiation` element as element `loggingconfig` in the DCD file
+- Added to a device instance as property `LOGGING_CONFIG_URI` in the DCD file
+
+The URI is resolved through 2 different methods:
+
+- Logger found through the SCA file system. For the Domain Manager, this is `$SDRROOT/dom`; for the Device Manager, this is `$SDRROOT/dev`. For example, with the Domain Manager, the URI `sca:///myfile.cfg` is equivalent to `$SDRROOT/dom/myfile.cfg`.
+
+- Logger found through the local file system: `file:///tmp/myfile.cfg` is equivalent to `/tmp/myfile.cfg`.
+
+If the relative path to the file is provided as a command-line argument to `nodeBooter`, the file location is converted to an absolute path directory and then passed as a file URI to subsequent processes.
+
+If no log configuration file is provided, the following log configuration is used by default:
+
+```bash
+log4j.rootLogger=INFO,STDOUT
+log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
+log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
+log4j.appender.STDOUT.layout.ConversionPattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n"
+```
+
+A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of decreasing severity. `FATAL` messages describe events that are unrecoverable to the resource through a decreasing level to `TRACE`, which is used to log fine-grained behavior. Setting a lower severity threshold increases verbosity.
 
   - `FATAL`
   - `ERROR`
@@ -17,16 +73,7 @@ Each different logging implementation library uses a log4j configuration file fo
   - `OFF`: Suppress all logging messages from the log
   - `ALL`: Allow all logging messages
 
-The following code displays the default log4j configuration settings used by all REDHAWK resources.
-
-```bash
-log4j.rootLogger=INFO,STDOUT
-log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
-log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
-log4j.appender.STDOUT.layout.ConversionPattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n"
-```
-
-This configuration suppresses logging levels above `INFO` and writes those messages to the standard out console.
+The previous configuration suppresses logging levels above `INFO` and writes those messages to the standard out console.
 
 ### Configuration Context Tokens
 
@@ -41,7 +88,7 @@ For REDHAWK release 1.10 and above, the log4j configuration file can contain spe
 | `@@@INSTANCE@@@`                | Instance name given to the resource on the command line.                              |
 | `@@@PID@@@`                     | pid of the running resource.                                                          |
 | `@@@DOMAIN.NAME@@@`             | Name of the domain under which your resource is running.                              |
-| `@@@DOMAIN.PATH@@@`             | The contents of the DOM_PATH parameter on the command line.                          |
+| `@@@DOMAIN.PATH@@@`             | The contents of the `DOM_PATH` parameter on the command line.                          |
 | `@@@DEVICE_MANAGER.NAME@@@`     | Name of the Device Manager that started the device or service.                         |
 | `@@@DEVICE_MANAGER.INSTANCE@@@` | Instance name of the Device Manager from the command line.                             |
 | `@@@SERVICE.NAME@@@`            | Name of the service as specified on the command line.                                 |
@@ -50,8 +97,8 @@ For REDHAWK release 1.10 and above, the log4j configuration file can contain spe
 | `@@@DEVICE.NAME@@@`             | Name of the device as specified on the command line.                                  |
 | `@@@DEVICE.INSTANCE@@@`         | Instance name of the device as specified on the command line.                         |
 | `@@@DEVICE.PID@@@`              | pid of the device.                                                                    |
-| `@@@WAVEFORM.NAME@@@`           | Name of the waveform from the DOM_PATH command line variable.             |
-| `@@@WAVEFORM.INSTANCE@@@`       | Instance name of the waveform from the DOM_PATH command line variable.    |
+| `@@@WAVEFORM.NAME@@@`           | Name of the waveform from the `DOM_PATH` command line variable.             |
+| `@@@WAVEFORM.INSTANCE@@@`       | Instance name of the waveform from the `DOM_PATH` command line variable.    |
 | `@@@COMPONENT.NAME@@@`          | Name of the component binding parameter as specified on the command line.             |
 | `@@@COMPONENT.INSTANCE@@@`      | Instance name of the component identifier parameter as specified on the command line. |
 | `@@@COMPONENT.PID@@@`           | pid of the component. |
@@ -65,11 +112,11 @@ This table lists the availability of token definitions for each REDHAWK resource
 | `@@@HOST.IP@@@`                      | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@HOST.NAME@@@`                    | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@NAME@@@`                         | Domain Manager            | Y                        | Y          | Y           | Y             |
-| `@@@INSTANCE@@@`                     | DOMAIN_MANAGER_1          | Y                        | Y          | Y           | Y             |
+| `@@@INSTANCE@@@`                     | `DOMAIN_MANAGER_1`          | Y                        | Y          | Y           | Y             |
 | `@@@PID@@@`                          | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@DOMAIN.NAME@@@`                  | Y                         | Y                        | Y          | Y           | Y             |
 | `@@@DOMAIN.PATH@@@`                  | Y                         | Y                        | Y          | Y           | Y             |
-| `@@@DEVICE_MANAGER.NAME@@@`          | N                         | DEVICE\_MANAGER          | Y          | Y           | N             |
+| `@@@DEVICE_MANAGER.NAME@@@`          | N                         | `DEVICE_MANAGER`          | Y          | Y           | N             |
 | `@@@DEVICE_MANAGER.INSTANCE@@@`      | N                         | Y                        | Y          | Y           | N             |
 | `@@@SERVICE.NAME@@@`                 | N                         | Y                        | N          | Y           | N             |
 | `@@@SERVICE.INSTANCE@@@`             | N                         | Y                        | N          | Y           | N             |
@@ -86,9 +133,9 @@ This table lists the availability of token definitions for each REDHAWK resource
 
 ### Log Configuration Example - Simple Appender with a Named Logger
 
-In the following example, the root most logger passes logging messages with a severity level `INFO` or less. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
+In the following example, the root most logger passes logging messages with a severity level `INFO` or higher. Those messages are sent to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. The `FILE` appender writes log messages to a file called `allmsgs.out`.
 
-If the resource uses a named logger, `EDET_cpp_impl1_i`, then log messages with a severity of `DEBUG` or less are diverted to a file called `edet_log.out`.
+If the resource uses a named logger, `EDET_1.user.detections`, then log messages to this logger with a severity of `DEBUG` or higher are diverted to a file called `edet_log.out`.
 
 ```bash
 # Set root logger default levels and appender
@@ -126,31 +173,30 @@ log4j.appender.edetLog.layout.ConversionPattern=%d{ISO8601}:
 log4j.appender.NULL.layout=org.apache.log4j.PatternLayout
 log4j.appender.NULL.layout.ConversionPattern=%n
 
-log4j.category.EDET_cpp_impl1_i=DEBUG, edetLog
-log4j.additivity.EDET_cpp_impl1_i=false
+log4j.category.EDET_1.user.detections=DEBUG, edetLog
+log4j.additivity.EDET_1.user.detections=false
 ```
 
 ### Log Configuration Example - Configuring a Component with Token Macros
 
-The logging configuration information for component `MEGA_WORKER` is configured from `$SDRROOT/dom/logcfg/component.log4j.cfg`. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, `@@@WAVEFORM.NAME@@@`, `@@@COMPONENT.NAME@@@` and `@@@COMPONENT.PID@@@`). The root most logger passes logging messages with a severity level `INFO` or less, to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. For the `FILE` appender, the destination file is: `/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log`.
+The logging configuration information for component `MEGA_WORKER` is configured from `$SDRROOT/dom/logcfg/component.log4j.cfg`. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, `@@@WAVEFORM.NAME@@@`, `@@@COMPONENT.NAME@@@` and `@@@COMPONENT.PID@@@`). The root most logger passes logging messages with a severity level `INFO` or higher, to the appenders called: `CONSOLE` and `FILE`. The `CONSOLE` appender messages are displayed in the console of the running application. For the `FILE` appender, the destination file is: `/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log`.
 
-```bash
-Waveform: MY_EXAMPLE
-Component: MEGA_WORKER
- property: LOGGING_CONFIG_URI = "sca://logcfg/component.log4j.cfg"
+Waveform: MY_EXAMPLE  
+Component: MEGA_WORKER  
+ property: LOGGING_CONFIG_URI = "sca:///logcfg/component.log4j.cfg"
 
- \$SDRROOT/
-          dev/
-             ...
-          deps/
-             ..
-          dom/
-              ...
-             logcfg/
-                    component.log4j.cfg
 
-  /data/logdir/
-```
+ $SDRROOT/  
+ &nbsp;&nbsp;&nbsp;&nbsp; dev/  
+ &nbsp;&nbsp;&nbsp;&nbsp; deps/  
+ &nbsp;&nbsp;&nbsp;&nbsp; dom/
+ &nbsp;&nbsp;&nbsp;&nbsp;    
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logcfg/
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; component.log4j.cfg
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ &nbsp;&nbsp;&nbsp;&nbsp;  
+ /data/logdir/
 
 ```bash
 # Set root logger default levels and appender
@@ -168,38 +214,23 @@ log4j.appender.FILE.layout.ConversionPattern=%d{ISO8601}: %p:%c - %m [%F:%L]%n
 
 When the waveform `MY_EXAMPLE` is deployed on the domain, the component is launched with the following logging configuration:
 
-`MEGA_WORKER "....." LOGGING_CONFIG_URI sca://logcfg/component.log4j.cfg?fs= <br>IOR:010…`
+`MEGA_WORKER "....." LOGGING_CONFIG_URI sca:///logcfg/component.log4j.cfg?fs=IOR:010…`
 
-### Logging with Event Channels for Components, Devices and Services
+### Logging with Event Channels for Components, Devices, and Services
 
 For REDHAWK resources, the underlying logging functionality has been extended to include support for publishing log messages to a specified Event Channel. To include this capability, add the `org.ossie.logging.RH_LogEventAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
 
 ##### RH_LogEventAppender Configuration Options
 | **Appender Option** | **Description**                                                                            |
 | :------------------ | :----------------------------------------------------------------------------------------- |
-| `EVENT_CHANNEL`     | Event Channel name where logging messages are published.                                    |
-| `NAME_CONTEXT`      | Directory in `omniNames` to lookup Event Channel (domain name - `REDHAWK_DEV`).             |
+| `EVENT_CHANNEL`     | Event Channel name where logging messages are published.             |
 | `PRODUCER_ID`       | Identifier of the resource producing the log message (resource name).                      |
 | `PRODUCER_NAME`     | Name of the resource producing the log message.                                            |
 | `PRODUCER_FQN`      | Fully qualified name of the resource (domain-name/waveform-name/resource-name). |
 | `RETRIES`           | Number of times to retry connecting to the Event Channel. (Integer)                         |
 | `THRESHOLD`         | log4cxx log level; `FATAL`, `WARN`, `ERROR`, `INFO`, `DEBUG`, `TRACE`.                     |
 
-
-{{% notice note %}}
-The `NAME_CONTEXT` option, is required for C++ resources to maintain backwards compatibility. For REDHAWK 2.0 and greater resources developed in Python or Java, the `EVENT_CHANNEL` is acquired using the `EventChannelManager` interface that is available to resources with domain awareness and ignores the `NAME_CONTEXT` option.
-{{% /notice %}}
-
-{{% notice note %}}
-Eventable logging is currently not supported for the Domain Manager and Device Manager. The following messages may occur during start up of these services with configurations that use eventable logging.
-```bash
-log4cxx: Could not instantiate class [org.ossie.logging.RH_LogEventAppender].
-log4cxx: Class not found: org.ossie.logging.RH_LogEventAppender
-log4cxx: Could not instantiate appender named "pse".
-```
-{{% /notice %}}
-
-In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or less to the Event Channel `ERROR_LOG_CHANNEL` in the domain, `REDHAWK_DEV`. The threshold level for the appender supersedes the rootLogger’s logging level.
+In the following example, a component configured with this log4j properties file publishes log messages with a severity of `ERROR` or higher to the Event Channel `ERROR_LOG_CHANNEL` in the domain `REDHAWK_DEV`. The threshold level for the appender supersedes the `rootLogger`’s logging level.
 
 ```bash
 log4j.rootLogger=INFO,stdout,pse
@@ -224,7 +255,7 @@ log4j.appender.pse.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L -
 
 ### Synchronous Logging for C++ Devices and Components
 
-For C++ Devices and Components, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the `org.ossie.logging.RH_SyncRollingAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
+In versions of log4cxx older than 0.10.0, logging messages from different sources could be interleaved in the same line when using the default file appender. To deal with this issue, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the `org.ossie.logging.RH_SyncRollingAppender` in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):
 
 ##### RH_SyncRollingAppender Configuration Options
 | **Appender Option** | **Description**                                                                       |

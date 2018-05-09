@@ -1,127 +1,120 @@
 ---
 title: "Logging Within A Resource"
-weight: 30
+weight: 40
 ---
 
-Resource code generated using the REDHAWK code generators provides all the necessary prerequisites for establishing and configuring the logging capability.
+Every resource capable of hosting custom logging (component, device, service) includes the class member `_baseLog`. The `_baseLog` member is a logger instance that has the same logging name as the resource instance. For example, the first instance of `comp` in a waveform is `comp_1`. For logging within a REDHAWK resource, `_baseLog` is the resource's "root" logger. The log4j root logger still exits and is the parent for the resource's "root" logger. The log4j root logger is referred to as the empty string.
 
-### C++
+Each logger object has a member function, `getChildLogger()`, that takes 1 required argument and a second optional argument. The first argument is the name for the child logger and the second argument is an optional namespace for this logger. If `_baseLog` belongs to component `comp_1`, calling `getChildLogger()` with the first argument set to `mylog` and no second argument, the logger name `comp_1.user.mylog` is created. Calling `getChildLogger()` with the first argument set to `mylog` and the second argument set to `some.namespace` creates the logger name `comp_1.some.namespace.mylog`.
 
-For C++ implementations, the generated REDHAWK code contains macro definitions that define a logger object with the class name for your resource. For example, for component `SigGen`, the logger is `SigGen_i`.
+### C++ Use
 
-#### Setup
-
-The following example describes how to define and declare the `SigGen_i` logger.
-
+All the following logging statements work with `_baseLog`. However, to declare a new logger, use the following code in the header:
 ```c++
-//SigGen.h
-// this macro defines a logging object
-ENABLE_LOGGING;
-//SigGen.cpp
-// this macro declares the logging object
-PREPARE_LOGGING( SigGen_i );
+rh_logger::LoggerPtr my_logger;
 ```
 
-#### Use
+To instantiate the new logger, use the following code:
+```c++
+my_logger = this->_baseLog->getChildLogger("my_logger");
+```
+
+{{% notice note %}}
+The logger name and the logger variable name do not need to match.
+{{% /notice %}}
 
 To add logging messages within your resource’s code, the following macros are available. These macros use the predefined class logger as the input parameter.
 
-  - `LOG_FATAL(<component_class_name>, message text )`
-  - `LOG_ERROR(<component_class_name>, message text )`
-  - `LOG_WARN(<component_class_name>, message text )`
-  - `LOG_INFO(<component_class_name>, message text )`
-  - `LOG_DEBUG(<component_class_name>, message text )`
-  - `LOG_TRACE(<component_class_name>, message text )`
+  - `RH_FATAL(<logger>, message text )`
+  - `RH_ERROR(<logger>, message text )`
+  - `RH_WARN(<logger>, message text )`
+  - `RH_INFO(<logger>, message text )`
+  - `RH_DEBUG(<logger>, message text )`
+  - `RH_TRACE(<logger>, message text )`
 
-The following example adds `DEBUG`-level logging messages to the predefined logger `SigGen_i`.
+where `<logger>` is the logger instance that should publish the message.
 
-```c++
-...
-LOG_DEBUG(SigGen_i, "serviceFunction() example log message");
-```
-
-In addition to the resource’s predefined logger, you can request a new logger object using the `rh_logger` interface and named logger macros.
-
-  - `RH_FATAL(logger_object, message text)`
-  - `RH_ERROR(logger_object, message text)`
-  - `RH_WARN(logger_object, message text)`
-  - `RH_INFO(logger_object, message text)`
-  - `RH_DEBUG(logger_object, message text)`
-  - `RH_TRACE(logger_object, message text)`
-
-The following example creates a new logger object (`myLogger`) and adds `DEBUG`-level logging messages to `myLogger` using the `rh_logger` interface.
+The following example adds `DEBUG`-level logging messages to the logger `my_logger`.
 
 ```c++
-// local named logger
-LOGGER myLogger = rh_logger::Logger::getLogger("AnotherLogger");
-...
-RH_DEBUG(myLogger, "serviceFunction() example log message");
+RH_DEBUG(this->my_logger, "example log message");
 ```
 
-### Java
+The message text can be combined with stream operations, so the variable `my_variable` can be added to the logging message:
 
-For Java implementations, the log4j logger module must be imported for use before the logging capability can be established and configured.
+```c++
+RH_DEBUG(this->my_logger, "The variable my_variable has the value: "<<my_variable);
+```
 
-#### Setup
+### Java Use
 
-The following example describes how to import the log4j logger module.
+All of the following logging statements work with `_baseLog`. However, to declare a new logger, use the following code:
 
 ```java
-//component.java
-import org.apache.log4j.Logger;
-class MyComponent {
-  // gets logger object based on the class name...
-  public final static Logger logger = Logger.getLogger(component.class.getName());
-  ...
-}
+private RHLogger my_logger;
 ```
 
-#### Use
+To instantiate the new logger, use the following code:
+```java
+my_logger = this._baseLog.getChildLogger("my_logger");
+```
 
-The following example describes how to enable the logger with `DEBUG`-level logging messages.
+{{% notice note %}}
+The logger name and the logger variable name do not need to match.
+{{% /notice %}}
+
+The following example adds `DEBUG`-level logging messages to the logger `my_logger`.
 
 ```java
 void someMethod() {
-  logger.debug("serviceFunction() example log message")
-};
+  this.my_logger.debug("example log message");
+}
 ```
 
-Log4j supports the following severity levels for logging and enables you to programmatically change the severity level of the logger object.
+Log4j supports the following severity levels for logging.
 
 ```java
-logger.fatal(...)
-logger.warn(...)
-logger.error(...)
-logger.info(...)
-logger.debug(...)
-logger.trace(...)
-
-logger.setLevel(Level.WARN)
+_baseLog.fatal(...)
+_baseLog.warn(...)
+_baseLog.error(...)
+_baseLog.info(...)
+_baseLog.debug(...)
+_baseLog.trace(...)
 ```
 
-### Python
+It also supports programmatically changing the severity level of the logger object.
 
-#### Setup
+```java
 
-All REDHAWK resources inherit from the Resource class, which defines the `_log` data member.
-
-#### Use
-
-An example logging method call for Python is:
-
-```py
-self._log.debug("process() example log message")
+_baseLog.setLevel(Level.WARN)
 ```
 
-REDHAWK has extended the Python logging support to include the trace method functionality. As with the other logging capabilities, you can programatically change the logging level.
+### Python Use
+
+All the following logging statements work with `_baseLog`. However, to create a new logger, use the following code:
 
 ```py
-self._log.fatal(...)
-self._log.warn(...)
-self._log.error(...)
-self._log.info(...)
-self._log.debug(...)
-self._log.trace(...)
+self.my_logger = self._baseLog.getChildLogger("my_logger")
+```
 
-self._log.setLevel(logging.WARN)
+The following example adds `DEBUG`-level logging messages to the logger `my_logger`.
+
+```py
+self.my_logger.debug("example log message")
+```
+
+REDHAWK has extended the Python logging support to include the trace method functionality.
+
+```py
+self._baseLog.fatal(...)
+self._baseLog.warn(...)
+self._baseLog.error(...)
+self._baseLog.info(...)
+self._baseLog.debug(...)
+self._baseLog.trace(...)
+```
+As with the other logging capabilities, you can programatically change the logging level.
+
+```py
+self._baseLog.setLevel(logging.WARN)
 ```

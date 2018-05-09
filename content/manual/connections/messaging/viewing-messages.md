@@ -23,23 +23,23 @@ Example output:
 eventviewer REDHAWK_DEV testchan
 Receiving events. Press 'enter' key to exit
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 0.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
 string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 2.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 3.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 4.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 5.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 6.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 7.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 8.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 [{'id': 'foo', 'value': [{'id': 'some_string', 'value': 'some
-string'}, {'id': 'some_float', 'value': 9.0}]}]
+string'}, {'id': 'some_float', 'value': 1.0}]}]
 ```
