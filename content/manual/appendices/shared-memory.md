@@ -8,7 +8,8 @@ On Linux systems, POSIX shared memory is visible as a filesystem of type `tmpfs`
 Files on this filesystem are backed by RAM and are not written to disk.
 
 The shared memory used by REDHAWK is organized into heaps, one per process, that exist as files in `/dev/shm`.
-In normal operation, when a component or device exits it removes the heap file that it created, if any.
+The heap is created on demand the first time the process attempts to allocate shared memory.
+In normal operation, the heap is removed by the process when it exits.
 Additionally, the REDHAWK GPP monitors its child processes and removes their heap files when the process crashes or is terminated abnormally.
 As such, heaps are typically only left behind when a component or device crashes in the Python sandbox or IDE chalkboard.
 When this occurs, the heap is considered "orphaned."
