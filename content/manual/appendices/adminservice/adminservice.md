@@ -14,7 +14,7 @@ Since the AdminService is based on Supervisor, all the Supervisor [configuration
 | [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService         |
 | [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService          |
 | [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Settings for running the AdminService server                  |
-| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Settings for running the `rhadmin` client                       |
+| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Settings for running the `rhadmin` client                     |
 | [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService |
 
 ## unix_http_server
@@ -82,7 +82,7 @@ The following section describes all the available configuration parameters.
 
 ### Configuration Parameters
 {{% notice note %}}
-Parameter names are case sensitive.
+Parameter names are case sensitive.  
 The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
 True: `1`, `true`, `True`  
 False: `0`, `false`, `False`
@@ -160,17 +160,17 @@ description: Relative path from `config_dir` to the directory that has the Admin
 parameter: `domains_dir`  
 required: No  
 default value: `domains.d`  
-description: Relative path from `config_dir` to the directory that has the DomainManager `.ini` configuration files.
+description: Relative path from `config_dir` to the directory that has the Domain Manager `.ini` configuration files.
 
 parameter: `nodes_dir`  
 required: No  
 default value: `nodes.d`  
-description: Relative path from `config_dir` to the directory that has the DeviceManager `.ini` configuration files.
+description: Relative path from `config_dir` to the directory that has the Device Manager `.ini` configuration files.
 
 parameter: `waveforms_dir`  
 required: No  
 default value: `waveforms.d`  
-description: Relative path from `config_dir` to the directory that has the Waveform `.ini` configuration files.
+description: Relative path from `config_dir` to the directory that has the waveform `.ini` configuration files.
 
 parameter: `umask`  
 required: No  

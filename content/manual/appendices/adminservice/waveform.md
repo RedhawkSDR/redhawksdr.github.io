@@ -44,16 +44,19 @@ description: Used to give the waveform an instance-specific name.
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
+format: Standard shell path environment variable.  
 description: Path to use as the SDRROOT for this waveform.
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
+format: Standard shell path environment variable.  
 description: Absolute path to use as the OSSIEHOME for this waveform.
 
 parameter: `PYTHONPATH`  
 required: No  
-default value: User’s environment  
+default value: `$PYTHONPATH`  
+format: Standard shell path environment variable.  
 description: Path used by Python interpreter to load modules, overrides `PYTHONPATH` environment variable.
 
 parameter: `start_delay`  

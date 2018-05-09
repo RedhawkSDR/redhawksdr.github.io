@@ -38,7 +38,7 @@ description: Path to the DMD file (`DomainManager.dmd.xml` file) describing the 
 
 parameter: `FORCE_REBIND`  
 required: No  
-default value: `0` (no rebind)  
+default value: `False` (no rebind)  
 format: `False` : no rebind, `True` : rebind  
 description: If the naming context already exists for the `DOMAIN_NAME`, rebinds the Domain Manager to an existing naming context in the CORBA NamingService.
 
@@ -57,7 +57,7 @@ parameter: `BINDAPPS`
 required: No  
 default value: blank  
 format: `True` : enables option, blank: disables option  
-description: All running Applications and Components will bind to the Domain Manager Process instead of the NamingService. This assists with high frequency deployments of Waveforms and Components.
+description: All running applications and components will bind to the Domain Manager process instead of the NamingService. This assists with high frequency deployments of waveforms and components.
 
 parameter: `USELOGCFG`  
 required: No  
@@ -80,22 +80,24 @@ description: Domain Manager’s logging level at startup.
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
+format: Standard shell path environment variable.  
 description: Absolute path to use as the `SDRROOT` for this Domain Manager.
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
+format: Standard shell path environment variable.  
 description: Absolute path to use as the `OSSIEHOME` for this Domain Manager.
 
 parameter: `LD_LIBRARY_PATH`  
 required: No  
-default value: User’s environment  
+default value: `$LD_LIBRARY_PATH`  
 format: Standard shell path environment variable.  
 description: Path for loader to resolve shared object files, overrides `LD_LIBRARY_PATH` environment variable.
 
 parameter: `PYTHONPATH`  
 required: No  
-default value: User’s environment  
+default value: `$PYTHONPATH`  
 format: Standard shell path environment variable.  
 description: Path used by python interpreter to load modules, overrides `PYTHONPATH` environment variable.
 

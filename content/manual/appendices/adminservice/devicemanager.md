@@ -38,19 +38,14 @@ description: Name of the Node to launch with this Device Manager. Must be a vali
 
 parameter: `DCD_FILE`  
 required: No  
-default: `$SDRROOT/dev/nodes/$NODE_NAME/DeviceManager.dcd.xml`  
-description: Absolute path to a DCD file (`DeviceManger.dcd.xml` file).  
+default: `/nodes/$NODE_NAME/DeviceManager.dcd.xml`  
+format: `$SDRROOT/dev` relative path to a DCD file.  
+description: Path to the DCD file (`DeviceManager.dcd.xml` file) describing the Device Manager.
 
 parameter: `SDRCACHE`  
 required: No  
 default value: None  
 description: Absolute path to use as cache directory for Device Manager and its devices. If no value is specified, the system defaults to making a directory in `$SDRROOT/dev`.  
-
-parameter: `SPD`  
-required: No  
-default value: `$SDRROOT/dev/mgr/DeviceManager.spd.xml`  
-format: Absolute path to the `DeviceManager.spd.xml` file.  
-description: Absolute path to the Device Manager’s SPD file.  
 
 parameter: `CLIENT_WAIT_TIME`  
 required: No  
@@ -79,34 +74,38 @@ description: Device Manager’s logging level at startup.
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
+format: Standard shell path environment variable.  
 description: Path to use as the `SDRROOT` for this Device Manager.
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
+format: Standard shell path environment variable.  
 description: Absolute path to use as the `OSSIEHOME` for this Device Manager.
 
 parameter: `LD_LIBRARY_PATH`  
 required: No  
-default value: User’s environment  
+default value: `$LD_LIBRARY_PATH`  
 format: Standard shell path environment variable.  
 description: Path for link loader to resolve shared object files, overrides `LD_LIBRARY_PATH` environment variable.
 
 parameter: `PYTHONPATH`  
 required: No  
-default value: User’s environment  
+default value: `$PYTHONPATH`  
+format: Standard shell path environment variable.  
 description: Path used by Python interpreter to load modules, overrides `PYTHONPATH` environment variable.
 
 parameter: `JAVA_HOME`  
 required: No  
-default value: User’s environment  
-description: JAVA path to use when launching Devices and Services.
+default value: `$JAVA_HOME`  
+format: Standard shell path environment variable.  
+description: Home directory for the Java installation to use when launching devices and services.
 
 parameter: `PATH`  
 required: No  
-default value: User’s environment  
+default value: `$PATH`  
 format: Standard shell path environment variable.  
-description: Search path to use when launching Devices and Services.
+description: Search path to use when launching devices and services.
 
 parameter: `ORB_CFG`  
 required: No  
