@@ -5,7 +5,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.36.1" />
-<title>LOGGING_CONFIG_URI Resolution :: REDHAWK</title>
+<title>Logging Structure :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../../css/nucleus.css" rel="stylesheet">
@@ -32,7 +32,7 @@ ga('send', 'pageview');
 
     
   </head>
-  <body data-url="/manual/logging/logging-config-uri-resolution/">
+  <body data-url="/manual/logging/logging-structure/">
     
       <header>
   <div class="logo">
@@ -768,17 +768,17 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item active">
         <div>
-          <a href="../../../manual/logging/configuring-logging-capabilities/">
-            Configuring Logging Capabilities
+          <a href="../../../manual/logging/logging-structure/">
+            Logging Structure
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-config-uri-resolution/" class="dd-item active">
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
         <div>
-          <a href="../../../manual/logging/logging-config-uri-resolution/">
-            LOGGING_CONFIG_URI Resolution
+          <a href="../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1021,9 +1021,9 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/working-with-wavefroms/" class="dd-item">
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
         <div>
-          <a href="../../../manual/exploring-domain/working-with-wavefroms/">
+          <a href="../../../manual/exploring-domain/working-with-waveforms/">
             Working with Waveforms on a Running Domain
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -1207,8 +1207,8 @@ ga('send', 'pageview');
     <option value="/manual/logging/" >
   - 
    Logging</option> 
-      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logging Capabilities</option>
-      <option value="/manual/logging/logging-config-uri-resolution/"  selected>-- LOGGING_CONFIG_URI Resolution</option>
+      <option value="/manual/logging/logging-structure/"  selected>-- Logging Structure</option>
+      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logger Settings</option>
       <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
       <option value="/manual/logging/adjusting-logging-at-runtime/" >-- Adjusting Logging at Runtime</option>
       <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
@@ -1254,40 +1254,37 @@ ga('send', 'pageview');
       </div>
     
 
-    <h1>LOGGING_CONFIG_URI Resolution</h1>
+    <h1>Logging Structure</h1>
     
     
     
-    <p>For all REDHAWK resources, the command line argument <code>LOGGING_CONFIG_URI</code> provides the location of the logging configuration file to load for that resource. This section details how each resource type receives this parameter.</p>
+    
+
+<p>Java logging is based on log4j, and C++ logging is based on log4cxx, a C++ mapping of the log4j API. Python logging is based on log4py, a Python mapping between the Python loggers and log4j configuration files developed for REDHAWK. These three logging technologies were selected because they all follow the same structure, and they can all be configured using the same configuration files.</p>
+
+<p>Loggers provide the ability to associate a particular logger identifier by its string name with one or more appenders (for example, standard out) and a log level (for example, TRACE).</p>
+
+<p>Loggers are identified by their names, and the name selected for the logger determines the lineage for the logger. The root logger is the parent of all loggers. All loggers in the hierarchy are derived from this root logger; thus, all child loggers inherit the root logger settings unless the child logger is given its own configuration, in which case the settings inheritance tree is broken.</p>
+
+<p>Logger names follow the Java naming pattern, where the logger <code>abc.def.ghi</code> inherits from the logger <code>abc.def</code>, which inherits from the logger <code>abc</code>, which in turn inherits from the root logger.</p>
+
+<p>All REDHAWK-generated resources, such as components and devices, contain a logger, <code>_baseLog</code>, that has the same name as the resource (for example, <code>my_component_1</code>) and is removed by one level from the root logger. Under this parent logger, three categories or namespaces are available by default: &ldquo;system&rdquo;, &ldquo;ports&rdquo;, and &ldquo;user&rdquo;. These three logger namespaces are created automatically, and additional namespaces may be created programmatically under the &ldquo;user&rdquo; namespace. The &ldquo;system&rdquo; namespace is the parent for the REDHAWK system services, such as property management, that log framework-level activity. The &ldquo;ports&rdquo; namespace is a logger that is parent to all component ports, where the specific port logger has the same name as the port (for example, <code>my_component_1.ports.data_in</code>). Finally, the &ldquo;user&rdquo; namespace is a root for all logging specific to the component or device implementation. This hierarchy is shown in the following image:</p>
+
+<h5 id="logger-hierarchy">Logger Hierarchy</h5>
+
+<p><img src="../images/LoggerHierarchy.png" alt="Logger Hierarchy" /></p>
+
+<p>Loggers inherit their parent&rsquo;s settings. In other words, root logger settings are passed to all child loggers. Any change to the parent logger&rsquo;s settings (such as the log level) are automatically passed down to all its child loggers. This relationship is broken if a logger&rsquo;s settings are specifically changed. After a named logger&rsquo;s settings are changed, if the parent logger settings change, the changes are not propagated to the child with the altered settings.</p>
+
+<p>Log messages are processed through appenders. An appender is a mechanism that provides a mapping between a message and some delivery mechanism for the message. For example, there may be file appenders and standard out appenders that write messages to a file and to a console, respectively. Appenders are managed through the log configuration file. REDHAWK systems can use a wide variety of general-purpose appenders, such as file and standard out, as well as some custom appenders, such as event channel appenders.</p>
+
+<p>There are four main aspects to managing loggers in REDHAWK:</p>
 
 <ul>
-<li><p><strong>Domain Manager</strong>: The Domain Manager is started via <code>nodeBooter</code> with the <code>-D</code> option. The additional <code>nodeBooter</code> command line argument <code>-logcfgfile</code> is passed to the Domain Manager as <code>LOGGING_CONFIG_URI</code>. The following lines describe acceptable parameter values and their resolution:</p>
-
-<ul>
-<li><code>sca://path/to/config/file</code>: $SDRROOT/dom/path/to/config/file</li>
-<li><code>file:///absolute/path/to/config/file</code>: /absolute/path/to/config/file</li>
-</ul></li>
-
-<li><p><strong>Device Manager</strong>: The Device Manager is started via <code>nodeBooter</code> with the <code>-d</code> option. The additional <code>nodeBooter</code> command line argument <code>-logcfgfile</code> is passed to the Device Manager as <code>LOGGING_CONFIG_URI</code>. The following lines describe acceptable parameter values and their resolution:</p>
-
-<ul>
-<li><code>sca://path/to/config/file</code>: $SDRROOT/dev/path/to/config/file</li>
-<li><code>file:///absolute/path/to/config/file</code>: /absolute/path/to/config/file</li>
-</ul></li>
-
-<li><p><strong>Device</strong>: A device is started by the Device Manager. If the device has a <code>LOGGING_CONFIG_URI</code> property with <strong>Pass on command line</strong> enabled, you can set the value via the node’s <code>dcd.xml</code> file. This value is passed to the device at startup; otherwise, the device receives the value from the Device Manager’s <code>LOGGING_CONFIG_URI</code> command line argument.</p></li>
-
-<li><p><strong>Service</strong>: A service is started by the Device Manager. If the service has a <code>LOGGING_CONFIG_URI</code> property with <strong>Pass on command line</strong> enabled, you can set the value via the node’s <code>dcd.xml</code> file. This value is passed to the service at startup; otherwise, the service receives the value from the Device Manager’s <code>LOGGING_CONFIG_URI</code> command line argument.</p></li>
-
-<li><p><strong>Component</strong>: When a component is deployed by the Domain Manager, the <code>LOGGING_CONFIG_URI</code> command line parameter is resolved by the following sequence: (each step in the sequence can override the value from the prior step)</p>
-
-<ul>
-<li>The component defines a <code>LOGGING_CONFIG_URI</code> property with <strong>Pass on command line</strong> enabled.</li>
-<li>The component’s <code>componentplacement</code> in a waveform contains a <code>simpleref</code> with ID = <code>LOGGING_CONFIG_URI</code>. Normally, only defined properties are passed to the component during deployment, the <code>LOGGING_CONFIG_URI</code> is passed regardless of being defined.</li>
-<li>The component’s <code>componentplacement</code> contains a <code>&lt;loggingconfig&gt;</code> element.</li>
-<li>The Domain Manager’s is configured with a plugin library and the <code>-useloglib</code> option was provided when the Domain Manager was started. Refer to <a href="../../../manual/appendices/logging-config-plugin/">Logging Configuration Plugin</a> for details.</li>
-<li>If this process does not provide a value, then the Domain Manager’s <code>LOGGING_CONFIG_URI</code> command line is used.</li>
-</ul></li>
+<li><a href="../../../manual/logging/configuring-logging-capabilities/">configuring a logger&rsquo;s start settings</a>,</li>
+<li><a href="../../../manual/logging/logging-within-a-resource/">creating log messages</a>,</li>
+<li><a href="../../../manual/logging/adjusting-logging-at-runtime/">adjusting a logger during runtime</a>, and</li>
+<li><a href="../../../manual/logging/viewing-logging-events/">viewing logging events</a>.</li>
 </ul>
 
 
@@ -1295,8 +1292,8 @@ ga('send', 'pageview');
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../manual/logging/configuring-logging-capabilities/" title="Configuring Logging Capabilities"> <i class="fa fa-chevron-left"></i><label>Configuring Logging Capabilities</label></a>
-    <a class="nav nav-next" href="../../../manual/logging/logging-within-a-resource/" title="Logging Within A Resource" style="margin-right: 0px;"><label>Logging Within A Resource</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="../../../manual/logging/" title="Logging"> <i class="fa fa-chevron-left"></i><label>Logging</label></a>
+    <a class="nav nav-next" href="../../../manual/logging/configuring-logging-capabilities/" title="Configuring Logger Settings" style="margin-right: 0px;"><label>Configuring Logger Settings</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -1312,7 +1309,7 @@ ga('send', 'pageview');
   
 
     <div class="github-link">
-      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/develop/content/manual/logging/logging-config-uri-resolution.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/develop/content/manual/logging/logging-structure.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

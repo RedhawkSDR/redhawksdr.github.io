@@ -21,16 +21,6 @@
     </item>
     
     <item>
-      <title>Configuring Logging Capabilities</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</guid>
-      <description>A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of increasing verbosity. FATAL messages describe events that are unrecoverable to the resource, whereas DEBUG messages enable developers to understand the processing behavior.
- FATAL ERROR WARN INFO DEBUG TRACE  Each different logging implementation library uses a log4j configuration file format to define the configuration context for that library.</description>
-    </item>
-    
-    <item>
       <title>Connecting to a Domain</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/connecting-to-a-domain/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -103,6 +93,16 @@ Before starting the REDHAWK IDE for the first time, the REDHAWK Core Framework a
     </item>
     
     <item>
+      <title>Logging Structure</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/logging/logging-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/logging-structure/</guid>
+      <description>Java logging is based on log4j, and C++ logging is based on log4cxx, a C++ mapping of the log4j API. Python logging is based on log4py, a Python mapping between the Python loggers and log4j configuration files developed for REDHAWK. These three logging technologies were selected because they all follow the same structure, and they can all be configured using the same configuration files.
+Loggers provide the ability to associate a particular logger identifier by its string name with one or more appenders (for example, standard out) and a log level (for example, TRACE).</description>
+    </item>
+    
+    <item>
       <title>Message Producer</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/connections/messaging/message-producer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -152,7 +152,7 @@ Process Management The basic functional unit in REDHAWK is a component, which re
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/nodes/running-a-node/</guid>
       <description>As part of the REDHAWK install, a domain and node are setup by default. To launch the domain and node refer to Launching a Domain.
-Exploring the Running Node  In the REDHAWK Explorer View, expand REDHAWK_DEV. Expand Device Managers. Expand DevMgr_&amp;lt;localhost&amp;gt;.localdomain. Select GPP_&amp;lt;localhost&amp;gt;_localdomain. Select the Properties view tab. The Properties view displays all the properties for this device, such as the operation system name, amount of available memory, and other important information, as seen below:  Properties View of a Running GPP Creating a Component that Consumes Resources  Create a Python component called sample.</description>
+Exploring the Running Node  In the REDHAWK Explorer View, expand REDHAWK_DEV. Expand Device Managers. Expand DevMgr_&amp;lt;localhost&amp;gt;.localdomain. Select GPP_&amp;lt;localhost&amp;gt;_localdomain. Select the Properties view tab. The Properties view displays all the properties for this device, such as the operation system name, amount of available memory, and other important information, as seen below:  Properties View of a Running GPP Creating a Component that Consumes Resources All components consume processor resources such as memory and CPU capacity.</description>
     </item>
     
     <item>
@@ -214,6 +214,16 @@ constructor() This is the component/device constructor.</description>
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/burstio/sri/</guid>
       <description>BurstSRI objects are delivered with each data burst and describe the data payload and processing state from the data producer. The table below describes only the required fields of the data structure when passing burst data between resources.
 BurstSRI fields    Name Type Description     hversion long Version of the StreamSRI header. This field is typically ignored, so a default value of 1 is adequate.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Logger Settings</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</guid>
+      <description>A logger is configured through two mechanisms: a log configuration file and a global log level.
+The log configuration file enables users to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows users to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the configuration file describes the settings for appenders and named loggers, while the log level is applied to the resource&amp;rsquo;s main logger.</description>
     </item>
     
     <item>
@@ -297,16 +307,6 @@ Basic Example The fastest and easiest way to get a REDHAWK application started i
       <guid>https://redhawksdr.github.io/2.1.3/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/</guid>
       <description>The Python package contains helpers that simplify the allocation/deallocation of FEI tuners. For example, to allocate a tuner to receive, centered at 1 MHz with a bandwidth of 1kHz, a 10% tolerance in the requested values, and a sample rate of 2 kHz, the following functionality can be used:
 &amp;gt;&amp;gt;&amp;gt; import frontend &amp;gt;&amp;gt;&amp;gt; allocation = frontend.createTunerAllocation(tuner_type=&amp;#34;RX&amp;#34;, allocation_id=&amp;#34;someid&amp;#34;,center_frequency=1e6, bandwidth=1e3,bandwidth_tolerance=0.1, sample_rate=2e3,sample_rate_tolerance=0.1) &amp;gt;&amp;gt;&amp;gt; retval = dev.allocateCapacity(allocation) where dev is a reference to the device object and retval is True if the allocation succeeded.</description>
-    </item>
-    
-    <item>
-      <title>LOGGING_CONFIG_URI Resolution</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/logging/logging-config-uri-resolution/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/logging-config-uri-resolution/</guid>
-      <description>For all REDHAWK resources, the command line argument LOGGING_CONFIG_URI provides the location of the logging configuration file to load for that resource. This section details how each resource type receives this parameter.
- Domain Manager: The Domain Manager is started via nodeBooter with the -D option. The additional nodeBooter command line argument -logcfgfile is passed to the Domain Manager as LOGGING_CONFIG_URI. The following lines describe acceptable parameter values and their resolution:</description>
     </item>
     
     <item>
@@ -474,18 +474,6 @@ sudo yum install java-1.8.0-openjdk-devel PackageKit-gtk3-module libcanberra-gtk
     </item>
     
     <item>
-      <title>Logging Within A Resource</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</guid>
-      <description>Resource code generated using the REDHAWK code generators provides all the necessary prerequisites for establishing and configuring the logging capability.
-C++ For C++ implementations, the generated REDHAWK code contains macro definitions that define a logger object with the class name for your resource. For example, for component SigGen, the logger is SigGen_i.
-Setup The following example describes how to define and declare the SigGen_i logger.
-//SigGen.h // this macro defines a logging object ENABLE_LOGGING; //SigGen.</description>
-    </item>
-    
-    <item>
       <title>Multi-out Ports</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/connections/burstio/multiout-ports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -571,7 +559,7 @@ At the center of the IDE workbench is the editor window, which is empty at initi
 To view events and messages sent to an EventChannel in a terminal window:
 eventviewer &amp;lt;domain name&amp;gt; &amp;lt;event channel&amp;gt; Help for the utility:
 eventviewer --help Example output:
-eventviewer REDHAWK_DEV testchan Receiving events. Press &amp;#39;enter&amp;#39; key to exit [{&amp;#39;id&amp;#39;: &amp;#39;foo&amp;#39;, &amp;#39;value&amp;#39;: [{&amp;#39;id&amp;#39;: &amp;#39;some_string&amp;#39;, &amp;#39;value&amp;#39;: &amp;#39;some string&amp;#39;}, {&amp;#39;id&amp;#39;: &amp;#39;some_float&amp;#39;, &amp;#39;value&amp;#39;: 0.</description>
+eventviewer REDHAWK_DEV testchan Receiving events. Press &amp;#39;enter&amp;#39; key to exit [{&amp;#39;id&amp;#39;: &amp;#39;foo&amp;#39;, &amp;#39;value&amp;#39;: [{&amp;#39;id&amp;#39;: &amp;#39;some_string&amp;#39;, &amp;#39;value&amp;#39;: &amp;#39;some string&amp;#39;}, {&amp;#39;id&amp;#39;: &amp;#39;some_float&amp;#39;, &amp;#39;value&amp;#39;: 1.</description>
     </item>
     
     <item>
@@ -596,27 +584,14 @@ Converting Complex Data in C++ In C++, the incoming BurstIO data vector may be t
     
     <item>
       <title>Working with Waveforms on a Running Domain</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-wavefroms/</link>
+      <link>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-waveforms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-wavefroms/</guid>
+      <guid>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-waveforms/</guid>
       <description>If you have a running Domain Manager and Device Manager, you may create and work with waveforms. You can launch the waveform on the domain, launch additional components into the running waveform, stop the running waveform, and release the waveform from the domain.
 Launching a Waveform To launch a waveform:
  Right-click the domain and from the domain context menu, select Launch Waveform…:
 Domain Context Menu The Launch Waveform wizard is displayed:</description>
-    </item>
-    
-    <item>
-      <title>Adjusting Logging at Runtime</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</guid>
-      <description>The logging level for the root logger of a component/device can be adjusted at runtime in the IDE. The following procedure explains how to adjust the logging level.
- Right-click the running component or device and select Logging &amp;gt; Log Level.
-The Set Debug Level dialog displays the current logging level:
-Set Debug Level  Select the new logging level you want to use and click OK.
-The new log level is used.</description>
     </item>
     
     <item>
@@ -646,7 +621,7 @@ Application Class Each application contains a unique application name and profil
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/messaging/connecting-producers-consumers/</guid>
       <description>Producers and consumers can be connected either point-to-point or through an Event Channel in the IDE. Connecting a producer directly to a consumer does not require an application and can be done in the Sandbox:
-from ossie.utils import sb sb.catalog() #[&amp;#39;structs_test&amp;#39;, &amp;#39;m_in&amp;#39;, &amp;#39;prop_changes&amp;#39;, &amp;#39;m_out&amp;#39;,&amp;#39;pass&amp;#39;] prod=sb.launch(&amp;#34;m_out&amp;#34;) cons=sb.launch(&amp;#34;m_in&amp;#34;) prod.connect(cons) #True sb.start() Output: foo 0 hello foo 1 hello foo 2 hello foo 3 hello foo 4 hello foo 5 hello foo 6 hello Connecting producers to consumers through an Event Channel requires an application.</description>
+from ossie.utils import sb sb.catalog() #[&amp;#39;structs_test&amp;#39;, &amp;#39;m_in&amp;#39;, &amp;#39;prop_changes&amp;#39;, &amp;#39;m_out&amp;#39;,&amp;#39;pass&amp;#39;] prod=sb.launch(&amp;#34;m_out&amp;#34;) cons=sb.launch(&amp;#34;m_in&amp;#34;) prod.connect(cons) #True sb.start() Output: foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello Connecting producers to consumers through an Event Channel requires an application.</description>
     </item>
     
     <item>
@@ -677,6 +652,15 @@ from ossie.utils import sb sb.catalog() #[&amp;#39;structs_test&amp;#39;, &amp;#
       <description>The REDHAWK manual explains the use of REDHAWK to build, deploy, and manage data streaming applications. The principal REDHAWK features are outlined in the following sections, and a reference to the corresponding REDHAWK documentation is provided for further reading.
 References for Application Developers The following chapters are particularly useful for application developers:
  Component development is introduced in Components. Greater detail related to component development is discussed in the following chapters:</description>
+    </item>
+    
+    <item>
+      <title>Logging Within A Resource</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</guid>
+      <description>Every resource capable of hosting custom logging (component, device, service) includes the class member _baseLog. The _baseLog member is a logger instance that has the same logging name as the resource instance. For example, the first instance of comp in a waveform is comp_1. For logging within a REDHAWK resource, _baseLog is the resource&amp;rsquo;s &amp;ldquo;root&amp;rdquo; logger. The log4j root logger still exits and is the parent for the resource&amp;rsquo;s &amp;ldquo;root&amp;rdquo; logger.</description>
     </item>
     
     <item>
@@ -758,6 +742,19 @@ To bring up a plot within the IDE:
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/working-with-complex-data/</guid>
       <description>If the StreamSRI mode field of the incoming data is set to 1, the associated input data is complex (i.e., it is comprised of real and imaginary parts). Complex data is sent as alternating real and imaginary values. A developer can work with this data in any fashion; however, this section provides common methods for converting the data into a more workable form.
 Converting Complex Data in C++ In C++, the incoming BulkIO data block provides a complex() method to check whether the data is complex, and cxdata() and cxsize() methods to provide access to the sample data as an array of std::complex values.</description>
+    </item>
+    
+    <item>
+      <title>Adjusting Logging at Runtime</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</guid>
+      <description>The logging level for the base logger of a component/device can be adjusted at runtime in the IDE. The following procedure explains how to adjust the logging level.
+ Right-click the running component or device and select Logging &amp;gt; Log Level.
+The Set Debug Level dialog displays the current logging level:
+Set Debug Level  Select the new logging level you want to use and click OK.
+The new log level is used.</description>
     </item>
     
     <item>
@@ -880,18 +877,6 @@ Elements in BULKIO::PrecisionUTCTime    Identifier Value Type     tcmode timecod
     </item>
     
     <item>
-      <title>Viewing Logging Events</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</guid>
-      <description>A live view of events logged by components or devices can be displayed in the IDE. The component or device provides logging events to an event channel, and the IDE displays them as it receives them. To view the log:
- Right-click the running component or device and select Logging &amp;gt; Tail Log. The Specify logging details dialog is displayed:
-Edit Log Config  Select the logging level.
- If desired, specify the logger to which the IDE should attach.</description>
-    </item>
-    
-    <item>
       <title>Working with SDDS Data</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/sandbox/python/sdds-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -996,6 +981,18 @@ Within the plot, users can manipulate the plot as follows:
       <guid>https://redhawksdr.github.io/2.1.3/manual/runtime-environment/device-manager/</guid>
       <description>The Device Manager interface is used to manage a set of logical devices, services and a File System. The Device Manager is responsible for parsing the node’s DCD XML in order to fork processes for all devices and services in the node. Each process gets passed a list of command-line character strings as executable parameters that are node-specific configuration variables read from the DCD file.
 Once a child process has been forked, its reference is added to a pending list in the Device Manager, while the child process is initialized and configured (possibly with overloaded property values).</description>
+    </item>
+    
+    <item>
+      <title>Viewing Logging Events</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</guid>
+      <description>A live view of events logged by components or devices can be displayed in the IDE. The component or device provides logging events to an event channel, and the IDE displays them as it receives them. To view the log:
+ Right-click the running component or device and select Logging &amp;gt; Tail Log. The Specify logging details dialog is displayed:
+Edit Log Config  Select the logging level.
+ If desired, specify the logger to which the IDE should attach.</description>
     </item>
     
     <item>

@@ -768,17 +768,17 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
         <div>
-          <a href="../../../manual/logging/configuring-logging-capabilities/">
-            Configuring Logging Capabilities
+          <a href="../../../manual/logging/logging-structure/">
+            Logging Structure
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-config-uri-resolution/" class="dd-item">
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
         <div>
-          <a href="../../../manual/logging/logging-config-uri-resolution/">
-            LOGGING_CONFIG_URI Resolution
+          <a href="../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1021,9 +1021,9 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/working-with-wavefroms/" class="dd-item">
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
         <div>
-          <a href="../../../manual/exploring-domain/working-with-wavefroms/">
+          <a href="../../../manual/exploring-domain/working-with-waveforms/">
             Working with Waveforms on a Running Domain
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -1207,8 +1207,8 @@ ga('send', 'pageview');
     <option value="/manual/logging/" >
   - 
    Logging</option> 
-      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logging Capabilities</option>
-      <option value="/manual/logging/logging-config-uri-resolution/" >-- LOGGING_CONFIG_URI Resolution</option>
+      <option value="/manual/logging/logging-structure/" >-- Logging Structure</option>
+      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logger Settings</option>
       <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
       <option value="/manual/logging/adjusting-logging-at-runtime/"  selected>-- Adjusting Logging at Runtime</option>
       <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
@@ -1260,7 +1260,7 @@ ga('send', 'pageview');
     
     
 
-<p>The logging level for the root logger of a component/device can be adjusted at runtime in the IDE. The following procedure explains how to adjust the logging level.</p>
+<p>The logging level for the base logger of a component/device can be adjusted at runtime in the IDE. The following procedure explains how to adjust the logging level.</p>
 
 <ol>
 <li><p>Right-click the running component or device and select <strong>Logging &gt; Log Level</strong>.</p>
@@ -1290,14 +1290,40 @@ ga('send', 'pageview');
 <p>The editor shows the resource’s logging configuration. Saving changes to the editor performs a live update of the resource’s logging configuration.</p></li>
 </ol>
 
-<div class="notices note" ><p>Changing the logging configuration for a running application instance can affect the Domain Manager process. When changing the logging configuration for an application, restrict the configuration to an application’s logging instance, <code>Application_impl</code>; as in the following example.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.logger.Application_impl<span style="color:#f92672">=</span>TRACE,applogonly
-log4j.appender.applogonly<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
-log4j.appender.applogonly.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.applogonly.layout.ConversionPattern<span style="color:#f92672">=</span>%d <span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c:%L - %m%n
-log4j.appender.applogonly.File<span style="color:#f92672">=</span>/tmp/applog.out
-log4j.appender.applogonly.Append<span style="color:#f92672">=</span>true</code></pre></div></div>
+<p>The logging API provides fine-grained access to the various loggers. The logging API can be used to retrieve a list of the resource&rsquo;s loggers, change the logging level or configuration for any one specific logger, or determine the state of any one logger.</p>
 
+<p>This API is available directly to the resources; one way of accessing this API is through the Python package.</p>
+
+<p>Assuming that there is a reference to an instance of a component called <code>comp_1</code> associated with variable <code>c</code>, the following Python examples can be exercised:</p>
+
+<ul>
+<li><p>Use <code>getNamedLoggers</code> to get a list of the named loggers in a system.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>getNamedLoggers()
+[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1.system.PortSupplier&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1.system.PropertySet&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1.system.Resource&#39;</span>]</code></pre></div></li>
+
+<li><p>Use <code>setLogLevel</code> to change a named logger&rsquo;s level.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>setLogLevel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;trace&#39;</span>)</code></pre></div></li>
+
+<li><p>Use <code>getLogLevel</code> to get a named logger&rsquo;s level.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>getLogLevel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1&#39;</span>)
+<span style="color:#ae81ff">5000</span></code></pre></div></li>
+
+<li><p>Use <code>setLogConfig/getLogConfig</code> to set or get a named logger&rsquo;s configuration.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>getLogConfig(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;comp_1&#39;</span>)
+<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;log4j.rootLogger=INFO,STDOUT</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"># Direct log messages to STDOUT</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">log4j.appender.STDOUT.layout.ConversionPattern=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">{yyyy-MM-dd HH:mm:ss} %-5p </span><span style="color:#e6db74">%c</span><span style="color:#e6db74">{1}:%L - %m%n</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span></code></pre></div></li>
+
+<li><p>Use <code>resetLog</code> to reset a resource&rsquo;s loggers to whatever configuration each had on startup.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>resetLog()</code></pre></div></li>
+
+<li><p>Use <code>log_level</code> with no arguments to get the log level for the base logger.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>log_level()
+<span style="color:#ae81ff">5000</span></code></pre></div></li>
+
+<li><p>Use <code>log_level</code> with an argument to set the log level for the base logger.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">.</span>log_level(<span style="color:#ae81ff">10000</span>)</code></pre></div></li>
+</ul>
+
+<p>These commands are also available for the Domain Manager, Device Manager, and Application objects. In the case of the Domain Manager and Device Manager, they affect the specific object. In the case of the Application, the logging API aggregates all components&rsquo; loggers through a single interface. For example, calling <code>getNamedLoggers</code> on the Application object returns a list of all the named loggers in all components in the Application.</p>
 
 
     

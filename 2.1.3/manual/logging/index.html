@@ -768,17 +768,17 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
         <div>
-          <a href="../../manual/logging/configuring-logging-capabilities/">
-            Configuring Logging Capabilities
+          <a href="../../manual/logging/logging-structure/">
+            Logging Structure
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-config-uri-resolution/" class="dd-item">
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
         <div>
-          <a href="../../manual/logging/logging-config-uri-resolution/">
-            LOGGING_CONFIG_URI Resolution
+          <a href="../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1021,9 +1021,9 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/working-with-wavefroms/" class="dd-item">
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
         <div>
-          <a href="../../manual/exploring-domain/working-with-wavefroms/">
+          <a href="../../manual/exploring-domain/working-with-waveforms/">
             Working with Waveforms on a Running Domain
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -1207,8 +1207,8 @@ ga('send', 'pageview');
     <option value="/manual/logging/"  selected>
   - 
    Logging</option> 
-      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logging Capabilities</option>
-      <option value="/manual/logging/logging-config-uri-resolution/" >-- LOGGING_CONFIG_URI Resolution</option>
+      <option value="/manual/logging/logging-structure/" >-- Logging Structure</option>
+      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logger Settings</option>
       <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
       <option value="/manual/logging/adjusting-logging-at-runtime/" >-- Adjusting Logging at Runtime</option>
       <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
@@ -1259,22 +1259,20 @@ ga('send', 'pageview');
     
     
 
-<p>REDHAWK provides a logging capability for use by all resources (components, devices, and services). By default, the REDHAWK Framework and its support libraries have been developed to take advantage of the underlying language’s implementation: log4cxx, log4j, and log4py for C++, Java, and Python, respectively. All three libraries follow the basic premise of the log4j capabilities. A root logger definition is the parent of all loggers and configuration of the loggers is controlled through a Java style properties file. Each REDHAWK resource creates a named logger as a child of the root logger. (The name is based on the underlying resource’s name.) This chapter explains how to configure and use the logging capability. For a detailed description of log4j and its capabilities, refer to the log4j website (<a href="http://logging.apache.org/log4j/1.2/">http://logging.apache.org/log4j/1.2/</a>).</p>
-
-<p>All REDHAWK-generated code for resources provides an instantiation of a logging object for use by the resource. For Java and Python implementations, the underlying logging implementation of the language is used. For C++, there is a set of macro definitions that enable a resource to use the underlying logging implementation associated with the REDHAWK Core Framework library.</p>
+<p>REDHAWK provides a logging capability for use by all resources (components, devices, services, and core services like the Domain Manager). By default, the REDHAWK Framework and its support libraries have been developed to take advantage of an underlying language-specific logging implementation: log4cxx for C++, log4j for Java, and log4py for Python. All three libraries follow the basic premise of the log4j capabilities and configuration. This chapter explains how to configure and use the logging capability. For a description of log4cxx, refer to the log4cxx website (<a href="https://logging.apache.org/log4cxx/latest_stable/index.html">https://logging.apache.org/log4cxx/latest_stable/index.html</a>), and for a description of log4j, refer to the log4j website (<a href="http://logging.apache.org/log4j/1.2/">http://logging.apache.org/log4j/1.2/</a>). The Python library log4py is a REDHAWK-developed library that maps the log4j log configuration to the Python logging package and is not distributed outside the context of REDHAWK.</p>
 
 
 
 <ul class="children children-li">
 
 <span><li>
-		<a href="../../manual/logging/configuring-logging-capabilities/" >Configuring Logging Capabilities</a></li>
+		<a href="../../manual/logging/logging-structure/" >Logging Structure</a></li>
 </span>
 <ul>
 </ul>
 
 <span><li>
-		<a href="../../manual/logging/logging-config-uri-resolution/" >LOGGING_CONFIG_URI Resolution</a></li>
+		<a href="../../manual/logging/configuring-logging-capabilities/" >Configuring Logger Settings</a></li>
 </span>
 <ul>
 </ul>
@@ -1310,7 +1308,7 @@ ga('send', 'pageview');
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="../../manual/runtime-inspection/" title="Runtime Environment Inspection"> <i class="fa fa-chevron-left"></i><label>Runtime Environment Inspection</label></a>
-    <a class="nav nav-next" href="../../manual/logging/configuring-logging-capabilities/" title="Configuring Logging Capabilities" style="margin-right: 0px;"><label>Configuring Logging Capabilities</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="../../manual/logging/logging-structure/" title="Logging Structure" style="margin-right: 0px;"><label>Logging Structure</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

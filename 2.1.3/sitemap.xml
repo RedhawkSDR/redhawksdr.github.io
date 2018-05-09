@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/connecting-to-a-domain/</loc>
   </url>
   
@@ -48,6 +44,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/ide/launching-the-ide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/logging-structure/</loc>
   </url>
   
   <url>
@@ -107,6 +107,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/configuring-logging-capabilities/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/waveforms/sample-waveform/</loc>
   </url>
   
@@ -140,10 +144,6 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/logging-config-uri-resolution/</loc>
   </url>
   
   <url>
@@ -211,10 +211,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/burstio/multiout-ports/</loc>
   </url>
   
@@ -259,11 +255,7 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-wavefroms/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</loc>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/working-with-waveforms/</loc>
   </url>
   
   <url>
@@ -299,6 +291,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/shared-libraries/manually-including-external-libraries/</loc>
   </url>
   
@@ -328,6 +324,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/working-with-complex-data/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</loc>
   </url>
   
   <url>
@@ -383,10 +383,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/sandbox/python/sdds-data/</loc>
   </url>
   
@@ -432,6 +428,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/runtime-environment/device-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/logging/viewing-logging-events/</loc>
   </url>
   
   <url>

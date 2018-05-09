@@ -768,17 +768,17 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
         <div>
-          <a href="../../../manual/logging/configuring-logging-capabilities/">
-            Configuring Logging Capabilities
+          <a href="../../../manual/logging/logging-structure/">
+            Logging Structure
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-config-uri-resolution/" class="dd-item">
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
         <div>
-          <a href="../../../manual/logging/logging-config-uri-resolution/">
-            LOGGING_CONFIG_URI Resolution
+          <a href="../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1021,9 +1021,9 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/working-with-wavefroms/" class="dd-item">
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
         <div>
-          <a href="../../../manual/exploring-domain/working-with-wavefroms/">
+          <a href="../../../manual/exploring-domain/working-with-waveforms/">
             Working with Waveforms on a Running Domain
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -1207,8 +1207,8 @@ ga('send', 'pageview');
     <option value="/manual/logging/" >
   - 
    Logging</option> 
-      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logging Capabilities</option>
-      <option value="/manual/logging/logging-config-uri-resolution/" >-- LOGGING_CONFIG_URI Resolution</option>
+      <option value="/manual/logging/logging-structure/" >-- Logging Structure</option>
+      <option value="/manual/logging/configuring-logging-capabilities/" >-- Configuring Logger Settings</option>
       <option value="/manual/logging/logging-within-a-resource/"  selected>-- Logging Within A Resource</option>
       <option value="/manual/logging/adjusting-logging-at-runtime/" >-- Adjusting Logging at Runtime</option>
       <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
@@ -1260,107 +1260,81 @@ ga('send', 'pageview');
     
     
 
-<p>Resource code generated using the REDHAWK code generators provides all the necessary prerequisites for establishing and configuring the logging capability.</p>
+<p>Every resource capable of hosting custom logging (component, device, service) includes the class member <code>_baseLog</code>. The <code>_baseLog</code> member is a logger instance that has the same logging name as the resource instance. For example, the first instance of <code>comp</code> in a waveform is <code>comp_1</code>. For logging within a REDHAWK resource, <code>_baseLog</code> is the resource&rsquo;s &ldquo;root&rdquo; logger. The log4j root logger still exits and is the parent for the resource&rsquo;s &ldquo;root&rdquo; logger. The log4j root logger is referred to as the empty string.</p>
 
-<h3 id="c">C++</h3>
+<p>Each logger object has a member function, <code>getChildLogger()</code>, that takes 1 required argument and a second optional argument. The first argument is the name for the child logger and the second argument is an optional namespace for this logger. If <code>_baseLog</code> belongs to component <code>comp_1</code>, calling <code>getChildLogger()</code> with the first argument set to <code>mylog</code> and no second argument, the logger name <code>comp_1.user.mylog</code> is created. Calling <code>getChildLogger()</code> with the first argument set to <code>mylog</code> and the second argument set to <code>some.namespace</code> creates the logger name <code>comp_1.some.namespace.mylog</code>.</p>
 
-<p>For C++ implementations, the generated REDHAWK code contains macro definitions that define a logger object with the class name for your resource. For example, for component <code>SigGen</code>, the logger is <code>SigGen_i</code>.</p>
+<h3 id="c-use">C++ Use</h3>
 
-<h4 id="setup">Setup</h4>
+<p>All the following logging statements work with <code>_baseLog</code>. However, to declare a new logger, use the following code in the header:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">rh_logger<span style="color:#f92672">::</span>LoggerPtr my_logger;</code></pre></div>
+<p>To instantiate the new logger, use the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">my_logger <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>_baseLog<span style="color:#f92672">-&gt;</span>getChildLogger(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;my_logger&#34;</span>);</code></pre></div>
+<div class="notices note" ><p>The logger name and the logger variable name do not need to match.</p>
+</div>
 
-<p>The following example describes how to define and declare the <code>SigGen_i</code> logger.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">//SigGen.h
-</span><span style="color:#75715e">// this macro defines a logging object
-</span><span style="color:#75715e"></span>ENABLE_LOGGING;
-<span style="color:#75715e">//SigGen.cpp
-</span><span style="color:#75715e">// this macro declares the logging object
-</span><span style="color:#75715e"></span>PREPARE_LOGGING( SigGen_i );</code></pre></div>
-<h4 id="use">Use</h4>
 
 <p>To add logging messages within your resource’s code, the following macros are available. These macros use the predefined class logger as the input parameter.</p>
 
 <ul>
-<li><code>LOG_FATAL(&lt;component_class_name&gt;, message text )</code></li>
-<li><code>LOG_ERROR(&lt;component_class_name&gt;, message text )</code></li>
-<li><code>LOG_WARN(&lt;component_class_name&gt;, message text )</code></li>
-<li><code>LOG_INFO(&lt;component_class_name&gt;, message text )</code></li>
-<li><code>LOG_DEBUG(&lt;component_class_name&gt;, message text )</code></li>
-<li><code>LOG_TRACE(&lt;component_class_name&gt;, message text )</code></li>
+<li><code>RH_FATAL(&lt;logger&gt;, message text )</code></li>
+<li><code>RH_ERROR(&lt;logger&gt;, message text )</code></li>
+<li><code>RH_WARN(&lt;logger&gt;, message text )</code></li>
+<li><code>RH_INFO(&lt;logger&gt;, message text )</code></li>
+<li><code>RH_DEBUG(&lt;logger&gt;, message text )</code></li>
+<li><code>RH_TRACE(&lt;logger&gt;, message text )</code></li>
 </ul>
 
-<p>The following example adds <code>DEBUG</code>-level logging messages to the predefined logger <code>SigGen_i</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">...
-LOG_DEBUG(SigGen_i, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;serviceFunction() example log message&#34;</span>);</code></pre></div>
-<p>In addition to the resource’s predefined logger, you can request a new logger object using the <code>rh_logger</code> interface and named logger macros.</p>
+<p>where <code>&lt;logger&gt;</code> is the logger instance that should publish the message.</p>
 
-<ul>
-<li><code>RH_FATAL(logger_object, message text)</code></li>
-<li><code>RH_ERROR(logger_object, message text)</code></li>
-<li><code>RH_WARN(logger_object, message text)</code></li>
-<li><code>RH_INFO(logger_object, message text)</code></li>
-<li><code>RH_DEBUG(logger_object, message text)</code></li>
-<li><code>RH_TRACE(logger_object, message text)</code></li>
-</ul>
+<p>The following example adds <code>DEBUG</code>-level logging messages to the logger <code>my_logger</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">RH_DEBUG(<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>my_logger, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;example log message&#34;</span>);</code></pre></div>
+<p>The message text can be combined with stream operations, so the variable <code>my_variable</code> can be added to the logging message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">RH_DEBUG(<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>my_logger, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;The variable my_variable has the value: &#34;</span><span style="color:#f92672">&lt;&lt;</span>my_variable);</code></pre></div>
+<h3 id="java-use">Java Use</h3>
 
-<p>The following example creates a new logger object (<code>myLogger</code>) and adds <code>DEBUG</code>-level logging messages to <code>myLogger</code> using the <code>rh_logger</code> interface.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// local named logger
-</span><span style="color:#75715e"></span>LOGGER myLogger <span style="color:#f92672">=</span> rh_logger<span style="color:#f92672">::</span>Logger<span style="color:#f92672">::</span>getLogger(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;AnotherLogger&#34;</span>);
-...
-RH_DEBUG(myLogger, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;serviceFunction() example log message&#34;</span>);</code></pre></div>
-<h3 id="java">Java</h3>
+<p>All of the following logging statements work with <code>_baseLog</code>. However, to declare a new logger, use the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> RHLogger my_logger<span style="color:#f92672">;</span></code></pre></div>
+<p>To instantiate the new logger, use the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">my_logger <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_baseLog</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getChildLogger</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;my_logger&#34;</span><span style="color:#f92672">);</span></code></pre></div>
+<div class="notices note" ><p>The logger name and the logger variable name do not need to match.</p>
+</div>
 
-<p>For Java implementations, the log4j logger module must be imported for use before the logging capability can be established and configured.</p>
 
-<h4 id="setup-1">Setup</h4>
-
-<p>The following example describes how to import the log4j logger module.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//component.java
-</span><span style="color:#75715e"></span><span style="color:#f92672">import</span> org.apache.log4j.Logger<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyComponent</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e">// gets logger object based on the class name...
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">static</span> Logger logger <span style="color:#f92672">=</span> Logger<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(</span>component<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-  <span style="color:#f92672">...</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<h4 id="use-1">Use</h4>
-
-<p>The following example describes how to enable the logger with <code>DEBUG</code>-level logging messages.</p>
+<p>The following example adds <code>DEBUG</code>-level logging messages to the logger <code>my_logger</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">someMethod</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  logger<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;serviceFunction() example log message&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#f92672">};</span></code></pre></div>
-<p>Log4j supports the following severity levels for logging and enables you to programmatically change the severity level of the logger object.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">logger<span style="color:#f92672">.</span><span style="color:#a6e22e">fatal</span><span style="color:#f92672">(...)</span>
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">warn</span><span style="color:#f92672">(...)</span>
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(...)</span>
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(...)</span>
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(...)</span>
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">trace</span><span style="color:#f92672">(...)</span>
+  <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">my_logger</span><span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;example log message&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>Log4j supports the following severity levels for logging.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">fatal</span><span style="color:#f92672">(...)</span>
+_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">warn</span><span style="color:#f92672">(...)</span>
+_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(...)</span>
+_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(...)</span>
+_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span><span style="color:#f92672">(...)</span>
+_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">trace</span><span style="color:#f92672">(...)</span></code></pre></div>
+<p>It also supports programmatically changing the severity level of the logger object.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">_baseLog<span style="color:#f92672">.</span><span style="color:#a6e22e">setLevel</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">WARN</span><span style="color:#f92672">)</span></code></pre></div>
+<h3 id="python-use">Python Use</h3>
 
-logger<span style="color:#f92672">.</span><span style="color:#a6e22e">setLevel</span><span style="color:#f92672">(</span>Level<span style="color:#f92672">.</span><span style="color:#a6e22e">WARN</span><span style="color:#f92672">)</span></code></pre></div>
-<h3 id="python">Python</h3>
-
-<h4 id="setup-2">Setup</h4>
-
-<p>All REDHAWK resources inherit from the Resource class, which defines the <code>_log</code> data member.</p>
-
-<h4 id="use-2">Use</h4>
-
-<p>An example logging method call for Python is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>debug(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;process() example log message&#34;</span>)</code></pre></div>
-<p>REDHAWK has extended the Python logging support to include the trace method functionality. As with the other logging capabilities, you can programatically change the logging level.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>fatal(<span style="color:#f92672">...</span>)
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>warn(<span style="color:#f92672">...</span>)
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>error(<span style="color:#f92672">...</span>)
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>info(<span style="color:#f92672">...</span>)
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>debug(<span style="color:#f92672">...</span>)
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>trace(<span style="color:#f92672">...</span>)
-
-self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>WARN)</code></pre></div>
+<p>All the following logging statements work with <code>_baseLog</code>. However, to create a new logger, use the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>my_logger <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>getChildLogger(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;my_logger&#34;</span>)</code></pre></div>
+<p>The following example adds <code>DEBUG</code>-level logging messages to the logger <code>my_logger</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>my_logger<span style="color:#f92672">.</span>debug(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;example log message&#34;</span>)</code></pre></div>
+<p>REDHAWK has extended the Python logging support to include the trace method functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>fatal(<span style="color:#f92672">...</span>)
+self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>warn(<span style="color:#f92672">...</span>)
+self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>error(<span style="color:#f92672">...</span>)
+self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>info(<span style="color:#f92672">...</span>)
+self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>debug(<span style="color:#f92672">...</span>)
+self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>trace(<span style="color:#f92672">...</span>)</code></pre></div>
+<p>As with the other logging capabilities, you can programatically change the logging level.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">self<span style="color:#f92672">.</span>_baseLog<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>WARN)</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../manual/logging/logging-config-uri-resolution/" title="LOGGING_CONFIG_URI Resolution"> <i class="fa fa-chevron-left"></i><label>LOGGING_CONFIG_URI Resolution</label></a>
+<a class="nav nav-prev" href="../../../manual/logging/configuring-logging-capabilities/" title="Configuring Logger Settings"> <i class="fa fa-chevron-left"></i><label>Configuring Logger Settings</label></a>
     <a class="nav nav-next" href="../../../manual/logging/adjusting-logging-at-runtime/" title="Adjusting Logging at Runtime" style="margin-right: 0px;"><label>Adjusting Logging at Runtime</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 

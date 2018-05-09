@@ -769,17 +769,17 @@ ga('send', 'pageview');
       <a href="../../../../manual/logging/">Logging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
         <div>
-          <a href="../../../../manual/logging/configuring-logging-capabilities/">
-            Configuring Logging Capabilities
+          <a href="../../../../manual/logging/logging-structure/">
+            Logging Structure
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-config-uri-resolution/" class="dd-item">
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
         <div>
-          <a href="../../../../manual/logging/logging-config-uri-resolution/">
-            LOGGING_CONFIG_URI Resolution
+          <a href="../../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1022,9 +1022,9 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/exploring-domain/working-with-wavefroms/" class="dd-item">
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
         <div>
-          <a href="../../../../manual/exploring-domain/working-with-wavefroms/">
+          <a href="../../../../manual/exploring-domain/working-with-waveforms/">
             Working with Waveforms on a Running Domain
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
@@ -1287,13 +1287,13 @@ prod<span style="color:#f92672">.</span>connect(cons)
 <span style="color:#75715e">#True</span>
 sb<span style="color:#f92672">.</span>start()</code></pre></div>
 <h4 id="output">Output:</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">foo <span style="color:#ae81ff">0</span> hello
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">foo <span style="color:#ae81ff">1</span> hello
 foo <span style="color:#ae81ff">1</span> hello
-foo <span style="color:#ae81ff">2</span> hello
-foo <span style="color:#ae81ff">3</span> hello
-foo <span style="color:#ae81ff">4</span> hello
-foo <span style="color:#ae81ff">5</span> hello
-foo <span style="color:#ae81ff">6</span> hello</code></pre></div>
+foo <span style="color:#ae81ff">1</span> hello
+foo <span style="color:#ae81ff">1</span> hello
+foo <span style="color:#ae81ff">1</span> hello
+foo <span style="color:#ae81ff">1</span> hello
+foo <span style="color:#ae81ff">1</span> hello</code></pre></div>
 <p>Connecting producers to consumers through an Event Channel requires an application. An application can also support point-to-point connections.</p>
 
 <p>Below is a description of how to connect producers through point-to-point and through an Event Channel:</p>
