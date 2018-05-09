@@ -11,17 +11,17 @@ The shared memory used by REDHAWK is organized into heaps, one per process, that
 The heap is created on demand the first time the process attempts to allocate shared memory.
 In normal operation, the heap is removed by the process when it exits.
 Additionally, the REDHAWK GPP monitors its child processes and removes their heap files when the process crashes or is terminated abnormally.
-As such, heaps are typically only left behind when a component or device crashes in the Python sandbox or IDE chalkboard.
+As such, heaps are typically only left behind when a component or device crashes in the Python Sandbox or the IDE Chalkboard.
 When this occurs, the heap is considered "orphaned."
 
-If shared memory is fully utilized, performance may be degraded because C++ components and device will not be able to allocate additional shared memory for BulkIO data transfers.
-REDHAWK provides tools to help system maintainers view the state of their shared memory filesystem, and remove unwanted files that are using shared memory.
+If shared memory is fully utilized, performance may be degraded because C++ components and devices will not be able to allocate additional shared memory for BulkIO data transfers.
+REDHAWK provides tools to help system maintainers view the state of their shared memory filesystem and remove unwanted files that are using shared memory.
 
 ## Inspecting Shared Memory State
 
-The `redhawk-shminfo` program allows system maintainers to view the current state of their shared memory filesystem.
+The `redhawk-shminfo` program enables system maintainers to view the current state of their shared memory filesystem.
 
-By default, it shows the total and current free shared memory amounts on the system, followed by a listing of REDHAWK heaps:
+By default, it displays the total and current free shared memory amounts on the system, followed by a listing of REDHAWK heaps:
 ```bash
 redhawk-shminfo
 ```
@@ -50,10 +50,10 @@ Viewing REDHAWK heaps owned by other users may require superuser privileges.
 {{% /notice %}}
 
 If a heap is listed as orphaned, the process that created it is no longer alive.
-Under normal circumstances, the creating process or REDHAWK GPP will remove the heap upon exit.
+Under normal circumstances, the heap is removed by the creation process or the REDHAWK GPP upon exit.
 
 {{% notice note %}}
-When a shared memory file is removed, other processes that have mapped the memory will still be able to access it, but no new processes may attach to it.
+When a shared memory file is removed, other processes that have mapped the memory can still access it, but no new processes may attach to it.
 The memory will not be returned to the free shared memory total until all attached processes have unmapped the memory or exited.
 {{% /notice %}}
 
@@ -84,7 +84,7 @@ pulse-shm-2249902370
   mode:        400
 ```
 
-REDHAWK heaps that cannot be read by the current user will appear as files of type "other" when using `--all`.
+REDHAWK heaps that cannot be read by the current user are displayed as files of type "other" when using `--all`.
 
 {{% notice note %}}
 Only the allocated size of files is counted against free memory.
@@ -92,7 +92,7 @@ Shared memory files are sparse, meaning that no physical memory is dedicated unt
 The total of all file sizes may therefore exceed the total shared memory on the system.
 {{% /notice %}}
 
-The free shared memory may be less than than the total shared memory minus the sum of all REDHAWK heaps and other shared memory files, because it takes into account files that were removed but are still mapped by active processes.
+Because the free shared memory takes into account files that were removed but are still mapped by active processes, it may be less than than the total shared memory minus the sum of all REDHAWK heaps and other shared memory files.
 This memory will be reclaimed when the processes exit.
 
 ## Cleaning Shared Memory With `redhawk-shmclean`
@@ -121,7 +121,7 @@ It is possible to remove one or more individual heaps by giving the heap names a
 redhawk-shmclean heap-2286
 ```
 
-If the heap is not orphaned (that is, its creating process is still alive), `redhawk-shmclean` will refuse to remove it unless the `--force` or `-f` flag is given.
+If the heap is not orphaned (that is, its creation process is still alive), `redhawk-shmclean` will refuse to remove it unless the `--force` or `-f` flag is given.
 
 ### Removing Non-REDHAWK Files
 
