@@ -50,7 +50,7 @@ Viewing REDHAWK heaps owned by other users may require superuser privileges.
 {{% /notice %}}
 
 If a heap is listed as orphaned, the process that created it is no longer alive.
-Under normal circumstances, the heap is removed by the creation process or the REDHAWK GPP upon exit.
+Under normal circumstances, the heap is removed by the creating process or the REDHAWK GPP upon exit.
 
 {{% notice note %}}
 When a shared memory file is removed, other processes that have mapped the memory can still access it, but no new processes may attach to it.
@@ -121,7 +121,7 @@ It is possible to remove one or more individual heaps by giving the heap names a
 redhawk-shmclean heap-2286
 ```
 
-If the heap is not orphaned (that is, its creation process is still alive), `redhawk-shmclean` will refuse to remove it unless the `--force` or `-f` flag is given.
+If the heap is not orphaned (that is, its creating process is still alive), `redhawk-shmclean` will refuse to remove it unless the `--force` or `-f` flag is given.
 
 ### Removing Non-REDHAWK Files
 
