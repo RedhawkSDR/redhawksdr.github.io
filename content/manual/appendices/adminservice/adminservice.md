@@ -5,21 +5,21 @@ weight: 10
 
 # AdminService Configuration
 
-Since the AdminService is based on Supervisor, all the Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
+Because the AdminService is based on Supervisor, all Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
 
 ##### REDHAWK Service Configuration File Sections
 
 | **Section**                                                | **Description**                                               |
 | :--------------------------------------------------------- | :------------------------------------------------------------ |
-| [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService         |
-| [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService          |
-| [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Settings for running the AdminService server                  |
-| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Settings for running the `rhadmin` client                     |
-| [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService |
+| [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService.         |
+| [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService.          |
+| [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Specifies settings for running the AdminService server.                  |
+| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Sp   ecifies settings for running the `rhadmin` client.                     |
+| [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService .|
 
 ## unix_http_server
 
-The `unix_http_server` section defines the local socket that the `rhadmin` can use for remote control of the AdminService. The following section describes all the available configuration parameters.
+The `unix_http_server` section of the AdminService configuration file defines the local socket that the `rhadmin` can use for remote control of the AdminService. The following section describes all available configuration parameters.
 
 ### Configuration Parameters
 
@@ -46,14 +46,14 @@ description: Username for remote control of the AdminServer.
 parameter: `password`  
 required: No  
 default value: `redhawk`  
-format: Cleartext password, or can be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.  
+format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.  
 description: Password for remote control of the AdminServer.
 
 ## inet_http_server
 
-The AdminService can listen on a local Unix socket or on the network using a TCP socket. The inet_http_server section defines the network socket that the `rhadmin` can use for remote control of the AdminService.
+The AdminService can listen on a local Unix socket or on the network using a TCP socket. The `inet_http_server` section of the AdminService configuration file defines the network socket that the `rhadmin` can use for remote control of the AdminService.
 
-The following section describes all the available configuration parameters.
+The following section describes all available configuration parameters.
 
 ### Configuration Parameters
 
@@ -70,7 +70,7 @@ description: Username for remote control of the AdminServer.
 parameter: `password`  
 required: No  
 default value: `redhawk`  
-format: Cleartext password, or can be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.   
+format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.   
 description: Password for remote control of the AdminServer.
 
 
@@ -78,21 +78,20 @@ description: Password for remote control of the AdminServer.
 
 The AdminService configuration is listed in the `[adminserviced]` section of the configuration file.
 
-The following section describes all the available configuration parameters.
+The following section describes all available configuration parameters.
 
 ### Configuration Parameters
 {{% notice note %}}
 Parameter names are case sensitive.  
-The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
+The following are the valid values for boolean configuration parameters. If no value is present, the feature is disabled.  
 True: `1`, `true`, `True`  
 False: `0`, `false`, `False`
 {{% /notice %}}
 
-
 parameter: `pidfile`  
 required: No  
 default value: `adminserviced.pid`  
-format: absolute path or filename relative to `directory`.
+format: Absolute path or filename relative to `directory`.  
 description: Path to the pid file for the AdminService.  
 
 parameter: `loglevel`  
@@ -119,12 +118,12 @@ description: Number of backups of the logfiles to keep.
 parameter: `childlogdir`  
 required: No  
 default value: `/var/log/redhawk`  
-description: Full path to the directory to store the child process log files in.
+description: Full path to the directory in which to store the child process log files.
 
 parameter: `childpiddir`  
 required: No  
 default value: `/var/run/redhawk`  
-description: Full path to the directory to store the child pid files in.
+description: Full path to the directory in which to store the child pid files.
 
 parameter: `user`  
 required: No  
@@ -150,27 +149,27 @@ description: Change directory to `directory` before running the AdminService as 
 parameter: `config_dir`  
 required: No  
 default value: `/etc/redhawk`  
-description: Full path to the directory that has the AdminService configuration files.
+description: Full path to the directory containing the AdminService configuration files.
 
 parameter: `defaults_dir`  
 required: No  
 default value: `init.d`  
-description: Relative path from `config_dir` to the directory that has the AdminService `*.defaults` configuration files.
+description: Relative path from `config_dir` to the directory containing the AdminService `*.defaults` configuration files.
 
 parameter: `domains_dir`  
 required: No  
 default value: `domains.d`  
-description: Relative path from `config_dir` to the directory that has the Domain Manager `.ini` configuration files.
+description: Relative path from `config_dir` to the directory containing the Domain Manager `.ini` configuration files.
 
 parameter: `nodes_dir`  
 required: No  
 default value: `nodes.d`  
-description: Relative path from `config_dir` to the directory that has the Device Manager `.ini` configuration files.
+description: Relative path from `config_dir` to the directory containing the Device Manager `.ini` configuration files.
 
 parameter: `waveforms_dir`  
 required: No  
 default value: `waveforms.d`  
-description: Relative path from `config_dir` to the directory that has the waveform `.ini` configuration files.
+description: Relative path from `config_dir` to the directory containing the waveform `.ini` configuration files.
 
 parameter: `umask`  
 required: No  
@@ -180,12 +179,12 @@ description: umask for the AdminService process.
 parameter: `minfds`  
 required: No  
 default value: `1024`  
-description: Minimum number of file descriptors that need to be available for the AdminService to start.
+description: Minimum number of available file descriptors needed for the AdminService to start.
 
 parameter: `minprocs`  
 required: No  
 default value: `200`  
-description: Minimum number of process descriptors that need to be available for the AdminService to start.
+description: Minimum number of available process descriptors needed for the AdminService to start.
 
 parameter: `nocleanup`  
 required: No  
@@ -212,7 +211,7 @@ description: The identifier string used by the RPC interface.
 
 The `rhadmin` control script can be configured in the main AdminService configuration file.
 
-The following section describes all the available configuration parameters.
+The following section describes all available configuration parameters.
 
 ### Configuration Parameters
 
@@ -236,7 +235,7 @@ description: Password to use when connecting to the AdminServer.
 parameter: `prompt`  
 required: No  
 default value: `redhawk`  
-description: Prompt to show when using `rhadmin` in interactive mode(without an option on the command line).
+description: Prompt to show when using `rhadmin` in interactive mode (without an option on the command line).
 
 parameter: `history_file`  
 required: No  
@@ -248,7 +247,7 @@ description: Absolute path to a file for storing commands run in interactive mod
 
 The AdminService can be extended to add more functionality with the RPC interface. The interface `rhadmin` uses is implemented as an RPC interface.
 
-The only required parameter is `adminservice.rpcinterface_factory`; however, any additional defined parameters will be passed to the described RPC interface.
+The only required parameter is `adminservice.rpcinterface_factory`; however, any additional defined parameters are passed to the described RPC interface.
 
 ### Configuration Parameters
 
@@ -256,4 +255,4 @@ parameter: `adminservice.rpcinterface_factory`
 required: Yes  
 default value: None  
 format: \<package\>:\<function name\>  
-description: The package and function to be used by the RPC interface
+description: The package and function to be used by the RPC interface.
