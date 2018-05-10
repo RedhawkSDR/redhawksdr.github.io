@@ -3,9 +3,11 @@ title: "Waveform Configuration"
 weight: 40
 ---
 
-REDHAWK waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. Default waveform configuration parameters are stored in `/etc/redhawk/init.d/waveform.defaults`. The following section describes all the available configuration parameters for a waveform.
+REDHAWK waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. Default waveform configuration parameters are stored in `/etc/redhawk/init.d/waveform.defaults`. To define multiple waveform instances in one file, add multiple sections.
 
-The [rhadmin]({{< relref "manual/appendices/adminservice/_index.md#rhadmin-client" >}}) can generate an example waveform configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK waveform. To generate a generic waveform configuration, use the following command.
+The waveform can be configured to start after the Device Manager has started up; it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the waveform. If the waveform depends on devices or services, it is recommended that you add a custom script to verify that those devices and services have started and registered with the Domain Manager (see the `start_pre_script` parameter).
+
+The [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example waveform configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK waveform. To generate a generic waveform configuration, use the following command.
 ```sh
 rhadmin config waveform > waveform.ini
 ```
