@@ -3,8 +3,6 @@ title: "AdminService Configuration"
 weight: 10
 ---
 
-# AdminService Configuration
-
 Because the AdminService is based on Supervisor, all Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
 
 ##### REDHAWK Service Configuration File Sections
@@ -14,8 +12,8 @@ Because the AdminService is based on Supervisor, all Supervisor [configuration o
 | [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService.         |
 | [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService.          |
 | [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Specifies settings for running the AdminService server.                  |
-| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Sp   ecifies settings for running the `rhadmin` client.                     |
-| [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService .|
+| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Specifies settings for running the `rhadmin` client.                     |
+| [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService.|
 
 ## unix_http_server
 
