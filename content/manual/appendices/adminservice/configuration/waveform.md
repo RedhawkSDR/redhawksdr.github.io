@@ -29,42 +29,42 @@ False: 0, false, False
 parameter: `DOMAIN_NAME`  
 required: Yes  
 default value: None  
-format: A name with no spaces or periods (for example, `REDHAWK_DEV`).  
-description: Domain name to associate with this waveform.
+format: A name with no spaces or periods (for example, `REDHAWK_DEV`)  
+description: Domain name to associate with this waveform
 
 parameter: `WAVEFORM`  
 required: Yes  
 default value: None  
-format: Valid directory under `$SDRROOT/dom/waveforms`, or a namespaced waveform identifier (for example, `rh.MyWaveform`).  
-description: Name of the waveform to launch.
+format: Valid directory under `$SDRROOT/dom/waveforms`, or a namespaced waveform identifier (for example, `rh.MyWaveform`)  
+description: Name of the waveform to launch
 
 parameter: `INSTANCE_NAME`  
 required: No  
 format: A name with no spaces or periods (for example, `THE_WAVEFORM`)  
-description: Used to give the waveform an instance-specific name.  
+description: Used to give the waveform an instance-specific name
 
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
-format: Standard shell path environment variable.  
-description: Path to use as the SDRROOT for this waveform.
+format: Standard shell path environment variable  
+description: Path to use as the SDRROOT for this waveform
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
-format: Standard shell path environment variable.  
-description: Absolute path to use as the OSSIEHOME for this waveform.
+format: Standard shell path environment variable  
+description: Absolute path to use as the OSSIEHOME for this waveform
 
 parameter: `PYTHONPATH`  
 required: No  
 default value: `$PYTHONPATH`  
-format: Standard shell path environment variable.  
-description: Path used by Python interpreter to load modules, overrides `PYTHONPATH` environment variable.
+format: Standard shell path environment variable  
+description: Path used by Python interpreter to load modules; overrides `PYTHONPATH` environment variable
 
 parameter: `start_delay`  
 required: No  
 default value: `30`  
-description: Amount of time for the waveform control script to wait for the Domainmanager to be available before failing startup.
+description: Amount of time for the waveform control script to wait for the Domainmanager to be available before failing startup
 
 parameter: `start_cmd_option`  
 required: No  
@@ -74,28 +74,28 @@ description: Option to use with the waveform control script to start the wavefor
 parameter: `status_cmd_option`  
 required: No  
 default value: `-o status`  
-description: Option to use with the waveform control script to status the waveform.
+description: Option to use with the waveform control script to status the waveform
 
 parameter: `stop_cmd_option`  
 required: No  
 default value: `-o remove`  
-description: Option to use with the waveform control script to stop the waveform.
+description: Option to use with the waveform control script to stop the waveform
 
 parameter: `enable`  
 required: No  
 default value: `True`  
 format: `True`, `False`, or a string to be matched against `conditional_config`  
-description: Specifies if waveform may be started.  `True` or `False` will enable or disable the waveform. See `conditional_config` below for how a string value gets evaluated.
+description: Specifies if waveform may be started  ()`True` or `False` will enable or disable the waveform. See `conditional_config` below for how a string value gets evaluated.)
 
 parameter: `conditional_config`  
 required: No  
 default value: `/etc/redhawk/rh.cond.cfg`  
-description: Allows conditional startup of waveforms based on the `enable` parameter and the contents of this conditional config file’s `enable` field. If the value of both `enable` parameters are the same, the waveform will start; otherwise, the waveform is skipped. For example, `enable=primary` causes the `conditional_config` file to be examined for an `enable=primary` statement to match against when starting a waveform on the host. If no match is found, the waveform is skipped.
+description: Allows conditional startup of waveforms based on the `enable` parameter and the contents of this conditional config file’s `enable` field (If the value of both `enable` parameters are the same, the waveform will start; otherwise, the waveform is skipped. For example, `enable=primary` causes the `conditional_config` file to be examined for an `enable=primary` statement to match against when starting a waveform on the host. If no match is found, the waveform is skipped.)
 
 parameter: `priority`  
 required: No  
 default value: `900`  
-description: Relative priority of the waveform in the group of processes to start for this domain. Lower values will be started earlier (for example priority 800 will be started before priority 900).
+description: Relative priority of the waveform in the group of processes to start for this domain (Lower values will be started earlier (for example priority 800 will be started before priority 900).)
 
 parameter: `autostart`  
 required: No  
@@ -105,17 +105,17 @@ description: Automatically start this process when the AdminService starts, if `
 parameter: `startsecs`  
 required: No  
 default value: `5`  
-description: Number of seconds the waveform has to be running to consider it started.
+description: Number of seconds the waveform has to be running to consider it started
 
 parameter: `waitforprevious`  
 required: No  
 default value: `45`  
-description: Number of seconds to wait for the previous higher priority process to start before trying to start this process.
+description: Number of seconds to wait for the previous higher priority process to start before trying to start this process
 
 parameter: `failafterwait`  
 required: No  
 default value: `False`  
-description: Abort starting this domain if `waitforprevious` has expired and the previous process has not been declared started yet.  This is useful to make sure the DeviceManager is started and all devices are ready before launching the waveform.
+description: Abort starting this domain if `waitforprevious` has expired and the previous process has not been declared started yet  (This is useful to make sure the DeviceManager is started and all devices are ready before launching the waveform.)
 
 parameter: `startretries`  
 required: No  
@@ -125,114 +125,114 @@ description: Number of times to try restarting the waveform on startup.
 parameter: `autorestart`  
 required: No  
 default value: `True`  
-description: Automatically restart this process when an abnormal termination is detected. Abnormal is any exit code not in `exitcodes`.
+description: Automatically restart this process when an abnormal termination is detected (Abnormal is any exit code not in `exitcodes`.)
 
 parameter: `exitcodes`  
 required: No  
 default value: `0,2`  
-description: Expected exit codes from the process.
+description: Expected exit codes from the process
 
 parameter: `stopwaitsecs`  
 required: No  
 default value: `10`  
-description: Number of seconds to wait when stopping the waveform.
+description: Number of seconds to wait when stopping the waveform
 
 parameter: `started_status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to determine if a waveform is started properly.
+description: Path to file or directory to search for scripts to be run to determine if a waveform is started properly
 
 parameter: `status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to get the status for the waveform.
+description: Path to file or directory to search for scripts to be run to get the status for the waveform
 
 parameter: `environment`  
 required: No  
 default value: None  
-format: A list of key/value pairs in the form `key="value",key2="value2"`.  
-description: Override existing environment variables or set new ones to be used when starting the Domain Manager.
+format: A list of key/value pairs in the form `key="value",key2="value2"`  
+description: Override existing environment variables or set new ones to be used when starting the Domain Manager
 
 parameter: `user`  
 required: No  
 default value: `redhawk`  
-description: Executes process with User ID.
+description: Executes process with User ID
 
 parameter: `group`  
 required: No  
 default value: `redhawk`  
-description: Executes process with Group ID.
+description: Executes process with Group ID
 
 parameter: `umask`  
 required: No  
 default value: None  
-description: umask for the process.
+description: umask for the process
 
 parameter: `directory`  
 required: No  
 default value:`$SDRROOT`  
-description: Change directory to `directory` before running this waveform.
+description: Change directory to `directory` before running this waveform
 
 parameter: `run_detached`  
 required: No  
 default value: `True`  
-description: Run the waveform as a daemon, not a child of the AdminService process.
+description: Run the waveform as a daemon, not a child of the AdminService process
 
 parameter: `logfile_directory`  
 required: No  
 default value: `/var/log/redhawk/waveforms`  
-description: Absolute path to the logging directory.
+description: Absolute path to the logging directory
 
 parameter: `stdout_logfile`  
 required: No  
 default value: `<domain name>.<waveform name>.stdout.log`  
-description: Name of a file that captures the stdout from the process. If not specified, the default value list above is used.
+description: Name of a file that captures the stdout from the process (If not specified, the default value list above is used.)
 
 parameter: `stderr_logfile`  
 required: No  
 default value: `<domain name>.<waveform name>.stderr.log`  
-description: If `redirect_stderr` is False, name of a file that captures the stderr from the process. If not specified, the default value list above is used.
+description: If `redirect_stderr` is False, name of a file that captures the stderr from the process (If not specified, the default value list above is used.)
 
 parameter: `redirect_stderr`  
 required: No  
 default value: `True`  
-description: Write stdout and stderr to the same file.
+description: Write stdout and stderr to the same file
 
 parameter: `stopsignal`  
 required: No  
 default value: `TERM`  
-description: Signal to send when stopping the waveform.
+description: Signal to send when stopping the waveform
 
 parameter: `stopasgroup`  
 required: No  
 default value: `False`  
-description: Send stop signal to the process group when stopping.
+description: Send stop signal to the process group when stopping
 
 parameter: `killasgroup`  
 required: No  
 default value: `False`  
-description: Send SIGKILL to the process group when forcibly killing the waveform.
+description: Send SIGKILL to the process group when forcibly killing the waveform
 
 parameter: `start_pre_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: Script or directory of scripts to be run before the waveform is started.
+description: Script or directory of scripts to be run before the waveform is started
 
 parameter: `start_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: Script or directory of scripts to be run after the waveform is started.
+description: Script or directory of scripts to be run after the waveform is started
 
 parameter: `stop_pre_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: Script or directory of scripts to be run before the waveform is stopped.
+description: Script or directory of scripts to be run before the waveform is stopped
 
 parameter: `stop_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: Script or directory of scripts to be run after the waveform is stopped.
+description: Script or directory of scripts to be run after the waveform is stopped

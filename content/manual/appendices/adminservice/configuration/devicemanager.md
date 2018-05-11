@@ -41,7 +41,7 @@ description: Name of the Node to launch with this Device Manager (Must be a vali
 parameter: `DCD_FILE`  
 required: No  
 default: `/nodes/$NODE_NAME/DeviceManager.dcd.xml`  
-format: `$SDRROOT/dev` relative path to a DCD file
+format: `$SDRROOT/dev` relative path to a DCD file  
 description: Path to the DCD file (`DeviceManager.dcd.xml` file) describing the Device Manager.
 
 parameter: `SDRCACHE`  
@@ -64,55 +64,55 @@ description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI
+format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI  
 description: Logging configuration file to be used by the Device Manager (Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others will be resolved as an absolute path or URI to a logging properties file.)
 
 parameter: `DEBUG_LEVEL`  
 required: No  
 default value: `INFO`  
-values: `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`  
+values: `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`    
 description: Device Manager’s logging level at startup
 
 parameter: `SDRROOT`  
 required: No  
 default value: `$SDRROOT`  
-format: Standard shell path environment variable
+format: Standard shell path environment variable  
 description: Path to use as the `SDRROOT` for this Device Manager
 
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
-format: Standard shell path environment variable
+format: Standard shell path environment variable  
 description: Absolute path to use as the `OSSIEHOME` for this Device Manager
 
 parameter: `LD_LIBRARY_PATH`  
 required: No  
 default value: `$LD_LIBRARY_PATH`  
-format: Standard shell path environment variable
+format: Standard shell path environment variable  
 description: Path for link loader to resolve shared object files; overrides `LD_LIBRARY_PATH` environment variable
 
 parameter: `PYTHONPATH`  
 required: No  
 default value: `$PYTHONPATH`  
-format: Standard shell path environment variable.  
+format: Standard shell path environment variable.    
 description: Path used by Python interpreter to load modules; overrides `PYTHONPATH` environment variable
 
 parameter: `JAVA_HOME`  
 required: No  
 default value: `$JAVA_HOME`  
-format: Standard shell path environment variable
+format: Standard shell path environment variable  
 description: Home directory used by the Java installation when launching devices and services
 
 parameter: `PATH`  
 required: No  
 default value: `$PATH`  
-format: Standard shell path environment variable
+format: Standard shell path environment variable  
 description: Search path to use when launching devices and services
 
 parameter: `ORB_CFG`  
 required: No  
 default value: None  
-format: Standard shell environment variable.  
+format: Standard shell environment variable.    
 description: Used to set `OMNIORB_CONFIG` variable before running the process (Consult omniORB documentation for further details.)
 
 parameter: `ORB_INITREF`  

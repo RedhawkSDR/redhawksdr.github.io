@@ -186,7 +186,7 @@ description: Path to file or directory to search for scripts to be run to get th
 parameter: `environment`  
 required: No  
 default value: None  
-format: A list of key/value pairs in the form `key="value",key2="value2"`
+format: A list of key/value pairs in the form `key="value",key2="value2"`  
 description: Override existing environment variables or set new ones to be used when starting the Domain Manager
 
 parameter: `user`  
