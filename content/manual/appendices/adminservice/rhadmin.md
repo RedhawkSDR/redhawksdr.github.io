@@ -14,7 +14,7 @@ rhadmin -c /etc/redhawk/myadminserviced.conf
 
 ### Commands
 
-The following table describes the `rhadmin` client script commands that are used to control the AdminService.
+The following table describes the `rhadmin` client script commands used to control the AdminService.
 
 | **Command** | **Argument**                             | **Description**                                                                                                |
 | :---------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
@@ -22,13 +22,13 @@ The following table describes the `rhadmin` client script commands that are used
 | `avail`     |                                          | Shows domains/processes that can be started.                                                                   |
 | `getconfig` | `<process name>`                         | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
 | `maintail`  | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
-| `reload`    |                                          | Restart the AdminService, implicitly causes it to reread the configuration files.                              |
+| `reload`    |                                          | Restart the AdminService; implicitly causes it to reread the configuration files.                              |
 | `reread`    |                                          | Rereads the configuration files; does not apply changes.                                                       |
 | `restart`   | `all`, `<domain name>`, `<process name>` | Restarts the specified domain, process, or everything (`all`). Can specify multiple arguments.                 |
 | `shutdown`  |                                          | Stops the AdminService.                                                                                        |
 | `start`     | `all`, `<domain name>`, `<process name>` | Starts the specified domain, process, or everything (`all`). Can specify multiple arguments.                   |
 | `status`    | none, `<domain name>`, `<process name>`  | Shows the status for the specified domain, process, or everything (none).                                      |
-| `stop`      | `all`, `<domain name>`, `<process name>` | Stops the specified domain, process, or everything(`all`). Can specify multiple arguments.                     |
+| `stop`      | `all`, `<domain name>`, `<process name>` | Stops the specified domain, process, or everything (`all`). Can specify multiple arguments.                     |
 | `update`    | none, `<domain name>`                    | Reloads the configuration and optionally starts/stops any domain groupings that have changed. Can specify multiple arguments. |
 
 All commands can be run in either an interactive console mode or from the command line. To run the `avail` command using the `rhadmin` client script in interactive mode, enter the following:
