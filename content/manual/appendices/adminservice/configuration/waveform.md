@@ -7,11 +7,11 @@ REDHAWK waveforms are controlled by files in the `/etc/redhawk/waveforms.d` dire
 
 The waveform can be configured to start after the Device Manager has started up; it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the waveform. If the waveform depends on devices or services, it is recommended that you add a custom script to verify that those devices and services have started and registered with the Domain Manager (see the `start_pre_script` parameter).
 
-The [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example waveform configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK waveform. To generate a generic waveform configuration, use the following command.
+The [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example waveform configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK waveform. To generate a generic waveform configuration, enter the following command.
 ```sh
 rhadmin config waveform > waveform.ini
 ```
-To generate a waveform configuration from an existing waveform project, use the following command.
+To generate a waveform configuration from an existing waveform project, enter the following command.
 ```sh
 rhadmin config waveform <path/to/waveform>/<file>.sad.xml <DomainName> > waveform.ini
 ```
@@ -20,7 +20,7 @@ rhadmin config waveform <path/to/waveform>/<file>.sad.xml <DomainName> > wavefor
 
 {{% notice note %}}
 Parameter names are case sensitive.  
-The following are the valid values for boolean configuration parameters. If no value is present the feature is disabled.  
+The following are the valid values for boolean configuration parameters. If no value is present, the feature is disabled.  
 True: 1, true, True  
 False: 0, false, False
 {{% /notice %}}
@@ -85,7 +85,7 @@ parameter: `enable`
 required: No  
 default value: `True`  
 format: `True`, `False`, or a string to be matched against `conditional_config`  
-description: Specifies if waveform is able to be started.  `True` or `False` will enable or disable the waveform. See `conditional_config` below for how a string value gets evaluated.
+description: Specifies if waveform may be started.  `True` or `False` will enable or disable the waveform. See `conditional_config` below for how a string value gets evaluated.
 
 parameter: `conditional_config`  
 required: No  
@@ -115,7 +115,7 @@ description: Number of seconds to wait for the previous higher priority process 
 parameter: `failafterwait`  
 required: No  
 default value: `False`  
-description: Abort starting this domain if `waitforprevious` has expired and the previous process hasn't been declared started yet.  This is useful to make sure the DeviceManager is started and all devices are ready before launching the waveform.
+description: Abort starting this domain if `waitforprevious` has expired and the previous process has not been declared started yet.  This is useful to make sure the DeviceManager is started and all devices are ready before launching the waveform.
 
 parameter: `startretries`  
 required: No  
@@ -216,23 +216,23 @@ description: Send SIGKILL to the process group when forcibly killing the wavefor
 parameter: `start_pre_script`  
 required: No  
 default value: None  
-format: Absolute path of a file, or absolute path of a directory of files  
+format: Absolute path of a file or absolute path of a directory of files  
 description: Script or directory of scripts to be run before the waveform is started.
 
 parameter: `start_post_script`  
 required: No  
 default value: None  
-format: Absolute path of a file, or absolute path of a directory of files  
+format: Absolute path of a file or absolute path of a directory of files  
 description: Script or directory of scripts to be run after the waveform is started.
 
 parameter: `stop_pre_script`  
 required: No  
 default value: None  
-format: Absolute path of a file, or absolute path of a directory of files  
+format: Absolute path of a file or absolute path of a directory of files  
 description: Script or directory of scripts to be run before the waveform is stopped.
 
 parameter: `stop_post_script`  
 required: No  
 default value: None  
-format: Absolute path of a file, or absolute path of a directory of files  
+format: Absolute path of a file or absolute path of a directory of files  
 description: Script or directory of scripts to be run after the waveform is stopped.
