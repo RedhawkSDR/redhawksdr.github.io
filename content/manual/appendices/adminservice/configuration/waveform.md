@@ -1,6 +1,6 @@
 ---
-title: "Waveform Configuration"
-weight: 40
+title: "Waveform Configuration File"
+weight: 50
 ---
 
 REDHAWK waveforms are controlled by files in the `/etc/redhawk/waveforms.d` directory. Default waveform configuration parameters are stored in `/etc/redhawk/init.d/waveform.defaults`. To define multiple waveform instances in one file, add multiple sections.
@@ -90,7 +90,7 @@ description: Specifies if waveform may be started  ()`True` or `False` will enab
 parameter: `conditional_config`  
 required: No  
 default value: `/etc/redhawk/rh.cond.cfg`  
-description: Allows conditional startup of waveforms based on the `enable` parameter and the contents of this conditional config file’s `enable` field (If the value of both `enable` parameters are the same, the waveform will start; otherwise, the waveform is skipped. For example, `enable=primary` causes the `conditional_config` file to be examined for an `enable=primary` statement to match against when starting a waveform on the host. If no match is found, the waveform is skipped.)
+description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. (If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.)
 
 parameter: `priority`  
 required: No  
@@ -140,12 +140,12 @@ description: Number of seconds to wait when stopping the waveform
 parameter: `started_status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to determine if a waveform is started properly
+description: Path to file to be run to determine if the waveform started properly
 
 parameter: `status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to get the status for the waveform
+description: Path to file to be run to get the status for the waveform
 
 parameter: `environment`  
 required: No  

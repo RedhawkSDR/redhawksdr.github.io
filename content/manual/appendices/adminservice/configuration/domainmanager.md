@@ -1,6 +1,6 @@
 ---
-title: "Domain Manager Service Configuration"
-weight: 20
+title: "Domain Manager Service Configuration File"
+weight: 30
 ---
 
 The REDHAWK Domain Manager service is controlled by files in the `/etc/redhawk/domains.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`.
@@ -126,7 +126,7 @@ description: Specifies if process may be started  (`True` or `False` will enable
 parameter: `conditional_config`  
 required: No  
 default value: `/etc/redhawk/rh.cond.cfg`  
-description: Allows conditional startup of processs based on the `enable` parameter and the contents of this conditional config file’s `enable` field (If the value of both `enable` parameters are the same, the process will start; otherwise, the process is skipped. For example, `enable=primary` causes the `conditional_config` file to be examined for an `enable=primary` statement to match against when starting a process on the host. If no match is found, the process is skipped.)
+description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. (If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.)
 
 parameter: `priority`  
 required: No  
@@ -176,12 +176,12 @@ description: Number of seconds to wait when stopping the Domain Manager
 parameter: `started_status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to determine if a Domain Manager is started properly
+description: Path to file to be run to determine if the Domain Manager started properly
 
 parameter: `status_script`  
 required: No  
 default value: None  
-description: Path to file or directory to search for scripts to be run to get the status for the Domain Manager
+description: Path to file to be run to get the status for the Domain Manager
 
 parameter: `environment`  
 required: No  

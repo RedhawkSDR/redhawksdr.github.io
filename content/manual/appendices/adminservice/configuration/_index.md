@@ -1,9 +1,7 @@
 ---
-title: "Configuration"
+title: "AdminService Configuration"
 weight: 10
 ---
-
-## AdminService Configuration
 
 The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
 
@@ -50,5 +48,9 @@ rhadmin config <type> > <type>.ini
 vi <type>.ini
 sudo service redhawk-adminservice restart
 ```
+For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
-{{% children depth="999" %}}
+- [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
+- [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})
+- [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})
+- [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})
