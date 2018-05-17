@@ -39,8 +39,9 @@ The following table lists the system service scripts that are used to control th
 
  The AdminService is controlled by a single `adminserviced.conf` file. REDHAWK core services and waveforms that are configured to start on system startup are stored in the corresponding `.d` directory. Each REDHAWK core service has a corresponding `.defaults` file in the `/etc/redhawk/init.d` directory.
 
- For more information about configuring the AdminService, managing the REDHAWK core services, and the linux support files that run REDHAWK core services, refer to the following sections:
+ For more information about configuring the AdminService, managing the REDHAWK core services, example usage, and the linux support files that run REDHAWK core services, refer to the following sections:
 
  - [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
  - [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}})
+ - [Examples]({{< relref "manual/appendices/adminservice/examples/_index.md" >}})
  - [Linux Support Files]({{< relref "manual/appendices/adminservice/support-files.md" >}})
