@@ -6,16 +6,16 @@ weight: 10
 The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
 
 To create a new AdminService configuration file and start the service, perform the following commands.  
-{{% notice note %}}
-The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
-{{% /notice %}}
-
 ```sh
 cd /etc/redhawk
 rhadmin config admin > myadminserviced.cfg
 vi myadminserviced.cfg
 adminserviced -c /etc/redhawk/myadminserviced.cfg
 ```
+
+{{% notice note %}}
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+{{% /notice %}}
 
 ## Environment Variables
 
@@ -34,11 +34,6 @@ Environment variables may be overridden by using the `environment` parameter. Ho
 The Domain Manager and Device Manager configurations directly correspond to a process that runs on a system. On the other hand, the waveform configurations tell the AdminService how to interact with the running REDHAWK Domain to start and stop waveforms.
 
 To create and start new configuration file, perform the following commands substituting `domain`, `node` or `waveform` for `<type>`.
-
-{{% notice note %}}
-The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
-{{% /notice %}}
-
 ```sh
 cd /etc/redhawk/<type>s.d
 
@@ -48,6 +43,11 @@ rhadmin config <type> > <type>.ini
 vi <type>.ini
 sudo service redhawk-adminservice restart
 ```
+
+{{% notice note %}}
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+{{% /notice %}}
+
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
 - [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})

@@ -39,7 +39,7 @@ This will output:
 REDHAWK_DEV: updated process group
 ```
 
-AdminService reloaded its configuration files, started the new process for `Wave2` in the `REDHAWK_DEV` domain. If any configurations were removed(eg. deleted the `wave.ini` file), the processes corresponding to the removed configuration would be stopped. Please note that when the update occurs, the status threads get restarted, so a call to `rhadmin status` will look like everything was stopped and started. This is *not* the case, only new or removed processes are effected by this.
+AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. If any configurations were removed (eg. deleted the `wave.ini` file), the processes corresponding to the removed configuration would be stopped. Please note that when the update occurs, the status threads get restarted; therefore a call to `rhadmin status` will look like everything was stopped and started. This is *not* the case, only new or removed processes are affected by this.
 
 To verify that the `Wave2` waveform configuration was added and started, type the following:
 ```sh

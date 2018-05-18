@@ -5,7 +5,7 @@ weight: 30
 
 The REDHAWK Domain Manager service is controlled by files in the `/etc/redhawk/domains.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`.
 
-The [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service. To generate a generic Domain Manager configuration, enter the following command.
+[rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service. To generate a generic Domain Manager configuration, enter the following command.
 ```sh
 rhadmin config domain > domain.ini
 ```
@@ -68,7 +68,7 @@ description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve `
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI
+format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI  
 description: Logging configuration file to be used by the Domain Manager (Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others will be resolved as an absolute path or URI to a logging properties files.)
 
 parameter: `DEBUG_LEVEL`  
@@ -121,12 +121,12 @@ parameter: `enable`
 required: No  
 default value: `True`  
 format: `True`, `False`, or a string to be matched against `conditional_config`  
-description: Specifies if process may be started  (`True` or `False` will enable or disable the process. See `conditional_config` below for how a string value gets evaluated.)
+description: Specifies if process may be started. `True` or `False` will enable or disable the process. See `conditional_config` below for how a string value gets evaluated.
 
 parameter: `conditional_config`  
 required: No  
 default value: `/etc/redhawk/rh.cond.cfg`  
-description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. (If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.)
+description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.
 
 parameter: `priority`  
 required: No  

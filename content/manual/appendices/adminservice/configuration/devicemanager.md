@@ -7,7 +7,7 @@ The REDHAWK Device Manager service is controlled by files in the `/etc/redhawk/n
 
 The Device Manager can be configured to start after the Domain Manager has started up, or it can start up at the same time as the Domain Manager, and it will wait for the domain to be available and register its [Devices]({{< relref "manual/devices">}}) and [Services]({{< relref "manual/services">}}). If many devices or services need to start, it is recommended that you add a custom script to verify that the Device Manager has started all devices and services and registered them with the Domain Manager (see the `start_post_script` parameter).
 
-The [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Device Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Device Manager service. To generate a generic Device Manager configuration, enter the following command.
+[rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Device Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Device Manager service. To generate a generic Device Manager configuration, enter the following command.
 ```sh
 rhadmin config node > node.ini
 ```
@@ -129,12 +129,12 @@ parameter: `enable`
 required: No  
 default value: `True`  
 format: `True`, `False`, or a string to be matched against `conditional_config`  
-description: Specifies if process may be started  (`True` or `False` will enable or disable the process. See `conditional_config` below for how a string value gets evaluated.)
+description: Specifies if process may be started. `True` or `False` will enable or disable the process. See `conditional_config` below for how a string value gets evaluated.
 
 parameter: `conditional_config`  
 required: No  
 default value: `/etc/redhawk/rh.cond.cfg`  
-description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. (If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.)
+description: Allows conditional startup of processes based on the `enable` parameter and the contents of this conditional config. If the value `enable` is a string, the process will start only if there is a line in the `conditional_config` file that has that exact content; otherwise, the process is skipped. For example, `enable="type=primary"` causes the `conditional_config` file to be examined for a line equal to `type=primary` when starting a process on the host. If there is no `type=primary` line in the file, the process is skipped.
 
 parameter: `priority`  
 required: No  
