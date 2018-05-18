@@ -5,7 +5,7 @@ weight: 10
 
 The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
 
-To create a new AdminService configuration file and start the service, perform the following commands.  
+To create a new AdminService configuration file and start the service, perform the following commands.
 ```sh
 cd /etc/redhawk
 rhadmin config admin > myadminserviced.cfg
@@ -24,10 +24,10 @@ When the AdminService is started, its environment variables are stored and avail
 Environment variables may also be referenced in the configuration files by using the Python string expression syntax `%(ENV_X)s` as the value for that parameter:
 ```
 loglevel=%(ENV_LOGLEVEL)s
-```  
-In the above example, the log level for the Domain Manager is set to the environment variable `$LOGLEVEL`.  
+```
+In the above example, the log level for the Domain Manager is set to the environment variable `$LOGLEVEL`.
 
-Environment variables may be overridden by using the `environment` parameter. However, due to the way the configuration file is processed, these overrides are only available for the parameters whose names are all UPPERCASE.  
+Environment variables may be overridden by using the `environment` parameter. However, due to the way the configuration file is processed, these overrides are only available for the parameters whose names are all UPPERCASE.
 
 ## REDHAWK Core Services
 
@@ -50,7 +50,4 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
-- [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
-- [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})
-- [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})
-- [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})
+{{% children %}}
