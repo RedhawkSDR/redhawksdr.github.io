@@ -22,22 +22,22 @@ The following table describes the `rhadmin` client script commands used to contr
 | `avail`          |                                          | Shows domains/processes that can be started.                                                                   |
 | `getconfig`      | `<process name>`                         | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
 | `maintail`       | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
-| `reload`         |                                          | Restart the AdminService; implicitly causes it to reread the configuration files.                              |
+| `reload`         |                                          | Restarts the AdminService; implicitly causes it to reread the configuration files.                              |
 | `reread`         |                                          | Rereads the configuration files; does not apply changes.                                                       |
 | `restart`        | `all`, `<process name>`, `<domain name>` | Restarts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.               |
-| `restart <type>` | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to restart only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `restart <type>` | `all`, `<domain name>`                   | Uses `domain`, `nodes`, or `waveforms` for `<type>` to restart only the Domain Manager, Device Managers, or waveforms for the specified domain name or all domains (`all`). |
 | `shutdown`       |                                          | Stops the AdminService.                                                                                        |
 | `start`          | `all`, `<process name>`, `<domain name>` | Starts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                 |
-| `start <type>`   | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to start only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`).   |
+| `start <type>`   | `all`, `<domain name>`                   | Uses `domain`, `nodes`, or `waveforms` for `<type>` to start only the Domain Manager, Device Managers, or waveforms for the specified domain name or all domains (`all`).   |
 | `status`         | none, `<process name>`, `<domain name>`  | Shows the status of everything (none), a specified process, or all processes in the specified domain.          |
-| `status <type>`  | none, `<domain name>`                    | Use `domain`, `nodes`, or `waveforms` for `<type>` to status only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (none).   |
+| `status <type>`  | none, `<domain name>`                    | Uses `domain`, `nodes`, or `waveforms` for `<type>` to status only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (none).   |
 | `stop`           | `all`, `<process name>`, `<domain name>` | Stops everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                  |
-| `stop <type>`    | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to stop only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`).    |
+| `stop <type>`    | `all`, `<domain name>`                   | Uses `domain`, `nodes`, or `waveforms` for `<type>` to stop only the Domain Manager, Device Managers, or waveforms for the specified domain name or all domains (`all`).    |
 | `update`         | none, `<domain name>`                    | Reloads the configuration and optionally starts/stops any domain groupings that have changed. Can specify multiple arguments. |
 
 {{% notice note %}}
-**`<type>`** is one of the following strings: 'domain', 'nodes', 'waveforms'  
-**`<process name>`** is composed of the domain name and the `name` specified in the `[<section type>:<name>]` header in the ini file. The format of process name is: `<domain name>:<name>` (eg. `REDHAWK_DEV:GppNode`)
+**`<type>`** is one of the following strings: 'domain', 'nodes', or 'waveforms'.  
+**`<process name>`** is composed of the domain name and the `name` specified in the `[<section type>:<name>]` header in the ini file. The format is: `<domain name>:<name>` (for example, `REDHAWK_DEV:GppNode`).
 {{% /notice %}}
 
 ### Running Commands
@@ -56,7 +56,7 @@ rhadmin avail
 ```
 
 ### Specifying an Optional type
-The `start`, `restart`, `stop` and `status` command support an optional `<type>` argument (`domain`, `nodes`, or `waveforms`). This will run the specified command only on items of that type. For example, the following command will only start the Domain Manager for the `REDHAWK_DEV` domain, the Device Managers and waveforms will not be started:
+The `start`, `restart`, `stop`, and `status` command support an optional `<type>` argument (`domain`, `nodes`, or `waveforms`), which runs the specified command only on items of that type. For example, the following command only starts the Domain Manager for the `REDHAWK_DEV` domain; the Device Managers and waveforms are not started:
 ```sh
 rhadmin start domain REDHAWK_DEV
 ```
