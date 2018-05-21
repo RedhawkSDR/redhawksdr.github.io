@@ -24,15 +24,15 @@ The following table describes the `rhadmin` client script commands used to contr
 | `maintail`       | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
 | `reload`         |                                          | Restart the AdminService; implicitly causes it to reread the configuration files.                              |
 | `reread`         |                                          | Rereads the configuration files; does not apply changes.                                                       |
-| `restart`        | `all`, `<process name>`, `<domain name>` | Restarts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                  |
+| `restart`        | `all`, `<process name>`, `<domain name>` | Restarts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.               |
 | `restart <type>` | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to restart only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
 | `shutdown`       |                                          | Stops the AdminService.                                                                                        |
-| `start`          | `all`, `<process name>`, `<domain name>` | Starts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                     |
-| `start <type>`   | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to start only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `start`          | `all`, `<process name>`, `<domain name>` | Starts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                 |
+| `start <type>`   | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to start only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`).   |
 | `status`         | none, `<process name>`, `<domain name>`  | Shows the status of everything (none), a specified process, or all processes in the specified domain.          |
-| `status <type>`  | none, `<domain name>`                    | Use `domain`, `nodes`, or `waveforms` for `<type>` to status only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (none).  |
-| `stop`           | `all`, `<process name>`, `<domain name>` | Stops everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                     |
-| `stop <type>`    | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to stop only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `status <type>`  | none, `<domain name>`                    | Use `domain`, `nodes`, or `waveforms` for `<type>` to status only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (none).   |
+| `stop`           | `all`, `<process name>`, `<domain name>` | Stops everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                  |
+| `stop <type>`    | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to stop only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`).    |
 | `update`         | none, `<domain name>`                    | Reloads the configuration and optionally starts/stops any domain groupings that have changed. Can specify multiple arguments. |
 
 {{% notice note %}}
