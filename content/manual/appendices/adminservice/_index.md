@@ -41,4 +41,7 @@ The following table lists the system service scripts that are used to control th
 
  For more information about configuring the AdminService, managing the REDHAWK core services, example usage, and the linux support files that run REDHAWK core services, refer to the following sections:
 
-{{% children %}}
+ - [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
+ - [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}})
+ - [Examples]({{< relref "manual/appendices/adminservice/examples/_index.md" >}})
+ - [Linux Support Files]({{< relref "manual/appendices/adminservice/support-files.md" >}})

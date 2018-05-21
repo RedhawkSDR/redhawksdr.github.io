@@ -50,7 +50,4 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
-- [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
-- [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}})
-- [Examples]({{< relref "manual/appendices/adminservice/examples/_index.md" >}})
-- [Linux Support Files]({{< relref "manual/appendices/adminservice/support-files.md" >}})
+{{%children%}}
