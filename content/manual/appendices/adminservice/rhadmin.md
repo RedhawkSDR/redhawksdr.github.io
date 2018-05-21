@@ -16,20 +16,24 @@ rhadmin -c /etc/redhawk/myadminserviced.conf
 
 The following table describes the `rhadmin` client script commands used to control the AdminService.
 
-| **Command** | **Argument**                             | **Optional** | **Description**                                                                                                |
-| :---------- | :--------------------------------------- | :----------- |:-------------------------------------------------------------------------------------------------------------- |
-| `add`       | `<domain name>`, `<process name>`        |              | Activates any updates to the configuration that were made by `reread`.                                         |
-| `avail`     |                                          |              | Shows domains/processes that can be started.                                                                   |
-| `getconfig` | `<process name>`                         |              | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
-| `maintail`  | `-f`, `-<bytes>`                         |              | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
-| `reload`    |                                          |              | Restart the AdminService; implicitly causes it to reread the configuration files.                              |
-| `reread`    |                                          |              | Rereads the configuration files; does not apply changes.                                                       |
-| `restart`   | `all`, `<domain name>`, `<process name>` | `<type>`     | Restarts the specified domain, process, or everything (`all`). Can specify multiple arguments. Optionally specify `<type>` to restart only the configurations of `<type>` |
-| `shutdown`  |                                          |              | Stops the AdminService.                                                                                        |
-| `start`     | `all`, `<domain name>`, `<process name>` | `<type>`     | Starts the specified domain, process, or everything (`all`). Can specify multiple arguments. Optionally specify `<type>` to start only the configurations of `<type>`   |
-| `status`    | none, `<domain name>`, `<process name>`  | `<type>`     | Shows the status for the specified domain, process, or everything (none). Optionally specify `<type>` to status only the configurations of `<type>`                     |
-| `stop`      | `all`, `<domain name>`, `<process name>` | `<type>`     | Stops the specified domain, process, or everything (`all`). Can specify multiple arguments. Optionally specify `<type>` to stop only the configurations of `<type>`    |
-| `update`    | none, `<domain name>`                    |              | Reloads the configuration and optionally starts/stops any domain groupings that have changed. Can specify multiple arguments. |
+| **Command**      | **Argument**                             | **Description**                                                                                                |
+| :--------------- | :--------------------------------------- |:-------------------------------------------------------------------------------------------------------------- |
+| `add`            | `<domain name>`, `<process name>`        | Activates any updates to the configuration that were made by `reread`.                                         |
+| `avail`          |                                          | Shows domains/processes that can be started.                                                                   |
+| `getconfig`      | `<process name>`                         | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
+| `maintail`       | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
+| `reload`         |                                          | Restart the AdminService; implicitly causes it to reread the configuration files.                              |
+| `reread`         |                                          | Rereads the configuration files; does not apply changes.                                                       |
+| `restart`        | `all`, `<process name>`, `<domain name>` | Restarts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                  |
+| `restart <type>` | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to restart only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `shutdown`       |                                          | Stops the AdminService.                                                                                        |
+| `start`          | `all`, `<process name>`, `<domain name>` | Starts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                     |
+| `start <type>`   | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to start only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `status`         | none, `<process name>`, `<domain name>`  | Shows the status of everything (none), a specified process, or all processes in the specified domain.          |
+| `status <type>`  | none, `<domain name>`                    | Use `domain`, `nodes`, or `waveforms` for `<type>` to status only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (none).  |
+| `stop`           | `all`, `<process name>`, `<domain name>` | Stops everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                     |
+| `stop <type>`    | `all`, `<domain name>`                   | Use `domain`, `nodes`, or `waveforms` for `<type>` to stop only the Domain Manager, Device Managers or waveforms for the specified domain name or all domains (`all`). |
+| `update`         | none, `<domain name>`                    | Reloads the configuration and optionally starts/stops any domain groupings that have changed. Can specify multiple arguments. |
 
 {{% notice note %}}
 **`<type>`** is one of the following strings: 'domain', 'nodes', 'waveforms'  
@@ -46,14 +50,17 @@ and when the `rh_admin>` prompt is displayed, enter:
 avail
 ```
 
-To run the `avail` command from the command line, enter the following:
+To run the same command from the command line, enter the following:
 ```sh
 rhadmin avail
 ```
 
 ### Specifying an Optional type
-The `start`, `restart`, `stop` and `status` command support an optional `<type>` argument. This will run the specified command only on items of that type. For example, the following command:
+The `start`, `restart`, `stop` and `status` command support an optional `<type>` argument (`domain`, `nodes`, or `waveforms`). This will run the specified command only on items of that type. For example, the following command will only start the Domain Manager for the `REDHAWK_DEV` domain, the Device Managers and waveforms will not be started:
 ```sh
 rhadmin start domain REDHAWK_DEV
 ```
-will only start the Domain Manager for the `REDHAWK_DEV` domain. The Device Managers and waveforms will not be started.
+To restart all configured Device Managers in all domains, use the following command:
+```sh
+rhadmin start nodes all
+```

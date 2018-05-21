@@ -3,7 +3,7 @@ title: "Status Only Process"
 weight: 90
 ---
 
-It is possible to have the AdminService show the status of an existing running process. The process to monitor needs must have an associated pid file and then the process can be configured by putting a file in `/etc/redhawk/extras.d`. For example, create the `omniEvents.ini` file with the following contents:
+It is possible to have the AdminService show the status of an existing running process that is started outside of the AdminService. The process to monitor must have an associated pid file and then the process can be configured by putting a file in `/etc/redhawk/extras.d`. For example, create the `omniEvents.ini` file with the following contents:
 ```
 [process:omniEvents]
 command=/usr/sbin/omniEvents

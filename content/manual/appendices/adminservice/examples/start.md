@@ -40,7 +40,7 @@ REDHAWK_DEV:Wave                 RUNNING   pid 19676, uptime 0:00:33
 ```
 
 ### Starting Part of the Domain
-The stop command supports the `type` option (`domain`, `nodes`, `waveforms`). To start just the Domain Manager, issue the following command:
+The start command supports the `type` option (`domain`, `nodes`, `waveforms`). To start just the Domain Manager, issue the following command:
 ```sh
 rhadmin start domain REDHAWK_DEV
 ```
