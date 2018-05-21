@@ -5,13 +5,13 @@ weight: 55
 
 ## Introduction
 
-For system integrators, REDHAWK provides an optional RPM with the necessary scripts and configuration files to manage the REDHAWK core services: Domain Manager, Device Manager (includes devices and services), and waveforms. The RPM is part of the REDHAWK yum repository, but it is not installed by default.
+For system integrators, REDHAWK provides an optional RPM, AdminService, with the necessary scripts and configuration files to manage the REDHAWK core services: Domain Manager, Device Manager (includes devices and services), and waveforms. The RPM is part of the REDHAWK yum repository, but it is not installed by default.
+
+### REDHAWK AdminService System Service Scripts
 
 The AdminService groups all configured core services and waveforms by domain and then starts one domain at a time. By default, the start order, defined by the `priority` configuration setting, is Domain Manager, Device Manager, and then waveform. An inverted order is used during system shutdown.
 
 The REDHAWK AdminService is built on [Supervisor](<http://supervisord.org>) and uses an INI style configuration file (name=value) to define the command line arguments and execution environment for the service. The configuration files and service scripts provide enough flexibility to manage the REDHAWK core services for most use cases. For specialized cases, the REDHAWK source repository (`adminservice`, `redhawk-adminservice` branch) provides an RPM spec file, `redhawk-adminservice.spec`, and all the source scripts for integrators to build and customize their own service scripts and installation RPM.
-
-### REDHAWK AdminService System Service Scripts
 
 The following table lists the system service scripts that are used to control the AdminService.
 
@@ -24,6 +24,12 @@ The following table lists the system service scripts that are used to control th
 | AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
 
  As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. It is assumed system integrators will enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
+
+### The `rhadmin` Script
+
+`rhadmin` is a script used outside of system startup/shutdown to manage REDHAWK core service lifecycle from the command line. The `rhadmin` script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart`, and `status`.
+
+For more information abour 'rhadmin', refer [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
 ### REDHAWK AdminService Configuration
 
