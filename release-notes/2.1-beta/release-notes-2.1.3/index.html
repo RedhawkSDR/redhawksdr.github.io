@@ -252,17 +252,6 @@ ga('send', 'pageview');
   
     <option value="/release-notes/" >
    Release Notes</option> 
-    <option value="/release-notes/2.0-lts/" >
-  - 
-   2.0 - (LTS)</option>
-    <option value="/release-notes/2.1-beta/" >
-  - 
-   2.1 - (Beta)</option> 
-      <option value="/release-notes/2.1-beta/release-notes-2.1.3/"  selected>-- REDHAWK Release Notes - 2.1.3</option>
-      <option value="/release-notes/2.1-beta/release-notes-2.1.2/" >-- REDHAWK Release Notes - 2.1.2</option>
-      <option value="/release-notes/2.1-beta/release-notes-2.1.1/" >-- REDHAWK Release Notes - 2.1.1</option>
-      <option value="/release-notes/2.1-beta/release-notes-2.1.0/" >-- REDHAWK Release Notes - 2.1.0</option>
-  
   
     <option value="/specifications/" >
    REDHAWK Specifications</option>
@@ -329,6 +318,7 @@ ga('send', 'pageview');
 <li>Resolving issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.</li>
 <li>Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The <code>validateRequest</code> function in the <code>frontendInterfaces</code> support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.</li>
 <li>Patching omniORBpy to prevent possible segfaults in multithreaded code.</li>
+<li>&lsquo;rh.DataConverter` has been updated to support shared address space and has been improved in various other ways, including logging and compliance with Core Asset conventions.</li>
 <li>Updating SourceSDDS to include use of shared memory API.</li>
 <li>Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.</li>
 <li>Correcting behavior so readonly property kind properties for Devices and Services can now be modified during deployment using Device Configuration Descriptor (dcd.xml) file.</li>
@@ -337,7 +327,9 @@ ga('send', 'pageview');
 <li>Adding an option for <code>MessageSupplierPort</code> to send messages to a specific connection.</li>
 <li>Deprecating REDHAWK Enterprise Integration and removing all references to it within the documentation.</li>
 <li>Providing the ability to generate configuration files for waveforms and nodes for use by the REDHAWK admin service.</li>
-<li>Changing the <code>redhawk</code> user&rsquo;s home directory. When installing REDHAWK, the home directory is now <code>/var/redhawk</code>. When upgrading, the existing <code>redhawk</code> user home directory is updated to <code>/var/redhawk</code>.</li>
+<li>Changing the <code>redhawk</code> user&rsquo;s home directory. When installing REDHAWK, the home directory is now <code>/var/redhawk</code>. When upgrading, the existing <code>redhawk</code> user home directory is updated to <code>/var/redhawk</code> if it is currently set to <code>/home/redhawk</code>.</li>
+<li>Refactored IO redirection to use epoll system call to handle redirection of component output to a single file, and direct IO redirection  when configured for one output file per component process.</li>
+<li>When a component has a struct property with an element that is a complex sequence, the value can be overloaded correctly on a waveform</li>
 </ul>
 
 <h3 id="new-features">New Features</h3>
@@ -399,6 +391,7 @@ ga('send', 'pageview');
 <li>Updated the REDHAWK ICD with new information including <code>dataBit</code> and <code>BitSequence</code>.</li>
 <li>Added a new section, Bit Data, to the REDHAWK Manual.</li>
 <li>Added Python-specific documentation of BulkIO streams, and updated the C++ sections in the REDHAWK Manual.</li>
+<li>Added a new section, Transport Selection, in the REDHAWK User Manual, which explains how to configure the VITA49 transport layer for BulkIO ports.</li>
 </ul>
 
 <h3 id="improvements">Improvements</h3>
@@ -496,11 +489,12 @@ ga('send', 'pageview');
 <li>The context menu for a Domain Manager no longer shows &ldquo;Connect&rdquo; if the Domain Manager is already connected.</li>
 <li>Fixed issue to ensure that simple properties that are not of type &ldquo;property&rdquo; cannot be assigned the command-line attribute.</li>
 <li>Corrected an error that could occur during a build of a C++ project if the SPD file contained invalid XML.</li>
+<li>An error message is now displayed if a user attempts to launch a component or waveform with badly malformed XML from the <code>Overview</code> tab of the editor.</li>
+<li>An error message is now displayed if a user attempts to launch a component with badly malformed XML from the Chalkboard diagram.</li>
 <li>Corrected an issue that caused long refresh times when opening diagrams.</li>
 <li>In the Properties tab of the SAD editor, the members of properties belonging to the assembly controller no longer display an external ID.</li>
 <li>Corrected a code issue internal to the IDE during the code generation process.</li>
 <li>When attempting to perform a &ldquo;Display SRI&rdquo; action on a Tuner with no applicable Ports, an error message is now displayed.</li>
-<li>Addressed an internal code structure issue.</li>
 <li>When adding Ports using the Port tab in the SPD editor, an NPE is no longer logged.</li>
 <li>Resolved ClassCastException when launching Waveforms containing references to mistyped properties.</li>
 <li>Corrected the default property kind in the DTD schema for PRF files.</li>
@@ -559,6 +553,7 @@ Bytes/sec in the IDE when displaying data rates for low-rate data streams.</li>
 <li>Enhanced the <code>deviceSetTuning</code> description in the Creating an FEI Device in the IDE section of the REDHAWK Manual.</li>
 <li>Updated the Creating a Component that Consumes Resources section of the REDHAWK Manual to document the new loggers.</li>
 <li>Updated locally named logger instructions in the Logging Within A Resource section of the REDHAWK Manual.</li>
+<li>Added the Shared Memory Maintenance Appendix to the REDHAWK Manual.</li>
 </ul>
 
 <h3 id="special-resolution">Special Resolution</h3>
