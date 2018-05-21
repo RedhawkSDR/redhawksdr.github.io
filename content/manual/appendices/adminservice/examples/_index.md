@@ -4,7 +4,7 @@ weight: 60
 ---
 
 ## Setup
-These examples assume a default REDHAWK and AdminService install and are based on the following configuration:
+The following examples assume a default REDHAWK and AdminService install and are based on the following configuration:
 
 | Type     | Name        | Quantity |
 | :------- | :---------- | :------- |
@@ -37,35 +37,36 @@ DOMAIN_NAME=REDHAWK_DEV
 WAVEFORM=Wave
 ```
 
-## What's Configured
-To find out what has been configured, type the following:
+## Viewing What Is Configured in the AdminService
+To view what services are currently configured in the AdminService, enter the following command:
 ```sh
 rhadmin avail
 ```
 
-This will output:
+The configured Domain Manager, Device Manager, and waveform services are displayed. The following output is displayed:
 ```
 Name                             In Use    Autostart Enabled   Priority
 REDHAWK_DEV:GppNode              in use    auto      Enabled   100:400
 REDHAWK_DEV:REDHAWK_DEV_mgr      in use    auto      Enabled   100:100
 REDHAWK_DEV:Wave                 in use    auto      Enabled   100:900
 ```
+The following table describes the information displayed for the configured services.
 
 | Column    | Description  |
 | :-------- | :----------- |
-| Name      | The `process name` that can be used for other commands. It's in the format of `<Domain>:<Configuration Name>`. |
-| In Use    | The status of the process configuration, whether or not its configuration has been activated and operable. |
-| Autostart | Whether or not the process will be automatically started when the AdminService starts. |
-| Enabled   | Whether or not the process configuration can be started. This can be overridden on the start command with the `-f` flag |
-| Priority  | The priority of the process' configuration in the format `<domain priority>:<process priority>`. In a multiple domain scenario, the lowest value for the `domain priority` will be started first.  When starting the domain itself, the lowest value for `process priority` will be started first.
+| Name      | The `process name` that may be used for other commands. The format used is `<Domain>:<Configuration Name>`. |
+| In Use    | The status of the process configuration, which indicates whether the configuration has been activated and is operable. |
+| Autostart | Specifies whether the process will automatically start when the AdminService starts. |
+| Enabled   | Specifies whether the process configuration can be started. This setting may be overridden on the start command with the `-f` flag. |
+| Priority  | The priority of the process' configuration. The format used is `<domain priority>:<process priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting the domain itself, the lowest value for `process priority` is started first.
 
 ## What's Running
-The `status` command describes the state of all active configurations. To get the status, type the following:
+The `status` command describes the state of all active configurations. To view the status, enter the following:
 ```sh
 rhadmin status
 ```
 
-This will output:
+The following output is displayed:
 ```
 REDHAWK_DEV:GppNode              RUNNING   pid 17582, uptime 0:00:21
 REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 17492, uptime 0:00:27
@@ -73,14 +74,14 @@ REDHAWK_DEV:Wave                 RUNNING   pid 17656, uptime 0:00:15
 ```
 
 ### Status a Specific Type
-The `status` command also accepts a `type` option on the command line. To get the status of all waveforms, type the following:
+The `status` command also accepts a `type` option on the command line. To view the status of all waveforms, enter the following:
 ```sh
 rhadmin status waveforms all
 ```
 
-This will output:
+The follwing output is displayed:
 ```
 REDHAWK_DEV:Wave                 RUNNING   pid 17656, uptime 0:00:20
 ```
 
-If there were multiple domains running, `all` can be replaced with the domain name to restrict the status to just that domain. 
+If multiple domains are running, `all` can be replaced with the domain name to restrict the status to the specified domain.
