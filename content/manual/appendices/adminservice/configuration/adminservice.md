@@ -24,28 +24,28 @@ The `unix_http_server` section of the AdminService configuration file defines th
 parameter: `file`  
 required: No  
 default value: `/var/run/redhawk/adminserviced.sock`  
-description: Absolute path to a Unix domain socket used to listen for remote commands
+description: The absolute path to a Unix domain socket used to listen for remote commands.
 
 parameter: `chmod`  
 required: No  
 default: `0700`  
-description: Permissions to set on the socket file on startup
+description: The permissions to set on the socket file on startup.
 
 parameter: `chown`  
 required: No  
 default value: `redhawk:redhawk`  
-description: Set the owner of the socket
+description: Specifies the owner of the socket.
 
 parameter: `username`  
 required: No  
 default value: `redhawk`  
-description: Username for remote control of the AdminServer
+description: The username for remote control of the AdminServer.
 
 parameter: `password`  
 required: No  
 default value: `redhawk`  
-format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}` (For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.)  
-description: Password for remote control of the AdminServer.
+format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.  
+description: The password for remote control of the AdminServer.
 
 ## inet_http_server
 
@@ -58,18 +58,18 @@ The following section describes all available configuration parameters.
 parameter: `port`  
 required: No  
 default value: `127.0.0.1:9001`  
-description: IP address and port to listen for remote commands (Note: `https` is *not* supported.)
+description: The IP address and port to listen for remote commands. (Note: `https` is *not* supported.)
 
 parameter: `username`  
 required: No  
 default value: `redhawk`  
-description: Username for remote control of the AdminServer
+description: The username for remote control of the AdminServer.
 
 parameter: `password`  
 required: No  
 default value: `redhawk`  
-format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}` (For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.)   
-description: Password for remote control of the AdminServer
+format: Cleartext password or may be specified as a SHA-1 hash if prefixed by the string `{SHA}`. For example, `{SHA}82ab876d1387bfafe46cc1c8a2ef074eae50cb1d` is the SHA-stored version of the password `thepassword`.   
+description: The password for remote control of the AdminServer.
 
 
 ## adminserviced
@@ -90,119 +90,119 @@ parameter: `pidfile`
 required: No  
 default value: `adminserviced.pid`  
 format: Absolute path or filename relative to `directory`  
-description: Path to the pid file for the AdminService
+description: The path to the pid file for the AdminService.
 
 parameter: `loglevel`  
 required: No  
 default value: `info`  
 values: `critical`, `error`, `warn`, `info`, `debug`, `trace`, `blather`  
-description: The logging level, dictating what is written to the AdminService activity log
+description: The logging level, dictating what is written to the AdminService activity log.
 
 parameter: `logfile`  
 required: No  
 default value: `adminserviced.log`  
-description: Path to the activity log for the AdminService - relative to `directory` or absolute path
+description: The path to the activity log for the AdminService - relative to `directory` or absolute path.
 
 parameter: `logfile_maxbytes`  
 required: No  
 default value: `50MB`  
-description: Maximum size of the activity log before being rotated
+description: The maximum size of the activity log before being rotated.
 
 parameter: `logfile_backups`  
 required: No  
 default value: `10`  
-description: Number of backups of the logfiles to keep
+description: The number of backups of the logfiles to keep.
 
 parameter: `childlogdir`  
 required: No  
 default value: `/var/log/redhawk`  
-description: Full path to the directory in which to store the child process log files
+description: The full path to the directory in which to store the child process log files.
 
 parameter: `childpiddir`  
 required: No  
 default value: `/var/run/redhawk`  
-description: Full path to the directory in which to store the child pid files
+description: The full path to the directory in which to store the child pid files.
 
 parameter: `user`  
 required: No  
 default value: `redhawk`  
-description: Executes process with User ID
+description: Executes process with User ID.
 
 parameter: `group`  
 required: No  
 default value: `redhawk`  
-description: Executes process with Group ID
+description: Executes process with Group ID.
 
 parameter: `environment`  
 required: No  
 default value: None  
 format: A list of key/value pairs in the form `key="value",key2="value2"`  
-description: Override existing environment variables or set new ones to be used when starting children
+description: Override existing environment variables or set new ones to be used when starting children.
 
 parameter: `directory`  
 required: No  
 default value: `$SDRROOT`  
-description: Change directory to `directory` before running the AdminService as a daemon
+description: Change directory to `directory` before running the AdminService as a daemon.
 
 parameter: `config_dir`  
 required: No  
 default value: `/etc/redhawk`  
-description: Full path to the directory containing the AdminService configuration files
+description: The full path to the directory containing the AdminService configuration files.
 
 parameter: `defaults_dir`  
 required: No  
 default value: `init.d`  
-description: Relative path from `config_dir` to the directory containing the AdminService `*.defaults` configuration files
+description: The relative path from `config_dir` to the directory containing the AdminService `*.defaults` configuration files.
 
 parameter: `domains_dir`  
 required: No  
 default value: `domains.d`  
-description: Relative path from `config_dir` to the directory containing the Domain Manager `.ini` configuration files
+description: The relative path from `config_dir` to the directory containing the Domain Manager `.ini` configuration files.
 
 parameter: `nodes_dir`  
 required: No  
 default value: `nodes.d`  
-description: Relative path from `config_dir` to the directory containing the Device Manager `.ini` configuration files
+description: The relative path from `config_dir` to the directory containing the Device Manager `.ini` configuration files.
 
 parameter: `waveforms_dir`  
 required: No  
 default value: `waveforms.d`  
-description: Relative path from `config_dir` to the directory containing the waveform `.ini` configuration files
+description: The relative path from `config_dir` to the directory containing the waveform `.ini` configuration files.
 
 parameter: `umask`  
 required: No  
 default value: `022`  
-description: umask for the AdminService process
+description: The umask for the AdminService process.
 
 parameter: `minfds`  
 required: No  
 default value: `1024`  
-description: Minimum number of available file descriptors needed for the AdminService to start
+description: The minimum number of available file descriptors needed for the AdminService to start.
 
 parameter: `minprocs`  
 required: No  
 default value: `200`  
-description: Minimum number of available process descriptors needed for the AdminService to start
+description: The minimum number of available process descriptors needed for the AdminService to start.
 
 parameter: `nocleanup`  
 required: No  
 default value: `False`  
-description: Prevent removal of child log files at startup (This only affects processes that run as children of the AdminService, not detached processes.)
+description: Prevent removal of child log files at startup. This only affects processes that run as children of the AdminService, not detached processes.
 
 parameter: `nodaemon`  
 required: No  
 default value: `False`  
-description: Set to True to start the AdminService in the foreground
+description: Set to True to start the AdminService in the foreground.
 
 parameter: `strip_ansi`  
 required: No  
 default value: `False`  
-description: Strip ANSI escape sequences from child log files of processes that run as children of the AdminService
+description: Strip ANSI escape sequences from child log files of processes that run as children of the AdminService.
 
 parameter: `identifier`  
 required: No  
 default value: `adminserviced`  
-description: The identifier string used by the RPC interface
+description: The identifier string used by the RPC interface.
 
 
 ## rhadmin
@@ -216,29 +216,29 @@ The following section describes all available configuration parameters.
 parameter: `serverurl`  
 required: No  
 default value: `http://localhost:9001`  
-format: unix:///path/to/file.sock or http://\<ip_address\>:\<port\>  
-description: Path to the Unix domain socket or network address used by the AdminServer
+format: `unix:///path/to/file.sock` or `http://\<ip_address\>:\<port\>`  
+description: The path to the Unix domain socket or network address used by the AdminServer.
 
 parameter: `username`  
 required: No  
 default value: `redhawk`  
-description: Username to use when connecting to the AdminServer
+description: The username to use when connecting to the AdminServer.
 
 parameter: `password`  
 required: No  
 default value: `redhawk`  
 format: Clear text  
-description: Password to use when connecting to the AdminServer
+description: The password to use when connecting to the AdminServer.
 
 parameter: `prompt`  
 required: No  
 default value: `redhawk`  
-description: Prompt to show when using `rhadmin` in interactive mode (without an option on the command line)
+description: Prompt to show when using `rhadmin` in interactive mode (without an option on the command line).
 
 parameter: `history_file`  
 required: No  
 default value: `~/.rha_history`  
-description: Absolute path to a file for storing commands run in interactive mode
+description: The absolute path to a file for storing commands run in interactive mode.
 
 
 ## rpcinterface
@@ -253,4 +253,4 @@ parameter: `adminservice.rpcinterface_factory`
 required: Yes  
 default value: None  
 format: \<package\>:\<function name\>  
-description: The package and function to be used by the RPC interface
+description: The package and function to be used by the RPC interface.
