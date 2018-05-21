@@ -29,7 +29,7 @@ The following table lists the system service scripts that are used to control th
 
 `rhadmin` is a script used outside of system startup/shutdown to manage REDHAWK core service lifecycle from the command line. The `rhadmin` script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart`, and `status`.
 
-For more information abour 'rhadmin', refer [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
+For more information about 'rhadmin', refer [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
 ### REDHAWK AdminService Configuration
 
