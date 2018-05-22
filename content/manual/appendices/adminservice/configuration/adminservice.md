@@ -1,9 +1,36 @@
 ---
-title: "AdminService Configuration File"
+title: "AdminService Configuration"
 weight: 20
 ---
 
+#### REDHAWK AdminService System Service Scripts
+
+The following table lists the system service scripts that are used to control the AdminService.
+
+| **Service**            | **System Service Script**                              |
+| :--------------------- | :----------------------------------------------------- |
+| **CentOS 6 (SysV)**    |                                                        |
+| AdminService           | `/etc/rc.d/init.d/redhawk-adminservice`                |
+| **CentOS 7 (systemd)** |                                                        |
+| AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
+| AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
+
+As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
+
 Because the AdminService is based on Supervisor, all Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
+
+#### Creating a Custom AdminService Configuration
+
+To create a new AdminService configuration file and start the service, perform the following commands.
+```sh
+cd /etc/redhawk
+rhadmin config admin > myadminserviced.cfg
+vi myadminserviced.cfg
+adminserviced -c /etc/redhawk/myadminserviced.cfg
+```
+{{% notice note %}}
+The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+{{% /notice %}}
 
 ##### REDHAWK Service Configuration File Sections
 

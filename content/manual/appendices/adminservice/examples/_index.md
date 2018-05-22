@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-weight: 60
+weight: 80
 ---
 
 ## Setup
