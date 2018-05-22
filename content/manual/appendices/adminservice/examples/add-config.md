@@ -27,29 +27,3 @@ REDHAWK_DEV:GppNode              in use    auto      Enabled   100:400
 REDHAWK_DEV:REDHAWK_DEV_mgr      in use    auto      Enabled   100:100
 REDHAWK_DEV:Wave                 in use    auto      Enabled   100:900
 ```
-
-## Reread the Configuration Files
-To reread all configuration files and start the new processes, type the following:
-```sh
-rhadmin update REDHAWK_DEV
-```
-
-This will output:
-```
-REDHAWK_DEV: updated process group
-```
-
-AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. If any configurations were removed (eg. deleted the `wave.ini` file), the processes corresponding to the removed configuration would be stopped. Please note that when the update occurs, the status threads get restarted; therefore a call to `rhadmin status` will look like everything was stopped and started. This is *not* the case, only new or removed processes are affected by this.
-
-To verify that the `Wave2` waveform configuration was added and started, type the following:
-```sh
-rhadmin status
-```
-
-This will output:
-```
-REDHAWK_DEV:GppNode              RUNNING   pid 31316, uptime 0:00:46
-REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 31185, uptime 0:00:52
-REDHAWK_DEV:Wave                 RUNNING   pid 31745, uptime 0:00:30
-REDHAWK_DEV:Wave2                RUNNING   pid 31408, uptime 0:00:41
-```
