@@ -22,8 +22,8 @@ For more information about `rhadmin`, refer to [rhadmin]({{< relref "manual/appe
 
 ### Configuring and Controlling the REDHAWK AdminService
 
- The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
+The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
 
- The AdminService is started and stopped as  Linux system service.  
+The AdminService is started and stopped as a Linux system service.  
 
- For more information about configuring and controlling the AdminService, refer to [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}).
+For more information about configuring and controlling the AdminService, refer to [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}).

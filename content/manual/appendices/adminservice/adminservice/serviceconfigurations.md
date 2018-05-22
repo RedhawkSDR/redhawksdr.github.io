@@ -5,8 +5,6 @@ weight: 50
 
 ## File locations (INI)
 
-
-
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
 [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
@@ -16,7 +14,7 @@ For more information about the configuration files used to control the REDHAWK c
 
 ## Creating Configuration files
 
-To create and start new configuration file, perform the following commands substituting `domain`, `node` or `waveform` for `<type>`.
+To create and start new configuration files, enter the following commands replacing `<type>` with `domain`, `node` or `waveform` as appropriate.
 ```sh
 cd /etc/redhawk/<type>s.d
 
@@ -27,7 +25,7 @@ vi <type>.ini
 sudo service redhawk-adminservice restart
 ```
 {{% notice note %}}
-The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
 
 ## Key Topics
@@ -51,24 +49,24 @@ Environment variables may be overridden by using the `environment` parameter. Ho
 --Add/Reread  
 
 ## Rereading the Configuration Files
-To reread all configuration files and start the new processes, type the following:
+To reread all configuration files and start the new processes, enter the following command:
 ```sh
 rhadmin update REDHAWK_DEV
 ```
 
-This will output:
+The following output is displayed:
 ```
 REDHAWK_DEV: updated process group
 ```
 
 AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. If any configurations were removed (eg. deleted the `wave.ini` file), the processes corresponding to the removed configuration would be stopped. Please note that when the update occurs, the status threads get restarted; therefore a call to `rhadmin status` will look like everything was stopped and started. This is *not* the case, only new or removed processes are affected by this.
 
-To verify that the `Wave2` waveform configuration was added and started, type the following:
+To verify that the `Wave2` waveform configuration was added and started, enter the following command:
 ```sh
 rhadmin status
 ```
 
-This will output:
+The following output is displayed:
 ```
 REDHAWK_DEV:GppNode              RUNNING   pid 31316, uptime 0:00:46
 REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 31185, uptime 0:00:52
