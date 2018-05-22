@@ -30,19 +30,19 @@ home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
 pre = "<h3>Home</h3>"
-name = "<i class='fa fa-book'></i> Documentation"
+name = "<i class='fa fa-book'></i> <label>Documentation</label>"
 identifier = "home"
 url = "/"
 weight = 5
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-download'></i> Downloads"
+name = "<i class='fa fa-download'></i> <label>Downloads</label>"
 identifier = "download"
 url = "https://github.com/redhawksdr/redhawk/releases"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-github'></i> GitHub"
+name = "<i class='fa fa-github'></i> <label>GitHub</label>"
 identifier = "github"
 url = "https://github.com/redhawksdr/docs"
 weight = 15
