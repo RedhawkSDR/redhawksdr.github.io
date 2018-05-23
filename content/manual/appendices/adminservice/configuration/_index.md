@@ -3,20 +3,12 @@ title: "Configuration Files"
 weight: 30
 ---
 
-## REDHAWK Core Services
+The parameters defined in the AdminService configuration file control the AdminService. For more information about the AdminService configuration file, refer to the following section:
 
-The Domain Manager and Device Manager configurations directly correspond to a process that runs on a system. On the other hand, the waveform configurations tell the AdminService how to interact with the running REDHAWK Domain to start and stop waveforms.
+- [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}})
 
-To create and start new configuration file, perform the following commands substituting `domain`, `node` or `waveform` for `<type>`.
-```sh
-cd /etc/redhawk/<type>s.d
+The parameters defined in the service configuration files control the REDHAWK core services. For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
-# This will generate a generic configuration file
-rhadmin config <type> > <type>.ini
-
-vi <type>.ini
-sudo service redhawk-adminservice restart
-```
-{{% notice note %}}
-The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
-{{% /notice %}}
+- [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
+- [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
+- [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})  
