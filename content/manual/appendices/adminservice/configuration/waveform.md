@@ -102,11 +102,6 @@ required: No
 default value: `True`  
 description: Specifies whether to automatically start this process when the AdminService starts, if `enable` is True.
 
-parameter: `startsecs`  
-required: No  
-default value: `5`  
-description: The number of seconds the waveform has to be running to consider it started.
-
 parameter: `waitforprevious`  
 required: No  
 default value: `45`  
@@ -116,26 +111,6 @@ parameter: `failafterwait`
 required: No  
 default value: `False`  
 description: Specifies whether to abort starting this domain if `waitforprevious` has expired and the previous process has not been declared started yet. This is useful to make sure the DeviceManager is started and all devices are ready before launching the waveform.
-
-parameter: `startretries`  
-required: No  
-default value: `0`  
-description: The number of times to try restarting the waveform on startup.
-
-parameter: `autorestart`  
-required: No  
-default value: `True`  
-description: Specifies whether to automatically restart this process when an abnormal termination is detected. Abnormal is any exit code not in `exitcodes`.
-
-parameter: `exitcodes`  
-required: No  
-default value: `0,2`  
-description: The expected exit codes from the process.
-
-parameter: `stopwaitsecs`  
-required: No  
-default value: `10`  
-description: The number of seconds to wait when stopping the waveform.
 
 parameter: `started_status_script`  
 required: No  
@@ -205,21 +180,6 @@ parameter: `redirect_stderr`
 required: No  
 default value: `True`  
 description: Specifies to write stdout and stderr to the same file.
-
-parameter: `stopsignal`  
-required: No  
-default value: `TERM`  
-description: The signal to send when stopping the waveform.
-
-parameter: `stopasgroup`  
-required: No  
-default value: `False`  
-description: Specifies to send the stop signal to the process group when stopping.
-
-parameter: `killasgroup`  
-required: No  
-default value: `False`  
-description: Specifies to send SIGKILL to the process group when forcibly killing the waveform.
 
 parameter: `start_pre_script`  
 required: No  

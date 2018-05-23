@@ -16,14 +16,11 @@ The following table describes the `rhadmin` client script commands used to contr
 
 | **Command**      | **Argument**                             | **Description**                                                                                                |
 | :--------------- | :--------------------------------------- |:-------------------------------------------------------------------------------------------------------------- |
-| `add`            | `<domain name>`, `<process name>`        | Activates any updates to the configuration that were made by `reread`.                                         |
-| `avail`          |                                          | Shows domains/processes that can be started.                                                                   |
 | `getconfig`      | `<process name>`                         | Displays the current configuration values for the listed process. Can specify multiple arguments.              |
-| `maintail`       | `-f`, `-<bytes>`                         | Displays the AdminService log. `-f` for continuous or `-<bytes>` for amount of log to retrieve.                |
+| `list`           |                                          | Shows domains/processes that are configured.                                                                   |
 | `query`          | `all`, `<process name>`, `<domain name>` | Queries everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                  |
 | `query <type>`   | `all`, `<domain name>`                   | Uses `domain`, `nodes`, or `waveforms` for `<type>` to query only the Domain Manager, Device Managers, or waveforms for the specified domain name or all domains (`all`).   |
 | `reload`         |                                          | Restarts the AdminService; implicitly causes it to reread the configuration files.                             |
-| `reread`         |                                          | Rereads the configuration files; does not apply changes.                                                       |
 | `restart`        | `all`, `<process name>`, `<domain name>` | Restarts everything (`all`), a specified process, or all processes in the specified domain. Can specify multiple `domain name` or `process name` arguments.                 |
 | `restart <type>` | `all`, `<domain name>`                   | Uses `domain`, `nodes`, or `waveforms` for `<type>` to restart only the Domain Manager, Device Managers, or waveforms for the specified domain name or all domains (`all`). |
 | `shutdown`       |                                          | Stops the AdminService.                                                                                        |

@@ -4,6 +4,15 @@ weight: 50
 ---
 
 ## File locations (INI)
+The AdminService reads configuration files from several directories on startup. The following table lists the locations and the files read:
+
+| **Service**    | **Configuration Directory**  | **File**        |
+| :------------- | :--------------------------- | :-------------- |
+| Defaults       | `/etc/redhawk/init.d`        | `*.defaults`    |
+| Custom         | `/etc/redhawk/extras.d`      | `*.ini`         |
+| Domain Manager | `/etc/redhawk/domains.d`     | `*.ini`         |
+| Device Manager | `/etc/redhawk/nodes.d`       | `*.ini`         |
+| Waveform       | `/etc/redhawk/waveforms.d`   | `*.ini`         |
 
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
@@ -30,7 +39,22 @@ The configuration files are located in a system privileged directory. Ensure tha
 
 ## Key Topics
 
---process name, priority
+### Process Name
+
+The `rhadmin` script operates with the AdminService referring to domain names or process names for most interactions. A process name takes the form of `<domain name>:<section name>`, where `<domain name>` is the value of the `DOMAIN_NAME` configuration parameter and section name is the `name` value from the section header in the controlling INI file.
+
+The process name for the following example is `REDHAWK_DEV:MyNode`:
+```
+[node:MyNode]
+DOMAIN_NAME=REDHAWK_DEV
+NODE_NAME=NODE
+```
+
+### Priority
+
+The `priority` setting is the main contributing factor in how the AdminService starts and stops the REDHAWK core services. Every core service has a default priority so that the system will be start Domain Managers, then Device Managers, then waveforms. These values can be overridden in the controlling INI file to customize the start order. If there are multiple domains defined, all processes in the domain with the lowest numerical priority Domain Manager will be started first.
+
+When shutting down a domain, the process with the highest numerical priority will be stopped first.
 
 ### Environment Variables
 
@@ -46,42 +70,11 @@ In the above example, the log level for the Domain Manager is set to the environ
 Environment variables may be overridden by using the `environment` parameter. However, the configuration file only allows parameters with uppercase names (for example, `PYTHONPATH`) to use overridden environment variables.
 {{% /notice %}}
 
-## Managing Configurations
-
---Add/Reread  
-
-## Rereading the Configuration Files
-To reread all configuration files and start the new processes, enter the following command:
-```sh
-rhadmin update REDHAWK_DEV
-```
-
-The following output is displayed:
-```
-REDHAWK_DEV: updated process group
-```
-
-AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. If any configurations were removed (eg. deleted the `wave.ini` file), the processes corresponding to the removed configuration would be stopped. Please note that when the update occurs, the status threads get restarted; therefore a call to `rhadmin status` will look like everything was stopped and started. This is *not* the case, only new or removed processes are affected by this.
-
-To verify that the `Wave2` waveform configuration was added and started, enter the following command:
-```sh
-rhadmin status
-```
-
-The following output is displayed:
-```
-REDHAWK_DEV:GppNode              RUNNING   pid 31316, uptime 0:00:46
-REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 31185, uptime 0:00:52
-REDHAWK_DEV:Wave                 RUNNING   pid 31745, uptime 0:00:30
-REDHAWK_DEV:Wave2                RUNNING   pid 31408, uptime 0:00:41
-```
-
-
 
 ## Viewing What Is Configured in the AdminService
 To view what services are currently configured in the AdminService, enter the following command:
 ```sh
-rhadmin avail
+rhadmin list
 ```
 
 The configured Domain Manager, Device Manager, and waveform services are displayed. The following output is displayed:
@@ -101,17 +94,31 @@ The following table describes the information displayed for the configured servi
 | Enabled   | Specifies whether the process configuration can be started. This setting may be overridden on the start command with the `-f` flag. |
 | Priority  | The priority of the process' configuration. The format used is `<domain priority>:<process priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting the domain itself, the lowest value for `process priority` is started first.
 
-Update  
 
-## Adding Custom Service Definitions
+## Managing Configurations
 
-It is possible to have the AdminService show the status of an existing running process that is started outside of the AdminService. The process to monitor must have an associated pid file and then the process can be configured by putting a file in `/etc/redhawk/extras.d`. For example, create the `omniEvents.ini` file with the following contents:
+The `rhadmin update` command is used to add or remove configurations from the AdminService. This command will reread the configuration files, start any new processes that were defined and stop any currently running processes that are not defined anymore (eg. deleted an INI file). The status threads that monitor processes with the `run_detached=True` setting will be restarted, but the underlying system process will *not* be restarted.
+
+## Rereading the Configuration Files
+After adding a new `wave2.ini` file to the waveform configuration directory, to read the new configuration and start the new processes, enter the following command:
+```sh
+rhadmin update REDHAWK_DEV
 ```
-[process:omniEvents]
-command=/usr/sbin/omniEvents
-run_detached=True
-pid_file=/var/run/omniEvents.pid
-enabled=True
-autostart=False
-autorestart=False
+
+The following output is displayed:
+```
+REDHAWK_DEV: updated process group
+```
+
+The AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. To verify that the `Wave2` waveform configuration was added and started, enter the following command:
+```sh
+rhadmin status
+```
+
+The following output is displayed:
+```
+REDHAWK_DEV:GppNode              RUNNING   pid 31316, uptime 0:00:46
+REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 31185, uptime 0:00:52
+REDHAWK_DEV:Wave                 RUNNING   pid 31745, uptime 0:00:30
+REDHAWK_DEV:Wave2                RUNNING   pid 31408, uptime 0:00:41
 ```
