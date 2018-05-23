@@ -17,8 +17,6 @@ The following table lists the system service scripts that are used to control th
 
 As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
 
-Because the AdminService is based on Supervisor, all Supervisor [configuration options](<http://supervisord.org/configuration.html>) are available. The following table describes the five main sections in the AdminService configuration file.
-
 #### Creating a Custom AdminService Configuration
 
 To create a new AdminService configuration file and start the service, perform the following commands.
@@ -36,10 +34,10 @@ The configuration files reside in a system privileged directory. Ensure that you
 
 | **Section**                                                | **Description**                                               |
 | :--------------------------------------------------------- | :------------------------------------------------------------ |
-| [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService.         |
-| [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService.          |
-| [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Specifies settings for running the AdminService server.                  |
-| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Specifies settings for running the `rhadmin` client.                     |
+| [[`unix_http_server`]({{< relref "#unix-http-server" >}})] | Defines the Unix socket interface to the AdminService.        |
+| [[`inet_http_server`]({{< relref "#inet-http-server" >}})] | Defines the TCP socket interface to the AdminService.         |
+| [[`adminserviced`]({{< relref "#adminserviced" >}})]       | Specifies settings for running the AdminService server.       |
+| [[`rhadmin`]({{< relref "#rhadmin" >}})]                   | Specifies settings for running the `rhadmin` client.          |
 | [[`rpcinterface`]({{< relref "#rpcinterface" >}})]         | Defines listeners for external interfaces to the AdminService.|
 
 ## unix_http_server

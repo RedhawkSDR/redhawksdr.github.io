@@ -149,6 +149,12 @@ default value: None
 format: Absolute path of a file  
 description: Specifies the script to check the status for the waveform.
 
+parameter: `query_script`  
+required: No  
+default value: None  
+format: Absolute path of a file  
+description: Specifies the script used to get a detailed status output for the waveform. This is useful to return a custom status string for the components in the waveform.
+
 parameter: `environment`  
 required: No  
 default value: None  
