@@ -7,9 +7,9 @@ weight: 50
 
 For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
 
-[Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
-[Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
-[Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})  
+- [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
+- [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
+- [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})  
 
 
 ## Creating Configuration files
@@ -42,7 +42,9 @@ loglevel=%(ENV_LOGLEVEL)s
 ```
 In the above example, the log level for the Domain Manager is set to the environment variable `$LOGLEVEL`.
 
-Environment variables may be overridden by using the `environment` parameter. However, due to the way the configuration file is processed, these overrides are only available for the parameters whose names are all UPPERCASE.
+{{% notice note %}}
+Environment variables may be overridden by using the `environment` parameter. However, the configuration file only allows parameters with uppercase names (for example, `PYTHONPATH`) to use overridden environment variables.
+{{% /notice %}}
 
 ## Managing Configurations
 

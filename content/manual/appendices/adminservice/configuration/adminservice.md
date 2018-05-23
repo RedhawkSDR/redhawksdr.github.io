@@ -19,7 +19,7 @@ As per the Fedora recommendations for service unit files, the AdminService is no
 
 #### Creating a Custom AdminService Configuration
 
-To create a new AdminService configuration file and start the service, perform the following commands.
+To create a new AdminService configuration file and start the service, enter the following commands.
 ```sh
 cd /etc/redhawk
 rhadmin config admin > myadminserviced.cfg
@@ -27,7 +27,7 @@ vi myadminserviced.cfg
 adminserviced -c /etc/redhawk/myadminserviced.cfg
 ```
 {{% notice note %}}
-The configuration files reside in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
+The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
 
 ##### REDHAWK Service Configuration File Sections
