@@ -5,24 +5,30 @@ weight: 10
 
 ## AdminService Overview
 
-REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files. It provides system integrators with a system startup agnostic way of defining REDHAWK domains. The REDHAWK core services startup definitions are the same regardless of whether systemd or init is used.
+REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of the service. It provides system integrators with a host system service agnostic way of defining REDHAWK domains. The REDHAWK core services definitions are the same regardless of whether systemd or init is used.
 
-The REDHAWK AdminService is built on [Supervisor](<http://supervisord.org>) and uses an INI style configuration file (name=value) to define the command line arguments and execution environment for the service. The configuration files and service scripts provide enough flexibility to manage the REDHAWK core services for most use cases. For specialized cases, the REDHAWK source repository (`adminservice`, `redhawk-adminservice` branch) provides an RPM spec file, `redhawk-adminservice.spec`, and all the source scripts for integrators to build and customize their own service scripts and installation RPM.
+When the AdminService starts up, it reads all the INI files from the service configuration directories under the `/etc/redhawk` directory. These files define the configuration for controlling execution and determining status of each service.
 
-When the AdminService starts up, it reads in all INI files in the directories defined within its configuration file. These files define the process configuration for running, statusing and querying core services. Once all configurations are read, the AdminService groups them by domain and prioritizes the domain groupings by the Domain Managers `priority` configuration value; the lowest priority domain group is started first. Inside this domain group, the `priority` value of each process configuration determines the start order, typically Domain Manager, Device Manager, and then waveform. When stopping a domain, the highest priority process is stopped first.
+Once all configurations are read, the AdminService logically groups the services by their DOMAIN_NAME configuration property.  After the groups are determined, the AdminService will determine the start order of each domain based on the Domain Manager's `priority` configuration value; the lowest priority domain group is started first (1 being the lowest).  With in a domain group, the AdminService will again use the `priority` value to determine the start order for all the services defined for a domain group. A typical start order priority will define Domain Manager first, followed by Device Manager(s), and finally waveform(s).
+
+Conversely, on the host system shutdown, the AdminService with terminate the domain  and services in the domain group starting with the highest priority first
 
 ### Managing the REDHAWK Core Services Using the `rhadmin` Script
 
-`rhadmin` is a script used outside of system startup/shutdown to manage the REDHAWK core services lifecycle from the command line. The `rhadmin` script connects to the AdminService through a socket and supports the following commands to manage the lifecycle of the REDHAWK core services: `start`, `stop`, `restart`, and `status`.
-
-The `rhadmin` script can be used to generate default configuration files for the AdminService and REDHAWK core services, or a configuration file for an existing REDHAWK core service.
+Independent of system start up and shutdown, `rhadmin` is a command line utility to manage the REDHAWK core services' lifecycle.  `rhadmin` supports the following commands to manage the service lifecycle: `start`, `stop`, `restart`, and `status` as an individual service, or groupings by service type or logical domain.  The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
 
 For more information about `rhadmin`, refer to [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
-### Configuring and Controlling the REDHAWK AdminService
+###  REDHAWK AdminService Lifecycle
 
-The `/etc/redhawk/adminserviced.conf` file provides the default configuration for the AdminService and the `rhadmin` client script; these values should be sufficient for most cases. By default, the AdminService uses a Unix socket for remote control, but it has an option for a TCP socket connection. The [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}) section describes the available configuration parameters for the AdminService.
+The AdminService is configured to startup and shutdown using the operating system's service control. The following table lists the system service scripts that are used to control the AdminService lifecycle.
 
-The AdminService RPM is packaged with systemd and SysV init scripts that get installed to allow it to start and stop as a Linux system service.  
+| **Service**            | **System Service Script**                              |
+| :--------------------- | :----------------------------------------------------- |
+| **CentOS 6 (SysV)**    |                                                        |
+| AdminService           | `/etc/rc.d/init.d/redhawk-adminservice`                |
+| **CentOS 7 (systemd)** |                                                        |
+| AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
+| AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
 
-For more information about configuring and controlling the AdminService, refer to [AdminService Configuration File]({{< relref "manual/appendices/adminservice/configuration/adminservice.md" >}}).
+As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.

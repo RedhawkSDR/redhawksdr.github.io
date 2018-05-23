@@ -3,8 +3,51 @@ title: "Service Life Cycle"
 weight: 60
 ---
 
-### Starting a Process
-To start a process, use the `rhadmin start <process name>` command. The first column of the output from the `status` command gives the process name.  To start the Domain Manager, issue the following command:
+When the AdminService is started at system startup, all enabled services will be started.  This section covers the commands used to manage the lifecycle of a REDHAWK core service process after system startup has occurred.
+
+### Getting a Service's status
+To inspect the status of a REDHAWK core service use the `status` command.
+```sh
+rhadmin status [type]  none | domain_name
+or
+rhadmin status service_name
+```
+ Where optional `[type]` is `domain`, `nodes`, `waveforms`.
+
+If `service_name` is provided process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If no argument is provided then process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+
+```sh
+rhadmin status
+```
+output the `status` from all activated services:
+```
+REDHAWK_DEV:GppNode              STOPPED   May 11 11:31 AM
+REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 19302, uptime 0:00:16
+REDHAWK_DEV:Wave                 STOPPED   May 11 11:30 AM
+```
+The following table describes the information displayed for the configured services.
+
+| Column    | Description  |
+| :-------- | :----------- |
+| 1         | The `service name` that may be used for other commands. The format used is `<domain name>:<section name>`. |
+| 2         | The state of the service process: `RUNNING` or `STOPPED` |
+| 3         | Process id of the actual service. No shown in `STOPPED` state. |
+| 4         | uptime is for running processes, or date time service was stopped  |
+
+
+### Starting a Service
+To start a service use the following command:
+```sh
+rhadmin start [type]  <domain name> | all
+or
+rhadmin start <service name>
+```
+Where optional `[type]` is `domain`, `nodes`, `waveforms`.
+
+If `service_name` is provided process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided then process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+
+
+The following example will start the Domain Manager service `REDHAWK_DEV:REDHAWK_DEV_mgr`:
 
 ```sh
 rhadmin start REDHAWK_DEV:REDHAWK_DEV_mgr
@@ -13,16 +56,19 @@ It should output:
 ```
 REDHAWK_DEV:REDHAWK_DEV_mgr: started
 ```
-
-The status should show:
+### Stopping a service
+To stop a service use the following command:
+```sh
+rhadmin stop [type]  <domain name> | all
+or
+rhadmin stop <service name>
 ```
-REDHAWK_DEV:GppNode              STOPPED   May 11 11:31 AM
-REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 19302, uptime 0:00:16
-REDHAWK_DEV:Wave                 STOPPED   May 11 11:30 AM
-```
+Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 
-### Stopping a Process
-To stop a process, use the `rhadmin stop <process name>` command. The first column of the output from the `status` command gives the process name.  To stop the `Wave` waveform, issue the following command:
+If `service_name` is provided process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided then process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+
+
+The following example will stop the waveform service `REHDHAWK_DEV:Wave`:
 
 ```sh
 rhadmin stop REDHAWK_DEV:Wave
@@ -39,40 +85,37 @@ REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 17492, uptime 0:58:07
 REDHAWK_DEV:Wave                 STOPPED   May 11 11:30 AM
 ```
 
-### Viewing the Status of a Process
-
-#### REDHAWK Services
-
-The `status` command describes the state of all active configurations. To view the status, enter the following:
+### Restarting a service
+To restart a service use the following command:
 ```sh
-rhadmin status
+rhadmin restart [type]  <domain name> | all
+or
+rhadmin restart <service name>
 ```
+Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 
-The following output is displayed:
-```
-REDHAWK_DEV:GppNode              RUNNING   pid 17582, uptime 0:00:21
-REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 17492, uptime 0:00:27
-REDHAWK_DEV:Wave                 RUNNING   pid 17656, uptime 0:00:15
-```
+If `service_name` is provided process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided then process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
 
-### Status a Specific Type
-The `status` command also accepts a `type` option on the command line. To view the status of all waveforms, enter the following:
+
+The following example will restart all the services for the domain group `REHDHAWK_DEV`:
+
 ```sh
-rhadmin status waveforms all
+rhadmin restart REDHAWK_DEV
+```
+It should output:
+```
+REDHAWK_DEV:Wave:            stopped
+REDHAWK_DEV:GppNode          stopped
+REDHAWK_DEV:REDHAWK_DEV_mgr  stopped
+REDHAWK_DEV:REDHAWK_DEV_mgr  started
+REDHAWK_DEV:GppNode          started
+REDHAWK_DEV:Wave:            started
+REDHAWK_DEV:Wave             started
 ```
 
-The follwing output is displayed:
+The status should show:
 ```
-REDHAWK_DEV:Wave                 RUNNING   pid 17656, uptime 0:00:20
+REDHAWK_DEV:GppNode              RUNNING   pid 20124, uptime 0:00:20
+REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 20123, uptime 0:00:30
+REDHAWK_DEV:Wave                 RUNNING   pid 20125, uptime 0:00:10
 ```
-
-If multiple domains are running, `all` can be replaced with the domain name to restrict the status to the specified domain.
-
-
-#### Non-REDHAWK Services
-   Explain how to status non-redhawk services.
-
-### Restart
-
-
-### Optional  

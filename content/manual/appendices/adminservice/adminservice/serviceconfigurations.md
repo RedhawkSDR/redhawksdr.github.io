@@ -3,75 +3,95 @@ title: "Service Configurations"
 weight: 50
 ---
 
-## File locations (INI)
-The AdminService reads configuration files from several directories on startup. The following table lists the locations and the files read:
+The INI service configuration files define the execution environment for each REDHAWK core service. The AdminService will read all the service configuration files at startup and execute any enabled configuration.  This section provides an overview of the service configuration file and how to manage configurations using `rhadmin`.
 
-| **Service**    | **Configuration Directory**  | **File**        |
-| :------------- | :--------------------------- | :-------------- |
-| Defaults       | `/etc/redhawk/init.d`        | `*.defaults`    |
-| Custom         | `/etc/redhawk/extras.d`      | `*.ini`         |
-| Domain Manager | `/etc/redhawk/domains.d`     | `*.ini`         |
-| Device Manager | `/etc/redhawk/nodes.d`       | `*.ini`         |
-| Waveform       | `/etc/redhawk/waveforms.d`   | `*.ini`         |
 
-For more information about the configuration files used to control the REDHAWK core services, refer to the following sections:
+## Configuration Contents
+
+The INI files contain configuration properties in the form `Name=Value` and are grouped by section headers with the following syntax `[<type>:<section name>]`; where `<type>` is either `domain`, `node`, or `waveform`. All service configuration files will contain a required property `DOMAIN_NAME` which is used by the AdminService to group services by domains, and used to define the service's name. The complete definition for each type of service configuration file is covered in the following sections.
 
 - [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
 - [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
 - [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/waveform.md" >}})  
 
+### Configuration Concepts
+#### Service Name
 
-## Creating Configuration files
+The service's name takes the form of `<domain name>:<section name>`, and is derived from the section header, `[<type>:<section name>]`, in the INI file and the value of the `DOMAIN_NAME` property.  The following example describes a Device Manager service with service name `REDHAWK_DEV:MyNode`:
 
-To create and start new configuration files, enter the following commands replacing `<type>` with `domain`, `node` or `waveform` as appropriate.
-```sh
-cd /etc/redhawk/<type>s.d
-
-# This will generate a generic configuration file
-rhadmin config <type> > <type>.ini
-
-vi <type>.ini
-sudo service redhawk-adminservice restart
-```
-{{% notice note %}}
-The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
-{{% /notice %}}
-
-## Key Topics
-
-### Process Name
-
-The `rhadmin` script operates with the AdminService referring to domain names or process names for most interactions. A process name takes the form of `<domain name>:<section name>`, where `<domain name>` is the value of the `DOMAIN_NAME` configuration parameter and section name is the `name` value from the section header in the controlling INI file.
-
-The process name for the following example is `REDHAWK_DEV:MyNode`:
 ```
 [node:MyNode]
 DOMAIN_NAME=REDHAWK_DEV
 NODE_NAME=NODE
 ```
+#### Domain Name
 
-### Priority
+All REDHAWK core services are required to have a configuration property `DOMAIN_NAME`. This property defines the AdminService all the services for a domain group.  This domain group will be used to determine execution priority and arguments for `rhadmin` commands.
 
-The `priority` setting is the main contributing factor in how the AdminService starts and stops the REDHAWK core services. Every core service has a default priority so that the system will be start Domain Managers, then Device Managers, then waveforms. These values can be overridden in the controlling INI file to customize the start order. If there are multiple domains defined, all processes in the domain with the lowest numerical priority Domain Manager will be started first.
+#### Priority
 
-When shutting down a domain, the process with the highest numerical priority will be stopped first.
+The `priority` setting is the main contributing factor in how the AdminService starts and stops the REDHAWK core services. Every core service has a default priority so the AdminService can organize the startup of domain groups, and then services within a domain group. The default priority for each service type within a domain group is Domain Manager, Device Mangers then waveforms.  If there are multiple domains defined, all services in the domain with the lowest numerical priority Domain Manager will be started first.  The priority setting can be used to customize the startup of domains and service types within the domain.
 
-### Environment Variables
+When shutting down a domain or during system shutdown, the AdminService will stop the domain with the highest numerical priority first.
 
-When the AdminService is started, its environment variables are stored and available for use when configuring processes. Any processes started by the AdminService are started with these values in their environment.
+#### Daemon Process
 
-Environment variables may also be referenced in the configuration files by using the Python string expression syntax `%(ENV_X)s` as the value for that parameter:
+By default, all services will be have their `run_detached` property set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. The affect of the property causes the service's process running state to *not* be affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle will follow the AdminService's lifecycle.
+
+#### Environment Variables
+
+Environment variables may also be referenced and defined in the service configuration files.  To reference an environment variable, use the following expression syntax `%(ENV_X)s`, where `X` is the name of the environment variable.  All AdminService's environment variables are available for use when the service configuration is processed. In the following example, the environment variable `LOGLEVEL` will be used to the set the configuration property `loglevel`.
+
 ```
 loglevel=%(ENV_LOGLEVEL)s
 ```
-In the above example, the log level for the Domain Manager is set to the environment variable `$LOGLEVEL`.
+Environment variables may be overridden by using the `environment` configuration property. However, only uppercase environment variable names, (for example, `NEWVAR`), can be used to  override environment variables.
+```
+environment=NEWVAR=somevalue
+```
+
+#### Default Configurations
+Each service type, (`domain`, `node`, `waveform` ) has an associated defaults file in the directory  `/etc/redhawk/init.d/`. Each file provides the default settings for any missing or required configuration property values from a service configuration file.  For example, a Domain Manager service configuration file only requires the property setting `DOMAIN_NAME`, all other default property settings are resolved from the file `/etc/redhawk/init.d/domain.defaults`.
+
+## Service File locations
+The AdminService reads service configuration files from several directories on startup. The following table lists the locations and the files read:
+
+| **Service**    | **Configuration Directory**  | **File**        |
+| :------------- | :--------------------------- | :-------------- |
+| Defaults       | `/etc/redhawk/init.d`        | `*.defaults`    |
+| Domain Manager | `/etc/redhawk/domains.d`     | `*.ini`         |
+| Device Manager | `/etc/redhawk/nodes.d`       | `*.ini`         |
+| Waveform       | `/etc/redhawk/waveforms.d`   | `*.ini`         |
+
+
+## Creating Configuration files
+
+To create a new configuration file, enter the following command replacing `<type>` with `domain`, `node` or `waveform` as appropriate.
+```sh
+# This will generate a generic configuration file
+rhadmin config <type> > <file name>.ini
+
+```
+For the file to be recognized by the AdminService, the file is required to have an `.ini` file extension and be installed into the proper service directory under `/etc/redhawk`.  The following example describes how to create, install, and activate a Domain Manager service configuration.
+
+```sh
+# This will generate a generic configuration file
+rhadmin config domain > rhdom.ini
+
+# edit file and change DOMAIN_NAME=REDHAWK_DEV
+vi rhdom.ini
+
+cp rhdom.ini /etc/redhawk/domains.d
+
+rhadmin reload
+```
 
 {{% notice note %}}
-Environment variables may be overridden by using the `environment` parameter. However, the configuration file only allows parameters with uppercase names (for example, `PYTHONPATH`) to use overridden environment variables.
+The configuration files are located in system privileged directories. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
 
-
 ## Viewing What Is Configured in the AdminService
+
 To view what services are currently configured in the AdminService, enter the following command:
 ```sh
 rhadmin list
@@ -88,20 +108,32 @@ The following table describes the information displayed for the configured servi
 
 | Column    | Description  |
 | :-------- | :----------- |
-| Name      | The `process name` that may be used for other commands. The format used is `<Domain>:<Configuration Name>`. |
-| In Use    | The status of the process configuration, which indicates whether the configuration has been activated and is operable. |
-| Autostart | Specifies whether the process will automatically start when the AdminService starts. |
-| Enabled   | Specifies whether the process configuration can be started. This setting may be overridden on the start command with the `-f` flag. |
-| Priority  | The priority of the process' configuration. The format used is `<domain priority>:<process priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting the domain itself, the lowest value for `process priority` is started first.
+| Name      | The `service name` that may be used for other commands. The format used is `<domain name>:<section name>`. |
+| In Use    | The status of the service configuration, which indicates whether the configuration has been activated and is operable. |
+| Autostart | Specifies whether the service will automatically start when the AdminService starts. |
+| Enabled   | Specifies whether the service configuration can be started. This setting may be overridden on the start command with the `-f` flag. |
+| Priority  | The priority of the service's configuration. The display format is `<domain priority>:<service priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting the domain itself, the lowest value for `service priority` is started first.
+
+To view the contents of a service's configuration file use the `getconfig` command.
+```sh
+rhadmin getconfig <service name>
+```
 
 
 ## Managing Configurations
 
-The `rhadmin update` command is used to add or remove configurations from the AdminService. This command will reread the configuration files, start any new processes that were defined and stop any currently running processes that are not defined anymore (eg. deleted an INI file). The status threads that monitor processes with the `run_detached=True` setting will be restarted, but the underlying system process will *not* be restarted.
+There is no direct command to add or remove service configurations from the AdminService.  This is accomplished by adding or deleting files from the appropriate service directory under `/etc/redhawk`, and then running the `rhadmin update` command. This command will reread the configuration files, start any new services that were defined and stop any currently running services that are not enabled or defined, (i.e. a deleted INI file). Service's with their configuration property `run_detached=True` will have their configuration processed but underlying service process will *not* be restarted.
 
-## Rereading the Configuration Files
-After adding a new `wave2.ini` file to the waveform configuration directory, to read the new configuration and start the new processes, enter the following command:
+The following example adds a new waveform service, `REDHAWK_DEV:Wave2`, to the AdminService.
+
 ```sh
+rhadmin config wavform > wave2.ini
+
+# change DOMAIN_NAME =REDHAWK_DEV and WAVEFORM=wave2  properties,  set the section header to [waveform:Wave2]
+vi wave2.ini
+
+cp wave2.ini /etc/redhawk/waveforms.d
+
 rhadmin update REDHAWK_DEV
 ```
 
@@ -110,7 +142,8 @@ The following output is displayed:
 REDHAWK_DEV: updated process group
 ```
 
-The AdminService reloaded its configuration files and then started the new process for `Wave2` in the `REDHAWK_DEV` domain. To verify that the `Wave2` waveform configuration was added and started, enter the following command:
+To verify the `REDHAWK_DEV:Wave2` configuration was added and started, enter the following command:
+
 ```sh
 rhadmin status
 ```
