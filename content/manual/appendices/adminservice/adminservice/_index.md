@@ -3,13 +3,25 @@ title: "AdminService"
 weight: 10
 ---
 
-## AdminService Overview
+The REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of each core service. It provides a host system service agnostic way of defining REDHAWK domains as a service. The REDHAWK core services definitions are the same regardless of whether `systemd` or `init` control service is used. The AdminService itself follows the normal Linux system service lifecycle and is controlled using the operating system's service control.
 
-REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of the service. It provides system integrators with a host system service agnostic way of defining REDHAWK domains. The REDHAWK core services definitions are the same regardless of whether systemd or init is used.
+## Installing the AdminService
 
-When the AdminService starts up, it reads all the INI files from the service configuration directories under the `/etc/redhawk` directory. These files define the configuration for controlling execution and determining status of each service.
+```sh
+yum install redhawk-adminservice
+```
 
-Once all configurations are read, the AdminService logically groups the services by their DOMAIN_NAME configuration property.  After the groups are determined, the AdminService will determine the start order of each domain based on the Domain Manager's `priority` configuration value; the lowest priority domain group is started first (1 being the lowest).  With in a domain group, the AdminService will again use the `priority` value to determine the start order for all the services defined for a domain group. A typical start order priority will define Domain Manager first, followed by Device Manager(s), and finally waveform(s).
+## Startup Process
+
+At system startup, the AdminService performs the following sequence of actions:
+
+    1. Process all the INI files in the service configuration directories under the `/etc/redhawk` directory.
+    2. Create domain groups using the `DOMAIN_NAME` configuration property from each service configuration file.
+    3. Determine the start order of each domain group using the `priority` configuration property of each groups Domain Manager service.
+    4. Determine the start order of each core service within a domain group using the `priority`. The typical start order will define Domain Manager first, followed by DeviceManager(s), and finally waveforms.
+    5. Launch each core service for a domain group using the configuration defintion and perform an initial status check of the service.
+    6. Repeat the above step for all remaining domain groups.
+
 
 Conversely, on the host system shutdown, the AdminService with terminate the domain  and services in the domain group starting with the highest priority first
 
