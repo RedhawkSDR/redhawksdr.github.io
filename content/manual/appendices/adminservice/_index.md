@@ -3,7 +3,7 @@ title: "REDHAWK System Services"
 weight: 55
 ---
 
-For system integrators, REDHAWK provides an optional RPM, `redhawk-adminservice`, with the necessary scripts and configuration files to manage the REDHAWK core services: Domain Manager, Device Manager (includes devices and services), and waveforms. The RPM is part of the REDHAWK yum repository, but it is not installed by default.  Included in the RPM are additional support files to assist with tuning common operating system parameters and configuring the REDHAWK logging subsystem.
+REDHAWK provides an optional RPM, `redhawk-adminservice`, to manage the REDHAWK core services, Domain Manager, Device Managers, and waveforms, as Linux system services using INI configuration files. The RPM is part of the REDHAWK yum repository, but it is not installed by default.  Also included in the RPM are additional support files to assist with tuning common operating system parameters and configuring the REDHAWK logging subsystem.
 
 For more information on the AdminService and Linux support files, refer to  
 
