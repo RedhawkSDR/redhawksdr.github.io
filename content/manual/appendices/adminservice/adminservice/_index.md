@@ -3,9 +3,11 @@ title: "AdminService"
 weight: 10
 ---
 
-The REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of each core service. It provides a host system service agnostic way of defining REDHAWK domains as a service. The REDHAWK core services definitions are the same regardless of whether `systemd` or `init` control service is used. The AdminService itself follows the normal Linux system service lifecycle and is controlled using the operating system's service control.
+The REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of each core service. The REDHAWK core services definitions are the same regardless of whether the system uses `systemd` or `init` for service control. The AdminService itself follows the normal Linux system service lifecycle and is controlled using the operating system's service control.
 
 ## Installing the AdminService
+
+To install the AdminService, enter the following command:
 
 ```sh
 yum install redhawk-adminservice
@@ -13,26 +15,34 @@ yum install redhawk-adminservice
 
 ## Startup Process
 
-At system startup, the AdminService performs the following sequence of actions:
+At system startup, the AdminService performs the following tasks:
 
-    1. Process all the INI files in the service configuration directories under the `/etc/redhawk` directory.
-    2. Create domain groups using the `DOMAIN_NAME` configuration property from each service configuration file.
-    3. Determine the start order of each domain group using the `priority` configuration property of each groups Domain Manager service.
-    4. Determine the start order of each core service within a domain group using the `priority`. The typical start order will define Domain Manager first, followed by DeviceManager(s), and finally waveforms.
-    5. Launch each core service for a domain group using the configuration defintion and perform an initial status check of the service.
-    6. Repeat the above step for all remaining domain groups.
+1. Processes all INI files in the service configuration directories under the `/etc/redhawk` directory.
 
-Conversely, on the host system shutdown, the AdminService with terminate the domain and services in the domain group starting with the highest priority first
+2. Creates domain groups using the `DOMAIN_NAME` configuration property in each service configuration file.
+
+3. Determines the start order of each domain group using the `priority` configuration property of each domain group's Domain Manager service.
+
+4. Determines the start order of each core service within a domain group using the `priority` configuration property of each core service. The typical start order defines Domain Manager first, followed by Device Managers, and finally waveforms.
+
+5. Launches each core service within a domain group using the configuration definition and performs an initial status check of the service.
+
+6. Repeats the previous step for all remaining domain groups.
+
+
+## System Shutdown
+
+On the host system shutdown, the AdminService terminates the domain and services in the domain group by starting with the highest priority first.
 
 ### Managing the REDHAWK Core Services Using the `rhadmin` Script
 
-Independent of system start up and shutdown, `rhadmin` is a command line utility to manage the REDHAWK core services' lifecycle. `rhadmin` supports the following commands to manage the service lifecycle: `start`, `stop`, `restart`, and `status` as an individual service, or groupings by service type or logical domain. The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
+Independent of system start up and shutdown, `rhadmin` is a command line utility used to manage the REDHAWK core services' lifecycle. `rhadmin` supports the following commands to manage the service lifecycle: `start`, `stop`, `restart`, and `status` as an individual service or groupings by service type or logical domain. The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
 
-For more information about `rhadmin`, refer to [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
+For more information about using `rhadmin` to manage the REDHAWK core services, refer to [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
 ###  REDHAWK AdminService Lifecycle
 
-The AdminService is configured to startup and shutdown using the operating system's service control. The following table lists the system service scripts that are used to control the AdminService lifecycle.
+The AdminService is configured to startup and shutdown using the operating system's service control. The following table lists the system service scripts used to control the AdminService lifecycle.
 
 | **Service**            | **System Service Script**                              |
 | :--------------------- | :----------------------------------------------------- |

@@ -3,7 +3,7 @@ title: "Service Configurations"
 weight: 50
 ---
 
-The INI service configuration files define the execution environment for each REDHAWK core service. The AdminService will read all the service configuration files at startup and execute any enabled configuration.  This section provides an overview of the service configuration file and how to manage configurations using `rhadmin`.
+The INI service configuration files define the execution environment for each REDHAWK core service. The AdminService reads all the service configuration files at startup and executes any enabled configuration.  This section provides an overview of the service configuration file and how to manage configurations using `rhadmin`.
 
 
 ## Configuration Contents
