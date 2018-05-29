@@ -1,6 +1,6 @@
 ---
 title: "rhadmin"
-weight: 30
+weight: 40
 ---
 
 This sections provides a reference to `rhadmin` command line utility.

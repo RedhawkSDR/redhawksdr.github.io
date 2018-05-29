@@ -8,7 +8,7 @@ The INI service configuration files define the execution environment for each RE
 
 ## Configuration Contents
 
-The INI files contain configuration properties in the form `Name=Value` and are grouped by section headers with the following syntax `[<type>:<section name>]`; where `<type>` is either `domain`, `node`, or `waveform`. All service configuration files will contain a required property `DOMAIN_NAME` which is used by the AdminService to group services by domains, and used to define the service's name. The complete definition for each type of service configuration file is covered in the following sections.
+The INI files contain configuration properties in the form `Name=Value` and are grouped by section headers with the following syntax `[<type>:<section name>]`; where `<type>` is either `domain`, `node`, or `waveform`. All service configuration files will contain a required property `DOMAIN_NAME` which is used by the AdminService to group services by domain, and used to define the service's name. The complete definition for each type of service configuration file is covered in the following sections.
 
 - [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
 - [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
@@ -26,7 +26,7 @@ NODE_NAME=NODE
 ```
 #### Domain Name
 
-All REDHAWK core services are required to have a configuration property `DOMAIN_NAME`. This property defines the AdminService all the services for a domain group.  This domain group will be used to determine execution priority and arguments for `rhadmin` commands.
+All REDHAWK core services are required to have a `DOMAIN_NAME` configuration property. This property defines the REDHAWK domain context and allows the AdminService to group services into a domain group.  This domain group will be used to determine execution priority and arguments for `rhadmin` commands.
 
 #### Priority
 
@@ -36,7 +36,7 @@ When shutting down a domain or during system shutdown, the AdminService will sto
 
 #### Daemon Process
 
-By default, all services will be have their `run_detached` property set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. The affect of the property causes the service's process running state to *not* be affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle will follow the AdminService's lifecycle.
+By default, all services have their `run_detached` property set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. The affect of the property causes the service's process running state to *not* be affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle will follow the AdminService's lifecycle.
 
 #### Environment Variables
 
@@ -45,13 +45,15 @@ Environment variables may also be referenced and defined in the service configur
 ```
 loglevel=%(ENV_LOGLEVEL)s
 ```
-Environment variables may be overridden by using the `environment` configuration property. However, only uppercase environment variable names, (for example, `NEWVAR`), can be used to  override environment variables.
+
+Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names, (for example, `PYTHONPATH` in a node configuration), can use the values of these override environment variables.
 ```
-environment=NEWVAR=somevalue
+environment=PYTHONPATH=/usr/local/redhawk/core/lib/python
+PYTHONPATH=%(ENV_PYTHONPATH)s
 ```
 
 #### Default Configurations
-Each service type, (`domain`, `node`, `waveform` ) has an associated defaults file in the directory  `/etc/redhawk/init.d/`. Each file provides the default settings for any missing or required configuration property values from a service configuration file.  For example, a Domain Manager service configuration file only requires the property setting `DOMAIN_NAME`, all other default property settings are resolved from the file `/etc/redhawk/init.d/domain.defaults`.
+Each service type, (`domain`, `node`, `waveform`) has an associated defaults file in the directory `/etc/redhawk/init.d/`. Each file provides the default settings for all optional configuration properties in a service configuration file.  For example, a Domain Manager service configuration file only requires setting the `DOMAIN_NAME` property, all other default property settings are resolved from the file `/etc/redhawk/init.d/domain.defaults`.
 
 ## Service File locations
 The AdminService reads service configuration files from several directories on startup. The following table lists the locations and the files read:
@@ -104,6 +106,7 @@ REDHAWK_DEV:GppNode              in use    auto      Enabled   100:400
 REDHAWK_DEV:REDHAWK_DEV_mgr      in use    auto      Enabled   100:100
 REDHAWK_DEV:Wave                 in use    auto      Enabled   100:900
 ```
+
 The following table describes the information displayed for the configured services.
 
 | Column    | Description  |
@@ -127,9 +130,9 @@ There is no direct command to add or remove service configurations from the Admi
 The following example adds a new waveform service, `REDHAWK_DEV:Wave2`, to the AdminService.
 
 ```sh
-rhadmin config wavform > wave2.ini
+rhadmin config waveform > wave2.ini
 
-# change DOMAIN_NAME =REDHAWK_DEV and WAVEFORM=wave2  properties,  set the section header to [waveform:Wave2]
+# change DOMAIN_NAME=REDHAWK_DEV and WAVEFORM=wave2 properties, set the section header to [waveform:Wave2]
 vi wave2.ini
 
 cp wave2.ini /etc/redhawk/waveforms.d

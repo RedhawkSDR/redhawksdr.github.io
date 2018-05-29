@@ -23,7 +23,7 @@ To create a new AdminService configuration file and start the service, enter the
 ```sh
 cd /etc/redhawk
 rhadmin config admin > adminserviced.cfg
-vi myadminserviced.cfg
+vi adminserviced.cfg
 adminserviced
 ```
 {{% notice note %}}
@@ -69,9 +69,9 @@ The following section describes all available configuration parameters.
 
 parameter: `serverurl`  
 required: No  
-default value: `http://localhost:9001`  
-format: `unix:///path/to/file.sock` or `http://\<ip_address\>:\<port\>`  
-description: The path to the Unix domain socket or network address used by the AdminServer.
+default value: `unix:///var/run/redhawk/adminserviced.sock`  
+format: `unix:///path/to/file.sock`
+description: The path to the Unix domain socket used by the AdminServer.
 
 parameter: `username`  
 required: No  
