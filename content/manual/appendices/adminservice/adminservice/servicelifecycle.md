@@ -3,10 +3,10 @@ title: "Service Life Cycle"
 weight: 60
 ---
 
-When the AdminService is started at system startup, all enabled services will be started.  This section covers the commands used to manage the lifecycle of a REDHAWK core service process after system startup has occurred.
+When the AdminService is started at system startup, all enabled services are started.  This section explains the commands used to manage the lifecycle of a REDHAWK core service process after system startup.
 
-### Getting a Service's status
-To inspect the status of a REDHAWK core service use the `status` command.
+### Getting a Service's Status
+To inspect the status of a REDHAWK core service, use the `status` command.
 ```sh
 rhadmin status service_name
 or
@@ -16,14 +16,14 @@ rhadmin status
 or
 rhadmin status [type]
 ```
-Where optional `[type]` is `domain`, `nodes`, `waveforms`.
+Where optional `[type]` is `domain`, `nodes`, or `waveforms`.
 
-If `service_name` is provided, process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If no argument is provided, process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+If `service_name` is provided, process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If no argument is provided, process the command against all services. If the optional `[type]` is specified, then restrict the command to a specific core service type.
 
 ```sh
 rhadmin status
 ```
-output the `status` from all activated services:
+The following output is displayed for all activated services:
 ```
 REDHAWK_DEV:GppNode              STOPPED   May 11 11:31 AM
 REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 19302, uptime 0:00:16
@@ -33,91 +33,115 @@ The following table describes the information displayed for the configured servi
 
 | Column    | Description  |
 | :-------- | :----------- |
-| 1         | The `service name` that may be used for other commands. The format used is `<domain name>:<section name>`. |
-| 2         | The state of the service process: `RUNNING` or `STOPPED` |
-| 3         | Process id of the actual service. Not shown in `STOPPED` state. |
-| 4         | uptime is for running processes, or date time service was stopped |
+| 1         | The `service name` that may be used for other commands. The format is `<domain name>:<section name>`. |
+| 2         | State of the service process: `RUNNING` or `STOPPED`. |
+| 3         |  For `RUNNING processes, process ID of the actual service, and the amount of time the service has been running. For `STOPPED` processes, the date and time the service was stopped. |
 
 
 ### Starting a Service
-To start a service use the following command:
+To start a service, use the following commands:
 ```sh
 rhadmin start service_name
+```
 or
+```sh
 rhadmin start domain_name
+```
+
 or
+```sh
 rhadmin start all
+```
+
 or
+```sh
 rhadmin start [type] all
 ```
-Where optional `[type]` is `domain`, `nodes`, `waveforms`.
+Where optional `[type]` is `domain`, `nodes`, or `waveforms`.
 
-If `service_name` is provided, process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided, process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+If `service_name` is provided, the command is processed against a specific service. If `domain_name` is provided, the command is processed against the specified domain group. If 'all' is provided, the command is processed against all services. If the optional `[type]` is specified, then the command is restricted to a specific core service type.
 
-The following example will start the Domain Manager service `REDHAWK_DEV:REDHAWK_DEV_mgr`:
+The following example starts the Domain Manager service `REDHAWK_DEV:REDHAWK_DEV_mgr`:
 
 ```sh
 rhadmin start REDHAWK_DEV:REDHAWK_DEV_mgr
 ```
-It should output:
+The following output is displyed:
 ```
 REDHAWK_DEV:REDHAWK_DEV_mgr: started
 ```
-### Stopping a service
-To stop a service use the following command:
+### Stopping a Service
+To stop a service, use the following commands:
 ```sh
 rhadmin stop service_name
+```
+
 or
+```sh
 rhadmin stop domain_name
+```
 or
+```sh
 rhadmin stop all
+```
 or
+```sh
 rhadmin stop [type] all
 ```
 Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 
-If `service_name` is provided, process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided, process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+If `service_name` is provided, the command is processed against a specific service. If `domain_name` is provided, the command is processed against the specified domain group. If 'all' is provided, the command is processed against all services. If the optional `[type]` is specified, then the command is restricted to a specific core service type.
 
 
-The following example will stop the waveform service `REHDHAWK_DEV:Wave`:
+The following example stops the waveform service `REHDHAWK_DEV:Wave`:
 
 ```sh
 rhadmin stop REDHAWK_DEV:Wave
 ```
-It should output:
+The following output is displayed:
 ```
 REDHAWK_DEV:Wave: stopped
 ```
 
-The status should show:
+The following status is displayed:
 ```
 REDHAWK_DEV:GppNode              RUNNING   pid 17582, uptime 0:58:01
 REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 17492, uptime 0:58:07
 REDHAWK_DEV:Wave                 STOPPED   May 11 11:30 AM
 ```
 
-### Restarting a service
-To restart a service use the following command:
+### Restarting a Service
+To restart a service, use the following commands:
+
 ```sh
 rhadmin restart service_name
+```
+
 or
+```sh
 rhadmin restart domain_name
+```
+
 or
+```sh
 rhadmin restart all
+```
+
 or
+```sh
 rhadmin restart [type] all
 ```
 Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 
-If `service_name` is provided, process the command against a specific service. If `domain_name` is provided, process the command against the specified domain group. If 'all' is provided, process the command against all services. If the optional `[type]` is specified then restrict the command to a specific core service type.
+If `service_name` is provided, the command is processed against a specific service. If `domain_name` is provided, the command is processed against the specified domain group. If 'all' is provided, the command is processed against all services. If the optional `[type]` is specified, then the command is restricted to a specific core service type.
 
 
-The following example will restart all the services for the domain group `REHDHAWK_DEV`:
+The following example restarts all the services for the domain group `REHDHAWK_DEV`:
 
 ```sh
 rhadmin restart REDHAWK_DEV
 ```
-It should output:
+The following output is displayed:
 ```
 REDHAWK_DEV:Wave             stopped
 REDHAWK_DEV:GppNode          stopped
@@ -127,7 +151,7 @@ REDHAWK_DEV:GppNode          started
 REDHAWK_DEV:Wave             started
 ```
 
-The status should show:
+The following status is displayed:
 ```
 REDHAWK_DEV:GppNode              RUNNING   pid 20124, uptime 0:00:20
 REDHAWK_DEV:REDHAWK_DEV_mgr      RUNNING   pid 20123, uptime 0:00:30

@@ -3,7 +3,7 @@ title: "Managing Services By Domains and Types"
 weight: 40
 ---
 
-This section covers managing a REDHAWK core services on a per domain context or by type (domain, nodes, waveforms).  For additional information on managing service configurations and lifecycle management, refer to the appropriate section of the AdminService.
+This section explains how to manage REDHAWK core services either by domain or by type (`domain`, `nodes`, or `waveforms`).  For additional information on managing service configurations and lifecycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}), [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), and [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}).
 
 ### Managing Services for a Domain
 
@@ -46,7 +46,7 @@ rhadmin restart <Domain Name>
 
 ### Manage Services By Type
 
-Each lifecycle management command (start, stop, status, query, restart)  has an optional `type` parameter (domain, nodes, waveforms), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the Domain Name argument which will execute the command for a specific service type, regardless of their domain. The following list describes how to execute the `start` command  and the `type` option. The same command syntax is supported for all the lifecycle commands (start, stop, status, query, restart).
+Each lifecycle management command (`start`, `stop`, `status`, `query`, and `restart`)  has an optional `type` parameter (`domain`, `nodes`, and `waveforms`), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the Domain Name argument, which executes the command for a specific service type, regardless of their domain. The following list describes how to execute the `start` command  and the `type` option. The same command syntax is supported for all the lifecycle commands (start, stop, status, query, restart).
 
 * Start a specific Domain Manager service.  
 

@@ -3,61 +3,63 @@ title: "REDHAWK Device Manager Service"
 weight: 20
 ---
 
-This section covers managing a single REDHAWK Device Manager service.  For additional information on managing service configurations and lifecycle management, refer to the appropriate section of the AdminService.
+This section explains how to manage a single REDHAWK Device Manager service.  For additional information on managing service configurations and lifecycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}),
+ [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}), and [Managing Entire Domains ]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domains.md" >}}).
 
 
-### Create a Device Service Configuration
 
-To create a node service configuration run the following command:
+### Creating a Device Service Configuration
+
+To create a node service configuration, enter the following command:
 
 ```sh
 rhadmin config node >  <output file>.ini
 ```
-This creates a sample configuration that requires the DOMAIN_NAME and NODE_NAME configuration properties to be set, and the section's name. The section name can be used with rhadmin commands. For additional configuration property settings consult the [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}}) . For the file to be recognized by the AdminService, the file is required to have an .ini extension and be installed into the proper service directory: `/etc/redhawk/nodes.d`.  
+A sample configuration is created, which requires the `DOMAIN_NAME` and `NODE_NAME` configuration properties and the section's name be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}}) . For the file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/nodes.d`.  
 
-### Display a configuration
+### Displaying a Configuration
 
-To display the current configuration for a service:
+To display the current configuration for a service, enter the following command:
 
 ```sh
 rhadmin getconfig  <Domain Name>:<section name>
 ```
 
-### Starting a service
+### Starting a Service
 
-To start a single Device Manager service run the following command:
+To start a single Device Manager service, enter the following command:
 
 ```sh
 rhadmin start <Domain Name>:<section name>
 ```
 
-### Stopping a service
+### Stopping a Service
 
-To stop a single Device Manager service run the following command:
+To stop a single Device Manager service, enter the following command:
 
 ```sh
 rhadmin stop <Domain Name>:<section name>
 ```
 
-### Requesting status of a service
+### Requesting Status of a Service
 
-To status a single Device Manager service run the following command:
+To status a single Device Manager service, enter the following command:
 
 ```sh
 rhadmin status <Domain Name>:<section name>
 ```
 
-### Restarting a service
+### Restarting a Service
 
-Restarting a single Device Manager service:
+To restart a single Device Manager service, enter the following command:
 
 ```sh
 rhadmin restart <Domain Name>:<section name>
 ```
 
-### Example session
+### Example Session
 
-The following example creates, activates, starts, and statuses a Device Manager service for the domain `REDHAWK_PROD` and identified by the section name `gpp_node`.
+The following example creates, activates, starts, and statuses a Device Manager service for the domain `REDHAWK_PROD`, which is identified by the section name `gpp_node`.
 
 ```sh
 # generate a node configuration file
