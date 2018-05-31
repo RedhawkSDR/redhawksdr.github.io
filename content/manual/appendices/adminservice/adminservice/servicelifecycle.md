@@ -9,12 +9,20 @@ When the AdminService is started at system startup, all enabled services are sta
 To inspect the status of a REDHAWK core service, use the `status` command.
 ```sh
 rhadmin status service_name
+```
 or
+```sh
 rhadmin status domain_name
+```
+
 or
+```sh
 rhadmin status
+```
+
 or
-rhadmin status [type]
+```sh
+rhadmin status [type] all
 ```
 Where optional `[type]` is `domain`, `nodes`, or `waveforms`.
 
@@ -35,7 +43,7 @@ The following table describes the information displayed for the configured servi
 | :-------- | :----------- |
 | 1         | The `service name` that may be used for other commands. The format is `<domain name>:<section name>`. |
 | 2         | State of the service process: `RUNNING` or `STOPPED`. |
-| 3         |  For `RUNNING processes, process ID of the actual service, and the amount of time the service has been running. For `STOPPED` processes, the date and time the service was stopped. |
+| 3         |  For `RUNNING` processes, process ID of the actual service, and the amount of time the service has been running. For `STOPPED` processes, the date and time the service was stopped. |
 
 
 ### Starting a Service
@@ -66,7 +74,7 @@ The following example starts the Domain Manager service `REDHAWK_DEV:REDHAWK_DEV
 ```sh
 rhadmin start REDHAWK_DEV:REDHAWK_DEV_mgr
 ```
-The following output is displyed:
+The following output is displayed:
 ```
 REDHAWK_DEV:REDHAWK_DEV_mgr: started
 ```
@@ -93,7 +101,7 @@ Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 If `service_name` is provided, the command is processed against a specific service. If `domain_name` is provided, the command is processed against the specified domain group. If 'all' is provided, the command is processed against all services. If the optional `[type]` is specified, then the command is restricted to a specific core service type.
 
 
-The following example stops the waveform service `REHDHAWK_DEV:Wave`:
+The following example stops the waveform service `REDHAWK_DEV:Wave`:
 
 ```sh
 rhadmin stop REDHAWK_DEV:Wave
@@ -136,7 +144,7 @@ Where optional `[type]` is `domain`, `nodes`, `waveforms`.
 If `service_name` is provided, the command is processed against a specific service. If `domain_name` is provided, the command is processed against the specified domain group. If 'all' is provided, the command is processed against all services. If the optional `[type]` is specified, then the command is restricted to a specific core service type.
 
 
-The following example restarts all the services for the domain group `REHDHAWK_DEV`:
+The following example restarts all the services for the domain group `REDHAWK_DEV`:
 
 ```sh
 rhadmin restart REDHAWK_DEV

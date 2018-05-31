@@ -7,7 +7,7 @@ The INI service configuration files define the execution environment for each RE
 
 ## Configuration Contents
 
-The INI files contain configuration properties in the form `Name=Value` and are grouped by section headers with the following syntax `[<type>:<section name>]`; where `<type>` is either `domain`, `node`, or `waveform`. All service configuration files contain a required property `DOMAIN_NAME`, which is used by the AdminService to group services by domain, and used to define the service's name. The complete definition for each type of service configuration file is explained in the following sections.
+The INI files contain configuration properties in the form `Name=Value` and are grouped by section headers with the syntax `[<type>:<section name>]`; where `<type>` is either `domain`, `node`, or `waveform`. All service configuration files contain a required property `DOMAIN_NAME`, which is used by the AdminService to group services by domain, and used to define the service's name. The complete definition for each type of service configuration file is explained in the following sections.
 
 - [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}})  
 - [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}})  
@@ -35,7 +35,7 @@ When shutting down a domain or during system shutdown, the AdminService stops th
 
 #### Daemon Process
 
-By default, the `run_detached` property for all services is set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. If set to true, the service's process running state is *not* affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle followa the AdminService's lifecycle.
+By default, the `run_detached` property for all services is set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. If set to true, the service's process running state is *not* affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle follows the AdminService's lifecycle.
 
 #### Environment Variables
 
@@ -45,7 +45,7 @@ Environment variables may also be referenced and defined in the service configur
 loglevel=%(ENV_LOGLEVEL)s
 ```
 
-Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names, for example, `PYTHONPATH` in a node configuration, can use the values of these override environment variables.
+Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names. In the following example of a node configuration, the `PYTHONPATH` configuration parameter uses the overriden environment variable.
 ```
 environment=PYTHONPATH=/usr/local/redhawk/core/lib/python
 PYTHONPATH=%(ENV_PYTHONPATH)s
