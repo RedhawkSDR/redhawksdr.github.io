@@ -3,11 +3,11 @@ title: "rhadmin"
 weight: 40
 ---
 
-This sections provides a reference to `rhadmin` command line utility.
+This section explains the `rhadmin` commands  used to control the AdminService.
 
 ### Commands
 
-The following table describes the command set of `rhadmin` to control the AdminService.
+The following table describes the `rhadmin` commands.
 
 | **Command**      | **Argument**                             | **Description**                                                                                                |
 | :--------------- | :--------------------------------------- |:-------------------------------------------------------------------------------------------------------------- |

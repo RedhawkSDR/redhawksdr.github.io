@@ -5,7 +5,7 @@ weight: 60
 
 When the AdminService is started at system startup, all enabled services are started.  This section explains the commands used to manage the lifecycle of a REDHAWK core service process after system startup.
 
-### Getting a Service's Status
+### Inspecting the Status of a Service
 To inspect the status of a REDHAWK core service, use the `status` command.
 ```sh
 rhadmin status service_name

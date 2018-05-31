@@ -7,78 +7,86 @@ This section explains how to manage REDHAWK core services either by domain or by
 
 ### Managing Services for a Domain
 
-* Reload and restart all services for a domain from current configuration files.
+Services for a domain can be managed using the following commands.
+
+* Reloading and restarting all services for a domain from current configuration files
 
 ```sh
 rhadmin update <Domain Name>
 ```
 
-* Start all services in a domain
+* Starting all services in a domain
 
 ```sh
 rhadmin start <Domain Name>
 ```
 
-* Stop all the services in a domain
+* Stoping all the services in a domain
 
 ```sh
 rhadmin stop <Domain Name>
 
 ```
 
-* Status all the services in a domain
+* Inspecting the status of all the services in a domain
 
 ```sh
 rhadmin status <Domain Name>
 ```
 
-* Customized status query for all the services in a domain
+* Customizing the status query for all the services in a domain
 
 ```sh
 rhadmin query <Domain Name>
 ```
 
-* Restart all the services for a domain
+* Restarting all the services for a domain
 
 ```sh
 rhadmin restart <Domain Name>
 ```
 
-### Manage Services By Type
+### Managing Services by Type
 
-Each lifecycle management command (`start`, `stop`, `status`, `query`, and `restart`)  has an optional `type` parameter (`domain`, `nodes`, and `waveforms`), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the Domain Name argument, which executes the command for a specific service type, regardless of their domain. The following list describes how to execute the `start` command  and the `type` option. The same command syntax is supported for all the lifecycle commands (start, stop, status, query, restart).
+Each lifecycle management command (`start`, `stop`, `status`, `query`, and `restart`)  has an optional `type` parameter (`domain`, `nodes`, and `waveforms`), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the `<Domain Name>` argument, which executes the command for a specific service type, regardless of the service type's domain. The same command syntax is supported for all lifecycle commands (`start`, `stop`, `status`, `query`, `restart`):
 
-* Start a specific Domain Manager service.  
+```sh
+rhadmin command type <Domain Name>|all
+```
+
+The following commands demonstrate how to execute the `start` command  using the `type` option.
+
+* Starting a specific Domain Manager service
 
 ```sh
 rhadmin start domain <Domain Name>
 ```
 
-* Start all defined Domain Manager services
+* Starting all defined Domain Manager services
 
 ```sh
 rhadmin start domain all
 ```
 
-* Start all Device Manager services for a specific domain.
+* Starting all Device Manager services for a specific domain.
 
 ```sh
 rhadmin start nodes <Domain Name>
 ```
 
-* Start all Device Manager services
+* Starting all Device Manager services
 
 ```sh
 rhadmin start nodes all
 ```
 
-* Start all Waveform services for a specific domain.
+* Starting all waveform services for a specific domain.
 
 ```sh
 rhadmin start waveforms <Domain Name>
 ```
 
-* Start all Waveform services
+* Starting all waveform services
 
 ```sh
 rhadmin start waveforms all
