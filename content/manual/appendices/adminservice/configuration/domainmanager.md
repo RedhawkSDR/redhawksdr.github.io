@@ -27,7 +27,7 @@ False: 0, false, False
 parameter: `DOMAIN_NAME`  
 required: Yes  
 default value: None  
-format: Name with no spaces or periods (for example, `REDHAWK_DEV`)
+format: Name with no spaces or periods (for example, `REDHAWK_DEV`)  
 description: The domain name to be assigned to the Domain Manager process.
 
 parameter: `DMD_FILE`  
@@ -68,7 +68,7 @@ description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve t
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI  
+format: Absolute path to a file, `file://<path>` URI or `sca://<path>` URI  
 description: The logging configuration file to be used by the Domain Manager. Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others will be resolved as an absolute path or URI to a logging properties file.
 
 parameter: `DEBUG_LEVEL`  

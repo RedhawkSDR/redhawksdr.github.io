@@ -64,7 +64,7 @@ description: Enables the use of `$OSSIEHOME/lib/libsossielogcfg.so` to resolve t
 parameter: `LOGGING_CONFIG_URI`  
 required: No  
 default value: `defaults.logging.properties`  
-format: Absolute path to a file, file://\<path\> URI or sca://\<path\> URI  
+format: Absolute path to a file, `file://<path>` URI or `sca://<path>` URI  
 description: The logging configuration file to be used by the Device Manager. Simple file names will be resolved to files in `/etc/redhawk/logging` directory. All others will be resolved as an absolute path or URI to a logging properties file.
 
 parameter: `DEBUG_LEVEL`  

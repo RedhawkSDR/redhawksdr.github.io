@@ -43,12 +43,6 @@ required: No
 format: A name with no spaces or periods (for example, `THE_WAVEFORM`)  
 description: Specifies an instance-specific name for the waveform.
 
-parameter: `SDRROOT`  
-required: No  
-default value: `$SDRROOT`  
-format: Standard shell path environment variable  
-description: The absolute path to use as the `SDRROOT` for this waveform.
-
 parameter: `OSSIEHOME`  
 required: No  
 default: `$OSSIEHOME`  
@@ -65,21 +59,6 @@ parameter: `start_delay`
 required: No  
 default value: `30`  
 description: The amount of time for the waveform control script to wait for the Domainmanager to be available before failing startup.
-
-parameter: `start_cmd_option`  
-required: No  
-default value: `-o create`  
-description: Option to use with the waveform control script to start the waveform.
-
-parameter: `status_cmd_option`  
-required: No  
-default value: `-o status`  
-description: Option to use with the waveform control script to status the waveform.
-
-parameter: `stop_cmd_option`  
-required: No  
-default value: `-o remove`  
-description: Option to use with the waveform control script to stop the waveform.
 
 parameter: `enable`  
 required: No  

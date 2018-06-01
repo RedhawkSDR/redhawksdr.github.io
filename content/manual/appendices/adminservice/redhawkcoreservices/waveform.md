@@ -3,7 +3,7 @@ title: "REDHAWK Waveform Service"
 weight: 30
 ---
 
-This section explains how to manage a single REDHAWK Waveform service.  For additional information on managing service configurations and lifecycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}), [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), and [Managing Entire Domains ]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domains.md" >}}).
+This section explains how to manage a single REDHAWK waveform service.  For additional information on managing service configurations and life cycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}), [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), and [Managing Entire Domains ]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domains.md" >}}).
 
 
 ### Creating a Waveform Service Configuration
@@ -13,7 +13,7 @@ To create a waveform service configuration, enter the following command:
 ```sh
 rhadmin config waveform >  <output file>.ini
 ```
-A sample configuration is created, which requires the `DOMAIN_NAME` and `WAVEFORM` configuration properties and the section’s name be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}}) . For the file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/waveforms.d`.  
+A sample configuration is created, which requires the `DOMAIN_NAME` and `WAVEFORM` configuration properties and the section’s name to be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Waveform Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}}) . For the file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/waveforms.d`.  
 
 ### Displaying a Configuration
 
@@ -25,7 +25,7 @@ rhadmin getconfig  <Domain Name>:<section name>
 
 ### Starting a Service
 
-To start a single Waveform service, enter the following command:
+Starting a waveform service will install the application factory in the Domain Manager and then start the waveform. To start a single waveform service, enter the following command:
 
 ```sh
 rhadmin start <Domain Name>:<section name>
@@ -33,7 +33,7 @@ rhadmin start <Domain Name>:<section name>
 
 ### Stopping a Service
 
-To stop a single Waveform service, enter the following command:
+To stop a single waveform service, enter the following command:
 
 ```sh
 rhadmin stop <Domain Name>:<section name>
@@ -41,7 +41,7 @@ rhadmin stop <Domain Name>:<section name>
 
 ### Requesting Status of a Service
 
-To status a single Waveform service, enter the following command:
+To status a single waveform service, enter the following command:
 
 ```sh
 rhadmin status <Domain Name>:<section name>
@@ -49,7 +49,7 @@ rhadmin status <Domain Name>:<section name>
 
 ### Restarting a Service
 
-To restart a single Waveform service, enter the following command:
+To restart a single waveform service, enter the following command:
 
 ```sh
 rhadmin restart <Domain Name>:<section name>
@@ -58,7 +58,7 @@ rhadmin restart <Domain Name>:<section name>
 
 ### Example Session
 
-The following example creates, activates, starts, and status a Waveform service for the domain `REDHAWK_PROD`, which is identified by the section name `controller`.
+The following example creates, activates, starts, and status a waveform service for the domain `REDHAWK_PROD`, which is identified by the section name `controller`.
 
 ```sh
 # generate a waveform configuration file

@@ -3,7 +3,7 @@ title: "Managing Services By Domains and Types"
 weight: 40
 ---
 
-This section explains how to manage REDHAWK core services either by domain or by type (`domain`, `nodes`, or `waveforms`).  For additional information on managing service configurations and lifecycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}), [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), and [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}).
+This section explains how to manage REDHAWK core services either by domain or by type (`domain`, `nodes`, or `waveforms`).  For additional information on managing service configurations and life cycle management, refer to [Domain Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domainmanager.md" >}}), [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), and [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}).
 
 ### Managing Services for a Domain
 
@@ -34,7 +34,7 @@ rhadmin stop <Domain Name>
 rhadmin status <Domain Name>
 ```
 
-* Customizing the status query for all the services in a domain
+* Running a custom status script for all the services in a domain and displaying the script output
 
 ```sh
 rhadmin query <Domain Name>
@@ -48,7 +48,7 @@ rhadmin restart <Domain Name>
 
 ### Managing Services by Type
 
-Each lifecycle management command (`start`, `stop`, `status`, `query`, and `restart`)  has an optional `type` parameter (`domain`, `nodes`, and `waveforms`), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the `<Domain Name>` argument, which executes the command for a specific service type, regardless of the service type's domain. The same command syntax is supported for all lifecycle commands (`start`, `stop`, `status`, `query`, `restart`):
+Each life cycle management command (`start`, `stop`, `status`, `query`, and `restart`)  has an optional `type` parameter (`domain`, `nodes`, and `waveforms`), which restricts the command to execute against the specific type of service for a domain.  In addition, the value `all` can be substituted for the `<Domain Name>` argument, which executes the command for a specific service type, regardless of the service type's domain. The same command syntax is supported for all life cycle commands (`start`, `stop`, `status`, `query`, `restart`):
 
 ```sh
 rhadmin command type <Domain Name>|all

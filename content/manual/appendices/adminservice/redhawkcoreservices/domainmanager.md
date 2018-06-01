@@ -3,7 +3,7 @@ title: "REDHAWK Domain Manager Service"
 weight: 10
 ---
 
-This section explains how to manage a single REDHAWK Domain Manager service.  For additional information on managing service configurations and lifecycle management, refer to [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}), and [Managing Entire Domains ]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domains.md" >}}).
+This section explains how to manage a single REDHAWK Domain Manager service.  For additional information on managing service configurations and life cycle management, refer to [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}), [Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}), and [Managing Entire Domains ]({{< relref "manual/appendices/adminservice/redhawkcoreservices/domains.md" >}}).
 
 
 ### Creating a Domain Service Configuration
@@ -13,7 +13,7 @@ To create a domain service configuration, enter the following command:
 ```sh
 rhadmin config domain >  <output file>.ini
 ```
- A sample configuration is created, which requires the `DOMAIN_NAME` configuration property and the section's name be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}}) . For the  file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/domains.d`.  
+ A sample configuration is created, which requires the `DOMAIN_NAME` configuration property and the section's name to be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Domain Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/domainmanager.md" >}}) . For the  file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/domains.d`.  
 
 ### Displaying a Configuration
 

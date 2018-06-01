@@ -3,7 +3,7 @@ title: "AdminService"
 weight: 10
 ---
 
-The REDHAWK AdminService manages the lifecycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of each core service. The REDHAWK core services definitions are the same regardless of whether the system uses `systemd` or `init` for service control. The AdminService itself follows the normal Linux system service lifecycle and is controlled using the operating system's service control.
+The REDHAWK AdminService manages the life cycle of the REDHAWK core services (Domain Manager, Device Manager, and waveforms) using simple INI-style configuration files to define the execution environment of each core service. The REDHAWK core services definitions are the same regardless of whether the system uses `systemd` or `init` for service control. The AdminService itself follows the normal Linux system service life cycle and is controlled using the operating system's service control.
 
 ## Installing the AdminService
 
@@ -36,20 +36,23 @@ On the host system shutdown, the AdminService terminates the domain and services
 
 ## Managing the REDHAWK Core Services Using the `rhadmin` Script
 
-Independent of system start up and shutdown, `rhadmin` is a command line utility used to manage the REDHAWK core services' lifecycle. `rhadmin` supports the following commands to manage the service lifecycle: `start`, `stop`, `restart`, and `status` as an individual service or groupings by service type or logical domain. The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
+Independent of system start up and shutdown, `rhadmin` is a command line utility used to manage the REDHAWK core services' life cycle. `rhadmin` supports the following commands to manage the service life cycle: `start`, `stop`, `restart`, and `status` as an individual service or groupings by service type or logical domain. The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
 
 For more information about using `rhadmin` to manage the REDHAWK core services, refer to [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
 ##  REDHAWK AdminService Lifecycle
 
-The AdminService is configured to startup and shutdown using the operating system's service control. The following table lists the system service scripts used to control the AdminService lifecycle.
+The AdminService is configured to startup and shutdown using the operating system's service control. The following table lists the system service scripts used to control the AdminService life cycle.
 
-| **Service**            | **System Service Script**                              |
-| :--------------------- | :----------------------------------------------------- |
-| **CentOS 6 (SysV)**    |                                                        |
-| AdminService           | `/etc/rc.d/init.d/redhawk-adminservice`                |
-| **CentOS 7 (systemd)** |                                                        |
-| AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
-| AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
+| **Service**                   | **System Service Script**                                    |
+| :---------------------------- | :----------------------------------------------------------- |
+| **CentOS 6 (SysV)**           |                                                              |
+| AdminService                  | `/etc/rc.d/init.d/redhawk-adminservice`                      |
+| **CentOS 7 (systemd)**        |                                                              |
+| AdminService Setup            | `/usr/lib/systemd/system/redhawk-adminservice-setup.service` |
+| AdminService                  | `/usr/lib/systemd/system/redhawk-adminservice.service`       |
+| AdminService startup wrapper  | `$OSSIEHOME/bin/adminserviced-start`                         |
+| AdminService shutdown wrapper | `$OSSIEHOME/bin/adminserviced-stop`                          |
+| Setup Wrapper                 | `$OSSIEHOME/bin/redhawk-adminservice-setup`                  |
 
 As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.

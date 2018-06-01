@@ -3,7 +3,7 @@ title: "Service Life Cycle"
 weight: 60
 ---
 
-When the AdminService is started at system startup, all enabled services are started.  This section explains the commands used to manage the lifecycle of a REDHAWK core service process after system startup.
+When the AdminService is started at system startup, all enabled services are started.  This section explains the commands used to manage the life cycle of a REDHAWK core service process after system startup.
 
 ### Inspecting the Status of a Service
 To inspect the status of a REDHAWK core service, use the `status` command.

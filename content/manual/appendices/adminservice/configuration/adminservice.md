@@ -7,13 +7,16 @@ weight: 20
 
 The following table lists the system service scripts that are used to control the AdminService.
 
-| **Service**            | **System Service Script**                              |
-| :--------------------- | :----------------------------------------------------- |
-| **CentOS 6 (SysV)**    |                                                        |
-| AdminService           | `/etc/rc.d/init.d/redhawk-adminservice`                |
-| **CentOS 7 (systemd)** |                                                        |
-| AdminService           | `/usr/lib/systemd/system/redhawk-adminservice.service` |
-| AdminService Wrapper   | `$OSSIEHOME/bin/adminserviced-start`                   |
+| **Service**                   | **System Service Script**                                    |
+| :---------------------------- | :----------------------------------------------------------- |
+| **CentOS 6 (SysV)**           |                                                              |
+| AdminService                  | `/etc/rc.d/init.d/redhawk-adminservice`                      |
+| **CentOS 7 (systemd)**        |                                                              |
+| AdminService Setup            | `/usr/lib/systemd/system/redhawk-adminservice-setup.service` |
+| AdminService                  | `/usr/lib/systemd/system/redhawk-adminservice.service`       |
+| AdminService startup wrapper  | `$OSSIEHOME/bin/adminserviced-start`                         |
+| AdminService shutdown wrapper | `$OSSIEHOME/bin/adminserviced-stop`                          |
+| Setup Wrapper                 | `$OSSIEHOME/bin/redhawk-adminservice-setup`                  |
 
 As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
 
@@ -70,7 +73,7 @@ The following section describes all available configuration parameters.
 parameter: `serverurl`  
 required: No  
 default value: `unix:///var/run/redhawk/adminserviced.sock`  
-format: `unix:///path/to/file.sock`
+format: `unix:///path/to/file.sock`  
 description: The path to the Unix domain socket used by the AdminServer.
 
 parameter: `username`  

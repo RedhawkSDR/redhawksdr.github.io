@@ -35,7 +35,7 @@ When shutting down a domain or during system shutdown, the AdminService stops th
 
 #### Daemon Process
 
-By default, the `run_detached` property for all services is set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. If set to true, the service's process running state is *not* affected by restarts of the AdminService.  In essence, the service's process lifecycle is independent of the AdminService's process lifecycle.  If `run_detached` is set to false, then the service's lifecycle follows the AdminService's lifecycle.
+By default, the `run_detached` property for all services is set to `true`.  This property controls if the service is started as a daemon and detached from the AdminService. If set to true, the service's process running state is *not* affected by restarts of the AdminService.  In essence, the service's process life cycle is independent of the AdminService's process life cycle.  If `run_detached` is set to false, then the service's life cycle follows the AdminService's life cycle.
 
 #### Environment Variables
 
