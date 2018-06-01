@@ -16,9 +16,25 @@ The following table lists the system service scripts that are used to control th
 | AdminService                  | `/usr/lib/systemd/system/redhawk-adminservice.service`       |
 | AdminService startup wrapper  | `$OSSIEHOME/bin/adminserviced-start`                         |
 | AdminService shutdown wrapper | `$OSSIEHOME/bin/adminserviced-stop`                          |
-| Setup Wrapper                 | `$OSSIEHOME/bin/redhawk-adminservice-setup`                  |
+| AdminService setup wrapper    | `$OSSIEHOME/bin/redhawk-adminservice-setup`                  |
 
 As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.
+
+##### Enabling AdminService on System Startup
+
+To enable the AdminService on system boot using CentOS 6, enter the following commands as `root`.
+```sh
+chkconfig redhawk-adminservice on
+```
+
+To enable the Adminservice on system boot using CentOS 7, enter the following commands as `root`.
+```sh
+systemctl enable redhawk-adminservice-setup.service
+systemctl enable redhawk-adminservice.service
+```
+{{% notice note %}}
+The `redhawk-adminservice-setup.service` systemd service is required to create the directories in `/var/run` for managing process pid files. It does not need to be restarted while the system is running.
+{{% /notice %}}
 
 #### Creating a Custom AdminService Configuration
 
