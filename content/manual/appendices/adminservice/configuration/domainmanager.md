@@ -3,7 +3,7 @@ title: "Domain Manager Service Configuration File"
 weight: 30
 ---
 
-The REDHAWK Domain Manager service is controlled by files in the `/etc/redhawk/domains.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`.
+A REDHAWK Domain Manager service is controlled by files in the `/etc/redhawk/domains.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`.
 
 [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service. To generate a generic Domain Manager configuration, enter the following command.
 ```sh

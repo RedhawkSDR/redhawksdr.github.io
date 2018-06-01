@@ -6,7 +6,7 @@ weight: 90
 
 ## Linux Support Files
 
-In addition to running REDHAWK core services, the following support files are provided for REDHAWK logging properties, managing logging output files, system limit definitions, and kernel setup.
+In addition to running REDHAWK core services, the following support files are provided for REDHAWK logging properties, logging output files management, system limit definitions, and kernel setup.
 
 The following table descibes the support files.
 

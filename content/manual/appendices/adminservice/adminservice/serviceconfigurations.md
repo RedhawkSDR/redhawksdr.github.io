@@ -39,20 +39,20 @@ By default, the `run_detached` property for all services is set to `true`.  This
 
 #### Environment Variables
 
-Environment variables may also be referenced and defined in the service configuration files.  To reference an environment variable, use the following expression syntax `%(ENV_X)s`, where `X` is the name of the environment variable.  All AdminService's environment variables are available for use when the service configuration is processed. In the following example, the environment variable `LOGLEVEL` is used to the set the configuration property `loglevel`.
+Environment variables may also be referenced and defined in the service configuration files.  To reference an environment variable, use the following expression syntax: `%(ENV_X)s`, where `X` is the name of the environment variable.  All AdminService's environment variables are available for use when the service configuration is processed. In the following example, the environment variable `LOGLEVEL` is used to the set the configuration property `loglevel`.
 
 ```
 loglevel=%(ENV_LOGLEVEL)s
 ```
 
-Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names. In the following example of a node configuration, the `PYTHONPATH` configuration parameter uses the overriden environment variable.
+Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names can use the values of these overridden environment variables. In the following example of a node configuration, the `PYTHONPATH` configuration parameter uses the overridden environment variable.
 ```
 environment=PYTHONPATH=/usr/local/redhawk/core/lib/python
 PYTHONPATH=%(ENV_PYTHONPATH)s
 ```
 
 #### Default Configurations
-Each service type, (`domain`, `node`, `waveform`) has an associated defaults file in the directory `/etc/redhawk/init.d/`. Each file provides the default settings for all optional configuration properties in a service configuration file.  For example, a Domain Manager service configuration file only requires setting the `DOMAIN_NAME` property, all other default property settings are resolved from the file `/etc/redhawk/init.d/domain.defaults`.
+Each service type (`domain`, `node`, `waveform`) has an associated defaults file in the directory `/etc/redhawk/init.d/`. Each file provides the default settings for all optional configuration properties in a service configuration file.  For example, a Domain Manager service configuration file only requires setting the `DOMAIN_NAME` property; all other default property settings are resolved from the file `/etc/redhawk/init.d/domain.defaults`.
 
 ## Service File Locations
 The AdminService reads service configuration files from several directories on startup. The following table lists the locations and the files read:
@@ -67,7 +67,7 @@ The AdminService reads service configuration files from several directories on s
 
 ## Creating Configuration files
 
-To create a new configuration file, enter the following command replacing `<type>` with `domain`, `node`, or `waveform` as appropriate.
+To create a new configuration file, enter the following command, replacing `<type>` with `domain`, `node`, or `waveform` as appropriate.
 ```sh
 # This will generate a generic configuration file
 rhadmin config <type> > <file name>.ini
