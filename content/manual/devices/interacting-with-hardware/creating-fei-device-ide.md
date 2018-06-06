@@ -115,7 +115,7 @@ Each of the following functions have `fts` and `tuner_id` passed in as parameter
     | **Function/Method**   | **Description**  |
     | :-------------------- | :---------------------- |
     | `deviceSetTuningScan` | Called instead of `deviceSetTuning` when a scanner allocation is made. |
-    | `setScanStrategy`     | Called by the user to provide a plan for how the frequencies the scanner will cover. Validate the request and store the plan. |
+    | `setScanStrategy`     | Called by the user to provide a plan for what frequencies the scanner will cover and how it will cover them. Validate the request and store the plan. |
     | `setScanStartTime`    | Called by the user to specify when a scan should start. At the specified time, the scanner should begin outputting data according to the scan plan. |
     | `getScanStatus`       | Provide the status of all current and scheduled scans |
 
