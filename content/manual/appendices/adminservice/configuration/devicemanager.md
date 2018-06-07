@@ -3,7 +3,7 @@ title: "Device Manager Service Configuration File"
 weight: 40
 ---
 
-A REDHAWK Device Manager service is controlled by files in the `/etc/redhawk/nodes.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/node.defaults`. Although there are no rules on partitioning nodes for a REDHAWK system, it is recommended that you do not define more than one GPP per computing host. To define multiple nodes for a computing host, create a new configuration file for each node.
+Each REDHAWK Device Manager service is controlled by a file in the `/etc/redhawk/nodes.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/node.defaults`. Although there are no rules on partitioning nodes for a REDHAWK system, it is recommended that you do not define more than one GPP per computing host. To define multiple nodes for a computing host, create a new configuration file for each node.
 
 The Device Manager can be configured to start after the Domain Manager has started up, or it can start up at the same time as the Domain Manager, and it will wait for the domain to be available and register its [Devices]({{< relref "manual/devices">}}) and [Services]({{< relref "manual/services">}}). If many devices or services need to start, it is recommended that you add a custom script to verify that the Device Manager has started all devices and services and registered them with the Domain Manager (refer to the `start_post_script` parameter).
 

@@ -16,7 +16,7 @@ The INI files contain configuration properties in the form `Name=Value` and are 
 ### Configuration Concepts
 #### Service Name
 
-The service's name takes the form of `<domain name>:<section name>`, and is derived from the section header, `[<type>:<section name>]`, in the INI file and the value of the `DOMAIN_NAME` property.  The following example describes a Device Manager service with service name `REDHAWK_DEV:MyNode`:
+The service's name takes the form of `<domain name>:<section name>`, and is derived from the section header, `[<type>:<section name>]`, in the INI file and the value of the `DOMAIN_NAME` property.  The service's name may be used as the target for `rhadmin` commands that accept this argument. The following example describes a Device Manager service with service name `REDHAWK_DEV:MyNode`:
 
 ```
 [node:MyNode]
@@ -91,7 +91,7 @@ rhadmin reload
 The configuration files are located in system privileged directories. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
 
-## Viewing What Is Configured in the AdminService
+## Viewing Configured Services in the AdminService
 
 To view what services are currently configured in the AdminService, enter the following command:
 ```sh
@@ -114,7 +114,7 @@ The following table describes the information displayed for the configured servi
 | In Use    | The status of the service configuration, which indicates whether the configuration has been activated and is operable. |
 | Autostart | Specifies whether the service will automatically start when the AdminService starts. |
 | Enabled   | Specifies whether the service configuration can be started. This setting may be overridden on the start command with the `-f` flag. |
-| Priority  | The priority of the service's configuration. The format is `<domain priority>:<service priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting the domain itself, the lowest value for `service priority` is started first.
+| Priority  | The priority of the service's configuration. The format is `<domain priority>:<service priority>`. In a multiple domain scenario, the lowest value for the `domain priority` is started first.  When starting services in a domain, the lowest value for `service priority` is started first.
 
 To view the contents of a service's configuration file use the `getconfig` command.
 ```sh

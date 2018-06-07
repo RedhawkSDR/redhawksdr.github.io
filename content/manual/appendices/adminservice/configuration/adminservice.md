@@ -3,6 +3,9 @@ title: "AdminService Configuration"
 weight: 20
 ---
 
+This section explains how to create a custom AdminService configuration and how to configure the `rhadmin` script  used to control the AdminService.
+
+
 #### Creating a Custom AdminService Configuration
 
 To create a new AdminService configuration file, enter the following commands.
@@ -10,7 +13,6 @@ To create a new AdminService configuration file, enter the following commands.
 cd /etc/redhawk
 rhadmin config admin > adminserviced.cfg
 vi adminserviced.cfg
-adminserviced
 ```
 {{% notice note %}}
 The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
