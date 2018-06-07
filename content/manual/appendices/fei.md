@@ -69,6 +69,18 @@ RX_DIGITIZER_CHANNELIZER tuners have the optional ability to output both analog-
 The primary RX_DIGITIZER_CHANNELIZER allocation does not put out wideband digital data by default. These are optional ports, and each may or may not be present on each device.
 {{% /notice %}}
 
+### RX_SCANNER_CHANNELIZER Tuner
+
+The RX_SCANNER_CHANNELIZER tuner is an RX_DIGITIZER that also has a scanning capability (usually a built-in hardware capability).
+
+RX_SCANNER_CHANNELIZER can follow a scan plan. This plan can be a list of discrete frequencies to dwell on, or it can be a regular pattern that is followed.
+
+The transition between frequencies can be controlled by time or number of samples generated.
+
+{{% notice note %}}
+The primary RX_SCANNER_CHANNELIZER allocation does not stand on its own. A FRONTEND::scanner_allocation allocation must be accompanied by a FRONTEND::tuner_allocation accompanied on the same allocateCapacity call.
+{{% /notice %}}
+
 ### TX Tuner
 
 Although the exact functionality of the TX tuner is not yet defined, it is reserved for transmitter devices.
