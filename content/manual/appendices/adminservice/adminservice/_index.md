@@ -32,7 +32,7 @@ At system startup, the AdminService performs the following tasks:
 
 ## System Shutdown
 
-On the host system shutdown, the AdminService terminates the domain and services in the domain group by starting with the highest priority first.
+On the host system shutdown, the AdminService terminates the domain and services in the domain group in reverse priority order.
 
 ## Managing the REDHAWK Core Services Using the `rhadmin` Script
 

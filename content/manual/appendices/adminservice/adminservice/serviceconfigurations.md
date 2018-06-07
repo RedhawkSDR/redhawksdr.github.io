@@ -47,7 +47,7 @@ loglevel=%(ENV_LOGLEVEL)s
 
 Environment variables may be overridden by using the `environment` configuration property. However, only uppercase configuration parameter names can use the values of these overridden environment variables. In the following example of a node configuration, the `PYTHONPATH` configuration parameter uses the overridden environment variable.
 ```
-environment=PYTHONPATH=/usr/local/redhawk/core/lib/python
+environment=PYTHONPATH=/usr/local/redhawk/core/lib/python:/usr/local/mylibrary/lib/python
 PYTHONPATH=%(ENV_PYTHONPATH)s
 ```
 

@@ -5,7 +5,7 @@ weight: 20
 
 #### Creating a Custom AdminService Configuration
 
-To create a new AdminService configuration file and start the service, enter the following commands.
+To create a new AdminService configuration file, enter the following commands.
 ```sh
 cd /etc/redhawk
 rhadmin config admin > adminserviced.cfg
@@ -15,6 +15,21 @@ adminserviced
 {{% notice note %}}
 The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
+
+To start the AdminService as a local user, enter the following command.
+```sh
+adminserviced
+```
+
+To start the AdminService as a system service on CentOS 6, enter the following commands.
+```sh
+/sbin/service redhawk-adminservice start
+```
+
+To start the AdminService as a system service on CentOS 7, enter the following commands.
+```sh
+systemctl start redhawk-adminservice.service
+```
 
 ##### REDHAWK Service Configuration File Sections
 
