@@ -9,10 +9,12 @@ The Device Manager can be configured to start after the Domain Manager has start
 
 [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Device Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Device Manager service. To generate a generic Device Manager configuration, enter the following command.
 ```sh
+cd /etc/redhawk/nodes.d
 rhadmin config node > node.ini
 ```
 To generate a node configuration from an existing Device Manager project, enter the following command.
 ```sh
+cd /etc/redhawk/nodes.d
 rhadmin config node <path/to/node>/DeviceManager.dmd.xml <optional DomainName> > node.ini
 ```
 
@@ -160,19 +162,19 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to determine if the Device Manager started properly.
+description: Specifies an optional script used to determine if the Device Manager started properly. A script exit value of `0` indicates the Device Manager started successfully.  
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script to check the status for the Device Manager.
+description: Specifies an optional script to check the status for the Device Manager. A script exit value of `0` indicates the Device Manager is alive.  
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to get a detailed status output for the Device Manager. This is useful to return the status of each device or service for this Device Manager.
+description: Specifies an optional script used to get a detailed status output for the Device Manager. This is useful to return the status of each device or service for this Device Manager.
 
 parameter: `environment`  
 required: No  

@@ -7,10 +7,12 @@ Each REDHAWK Domain Manager service is controlled by a file in the `/etc/redhawk
 
 [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service. To generate a generic Domain Manager configuration, enter the following command.
 ```sh
+cd /etc/redhawk/domains.d
 rhadmin config domain > domain.ini
 ```
 To generate a domain configuration from an existing Domain Manager project, enter the following command.
 ```sh
+cd /etc/redhawk/domains.d
 rhadmin config domain <path/to/domain>/DomainManager.dmd.xml <optional DomainName> > domain.ini
 ```
 
@@ -152,19 +154,19 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to determine if the Domain Manager started properly.
+description: Specifies an optional script used to determine if the Domain Manager started properly. A script exit value of `0` indicates the Domain Manager started successfully.
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script to check the status for the Domain Manager.
+description: Specifies an optional script to check the status for the Domain Manager. A script exit value of `0` indicates the Domain Manager is alive.
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to get a detailed status output for the Domain Manager.
+description: Specifies an optional script used to get a detailed status output for the Domain Manager.
 
 parameter: `environment`  
 required: No  

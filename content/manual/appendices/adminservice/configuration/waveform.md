@@ -9,10 +9,12 @@ The waveform can be configured to start after the Device Manager has started up;
 
 [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example waveform configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK waveform. To generate a generic waveform configuration, enter the following command.
 ```sh
+cd /etc/redhawk/waveforms.d
 rhadmin config waveform > waveform.ini
 ```
 To generate a waveform configuration from an existing waveform project, enter the following command.
 ```sh
+cd /etc/redhawk/waveforms.d
 rhadmin config waveform <path/to/waveform>/<file>.sad.xml <DomainName> > waveform.ini
 ```
 
@@ -95,25 +97,25 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to determine if the waveform started properly.
+description: Specifies an optional script used to determine if the waveform started properly. A script exit value of `0` indicates the waveform started successfully.
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script to check the status for the waveform.
+description: Specifies an optional script to check the status for the waveform. A script exit value of `0` indicates the waveform is alive.
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies the script used to get a detailed status output for the waveform. This is useful to return a custom status string for the components in the waveform.
+description: Specifies an optional script used to get a detailed status output for the waveform. This is useful to return a custom status string for the components in the waveform.
 
 parameter: `environment`  
 required: No  
 default value: None  
 format: A list of key/value pairs in the form `key="value",key2="value2"`  
-description: Specifies whether to override existing environment variables or set new ones to be used when starting the Domain Manager.
+description: Specifies whether to override existing environment variables or set new ones to be used when starting the waveform. This value does not get passed to the components running inside the waveform.
 
 parameter: `user`  
 required: No  
