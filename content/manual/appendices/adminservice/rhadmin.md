@@ -30,7 +30,7 @@ The following table describes the `rhadmin` commands.
 {{% notice note %}}
 **`<type>`** refers to a service type: 'domain', 'nodes', or 'waveforms'.  
 **`<domain name>`** refers to the value of the `DOMAIN_NAME` INI configuration property. For example, the domain name is `REDHAWK_PROD` for the configuration property `DOMAIN_NAME=REDHAWK_PROD`.  
-**`<service name>`** derived from the section header `[<type>:<name>]` and `DOMAIN_NAME` property in a service INI file.  For example, service name is `REDHAWK_DEV:GppNode` from a node INI file that contains the section `[node:GppNode]` and configuration property `DOMAIN_NAME=REDHAWK_DEV`
+**`<service name>`** is derived from the section header `[<type>:<name>]` and `DOMAIN_NAME` property in a service INI file.  For example, service name is `REDHAWK_DEV:GppNode` from a node INI file that contains the section `[node:GppNode]` and configuration property `DOMAIN_NAME=REDHAWK_DEV`
 {{% /notice %}}
 
 ### Running Commands
