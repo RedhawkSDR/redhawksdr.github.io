@@ -91,6 +91,9 @@ rhadmin reload
 The configuration files are located in system privileged directories. Ensure that you have proper privileges to create and edit files in those directories.
 {{% /notice %}}
 
+For device manager and waveform manager services, the REDHAWK IDE can also be used to generate an example configuration file and an RPM .spec file to install it. For more information, refer to [Device Manager Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/devicemanager.md" >}}) and
+[Waveform Service]({{< relref "manual/appendices/adminservice/redhawkcoreservices/waveform.md" >}}).
+
 ## Viewing Configured Services in the AdminService
 
 To view what services are currently configured in the AdminService, enter the following command:

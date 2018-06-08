@@ -8,7 +8,7 @@ This section explains how to manage a single REDHAWK Device Manager service.  Fo
 
 
 
-### Creating a Device Service Configuration
+### Creating a Device Service Configuration Using the `rhadmin` Script
 
 To create a node service configuration, enter the following command:
 
@@ -16,6 +16,15 @@ To create a node service configuration, enter the following command:
 rhadmin config node >  <output file>.ini
 ```
 A sample configuration is created, which requires the `DOMAIN_NAME` and `NODE_NAME` configuration properties and the section's name to be specified. The section name may be used with `rhadmin` commands. For additional configuration property settings, refer to the [Device Manager Configuration File]({{< relref "manual/appendices/adminservice/configuration/devicemanager.md" >}}) . For the file to be recognized by the AdminService, the file must have an .ini extension and be installed into the proper service directory: `/etc/redhawk/nodes.d`.  
+
+#### Creating a Device Service Configuration Using the REDHAWK IDE
+
+1. In the REDHAWK IDE, to create a configuration file, click the Generate Node button in the DCD editor.
+![Generate Node Button](../../../../images/GenerateNodeButton.png)
+
+2. In the Regenerate Files dialog, check the checkbox next to the .ini file to generate it. If the .spec file is also checked, the generated .spec file includes installation for the .ini file.
+![Generate Node File Selection](../../../../images/GenerateNodeSelectIni.png)
+
 
 ### Displaying a Configuration
 

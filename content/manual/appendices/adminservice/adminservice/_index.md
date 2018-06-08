@@ -34,9 +34,10 @@ At system startup, the AdminService performs the following tasks:
 
 On the host system shutdown, the AdminService terminates the domain and services in the domain group in reverse priority order.
 
-## Managing the REDHAWK Core Services Using the `rhadmin` Script
+## Managing the REDHAWK Core Services
 
 Independent of system start up and shutdown, `rhadmin` is a command line utility used to manage the REDHAWK core services' life cycle. `rhadmin` supports the following commands to manage the service life cycle: `start`, `stop`, `restart`, and `status`. These commands can be used to manage an individual service or a group of services with the same service type or logical domain. The `rhadmin` utility can also be used to generate new configuration files for all the REDHAWK core service types.
+
 
 For more information about using `rhadmin` to manage the REDHAWK core services, refer to [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}).
 
