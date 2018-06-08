@@ -140,7 +140,7 @@ The values returned, and exceptions thrown, by the `allocateCapacity()`:
 
 Each `allocateCapacity()` call passes in a single FrontEnd Tuner Allocation structure. If multiple tuners are allocated, each tuner needs an independent `allocateCapacity()` call. Each field in the allocation structure needs to be matched against the available tuners in the device. Each field must correctly match for the allocation to be successful. If any of the properties cannot be met, the allocation throws an exception.
 
-The following table describes the tuner elements of the FRONTEND::tuner_allocation structure and how to handle requests.
+The following table describes the tuner elements of the `FRONTEND::tuner_allocation` structure and how to handle requests.
 
 ##### Tuner Allocation Properties
 | **Name**          | **Type**       | **Notes**                 | **Description** |
@@ -164,7 +164,7 @@ In the event that a device has an RFInfo input port, the center frequency for al
 
 ##### Scanner Allocation Properties
 
-To allocate the scanning functionality in a tuner that supports automatic scanning, the `FRONTEND::scanner_allocation` property must be used. This property cannot be used on its own, it needs to be passed in the same `allocateCapacity()` call with the FRONTEND::tuner_allocation property described above.
+To allocate the scanning functionality in a tuner that supports automatic scanning, the `FRONTEND::scanner_allocation` property must be used. This property cannot be used on its own, it needs to be passed in the same `allocateCapacity()` call with the `FRONTEND::tuner_allocation` property described above.
 
 The following table describes the scanning elements and how to handle requests.
 
@@ -180,7 +180,7 @@ The following table describes the scanning elements and how to handle requests.
 
 There are two methods used to perform listener allocations. The first method is to use a standard FrontEnd Allocation Structure as shown in [Tuner Allocation Properties](#tuner-allocation-properties) with the control property set to False. Setting the control property to False causes the device to look for existing tuners that meet the required properties in the rest of the FrontEnd Allocation Structure and assign a new listener tuner to that master tuner. If no tuners already exist, the request fails.
 
-The second way of allocating a listener tuner is by using a FrontEnd Listener Allocation structure FRONTEND::listener_allocation in the `allocateCapacity()` call. Passing in this FrontEnd Listener Allocation structure causes the device to create a new listener tuner that is attached to the tuner with the Allocation ID given in the structure.
+The second way of allocating a listener tuner is by using a FrontEnd Listener Allocation structure `FRONTEND::listener_allocation` in the `allocateCapacity()` call. Passing in this FrontEnd Listener Allocation structure causes the device to create a new listener tuner that is attached to the tuner with the Allocation ID given in the structure.
 
 ##### FrontEnd Listener Allocation Structure
 | **Name**                 | **Type** | **Description**                           | **Notes**                                                                                                              |
