@@ -22,7 +22,7 @@ A sample configuration is created, which requires the `DOMAIN_NAME` and `NODE_NA
 1. In the REDHAWK IDE, to create a configuration file, click the Generate Node button in the DCD editor.
 ![Generate Node Button](../../../../images/GenerateNodeButton.png)
 
-2. In the Regenerate Files dialog, check the checkbox next to the .ini file to generate it. If the .spec file is also checked, the generated .spec file includes installation for the .ini file.
+2. In the Regenerate Files dialog, check the checkbox next to the .ini file to generate it. If the .spec file is also checked, the generated .spec file will include the installation of the .ini file.
 ![Generate Node File Selection](../../../../images/GenerateNodeSelectIni.png)
 
 
