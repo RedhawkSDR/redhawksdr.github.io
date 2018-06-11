@@ -47,6 +47,8 @@ The following procedure explains how to allocate a FrontEnd tuner using the **Tu
       - RX_DIGITIZER_CHANNELIZER
       - TX
 
+    For more information about tuner types, refer to [Types of Tuners]({{< relref "manual/appendices/fei.md#types-of-tuners">}}).
+
 5.  In **Center Frequency (MHz)**, specify the center frequency.
     {{% notice note %}}
 Bandwidth and sample rate must be specified during allocation. For an allocation to be successful, the tuner must be able to provide a value that is greater than or equal to the requested value without exceeding the appropriate tolerance value specified. Requesting a bandwidth or sample rate of zero (0.0) indicates to the tuner that any value is acceptable and that the tolerance values can be ignored. Requesting 0 typically results in the lowest value the tuner is capable of providing while still satisfying the remainder of the allocation request. If the **Any Value** checkbox is selected, a value of 0 is requested.
