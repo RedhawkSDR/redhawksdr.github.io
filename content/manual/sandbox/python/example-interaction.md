@@ -68,12 +68,12 @@ True
 
 {{% notice note %}}
 If the connections are ambiguous (multiple uses ports or multiple provides ports have matching types), an error occurs. To resolve the ambiguity, `usesPortName` and/or `providesPortName` must be specified as arguments to the function. For example, the following call specifies `providesPortName` as an argument.
-{{% /notice %}}
 
 ```py
 >>> my_comp.connect(another_comp, providesPortName="float_in_1")
 ```
 
+<<<<<<< HEAD
 #### Connection Manager
 
 A REDHAWK DomainManager contains a Connection Manager that provides systemic benefits for the management of connections between endpoints that can come and go. The underlying endpoints are specialized data strutures and CORBA references required to complete the connection, which complicates the creation of endpoints. The Python Sandbox already contains Pythonic representations of these Domain objects, which reduce the need to retrieve the CORBA references. The Python Sandbox contains helpers that use these representations for the creation of endpoints.
@@ -91,6 +91,9 @@ A REDHAWK DomainManager contains a Connection Manager that provides systemic ben
 #### Sending and Receiving Data
 
 Multiple [helpers]({{< relref "manual/sandbox/python/sources-and-sinks.md" >}}) are available in the Sandbox that can be connected to running components and devices.
+=======
+{{% /notice %}}
+>>>>>>> origin/develop-2.0
 
 #### Setting Component Log Levels
 
