@@ -129,7 +129,7 @@ Even though it is the property view, the Tuner port is exercised to effect the r
 
 #### Plotting a Tuned Receiver
 
-The process described in only applies to a single-channel system. In multi-channel devices, a single port is used to send out all the data, so additional structures are used to identify which channel to plot.
+The process described in [Plotting BulkiIO Ports]({{< relref "manual/exploring-domain/plotting-bulkio-ports.md" >}}) only applies to a single-channel system. In multi-channel devices, a single port is used to send out all the data, so additional structures are used to identify which channel to plot.
 
 1.  To plot an FEI device, right-click the allocated FrontEnd tuner and select **Plot Port Data**, or any other **Plot Port** option:
 
