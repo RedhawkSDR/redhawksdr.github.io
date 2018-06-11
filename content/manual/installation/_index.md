@@ -174,7 +174,7 @@ The `NameService` line provides information about how to reach the CORBA naming 
     sudo systemctl enable omniEvents.service
     ```
 
-For more information about omniORB configuration file settings (`/etc/omniORB.cfg`), refer to Chapter 4 of the omniORB User’s Guide (<http://omniorb.sourceforge.net/omni41/omniORB/omniORB004.html>.
+For more information about omniORB configuration file settings (`/etc/omniORB.cfg`), refer to Chapter 4 of the omniORB User’s Guide (<http://omniorb.sourceforge.net/omni41/omniORB/omniORB004.html>).
 
 ### Configuring omniORB for Distributed Systems
 
