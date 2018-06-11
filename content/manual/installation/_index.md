@@ -219,11 +219,11 @@ Neither `omniEvents` nor `omniNames` needs to be running on this computer.
     The Device Manager and Domain Manager are displayed.
 
 {{% notice note %}}
-omniORB may have trouble automatically resolving its location. In this case, it may be necessary to set the endpoints in the `omniORB.cfg` files by adding the following to each `omniORB.cfg` file: `endpoint = giop:tcp:<IP address of achine>`. You must restart `omniEvents` and `omniNames` for these changes to take effect.
+omniORB may have trouble automatically resolving its location. In this case, it may be necessary to set the endpoints in the `omniORB.cfg` files by adding the following to each `omniORB.cfg` file: `endpoint = giop:tcp:<IP address of machine>`. You must restart `omniEvents` and `omniNames` for these changes to take effect.
 {{% /notice %}}
 
 {{% notice note %}}
-Run `rh_net_diag` to help diagnose any problems. Refer to for more information on how to use `rh_net_diag`.
+Run `rh_net_diag` to help diagnose any problems. Refer to [Troubleshooting]({{<relref "manual/appendices/troubleshooting.md" >}}) for more information on how to use `rh_net_diag`.
 {{% /notice %}}
 
 ## Configuring JacORB to Support the IDE
