@@ -63,7 +63,7 @@ This section provides an overview of how to launch a waveform as an application 
 
 #### Launching a Domain
 
-Begin by [starting a Domain Manager and Device Manager]({{< relref "manual/runtime-environment/launching-a-domain.md" >}})
+Begin by [starting a Domain Manager and Device Manager]({{< relref "manual/runtime-environment/launching-a-domain.md" >}}).
 
 #### Launch the Waveform
 
