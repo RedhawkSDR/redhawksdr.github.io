@@ -38,6 +38,8 @@ The following procedure explains how to allocate a FrontEnd tuner using the **Al
       - TX
       - RX_SCANNER_DIGITIZER
 
+    For more information about tuner types, refer to [Types of Tuners]({{< relref "manual/appendices/fei.md#types-of-tuners">}}).
+
 5.  In **Center Frequency (MHz)**, specify the center frequency.
     {{% notice note %}}
 Bandwidth and sample rate must be specified during allocation. For an allocation to be successful, the tuner must be able to provide a value that is greater than or equal to the requested value without exceeding the appropriate tolerance value specified. Requesting a bandwidth or sample rate of zero (0.0) indicates to the tuner that any value is acceptable and that the tolerance values can be ignored. Requesting 0 typically results in the lowest value the tuner is capable of providing while still satisfying the remainder of the allocation request. If the **Any Value** checkbox is selected, a value of 0 is requested.
@@ -171,7 +173,7 @@ Even though it is the property view, the Tuner port is exercised to effect the r
 
 #### Plotting a Tuned Receiver
 
-The process described in only applies to a single-channel system. In multi-channel devices, a single port is used to send out all the data, so additional structures are used to identify which channel to plot.
+The process described in [Plotting BulkiIO Ports]({{< relref "manual/exploring-domain/plotting-bulkio-ports.md" >}}) only applies to a single-channel system. In multi-channel devices, a single port is used to send out all the data, so additional structures are used to identify which channel to plot.
 
 1.  To plot an FEI device, right-click the allocated FrontEnd tuner and select **Plot Port Data**, or any other **Plot Port** option:
 

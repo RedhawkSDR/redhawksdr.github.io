@@ -73,7 +73,7 @@ When editing a FrontEnd Device Project:
   - Before adding user-defined FEI Tuner Status properties, check to see if relevant pre-defined FEI Tuner Status properties are already available. Use pre-defined FEI Tuner Status properties whenever possible.
 {{% /notice %}}
 
-To add or remove optional FEI Tuner Status properties using the **FrontEnd Interfaces Tuner Status Customization** dialog, on the Overview tab of the project, click the **Edit FrontEnd properties** icon. The same dialog used to define the FEI device’s tuner status property on the creation wizard () is displayed. Add or remove the properties and click **Finish**.
+To add or remove optional FEI Tuner Status properties using the **FrontEnd Interfaces Tuner Status Customization** dialog, on the Overview tab of the project, click the **Edit FrontEnd properties** icon. The same dialog used to define the FEI device’s tuner status property on the creation wizard is displayed. Add or remove the properties and click **Finish**.
 
 #### Generating and Customizing the Source Code
 
