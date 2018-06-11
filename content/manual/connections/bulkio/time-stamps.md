@@ -3,7 +3,7 @@ title: "Time Stamps"
 weight: 50
 ---
 
-BulkIO uses `BULKIO::PrecisionUTCTime` time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The [table](#elements-in-bulkio-precisionutctime) below describes the different elements making up the `BULKIO::PrecisionUTCTime` structure.
+BulkIO uses `BULKIO::PrecisionUTCTime` time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The following table describes the different elements making up the `BULKIO::PrecisionUTCTime` structure.
 
 #### Elements in `BULKIO::PrecisionUTCTime`
 
@@ -15,7 +15,7 @@ BulkIO uses `BULKIO::PrecisionUTCTime` time stamps that denote the time since 12
 | `twsec`        | Number of seconds since 12:00 AM January 1, 1970 (Unix epoch)    | double   |
 | `tfsec`        | Number of fractional seconds (0.0 to 1.0) to be added to `twsec` | double   |
 
-Two of the elements described in the [table](#elements-in-bulkio-precisionutctime) correspond to predefined values. `tcstatus` can only take two values, `TCS_INVALID` (0), and `TCS_VALID` (1), showing whether the time stamp is valid or not. Invalid time stamps do not contain valid time data and should be ignored. `tcmode` is the method by which the timestamp was obtained, but this use has since been deprecated, and this value is ignored. The default value for `tcmode` is 1.
+Two of the elements described in the the table above correspond to predefined values. `tcstatus` can only take two values, `TCS_INVALID` (0), and `TCS_VALID` (1), showing whether the time stamp is valid or not. Invalid time stamps do not contain valid time data and should be ignored. `tcmode` is the method by which the timestamp was obtained, but this use has since been deprecated, and this value is ignored. The default value for `tcmode` is 1.
 
 The following code snippets provide examples of how to construct a time stamp to be sent in the `pushPacket()` call. The `now()` method returns the current time of day.
 
