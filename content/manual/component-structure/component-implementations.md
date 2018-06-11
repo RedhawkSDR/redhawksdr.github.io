@@ -1,6 +1,6 @@
 ---
 title: "Component Implementations"
-weight: 50
+weight: 40
 ---
 
 Components may specify particular dependencies such as Operating System (OS), processor architecture, or required device properties (e.g., processor speed or memory capacity). Setting these dependencies ensures that a component is deployed to an appropriate device at runtime.
