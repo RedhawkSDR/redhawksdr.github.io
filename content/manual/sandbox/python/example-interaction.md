@@ -68,11 +68,12 @@ True
 
 {{% notice note %}}
 If the connections are ambiguous (multiple uses ports or multiple provides ports have matching types), an error occurs. To resolve the ambiguity, `usesPortName` and/or `providesPortName` must be specified as arguments to the function. For example, the following call specifies `providesPortName` as an argument.
-{{% /notice %}}
 
 ```py
 >>> my_comp.connect(another_comp, providesPortName="float_in_1")
 ```
+
+{{% /notice %}}
 
 #### Setting Component Log Levels
 
