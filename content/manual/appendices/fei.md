@@ -308,7 +308,7 @@ When a device is of type RX_SCANNER_DIGITIZER, there are additional fields that 
 
 | **Name**            | **Type** | **Description**                                  | **Notes**                                                                                                                                                                                                                                               |
 | :------------------ | :------- | :----------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `scan_mode_enabled`        | boolean   | Described whether or not a scan plan is running on this tuner.                       |  |
+| `scan_mode_enabled`        | boolean   | Describes whether or not a scan plan is running on this tuner.                       |  |
 | `supports_scan`            | boolean   | Describes whether or not this tuner can support a scan plan.  | Scan plans may not necessarily be available to all tuners in a device. |
 
 #### Optional Status Elements
