@@ -223,3 +223,5 @@ Use the following commands to capture an approximately one second cut from a wav
 ```
 
 When the Sandbox exits, any connections made between Sandbox objects and domain objects are broken to limit interference with normal domain operation.
+
+For more details on using the Sandbox, refer to [Sandbox]({{< relref "manual/sandbox/_index.md" >}}).
