@@ -34,7 +34,8 @@ The REDHAWK IDE contains the following controls for interacting with the active 
       - Line
       - Point
       - Raster
-      - Change Frame Size: Changes the frame size.
+
+  - Change Frame Size: Changes the frame size.
 
     {{% notice tip %}}
 The red icon next to the Change Plot type arrow is a toggle button that when clicked, changes the active plot to display either the Line or the Raster plot.
