@@ -41,10 +41,10 @@ Instructions for inspecting the SAD file are below:
 
 1.  Open the `myWaveform.sad.xml` tab of the waveform Editor.
 2.  Look through the SAD file and identify:
-    1.  The location of the two SPD files used in this waveform (remember that this file location is in reference to the `$SDRROOT`)
-    2.  The Assembly Controller
-    3.  The connection between the two components
-    4.  The external port is set in the Diagram Tab
-    5.  The start order of each component
-    6.  The property is changed on the `SigGen` component
+    -  The location of the two SPD files used in this waveform (remember that this file location is in reference to the `$SDRROOT`)
+    -  The Assembly Controller
+    -  The connection between the two components
+    -  The external port is set in the Diagram Tab
+    -  The start order of each component
+    -  The property is changed on the `SigGen` component
 3.  Before continuing, return to the Diagram tab and change the **dataDouble_out** port so that it is no longer marked as an external port.
