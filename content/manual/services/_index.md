@@ -3,7 +3,7 @@ title: "Services"
 weight: 80
 ---
 
-In the context of REDHAWK, infrastructure software is managed by the [Device Manager]({{< relref "manual/glossary/_index.md#device-manager" >}}). Infrastructure software can take two forms: [hardware management]({{< relref "manual/nodes/_index.md" >}}) and system services. System services are the equivalent to Linux services like an HTTP server; the service does not directly control hardware but is some facility that becomes automatically available when the host is started.
+In the context of REDHAWK, infrastructure software is managed by the [Device Manager]({{< relref "manual/glossary/_index.md#device-manager" >}}). Infrastructure software can take two forms: hardware management and system services. System services are the equivalent to Linux services like an HTTP server; the service does not directly control hardware but is some facility that becomes automatically available when the host is started.
 
 ## Management
 
@@ -17,7 +17,7 @@ A service, much like a component or device, is a binary file and a set of XML de
 
 REDHAWK does not include any standard service interfaces; the [SCA]({{< relref "manual/appendices/acronyms.md#sca" >}})  specification includes a logging service, but in [REDHAWK logging]({{< relref "manual/logging/_index.md" >}}) is performed through `log4j`/`log4cxx`, not a service.  To use a service, it either needs to use one of REDHAWK’s standard interfaces or it needs to implement a specialized interface supporting some specific behavior.
 
-A service is [created and torn-down](#management) by the Device Manager.  Because there is no defined interface for the service, services do not support the `LifeCycle` interface, and more importantly, the `releaseObject()` method. Since there is no release method, the Device Manager issues operating-system level signals to terminate the service. It is the service developer’s task to perform whatever cleanup functionality needs to be performed in response to the receipt of a signal from the operation system.
+A service is created and torn-down by the Device Manager.  Because there is no defined interface for the service, services do not support the `LifeCycle` interface, and more importantly, the `releaseObject()` method. Since there is no release method, the Device Manager issues operating-system level signals to terminate the service. It is the service developer’s task to perform whatever cleanup functionality needs to be performed in response to the receipt of a signal from the operation system.
 
 ## Finding a Service
 
