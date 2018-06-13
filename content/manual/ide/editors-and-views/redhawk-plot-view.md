@@ -11,6 +11,8 @@ Within the plot, users can manipulate the plot as follows:
 
   - Zoom In: Left-click and drag to form a box to zoom in on a portion of the plot.
   - Zoom Out: Right-click to zoom out a single level.
+  - Open Menu: Center-click to bring up the NeXtMidas plot menu.
+  - Close Menu: Right-click an open NeXtMidas plot menu to close the pop-up menu.
 
 The REDHAWK IDE contains the following controls for interacting with the active plot:
 
