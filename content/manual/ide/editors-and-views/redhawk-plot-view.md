@@ -26,7 +26,15 @@ The REDHAWK IDE contains the following controls for interacting with the active 
       - 10 Log
       - 20 Log
 
-  - Change FFT Size: Changes the FFT size.
+  - Change FFT Size: Changes the FFT size. The options include:
+
+      - 1k
+      - 2k
+      - 4k
+      - 8k
+      - 16k
+      - 32k
+      - 64k
 
   - Change Plot Type: Changes the plot type. The types include:
 
