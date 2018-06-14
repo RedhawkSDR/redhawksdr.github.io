@@ -3,7 +3,7 @@ title: "Port Monitor View"
 weight: 100
 ---
 
-The **Port Monitor** view enables you to monitor the amount of data flowing out of or into a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing. For more information, refer to [Port Monitoring in a Diagram](#port-monitoring-in-a-diagram).
+The **Port Monitor** view enables you to monitor the amount of data flowing out of or into a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing.
 
 To open the **Port Monitor** view, right-click the port of a started component and select **Monitor Ports** from the context menu:
 
