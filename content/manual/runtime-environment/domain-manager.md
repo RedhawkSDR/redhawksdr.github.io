@@ -61,7 +61,7 @@ nodeBooter -D --useloglib
 
 ### Persistence Store
 
-A unique feature of the Domain Manager is the ability to recover from catastrophic failures through domain Persistence. In order to make use of Persistence, a compile-time option must be specified. Ensure that the Core Framework has been compiled from source and that `./configure` was run with `--enable-persistence=persist_type`; see: [Installing the Framework from Source]({{< relref "manual/appendices/source-installation.md#installing-the-framework-from-source" >}}).
+A unique feature of the Domain Manager is the ability to recover from catastrophic failures through domain Persistence. In order to make use of Persistence, a compile-time option must be specified. Ensure that the Core Framework has been compiled from source and that `./configure` was run with `--enable-persistence=<type>`; see: [Installing the Framework from Source]({{< relref "manual/appendices/source-installation.md#installing-the-framework-from-source" >}}).
 
 With this feature enabled, all bookkeeping data structures that are used to maintain information about services, devices, Device Managers, Applications and Application Factories are written to a database whenever any change is made to them. This database file needs to be specified upon launch of the Domain Manager with the `--dburl <file path>` argument:
 
