@@ -3,7 +3,7 @@ title: "Domain Manager Service Configuration File"
 weight: 30
 ---
 
-Each REDHAWK Domain Manager service is controlled by a file in the `/etc/redhawk/domains.d` directory. Default configuration parameters are stored in `/etc/redhawk/init.d/domain.defaults`.
+Each REDHAWK Domain Manager service is controlled by a file in the `/etc/redhawk/domains.d` directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the `/etc/redhawk/init.d/domain.defaults` file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the `/etc/redhawk/init.d/domain.defaults` file).
 
 [rhadmin]({{< relref "manual/appendices/adminservice/rhadmin.md" >}}) can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service. To generate a generic Domain Manager configuration, enter the following command.
 ```sh
@@ -31,12 +31,6 @@ required: Yes
 default value: None  
 format: Name with no spaces or periods (for example, `REDHAWK_DEV`)  
 description: The domain name to be assigned to the Domain Manager process.
-
-parameter: `DMD_FILE`  
-required: No  
-default: `/domain/DomainManager.dmd.xml`  
-format: `$SDRROOT/dom` relative path to a DMD file  
-description: The path to the DMD file (`DomainManager.dmd.xml` file) describing the Domain Manager.
 
 parameter: `FORCE_REBIND`  
 required: No  
@@ -139,16 +133,6 @@ parameter: `autostart`
 required: No  
 default value: `True`  
 description: Specifies whether to automatically start this process when the AdminService starts, if `enable` is True.
-
-parameter: `waitforprevious`  
-required: No  
-default value: `1`  
-description: The number of seconds to wait for the previous higher priority process to start before trying to start this process.
-
-parameter: `failafterwait`  
-required: No  
-default value: `False`  
-description: Specifies whether to abort starting this domain if `waitforprevious` has expired and the previous process has not been declared started yet.
 
 parameter: `started_status_script`  
 required: No  
