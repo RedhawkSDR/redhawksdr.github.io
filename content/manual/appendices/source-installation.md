@@ -14,7 +14,7 @@ Building REDHAWK from source requires a few additional dependencies beyond those
 
 ### Installing the Framework from Source
 
-In order to install the Core Framework from source, the `redhawk-src-<version>.tar.gz` must be downloaded.
+To install the Core Framework from source, the `redhawk-src-<version>.tar.gz` must be downloaded.
 
 ```bash
 wget https://github.com/RedhawkSDR/redhawk/releases/download/<version>/redhawk-src-<version>.tar.gz
@@ -38,7 +38,7 @@ cd redhawk-src-<version>/
 ```
 
 {{% notice note %}}
-If you wish to preserve the environment used to compile the source, the following lines should be added to `.bashrc`:
+If you wish to preserve the environment used to compile the source, add the following lines to `.bashrc`:
 
 ```bash
 export OSSIEHOME=/usr/local/redhawk/core
@@ -46,6 +46,29 @@ export SDRROOT=/var/redhawk/sdr
 . $OSSIEHOME/environment-setup
 ```
 {{% /notice %}}
+
+To build the the source code with or without optional features, provide the appropriate build option to the `configure` setup. The following table describes some common options.
+
+| **Option**   | **Description** |
+| :-------------- | :-------- |
+| `--enable-affinity` | Enable numa affinity processing.  |
+| `--enable-persistence=<type>` | Enable persistence support. Supported types: `bdb`, `gdbm`, `sqlite`.  |
+| `--disable-log4cxx`  | Disable log4cxx support.   |
+
+
+To view a complete list of configurations, enter the following commands:
+
+```bash
+cd <redhawk src directory>
+cd redhawk/src
+./reconf
+./configure --help
+```
+To provide any of the build options, edit the `redhawk-install.sh` script and change the following line to include the appropriate option:
+
+```bash
+./configure
+```
 
 ### Setting Environment Variables
 
