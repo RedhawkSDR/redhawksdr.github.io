@@ -59,7 +59,7 @@ The **New Control Panel Project Wizard** is a two to three page wizard that walk
 
 ### REDHAWK Device Project
 
-The **New device Project Wizard** is a three page wizard that walks the user through creating a new REDHAWK device, selecting a programming language, and selecting a code generator. Many of the fields found within the device project wizard are also found within the component project wizard. Fields common to all new project wizards are defined in .
+The **New device Project Wizard** is a three page wizard that walks the user through creating a new REDHAWK device, selecting a programming language, and selecting a code generator. Many of the fields found within the device project wizard are also found within the component project wizard. Fields common to all new project wizards are defined in [Common Fields](#common-fields).
 
 Page one of the wizard contains:
 
