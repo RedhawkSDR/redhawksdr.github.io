@@ -137,7 +137,7 @@ The tuner interface provides the ability to set parameters like center frequency
 If using an `RFInfo` port, it may be useful to store the `RFInfo` packet as part of the device because it is not stored within the port.
     {{% /notice %}}
 
-    For each function on a port definition, a callback is created in the device. This callback takes as arguments the same argument list that is provided to by the port function with the exception of the types for the arguments. Where possible, the type for each of the arguments is a C++ type that is easier to use than the corresponding CORBA type. For example, in the case of a string argument, the argument on the port is of type char*, while the argument on the callback is of type std::string&. A thorough description of the different port functions is available in [the FEI description]({{< relref "manual/appendices/fei.md#command-and-control" >}}).
+    For each function on a port definition, a callback is created in the device. This callback takes as arguments the same argument list that is provided by the port function with the exception of the types for the arguments. Where possible, the type for each of the arguments is a C++ type that is easier to use than the corresponding CORBA type. For example, in the case of a string argument, the argument on the port is of type char*, while the argument on the callback is of type std::string&. A thorough description of the different port functions is available in [the FEI description]({{< relref "manual/appendices/fei.md#command-and-control" >}}).
 
 #### Installing the FEI Device
 

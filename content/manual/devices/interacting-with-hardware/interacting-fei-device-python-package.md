@@ -58,7 +58,7 @@ Tuners that have a built-in scanning capability can also be accessed through Pyt
 >>> dev.allocateCapacity([allocation, scan_alloc])
 ```
 
-The allocation does not setup the scan plan, it just requests a device that will support the type of scan that is required. To create the plan, the strategy for the scanner needs to be created. In this case, the strategy will be a single span will be scanned between 1.0 MHz and 1.1 MHz in 10 kHz increments, with a retune every 150 ms. To setup the strategy, and start the scan use the following commands:
+The allocation does not setup the scan plan, it just requests a device that will support the type of scan that is required. To create the plan, the strategy for the scanner needs to be created. In this case, the strategy will be a single span that will be scanned between 1.0 MHz and 1.1 MHz in 10 kHz increments, with a retune every 150 ms. To setup the strategy and start the scan, use the following commands:
 
 ```py
 >>> from redhawk.frontendInterfaces import FRONTEND
