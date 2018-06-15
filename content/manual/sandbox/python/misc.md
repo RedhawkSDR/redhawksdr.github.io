@@ -54,20 +54,20 @@ To process individual components from the command line, use the `proc()` functio
 ```
 
 ##### `proc()` Function Arguments
-| **Name**            | **Description**                                                                                                                   |
-| :------------------ | :-------------------------------------------------------------------------------------------------------------------------------- |
-| `<first argument>`  | Specifies the name of the component to run (required).                                                                            |
-| `<second argument>` | Specifies the name of the input file (required).                                                                                  |
-| `sink`              | Specifies the name of the output file (optional). If this argument is omitted, exit the `proc()` function with Ctrl+C.            |
-| `sourceFmt`         | Specifies the format for the input file (optional).                                                                               |
-|                     | \- `8/16/32/64` bit resolution                                                                                                    |
-|                     | \- `u/t`: unsigned/signed                                                                                                         |
-|                     | \- `c`: complex (real if omitted)                                                                                                 |
-|                     | \- `r`: big endian (little endian if omitted)                                                                                     |
-| `sinkFmt`           | Specifies the format for the output file (optional).                                                                              |
-| `sampleRate`        | Specifies the sampling rate for the input file (optional).                                                                        |
-| `execparams`        | Specifies the dictionary describing properties (of kind execparam or property) to be passed as command-line arguments (optional). |
-| `configure`         | Specifies the dictionary describing properties (of kind configure or property) to be over-ridden (optional).                      |
-| `providesPortName`  | Specifies the component input port name (optional).                                                                               |
-| `usesPortName`      | Specifies the component output port name (optional).                                                                              |
-| `timeout`           | Specifies how long the `proc()` function runs before exiting (optional).                                                          |
+| **Name**            | **Description**                                                                                                                                |
+| :------------------ | :--------------------------------------------------------------------------------------------------------------------------------              |
+| `<first argument>`  | Specifies the name of the component to run (required).                                                                                         |
+| `<second argument>` | Specifies the name of the input file (required).                                                                                               |
+| `sink`              | Specifies the name of the output file (optional). If this argument is omitted, exit the `proc()` function with Ctrl+C.                         |
+| `sourceFmt`         | Specifies the format for the input file (optional).                                                                                            |
+|                     | \- `8/16/32/64` bit resolution                                                                                                                 |
+|                     | \- `u/t`: unsigned/signed                                                                                                                      |
+|                     | \- `c`: complex (real if omitted)                                                                                                              |
+|                     | \- `r`: big endian (little endian if omitted)                                                                                                  |
+| `sinkFmt`           | Specifies the format for the output file (optional).                                                                                           |
+| `sampleRate`        | Specifies the sampling rate for the input file (optional).                                                                                     |
+| `execparams`        | Specifies the dictionary describing properties (of kind property with command line enabled) to be passed as command-line arguments (optional). |
+| `configure`         | Specifies the dictionary describing properties (of kind configure or property) to be over-ridden (optional).                                   |
+| `providesPortName`  | Specifies the component input port name (optional).                                                                                            |
+| `usesPortName`      | Specifies the component output port name (optional).                                                                                           |
+| `timeout`           | Specifies how long the `proc()` function runs before exiting (optional).                                                                       |

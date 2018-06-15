@@ -60,19 +60,23 @@ The following example demonstrates how to launch a device named `SigGen` from th
 >>> my_dev = sb.launch("rh.SigGen")
 ```
 
-The `execparams` or `property` kind properties for a component may be overridden by command line at launch time by passing a Python dictionary of parameter names and values to the keyword argument `execparams`:
+The `property` kind property for a component may be overridden by command line at launch time by passing a Python dictionary of parameter names and values to the keyword argument `execparams`:
 
 ```py
 >>> my_comp = sb.launch("MyComponent", execparams={"EXECPARAM_1": "value"})
 ```
 
-In the case of components and devices, after the process is launched and the component is initialized, the component’s `configure` and `property` kind properties are set to their default values as listed in the PRF file. The default values for this initial calls to `configure()` and `initializeProperties()` may be overridden by passing a Python dictionary of property names and values to the keyword argument `configure`:
+In the case of components and devices, after the process is launched and the component is initialized, the component’s `property` kind properties are set to their default values as listed in the PRF file. The default values for this initial call to `initializeProperties()` may be overridden by passing a Python dictionary of property names and values to the keyword argument `configure`:
 
 ```py
 >>> siggen = sb.launch("rh.SigGen", configure={"sample_rate":100e3,
 ...                                         "frequency":22e3,
 ...                                         "shape":"square"})
 ```
+
+{{% notice note %}}
+The execparams property is deprecated, but may be in use by legacy systems.  See the documentation for pre-REDHAWK 2.0 releases for details about its use. The execparams property has been superseded by the use of the property kind property with command line enabled.
+{{% /notice %}}
 
 By default, the Sandbox selects the first component implementation whose entry point exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
 
@@ -92,7 +96,7 @@ The component and gdb are run in separate processes. Exiting gdb closes the wind
 
 #### Properties
 
-In addition to the standard REDHAWK `query()` and `configure()` functions, the Sandbox presents a simplified interface to properties for components and devices. Configure properties can be accessed as attributes on the component object:
+In addition to the standard REDHAWK `query()` and `configure()` functions, the Sandbox presents a simplified interface to properties for components and devices. Properties can be accessed as attributes on the component object:
 
 ```py
 >>> my_comp.string_prop = "Hello World!"
@@ -100,11 +104,15 @@ In addition to the standard REDHAWK `query()` and `configure()` functions, the S
 1
 ```
 
+{{% notice note %}}
+The configure() initial call is deprecated, but may be in use by legacy systems.  See the documentation for REDHAWK 1.X releases for details about its use. The configure() initial call has been superseded by the use of the initializeProperties() initial calls, yet both implementations still use the configure argument to override default property names and values for components and devices.
+{{% /notice %}}
+
 Property names are taken from the component PRF file, with any characters that are invalid for Python identifiers replaced by an underscore.
 
 The current value of properties with a mode of “readonly” or “readwrite” may be inspected. Properties with a mode of “readwrite” or “writeonly” can be assigned a new value.
 
-To view the configure properties that are available for a given component, along with their types and current and default values, use the `api()` function.
+To view the properties that are available for a given component, along with their types and current and default values, use the `api()` function.
 
 Simple properties with numeric types can be assigned from any Python numeric type:
 
