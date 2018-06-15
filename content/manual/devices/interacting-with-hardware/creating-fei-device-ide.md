@@ -93,7 +93,7 @@ To add or remove optional FEI Tuner Status properties using the **FrontEnd Inter
 
     There are five functions that contain a default implementation that should be modified to match the desired behavior. These functions are `constructor`, `deviceEnable`, `deviceDisable`, ` deviceSetTuning`, and `deviceDeleteTuning`. The `constructor` function is called when the device is instantiated. During allocation of an FEI device, `deviceSetTuning` is called and, if successful, `deviceEnable` is called. During deallocation, `deviceDisable` is called followed by a call to `deviceDeleteTuning`.
 
-    For scanners, the additional methods `deviceSetTuningScan`, `setScanStrategy`, `setScanStartTime`, `getScanStatus` must be modified to provide the scanner capability.
+    For scanners, the additional method `deviceSetTuningScan` must be modified to provide the scanner capability.
 
 3.  Add source code to allocate and setup a tuner channel.
 
@@ -114,10 +114,7 @@ Each of the following functions have `fts` and `tuner_id` passed in as parameter
     ##### Additional functions/methods in the generated scanner code
     | **Function/Method**   | **Description**  |
     | :-------------------- | :---------------------- |
-    | `deviceSetTuningScan` | Called instead of `deviceSetTuning` when a scanner allocation is made. |
-    | `setScanStrategy`     | Called by the user to provide a plan for what frequencies the scanner will cover and how it will cover them. Validate the request and store the plan. |
-    | `setScanStartTime`    | Called by the user to specify when a scan should start. At the specified time, the scanner should begin outputting data according to the scan plan. |
-    | `getScanStatus`       | Provide the status of all current and scheduled scans |
+    | `deviceSetTuningScan` | Called instead of `deviceSetTuning` when a scanner allocation is made. If the allocation does not contain an accompanying scanning allocation, the function deviceSetTuning is called instead. |
 
     In addition to the code required for allocation and deallocation, information used to identify the target device at run-time must be added to the main class. The recommended method for dynamically identifying a target device is through configuration of a property. For example, configuring a property with an IP address or some other unique identifier allows the FEI device to identify the specific target device.
 4.  Add source code to interact with the target hardware.
@@ -139,6 +136,8 @@ The tuner interface provides the ability to set parameters like center frequency
     {{% notice note %}}
 If using an `RFInfo` port, it may be useful to store the `RFInfo` packet as part of the device because it is not stored within the port.
     {{% /notice %}}
+
+    For each function on a port definition, a callback is created in the device. This callback takes as arguments the same argument list that is provided to by the port function with the exception of the types for the arguments. Where possible, the type for each of the arguments is a C++ type that is easier to use than the corresponding CORBA type. For example, in the case of a string argument, the argument on the port is of type char*, while the argument on the callback is of type std::string&. A thorough description of the different port functions is available in [the FEI description]({{< relref "manual/appendices/fei.md#command-and-control" >}}).
 
 #### Installing the FEI Device
 

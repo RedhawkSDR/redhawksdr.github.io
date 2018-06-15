@@ -48,3 +48,26 @@ To allocate a listener to any tuner with a particular set of values, use the fol
 ```
 
 Deallocation of listeners follows the same pattern as the deallocation of tuners.
+
+#### Scanning Tuners
+
+Tuners that have a built-in scanning capability can also be accessed through Python helpers. Assuming that the above device is also scanning-capable, to create a scanning allocation that spans between 1 MHz and 1.1 MHz and the retuning rate will be no less than 100 ms, use the following command:
+
+```py
+>>> scan_alloc = frontend.createScannerAllocation(min_freq=1e6, max_freq=1.1e6, mode='SPAN_SCAN', control_mode='TIME_BASED', control_limit=0.1)
+>>> dev.allocateCapacity([allocation, scan_alloc])
+```
+
+The allocation does not setup the scan plan, it just requests a device that will support the type of scan that is required. To create the plan, the strategy for the scanner needs to be created. In this case, the strategy will be a single span will be scanned between 1.0 MHz and 1.1 MHz in 10 kHz increments, with a retune every 150 ms. To setup the strategy, and start the scan use the following commands:
+
+```py
+>>> from redhawk.frontendInterfaces import FRONTEND
+>>> from ossie.utils import bulkio
+>>> scan_spans = [FRONTEND.ScanningTuner.ScanSpanRange(1e6, 1.1e6, 1e4)]
+>>> scan_strategy=FRONTEND.ScanningTuner.ScanStrategy(FRONTEND.ScanningTuner.SPAN_SCAN, FRONTEND.ScanningTuner.ScanModeDefinition(freq_scan_list=scan_spans), FRONTEND.ScanningTuner.TIME_BASED, 0.15)
+>>> port = dev.getPort("DigitalScanningTuner_in")
+>>> port.setScanStrategy("someid", scan_strategy)
+>>> port.setScanStartTime("someid", bulkio.createCPUTimestamp())
+```
+
+Note that the set of frequencies that will be spanned can extend over multiple non-contiguous spans. To setup these non-contiguous spans, use multiple instances of ScanSpanRange in the scan_spans list.

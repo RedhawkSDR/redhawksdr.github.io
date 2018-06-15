@@ -198,21 +198,29 @@ The tuner control IDL describes two interfaces for control. The first is the Ana
 |`string getTunerGroupId(in string id)`   | Retrieves the group ID (may be empty) for this Allocation ID.  |
 |`string getTunerRfFlowId(in string id)`   | Retrieves the RF flow ID (may be empty) for this Allocation ID.  |
 |`CF::Properties getTunerStatus(in string id)`   | Key/Value pair of entire tuner status structure. Note: The return is a sequence of simple properties, not a single struct property.  |
-|`void setTunerCenterFrequency(in string ID,  in double freq)`   | Set the current center frequency in Hz.  |
+|`void setTunerCenterFrequency(in string id,  in double freq)`   | Set the current center frequency in Hz.  |
 |`double getTunerCenterFrequency(in string id)`   | Get the current center frequency in Hz.  |
-|`void setTunerBandwidth(in string ID, in double bw)`   | Set the current bandwidth in Hz.  |
+|`void setTunerBandwidth(in string id, in double bw)`   | Set the current bandwidth in Hz.  |
 |`double getTunerBandwidth(in string id)`   | 	Get the current bandwidth in Hz.  |
-|`void setTunerAgcEnable(in string ID, in boolean enable)`  | 	Enable or disable the Auto Gain Control (AGC). True indicates that the AGC should be enabled.  |
+|`void setTunerAgcEnable(in string id, in boolean enable)`  | 	Enable or disable the Auto Gain Control (AGC). True indicates that the AGC should be enabled.  |
 |`boolean getTunerAgcEnable(in string id)` | 	Get the current status of AGC. True indicates enabled. |
-|`void setTunerGain(in string ID, in float gain)` | Set tuner gain in dB.  |
+|`void setTunerGain(in string id, in float gain)` | Set tuner gain in dB.  |
 |`float getTunerGain(in string id)`| Get current tuner gain in dB.  |
-|`void setTunerReferenceSource(in string ID, in long source)`   | Set the tuner reference source. Zero is defined as internal and one is defined as external.  |
+|`void setTunerReferenceSource(in string id, in long source)`   | Set the tuner reference source. Zero is defined as internal and one is defined as external.  |
 |`long getTunerReferenceSource(in string id)`   | Get the current tuner reference source.  |
-|`void setTunerEnable(in string ID,  in boolean enable)`   | Set the output enable state of the tuner. True indicates output is enabled.  |
+|`void setTunerEnable(in string id,  in boolean enable)`   | Set the output enable state of the tuner. True indicates output is enabled.  |
 |`boolean getTunerEnable(in string id)`   | Get the current output enable state of the tuner. True indicates output is enabled.  |
-|`void setTunerOutputSampleRate(in string ID, in double sr)`   | Set the output sample rate in samples/sec.  |
+|`void setTunerOutputSampleRate(in string id, in double sr)`   | Set the output sample rate in samples/sec.  |
 |`double getTunerOutputSampleRate(in string id)`  | Get the output sample rate in samples/sec.  |
 
+The following functions are added to any tuner that is also a scanning tuner.
+
+###### Additional Scanning Tuner Control Functions
+| **Function Prototype**                 | **Description** |
+| :----------------------- | :------- |
+|`void setScanStrategy(in string id)` | Provide a plan for what frequencies the scanner will cover and how it will cover them. |
+|`void setScanStartTime(in string id, in BULKIO::PrecisionUTCTime start_time)` | Specify when a scan should start. At the specified time, the scanner should begin outputting data according to the scan plan. Set to 0 or a past time to start immediately. |
+|`FRONTEND::ScanStatus getScanStatus(in string id, in FRONTEND::ScanStrategy start_time)` | Get the status of all current and scheduled scans |
 
 ##### Tuner Control Exceptions
 | **Exception**           | **Description**                | **Notes**                                                                                                                                  |
