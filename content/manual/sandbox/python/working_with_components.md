@@ -75,7 +75,7 @@ In the case of components and devices, after the process is launched and the com
 ```
 
 {{% notice note %}}
-The execparams property is deprecated, but may be in use by legacy systems.  See the documentation for pre-REDHAWK 2.0 releases for details about its use. The execparams property has been superseded by the use of the property kind property with command line enabled.
+The `execparams` property is deprecated, but may be in use by legacy systems.  See the documentation for pre-REDHAWK 2.0 releases for details about its use. The `execparams` property has been superseded by the use of the `property` kind property with command line enabled.
 {{% /notice %}}
 
 By default, the Sandbox selects the first component implementation whose entry point exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
@@ -105,7 +105,7 @@ In addition to the standard REDHAWK `query()` and `configure()` functions, the S
 ```
 
 {{% notice note %}}
-The configure() initial call is deprecated, but may be in use by legacy systems.  See the documentation for REDHAWK 1.X releases for details about its use. The configure() initial call has been superseded by the use of the initializeProperties() initial calls, yet both implementations still use the configure argument to override default property names and values for components and devices.
+The `configure()` initial call is deprecated, but may be in use by legacy systems.  See the documentation for REDHAWK 1.X releases for details about its use. The `configure()` initial call has been superseded by the use of the `initializeProperties()` initial call, yet both implementations still use the configure argument to override default property names and values for components and devices.
 {{% /notice %}}
 
 Property names are taken from the component PRF file, with any characters that are invalid for Python identifiers replaced by an underscore.
