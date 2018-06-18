@@ -67,7 +67,7 @@ To process individual components from the command line, use the `proc()` functio
 | `sinkFmt`           | Specifies the format for the output file (optional).                                                                                           |
 | `sampleRate`        | Specifies the sampling rate for the input file (optional).                                                                                     |
 | `execparams`        | Specifies the dictionary describing properties (of kind property with command line enabled) to be passed as command-line arguments (optional). |
-| `configure`         | Specifies the dictionary describing properties (of kind configure or property) to be over-ridden (optional).                                   |
+| `configure`         | Specifies dictionary describing properties (of kind configure or property) to be over-ridden (optional).                                   |
 | `providesPortName`  | Specifies the component input port name (optional).                                                                                            |
 | `usesPortName`      | Specifies the component output port name (optional).                                                                                           |
 | `timeout`           | Specifies how long the `proc()` function runs before exiting (optional).                                                                       |
