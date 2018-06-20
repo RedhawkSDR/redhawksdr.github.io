@@ -139,6 +139,28 @@ If using an `RFInfo` port, it may be useful to store the `RFInfo` packet as part
 
     For each function on a port definition, a callback is created in the device. This callback takes as arguments the same argument list that is provided by the port function with the exception of the types for the arguments. Where possible, the type for each of the arguments is a C++ type that is easier to use than the corresponding CORBA type. For example, in the case of a string argument, the argument on the port is of type char*, while the argument on the callback is of type std::string&. A thorough description of the different port functions is available in [the FEI description]({{< relref "manual/appendices/fei.md#command-and-control" >}}).
 
+###### Scanning Tuners in C++
+
+The scanning tuner can take one of three strategies: manual, span, and discrete. These strategies have been mapped to the C++ device implementation as a set of classes, all inheriting from the ScanStrategy class. Creating a strategy requires instantiating one of these classes. For example, to create a span strategy with a single range from 1 MHz to 1.1 MHz in 10 kHz steps, use the following code:
+
+```c++
+frontend::ScanSpanRanges ranges;
+frontend::ScanSpanRange range;
+range.begin_frequency = 1e6;
+range.end_frequency = 1.1e6;
+range.step = 1e4;
+ranges.push_back(range);
+frontend::SpanStrategy strat(ranges);
+```
+
+The scan status structure takes ownership of whatever strategy structure it is given. To deal with this issue, strategies can be cloned; the clone function returns a pointer to a new instance of the same strategy. The following example shows how to create a scan status structure with the strategy defined above:
+
+```c++
+frontend::ScanStatus status(strat.clone());
+```
+
+This code is applicable to callbacks for the scanning support functions of the DigitialScanningTuner port such as getScanStatus and setScanStrategy.
+
 #### Installing the FEI Device
 
 To install the FEI device, build the project and export it to the Target SDR. After the FEI device is installed, you can use it in a REDHAWK system.
