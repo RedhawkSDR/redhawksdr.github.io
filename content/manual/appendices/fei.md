@@ -218,9 +218,9 @@ The following functions are added to any tuner that is also a scanning tuner.
 ###### Additional Scanning Tuner Control Functions
 | **Function Prototype**                 | **Description** |
 | :----------------------- | :------- |
-|`void setScanStrategy(in string id)` | Provide a plan for what frequencies the scanner will cover and how it will cover them. |
+|`void setScanStrategy(in string id, in FRONTEND::ScanStrategy scan_strategy)` | Provide a plan for what frequencies the scanner will cover and how it will cover them. |
 |`void setScanStartTime(in string id, in BULKIO::PrecisionUTCTime start_time)` | Specify when a scan should start. At the specified time, the scanner should begin outputting data according to the scan plan. Set to 0 or a past time to start immediately. |
-|`FRONTEND::ScanStatus getScanStatus(in string id, in FRONTEND::ScanStrategy start_time)` | Get the status of all current and scheduled scans |
+|`FRONTEND::ScanStatus getScanStatus(in string id)` | Get the status of all current and scheduled scans |
 
 ##### Tuner Control Exceptions
 | **Exception**           | **Description**                | **Notes**                                                                                                                                  |
