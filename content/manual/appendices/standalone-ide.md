@@ -20,7 +20,7 @@ The following procedure explains how to install a stand-alone IDE.
     sudo yum install java-1.8.0-openjdk-devel PackageKit-gtk-module libcanberra-gtk2 webkitgtk
     ```
 
-2.  Locate the appropriate archive from the REDHAWK release page on GitHub (<https://github.com/RedhawkSDR/redhawk/releases/<version>>). (Where `<version>` corresponds to the version of the REDHAWK IDE. For example, <https://github.com/RedhawkSDR/redhawk/releases/2.0.3)>).
+2.  Locate the appropriate archive from the REDHAWK release page on GitHub (<https://github.com/RedhawkSDR/redhawk/releases/>`<version>`). (Where `<version>` corresponds to the version of the REDHAWK IDE. For example, <https://github.com/RedhawkSDR/redhawk/releases/2.0.3>).
 
 3.  Run the following command:
 
