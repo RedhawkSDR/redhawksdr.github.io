@@ -7,7 +7,6 @@ The following sections explain how to install the dependencies from the Fedora E
 
 {{% notice note %}}
 If you are upgrading from a previous 1.8.x version of REDHAWK, some software from the 1.8 series dependencies must be uninstalled before installing the REDHAWK 2.0 series. Enter the following command to uninstall the software:
-{{% /notice %}}
 
 ```bash
 sudo yum erase \
@@ -16,6 +15,7 @@ sudo yum erase \
      omniEvents-doc omniEvents-debuginfo \
      apache-log4cxx apache-log4cxx-debuginfo
 ```
+{{% /notice %}}
 
 ## Installing the EPEL Repository
 
