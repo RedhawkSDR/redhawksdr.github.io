@@ -7,7 +7,6 @@ The following sections explain how to install the dependencies from the Fedora E
 
 {{% notice note %}}
 If you are upgrading from a previous 1.8.x version of REDHAWK, some software from the 1.8 series dependencies must be uninstalled before installing the REDHAWK 2.0 series. Enter the following command to uninstall the software:
-{{% /notice %}}
 
 ```bash
 sudo yum erase \
@@ -16,6 +15,7 @@ sudo yum erase \
      omniEvents-doc omniEvents-debuginfo \
      apache-log4cxx apache-log4cxx-debuginfo
 ```
+{{% /notice %}}
 
 ## Installing the EPEL Repository
 
@@ -41,7 +41,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noa
 
 ### Standalone EPEL from REDHAWK
 
-REDHAWK provides a condensed version of the EPEL yum repository that can be used to satisfy the required external dependencies from the EPEL repository. The repository is available from the REDHAWK release page on github (<https://github.com/RedhawkSDR/redhawk/releases/<version>>). (Where `<version>` corresponds to the version of the REDHAWK IDE. For example, for REDHAWK version 2.0.3, <https://github.com/RedhawkSDR/redhawk/releases/2.0.3)>).
+REDHAWK provides a condensed version of the EPEL yum repository that can be used to satisfy the required external dependencies from the EPEL repository. The repository is available from the REDHAWK release page on github (<https://github.com/RedhawkSDR/redhawk/releases/>`<version>`). (Where `<version>` corresponds to the version of the REDHAWK IDE. For example, for REDHAWK version 2.0.3, <https://github.com/RedhawkSDR/redhawk/releases/2.0.3>).
 
 To install the Standalone EPEL yum repository from REDHAWK, use the following commands:
 
