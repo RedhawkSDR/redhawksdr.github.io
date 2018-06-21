@@ -11,8 +11,6 @@ Within the plot, users can manipulate the plot as follows:
 
   - Zoom In: Left-click and drag to form a box to zoom in on a portion of the plot.
   - Zoom Out: Right-click to zoom out a single level.
-  - Open Menu: Center-click to bring up the NeXtMidas plot menu.
-  - Close Menu: Right-click an open NeXtMidas plot menu to close the pop-up menu.
 
 The REDHAWK IDE contains the following controls for interacting with the active plot:
 
@@ -28,15 +26,7 @@ The REDHAWK IDE contains the following controls for interacting with the active 
       - 10 Log
       - 20 Log
 
-  - Change FFT Size: Changes the FFT size. The options include:
-
-      - 1k
-      - 2k
-      - 4k
-      - 8k
-      - 16k
-      - 32k
-      - 64k
+  - Change FFT Size: Changes the FFT size.
 
   - Change Plot Type: Changes the plot type. The types include:
 
