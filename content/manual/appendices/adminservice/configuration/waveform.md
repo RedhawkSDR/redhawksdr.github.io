@@ -97,19 +97,19 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to determine if the waveform started properly. A script exit value of `0` indicates the waveform started successfully.
+description: Specifies an optional bash script used to determine if the waveform started properly. A script exit value of `0` indicates the waveform started successfully.
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script to check the status for the waveform. A script exit value of `0` indicates the waveform is alive.
+description: Specifies an optional bash script to check the status for the waveform. A script exit value of `0` indicates the waveform is alive.
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to get a detailed status output for the waveform. This is useful to return a custom status string for the components in the waveform.
+description: Specifies an optional bash script used to get a detailed status output for the waveform. This is useful to return a custom status string for the components in the waveform.
 
 parameter: `environment`  
 required: No  
@@ -166,22 +166,22 @@ parameter: `start_pre_script`
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the waveform is started.
+description: The bash script or directory of bash scripts to run before the waveform is started.
 
 parameter: `start_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the waveform is started.
+description: The bash script or directory of bash scripts to run after the waveform is started.
 
 parameter: `stop_pre_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the waveform is stopped.
+description: The bash script or directory of bash scripts to run before the waveform is stopped.
 
 parameter: `stop_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the waveform is stopped.
+description: The bash script or directory of bash scripts to run after the waveform is stopped.

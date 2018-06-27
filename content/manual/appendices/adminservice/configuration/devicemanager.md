@@ -164,19 +164,19 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to determine if the Device Manager started properly. A script exit value of `0` indicates the Device Manager started successfully.  
+description: Specifies an optional bash script used to determine if the Device Manager started properly. A script exit value of `0` indicates the Device Manager started successfully.  
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script to check the status for the Device Manager. A script exit value of `0` indicates the Device Manager is alive.  
+description: Specifies an optional bash script to check the status for the Device Manager. A script exit value of `0` indicates the Device Manager is alive.  
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to get a detailed status output for the Device Manager. This is useful to return the status of each device or service for this Device Manager.
+description: Specifies an optional bash script used to get a detailed status output for the Device Manager. This is useful to return the status of each device or service for this Device Manager.
 
 parameter: `environment`  
 required: No  
@@ -253,22 +253,22 @@ parameter: `start_pre_script`
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the process is started.
+description: The bash script or directory of bash scripts to run before the process is started.
 
 parameter: `start_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the process is started.
+description: The bash script or directory of bash scripts to run after the process is started.
 
 parameter: `stop_pre_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the process is stopped.
+description: The bash script or directory of bash scripts to run before the process is stopped.
 
 parameter: `stop_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the process is stopped.
+description: The bash script or directory of bash scripts to run after the process is stopped.

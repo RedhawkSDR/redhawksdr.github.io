@@ -138,19 +138,19 @@ parameter: `started_status_script`
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to determine if the Domain Manager started properly. A script exit value of `0` indicates the Domain Manager started successfully.
+description: Specifies an optional bash script used to determine if the Domain Manager started properly. A script exit value of `0` indicates the Domain Manager started successfully.
 
 parameter: `status_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script to check the status for the Domain Manager. A script exit value of `0` indicates the Domain Manager is alive.
+description: Specifies an optional bash script to check the status for the Domain Manager. A script exit value of `0` indicates the Domain Manager is alive.
 
 parameter: `query_script`  
 required: No  
 default value: None  
 format: Absolute path of a file  
-description: Specifies an optional script used to get a detailed status output for the Domain Manager.
+description: Specifies an optional bash script used to get a detailed status output for the Domain Manager.
 
 parameter: `environment`  
 required: No  
@@ -227,22 +227,22 @@ parameter: `start_pre_script`
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the process is started.
+description: The bash script or directory of bash scripts to run before the process is started.
 
 parameter: `start_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the process is started.
+description: The bash script or directory of bash scripts to run after the process is started.
 
 parameter: `stop_pre_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run before the process is stopped.
+description: The bash script or directory of bash scripts to run before the process is stopped.
 
 parameter: `stop_post_script`  
 required: No  
 default value: None  
 format: Absolute path of a file or absolute path of a directory of files  
-description: The script or directory of scripts to run after the process is stopped.
+description: The bash script or directory of bash scripts to run after the process is stopped.
