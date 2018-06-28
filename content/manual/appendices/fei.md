@@ -173,8 +173,10 @@ The following table describes the scanning elements and how to handle requests.
 | `min_freq`  |  `double` |   Requested lower edge of the scanning band.  | The center frequency of the scanning plan cannot go below this frequency. |
 | `max_freq`  |  `double` |   Requested upper edge of the scanning band.  | The center frequency of the scanning plan cannot go above this frequency. |
 | `mode`   |  `enum string` | SPAN_SCAN or DISCRETE_SCAN.  | Use SPAN_SCAN for a regularly-spaced set of frequencies and DISCRETE_SCAN for a discrete list of frequencies |
-| `control_mode`   |  `enum string` | TIME_BASED or SAMPLE_BASED.  | Use TIME_BASED when the re-tune decision is based on the dwell time and SAMPLE_BASED when the re-tuning decision is made based on the number of samples produced. |
+| `control_mode`   |  `enum string` | TIME_BASED or SAMPLE_BASED.  | Use TIME_BASED when the re-tune decision is based on the dwell time in seconds and SAMPLE_BASED when the re-tuning decision is made based on the number of samples produced. |
 | `control_limit`   | `double`  | Limits on the control of the scanning device.  | Use TIME_BASED to establish the fastest hop rate and SAMPLE_BASED for the fewest number of samples that the scanner is expected to output before re-tuning. |
+
+In the case of a scanning device, allocation is insufficient for defining the scan. The allocation data structure provides the bounds for the scanning strategy (e.g.: minimum and maximum frequency, fastest re-tuning rate). To define the scanning strategy such that the device will execute it, the strategy needs to be set through the setScanStrategy function in the ScanningTuner control port, as described in [Scanning Tuner Control Functions](#additional-scanner-tuner-control-functions).
 
 ### Listener Allocation Properties
 
@@ -243,6 +245,25 @@ In addition to the tuner control functions, when the device is of type RX_SCANNE
 |`ScanStatus getScanStatus(in string id)`   | Get the current scanner status. The return structure is of type FRONTEND::ScanningTuner::ScanStatus, which contains information on the scanning strategy, the scheduled start time, the list of center frequencies that the plan will execute, and whether or not the scan has started  |
 |`void setScanStartTime(in string id, in BULKIO::PrecisionUTCTime start_time)`   | Schedule when a scan plan should start (in epoch time). Setting the time to 0 or a previous time with the tcstatus flag set to true starts a scan immediately. To disable the scan, set the start_time's tcstatus flag to false. |
 |`void setScanStrategy(in string id, in ScanStrategy scan_strategy)`   | Provide a plan for what frequencies the scanner will cover and how it will cover them. |
+
+The scan strategy defines in detail what the parameters for the scan will be. This is accomplished through the ScanStrategy data structure. The structure contains the following fields:
+
+###### ScanStrategy Description
+| **Member**       | **Type**          | **Description** |
+| :----------------------- | :------- | :------- |
+|`scan_mode` | `ScanMode`  | ScanMode is an enumerated type that can be set to MANUAL_SCAN, SPAN_SCAN, and DISCRETE_SCAN  |
+|`scan_definition` | `ScanModeDefinition` | ScanModeDefinition is a union that provides the mode-specific information: `double center_frequency` for MANUAL_SCAN, `ScanSpanRanges freq_scan_list` for SPAN_SCAN, and `Frequencies discrete_freq_list` for DISCRETE_SCAN |
+|`control_mode` | `OutputControlMode` | OutputControlMode is an enumerated type that can be set to TIME_BASED or SAMPLE_BASED |
+|`control_value` | `double` | This is the value for control_mode. The unit is seconds for TIME_BASED and samples for SAMPLE_BASED |
+
+The data structures Frequencies and ScanSpanRanges provide more detail for their respective modes. Frequencies is a sequence of doubles. ScanSpanRanges is a sequences of ScanSpanRange, where ScanSpanRange is as follows:
+
+###### ScanSpanRange Description
+| **Member**       | **Type**          | **Description** |
+| :----------------------- | :------- | :------- |
+|`begin_frequency` | `double`  | The beginning center frequency for the scan in Hz  |
+|`end_frequency` | `double` | The ending center frequency for the scan in Hz |
+|`step` | `double` | The change in center frequency in Hz |
 
 ##### Tuner Control Exceptions
 | **Exception**           | **Description**                | **Notes**                                                                                                                                  |
