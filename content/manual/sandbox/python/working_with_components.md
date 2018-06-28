@@ -60,30 +60,15 @@ The following example demonstrates how to launch a device named `SigGen` from th
 >>> my_dev = sb.launch("rh.SigGen")
 ```
 
-A component's properties, either normal properties or command line properties, may be overridden at launch time by passing a Python dictionary of parameter names and values to the keyword argument `properties`:
+A component's properties, either normal or with the `commandline` attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument `properties`. These values will override the default values listed in the PRF file.
 
 ```py
->>> my_comp = sb.launch("MyComponent", properties={"EXECPARAM_1": "value",
-                                                   "normalparam": "somevalue"})
+siggen = sb.launch("rh.SigGen", properties={"sample_rate":100e3,
+                                            "frequency":22e3,
+                                            "shape":"square"})
 ```
 
-{{% notice note %}}
-The `execparams` named parameter is deprecated, but may be in use by legacy systems.  See the documentation for pre-REDHAWK 2.0 releases for details about its use.
-{{% /notice %}}
-
-In the case of components and devices, after the process is launched and the component is initialized, the component’s properties are set to their default values as listed in the PRF file. The default values for this initial call to `initializeProperties()` may be overridden by passing a Python dictionary of property names and values to the keyword argument `properties`:
-
-```py
->>> siggen = sb.launch("rh.SigGen", properties={"sample_rate":100e3,
-...                                         "frequency":22e3,
-...                                         "shape":"square"})
-```
-
-{{% notice note %}}
-The initial `configure()` call has been superseded by the use of the `initializeProperties()` call, but may be in use by legacy systems.  See the documentation for pre-REDHAWK 2.0 releases for details about its use.
-{{% /notice %}}
-
-By default, the Sandbox selects the first component implementation whose entry point exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
+By default, the Sandbox launches the first component implementation whose entry point exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
 
 ```py
 >>> siggen = sb.launch("rh.SigGen", impl="cpp")
