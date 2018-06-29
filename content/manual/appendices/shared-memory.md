@@ -92,7 +92,7 @@ Shared memory files are sparse, meaning that no physical memory is dedicated unt
 The total of all file sizes may therefore exceed the total shared memory on the system.
 {{% /notice %}}
 
-Because the free shared memory takes into account files that were removed but are still mapped by active processes, it may be less than than the total shared memory minus the sum of all REDHAWK heaps and other shared memory files.
+Because the free shared memory takes into account files that were removed but are still mapped by active processes, it may be less than the total shared memory minus the sum of all REDHAWK heaps and other shared memory files.
 This memory will be reclaimed when the processes exit.
 
 ## Cleaning Shared Memory With `redhawk-shmclean`
