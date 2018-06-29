@@ -60,7 +60,7 @@ The following example demonstrates how to launch a device named `SigGen` from th
 >>> my_dev = sb.launch("rh.SigGen")
 ```
 
-A component's properties, either normal or with the `commandline` attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument `properties`. These values will override the default values listed in the PRF file.
+A component's properties, either normal or with the `commandline` attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument `properties`. These values override the default values listed in the PRF file.
 
 ```py
 siggen = sb.launch("rh.SigGen", properties={"sample_rate":100e3,
@@ -68,7 +68,7 @@ siggen = sb.launch("rh.SigGen", properties={"sample_rate":100e3,
                                             "shape":"square"})
 ```
 
-By default, the Sandbox launches the first component implementation whose entry point exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
+By default, the Sandbox launches the first component implementation with an entry point that exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
 
 ```py
 >>> siggen = sb.launch("rh.SigGen", impl="cpp")
@@ -137,7 +137,7 @@ Complex properties support assignment from single numeric values; the imaginary 
 1+0j
 ```
 
-properties that have enumerated values in the component’s PRF support assignment using the enumerated name as a Python string:
+Properties that have enumerated values in the component’s PRF support assignment using the enumerated name as a Python string:
 
 ```py
 >>> siggen.shape = "triangle"
@@ -159,7 +159,7 @@ Individual struct members may be set directly, using the simple property name:
 ```
 
 {{% notice note %}}
-Properties have a mode (i.e.: readwrite, readonly, writeonly), and, for compatibility reasons, is a member of the Python Struct property container and cannot change. If the Struct property has a member called “mode”, requesting the member “mode” from the property will return its access mode rather than the content of the property member. Access the value of any element of a property with a reserved word as its name as follows
+Properties have a mode (readwrite, readonly, writeonly), and for compatibility reasons, the mode is a member of the Python Struct property container and cannot change. If the Struct property has a member called “mode”, requesting the member “mode” from the property will return its access mode rather than the content of the property member. Access the value of any element of a property with a reserved word as its name as follows:
 ```py
 >>> my_comp.struct_prop["mode"] = "Hello World!"
 ```
