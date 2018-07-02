@@ -273,7 +273,7 @@ this.freqMHz.addChangeListener(new PropertyListener<Float>() {
 ### Customizing Query and Configure
 
 {{% notice note %}}
-This feature is C++-only in the REDHAWK 2.0 series baseline.
+This feature is only available in C++.
 {{% /notice %}}
 
 The REDHAWK libraries and generated component code automatically handle `query()` and `configure()` for all defined properties. However, in some cases, it may be preferable to retrieve the current value of a property in response to a `query()`, such as when fetching status from an external library. A developer may also want more control over how the property value is set. components support per-property callbacks to customize query and configure behavior.
