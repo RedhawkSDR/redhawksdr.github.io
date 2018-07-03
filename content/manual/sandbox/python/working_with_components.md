@@ -68,7 +68,7 @@ A component's properties, either normal or with the `commandline` attribute, may
                                                    "normalparam": "somevalue"})
 ```
 {{% notice note %}}
-The `execparams` named parameter is deprecated, but may be in use by legacy systems.  Refer to the documentation for pre-REDHAWK 2.0 releases for details about its use.
+The `execparams` named parameter is deprecated but may be in use by legacy systems.  Refer to the documentation for pre-REDHAWK 2.0 releases for details about its use.
 {{% /notice %}}
 
 In the case of components and devices, after the process is launched and the component is initialized, the component’s properties are set to their default values as listed in the PRF file. The default values for this initial call to `initializeProperties()` may be overridden by passing a Python dictionary of property names and values to the keyword argument `properties`:
