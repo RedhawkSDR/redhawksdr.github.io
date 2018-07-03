@@ -80,7 +80,7 @@ In the case of components and devices, after the process is launched and the com
 ```
 
 {{% notice note %}}
-The initial `configure()` call has been superseded by the use of the `initializeProperties()` call, but may be in use by legacy systems.  Refer to the documentation for pre-REDHAWK 2.0 releases for details about its use.
+The initial `configure()` call has been superseded by the use of the `initializeProperties()` call.
 {{% /notice %}}
 
 By default, the Sandbox launches the first component implementation with an entry point that exists on the file system. A particular implementation may be specified by passing the implementation ID to the `impl` argument:
