@@ -48,17 +48,17 @@ ga('send', 'pageview');
     <nav class="shortcuts">
             <li class="" role="">
                 <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> Documentation
+                  <i class='fa fa-book'></i> <label>Documentation</label>
                 </a>
             </li>
             <li class="" role="">
                 <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
-                  <i class='fa fa-download'></i> Downloads
+                  <i class='fa fa-download'></i> <label>Downloads</label>
                 </a>
             </li>
             <li class="" role="">
                 <a href="https://github.com/redhawksdr/docs"  rel="noopener">
-                  <i class='fa fa-github'></i> GitHub
+                  <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
     </nav>
@@ -233,34 +233,6 @@ ga('send', 'pageview');
       <a href="../../../../manual/shared-libraries/">Shared Libraries</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/shared-libraries/creating-a-shared-library-project/" class="dd-item">
-        <div>
-          <a href="../../../../manual/shared-libraries/creating-a-shared-library-project/">
-            Creating a REDHAWK Shared Library Project
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/manual/shared-libraries/using-a-shared-library-project/" class="dd-item">
-        <div>
-          <a href="../../../../manual/shared-libraries/using-a-shared-library-project/">
-            Using a REDHAWK Shared Library Project
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/manual/shared-libraries/packaging-shared-libraries/" class="dd-item">
-        <div>
-          <a href="../../../../manual/shared-libraries/packaging-shared-libraries/">
-            Packaging Shared Libraries
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/manual/shared-libraries/manually-including-external-libraries/" class="dd-item">
-        <div>
-          <a href="../../../../manual/shared-libraries/manually-including-external-libraries/">
-            Manually Including External Libraries
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
         </ul>
     </li>
     <li data-nav-id="/manual/connections/" class="dd-item parent haschildren
@@ -330,6 +302,13 @@ ga('send', 'pageview');
         <div>
           <a href="../../../../manual/connections/bulkio/stream-api/">
             Stream API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/bit-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/bit-data/">
+            Bit Data
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1093,6 +1072,122 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+    <li data-nav-id="/manual/appendices/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/">REDHAWK System Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/appendices/adminservice/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/adminservice/">AdminService</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/serviceconfigurations/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/adminservice/serviceconfigurations/">
+            Service Configurations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/servicelifecycle/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/adminservice/servicelifecycle/">
+            Service Life Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/">REDHAWK Core Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/domainmanager/">
+            REDHAWK Domain Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/devicemanager/">
+            REDHAWK Device Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/waveform/">
+            REDHAWK Waveform Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domains/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/domains/">
+            Managing Services By Domains and Types
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/configuration/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/configuration/">Configuration Files</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/adminservice/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/adminservice/">
+            AdminService Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/domainmanager/">
+            Domain Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/devicemanager/">
+            Device Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/waveform/">
+            Waveform Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/rhadmin/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/rhadmin/">
+            rhadmin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/support-files/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/support-files/">
+            Linux Support Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
       <li data-nav-id="/manual/appendices/fei/" class="dd-item">
         <div>
           <a href="../../../../manual/appendices/fei/">
@@ -1104,6 +1199,13 @@ ga('send', 'pageview');
         <div>
           <a href="../../../../manual/appendices/persona-device-pattern/">
             REDHAWK Persona Device Pattern
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/shared-memory/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/shared-memory/">
+            Shared Memory Maintenance
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -1195,6 +1297,7 @@ ga('send', 'pageview');
       <option value="/manual/connections/bulkio/data-transfers/" >--- Data Transfers</option>
       <option value="/manual/connections/bulkio/sri/" >--- Signal Related Information (SRI)</option>
       <option value="/manual/connections/bulkio/stream-api/" >--- Stream API</option>
+      <option value="/manual/connections/bulkio/bit-data/" >--- Bit Data</option>
       <option value="/manual/connections/bulkio/multiout-ports/" >--- Multi-out Ports</option>
       <option value="/manual/connections/bulkio/working-with-complex-data/" >--- Working with Complex Data</option>
       <option value="/manual/connections/bulkio/time-stamps/"  selected>--- Time Stamps</option>
@@ -1281,7 +1384,7 @@ ga('send', 'pageview');
     
     
 
-<p>BulkIO uses <code>BULKIO::PrecisionUTCTime</code> time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The <a href="#elements-in-bulkio-precisionutctime">table</a> below describes the different elements making up the <code>BULKIO::PrecisionUTCTime</code> structure.</p>
+<p>BulkIO uses <code>BULKIO::PrecisionUTCTime</code> time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The following table describes the different elements making up the <code>BULKIO::PrecisionUTCTime</code> structure.</p>
 
 <h4 id="elements-in-bulkio-precisionutctime">Elements in <code>BULKIO::PrecisionUTCTime</code></h4>
 
@@ -1327,7 +1430,7 @@ ga('send', 'pageview');
 </tbody>
 </table>
 
-<p>Two of the elements described in the <a href="#elements-in-bulkio-precisionutctime">table</a> correspond to predefined values. <code>tcstatus</code> can only take two values, <code>TCS_INVALID</code> (0), and <code>TCS_VALID</code> (1), showing whether the time stamp is valid or not. Invalid time stamps do not contain valid time data and should be ignored. <code>tcmode</code> is the method by which the timestamp was obtained, but this use has since been deprecated, and this value is ignored. The default value for <code>tcmode</code> is 1.</p>
+<p>Two of the elements described in the the table above correspond to predefined values. <code>tcstatus</code> can only take two values, <code>TCS_INVALID</code> (0), and <code>TCS_VALID</code> (1), showing whether the time stamp is valid or not. Invalid time stamps do not contain valid time data and should be ignored. <code>tcmode</code> is the method by which the timestamp was obtained, but this use has since been deprecated, and this value is ignored. The default value for <code>tcmode</code> is 1.</p>
 
 <p>The following code snippets provide examples of how to construct a time stamp to be sent in the <code>pushPacket()</code> call. The <code>now()</code> method returns the current time of day.</p>
 

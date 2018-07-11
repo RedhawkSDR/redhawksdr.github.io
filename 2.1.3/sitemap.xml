@@ -11,6 +11,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/auto-generated-files/</loc>
   </url>
   
@@ -63,6 +67,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domainmanager/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/</loc>
   </url>
   
@@ -92,6 +100,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/waveforms/waveform-editor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/adminservice/</loc>
   </url>
   
   <url>
@@ -155,6 +167,14 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/devicemanager/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/sri/</loc>
   </url>
   
@@ -191,6 +211,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/components/octave-components/</loc>
   </url>
   
@@ -200,6 +224,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/nodes/distributed-computing-and-rf-devices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/domainmanager/</loc>
   </url>
   
   <url>
@@ -224,6 +252,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/port-access/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/waveform/</loc>
   </url>
   
   <url>
@@ -259,6 +291,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/bit-data/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/runtime-environment/applications/</loc>
   </url>
   
@@ -267,11 +303,19 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/</loc>
   </url>
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/messaging/connecting-producers-consumers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/devicemanager/</loc>
   </url>
   
   <url>
@@ -292,6 +336,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domains/</loc>
   </url>
   
   <url>
@@ -327,15 +375,15 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/rhadmin/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/logging/adjusting-logging-at-runtime/</loc>
   </url>
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/sandbox/python/sources-and-sinks/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</loc>
   </url>
   
   <url>
@@ -348,6 +396,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/exploring-domain/increasing-bulkio-connection-bandwidth/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</loc>
   </url>
   
   <url>
@@ -367,6 +419,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/serviceconfigurations/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/shared-libraries/</loc>
   </url>
   
@@ -380,6 +436,14 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/time-stamps/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/waveform/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/</loc>
   </url>
   
   <url>
@@ -407,10 +471,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/devices/misc/</loc>
   </url>
   
@@ -424,6 +484,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/ide/editors-and-views/redhawk-plot-view/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/servicelifecycle/</loc>
   </url>
   
   <url>
@@ -475,6 +539,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/shared-memory/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/ide/deploying-projects/</loc>
   </url>
   
@@ -512,6 +580,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/2.1.3/manual/runtime-environment/events/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/support-files/</loc>
   </url>
   
   <url>

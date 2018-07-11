@@ -125,6 +125,17 @@ The following Basic components have been removed:
     </item>
     
     <item>
+      <title>REDHAWK Domain Manager Service</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domainmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domainmanager/</guid>
+      <description>This section explains how to manage a single REDHAWK Domain Manager service. For additional information on managing service configurations and life cycle management, refer to Device Manager Service, Waveform Service, and Managing Entire Domains .
+Creating a Domain Service Configuration To create a domain service configuration, enter the following command:
+rhadmin config domain &amp;gt; &amp;lt;output file&amp;gt;.ini A sample configuration is created, which requires the DOMAIN_NAME configuration property and the section&amp;rsquo;s name to be specified.</description>
+    </item>
+    
+    <item>
       <title>REDHAWK Yum Repository and Packages</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/appendices/redhawk-yum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -183,6 +194,17 @@ All uses ports implement the CF::Port interface.</description>
       <guid>https://redhawksdr.github.io/2.1.3/manual/waveforms/waveform-editor/</guid>
       <description>The following sections further describe the definition of the waveform as well as its creation and manipulation within the IDE. Like the PRF, SCD, and SPD XML files of a component, a waveform is completely represented by its SAD file (*.sad.xml). The REDHAWK IDE provides a means of modifying the XML files without the need to directly edit this file by hand.
 Overview Tab Within the Overview tab, the name, Assembly Controller, and external ports of a waveform are defined.</description>
+    </item>
+    
+    <item>
+      <title>AdminService Configuration</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/adminservice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/adminservice/</guid>
+      <description>This section explains how to create a custom AdminService configuration and how to configure the rhadmin script used to control the AdminService.
+Creating a Custom AdminService Configuration To create a new AdminService configuration file, enter the following commands.
+cd /etc/redhawk rhadmin config admin &amp;gt; adminserviced.cfg vi adminserviced.cfg The configuration files are located in a system privileged directory. Ensure that you have proper privileges to create and edit files in those directories.</description>
     </item>
     
     <item>
@@ -335,6 +357,17 @@ PyDev’s many features include:
     </item>
     
     <item>
+      <title>REDHAWK Device Manager Service</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/devicemanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/devicemanager/</guid>
+      <description>This section explains how to manage a single REDHAWK Device Manager service. For additional information on managing service configurations and life cycle management, refer to Domain Manager Service, Waveform Service, and Managing Entire Domains .
+Creating a Device Service Configuration Using the rhadmin Script To create a node service configuration, enter the following command:
+rhadmin config node &amp;gt; &amp;lt;output file&amp;gt;.ini A sample configuration is created, which requires the DOMAIN_NAME and NODE_NAME configuration properties and the section&amp;rsquo;s name to be specified.</description>
+    </item>
+    
+    <item>
       <title>Signal Related Information (SRI)</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/sri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -450,6 +483,16 @@ A dependency is defined by how much of a particular device resource is required.
     </item>
     
     <item>
+      <title>Domain Manager Service Configuration File</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/domainmanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/domainmanager/</guid>
+      <description>Each REDHAWK Domain Manager service is controlled by a file in the /etc/redhawk/domains.d directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the /etc/redhawk/init.d/domain.defaults file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the /etc/redhawk/init.d/domain.defaults file).
+rhadmin can generate an example Domain Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Domain Manager service.</description>
+    </item>
+    
+    <item>
       <title>IDE Quickstart</title>
       <link>https://redhawksdr.github.io/2.1.3/getting-started/ide-quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -509,6 +552,17 @@ Overview Tab Node Editor Overview Tab The Overview tab provides general informat
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/port-access/</guid>
       <description>A port belongs to a component or device (devices are specialized components - see Working With Devices for additional information). To retrieve a port, an external entity needs to call getPort() on the component that owns that port. The argument to the getPort() function is the string name for the port, and the return value is a CORBA pointer to that port object. Both uses and provides ports are retrieved from components through this function call.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Waveform Service</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/waveform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/waveform/</guid>
+      <description>This section explains how to manage a single REDHAWK waveform service. For additional information on managing service configurations and life cycle management, refer to Domain Manager Service, Device Manager Service, and Managing Entire Domains .
+Creating a Waveform Service Configuration Using the rhadmin Script To create a waveform service configuration, enter the following command:
+rhadmin config waveform &amp;gt; &amp;lt;output file&amp;gt;.ini A sample configuration is created, which requires the DOMAIN_NAME and WAVEFORM configuration properties and the section’s name to be specified.</description>
     </item>
     
     <item>
@@ -595,6 +649,16 @@ Domain Context Menu The Launch Waveform wizard is displayed:</description>
     </item>
     
     <item>
+      <title>Bit Data</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/bit-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/bit-data/</guid>
+      <description>In REDHAWK 2.2.0 and above, BulkIO includes a packed bit data format, BULKIO::dataBit. The transfer of packed bit data between processing stages is standardized, including the ability to transfer a non-byte aligned number of bits.
+General REDHAWK manages bits as arrays of bytes, with each byte containing up to 8 consecutive bits. Bit indices start with the most significant bit: bit index 0 is the most significant bit of the first byte, bit index 1 is the second most significant bit, and so on.</description>
+    </item>
+    
+    <item>
       <title>Applications</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/runtime-environment/applications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -615,6 +679,16 @@ Application Class Each application contains a unique application name and profil
     </item>
     
     <item>
+      <title>Component Implementations</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</guid>
+      <description>Components may specify particular dependencies such as Operating System (OS), processor architecture, or required device properties (e.g., processor speed or memory capacity). Setting these dependencies ensures that a component is deployed to an appropriate device at runtime.
+While REDHAWK supports multiple implementations for a single component, it can be confusing, especially when debugging a system. Except for some limited scenarios, it is recommended that developers associate a single implementation with each component.</description>
+    </item>
+    
+    <item>
       <title>Connecting Producers and Consumers</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/connections/messaging/connecting-producers-consumers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -622,6 +696,16 @@ Application Class Each application contains a unique application name and profil
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/messaging/connecting-producers-consumers/</guid>
       <description>Producers and consumers can be connected either point-to-point or through an Event Channel in the IDE. Connecting a producer directly to a consumer does not require an application and can be done in the Sandbox:
 from ossie.utils import sb sb.catalog() #[&amp;#39;structs_test&amp;#39;, &amp;#39;m_in&amp;#39;, &amp;#39;prop_changes&amp;#39;, &amp;#39;m_out&amp;#39;,&amp;#39;pass&amp;#39;] prod=sb.launch(&amp;#34;m_out&amp;#34;) cons=sb.launch(&amp;#34;m_in&amp;#34;) prod.connect(cons) #True sb.start() Output: foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello foo 1 hello Connecting producers to consumers through an Event Channel requires an application.</description>
+    </item>
+    
+    <item>
+      <title>Device Manager Service Configuration File</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/devicemanager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/devicemanager/</guid>
+      <description>Each REDHAWK Device Manager service is controlled by a file in the /etc/redhawk/nodes.d directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the /etc/redhawk/init.d/node.defaults file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the /etc/redhawk/init.d/node.defaults file).
+Although there are no rules on partitioning nodes for a REDHAWK system, it is recommended that you do not define more than one GPP per computing host.</description>
     </item>
     
     <item>
@@ -661,6 +745,17 @@ References for Application Developers The following chapters are particularly us
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/logging/logging-within-a-resource/</guid>
       <description>Every resource capable of hosting custom logging (component, device, service) includes the class member _baseLog. The _baseLog member is a logger instance that has the same logging name as the resource instance. For example, the first instance of comp in a waveform is comp_1. For logging within a REDHAWK resource, _baseLog is the resource&amp;rsquo;s &amp;ldquo;root&amp;rdquo; logger. The log4j root logger still exits and is the parent for the resource&amp;rsquo;s &amp;ldquo;root&amp;rdquo; logger.</description>
+    </item>
+    
+    <item>
+      <title>Managing Services By Domains and Types</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/redhawkcoreservices/domains/</guid>
+      <description>This section explains how to manage REDHAWK core services either by domain or by type (domain, nodes, or waveforms). For additional information on managing service configurations and life cycle management, refer to Domain Manager Service, Device Manager Service, and Waveform Service.
+Managing Services for a Domain Services for a domain can be managed using the following commands.
+ Reloading and restarting all services for a domain from current configuration files  rhadmin update &amp;lt;Domain Name&amp;gt;  Starting all services in a domain  rhadmin start &amp;lt;Domain Name&amp;gt;  Stoping all the services in a domain  rhadmin stop &amp;lt;Domain Name&amp;gt;  Inspecting the status of all the services in a domain  rhadmin status &amp;lt;Domain Name&amp;gt;  Running a custom status script for all the services in a domain and displaying the script output  rhadmin query &amp;lt;Domain Name&amp;gt;  Restarting all the services for a domain  rhadmin restart &amp;lt;Domain Name&amp;gt; Managing Services by Type Each life cycle management command (start, stop, status, query, and restart) has an optional type parameter (domain, nodes, and waveforms), which restricts the command to execute against the specific type of service for a domain.</description>
     </item>
     
     <item>
@@ -740,8 +835,19 @@ To bring up a plot within the IDE:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/working-with-complex-data/</guid>
-      <description>If the StreamSRI mode field of the incoming data is set to 1, the associated input data is complex (i.e., it is comprised of real and imaginary parts). Complex data is sent as alternating real and imaginary values. A developer can work with this data in any fashion; however, this section provides common methods for converting the data into a more workable form.
-Converting Complex Data in C++ In C++, the incoming BulkIO data block provides a complex() method to check whether the data is complex, and cxdata() and cxsize() methods to provide access to the sample data as an array of std::complex values.</description>
+      <description>If the StreamSRI mode field of the incoming data is set to 1, the associated input data is complex (i.e., it is composed of real and imaginary parts). Complex data is sent as alternating real and imaginary values. A developer can work with this data in any fashion; however, this section provides common methods for converting the data into a more workable form.
+Converting Complex Data in C++ In C++, the incoming BulkIO data block provides a complex() method to check whether the data is complex, and a cxbuffer() method to reinterpret the sample data as a redhawk::shared_buffer of std::complex values.</description>
+    </item>
+    
+    <item>
+      <title>rhadmin</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/rhadmin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/rhadmin/</guid>
+      <description>This section explains the rhadmin commands used to control the AdminService.
+Commands The following table describes the rhadmin commands.
+   Command Argument Description     getconfig &amp;lt;service name&amp;gt; Displays the current configuration values for the listed service. Multiple arguments can be specified.   list  Shows the current list of configured services.   query all, &amp;lt;domain name&amp;gt;, &amp;lt;service name&amp;gt; Query a service for extended status.</description>
     </item>
     
     <item>
@@ -765,16 +871,6 @@ The new log level is used.</description>
       <guid>https://redhawksdr.github.io/2.1.3/manual/sandbox/python/sources-and-sinks/</guid>
       <description>REDHAWK includes a variety of helpers that allow a developer to inject data into or extract data from components deployed through the Sandbox. The following section describes each of these helpers and how they are used.
 Data Sources The DataSource module provides a mechanism for producing BulkIO data to be sent to a provides (input) port. Once instantiated, a Python vector of data can be pushed to the DataSource.</description>
-    </item>
-    
-    <item>
-      <title>Component Implementations</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/component-structure/component-implementations/</guid>
-      <description>Components may specify particular dependencies such as Operating System (OS), processor architecture, or required device properties (e.g., processor speed or memory capacity). Setting these dependencies ensures that a component is deployed to an appropriate device at runtime.
-While REDHAWK supports multiple implementations for a single component, it can be confusing, especially when debugging a system. Except for some limited scenarios, it is recommended that developers associate a single implementation with each component.</description>
     </item>
     
     <item>
@@ -806,6 +902,15 @@ The IDE displays the Select a wizard window, which prompts the user to select fr
       <description>In the presence of high data rates, plots of BulkIO ports may not be able to keep up with the data stream. To increase the bandwidth of BulkIO CORBA connections, it is possible to connect using native omniORB libraries. This ability is currently disabled by default. The following procedure explains how to enable this ability from within the IDE:
  Select Window &amp;gt; Preferences.
 The Preferences dialog is displayed:</description>
+    </item>
+    
+    <item>
+      <title>Java Version</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</guid>
+      <description>The default supported version for the Java language for Java components is 1.8. The Java version for any specific component can be changed by changing the argument to the RH_PROG_JAVAC macro in the component’s configure.ac file.</description>
     </item>
     
     <item>
@@ -848,6 +953,16 @@ Python Sandbox The sandbox can be accessed directly from the command line and is
     </item>
     
     <item>
+      <title>Service Configurations</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/serviceconfigurations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/serviceconfigurations/</guid>
+      <description>The INI service configuration files define the execution environment for each REDHAWK core service. The AdminService reads all the service configuration files at startup and executes any enabled configuration. This section provides an overview of the service configuration files and how to manage configurations using rhadmin.
+Configuration Contents The INI files contain configuration properties in the form Name=Value and are grouped by section headers with the syntax [&amp;lt;type&amp;gt;:&amp;lt;section name&amp;gt;]; where &amp;lt;type&amp;gt; is either domain, node, or waveform.</description>
+    </item>
+    
+    <item>
       <title>Standardized Data Interfaces</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/connections/standardized-data-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -872,8 +987,18 @@ When the create() function is called, the Application Factory uses the SPD imple
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/connections/bulkio/time-stamps/</guid>
-      <description>BulkIO uses BULKIO::PrecisionUTCTime time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The table below describes the different elements making up the BULKIO::PrecisionUTCTime structure.
+      <description>BulkIO uses BULKIO::PrecisionUTCTime time stamps that denote the time since 12:00 AM January 1, 1970 (Unix epoch) in UTC. The time stamp contains several elements. In BulkIO, a time stamp corresponds to the date of birth of the first element in the data being pushed. The following table describes the different elements making up the BULKIO::PrecisionUTCTime structure.
 Elements in BULKIO::PrecisionUTCTime    Identifier Value Type     tcmode timecode mode short   tcstatus timecode status short   toff Fractional sample offset double   twsec Number of seconds since 12:00 AM January 1, 1970 (Unix epoch) double   tfsec Number of fractional seconds (0.</description>
+    </item>
+    
+    <item>
+      <title>Waveform Configuration File</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/waveform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/configuration/waveform/</guid>
+      <description>REDHAWK waveforms are controlled by files in the /etc/redhawk/waveforms.d directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the /etc/redhawk/init.d/waveform.defaults file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the /etc/redhawk/init.d/waveform.defaults file). To define multiple waveform instances in one file, add multiple sections.
+The waveform can be configured to start after the Device Manager has started up; it can also optionally wait a configurable amount of time for the domain to be available before attempting to start an instance of the waveform.</description>
     </item>
     
     <item>
@@ -923,15 +1048,6 @@ Theory of Operations FEI were developed to standardize the allocation, operation
     </item>
     
     <item>
-      <title>Java Version</title>
-      <link>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/2.1.3/manual/component-structure/java-version/</guid>
-      <description>The default supported version for the Java language for Java components is 1.7. The Java version for any specific component can be changed by changing the argument to the RH_PROG_JAVAC macro in the component’s configure.ac file.</description>
-    </item>
-    
-    <item>
       <title>Miscellaneous FrontEnd Tuner Library Implementation Details</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/devices/misc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -971,6 +1087,20 @@ Fields in Returned Port Statistics    Name Type Description     portName string 
 Within the plot, users can manipulate the plot as follows:
  Zoom In: Left-click and drag to form a box to zoom in on a portion of the plot. Zoom Out: Right-click to zoom out a single level.  The REDHAWK IDE contains the following controls for interacting with the active plot:
  Change Plot Mode: Changes the mode of the current plot.</description>
+    </item>
+    
+    <item>
+      <title>Service Life Cycle</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/servicelifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/adminservice/servicelifecycle/</guid>
+      <description>When the AdminService is started at system startup, all enabled services are started. This section explains the commands used to manage the life cycle of a REDHAWK core service process after system startup.
+Inspecting the Status of a Service To inspect the status of a REDHAWK core service, use the status command.
+rhadmin status service_name or
+rhadmin status domain_name or
+rhadmin status or
+rhadmin status [type] all Where optional [type] is domain, nodes, or waveforms.</description>
     </item>
     
     <item>
@@ -1077,6 +1207,16 @@ Using the Allocation Manager Performing an allocation is more than just allocati
     </item>
     
     <item>
+      <title>Shared Memory Maintenance</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/shared-memory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/shared-memory/</guid>
+      <description>REDHAWK uses POSIX shared memory to provide optimized data transfer for BulkIO connections between C++ components or devices on the same host. On Linux systems, POSIX shared memory is visible as a filesystem of type tmpfs mounted at /dev/shm. Files on this filesystem are backed by RAM and are not written to disk.
+The shared memory used by REDHAWK is organized into heaps, one per process, that exist as files in /dev/shm.</description>
+    </item>
+    
+    <item>
       <title>Deploying Projects to the SDRROOT</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/ide/deploying-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1165,6 +1305,17 @@ Event Definition CORBA defines an interface for the transport of Events as well 
     </item>
     
     <item>
+      <title>Linux Support Files</title>
+      <link>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/support-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/2.1.3/manual/appendices/adminservice/support-files/</guid>
+      <description>Linux Support Files In addition to running REDHAWK core services, the following support files are provided for REDHAWK logging properties, logging output files management, system limit definitions, and kernel setup.
+The following table descibes the support files.
+   Support File Description     /etc/cron.d/redhawk Cron entry for root to run logrotate every 5 minutes with the configuration file /etc/redhawk/logging/logrotate.redhawk.   /etc/redhawk/logging/logrotate.redhawk logrotate configuration file to manage logfiles generated from REDHAWK services.</description>
+    </item>
+    
+    <item>
       <title>Logging Configuration Plugin</title>
       <link>https://redhawksdr.github.io/2.1.3/manual/appendices/logging-config-plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1223,8 +1374,9 @@ Adding ports from either the FEI interface or a custom IDL interface to a compon
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/2.1.3/manual/ide/editors-and-views/port-monitor-view/</guid>
-      <description>The Port Monitor view enables you to monitor the amount of data flowing out of or into a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing. For more information, refer to Port Monitoring in a Diagram.
-To open the Port Monitor view, right-click the port of a started component and select Monitor Ports from the context menu:</description>
+      <description>The Port Monitor view enables you to monitor the amount of data flowing out of or into a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing.
+To open the Port Monitor view, right-click the port of a started component and select Monitor Ports from the context menu:
+Port Context Menu The Port Monitor view is opened:</description>
     </item>
     
     <item>
