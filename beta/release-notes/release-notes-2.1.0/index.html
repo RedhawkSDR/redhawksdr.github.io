@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>REDHAWK Release Notes - 2.1.0 :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+    
+  </head>
+  <body data-url="/beta/release-notes/release-notes-2.1.0/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-book'></i> Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../manual/">Manuals for LTS Versions</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/">Release Notes for LTS Versions</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.0/">
+            REDHAWK Release Notes - 2.2.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../specifications/">Specifications for LTS Versions</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/beta/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../beta/">Documentation for Beta Versions</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/beta/manual/" class="dd-item
+        ">
+      <div>
+      <a href="../../../beta/manual/">Beta Manuals</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/beta/release-notes/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../beta/release-notes/">Beta Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/beta/release-notes/release-notes-2.1.3/" class="dd-item">
+        <div>
+          <a href="../../../beta/release-notes/release-notes-2.1.3/">
+            REDHAWK Release Notes - 2.1.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/beta/release-notes/release-notes-2.1.2/" class="dd-item">
+        <div>
+          <a href="../../../beta/release-notes/release-notes-2.1.2/">
+            REDHAWK Release Notes - 2.1.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/beta/release-notes/release-notes-2.1.1/" class="dd-item">
+        <div>
+          <a href="../../../beta/release-notes/release-notes-2.1.1/">
+            REDHAWK Release Notes - 2.1.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/beta/release-notes/release-notes-2.1.0/" class="dd-item active">
+        <div>
+          <a href="../../../beta/release-notes/release-notes-2.1.0/">
+            REDHAWK Release Notes - 2.1.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/beta/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../beta/specifications/">Beta Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals for LTS Versions</option> 
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/release-notes/" >
+   Release Notes for LTS Versions</option> 
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/specifications/" >
+   Specifications for LTS Versions</option>
+    <option value="/community/" >
+   Community</option>
+    <option value="/beta/" >
+   Documentation for Beta Versions</option> 
+    <option value="/beta/manual/" >
+  - 
+   Beta Manuals</option>
+    <option value="/beta/release-notes/" >
+  - 
+   Beta Release Notes</option> 
+      <option value="/beta/release-notes/release-notes-2.1.3/" >-- REDHAWK Release Notes - 2.1.3</option>
+      <option value="/beta/release-notes/release-notes-2.1.2/" >-- REDHAWK Release Notes - 2.1.2</option>
+      <option value="/beta/release-notes/release-notes-2.1.1/" >-- REDHAWK Release Notes - 2.1.1</option>
+      <option value="/beta/release-notes/release-notes-2.1.0/"  selected>-- REDHAWK Release Notes - 2.1.0</option>
+  
+    <option value="/beta/specifications/" >
+  - 
+   Beta Specifications</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>REDHAWK Release Notes - 2.1.0</h1>
+    
+    
+    
+    
+
+<p>The effort in REDHAWK 2.1.0 focused on:</p>
+
+<ul>
+<li>Adding support for Components to be deployed on a specific GPP, and conversely allowing the GPP to restrict deployments through a matching set of id/value pairs. These id/value pairs are defined in the Software Assembly Descriptor and Device Configuration Definition files respectively. Users may refer to this feature as the &ldquo;special snowflake&rdquo; deployment Property.</li>
+<li>Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O.  Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available at <a href="https://github.com/RedhawkSDR/core-framework/tree/develop-2.1/docs/shared-address">https://github.com/RedhawkSDR/core-framework/tree/develop-2.1/docs/shared-address</a>. This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.</li>
+<li>Adding support for a new type of Property, &ldquo;utctime&rdquo;, extending the list that includes types such as &ldquo;short&rdquo; or &ldquo;string&rdquo;. This timestamp Property is used in Property change events and can be queried from Components/Devices with the id QUERY_TIMESTAMP, which is useful when synchronizing the state of the system. The new type of Property can be used by Component/Device developers as an additional type of Property.</li>
+<li>Adding cacheDirectory and workingDirectory Properties to the GPP. These properties provide the deployer with control over where Components are stored (cacheDirectory) and the directory from which Components are executed (workingDirectory).</li>
+<li>Redesigning the IDE&rsquo;s Event Viewer to improve the ability to monitor event channels.</li>
+<li>Ending support of Command-line interactive mode (-i) on Components, Services, and Devices. Terminal prompt interactions should be through the Python Sandbox.</li>
+<li>Improving Python tooling to help manage REDHAWK systems. For example, these improvements include eventChannelManager, allocationManager, and connectionManager helpers as well as simpler event monitoring.</li>
+<li>Adding functionality to allow Components that have a usesdevice dependency to now be launched on the same host (i.e., Device Manager/Node) as the Device satisfying the usesdevice requirement. This functionality is provided through an extension of the componentplacement hostcollocation.</li>
+<li>Improving recovery of a REDHAWK Domain after a catastrophic failure. The Device Manager reboots all associated Devices/Services when it detects a reset Domain Manager after a catastrophic failure in the Domain Manager. This reboot only happens if (1) persistence is enabled and (2) the name service log, event service log, and persistence database are emptied.</li>
+<li>Adding new concurrent logging appender for C++ Components to improve readability of logging messages when multiple processes are writing to the same log file.</li>
+<li>Improving the New Project Wizard to warn users if the project location selected already contains files that will become part of the project. Increase user awareness of files that may be moved, deleted, or packaged with a project.</li>
+<li>Updating the IDE to use the latest available Eclipse tooling, Eclipse Neon. For more information about Eclipse Neon, refer to <a href="http://www.eclipse.org/neon/noteworthy">http://www.eclipse.org/neon/noteworthy</a>.</li>
+<li>Documenting a publisher/subscriber pattern when accessing an EventChannel from the Domain.</li>
+<li>Documenting available affinity processing directives when deploying Devices, Services, and Components.</li>
+<li>Adding support for the REDHAWK Core Framework, IDE, assets, and new REDHAWK projects to now compile against and run on Java 8.</li>
+<li>Extending DeviceManager to call configure() on Services at the time they register.  This enables users to implement custom Property handling if so desired.</li>
+<li>Resolving issue when activating local servants for MessageConsumerPort and MessageSupplierPort Java classes.</li>
+<li>Improving Python Sandbox tooling for new Domain features and resources. Specifically, extended DataSource to provide access to all the available SRI and the data timestamp.</li>
+<li>Adding reservation schema graph in the documentation to enhance the text describing capacity allocation reservation for the GPP.</li>
+<li>Improving documentation of Signal Related Information (SRI).</li>
+<li>Updating Contributor License Agreement (CLA).</li>
+</ul>
+
+<h2 id="new-features">New Features</h2>
+
+<h2 id="core-framework-features">Core Framework Features</h2>
+
+<ul>
+<li>Improved DeviceManager to call initalizeProperties or configure for Services that implement the CF::PropertyEmitter or CF::PropertySet interface.</li>
+<li>Added a rolling file appender that synchronizes access to a central file from multiple processes.</li>
+<li>Added support to allow executable Devices to restrict Component deployments during Application deployment.</li>
+<li>Added the implicit property QUERY_TIMESTAMP to all Components and Devices. When this property is queried, a UTCTime timestamp is returned. Furthermore, the PropertyChangeEvent has been extended with the member timestamp, also of UTCTime type.</li>
+<li>Added the ossie.utils.rhconnections package to make it simpler to generate endPoints for interactions between the Python Sandbox and the connectionManager.</li>
+<li>Added an allocations module to the Python ossie.utils module. This module contains a createProps function that performs type matches between a Device&rsquo;s property set and the property set provided.</li>
+<li>Improved the usability of the Event Channel Manager in the Python package.</li>
+<li>Added new helpers in the Python Sandbox package to listen to Property change events.</li>
+<li>Added capability for the collocation of a usesdevice relationship and a Component on the same host.</li>
+</ul>
+
+<h2 id="ide-features">IDE Features</h2>
+
+<ul>
+<li>Updated the IDE&rsquo;s Event Viewer to provide additional clarity when displaying information for all event types.  The Event Viewer displays a summary of basic event information, while the Properties view displays full details for a selected event.</li>
+<li>Added IDE support to generate new C++ Components as shared address space Components.</li>
+<li>Added the ability to launch shared address space Components in the Sandbox.</li>
+<li>Added a disconnect button to the IDE Event Viewer, which enables users to stop the viewer from updating with new events, while still persisting existing information.</li>
+<li>Added support to display devicerequires/deployerrequires information for runtime Components/Devices in the Advanced tab of the Properties view.</li>
+<li>Added support for load and save of the deployerrequires element in DCD files and the devicerequires element in SAD files.</li>
+<li>Added support for load and save of the usesdeviceref element in SAD files.</li>
+<li>Added runtime support for viewing/changing timestamp Properties.</li>
+<li>Added design-time support for editing timestamp Properties.</li>
+<li>Added support to display the new precision timestamp associated with a PropertyChangeEvent.</li>
+<li>Added editor support to specify the requirements of the GPP that launches a Component.</li>
+<li>Added editor support to filter Components that can be launched on a Device.</li>
+<li>Added support for editing Devices collocated with a host collocation.</li>
+</ul>
+
+<h2 id="improvements">Improvements</h2>
+
+<h2 id="core-framework-improvements">Core Framework Improvements</h2>
+
+<ul>
+<li>Extended Sandbox DataSource to accept SRI and TimeStamp objects when push method is called.</li>
+<li>Moved start and stop Port calls from generated code into base classes.</li>
+<li>Improved sb.launch() to accept a single dictionary for all Property overrides and no longer require the user to distinguish between command line and initialization.</li>
+<li>Added support for new C++ Components to be created as shared libraries, which allow multiple Components to be deployed into the same process and enable faster, lower-cost I/O.</li>
+</ul>
+
+<h2 id="ide-improvements">IDE Improvements</h2>
+
+<ul>
+<li>Added validaton for SPD files to check that referenced shared library Component files are present.</li>
+<li>Enhanced the IDE to recognize shared address space Components.</li>
+<li>Added support to display event messages when event channels are added or removed.</li>
+<li>Added the ability to display PropertyChangeEvent in the Event Viewer.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<h2 id="core-framework-fixes">Core Framework Fixes</h2>
+
+<ul>
+<li>Message supplier Ports now support the CF.QueryablePort interface, which allows querying the current set of connection IDs and connected objects.</li>
+<li>If errors are encountered when installing an Waveform file, the ApplicationFactory will now throw an ApplicationInstallationError with the details of what error occurred.</li>
+<li>Improved error message when using the Python package to attach to a named domain when the name service has a stale reference to the missing Domain Manager.</li>
+<li>In Python FEI Devices, the default Port name used for matchAllocationIdToStreamId is populated correctly.</li>
+<li>Fixed a series of problems with Python FEI base classes, including :
+
+<ul>
+<li>Added validateRequestSingle and validateRequestVsDeviceStream to remap the Python base API close to the Java and C++ base API.</li>
+<li>In Python FEI Devices, when the user code generates an exception, that exception is correctly logged.</li>
+<li>When Python FEI Devices fail to allocate resources, they return a correctly-formatted exception.</li>
+<li>Resolved issues with listener management in Python FEI Devices.</li>
+<li>validateRequestVsRFInfo correctly scales the minimum sampling rate for scalar or complex data.</li>
+<li>Fixed typo in error messages for Python FEI Devices.</li>
+</ul></li>
+<li>Added creation of sdr/dev/services directory when installing from source or the REDHAWK RPM package.</li>
+<li>Python FEI Device getTunerStatus call returns without errors.</li>
+<li>If the Java minimum is not met, the automake configure script exits before generating the Makefile.</li>
+<li>When an exception occurs during C++ FEI deallocation, updateUsageState is called to account for the deallocation(s) that succeeded.</li>
+<li>Fixed issue with C++ FEI Devices for failed allocations. Now, the C++ FEI Device base class returns false when the allocation fails instead of throwing an exception.</li>
+</ul>
+
+<h2 id="ide-fixes">IDE Fixes</h2>
+
+<ul>
+<li>The IDE now automatically adds header files in REDHAWK shared library projects to the Makefile.am.ide.</li>
+<li>Properties of type ulonglong are now passed to resources launched in the Sandbox.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/master-source/content/beta/release-notes/release-notes-2.1.0.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<link href="../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

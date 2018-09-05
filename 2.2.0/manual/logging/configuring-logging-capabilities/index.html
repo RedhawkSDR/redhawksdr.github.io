@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Configuring Logger Settings :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" href="../../../css/custom.css">
+<script src="../../../js/custom.js"></script>
+
+    
+  </head>
+  <body data-url="/manual/logging/configuring-logging-capabilities/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://redhawksdr.github.io"  rel="noopener">
+                  <i class='fa fa-book'></i> <label>Documentation</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> <label>Downloads</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>GitHub</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="../../../">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/getting-started/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../getting-started/">Getting Started With REDHAWK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-started/process-management/" class="dd-item">
+        <div>
+          <a href="../../../getting-started/process-management/">
+            REDHAWK’s Approach to Process Management and Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/getting-started/" class="dd-item">
+        <div>
+          <a href="../../../getting-started/getting-started/">
+            Getting Started
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/ide-quickstart/" class="dd-item">
+        <div>
+          <a href="../../../getting-started/ide-quickstart/">
+            IDE Quickstart
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/further-reading/" class="dd-item">
+        <div>
+          <a href="../../../getting-started/further-reading/">
+            Further Reading
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/installation/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/installation/">Installation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/components/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/components/">Components</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/components/redhawk-core-assets/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/redhawk-core-assets/">
+            REDHAWK Core Assets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/creating-a-component/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/creating-a-component/">
+            Creating a Component Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/octave-components/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/octave-components/">
+            Creating Octave Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/running-a-component/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/running-a-component/">
+            Running a Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/sandbox/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/sandbox/">
+            Sandbox
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/hello-world-component/" class="dd-item">
+        <div>
+          <a href="../../../manual/components/hello-world-component/">
+            Creating and Running a Hello World Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/component-structure/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/component-structure/">Component Structure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/component-structure/auto-generated-files/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/auto-generated-files/">
+            Auto-Generated Component Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/auto-generated-methods/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/auto-generated-methods/">
+            Auto-Generated Component Methods
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/base-component-members/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/base-component-members/">
+            Base Component Members
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/component-implementations/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/component-implementations/">
+            Component Implementations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/java-version/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/java-version/">
+            Java Version
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/managing-defining-properties/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/managing-defining-properties/">
+            Managing and Defining Properties
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/working-with-events/" class="dd-item">
+        <div>
+          <a href="../../../manual/component-structure/working-with-events/">
+            Working with Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/shared-libraries/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/shared-libraries/">Shared Libraries</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/shared-libraries/creating-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../../manual/shared-libraries/creating-a-shared-library-project/">
+            Creating a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/using-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../../manual/shared-libraries/using-a-shared-library-project/">
+            Using a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/packaging-shared-libraries/" class="dd-item">
+        <div>
+          <a href="../../../manual/shared-libraries/packaging-shared-libraries/">
+            Packaging Shared Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/manually-including-external-libraries/" class="dd-item">
+        <div>
+          <a href="../../../manual/shared-libraries/manually-including-external-libraries/">
+            Manually Including External Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/connections/">Connections</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/the-connection-process/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/the-connection-process/">
+            The Connection Process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/why-ports/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/why-ports/">
+            Why Ports?
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/port-access/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/port-access/">
+            Port Access
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/dynamic-connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/dynamic-connections/">
+            Dynamic Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/standardized-data-interfaces/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/standardized-data-interfaces/">
+            Standardized Data Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/connections/bulkio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/sri/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/sri/">
+            Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/bit-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/bit-data/">
+            Bit Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/examples/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/examples/">
+            Examples
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/burstio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/connections/burstio/">BurstIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/burstio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/sri/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/sri/">
+            Burst Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/messaging/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/connections/messaging/">Messaging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/messaging/message-producer/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/messaging/message-producer/">
+            Message Producer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/message-consumer/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/messaging/message-consumer/">
+            Message Consumer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/viewing-messages/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/messaging/viewing-messages/">
+            Viewing Messages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/connecting-producers-consumers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/messaging/connecting-producers-consumers/">
+            Connecting Producers and Consumers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/connections/connection-callbacks/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/connection-callbacks/">
+            Connection Callbacks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/custom-idl-interfaces/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/custom-idl-interfaces/">
+            Custom IDL Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/waveforms/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/waveforms/">Waveforms</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/waveforms/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../../manual/waveforms/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/sample-waveform/" class="dd-item">
+        <div>
+          <a href="../../../manual/waveforms/sample-waveform/">
+            Create and Deploy a Sample Waveform
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/deployment-resources/" class="dd-item">
+        <div>
+          <a href="../../../manual/waveforms/deployment-resources/">
+            Waveform Deployment and Computing Resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/devices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/devices/">Working with Devices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/devices/interacting-with-hardware/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/devices/interacting-with-hardware/">Using Devices to Interact with Hardware</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
+            Creating an FEI Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/interacting-with-hardware/interacting-fei-device-python-package/">
+            Interacting with an FEI Device with the Python Package
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/using-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/interacting-with-hardware/using-fei-device-ide/">
+            Using an FEI Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/devices/associating-a-waveform/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/associating-a-waveform/">
+            Associating a Waveform with an FEI Device
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/running-components/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/running-components/">
+            Using Devices to Run Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interface-with-fpgas/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/interface-with-fpgas/">
+            Using Devices to Interface with FPGAs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/fei-data-structures/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/fei-data-structures/">
+            Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/misc/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/misc/">
+            Miscellaneous FrontEnd Tuner Library Implementation Details
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/nodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/nodes/">Nodes</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/nodes/running-a-node/" class="dd-item">
+        <div>
+          <a href="../../../manual/nodes/running-a-node/">
+            Running a Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/creating-a-new-node/" class="dd-item">
+        <div>
+          <a href="../../../manual/nodes/creating-a-new-node/">
+            Creating a New Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/distributed-computing-and-rf-devices/" class="dd-item">
+        <div>
+          <a href="../../../manual/nodes/distributed-computing-and-rf-devices/">
+            Distributed Computing and RF Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/sandbox/">Sandbox</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/sandbox/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/sandbox/python/">Python Sandbox</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/sandbox/python/working_with_components/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/working_with_components/">
+            Working with Components, Devices, and Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/helpers/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/helpers/">
+            Helpers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/devices/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/devices/">
+            Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/example-interaction/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/example-interaction/">
+            Example Sandbox Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sources-and-sinks/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/sources-and-sinks/">
+            Built-in Sources and Sinks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sdds-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/sdds-data/">
+            Working with SDDS Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/plotting-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/plotting-data/">
+            Plotting Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/misc/" class="dd-item">
+        <div>
+          <a href="../../../manual/sandbox/python/misc/">
+            Miscellaneous
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/ide/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sandbox/ide/">IDE Sandbox</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/runtime-environment/">The Runtime Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/runtime-environment/launching-a-domain/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/launching-a-domain/">
+            Launching a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/domain-manager/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/domain-manager/">
+            Domain Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/file-system/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/file-system/">
+            File System
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/applications/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/applications/">
+            Applications
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/application-factory/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/application-factory/">
+            The Application Factory
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/device-manager/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/device-manager/">
+            The Device Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/allocation-manager/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/allocation-manager/">
+            The Allocation Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/connection-manager/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/connection-manager/">
+            The Connection Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/events/" class="dd-item">
+        <div>
+          <a href="../../../manual/runtime-environment/events/">
+            Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-inspection/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/runtime-inspection/">Runtime Environment Inspection</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/logging/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../manual/logging/">Logging</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-structure/">
+            Logging Structure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item active">
+        <div>
+          <a href="../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/adjusting-logging-at-runtime/">
+            Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/viewing-logging-events/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/viewing-logging-events/">
+            Viewing Logging Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/ide/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/ide/">Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/launching-the-ide/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/launching-the-ide/">
+            Launching the REDHAWK IDE for the First Time
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/pydev-overview/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/pydev-overview/">
+            PyDev Overview
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/workbench/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/workbench/">
+            The Workbench
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/ide/editors-and-views/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/ide/editors-and-views/">Editors and Views</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/editors-and-views/softpkg-editor/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/softpkg-editor/">
+            SoftPkg Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/node-editor/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/node-editor/">
+            Node Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/nextmidas-plot-editor/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/nextmidas-plot-editor/">
+            NeXtMidas Plot Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-explorer-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/redhawk-explorer-view/">
+            REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-plot-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/redhawk-plot-view/">
+            REDHAWK Plot View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/plot-settings-dialog/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/plot-settings-dialog/">
+            Plot Settings Dialog
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/event-viewer-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/event-viewer-view/">
+            Event Viewer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/data-list-statistics-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/data-list-statistics-view/">
+            Data List and Statistics Views
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/port-monitor-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/port-monitor-view/">
+            Port Monitor View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/sri-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/sri-view/">
+            SRI View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/console-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/console-view/">
+            Console View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/properties-view/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/editors-and-views/properties-view/">
+            Properties View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/ide/creating-redhawk-projects/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/creating-redhawk-projects/">
+            Creating REDHAWK Projects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/namespaces/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/namespaces/">
+            Adding/Changing/Removing REDHAWK Project Namespaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/debugging/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/debugging/">
+            Debugging REDHAWK Components and Devices with Eclipse
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/deploying-projects/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/deploying-projects/">
+            Deploying Projects to the SDRROOT
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/snapshot-tool/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/snapshot-tool/">
+            Snapshot Tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/connect-wizard/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/connect-wizard/">
+            Connect Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/octave-wizard/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/octave-wizard/">
+            Using the Octave Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/plot-port-wizard/" class="dd-item">
+        <div>
+          <a href="../../../manual/ide/plot-port-wizard/">
+            Plot Port Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/exploring-domain/">Exploring a Running Domain Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/exploring-domain/connecting-to-a-domain/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/connecting-to-a-domain/">
+            Connecting to a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/viewing-domain-contents/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/viewing-domain-contents/">
+            Viewing the Contents of the Domain in the REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/working-with-waveforms/">
+            Working with Waveforms on a Running Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/plotting-bulkio-ports/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/plotting-bulkio-ports/">
+            Plotting BulkIO Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/increasing-bulkio-connection-bandwidth/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/increasing-bulkio-connection-bandwidth/">
+            Increasing the Bandwidth of BulkIO Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/getting-error-condition-details/" class="dd-item">
+        <div>
+          <a href="../../../manual/exploring-domain/getting-error-condition-details/">
+            Getting Details About Error Conditions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/">Appendices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/redhawk-yum/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/redhawk-yum/">
+            REDHAWK Yum Repository and Packages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/dependencies/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/dependencies/">
+            External Dependencies
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/standalone-ide/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/standalone-ide/">
+            Installing a Stand-alone IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/source-installation/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/source-installation/">
+            Building and Installing REDHAWK from Source
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/optimization/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/optimization/">
+            Optimization
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/adminservice/">REDHAWK System Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/appendices/adminservice/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/adminservice/adminservice/">AdminService</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/serviceconfigurations/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/adminservice/serviceconfigurations/">
+            Service Configurations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/servicelifecycle/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/adminservice/servicelifecycle/">
+            Service Life Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/adminservice/redhawkcoreservices/">REDHAWK Core Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/redhawkcoreservices/domainmanager/">
+            REDHAWK Domain Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/redhawkcoreservices/devicemanager/">
+            REDHAWK Device Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/waveform/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/redhawkcoreservices/waveform/">
+            REDHAWK Waveform Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domains/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/redhawkcoreservices/domains/">
+            Managing Services By Domains and Types
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/configuration/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/adminservice/configuration/">Configuration Files</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/adminservice/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/configuration/adminservice/">
+            AdminService Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/configuration/domainmanager/">
+            Domain Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/configuration/devicemanager/">
+            Device Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/waveform/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/configuration/waveform/">
+            Waveform Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/rhadmin/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/rhadmin/">
+            rhadmin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/support-files/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/adminservice/support-files/">
+            Linux Support Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/fei/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/fei/">
+            FrontEnd Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/persona-device-pattern/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/persona-device-pattern/">
+            REDHAWK Persona Device Pattern
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/shared-memory/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/shared-memory/">
+            Shared Memory Maintenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/">
+            Troubleshooting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/logging-config-plugin/">
+            Logging Configuration Plugin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/acronyms/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/acronyms/">
+            List of Acronyms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/glossary/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/glossary/">Glossary</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/getting-started/" >
+   Getting Started With REDHAWK</option>
+    <option value="/manual/" >
+   REDHAWK Manual - 2.2.0</option> 
+    <option value="/manual/installation/" >
+  - 
+   Installation</option>
+    <option value="/manual/components/" >
+  - 
+   Components</option>
+    <option value="/manual/component-structure/" >
+  - 
+   Component Structure</option>
+    <option value="/manual/shared-libraries/" >
+  - 
+   Shared Libraries</option>
+    <option value="/manual/connections/" >
+  - 
+   Connections</option>
+    <option value="/manual/waveforms/" >
+  - 
+   Waveforms</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
+    <option value="/manual/nodes/" >
+  - 
+   Nodes</option>
+    <option value="/manual/sandbox/" >
+  - 
+   Sandbox</option>
+    <option value="/manual/runtime-environment/" >
+  - 
+   The Runtime Environment</option>
+    <option value="/manual/runtime-inspection/" >
+  - 
+   Runtime Environment Inspection</option>
+    <option value="/manual/logging/" >
+  - 
+   Logging</option> 
+      <option value="/manual/logging/logging-structure/" >-- Logging Structure</option>
+      <option value="/manual/logging/configuring-logging-capabilities/"  selected>-- Configuring Logger Settings</option>
+      <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
+      <option value="/manual/logging/adjusting-logging-at-runtime/" >-- Adjusting Logging at Runtime</option>
+      <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
+  
+    <option value="/manual/ide/" >
+  - 
+   Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
+    <option value="/manual/exploring-sdrroot/" >
+  - 
+   Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/exploring-domain/" >
+  - 
+   Exploring a Running Domain Using the REDHAWK IDE</option>
+    <option value="/manual/appendices/" >
+  - 
+   Appendices</option>
+    <option value="/manual/glossary/" >
+  - 
+   Glossary</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="../../../js/lunr.min.js"></script>
+        <script type="text/javascript" src="../../../js/auto-complete.js"></script>
+        <link href="../../../css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+          
+        </script>
+        <script type="text/javascript" src="../../../js/search.js"></script>
+      </div>
+    
+
+    <h1>Configuring Logger Settings</h1>
+    
+    
+    
+    
+
+<p>A logger is configured through two mechanisms: a log configuration file and a global log level.</p>
+
+<p>The log configuration file enables users to manage appenders and configure the settings for individual loggers. The global log level is a shortcut that allows users to set the log level for an entire resource with a single call or command-line switch. When a configuraton file and log level are used together, the configuration file describes the settings for appenders and named loggers, while the log level is applied to the resource&rsquo;s main logger.</p>
+
+<p>A log configuration file can be:</p>
+
+<ul>
+<li><p>Passed as a command-line argument when the Domain Manager is started</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nodeBooter -D -logcfgfile logconfiguration.cfg</code></pre></div>
+<div class="notices note" ><p>When passed through the Domain Manager, every component that does not have a logging configuration set will use the domain&rsquo;s logging configuration.</p>
+</div>
+</li>
+
+<li><p>Passed as an initialization property when an application is created</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; app <span style="color:#f92672">=</span> dom.createApplication<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/waveforms/example/example.sad.xml&#34;</span>, initConfiguration<span style="color:#f92672">={</span><span style="color:#e6db74">&#39;LOGGING_CONFIG_URI&#39;</span>:<span style="color:#e6db74">&#39;file:///home/user/logconfiguration.cfg&#39;</span><span style="color:#f92672">})</span></code></pre></div>
+<div class="notices note" ><p>When passed through the <code>createApplication</code> function, the <code>LOGGING_CONFIG_URI</code> is passed to all components in the application.</p>
+</div>
+</li>
+
+<li><p>Added to the component instance in a SAD file</p>
+
+<h5 id="add-logging-configuration-to-a-component">Add Logging Configuration to a Component</h5>
+
+<p><img src="../images/LoggingApp.png" alt="Add Logging Configuration to a Component" /></p></li>
+
+<li><p>Passed at runtime through the <a href="../../../manual/logging/adjusting-logging-at-runtime/">logging API</a></p></li>
+</ul>
+
+<p>For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.</p>
+
+<ul>
+<li><p>Passed as a command-line argument when the Device Manager is started</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg</code></pre></div></li>
+
+<li><p>Added to the device <code>componentinstantiation</code> element as element <code>loggingconfig</code> in the DCD file</p></li>
+
+<li><p>Added to a device instance as property <code>LOGGING_CONFIG_URI</code> in the DCD file</p></li>
+</ul>
+
+<p>The URI is resolved through 2 different methods:</p>
+
+<ul>
+<li><p>Logger found through the SCA file system. For the Domain Manager, this is <code>$SDRROOT/dom</code>; for the Device Manager, this is <code>$SDRROOT/dev</code>. For example, with the Domain Manager, the URI <code>sca:///myfile.cfg</code> is equivalent to <code>$SDRROOT/dom/myfile.cfg</code>.</p></li>
+
+<li><p>Logger found through the local file system: <code>file:///tmp/myfile.cfg</code> is equivalent to <code>/tmp/myfile.cfg</code>.</p></li>
+</ul>
+
+<p>If the relative path to the file is provided as a command-line argument to <code>nodeBooter</code>, the file location is converted to an absolute path directory and then passed as a file URI to subsequent processes.</p>
+
+<p>If no log configuration file is provided, the following log configuration is used by default:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,STDOUT
+log4j.appender.STDOUT<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.STDOUT.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.STDOUT.layout.ConversionPattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n&#34;</span></code></pre></div>
+<p>A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of decreasing severity. <code>FATAL</code> messages describe events that are unrecoverable to the resource through a decreasing level to <code>TRACE</code>, which is used to log fine-grained behavior. Setting a lower severity threshold increases verbosity.</p>
+
+<ul>
+<li><code>FATAL</code></li>
+<li><code>ERROR</code></li>
+<li><code>WARN</code></li>
+<li><code>INFO</code></li>
+<li><code>DEBUG</code></li>
+<li><code>TRACE</code></li>
+</ul>
+
+<p>Each different logging implementation library uses a log4j configuration file format to define the configuration context for that library. This file defines how and where the logging messages are recorded. For example, if the configuration logging level is set to <code>INFO</code>, then messages published at the <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>, and <code>FATAL</code> severity levels are displayed in the log. All other message levels are suppressed. The following two log-level configuration options are also available.</p>
+
+<ul>
+<li><code>OFF</code>: Suppress all logging messages from the log</li>
+<li><code>ALL</code>: Allow all logging messages</li>
+</ul>
+
+<p>The previous configuration suppresses logging levels above <code>INFO</code> and writes those messages to the standard out console.</p>
+
+<h3 id="configuration-context-tokens">Configuration Context Tokens</h3>
+
+<p>For REDHAWK release 1.10 and above, the log4j configuration file can contain special tokens that expand to provide the runtime execution context of the resource. These tokens can be located anywhere in the configuration file and are resolved during resource startup. The following table describes the tokens.</p>
+
+<h5 id="log4j-configuration-file-special-tokens">log4j Configuration File Special Tokens</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Token</strong></th>
+<th align="left"><strong>Definition</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>@@@HOST.NAME@@@</code></td>
+<td align="left">Host name returned from gethostname call (multi-homed systems may have issues).</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@HOST.IP@@@</code></td>
+<td align="left">Dot notation IP Address of the machine on which the processing is running.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@NAME@@@</code></td>
+<td align="left">Name of the resource given on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@INSTANCE@@@</code></td>
+<td align="left">Instance name given to the resource on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@PID@@@</code></td>
+<td align="left">pid of the running resource.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DOMAIN.NAME@@@</code></td>
+<td align="left">Name of the domain under which your resource is running.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DOMAIN.PATH@@@</code></td>
+<td align="left">The contents of the <code>DOM_PATH</code> parameter on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE_MANAGER.NAME@@@</code></td>
+<td align="left">Name of the Device Manager that started the device or service.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE_MANAGER.INSTANCE@@@</code></td>
+<td align="left">Instance name of the Device Manager from the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.NAME@@@</code></td>
+<td align="left">Name of the service as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.INSTANCE@@@</code></td>
+<td align="left">Instance name of the service as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.PID@@@</code></td>
+<td align="left">pid of the running service.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.NAME@@@</code></td>
+<td align="left">Name of the device as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.INSTANCE@@@</code></td>
+<td align="left">Instance name of the device as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.PID@@@</code></td>
+<td align="left">pid of the device.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@WAVEFORM.NAME@@@</code></td>
+<td align="left">Name of the waveform from the <code>DOM_PATH</code> command line variable.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@WAVEFORM.INSTANCE@@@</code></td>
+<td align="left">Instance name of the waveform from the <code>DOM_PATH</code> command line variable.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.NAME@@@</code></td>
+<td align="left">Name of the component binding parameter as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.INSTANCE@@@</code></td>
+<td align="left">Instance name of the component identifier parameter as specified on the command line.</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.PID@@@</code></td>
+<td align="left">pid of the component.</td>
+</tr>
+</tbody>
+</table>
+
+<p>This table lists the availability of token definitions for each REDHAWK resource type.</p>
+
+<h5 id="availability-of-tokens">Availability of Tokens</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Token</strong></th>
+<th align="left"><strong>Domain Manager</strong></th>
+<th align="left"><strong>Device Manager</strong></th>
+<th align="left"><strong>Device</strong></th>
+<th align="left"><strong>Service</strong></th>
+<th align="left"><strong>Component</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>@@@HOST.IP@@@</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@HOST.NAME@@@</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@NAME@@@</code></td>
+<td align="left">Domain Manager</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@INSTANCE@@@</code></td>
+<td align="left"><code>DOMAIN_MANAGER_1</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@PID@@@</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DOMAIN.NAME@@@</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DOMAIN.PATH@@@</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE_MANAGER.NAME@@@</code></td>
+<td align="left">N</td>
+<td align="left"><code>DEVICE_MANAGER</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE_MANAGER.INSTANCE@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.NAME@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.INSTANCE@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@SERVICE.PID@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.NAME@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.INSTANCE@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@DEVICE.PID@@@</code></td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@WAVEFORM.NAME@@@</code></td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@WAVEFORM.INSTANCE@@@</code></td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.NAME@@@</code></td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.INSTANCE@@@</code></td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left"><code>@@@COMPONENT.PID@@@</code></td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="log-configuration-example-simple-appender-with-a-named-logger">Log Configuration Example - Simple Appender with a Named Logger</h3>
+
+<p>In the following example, the root most logger passes logging messages with a severity level <code>INFO</code> or higher. Those messages are sent to the appenders called: <code>CONSOLE</code> and <code>FILE</code>. The <code>CONSOLE</code> appender messages are displayed in the console of the running application. The <code>FILE</code> appender writes log messages to a file called <code>allmsgs.out</code>.</p>
+
+<p>If the resource uses a named logger, <code>EDET_1.user.detections</code>, then log messages to this logger with a severity of <code>DEBUG</code> or higher are diverted to a file called <code>edet_log.out</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Set root logger default levels and appender
+</span><span style="color:#75715e"></span>log4j.rootLogger<span style="color:#f92672">=</span>INFO, CONSOLE, FILE
+
+<span style="color:#75715e"># Console Appender
+</span><span style="color:#75715e"></span>log4j.appender.CONSOLE<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.STDERR<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.STDERR.Threshold<span style="color:#f92672">=</span>ERROR
+log4j.appender.STDERR.Target<span style="color:#f92672">=</span>System.err
+
+<span style="color:#75715e"># Default Log Appender
+</span><span style="color:#75715e"></span>log4j.appender.FILE<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
+log4j.appender.FILE.Append<span style="color:#f92672">=</span>true
+log4j.appender.FILE.File<span style="color:#f92672">=</span>allmsgs.out
+
+<span style="color:#75715e"># Edet Appender
+</span><span style="color:#75715e"></span>log4j.appender.edetLog<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
+log4j.appender.edetLog.Append<span style="color:#f92672">=</span>true
+log4j.appender.edetLog.File<span style="color:#f92672">=</span>edet_log.out
+
+<span style="color:#75715e"># Appender layout
+</span><span style="color:#75715e"></span>log4j.appender.CONSOLE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
+    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
+log4j.appender.STDERR.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.STDERR.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
+    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
+log4j.appender.FILE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
+    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
+log4j.appender.edetLog.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.edetLog.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
+    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
+log4j.appender.NULL.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.NULL.layout.ConversionPattern<span style="color:#f92672">=</span>%n
+
+log4j.category.EDET_1.user.detections<span style="color:#f92672">=</span>DEBUG, edetLog
+log4j.additivity.EDET_1.user.detections<span style="color:#f92672">=</span>false</code></pre></div>
+<h3 id="log-configuration-example-configuring-a-component-with-token-macros">Log Configuration Example - Configuring a Component with Token Macros</h3>
+
+<p>The logging configuration information for component <code>MEGA_WORKER</code> is configured from <code>$SDRROOT/dom/logcfg/component.log4j.cfg</code>. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, <code>@@@WAVEFORM.NAME@@@</code>, <code>@@@COMPONENT.NAME@@@</code> and <code>@@@COMPONENT.PID@@@</code>). The root most logger passes logging messages with a severity level <code>INFO</code> or higher, to the appenders called: <code>CONSOLE</code> and <code>FILE</code>. The <code>CONSOLE</code> appender messages are displayed in the console of the running application. For the <code>FILE</code> appender, the destination file is: <code>/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log</code>.</p>
+
+<p>Waveform: MY_EXAMPLE<br />
+Component: MEGA_WORKER<br />
+ property: LOGGING_CONFIG_URI = &ldquo;sca:///logcfg/component.log4j.cfg&rdquo;</p>
+
+<p>$SDRROOT/<br />
+ &nbsp;&nbsp;&nbsp;&nbsp; dev/<br />
+ &nbsp;&nbsp;&nbsp;&nbsp; deps/<br />
+ &nbsp;&nbsp;&nbsp;&nbsp; dom/
+ &nbsp;&nbsp;&nbsp;&nbsp;<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; logcfg/
+ &nbsp;&nbsp;&nbsp;&nbsp;<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; component.log4j.cfg
+ &nbsp;&nbsp;&nbsp;&nbsp;<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;<br />
+ /data/logdir/</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Set root logger default levels and appender
+</span><span style="color:#75715e"></span>log4j.rootLogger<span style="color:#f92672">=</span>INFO, CONSOLE, FILE
+
+<span style="color:#75715e"># Console Appender
+</span><span style="color:#75715e"></span>log4j.appender.CONSOLE<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+
+<span style="color:#75715e"># File Appender
+</span><span style="color:#75715e"></span>log4j.appender.FILE<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
+log4j.appender.FILE.File<span style="color:#f92672">=</span>/data/logdir/@@@WAVEFORM.NAME@@@/@@@COMPONENT.NAME@@@.@@@COMPONENT.PID@@@.log
+log4j.appender.FILE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>: %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n</code></pre></div>
+<p>When the waveform <code>MY_EXAMPLE</code> is deployed on the domain, the component is launched with the following logging configuration:</p>
+
+<p><code>MEGA_WORKER &quot;.....&quot; LOGGING_CONFIG_URI sca:///logcfg/component.log4j.cfg?fs=IOR:010…</code></p>
+
+<h3 id="logging-with-event-channels-for-components-devices-and-services">Logging with Event Channels for Components, Devices, and Services</h3>
+
+<p>For REDHAWK resources, the underlying logging functionality has been extended to include support for publishing log messages to a specified Event Channel. To include this capability, add the <code>org.ossie.logging.RH_LogEventAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
+
+<h5 id="rh-logeventappender-configuration-options">RH_LogEventAppender Configuration Options</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Appender Option</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>EVENT_CHANNEL</code></td>
+<td align="left">Event Channel name where logging messages are published.</td>
+</tr>
+
+<tr>
+<td align="left"><code>PRODUCER_ID</code></td>
+<td align="left">Identifier of the resource producing the log message (resource name).</td>
+</tr>
+
+<tr>
+<td align="left"><code>PRODUCER_NAME</code></td>
+<td align="left">Name of the resource producing the log message.</td>
+</tr>
+
+<tr>
+<td align="left"><code>PRODUCER_FQN</code></td>
+<td align="left">Fully qualified name of the resource (domain-name/waveform-name/resource-name).</td>
+</tr>
+
+<tr>
+<td align="left"><code>RETRIES</code></td>
+<td align="left">Number of times to retry connecting to the Event Channel. (Integer)</td>
+</tr>
+
+<tr>
+<td align="left"><code>THRESHOLD</code></td>
+<td align="left">log4cxx log level; <code>FATAL</code>, <code>WARN</code>, <code>ERROR</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>In the following example, a component configured with this log4j properties file publishes log messages with a severity of <code>ERROR</code> or higher to the Event Channel <code>ERROR_LOG_CHANNEL</code> in the domain <code>REDHAWK_DEV</code>. The threshold level for the appender supersedes the <code>rootLogger</code>’s logging level.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,stdout,pse
+
+<span style="color:#75715e"># Direct log messages to stdout
+</span><span style="color:#75715e"></span>log4j.appender.stdout<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target<span style="color:#f92672">=</span>System.out
+log4j.appender.stdout.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c<span style="color:#f92672">{</span><span style="color:#ae81ff">1</span><span style="color:#f92672">}</span>:%L - %m%n
+
+<span style="color:#75715e"># Direct error messages to an event channel
+</span><span style="color:#75715e"></span>log4j.appender.pse<span style="color:#f92672">=</span>org.ossie.logging.RH_LogEventAppender
+log4j.appender.pse.Threshold<span style="color:#f92672">=</span>ERROR
+log4j.appender.pse.event_channel<span style="color:#f92672">=</span>ERROR_LOG_CHANNEL
+log4j.appender.pse.name_context<span style="color:#f92672">=</span>@@@DOMAIN.NAME@@@
+log4j.appender.pse.producer_id<span style="color:#f92672">=</span>@@@COMPONENT.INSTANCE@@@
+log4j.appender.pse.producer_name<span style="color:#f92672">=</span>@@@COMPONENT.NAME@@
+log4j.appender.pse.producer_FQN<span style="color:#f92672">=</span>@@@DOMAIN.NAME@@@.@@@WAVEFORM.NAME@@@.@@@COMPONENT.NAME@@@
+log4j.appender.pse.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.pse.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c:%L - %m%n</code></pre></div>
+<h3 id="synchronous-logging-for-c-devices-and-components">Synchronous Logging for C++ Devices and Components</h3>
+
+<p>In versions of log4cxx older than 0.10.0, logging messages from different sources could be interleaved in the same line when using the default file appender. To deal with this issue, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the <code>org.ossie.logging.RH_SyncRollingAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
+
+<h5 id="rh-syncrollingappender-configuration-options">RH_SyncRollingAppender Configuration Options</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Appender Option</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>Retries</code></td>
+<td align="left">Number of retries when waiting for the lock fails. (Integer)</td>
+</tr>
+
+<tr>
+<td align="left"><code>WaitOnLock</code></td>
+<td align="left">Time in milliseconds to wait when attempting to take ownership of the lock. (Integer)</td>
+</tr>
+
+<tr>
+<td align="left"><code>MaxFileSize</code></td>
+<td align="left">Maximum file size before rolling to the next file.</td>
+</tr>
+
+<tr>
+<td align="left"><code>MaxBackupIndex</code></td>
+<td align="left">Maximum number of files to keep. (Integer)</td>
+</tr>
+
+<tr>
+<td align="left"><code>File</code></td>
+<td align="left">Full local file system path.</td>
+</tr>
+
+<tr>
+<td align="left"><code>Cleanup</code></td>
+<td align="left">Clean up synchronization resources when the process ends. (Value is True or False.)</td>
+</tr>
+</tbody>
+</table>
+
+<p>In the following example, a component configured with this log4j properties file publishes a log message to the file <code>MP_RedhawkTest</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,stdout,mp
+
+<span style="color:#75715e"># Direct log messages to stdout
+</span><span style="color:#75715e"></span>log4j.appender.stdout<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target<span style="color:#f92672">=</span>System.out
+log4j.appender.stdout.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c<span style="color:#f92672">{</span><span style="color:#ae81ff">1</span><span style="color:#f92672">}</span>:%L - %m%n
+
+log4j.appender.mp<span style="color:#f92672">=</span>org.ossie.logging.RH_SyncRollingAppender
+log4j.appender.mp.Retries<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+log4j.appender.mp.WaitOnLock<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+log4j.appender.mp.MaxFileSize<span style="color:#f92672">=</span>5MB
+log4j.appender.mp.MaxBackupIndex<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+log4j.appender.mp.File<span style="color:#f92672">=</span>MP_RedhawkTest
+log4j.appender.mp.Cleanup<span style="color:#f92672">=</span>False
+log4j.appender.mp.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
+log4j.appender.mp.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c:%L - %m%n</code></pre></div>
+<div class="notices note" ><p>The synchronous appender only works for single GPP systems. The synchronization resources used require all the processes to reside on the same host.</p>
+</div>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="../../../manual/logging/logging-structure/" title="Logging Structure"> <i class="fa fa-chevron-left"></i><label>Logging Structure</label></a>
+    <a class="nav nav-next" href="../../../manual/logging/logging-within-a-resource/" title="Logging Within A Resource" style="margin-right: 0px;"><label>Logging Within A Resource</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/develop-2.2/content/manual/logging/configuring-logging-capabilities.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<link href="../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

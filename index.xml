@@ -104,20 +104,30 @@
     
     <item>
       <title>REDHAWK Release Notes - 2.1.3</title>
-      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.3/</link>
+      <link>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.3/</guid>
+      <guid>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.3/</guid>
       <description>The effort in REDHAWK 2.1.3 focused on:
  Adding snapshot capability of network data and performing SDDS packet analysis on the captured data. Adding scripts and configuration files that allow REDHAWK core services to run as system services. In addition to these services, integrators can define REDHAWK waveforms that are deployed during the system boot process. Extending the tool, rh_net_diag, to provide read/write/execute permissions checks on directories important for running a REDHAWK system.</description>
     </item>
     
     <item>
-      <title>REDHAWK Release Notes - 2.1.2</title>
-      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.2/</link>
+      <title>REDHAWK Release Notes - 2.2.0</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.2/</guid>
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.0/</guid>
+      <description>The REDHAWK 2.2.0 release is a culmination of all the 2.1.x beta releases into the next Long Term Supported (LTS) product release of REDHAWK. In summary, REDHAWK 2.2.0 focused on:
+ Adding support for Components to be deployed on a specific GPP, and conversely allowing the GPP to restrict deployments through a matching set of id/value pairs. These id/value pairs are defined in the Software Assembly Descriptor and Device Configuration Definition files respectively.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.1.2</title>
+      <link>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.2/</guid>
       <description>The effort in REDHAWK 2.1.2 focused on:
  Core REDHAWK Features and APIs
  Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O. Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available at https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-address. This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.</description>
@@ -125,19 +135,19 @@
     
     <item>
       <title>REDHAWK Release Notes - 2.1.1</title>
-      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.1/</link>
+      <link>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.1/</guid>
+      <guid>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.1/</guid>
       <description>Core REDHAWK Features and APIs  Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O. Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available here.  This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.  Adding the API for a new type of tuner, a scanning Device.</description>
     </item>
     
     <item>
       <title>REDHAWK Release Notes - 2.1.0</title>
-      <link>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.0/</link>
+      <link>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.1-beta/release-notes-2.1.0/</guid>
+      <guid>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.0/</guid>
       <description>The effort in REDHAWK 2.1.0 focused on:
  Adding support for Components to be deployed on a specific GPP, and conversely allowing the GPP to restrict deployments through a matching set of id/value pairs. These id/value pairs are defined in the Software Assembly Descriptor and Device Configuration Definition files respectively. Users may refer to this feature as the &amp;ldquo;special snowflake&amp;rdquo; deployment Property. Shared address space Components: Significant enhancement of Component model and BulkIO to support high performance I/O.</description>
     </item>
