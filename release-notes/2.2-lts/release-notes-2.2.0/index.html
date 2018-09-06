@@ -338,6 +338,7 @@ ga('send', 'pageview');
 <li>Adding scripts and configuration files that allow REDHAWK core services to run as system services.  In addition to these services, integrators can define REDHAWK waveforms that are deployed during the system boot process.</li>
 <li>Adding the Components tab to the Waveform editor in the IDE to allow editing of Component instantiation details, including logging configuration. This information will be used to resolve the LOGGING_CONFIG_URI parameter during Component deployment.</li>
 <li>Improving the New Project Wizard to warn users if the project location selected already contains files that will become part of the project. Increase user awareness of files that may be moved, deleted, or packaged with a project.</li>
+<li>Updating the IDE to use the latest available Eclipse tooling, Eclipse Neon. For more information about Eclipse Neon, refer to <a href="http://www.eclipse.org/neon/noteworthy">http://www.eclipse.org/neon/noteworthy</a>.</li>
 <li>Adding a Libraries chapter in the REDHAWK Manual to explain how to use shared libraries.</li>
 <li>Documenting available affinity processing directives when deploying Devices, Services, and Components.</li>
 <li>Extending the tool, <code>rh_net_diag</code>, to provide read/write/execute permissions checks on directories important for running a REDHAWK system.</li>
@@ -411,18 +412,21 @@ ga('send', 'pageview');
 <li>Adding support to custom IDL and FEI control ports so they now accept a connection id argument to specify the connection to use and throw exceptions if the port call is exercised and no connection exists or a connection is specified that does not exist.</li>
 </ul>
 
-<p><strong>Caution: This functionality was added to all FEI ports, including the RFInfo port.  As a result, if an RFInfo port is configured as a uses port and there are <em>no connections</em>, an exception will occur and must be caught to prevent a disruption to the operation of the device or component.  This behavior will be corrected in a future release.</strong>
-* Fixing an issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.
-* Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The <code>validateRequest</code> function in the <code>frontendInterfaces</code> support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.
-* Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.
-* Correcting a bad XML file in the SDRROOT that caused loading of the SDRROOT to stop and report an error.
-* Updating <code>rh.VITA49</code> to adhere to the approved version of V49.2 Standard (August 2017).
-* Adding an option for <code>MessageSupplierPort</code> to send messages to a specific connection.
-* Deprecating REDHAWK Enterprise Integration and removing all references to it within the documentation.
-* Providing the ability to generate configuration files for waveforms and nodes for use by the REDHAWK admin service.
-* Changing the <code>redhawk</code> user&rsquo;s home directory. When installing REDHAWK, the home directory is now <code>/var/redhawk</code>. When upgrading, the existing <code>redhawk</code> user home directory is updated to <code>/var/redhawk</code> if it is currently set to <code>/home/redhawk</code>.
-* Refactoring IO redirection to use epoll system call to handle redirection of component output to a single file and direct IO redirection when configured for one output file per component process.
-* Correcting behavior so when a component has a struct property with an element that is a complex sequence, the value can be overloaded correctly on a waveform.</p>
+<p><strong>Caution: This functionality was added to all FEI ports, including the RFInfo port.  As a result, if an RFInfo port is configured as a uses port and there are <em>no connections</em>, an exception will occur and must be caught to prevent a disruption to the operation of the device or component.  This behavior will be corrected in a future release.</strong></p>
+
+<ul>
+<li>Fixing an issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.</li>
+<li>Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The <code>validateRequest</code> function in the <code>frontendInterfaces</code> support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.</li>
+<li>Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.</li>
+<li>Correcting a bad XML file in the SDRROOT that caused loading of the SDRROOT to stop and report an error.</li>
+<li>Updating <code>rh.VITA49</code> to adhere to the approved version of V49.2 Standard (August 2017).</li>
+<li>Adding an option for <code>MessageSupplierPort</code> to send messages to a specific connection.</li>
+<li>Deprecating REDHAWK Enterprise Integration and removing all references to it within the documentation.</li>
+<li>Providing the ability to generate configuration files for waveforms and nodes for use by the REDHAWK admin service.</li>
+<li>Changing the <code>redhawk</code> user&rsquo;s home directory. When installing REDHAWK, the home directory is now <code>/var/redhawk</code>. When upgrading, the existing <code>redhawk</code> user home directory is updated to <code>/var/redhawk</code> if it is currently set to <code>/home/redhawk</code>.</li>
+<li>Refactoring IO redirection to use epoll system call to handle redirection of component output to a single file and direct IO redirection when configured for one output file per component process.</li>
+<li>Correcting behavior so when a component has a struct property with an element that is a complex sequence, the value can be overloaded correctly on a waveform.</li>
+</ul>
 
 <h3 id="fixes">Fixes</h3>
 
