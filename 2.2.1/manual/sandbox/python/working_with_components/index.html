@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Working with Components, Devices, and Services :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.1\/";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" href="../../../../css/custom.css">
+<script src="../../../../js/custom.js"></script>
+
+
+    
+  </head>
+  <body data-url="/manual/sandbox/python/working_with_components/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://redhawksdr.github.io"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> <label>Downloads</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>GitHub</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="../../../../">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/getting-started/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../getting-started/">Getting Started With REDHAWK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-started/process-management/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/process-management/">
+            REDHAWK’s Approach to Process Management and Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/getting-started/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/getting-started/">
+            Getting Started
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/ide-quickstart/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/ide-quickstart/">
+            IDE Quickstart
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/further-reading/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/further-reading/">
+            Further Reading
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.1</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/installation/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/installation/">Installation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/components/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/components/">Components</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/components/redhawk-core-assets/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/redhawk-core-assets/">
+            REDHAWK Core Assets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/creating-a-component/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/creating-a-component/">
+            Creating a Component Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/octave-components/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/octave-components/">
+            Creating Octave Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/running-a-component/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/running-a-component/">
+            Running a Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/sandbox/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/sandbox/">
+            Sandbox
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/hello-world-component/" class="dd-item">
+        <div>
+          <a href="../../../../manual/components/hello-world-component/">
+            Creating and Running a Hello World Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/component-structure/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/component-structure/">Component Structure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/component-structure/auto-generated-files/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/auto-generated-files/">
+            Auto-Generated Component Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/auto-generated-methods/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/auto-generated-methods/">
+            Auto-Generated Component Methods
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/base-component-members/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/base-component-members/">
+            Base Component Members
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/component-implementations/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/component-implementations/">
+            Component Implementations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/java-version/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/java-version/">
+            Java Version
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/managing-defining-properties/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/managing-defining-properties/">
+            Managing and Defining Properties
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/working-with-events/" class="dd-item">
+        <div>
+          <a href="../../../../manual/component-structure/working-with-events/">
+            Working with Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/shared-libraries/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/shared-libraries/">Shared Libraries</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/shared-libraries/creating-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../../../manual/shared-libraries/creating-a-shared-library-project/">
+            Creating a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/using-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../../../manual/shared-libraries/using-a-shared-library-project/">
+            Using a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/packaging-shared-libraries/" class="dd-item">
+        <div>
+          <a href="../../../../manual/shared-libraries/packaging-shared-libraries/">
+            Packaging Shared Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/manually-including-external-libraries/" class="dd-item">
+        <div>
+          <a href="../../../../manual/shared-libraries/manually-including-external-libraries/">
+            Manually Including External Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/connections/">Connections</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/the-connection-process/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/the-connection-process/">
+            The Connection Process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/why-ports/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/why-ports/">
+            Why Ports?
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/port-access/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/port-access/">
+            Port Access
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/dynamic-connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/dynamic-connections/">
+            Dynamic Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/standardized-data-interfaces/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/standardized-data-interfaces/">
+            Standardized Data Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/connections/bulkio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/sri/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/sri/">
+            Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/bit-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/bit-data/">
+            Bit Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/examples/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/examples/">
+            Examples
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/burstio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/connections/burstio/">BurstIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/burstio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/sri/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/sri/">
+            Burst Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/burstio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/messaging/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/connections/messaging/">Messaging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/messaging/message-producer/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/messaging/message-producer/">
+            Message Producer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/message-consumer/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/messaging/message-consumer/">
+            Message Consumer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/viewing-messages/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/messaging/viewing-messages/">
+            Viewing Messages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/connecting-producers-consumers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/messaging/connecting-producers-consumers/">
+            Connecting Producers and Consumers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/connections/connection-callbacks/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/connection-callbacks/">
+            Connection Callbacks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/custom-idl-interfaces/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/custom-idl-interfaces/">
+            Custom IDL Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/waveforms/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/waveforms/">Waveforms</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/waveforms/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../../../manual/waveforms/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/sample-waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/waveforms/sample-waveform/">
+            Create and Deploy a Sample Waveform
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/deployment-resources/" class="dd-item">
+        <div>
+          <a href="../../../../manual/waveforms/deployment-resources/">
+            Waveform Deployment and Computing Resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/devices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/devices/">Working with Devices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/devices/interacting-with-hardware/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/devices/interacting-with-hardware/">Using Devices to Interact with Hardware</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
+            Creating an FEI Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/interacting-with-hardware/interacting-fei-device-python-package/">
+            Interacting with an FEI Device with the Python Package
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/using-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/interacting-with-hardware/using-fei-device-ide/">
+            Using an FEI Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/devices/associating-a-waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/associating-a-waveform/">
+            Associating a Waveform with an FEI Device
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/running-components/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/running-components/">
+            Using Devices to Run Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interface-with-fpgas/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/interface-with-fpgas/">
+            Using Devices to Interface with FPGAs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/fei-data-structures/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/fei-data-structures/">
+            Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/misc/" class="dd-item">
+        <div>
+          <a href="../../../../manual/devices/misc/">
+            Miscellaneous FrontEnd Tuner Library Implementation Details
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/nodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/nodes/">Nodes</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/nodes/running-a-node/" class="dd-item">
+        <div>
+          <a href="../../../../manual/nodes/running-a-node/">
+            Running a Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/creating-a-new-node/" class="dd-item">
+        <div>
+          <a href="../../../../manual/nodes/creating-a-new-node/">
+            Creating a New Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/distributed-computing-and-rf-devices/" class="dd-item">
+        <div>
+          <a href="../../../../manual/nodes/distributed-computing-and-rf-devices/">
+            Distributed Computing and RF Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../manual/sandbox/">Sandbox</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/sandbox/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../manual/sandbox/python/">Python Sandbox</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/sandbox/python/working_with_components/" class="dd-item active">
+        <div>
+          <a href="../../../../manual/sandbox/python/working_with_components/">
+            Working with Components, Devices, and Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/helpers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/helpers/">
+            Helpers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/devices/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/devices/">
+            Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/example-interaction/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/example-interaction/">
+            Example Sandbox Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sources-and-sinks/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/sources-and-sinks/">
+            Built-in Sources and Sinks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sdds-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/sdds-data/">
+            Working with SDDS Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/plotting-data/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/plotting-data/">
+            Plotting Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/misc/" class="dd-item">
+        <div>
+          <a href="../../../../manual/sandbox/python/misc/">
+            Miscellaneous
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/ide/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sandbox/ide/">IDE Sandbox</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/runtime-environment/">The Runtime Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/runtime-environment/launching-a-domain/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/launching-a-domain/">
+            Launching a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/domain-manager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/domain-manager/">
+            Domain Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/file-system/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/file-system/">
+            File System
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/applications/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/applications/">
+            Applications
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/application-factory/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/application-factory/">
+            The Application Factory
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/device-manager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/device-manager/">
+            The Device Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/allocation-manager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/allocation-manager/">
+            The Allocation Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/connection-manager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/connection-manager/">
+            The Connection Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/events/" class="dd-item">
+        <div>
+          <a href="../../../../manual/runtime-environment/events/">
+            Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-inspection/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/runtime-inspection/">Runtime Environment Inspection</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/logging/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/logging/">Logging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-structure/">
+            Logging Structure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
+            Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/viewing-logging-events/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/viewing-logging-events/">
+            Viewing Logging Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/ide/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/ide/">Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/launching-the-ide/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/launching-the-ide/">
+            Launching the REDHAWK IDE for the First Time
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/pydev-overview/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/pydev-overview/">
+            PyDev Overview
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/workbench/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/workbench/">
+            The Workbench
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/ide/editors-and-views/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/ide/editors-and-views/">Editors and Views</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/editors-and-views/softpkg-editor/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/softpkg-editor/">
+            SoftPkg Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/node-editor/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/node-editor/">
+            Node Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/nextmidas-plot-editor/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/nextmidas-plot-editor/">
+            NeXtMidas Plot Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-explorer-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/redhawk-explorer-view/">
+            REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-plot-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/redhawk-plot-view/">
+            REDHAWK Plot View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/plot-settings-dialog/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/plot-settings-dialog/">
+            Plot Settings Dialog
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/event-viewer-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/event-viewer-view/">
+            Event Viewer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/data-list-statistics-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/data-list-statistics-view/">
+            Data List and Statistics Views
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/port-monitor-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/port-monitor-view/">
+            Port Monitor View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/sri-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/sri-view/">
+            SRI View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/console-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/console-view/">
+            Console View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/properties-view/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/editors-and-views/properties-view/">
+            Properties View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/ide/creating-redhawk-projects/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/creating-redhawk-projects/">
+            Creating REDHAWK Projects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/namespaces/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/namespaces/">
+            Adding/Changing/Removing REDHAWK Project Namespaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/debugging/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/debugging/">
+            Debugging REDHAWK Components and Devices with Eclipse
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/deploying-projects/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/deploying-projects/">
+            Deploying Projects to the SDRROOT
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/snapshot-tool/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/snapshot-tool/">
+            Snapshot Tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/connect-wizard/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/connect-wizard/">
+            Connect Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/octave-wizard/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/octave-wizard/">
+            Using the Octave Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/plot-port-wizard/" class="dd-item">
+        <div>
+          <a href="../../../../manual/ide/plot-port-wizard/">
+            Plot Port Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/exploring-domain/">Exploring a Running Domain Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/exploring-domain/connecting-to-a-domain/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/connecting-to-a-domain/">
+            Connecting to a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/viewing-domain-contents/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/viewing-domain-contents/">
+            Viewing the Contents of the Domain in the REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/working-with-waveforms/">
+            Working with Waveforms on a Running Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/plotting-bulkio-ports/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/plotting-bulkio-ports/">
+            Plotting BulkIO Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/increasing-bulkio-connection-bandwidth/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/increasing-bulkio-connection-bandwidth/">
+            Increasing the Bandwidth of BulkIO Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/getting-error-condition-details/" class="dd-item">
+        <div>
+          <a href="../../../../manual/exploring-domain/getting-error-condition-details/">
+            Getting Details About Error Conditions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/">Appendices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/redhawk-yum/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/redhawk-yum/">
+            REDHAWK Yum Repository and Packages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/dependencies/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/dependencies/">
+            External Dependencies
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/standalone-ide/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/standalone-ide/">
+            Installing a Stand-alone IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/source-installation/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/source-installation/">
+            Building and Installing REDHAWK from Source
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/optimization/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/optimization/">
+            Optimization
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/">REDHAWK System Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/appendices/adminservice/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/adminservice/">AdminService</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/serviceconfigurations/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/adminservice/serviceconfigurations/">
+            Service Configurations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/servicelifecycle/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/adminservice/servicelifecycle/">
+            Service Life Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/">REDHAWK Core Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/domainmanager/">
+            REDHAWK Domain Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/devicemanager/">
+            REDHAWK Device Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/waveform/">
+            REDHAWK Waveform Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domains/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/redhawkcoreservices/domains/">
+            Managing Services By Domains and Types
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/configuration/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/adminservice/configuration/">Configuration Files</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/adminservice/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/adminservice/">
+            AdminService Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/domainmanager/">
+            Domain Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/devicemanager/">
+            Device Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/waveform/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/configuration/waveform/">
+            Waveform Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/rhadmin/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/rhadmin/">
+            rhadmin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/support-files/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/adminservice/support-files/">
+            Linux Support Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/fei/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/fei/">
+            FrontEnd Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/persona-device-pattern/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/persona-device-pattern/">
+            REDHAWK Persona Device Pattern
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/shared-memory/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/shared-memory/">
+            Shared Memory Maintenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/">
+            Troubleshooting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/logging-config-plugin/">
+            Logging Configuration Plugin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/acronyms/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/acronyms/">
+            List of Acronyms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/glossary/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/glossary/">Glossary</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/getting-started/" >
+   Getting Started With REDHAWK</option>
+    <option value="/manual/" >
+   REDHAWK Manual - 2.2.1</option> 
+    <option value="/manual/installation/" >
+  - 
+   Installation</option>
+    <option value="/manual/components/" >
+  - 
+   Components</option>
+    <option value="/manual/component-structure/" >
+  - 
+   Component Structure</option>
+    <option value="/manual/shared-libraries/" >
+  - 
+   Shared Libraries</option>
+    <option value="/manual/connections/" >
+  - 
+   Connections</option>
+    <option value="/manual/waveforms/" >
+  - 
+   Waveforms</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
+    <option value="/manual/nodes/" >
+  - 
+   Nodes</option>
+    <option value="/manual/sandbox/" >
+  - 
+   Sandbox</option> 
+    <option value="/manual/sandbox/python/" >
+  -- 
+   Python Sandbox</option> 
+      <option value="/manual/sandbox/python/working_with_components/"  selected>--- Working with Components, Devices, and Services</option>
+      <option value="/manual/sandbox/python/helpers/" >--- Helpers</option>
+      <option value="/manual/sandbox/python/devices/" >--- Devices</option>
+      <option value="/manual/sandbox/python/example-interaction/" >--- Example Sandbox Interaction</option>
+      <option value="/manual/sandbox/python/sources-and-sinks/" >--- Built-in Sources and Sinks</option>
+      <option value="/manual/sandbox/python/sdds-data/" >--- Working with SDDS Data</option>
+      <option value="/manual/sandbox/python/plotting-data/" >--- Plotting Data</option>
+      <option value="/manual/sandbox/python/misc/" >--- Miscellaneous</option>
+  
+    <option value="/manual/sandbox/ide/" >
+  -- 
+   IDE Sandbox</option>
+  
+    <option value="/manual/runtime-environment/" >
+  - 
+   The Runtime Environment</option>
+    <option value="/manual/runtime-inspection/" >
+  - 
+   Runtime Environment Inspection</option>
+    <option value="/manual/logging/" >
+  - 
+   Logging</option>
+    <option value="/manual/ide/" >
+  - 
+   Using the REDHAWK IDE</option>
+    <option value="/manual/exploring-sdrroot/" >
+  - 
+   Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
+    <option value="/manual/exploring-domain/" >
+  - 
+   Exploring a Running Domain Using the REDHAWK IDE</option>
+    <option value="/manual/appendices/" >
+  - 
+   Appendices</option>
+    <option value="/manual/glossary/" >
+  - 
+   Glossary</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="../../../../js/lunr.min.js"></script>
+        <script type="text/javascript" src="../../../../js/auto-complete.js"></script>
+        <link href="../../../../css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.1\/";
+          
+        </script>
+        <script type="text/javascript" src="../../../../js/search.js"></script>
+      </div>
+    
+
+    <h2 class="title">Working with Components, Devices, and Services</h2>
+
+    
+    
+    
+    
+
+<p>The <a href="../../../../manual/glossary/#sandbox">Sandbox</a> contains the following commands for working with <a href="../../../../manual/glossary/#component">components</a>, <a href="../../../../manual/glossary/#device">devices</a>, and <a href="../../../../manual/glossary/#service">services</a>:</p>
+
+<ul>
+<li>The <code>show()</code> Command</li>
+<li>The <code>catalog()</code> Command</li>
+<li>The <code>api()</code> Method</li>
+<li>The <code>launch()</code> Command</li>
+</ul>
+
+<p>The <code>show()</code> command displays running components, connections between components, and the <code>SDRROOT</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>The <code>catalog()</code> command displays which components, devices, and services are available in <code>SDRROOT</code>. To determine what types are displayed, use the <code>objType</code> argument (by default <code>objType=&quot;components&quot;</code>) as shown below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>catalog()
+<span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>catalog(objType<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;devices&#34;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>catalog(objType<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;services&#34;</span>)</code></pre></div>
+<p>An alternative to <code>catalog()</code> is <code>browse()</code>. The function <code>browse()</code> provides formatted human-readable text that describes the items that are installed on the system rather than the computer-friendly list that <code>catalog()</code> provides.</p>
+
+<p>The <code>api()</code> method displays the <a href="../../../../manual/glossary/#port">ports</a> and <a href="../../../../manual/glossary/#property">properties</a> for a running component:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> comp<span style="color:#f92672">.</span>api()
+Component [FloatToShort]:
+Provides (Input) Ports <span style="color:#f92672">==============</span>
+Port Name       Port Interface
+<span style="color:#f92672">---------</span>       <span style="color:#f92672">--------------</span>
+float_in        IDL:BULKIO<span style="color:#f92672">/</span>dataFloat:<span style="color:#ae81ff">1.0</span>
+
+Uses (Output) Ports <span style="color:#f92672">==============</span>
+Port Name       Port Interface
+<span style="color:#f92672">---------</span>       <span style="color:#f92672">--------------</span>
+short_out       IDL:BULKIO<span style="color:#f92672">/</span>dataShort:<span style="color:#ae81ff">1.0</span>
+
+Properties <span style="color:#f92672">==============</span>
+Property Name   (Data Type)     [Default Value] Current Value
+<span style="color:#f92672">-------------</span>   <span style="color:#f92672">-----------</span>     <span style="color:#f92672">---------------</span> <span style="color:#f92672">-------------</span>
+max_value       (float<span style="color:#f92672">/</span>SF<span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>f)  <span style="color:#ae81ff">1.0</span>             <span style="color:#ae81ff">1.0</span>
+min_value       (float<span style="color:#f92672">/</span>SF<span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>f)  <span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>            <span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span></code></pre></div>
+<p>The <code>launch()</code> command launches components, devices, and services. The first argument identifies the object to launch. It may be either a path to an Software Package Descriptor (SPD) file or, for objects installed to the current <code>SDRROOT</code>, the name of the object as given in the SPD. The path can be absolute or relative and does not need to reside in <code>SDRROOT</code>.</p>
+
+<p>The following example demonstrates how to launch a device from the current working directory using the path:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_dev <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyDevice.spd.xml&#34;</span>)</code></pre></div>
+<p>The following example demonstrates how to launch a device named <code>SigGen</code> from the current working directory using the name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_dev <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;rh.SigGen&#34;</span>)</code></pre></div>
+<p>A component&rsquo;s properties, either normal or with the <code>commandline</code> attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument <code>properties</code>. These values override the default values listed in the Properties File (PRF) file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;MyComponent&#34;</span>, properties<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;EXECPARAM_1&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;value&#34;</span>,
+                                                   <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;normalparam&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;somevalue&#34;</span>})</code></pre></div>
+<div class="notices note" ><p>The <code>execparams</code> named parameter is deprecated but may be in use by legacy systems.  Refer to the documentation for pre-REDHAWK 2.0 releases for details about its use.</p>
+</div>
+
+
+<p>In the case of components and devices, after the process is launched and the component is initialized, the component’s properties are set to their default values as listed in the PRF file. The default values for this initial call to <code>initializeProperties()</code> may be overridden by passing a Python dictionary of property names and values to the keyword argument <code>properties</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;MyComponent&#34;</span>, properties<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;normalparam&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;somevalue&#34;</span>,
+<span style="color:#f92672">...</span>                                         <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;frequency&#34;</span>:<span style="color:#ae81ff">22e3</span>,
+<span style="color:#f92672">...</span>                                         <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;sample_rate&#34;</span>: <span style="color:#ae81ff">1000000</span>})</code></pre></div>
+<div class="notices note" ><p>The initial <code>configure()</code> call has been superseded by the use of the <code>initializeProperties()</code> call.</p>
+</div>
+
+
+<p>By default, the Sandbox launches the first component implementation with an entry point that exists on the file system. A particular implementation may be specified by passing the implementation ID to the <code>impl</code> argument:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;MyComponent&#34;</span>, impl<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;cpp&#34;</span>)</code></pre></div>
+<p>The Sandbox includes limited support for attaching a debugger to a component process. The debugger console opens in a new XTerm window to allow continued interaction on the Sandbox console.</p>
+
+<p>In the case of C++, to launch a component and attach <code>gdb</code> to the process, enter the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyComponent.spd.xml&#34;</span>, debugger<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;gdb&#34;</span>)</code></pre></div>
+<p>The component and <code>gdb</code> are run in separate processes. Exiting gdb closes the window, but the component continues to function.</p>
+
+<p>The debugger argument also supports <code>jdb</code> (Java), <code>pdb</code> (Python), and <code>valgrind</code> (Valgrind, a tool used for diagnostics such as memory leak detection).</p>
+
+<p>To provide arguments to the supported debuggers, the debugger needs to be instantiated outside the scope of the launch function. For example, to perform a full leak check using Valgrind, use the following argument:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> ossie.utils.sandbox.debugger <span style="color:#f92672">import</span> GDB, JDB, PDB, Valgrind
+ <span style="color:#f92672">&gt;&gt;&gt;</span> vg_option <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;--leak-check&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;full&#39;</span>}
+ <span style="color:#f92672">&gt;&gt;&gt;</span> vg <span style="color:#f92672">=</span> Valgrind(<span style="color:#f92672">**</span>vg_option)
+ <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyComponent.spd.xml&#34;</span>, debugger<span style="color:#f92672">=</span>vg)</code></pre></div>
+<p>If incorrect arguments are passed, the component fails to deploy. Note that the Python debugger does not take arguments.</p>
+
+<h4 id="properties">Properties</h4>
+
+<p>In addition to the standard REDHAWK <code>query()</code> and <code>configure()</code> functions, the Sandbox presents a simplified interface to properties for components and devices. Properties can be accessed as attributes on the component object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>string_prop <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Hello World!&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_prop
+<span style="color:#ae81ff">1</span></code></pre></div>
+<p>Property names are taken from the component PRF file, with any characters that are invalid for Python identifiers replaced by an underscore.</p>
+
+<p>The current value of properties with a mode of “readonly” or “readwrite” may be inspected. Properties with a mode of “readwrite” or “writeonly” can be assigned a new value.</p>
+
+<p>To view the properties that are available for a given component, along with their types and current and default values, use the <code>api()</code> function.</p>
+
+<p>Simple properties with numeric types can be assigned from any Python numeric type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>float_prop <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_prop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0e3</span></code></pre></div>
+<p>The value is range checked and coerced into the desired type before being configured on the component:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>ushort_prop <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+ossie<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>type_helpers<span style="color:#f92672">.</span>OutOfRangeException: <span style="color:#f92672">...</span></code></pre></div>
+<p>Floating point values are truncated, not rounded, during conversion to integer types:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_value
+<span style="color:#ae81ff">1</span></code></pre></div>
+<p>A simple property with a complex value type can be assigned from a Python complex or two-item sequence. The numeric conversion of the real and imaginary components is identical to that of single numeric values.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>complex_prop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2.5j</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>complex_prop <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)</code></pre></div>
+<p>Complex properties support assignment from single numeric values; the imaginary component is assumed to be 0.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>complex_prop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>complex_prop
+<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0j</span></code></pre></div>
+<p>Properties that have enumerated values in the component’s PRF support assignment using the enumerated name as a Python string:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> siggen<span style="color:#f92672">.</span>shape <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;triangle&#34;</span></code></pre></div>
+<p>Struct properties can be set with a Python dictionary:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_prop <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;item_string&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;value&#34;</span>,
+<span style="color:#f92672">...</span>                        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;item_long&#34;</span>: <span style="color:#ae81ff">100</span>}</code></pre></div>
+<p>The dictionary keys are the IDs of the simple properties that make up the struct. Each value is converted to the appropriate type following the same rules as simple properties. Any struct members that are not in the dictionary retain their current values.</p>
+
+<p>Individual struct members may be set directly, using the simple property name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_prop<span style="color:#f92672">.</span>item_string <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;new value&#34;</span></code></pre></div>
+<div class="notices note" ><p>Properties have a mode (readwrite, readonly, writeonly), and for compatibility reasons, the mode is a member of the Python Struct property container and cannot change. If the Struct property has a member called “mode”, requesting the member “mode” from the property will return its access mode rather than the content of the property member. Access the value of any element of a property with a reserved word as its name as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_prop[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;mode&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Hello World!&#34;</span></code></pre></div></div>
+
+
+<div class="notices note" ><p>Setting a struct member as an attribute uses the simple property’s name, while setting the member via a dictionary uses the simple property’s id.</p>
+</div>
+
+
+<p>Both simple and struct sequence properties may be manipulated as lists. Sequence properties support the common Python list operations, such as slicing and in-place modifiers:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq[<span style="color:#ae81ff">2</span>:]
+[<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">5</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">6</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>]</code></pre></div>
+<p>The items of simple sequences follow the same conversion rules as the corresponding simple property:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1.5</span>, <span style="color:#ae81ff">2.5</span>, <span style="color:#ae81ff">3.5</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_seq
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]</code></pre></div>
+<p>Each item in a struct sequence works identically to a single struct property:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq
+[{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;first&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">1</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;second&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">2</span>}]
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>a <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;new value&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;a&#34;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;third&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;b&#34;</span>:<span style="color:#ae81ff">3</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq
+[{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;new value&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">1</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;third&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">3</span>}]</code></pre></div>
+<p>The Sandbox generates a low-level CORBA <code>configure()</code> call each time a property value is set. However, Sandbox components also support setting multiple property values at once using a Python dictionary:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>configure({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;long_prop&#34;</span>:<span style="color:#ae81ff">1</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;string_prop&#34;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;new value&#34;</span>})</code></pre></div>
+<p>The keys may be either the property names or ids. The values are converted in the same manner as setting the individual property directly.</p>
+
+<h4 id="property-listener">Property Listener</h4>
+
+<p>It is possible to asynchronously listen to changes in properties such that it is not necessary to poll the component to see the state of a particular property. This is done through property change listeners. To implement this listener, create a property change listener and register it with the component. Note that the listener can be a local object or an <a href="../../../../manual/glossary/#event-channel">event channel</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">property_change_callback</span>(self, event_id, registration_id, resource_id, properties, timestamp):
+         <span style="color:#66d9ef">print</span> event_id, registration_id, resource_id, properties, timestamp
+ <span style="color:#f92672">&gt;&gt;&gt;</span> listener <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>PropertyChangeListener(changeCallbacks<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;prop_1&#39;</span>:callback_fn})
+ <span style="color:#f92672">&gt;&gt;&gt;</span> comp<span style="color:#f92672">.</span>registerPropertyListener(listener, [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;prop_1&#39;</span>], <span style="color:#ae81ff">0.5</span>)  <span style="color:#75715e"># check the property every 0.5 seconds</span></code></pre></div>
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="../../../../manual/sandbox/python/" title="Python Sandbox"> <i class="fa fa-chevron-left"></i><label>Python Sandbox</label></a>
+    <a class="nav nav-next" href="../../../../manual/sandbox/python/helpers/" title="Helpers" style="margin-right: 0px;"><label>Helpers</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/develop-2.2.1/content/manual/sandbox/python/working_with_components.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
