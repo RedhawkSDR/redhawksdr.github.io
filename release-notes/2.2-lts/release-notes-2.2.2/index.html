@@ -333,22 +333,14 @@ ga('send', 'pageview');
     
     
 
-<p>The effort in REDHAWK 2.2.2 focused on:</p>
+<h3 id="fixes">Fixes</h3>
+
+<p>The following fixes were completed in REDHAWK 2.2.2:</p>
+
+<h4 id="core-framework-fixes">Core Framework Fixes</h4>
 
 <ul>
-<li>Updated the <code>redhawk.attach()</code> call to not cache domains anymore. Instead the last connected CORBA ORB will be cached and subsequent calls will make sure the ORB is still valid.</li>
-<li>Fixed refresh and NPE issues in the REDHAWK Explorer View.</li>
-</ul>
-
-<h3 id="special-resolution">Special Resolution</h3>
-
-<p>The following previously reported Known Issues have been closed in REDHAWK 2.2.2 with the following resolutions:</p>
-
-<h4 id="core-framework-special-resolutions">Core Framework Special Resolutions</h4>
-
-<ul>
-<li>GPP NIC affinity blacklist test is using the wrong CPU list - Cannot Reproduce - This bug could not be reproduced against REDHAWK 2.2.2.</li>
-<li><code>test_GPP.py testForceOverride</code> can&rsquo;t grab 2nd socket in vm with one socket - Won&rsquo;t fix - This behavior only affects the REDHAWK 2.0.x series.</li>
+<li>Updated the <code>redhawk.attach()</code> call to first check its cached domains for the requested domain name and location. If no matches are found, a new <code>DomainManager</code> will be returned.</li>
 </ul>
 
 
