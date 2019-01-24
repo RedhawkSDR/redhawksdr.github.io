@@ -4,7 +4,7 @@
 	"title": "Home",
 	"tags": [],
 	"description": "",
-	"content": " Description REDHAWK is a software-defined radio (SDR) framework designed to support the development, deployment, and management of real-time software radio applications. To support the design and development of software applications, REDHAWK provides tools that allow development and testing of software modules called \u0026ldquo;Components\u0026rdquo; and composition of Components into \u0026ldquo;Waveform Applications\u0026rdquo; that can be seamlessly deployed on a single computer or multiple network-enabled computers.\nThe REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.\nRecent Announcements Release of REDHAWK 2.2.1.1 (LTS) (December 2018) Release of REDHAWK 2.0.8 (LTS) (February 2018) License REDHAWK is licensed under a combination of the GNU Lesser General Public License (LGPL), the Eclipse Public License (EPL), the Apache (v.2.0) License, the Python Software Foundation (PSF) license agreement, Mozilla Public License (v.1.1), and the GNU General Public License (GPL). For more information, refer to the LICENSE file in the respective repositories. REDHAWK documentation is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. REDHAWK documentation is built with Hugo which is licensed under the Apache License 2.0 and uses the Hugo DocDock Theme, licensed under the MIT License.\nCopyright This work is protected by Copyright. For updated copyright information, refer to the Copyright file.\n"
+	"content": " Description REDHAWK is a software-defined radio (SDR) framework designed to support the development, deployment, and management of real-time software radio applications. To support the design and development of software applications, REDHAWK provides tools that allow development and testing of software modules called \u0026ldquo;Components\u0026rdquo; and composition of Components into \u0026ldquo;Waveform Applications\u0026rdquo; that can be seamlessly deployed on a single computer or multiple network-enabled computers.\nThe REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.\nRecent Announcements Release of REDHAWK 2.2.2 (LTS) (January 2019) Release of REDHAWK 2.0.8 (LTS) (February 2018) License REDHAWK is licensed under a combination of the GNU Lesser General Public License (LGPL), the Eclipse Public License (EPL), the Apache (v.2.0) License, the Python Software Foundation (PSF) license agreement, Mozilla Public License (v.1.1), and the GNU General Public License (GPL). For more information, refer to the LICENSE file in the respective repositories. REDHAWK documentation is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. REDHAWK documentation is built with Hugo which is licensed under the Apache License 2.0 and uses the Hugo DocDock Theme, licensed under the MIT License.\nCopyright This work is protected by Copyright. For updated copyright information, refer to the Copyright file.\n"
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.8/",
@@ -18,14 +18,14 @@
 	"title": "REDHAWK 2.2",
 	"tags": [],
 	"description": "",
-	"content": "The REDHAWK Program Office commits to support each Long Term Support (LTS) baseline of the REDHAWK product for four years. An LTS baseline of REDHAWK is defined as: a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Long Term Support (LTS) for the REDHAWK 2.2.x releases will continue through September 2022.\n REDHAWK 2.2.1 Manual REDHAWK 2.2.0 Manual  "
+	"content": "The REDHAWK Program Office commits to support each Long Term Support (LTS) baseline of the REDHAWK product for four years. An LTS baseline of REDHAWK is defined as: a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Long Term Support (LTS) for the REDHAWK 2.2.x releases will continue through September 2022.\n REDHAWK 2.2.2 Manual REDHAWK 2.2.1 Manual REDHAWK 2.2.0 Manual  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/",
 	"title": "REDHAWK 2.2",
 	"tags": [],
 	"description": "",
-	"content": "The REDHAWK Program Office commits to support each Long Term Support (LTS) baseline of the REDHAWK product for four years. An LTS baseline of REDHAWK is defined as: a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Long Term Support (LTS) for the REDHAWK 2.2.x releases will continue through September 2022.\n REDHAWK Release Notes - 2.2.1.1   REDHAWK Release Notes - 2.2.1   REDHAWK Release Notes - 2.2.0   "
+	"content": "The REDHAWK Program Office commits to support each Long Term Support (LTS) baseline of the REDHAWK product for four years. An LTS baseline of REDHAWK is defined as: a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Long Term Support (LTS) for the REDHAWK 2.2.x releases will continue through September 2022.\n REDHAWK Release Notes - 2.2.2   REDHAWK Release Notes - 2.2.1   REDHAWK Release Notes - 2.2.0   "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/",
@@ -116,14 +116,14 @@
 	"title": "Specifications for LTS Versions",
 	"tags": [],
 	"description": "",
-	"content": " REDHAWK 2.2.1  REDHAWK SCA Specification - explains the REDHAWK additions to the SCA version 2.2.2 specification REDHAWK SCA Specification - Domain Profile - explains the REDHAWK Domain Profile in accordance with the SCA version 2.2.2 specification REDHAWK ICD Specification - explains the core REDHAWK interfaces REDHAWK ICD Specification - Domain Profile - explains the REDHAWK Domain Profile  REDHAWK 2.0  REDHAWK SCA Specification - explains the REDHAWK additions to the SCA version 2.2.2 specification REDHAWK SCA Specification - Domain Profile - explains the REDHAWK Domain Profile in accordance with the SCA version 2.2.2 specification REDHAWK ICD Specification - explains the core REDHAWK interfaces REDHAWK ICD Specification - Domain Profile - explains the REDHAWK Domain Profile  "
+	"content": " REDHAWK 2.2  REDHAWK SCA Specification - explains the REDHAWK additions to the SCA version 2.2.2 specification REDHAWK SCA Specification - Domain Profile - explains the REDHAWK Domain Profile in accordance with the SCA version 2.2.2 specification REDHAWK ICD Specification - explains the core REDHAWK interfaces REDHAWK ICD Specification - Domain Profile - explains the REDHAWK Domain Profile  REDHAWK 2.0  REDHAWK SCA Specification - explains the REDHAWK additions to the SCA version 2.2.2 specification REDHAWK SCA Specification - Domain Profile - explains the REDHAWK Domain Profile in accordance with the SCA version 2.2.2 specification REDHAWK ICD Specification - explains the core REDHAWK interfaces REDHAWK ICD Specification - Domain Profile - explains the REDHAWK Domain Profile  "
 },
 {
-	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.1.1/",
-	"title": "REDHAWK Release Notes - 2.2.1.1",
+	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.2/",
+	"title": "REDHAWK Release Notes - 2.2.2",
 	"tags": [],
 	"description": "",
-	"content": " Fixes The following fixes were completed in REDHAWK 2.2.1.1:\nCore Framework Fixes  Updated the redhawk.attach() call to not cache domains anymore. Instead the last connected CORBA ORB will be cached and subsequent calls will make sure the ORB is still valid.  "
+	"content": " Fixes The following fixes were completed in REDHAWK 2.2.2:\nCore Framework Fixes  Updated the redhawk.attach() call to first check its cached domains for the requested domain name and location. If no matches are found, a new DomainManager will be returned.  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.1/",
