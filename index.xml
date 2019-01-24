@@ -108,8 +108,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.2/</guid>
-      <description> Fixes The following fixes were completed in REDHAWK 2.2.2:
-Core Framework Fixes  Updated the redhawk.attach() call to first check its cached domains for the requested domain name and location. If no matches are found, a new DomainManager will be returned.  </description>
+      <description>The effort in REDHAWK 2.2.2 focused on:
+ Updated the redhawk.attach() call to not cache domains anymore. Instead the last connected CORBA ORB will be cached and subsequent calls will make sure the ORB is still valid. Fixed refresh and NPE issues in the REDHAWK Explorer View.  Special Resolution The following previously reported Known Issues have been closed in REDHAWK 2.2.2 with the following resolutions:
+Core Framework Special Resolutions  GPP NIC affinity blacklist test is using the wrong CPU list - Cannot Reproduce - This bug could not be reproduced against REDHAWK 2.</description>
     </item>
     
     <item>
