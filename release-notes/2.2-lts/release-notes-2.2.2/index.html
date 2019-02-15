@@ -336,8 +336,26 @@ ga('send', 'pageview');
 <p>The effort in REDHAWK 2.2.2 focused on:</p>
 
 <ul>
-<li>Updated the <code>redhawk.attach()</code> call to not cache domains anymore. Instead the last connected CORBA ORB will be cached and subsequent calls will make sure the ORB is still valid.</li>
-<li>Fixed refresh and NPE issues in the REDHAWK Explorer View.</li>
+<li>Updating the <code>redhawk.attach()</code> call to not cache domains anymore. Instead, the last connected CORBA ORB is cached and subsequent calls make sure the ORB is still valid.</li>
+<li>Fixing refresh and NPE issues in the REDHAWK Explorer view. Event channels are now properly connected on Domain Manager restarts. <code>ClientMessageReceptor</code> threads no longer grow unbounded.</li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+
+<p>The following fixes were completed in REDHAWK 2.2.2:</p>
+
+<h4 id="core-framework-fixes">Core Framework Fixes</h4>
+
+<ul>
+<li>Rebinded domain event channels to their domain context name and not their fully qualified name used in the Event Service.</li>
+<li>Restored ODM and IDM channels when the persistence database file is present.</li>
+<li>Resolved issue with creating <code>IDM_Channel</code> when <code>DeviceManager</code> does not unregister properly due to failed execution.</li>
+</ul>
+
+<h4 id="documentation-fixes">Documentation Fixes</h4>
+
+<ul>
+<li>Removed references to 32-bit OS versions that are no longer supported.</li>
 </ul>
 
 <h3 id="special-resolution">Special Resolution</h3>

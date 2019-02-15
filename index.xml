@@ -109,8 +109,7 @@
       
       <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.2/</guid>
       <description>The effort in REDHAWK 2.2.2 focused on:
- Updated the redhawk.attach() call to not cache domains anymore. Instead the last connected CORBA ORB will be cached and subsequent calls will make sure the ORB is still valid. Fixed refresh and NPE issues in the REDHAWK Explorer View.  Special Resolution The following previously reported Known Issues have been closed in REDHAWK 2.2.2 with the following resolutions:
-Core Framework Special Resolutions  GPP NIC affinity blacklist test is using the wrong CPU list - Cannot Reproduce - This bug could not be reproduced against REDHAWK 2.</description>
+ Updating the redhawk.attach() call to not cache domains anymore. Instead, the last connected CORBA ORB is cached and subsequent calls make sure the ORB is still valid. Fixing refresh and NPE issues in the REDHAWK Explorer view. Event channels are now properly connected on Domain Manager restarts. ClientMessageReceptor threads no longer grow unbounded.  Fixes The following fixes were completed in REDHAWK 2.</description>
     </item>
     
     <item>
