@@ -68,7 +68,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">Manuals for LTS Versions</a>
+      <a href="../../../manual/">Manuals</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -89,7 +89,7 @@ ga('send', 'pageview');
     <li data-nav-id="/release-notes/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../release-notes/">Release Notes for LTS Versions</a>
+      <a href="../../../release-notes/">Release Notes</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -194,12 +194,18 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/release-notes/core-assets/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../release-notes/core-assets/">Core Assets</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/specifications/" class="dd-item
         ">
       <div>
-      <a href="../../../specifications/">Specifications for LTS Versions</a><i class="fa fa-circle-thin read-icon"></i>
+      <a href="../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/community/" class="dd-item
@@ -292,7 +298,7 @@ ga('send', 'pageview');
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/manual/" >
-   Manuals for LTS Versions</option> 
+   Manuals</option> 
     <option value="/manual/2.2-lts/" >
   - 
    REDHAWK 2.2</option>
@@ -301,7 +307,7 @@ ga('send', 'pageview');
    REDHAWK 2.0</option>
   
     <option value="/release-notes/" >
-   Release Notes for LTS Versions</option> 
+   Release Notes</option> 
     <option value="/release-notes/2.2-lts/" >
   - 
    REDHAWK 2.2</option> 
@@ -312,9 +318,13 @@ ga('send', 'pageview');
     <option value="/release-notes/2.0-lts/" >
   - 
    REDHAWK 2.0</option>
+    <option value="/release-notes/core-assets/" >
+  - 
+   Core Assets</option> 
+  
   
     <option value="/specifications/" >
-   Specifications for LTS Versions</option>
+   Specifications</option>
     <option value="/community/" >
    Community</option>
     <option value="/beta/" >
@@ -427,11 +437,6 @@ ga('send', 'pageview');
 </ul></li>
 <li>Adding validation for mistyped property refs.</li>
 <li>Adding support to custom IDL and FEI control ports so they now accept a connection id argument to specify the connection to use and throw exceptions if the port call is exercised and no connection exists or a connection is specified that does not exist.</li>
-</ul>
-
-<p><strong>Caution: This functionality was added to all FEI ports, including the RFInfo port.  As a result, if an RFInfo port is configured as a uses port and there are <em>no connections</em>, an exception will occur and must be caught to prevent a disruption to the operation of the device or component.  This behavior will be corrected in a future release.</strong></p>
-
-<ul>
 <li>Fixing an issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.</li>
 <li>Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The <code>validateRequest</code> function in the <code>frontendInterfaces</code> support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.</li>
 <li>Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.</li>
@@ -500,10 +505,6 @@ ga('send', 'pageview');
 
   
 
-    <div class="github-link">
-      <a href="https://github.com/redhawksdr/redhawksdr.github.io/edit/master-source/content/release-notes/2.2-lts/release-notes-2.2.0.md" target="blank"><i class="fa fa-code-fork"></i>
-        Improve this page</a>
-    </div>
   </div>
 
 
