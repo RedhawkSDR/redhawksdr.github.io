@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>AdminService :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.3\/";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" href="../../../../css/custom.css">
+<script src="../../../../js/custom.js"></script>
+
+
+    
+  </head>
+  <body data-url="/manual/appendices/adminservice/adminservice/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://redhawksdr.github.io"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> <label>Downloads</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>GitHub</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="../../../../">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/getting-started/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../getting-started/">Getting Started With REDHAWK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-started/process-management/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/process-management/">
+            REDHAWK’s Approach to Process Management and Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/getting-started/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/getting-started/">
+            Getting Started
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/ide-quickstart/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/ide-quickstart/">
+            IDE Quickstart
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/further-reading/" class="dd-item">
+        <div>
+          <a href="../../../../getting-started/further-reading/">
+            Further Reading
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/getting-started/" >
+   Getting Started With REDHAWK</option>
+    <option value="/manual/" >
+   REDHAWK Manual - 2.2.3</option> 
+    <option value="/manual/installation/" >
+  - 
+   Installation</option>
+    <option value="/manual/components/" >
+  - 
+   Components</option>
+    <option value="/manual/component-structure/" >
+  - 
+   Component Structure</option>
+    <option value="/manual/shared-libraries/" >
+  - 
+   Shared Libraries</option>
+    <option value="/manual/connections/" >
+  - 
+   Connections</option>
+    <option value="/manual/waveforms/" >
+  - 
+   Waveforms</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
+    <option value="/manual/nodes/" >
+  - 
+   Nodes</option>
+    <option value="/manual/sandbox/" >
+  - 
+   Sandbox</option>
+    <option value="/manual/runtime-environment/" >
+  - 
+   The Runtime Environment</option>
+    <option value="/manual/runtime-inspection/" >
+  - 
+   Runtime Environment Inspection</option>
+    <option value="/manual/logging/" >
+  - 
+   Logging</option>
+    <option value="/manual/ide/" >
+  - 
+   Using the REDHAWK IDE</option>
+    <option value="/manual/exploring-sdrroot/" >
+  - 
+   Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
+    <option value="/manual/exploring-domain/" >
+  - 
+   Exploring a Running Domain Using the REDHAWK IDE</option>
+    <option value="/manual/appendices/" >
+  - 
+   Appendices</option> 
+      <option value="/manual/appendices/redhawk-yum/" >-- REDHAWK Yum Repository and Packages</option>
+      <option value="/manual/appendices/dependencies/" >-- External Dependencies</option>
+      <option value="/manual/appendices/standalone-ide/" >-- Installing a Stand-alone IDE</option>
+      <option value="/manual/appendices/source-installation/" >-- Building and Installing REDHAWK from Source</option>
+      <option value="/manual/appendices/optimization/" >-- Optimization</option>
+    <option value="/manual/appendices/adminservice/" >
+  -- 
+   REDHAWK System Services</option> 
+    <option value="/manual/appendices/adminservice/adminservice/"  selected>
+  --- 
+   AdminService</option> 
+      <option value="/manual/appendices/adminservice/adminservice/serviceconfigurations/" >---- Service Configurations</option>
+      <option value="/manual/appendices/adminservice/adminservice/servicelifecycle/" >---- Service Life Cycle</option>
+  
+    <option value="/manual/appendices/adminservice/redhawkcoreservices/" >
+  --- 
+   REDHAWK Core Services</option>
+    <option value="/manual/appendices/adminservice/configuration/" >
+  --- 
+   Configuration Files</option>
+      <option value="/manual/appendices/adminservice/rhadmin/" >--- rhadmin</option>
+      <option value="/manual/appendices/adminservice/support-files/" >--- Linux Support Files</option>
+  
+      <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
+      <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
+      <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
+      <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
+      <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
+  
+    <option value="/manual/glossary/" >
+  - 
+   Glossary</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="../../../../js/lunr.min.js"></script>
+        <script type="text/javascript" src="../../../../js/auto-complete.js"></script>
+        <link href="../../../../css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.3\/";
+          
+        </script>
+        <script type="text/javascript" src="../../../../js/search.js"></script>
+      </div>
+    
+
+    <h2 class="title">AdminService</h2>
+
+    
+    
+    
+
+
+
+<p>The REDHAWK AdminService manages the life cycle of the REDHAWK core <a href="../../../../manual/glossary/#service">services</a> (<a href="../../../../manual/glossary/#domain-manager">Domain Manager</a>, <a href="../../../../manual/glossary/#device-manager">Device Manager</a>, and <a href="../../../../manual/glossary/#waveform">waveforms</a>) using simple INI-style configuration files to define the execution environment of each core service. The REDHAWK core services definitions are the same regardless of whether the system uses <code>systemd</code> or <code>init</code> for service control. The AdminService itself follows the normal Linux system service life cycle and is controlled using the operating system&rsquo;s service control.</p>
+
+<h2 id="installing-the-adminservice">Installing the AdminService</h2>
+
+<p>To install the AdminService, enter the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yum install redhawk-adminservice</code></pre></div>
+<h2 id="startup-process">Startup Process</h2>
+
+<p>At system startup, the AdminService performs the following tasks:</p>
+
+<ol>
+<li><p>Processes all INI files in the service configuration directories under the <code>/etc/redhawk</code> directory.</p></li>
+
+<li><p>Creates <a href="../../../../manual/glossary/#domain">domain</a> groups using the <code>DOMAIN_NAME</code> configuration property in each service configuration file.</p></li>
+
+<li><p>Determines the start order of each domain group using the <code>priority</code> configuration property of each domain group&rsquo;s Domain Manager service.</p></li>
+
+<li><p>Determines the start order of each core service within a domain group using the <code>priority</code> configuration property of each core service. The typical start order defines Domain Manager first, followed by Device Managers, and finally waveforms.</p></li>
+
+<li><p>Launches each core service within a domain group using the configuration definition and performs an initial status check of the service.</p></li>
+
+<li><p>Repeats the previous step for all remaining domain groups.</p></li>
+</ol>
+
+<h2 id="system-shutdown">System Shutdown</h2>
+
+<p>On the host system shutdown, the AdminService terminates the domain and services in the domain group in reverse priority order.</p>
+
+<h2 id="managing-the-redhawk-core-services">Managing the REDHAWK Core Services</h2>
+
+<p>Independent of system start up and shutdown, <code>rhadmin</code> is a command line utility used to manage the REDHAWK core services&rsquo; life cycle. <code>rhadmin</code> supports the following commands to manage the service life cycle: <code>start</code>, <code>stop</code>, <code>restart</code>, and <code>status</code>. These commands can be used to manage an individual service or a group of services with the same service type or logical domain. The <code>rhadmin</code> utility can also be used to generate new configuration files for all the REDHAWK core service types.</p>
+
+<p>For more information about using <code>rhadmin</code> to manage the REDHAWK core services, refer to <a href="../../../../manual/appendices/adminservice/rhadmin/">rhadmin</a>.</p>
+
+<h2 id="redhawk-adminservice-lifecycle">REDHAWK AdminService Lifecycle</h2>
+
+<p>The AdminService is configured to startup and shutdown using the operating system&rsquo;s service control. The following table lists the system service scripts used to control the AdminService life cycle.</p>
+
+<h5 id="system-service-scripts-for-the-adminservice">System Service Scripts for the AdminService</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Service</strong></th>
+<th align="left"><strong>System Service Script</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><strong>CentOS 6 (SysV)</strong></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">AdminService</td>
+<td align="left"><code>/etc/rc.d/init.d/redhawk-adminservice</code></td>
+</tr>
+
+<tr>
+<td align="left"><strong>CentOS 7 (systemd)</strong></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">AdminService Setup</td>
+<td align="left"><code>/usr/lib/systemd/system/redhawk-adminservice-setup.service</code></td>
+</tr>
+
+<tr>
+<td align="left">AdminService</td>
+<td align="left"><code>/usr/lib/systemd/system/redhawk-adminservice.service</code></td>
+</tr>
+
+<tr>
+<td align="left">AdminService startup wrapper</td>
+<td align="left"><code>$OSSIEHOME/bin/adminserviced-start</code></td>
+</tr>
+
+<tr>
+<td align="left">AdminService shutdown wrapper</td>
+<td align="left"><code>$OSSIEHOME/bin/adminserviced-stop</code></td>
+</tr>
+
+<tr>
+<td align="left">Setup Wrapper</td>
+<td align="left"><code>$OSSIEHOME/bin/redhawk-adminservice-setup</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>As per the Fedora recommendations for service unit files, the AdminService is not enabled during RPM installation. System integrators may enable the service unit file and modify the activation to achieve desired start up and shutdown behavior for their systems.</p>
+
+<h2 id="enabling-adminservice-on-system-startup">Enabling AdminService on System Startup</h2>
+
+<p>To enable the AdminService on system boot using CentOS 6, enter the following commands as <code>root</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">chkconfig redhawk-adminservice on</code></pre></div>
+<p>To enable the Adminservice on system boot using CentOS 7, enter the following commands as <code>root</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">systemctl enable redhawk-adminservice-setup.service
+systemctl enable redhawk-adminservice.service</code></pre></div>
+<div class="notices note" ><p>The <code>redhawk-adminservice-setup.service</code> systemd service is required to create the directories in <code>/var/run</code> for managing process pid files. It does not need to be restarted while the system is running.</p>
+</div>
+
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="../../../../manual/appendices/adminservice/" title="REDHAWK System Services"> <i class="fa fa-chevron-left"></i><label>REDHAWK System Services</label></a>
+    <a class="nav nav-next" href="../../../../manual/appendices/adminservice/adminservice/serviceconfigurations/" title="Service Configurations" style="margin-right: 0px;"><label>Service Configurations</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
