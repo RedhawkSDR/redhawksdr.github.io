@@ -404,6 +404,7 @@ ga('send', 'pageview');
 <ul>
 <li>Updated <code>bluefile.py</code> to the latest version.</li>
 <li>Updated BulkIO unit tests by replacing DataSource and DataSink with StreamSource and StreamSink except in cases where DataSource or DataSink itself was being tested.  In such cases, the deprecation warnings were silenced.</li>
+<li>NodeBooter bash completion is installed in the Runtime install whereas previously, it was installed in the Devel rpm.</li>
 <li>Fixed issue when configuring properties and assigning non-boolean values in Java. The value defaults to false rather than throwing an exception.</li>
 <li>Fixed issue when using the same stream ID for multiple back-to-back streams into a single port; the SRI no longer gets corrupted.</li>
 <li>Fixed an issue with multi-domain allocations where the AllocationManager would attempt to allocate all of the original requests on subsequent remote domains, as opposed to only the requests that have not been satisfied.</li>
