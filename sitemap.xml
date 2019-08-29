@@ -15,6 +15,10 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.4/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.3/</loc>
   </url>
   
@@ -83,7 +87,7 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/</loc>
+    <loc>https://redhawksdr.github.io/technical-notes/</loc>
   </url>
   
   <url>
@@ -91,15 +95,15 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/specifications/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/community/</loc>
+    <loc>https://redhawksdr.github.io/release-notes/</loc>
   </url>
   
   <url>
     <loc>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/specifications/</loc>
   </url>
   
   <url>
@@ -111,11 +115,15 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/beta/</loc>
+    <loc>https://redhawksdr.github.io/community/</loc>
   </url>
   
   <url>
     <loc>https://redhawksdr.github.io/beta/manual/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/beta/</loc>
   </url>
   
   <url>
