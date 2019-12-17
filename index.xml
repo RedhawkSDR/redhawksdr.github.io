@@ -39,7 +39,7 @@
       <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.5/</guid>
       <description>The effort in REDHAWK 2.2.5 focused on:
  Resolving an issue that occurred when creating an event channel with an empty string name. In this case, an exception is now thrown and documentation was added explaining valid content for event channel names.  Fixes The following fixes were completed in REDHAWK 2.2.5:
-Core Framework Fixes  Corrected misspellings in loghelpers.cpp The generated SAD xml excludes components such as StreamSource, StreamSink, etc.</description>
+Core Framework Fixes  Corrected misspellings in loghelpers.cpp. The generated SAD xml excludes components such as StreamSource, StreamSink, etc.</description>
     </item>
     
     <item>

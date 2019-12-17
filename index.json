@@ -25,7 +25,7 @@
 	"title": "REDHAWK Release Notes - 2.2.5",
 	"tags": [],
 	"description": "",
-	"content": " The effort in REDHAWK 2.2.5 focused on:\n Resolving an issue that occurred when creating an event channel with an empty string name. In this case, an exception is now thrown and documentation was added explaining valid content for event channel names.  Fixes The following fixes were completed in REDHAWK 2.2.5:\nCore Framework Fixes  Corrected misspellings in loghelpers.cpp The generated SAD xml excludes components such as StreamSource, StreamSink, etc.  IDE Fixes  Consolidated graphical and graphical-runtime tests to both use the installed redhawk components. Removed synchronous call when closing the SRIData view because a port disappeared.  "
+	"content": " The effort in REDHAWK 2.2.5 focused on:\n Resolving an issue that occurred when creating an event channel with an empty string name. In this case, an exception is now thrown and documentation was added explaining valid content for event channel names.  Fixes The following fixes were completed in REDHAWK 2.2.5:\nCore Framework Fixes  Corrected misspellings in loghelpers.cpp. The generated SAD xml excludes components such as StreamSource, StreamSink, etc.  IDE Fixes  Consolidated graphical and graphical-runtime tests to both use the installed REDHAWK components. Removed synchronous call when closing the Signal Related Information (SRI) view because a port disappeared.  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.4/",
