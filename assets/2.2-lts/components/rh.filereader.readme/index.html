@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>rh.FileReader :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/assets/2.2-lts/components/rh.filereader.readme/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> Home
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/technical-notes/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../../technical-notes/">Technical Notes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/assets/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/">Asset README Files</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/assets/2.2-lts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.2-lts/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/updates/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../release-notes/updates/">Updates Repository 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals</option> 
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/technical-notes/" >
+   Technical Notes</option> 
+  
+    <option value="/assets/" >
+   Asset README Files</option> 
+    <option value="/assets/2.2-lts/" >
+  - 
+   Assets 2.2</option> 
+  
+  
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+    <option value="/release-notes/assets/" >
+  - 
+   Assets 2.2</option> 
+  
+    <option value="/release-notes/updates/" >
+  - 
+   Updates Repository 2.2</option>
+  
+    <option value="/specifications/" >
+   Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>rh.FileReader</h1>
+    
+    
+    
+    
+
+<h1 id="redhawk-rh-filereader">REDHAWK rh.FileReader</h1>
+
+<h2 id="description">Description</h2>
+
+<p>Contains the source and build script for the REDHAWK
+<code>rh.FileReader</code> component. The <code>rh.FileReader</code> component reads data from
+a file on the SCA or local file system, and streams the data out a BulkIO
+output port.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>This asset requires the <code>rh.blueFileLib</code> and <code>rh.RedhawkDevUtils</code> shared libraries.
+These shared libraries must be installed in order to build and run this asset.
+To build from source, run the <code>build.sh</code> script. To install to <code>$SDRROOT</code>,
+run <code>build.sh install</code>. Note: root privileges (<code>sudo</code>) may be required to install.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>To use <code>rh.FileReader</code>, configure the <code>source_uri</code> property with the path to the
+file (or directory of files) to be read. Configure the <code>file_format</code> property
+with the value appropriate for the input file(s). For files that do not contain
+a header with sample rate and/or frequency information, configure the
+<code>sample_rate</code> property with the sample rate and <code>center_frequency</code> with the
+center frequency of the data. Connect an output port of the appropriate type to
+the intended consumer of the data stream. To begin playback, configure the
+<code>playback_state</code> property to <code>PLAY</code> and ensure the component has been started.</p>
+
+<p>The BLUEFILE  and WAV options for the <code>file_format</code> property rely on the file
+header for the full description of the data to be read. Each other option fully
+describes the data to be read, and most options have up to four components:</p>
+
+<ol>
+<li>Mode: SCALAR (Real) or COMPLEX</li>
+<li>Atom size: 8 (Char/Octet), 16 (Short), 32 (Long/Float), or 64 (Double)</li>
+<li>Data type: Unsigned integer, Signed integer, Floating-point</li>
+<li>Byte Order: Big or Little Endian</li>
+</ol>
+
+<p>All possible <code>file_format</code> property values are listed in the table below.</p>
+
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Value</th>
+<th>Mode</th>
+<th>Atom Size</th>
+<th>Data Type</th>
+<th>Byte Order</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>BLUE/PLATINUM FILE</td>
+<td>BLUEFILE</td>
+<td>Header defined</td>
+<td>Header defined</td>
+<td>Header defined</td>
+<td>Header defined</td>
+</tr>
+
+<tr>
+<td>WAV</td>
+<td>WAV</td>
+<td>Scalar</td>
+<td>Header defined</td>
+<td>Header defined</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>XML</td>
+<td>XML</td>
+<td>Scalar</td>
+<td>8</td>
+<td>Char (Signed Integer)</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td>SCALAR OCTET (8o)</td>
+<td>OCTET</td>
+<td>Scalar</td>
+<td>8</td>
+<td>Unsigned Integer</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td>SCALAR CHAR (8t)</td>
+<td>CHAR</td>
+<td>Scalar</td>
+<td>8</td>
+<td>Signed Integer</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td>SCALAR USHORT Little Endian (16or)</td>
+<td>USHORT_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>16</td>
+<td>Unsigned Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR USHORT Big Endian (16o)</td>
+<td>USHORT_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>16</td>
+<td>Unsigned Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR SHORT Little Endian(16tr)</td>
+<td>SHORT_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>16</td>
+<td>Signed Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR SHORT Big Endian (16t)</td>
+<td>SHORT_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>16</td>
+<td>Signed Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR ULONG Little Endian(32or)</td>
+<td>ULONG_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Unsigned Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR ULONG Big Endian (32o)</td>
+<td>ULONG_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Unsigned Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR LONG Little Endian (32tr)</td>
+<td>LONG_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Signed Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR LONG Big Endian (32t)</td>
+<td>LONG_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Signed Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR FLOAT Little Endian(32fr)</td>
+<td>FLOAT_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Floating-point</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR FLOAT Big Endian (32f)</td>
+<td>FLOAT_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>32</td>
+<td>Floating-point</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR DOUBLE Little Endian (64fr)</td>
+<td>DOUBLE_LITTLE_ENDIAN</td>
+<td>Scalar</td>
+<td>64</td>
+<td>Floating-point</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>SCALAR DOUBLE Big Endian (64f)</td>
+<td>DOUBLE_BIG_ENDIAN</td>
+<td>Scalar</td>
+<td>64</td>
+<td>Floating-point</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX OCTET (8o)</td>
+<td>COMPLEX_OCTET</td>
+<td>Complex</td>
+<td>8</td>
+<td>Unsigned Integer</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td>COMPLEX CHAR (8t)</td>
+<td>COMPLEX_CHAR</td>
+<td>Complex</td>
+<td>8</td>
+<td>Signed Integer</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td>COMPLEX USHORT Little Endian (16or)</td>
+<td>COMPLEX_USHORT_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>16</td>
+<td>Unsigned Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX USHORT Big Endian (16o)</td>
+<td>COMPLEX_USHORT_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>16</td>
+<td>Unsigned Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX SHORT Little Endian(16tr)</td>
+<td>COMPLEX_SHORT_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>16</td>
+<td>Signed Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX SHORT Big Endian (16t)</td>
+<td>COMPLEX_SHORT_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>16</td>
+<td>Signed Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX ULONG Little Endian(32or)</td>
+<td>COMPLEX_ULONG_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Unsigned Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX ULONG Big Endian (32o)</td>
+<td>COMPLEX_ULONG_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Unsigned Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX LONG Little Endian (32tr)</td>
+<td>COMPLEX_LONG_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Signed Integer</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX LONG Big Endian (32t)</td>
+<td>COMPLEX_LONG_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Signed Integer</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX FLOAT Little Endian(32fr)</td>
+<td>COMPLEX_FLOAT_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Floating-point</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX FLOAT Big Endian (32f)</td>
+<td>COMPLEX_FLOAT_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>32</td>
+<td>Floating-point</td>
+<td>Big Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX DOUBLE Little Endian (64fr)</td>
+<td>COMPLEX_DOUBLE_LITTLE_ENDIAN</td>
+<td>Complex</td>
+<td>64</td>
+<td>Floating-point</td>
+<td>Little Endian</td>
+</tr>
+
+<tr>
+<td>COMPLEX DOUBLE Big Endian (64f)</td>
+<td>COMPLEX_DOUBLE_BIG_ENDIAN</td>
+<td>Complex</td>
+<td>64</td>
+<td>Floating-point</td>
+<td>Big Endian</td>
+</tr>
+</tbody>
+</table>
+
+<p>The desired output byte order is specified using the <code>output_bulkio_byte_order</code>
+property, which defaults to host byte order. If the byte order of the input
+file is different than that of the desired output byte order, byte swapping will
+occur.</p>
+
+<p>The <code>advanced_properties</code>, <code>default_timestamp</code>, and <code>default_sri</code> struct
+properties, as well as the <code>default_sri_keywords</code> struct sequence property are
+available to support more complicated use cases. Each of the features available
+are documented in the description of each property when viewing the Properties
+Descriptor XML file (FileReader.prf.xml).</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

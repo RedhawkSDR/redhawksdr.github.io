@@ -11,31 +11,147 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.3/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.amfmpmbasebanddemod.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.5/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.arbitraryrateresampler.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.4/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.dataconverter.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.3/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.fm_rbds_demo.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.2/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.fm_mono_demo.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.1/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.filereader.readme/</loc>
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.0/</loc>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.filewriter.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/devices/rh.fmrdssimulator.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.hardlimit.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/devices/rh.msdd.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.rbdsdecoder.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/devices/rh.rtl2832u.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/libraries/rh.redhawkdevutils.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.siggen.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sinksdds.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sinkvita49.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sourcesdds.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sourcevita49.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.tunefilterdecimate.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/devices/rh.usrp_uhd.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/libraries/rh.vita49.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.agc.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.autocorrelate.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.basic_components_demo.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/libraries/rh.bluefilelib.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/libraries/rh.dsp.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.fastfilter.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.fcalc.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/libraries/rh.fftlib.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.psd.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.psk_soft.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.short_file_to_float_file.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sinksocket.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.socket_loopback_demo.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/components/rh.sourcesocket.readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/waveforms/rh.vita49_loopback_demo.readme/</loc>
   </url>
   
   <url>
@@ -48,6 +164,150 @@
   
   <url>
     <loc>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.amfmpmbasebanddemod/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.arbitraryrateresampler/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.dataconverter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.fm_rbds_demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.fm_mono_demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.filereader/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.filewriter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/rh.fmrdssimulator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.hardlimit/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/rh.msdd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.rbdsdecoder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.redhawkdevutils/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/rh.rtl2832u/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.siggen/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sinksdds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sinkvita49/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sourcesdds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sourcevita49/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.tunefilterdecimate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/rh.usrp_uhd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.vita49/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.vita49_loopback_demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.agc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.autocorrelate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.basic_components_demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.bluefilelib/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.dsp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.fastfilter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.fcalc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.fftlib/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.psd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.psk_soft/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.short_file_to_float_file/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sinksocket/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.socket_loopback_demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sourcesocket/</loc>
   </url>
   
   <url>
@@ -95,7 +355,11 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/core-assets/</loc>
+    <loc>https://redhawksdr.github.io/assets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/</loc>
   </url>
   
   <url>
@@ -103,7 +367,7 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.2/</loc>
+    <loc>https://redhawksdr.github.io/release-notes/updates/</loc>
   </url>
   
   <url>
@@ -111,31 +375,7 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.1/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/beta/release-notes/release-notes-2.1.0/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/community/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/beta/manual/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/beta/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/beta/release-notes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://redhawksdr.github.io/beta/specifications/</loc>
   </url>
   
   <url>
@@ -147,13 +387,37 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/assets/2.2-lts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/</loc>
   </url>
   
 </urlset>
