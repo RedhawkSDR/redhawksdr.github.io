@@ -22,13 +22,13 @@
     </item>
     
     <item>
-      <title>REDHAWK Release Notes - 2.2.6</title>
-      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.6/</link>
+      <title>REDHAWK Release Notes - 2.2.7</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.6/</guid>
-      <description>The effort in REDHAWK 2.2.6 focused on:
- Resolving an exception that occurred when calling theAllocationManager&amp;rsquo;s listAllocations method with no arguments. Adding developer documentation to explain how to enable JacORB for Java components. Fixing typos in component sample code comments. Implementing fixes to properly initialize the persona device logger. Changing _bindir to _libdir in the generated .spec file for generated C++ components. Adding a return code to cleanomni to indicate when one of the steps failed.</description>
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</guid>
+      <description>The effort in REDHAWK 2.2.7 focused on:
+ Plugin infrastructure created for GPP to track custom system metrics Queue flush reported on all affected streams in the incoming queue When reading Bulk IO streams, allow the consume size to be greater than the read size (equivalent to read+skip) Resolving an issue with intermittent failures in omniEvents when writing to syslog running on CentOS 7. Components generate from command line with applications like createBinaryComponent generate the correct header on the SCD and PRF files Java message ports are consistent with Python and C++ message ports.</description>
     </item>
     
     <item>
@@ -393,6 +393,16 @@ Installation This is a waveform project; therefore, it does not need to be built
     </item>
     
     <item>
+      <title>REDHAWK Release Notes - 2.2.6</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.6/</guid>
+      <description>The effort in REDHAWK 2.2.6 focused on:
+ Resolving an exception that occurred when calling theAllocationManager&amp;rsquo;s listAllocations method with no arguments. Adding developer documentation to explain how to enable JacORB for Java components. Fixing typos in component sample code comments. Implementing fixes to properly initialize the persona device logger. Changing _bindir to _libdir in the generated .spec file for generated C++ components. Adding a return code to cleanomni to indicate when one of the steps failed.</description>
+    </item>
+    
+    <item>
       <title>REDHAWK Release Notes - 2.2.5</title>
       <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -518,9 +528,9 @@ The following changes
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.filereader/</guid>
       <description>Release notes for rh.FileReader 5.0.1 (REDHAWK 2.2.6)
+ Fixed segfault on release_object() for slow consumer.  Release notes for rh.FileReader 5.0.1 (REDHAWK 2.2.6)
  Fixed segfault on release_object() for slow consumer.  Release notes for rh.FileReader 5.0.0 (REDHAWK 2.2.2)
- Added ability to process a meta data file captured by FileWriter to replicate the same context when playing back the data. The following context information is used when processing each data packet:
- SRI Context - streamID, hversion, xstart, xdelta, subsize, ystart, ydelta, mode, keywords/values Packet Context - streamID, data length, EOS, timecode (tcmode,tcstatus, twsec, tfsec, toff)  Added additional unit tests for meta data file handling.</description>
+ Added ability to process a meta data file captured by FileWriter to replicate the same context when playing back the data. The following context information is used when processing each data packet:</description>
     </item>
     
     <item>
@@ -560,7 +570,7 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/devices/rh.msdd/</guid>
       <description>Release notes for rh.MSDD 3.0.2 (REDHAWK 2.2.6)
- Fixed issue with rh.MSDD to correctly define the available bandwidth for the DDC as reported by the actual receiver device. Bandwidth allocation requests are now evaluated against all supported tuner bandwidths of a DDC module. Resolved issue for RFInfo port connections to update tuner status structure. Added support to recognized MSDR X000 receivers during proxy device startup.  </description>
+ Fixed issue with rh.MSDD to correctly define the available bandwidth for the DDC as reported by the actual receiver device. Bandwidth allocation requests are now evaluated against all supported tuner bandwidths of a DDC module. Resolved issue for RFInfo port connections to update tuner status structure. Added support to recognized MSDR X000 receivers during proxy device startup.  Release notes for rh.MSDD 3.</description>
     </item>
     
     <item>
@@ -626,8 +636,9 @@ Fixes  Updated unit test use of sb.DataSink to use the new API. Resolved compone
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.sourcesdds/</guid>
       <description>Release notes for rh.SourceSDDS 2.0.1 (REDHAWK 2.2.6)
+ Resolved issue when connecting to multicast groups with the 4th octet greater than 239.  Release notes for rh.SourceSDDS 2.0.1 (REDHAWK 2.2.6)
  Resolved issue when connecting to multicast groups with the 4th octet greater than 239.  Release notes for rh.SourceSDDS 2.0.0 (REDHAWK 2.2.2)
- Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host. Logging messages use the REDHAWK 2.2.x logging API. Improved descriptions for ports and properties. An additional help section (Asset Use) in the Readme.</description>
+ Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host.</description>
     </item>
     
     <item>
@@ -665,6 +676,7 @@ Fixes  Fixed rh.SourceVITA49 to work with multicast input. Removed extra spaces 
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/libraries/rh.vita49/</guid>
       <description>Release notes for rh.VITA49 5.0.1 (REDHAWK 2.2.6)
+ Modified code to allow compilation with {{-std=c++11}} in addition to {{-std=c++98}}. Updated leap second table for VITA 49 library.  Release notes for rh.VITA49 5.0.1 (REDHAWK 2.2.6)
  Modified code to allow compilation with {{-std=c++11}} in addition to {{-std=c++98}}. Updated leap second table for VITA 49 library.  </description>
     </item>
     
@@ -757,6 +769,7 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.psd/</guid>
       <description>Release notes for rh.psd 2.0.3 (REDHAWK 2.2.6)
+ Added change to pass SRI.blocking flag through output port.  Release notes for rh.psd 2.0.3 (REDHAWK 2.2.6)
  Added change to pass SRI.blocking flag through output port.  </description>
     </item>
     
