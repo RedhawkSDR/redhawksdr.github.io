@@ -187,6 +187,14 @@
   </url>
   
   <url>
+    <loc>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-2.3.0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-profile-2.3.0/</loc>
+  </url>
+  
+  <url>
     <loc>https://redhawksdr.github.io/manual/2.2-lts/</loc>
   </url>
   
@@ -196,6 +204,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/</loc>
   </url>
   
   <url>
@@ -328,6 +340,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.short_file_to_float_file/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/</loc>
   </url>
   
   <url>

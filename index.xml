@@ -464,6 +464,26 @@ Core Framework Fixes  Corrected misspellings in loghelpers.cpp. The generated SA
     </item>
     
     <item>
+      <title>GPP 2.3.0</title>
+      <link>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-2.3.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-2.3.0/</guid>
+      <description>Release notes for GPP 2.3.0 (REDHAWK 2.2)
+ Plugin infrastructure created for GPP to track custom system metrics  </description>
+    </item>
+    
+    <item>
+      <title>GPP-profile 2.3.0</title>
+      <link>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-profile-2.3.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/updates/2.2-lts/gpp-profile-2.3.0/</guid>
+      <description>Release notes for GPP-profile 2.3.0 (REDHAWK 2.2)
+ Plugin infrastructure created for GPP to track custom system metrics  </description>
+    </item>
+    
+    <item>
       <title>REDHAWK Release Notes - 2.0.7</title>
       <link>https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -472,6 +492,16 @@ Core Framework Fixes  Corrected misspellings in loghelpers.cpp. The generated SA
       <description>The effort in REDHAWK 2.0.7 focused on:
  Core Framework
  Resolving soft package dependency issue so DeviceManager resolves run time environment settings when deploying Devices and Services that have soft package dependencies. Resolving issue so that during Application release, calls to the Application object no longer result in misleading errors. Improving flexibility to ignore GPP threshold checks when determining if the GPP should go into a BUSY state. Resolving issue where processes with spaces in the names would cause the GPP to terminate.</description>
+    </item>
+    
+    <item>
+      <title>redhawk-codegen 2.3.0</title>
+      <link>https://redhawksdr.github.io/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/</guid>
+      <description>Release notes for redhawk-codegen 2.3.0 (REDHAWK 2.2)
+ Plugin infrastructure created for GPP to track custom system metrics  </description>
     </item>
     
     <item>
@@ -789,6 +819,16 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.2-lts/waveforms/rh.short_file_to_float_file/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>rh.sinksocket 2.1.0</title>
+      <link>https://redhawksdr.github.io/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/</guid>
+      <description>Release notes for rh.sinksocket 2.1.0 (REDHAWK 2.2)
+ Adding a property to rh.sinksocket to allow the user to disable combining TCP packets via Nagle&amp;rsquo;s algorithm. Adding description and usage information to the rh.sinksocket README.md.  </description>
     </item>
     
     <item>
