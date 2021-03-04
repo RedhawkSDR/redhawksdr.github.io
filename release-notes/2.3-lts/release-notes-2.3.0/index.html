@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>REDHAWK Release Notes - 2.3.0 :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/release-notes/2.3-lts/release-notes-2.3.0/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> Home
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../manual/">Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.3-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/technical-notes/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../technical-notes/">Technical Notes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/assets/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../assets/">Asset README Files</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/assets/2.3-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../assets/2.3-lts/">Assets 2.3</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/assets/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../assets/2.2-lts/">Assets 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/2.3-lts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/2.3-lts/">REDHAWK 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.3-lts/release-notes-2.3.0/" class="dd-item active">
+        <div>
+          <a href="../../../release-notes/2.3-lts/release-notes-2.3.0/">
+            REDHAWK Release Notes - 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.7/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.7/">
+            REDHAWK Release Notes - 2.2.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.6/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.6/">
+            REDHAWK Release Notes - 2.2.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.5/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.5/">
+            REDHAWK Release Notes - 2.2.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.4/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.4/">
+            REDHAWK Release Notes - 2.2.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.3/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.3/">
+            REDHAWK Release Notes - 2.2.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.2/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.2/">
+            REDHAWK Release Notes - 2.2.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.1/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.1/">
+            REDHAWK Release Notes - 2.2.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.2-lts/release-notes-2.2.0/">
+            REDHAWK Release Notes - 2.2.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/assets/">Assets LTS Releases</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/assets/2.3-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/2.2-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/assets/2.2-lts/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/updates/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../release-notes/updates/">Updates Repository 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/updates/2.2-lts/gpp-2.3.0/">
+            GPP 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-profile-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/updates/2.2-lts/gpp-profile-2.3.0/">
+            GPP-profile 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/">
+            redhawk-codegen 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/" class="dd-item">
+        <div>
+          <a href="../../../release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/">
+            rh.sinksocket 2.1.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals</option> 
+    <option value="/manual/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/technical-notes/" >
+   Technical Notes</option> 
+  
+    <option value="/assets/" >
+   Asset README Files</option>
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option> 
+      <option value="/release-notes/2.3-lts/release-notes-2.3.0/"  selected>-- REDHAWK Release Notes - 2.3.0</option>
+  
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+    <option value="/release-notes/assets/" >
+  - 
+   Assets LTS Releases</option>
+    <option value="/release-notes/updates/" >
+  - 
+   Updates Repository 2.2</option>
+  
+    <option value="/specifications/" >
+   Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>REDHAWK Release Notes - 2.3.0</h1>
+    
+    
+    
+    
+
+<p>The effort in REDHAWK 2.3.0 focused on:</p>
+
+<ul>
+<li>Added methods to  C++ ThreadedComponent API, that allow developers to determine if stop was called or if the resource internally reached an finished state.</li>
+<li>Added Python iterator support to limit the number of entries that are returned from a servant&rsquo;s iterator interface.</li>
+<li>Fixed connection rate check for rh.MSDD during device startup when the MSDD radio supports multiple network interfaces.</li>
+<li>rh.MSDD  correctly enables the tuner&rsquo;s output module for successful allocations  The rh.MSDD property <code>advanced::max_nic_percentage</code> will now track the total output rate from the radio&rsquo;s network interface against this threshold to disallow allocations that oversubscribe the interface.</li>
+<li>Resolving issue to correctly set the time-of-day in ONEPPS mode.
+Added properties <code>msdd_status::tod_host_delta</code> (gives the time-of-day offset between the host and the MSDD&rsquo;s TOD module while in ONEPPS mode) and <code>msdd_status::ntp_running</code> (shows whether ntp is running on the host while in ONEPPS mode).</li>
+<li>Added JAVA Bulk IO Stream API support to bulkio.jar</li>
+<li>EOS condition is reported correctly for all connections when an incoming stream receives an EOS flag.</li>
+<li>An application&rsquo;s external property maps to the correct component when the component&rsquo;s name is a substring of another component.</li>
+<li>Fixed issue where timecodes  values were not properly adjusted during filter operations.</li>
+<li>rh.fastfilter adds a bybass mode property. When bypass mode is enabled, any input stream data bypasses all filter operations and passed directly to any output connections.</li>
+<li>rh.psd component properly handles values above 2.4 GHz for SRI keywords CHAN_RF and COL_RF.</li>
+<li>Resolved issue when adding a new stream to an attachable port that would cause a program to segfault.</li>
+<li>Exiting a python sandbox session will now properly terminate a resource&rsquo;s processes started during the session that threw  <code>initialization</code> exceptions.</li>
+</ul>
+
+<h3 id="new-features">New Features</h3>
+
+<p>The following features were added in REDHAWK 2.3.0:</p>
+
+<h4 id="core-framework-features">Core Framework Features</h4>
+
+<ul>
+<li>Added Bulkio Stream support in Java</li>
+</ul>
+
+<h4 id="documentation-features">Documentation Features</h4>
+
+<ul>
+<li>Added support for Java Bulk IO stream API</li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+
+<p>The following fixes were completed in REDHAWK 2.3.0:</p>
+
+<h4 id="core-framework-fixes">Core Framework Fixes</h4>
+
+<ul>
+<li>Changed setup and teardown code to prepare the state of <code>/dev/shm</code> to allow the test to operate properly.</li>
+<li>For JAVA BulkIO ports, disconnectPort will throw CF.InvalidPort for unknown connection identifiers.</li>
+<li>Device_impl::updateUsageState is now a virtual method to allow for specialization.</li>
+<li>The application object updates the property on the correct component when one component&rsquo;s name is a substring of another component</li>
+<li>Removed vendor check for Java</li>
+<li>Do not remove PushConsumers if a timeout occurs during a push operation.</li>
+</ul>
+
+<h4 id="ide-fixes">IDE Fixes</h4>
+
+<ul>
+<li>Null pointer fixed and doesn&rsquo;t occur any longer</li>
+</ul>
+
+<h4 id="documentation-fixes">Documentation Fixes</h4>
+
+<ul>
+<li>Updated the format of headings in the REDHAWK Manual.</li>
+<li>Updated the REDHAWK ICD to indicate that <code>dataChar</code> is deprecated and <code>dataOctet</code> should be used in favor of <code>dataChar</code>.</li>
+<li>Added an example using the <code>connectionId</code> argument when making sandbox connections.</li>
+<li>Updated glossary links to display the first time glossary terms are displayed on a page. Acronym terms and the corresponding acronym were updated to display the first time the terms are displayed on a page. After this first occurrence, only acronyms are displayed.</li>
+<li>All images in the manual now have a caption displayed under the image.</li>
+<li>Added GPS interface information to the FrontEnd Interfaces appendix.</li>
+<li>Added NavData interface information to the FrontEnd Interfaces appendix.</li>
+<li>Added RFInfo interface information to the FrontEnd Interfaces appendix.</li>
+<li>In Optimization -&gt; Configuring omniORB, fixed a typo that referenced IORs.</li>
+<li>In Frontend Interfaces -&gt; Types of Tuners -&gt; CHANNELIZER Tuner, fixed a typo that referenced DDC.</li>
+<li>Updated the <code>cleanomni</code> script to include CentOS 7 information, and rearranged the omni information in the Troubleshooting appendix .</li>
+<li>In Troubleshooting -&gt; Setting Omni Log Levels, updated the omniORB User&rsquo;s Guide links for CentOS 7.</li>
+<li>In the Logging Configuration Plugin section, fixed a typo that referenced <code>--useloglib</code>.</li>
+<li>Updated tables in the manual to auto adjust in size so the contents wraps correctly within the cells.</li>
+<li>Removed UHD dependencies from those provided in REDHAWK and added them to the External Dependencies appendix.</li>
+<li>In Managing and Defining Properties, fixed a typo in the <code>utctime</code> description.</li>
+<li>Fixed grammatical errors in the REDHAWK ICD and in the SCA Domain Profile.</li>
+<li>In the Waveform Editor -&gt; Components Tab section, removed the reference to Component ID and modified the text to match the new Components Tab image.</li>
+<li>In the Waveform Editor and in the Distributed Computing and RF Devices sections, updated missing and incorrect links.</li>
+<li>In the Connecting to a Running Domain section, fixed minor typographical errors.</li>
+<li>In the REDHAWK ICD, corrected section numbers.</li>
+<li>In the REDHAWK ICD and in the SCA Specification, fixed minor typographical errors in the Logging Description section.</li>
+<li>In the Logging Within a Resource section, fixed minor typographical errors.</li>
+<li>In the Waveform Editor, in the Components Tab section, added the Components Tab image.</li>
+<li>In References for Application Developers, corrected the Sandbox link  to point to the Sandbox section.</li>
+<li>In Creating a New Node, corrected the Exploring the Running Node link to point to the Exploring the Running Node section.</li>
+<li>In Creating a Waveform Service Configuration Using the <code>rhadmin</code> Script, corrected the Waveform Configuration File link to point to the Waveform Configuration File page.</li>
+<li>Fixed error of DMD file reference to be DCD file in Creating a Node section.</li>
+<li>Removed a sentence from the Workbench topic.</li>
+<li>Corrected expanded term information for JDT (Java Development Tools) and CDT (C/C++ Development Tools) acronyms.</li>
+<li>Removed the following glossary terms:  Editor, System, Ethernet, Linux, and Local Area Network.</li>
+<li>Updated the Installing the Framework from Source and the Device and Service Affinity sections to reflect affinity disable build options.</li>
+<li>Updated the Persistence Store and the Installing the Framework from Source sections to reflect that the default build now enables the <code>sqlite</code> backend.</li>
+<li>Updated <code>custom.css</code> to fix table formatting issue.</li>
+<li>Removed references to 32-bit OS versions that are no longer supported.</li>
+<li>Removed Standalone EPEL information from the REDHAWK External Dependencies appendix.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<link href="../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

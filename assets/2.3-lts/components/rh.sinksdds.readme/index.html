@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>rh.SinkSDDS :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/assets/2.3-lts/components/rh.sinksdds.readme/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> Home
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.3-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/technical-notes/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../../technical-notes/">Technical Notes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/assets/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/">Asset README Files</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/assets/2.3-lts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/assets/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.2-lts/">Assets 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/2.3-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.3-lts/release-notes-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.3-lts/release-notes-2.3.0/">
+            REDHAWK Release Notes - 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.7/">
+            REDHAWK Release Notes - 2.2.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.6/">
+            REDHAWK Release Notes - 2.2.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.5/">
+            REDHAWK Release Notes - 2.2.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.4/">
+            REDHAWK Release Notes - 2.2.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.3/">
+            REDHAWK Release Notes - 2.2.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.2/">
+            REDHAWK Release Notes - 2.2.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.1/">
+            REDHAWK Release Notes - 2.2.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.0/">
+            REDHAWK Release Notes - 2.2.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/">Assets LTS Releases</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/assets/2.3-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/2.2-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.2-lts/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/updates/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/updates/">Updates Repository 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-2.3.0/">
+            GPP 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-profile-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-profile-2.3.0/">
+            GPP-profile 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/">
+            redhawk-codegen 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/">
+            rh.sinksocket 2.1.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals</option> 
+    <option value="/manual/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/technical-notes/" >
+   Technical Notes</option> 
+  
+    <option value="/assets/" >
+   Asset README Files</option> 
+    <option value="/assets/2.3-lts/" >
+  - 
+   Assets 2.3</option> 
+  
+    <option value="/assets/2.2-lts/" >
+  - 
+   Assets 2.2</option>
+  
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+    <option value="/release-notes/assets/" >
+  - 
+   Assets LTS Releases</option>
+    <option value="/release-notes/updates/" >
+  - 
+   Updates Repository 2.2</option>
+  
+    <option value="/specifications/" >
+   Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>rh.SinkSDDS</h1>
+    
+    
+    
+    
+
+<h1 id="redhawk-rh-sinksdds">REDHAWK rh.SinkSDDS</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#design">Design</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#sri-keywords">SRI Keywords</a></li>
+<li><a href="#known-issues">Known Issues</a></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code>rh.SinkSDDS</code> component takes in a single BulkIO stream on one of the three input ports and serves a single SDDS stream over the provided multicast or unicast address. The component is currently limited to a single stream. The component  performs a BulkIO attach call on any existing connections at start and calls attach on any dynamically made connections during runtime. BulkIO SRI is used to set the SDDS header information unless overridden via properties, and the SRI is passed across the SDDS BulkIO connection to any downstream components. See the <a href="#properties">Properties</a> section for information on overriding SDDS header values and the <a href="#sri-keywords">SRI Keywords</a> section for information on KEYWORDs created.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>To build from source, run the <code>build.sh</code> script.
+To install to <code>$SDRROOT</code>, run <code>build.sh install</code>.
+Note: root privileges (<code>sudo</code>) may be required to install.</p>
+
+<h2 id="design">Design</h2>
+
+<p>The code is divided into two main classes, the component class and the templated <code>BulkIOToSDDS</code> processor class. The component class contains three instances of the processor class, one for each port type: <code>float</code>, <code>short</code>, and <code>octet</code>.</p>
+
+<p>The component class is responsible for the following actions:</p>
+
+<ul>
+<li>Stream listeners - The component class registers new stream listeners and removes stream listeners for each port so that it can provide the appropriate processor with the new stream. It is also the only entity aware of all three BulkIO to SDDS processors so it ensures that only a single stream is active when new streams come in.</li>
+<li>Property callbacks - Using the <code>setPropertyConfigureImpl</code> API, the component class intercepts the REDHAWK configure call for the struct properties and ensures that the component is not running when trying to set these properties.</li>
+<li>New Connection Listener - When a new dynamic connection is made after the component is already running, the SRI and BulkIO Attach calls need to be made. The component class informs the processor classes of new dynamic connections so this may occur.</li>
+<li>Socket creation - The component class is responsible for creating the unicast or multicast socket connection and throwing an appropriate exception if the socket cannot be opened. A successful socket creation is then handed down to the processor classes to reference.</li>
+<li>Start/Stop API - The component class overrides the start/stop REDHAWK calls so that it can create the socket and start the appropriate processors. During stop, it cleans up the processor threads and closes the socket. The traditional service function/process thread is not used by this component.</li>
+</ul>
+
+<p>The BulkIOToSDDSProcessor class is a templated class so that it can handle any of the current port types. It is responsible for the following actions:</p>
+
+<ul>
+<li>Pulling data from BulkIO - Using the stream API, the processor will attempt to pull exactly 1024 bytes, the SDDS payload size, from the BulkIO stream. This may not always be the case due to end of streams, SRI changes, and so forth, which is discussed in more depth below.</li>
+<li>Setting SDDS header values - Fields such as, but not limited to the SDDS timing, frequency, and complex field are derived from the BulkIO SRI. Optionally a user may override these fields.</li>
+<li>Pushing SDDS Packets - Using the socket connection passed in from the component class, the processor class will push SDDS packets down to the kernel using the <code>sendmsg</code> API and the scatter/gather approach. The scatter/gather approach allows the packet to be divided into three separate arrays:
+
+<ul>
+<li>SDDS Header Template - The class has a single SDDS header that is updated for each packet.</li>
+<li>SDDS Payload - Read from BulkIO; this is usually 1024; however, can be less on an EOS or SRI change.</li>
+<li>Zero Padding - Generally not used, but in cases where the SDDS Payload is less than 1024, the packet is padded.</li>
+</ul></li>
+</ul>
+
+<h2 id="properties">Properties</h2>
+
+<p>Properties and their descriptions are below. Struct props are shown with their struct properties in a table below:</p>
+
+<p><strong>network_settings</strong> - Settings for the network connection.</p>
+
+<table>
+<thead>
+<tr>
+<th>Struct Property</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>interface</td>
+<td>The network interface you intend to be present or blank if no check is needed. Do not include the VLAN in the interface name. (For example, for eth0.28 the interface should be set to &ldquo;eth0&rdquo; NOT &ldquo;eth0.28&rdquo;).</td>
+</tr>
+
+<tr>
+<td>ip_address</td>
+<td>For the unicast case, this is the destination IP address to send the UDP packets. For the multicast case, this is the multicast group.</td>
+</tr>
+
+<tr>
+<td>port</td>
+<td>UDP port used to publish data. (default SDDS port is: 29495)</td>
+</tr>
+
+<tr>
+<td>vlan</td>
+<td>UDP port used to publish data.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>sdds_settings</strong> - Settings related to standard fields in the SDDS Packet or data portion that cannot be derived from BulkIO metadata.</p>
+
+<table>
+<thead>
+<tr>
+<th>Struct Property</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>standard_format</td>
+<td>The SF (Standard Format) field is used to identify whether or not the packet conforms to the SDDS standard. For SDDS standard packets, the SF bit shall be set to a value of 1. The SF bit shall be set to a value of zero for non-standard packets.</td>
+</tr>
+
+<tr>
+<td>original_format</td>
+<td>The OF (Original Format) field identifies the original format of the data transmitted. If the data was originally offset binary and has been converted to 2&rsquo;s complement, the OF value is set to one. Otherwise, the data is 2&rsquo;s complement and has not been converted and the OF value is set to zero.</td>
+</tr>
+
+<tr>
+<td>spectral_sense</td>
+<td>The SS (Spectral Sense) field identifiees whether or not the spectral sense has been inverted from the original input. The SS value is set to one if the spectral sense has been inverted. The SS value is set to zero if the spectral sense has not been inverted.</td>
+</tr>
+
+<tr>
+<td>endian_representation</td>
+<td>The endianness (Big or Little) of the data portion of the SDDS packet. Defaults to Network Byte Order (Big Endian). This will also affect the SRI keyword DATA_REF_STR and set it appropriately.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>sdds_attach_settings</strong> - Settings related to the BulkIO based SDDS Attach and detach API.</p>
+
+<table>
+<thead>
+<tr>
+<th>Struct Property</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>time_tag_valid</td>
+<td>Used only in the attach call. The attach call is made prior to the bulkIO TimeStamp being available so the true BULKIO::TCS_VALID flag cannot be checked. This is only used during the call to attach.</td>
+</tr>
+
+<tr>
+<td>user_id</td>
+<td>Used as a parameter to the attach call.</td>
+</tr>
+
+<tr>
+<td>downstream_give_sri_priority</td>
+<td>Informs downstream components, via the BULKIO_SRI_PRIORITY keyword, to override the xdelta and real/complex mode found in the SDDS Packet header in place of the xdelta and mode found in the supplied SRI.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>override_sdds_header</strong> - Used to optionally override values in the SDDS header which would otherwise be derived from BulkIO metadata or set to a reasonable value.</p>
+
+<table>
+<thead>
+<tr>
+<th>Struct Property</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>enabled</td>
+<td>If true, the values in this struct will override the default values used by this component. Each property should have a description which explains what values would otherwise be used.</td>
+</tr>
+
+<tr>
+<td>dmode</td>
+<td>The data mode field identifies the structure of the data field. See the full specification for details. Unless overridden, this is set to 1 for byte samples, 2 for shorts, and 0 for floats as floats are not part of the standadr.</td>
+</tr>
+
+<tr>
+<td>bps</td>
+<td>The number of bits per sample where the sample size in this case is only refering to the size of the native type used eg. byte, short, float. Bytes are 8, Shorts 16, and since only 5 bits are available, a float is labeled as 31 rather than 32.  Unless overridden, this is derived from the sizeof call on the native bulkIO packet type.</td>
+</tr>
+
+<tr>
+<td>cx</td>
+<td>Denotes if the data portion of the packet represents real (0) or complex (1) values. Unless overridden, this is derived from the mode field within the SRI.</td>
+</tr>
+
+<tr>
+<td>msv</td>
+<td>Denotes if the samples within this packet span a 1-millisecond boundry. Unless overridden, this field is not used and set to zero.</td>
+</tr>
+
+<tr>
+<td>ttv</td>
+<td>Time Tag Valid field denotes if the values stored within the Time Tag information fields (Time Tag, Time Tag Extension) are valid.  Unless overridden, this is derived from the tcstatus field of BulkIO Timestamps and is set to true if equal to TCS_VALID and false otherwise.</td>
+</tr>
+
+<tr>
+<td>sscv</td>
+<td>Synchronous Sample Clock Valid field is 1 if the SSC information fields (<code>dfdt</code> and <code>frequency</code>) are valid and zero otherwise. Unless overridden, this is always set to 1.</td>
+</tr>
+
+<tr>
+<td>msptr</td>
+<td>Points to the first sample in the data field that occurred after the 1-millisecond event. Unless overridden, this is always set to 0.</td>
+</tr>
+
+<tr>
+<td>msdel</td>
+<td>The 1-ms Delta is the time difference between the 1-millisecond event and the first positive going transistion of the SSC that occurred after the 1-millisecond event. Unless overridden, this is always set to 0.</td>
+</tr>
+
+<tr>
+<td>frequency</td>
+<td>The frequency field contains the frequency of the SSC. This value represents the instantaneous frqeuency of the SSC associated with the first sample of the frame.  Unless overridden, this is derived from the xdelta found in the SRI.</td>
+</tr>
+
+<tr>
+<td>dfdt</td>
+<td>This field measures the rate at which the frequency is changing. The value represents the delta between the instantaneous frequency of the last SSC of the packet and the instantaneous frequency of the first SSC of the packet divided by the packet duration. Unless overridden, this is set to 0.0.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="sri-keywords">SRI Keywords</h2>
+
+<p>The SinkSDDS component does not check for or react to any specific keywords. Any keywords which exist in the given SRI are forwarded to downstream components unless they are the same keywords written to by SinkSDDS in which case SinkSDDS will override the values.</p>
+
+<ul>
+<li><strong>BULKIO_SRI_PRIORITY</strong> - If the sdds_attach_settings::downstream_give_sri_priority property is set to true, the BULKIO_SRI_PRIORITY keyword will be set with a value of one. If the sdds_attach_settings::downstream_give_sri_priority property is set to false, the BULKIO_SRI_PRIORITY keyword will not be added.</li>
+<li><strong>DATA_REF_STR</strong> - If the sdds_settings::endian_representation property is set to LITTLE_ENDIAN (0) the DATA_REF_STR keyword will be set to 43981 (0xABCD) while if the sdds_settings::endian_representation property is set to BIG_ENDIAN (1) the DATA_REF_STR keyword will be set to 52651 (0xCDAB).</li>
+</ul>
+
+<h2 id="known-issues">Known Issues</h2>
+
+<ul>
+<li>Calculation of <code>dfdt</code> field - Currently the <code>dfdt</code> field in the SDDS header defaults to zero unless overridden by the user. The <code>dfdt</code> field is supposed to represent the change in sample clock frequency in units of Hz/sec between the first and last sample in the SDDS packet. This exact information is not found in BulkIO, so a direct mapping is not possible; however, BulkIO does allow you to check if multiple timestamps are available. Some estimation based on that may be possible.</li>
+<li>Change of BulkIO Mode - Changing the BulkIO mode field mid-stream is not recommended, a user should send an EOS and start a new stream with the changed mode. The component will gracefully deal with a mode change though with the following outcomes. Going from Real-&gt;Complex this will cause 1 SDDS packets worth of data to have an incorrect time stamp. Going from Complex-&gt;Real will cause a single packet to be erroneously padded with zeros.</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

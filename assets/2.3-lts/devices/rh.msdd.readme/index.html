@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>rh.MSDD :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/assets/2.3-lts/devices/rh.msdd.readme/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> Home
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/2.3-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/technical-notes/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../../technical-notes/">Technical Notes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/assets/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/">Asset README Files</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/assets/2.3-lts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/assets/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.2-lts/">Assets 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/2.3-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.3-lts/release-notes-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.3-lts/release-notes-2.3.0/">
+            REDHAWK Release Notes - 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.7/">
+            REDHAWK Release Notes - 2.2.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.6/">
+            REDHAWK Release Notes - 2.2.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.5/">
+            REDHAWK Release Notes - 2.2.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.4/">
+            REDHAWK Release Notes - 2.2.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.3/">
+            REDHAWK Release Notes - 2.2.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.2/">
+            REDHAWK Release Notes - 2.2.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.1/">
+            REDHAWK Release Notes - 2.2.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.0/">
+            REDHAWK Release Notes - 2.2.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/">Assets LTS Releases</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/assets/2.3-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/2.2-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.2-lts/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/updates/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/updates/">Updates Repository 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-2.3.0/">
+            GPP 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-profile-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-profile-2.3.0/">
+            GPP-profile 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/">
+            redhawk-codegen 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/">
+            rh.sinksocket 2.1.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals</option> 
+    <option value="/manual/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/technical-notes/" >
+   Technical Notes</option> 
+  
+    <option value="/assets/" >
+   Asset README Files</option> 
+    <option value="/assets/2.3-lts/" >
+  - 
+   Assets 2.3</option> 
+  
+    <option value="/assets/2.2-lts/" >
+  - 
+   Assets 2.2</option>
+  
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+    <option value="/release-notes/assets/" >
+  - 
+   Assets LTS Releases</option>
+    <option value="/release-notes/updates/" >
+  - 
+   Updates Repository 2.2</option>
+  
+    <option value="/specifications/" >
+   Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>rh.MSDD</h1>
+    
+    
+    
+    
+
+<h1 id="redhawk-rh-msdd">REDHAWK <code>rh.MSDD</code></h1>
+
+<p>## Table of Contents</p>
+
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The REDHAWK <code>rh.MSDD</code> device is a FRONTEND 2.0 Interfaces (FEI) compliant device for the Midwest Microwave MSDD-3000/6000/0660 series receiver. The <code>rh.MSDD</code> device is written in the Python programming language and communicates with receiver using the host&rsquo;s network interface.  The <code>rh.MSDD</code> properties described below determine the connection and tuner output configuration the MSDD radio. The command formats and descriptions are documented in the MSDD API document from Midwest Microwave Systems.</p>
+
+<p>The <code>rh.MSDD</code> device is meant to be configured a single RF flow. This is controlled using the &lsquo;msdd::receiver_id&rsquo; property at device startup.  This property will be referenced to filter out the MSDD tuner modules from the specified RCV module instance.  For single channel MSDD radios this value will be the default to <code>RCV:1</code>. All WBDDC and NBDDC tuner modules from this RCV module instance will configured as Frontend tuner devices.  For dual Channel MSDD radios, you can use the <code>rh.MSDD</code> device to process a single RF flow (i.e. &lsquo;RCV:1&rsquo;) on the radio.  If you want to process both RCV modules on a dual channel radio you will need to use the <code>rh.MSDD_Controller</code> device.</p>
+
+<p>The <code>rh.MSDD</code> will communicate to the MSDD radio using the <code>msdd</code> property structure at device start up. The following properties are used during start up to configure the MSDD radio.</p>
+
+<ul>
+<li><code>msdd</code> : Communications context and Board module&rsquo;s (BRD) reference clock</li>
+<li><code>time_of_day</code> : Time of Day (TOD) module configuration</li>
+<li><code>block_tuner_output</code>, <code>tuner_output</code> : Configure OUTPUT Modules (OUT) assigned to WBDDC and NBDDC hardware tuners</li>
+<li><code>block_psd_output</code> : Configure OUTPUT Modules (OUT) assigned to FFT modules (FFT) of controlling allocations.</li>
+</ul>
+
+<p>Once the <code>rh.MSDD</code> device has completed initialization, the following run time properties will affect tuner allocations, tuner gain and PSD calculations.</p>
+
+<ul>
+<li><code>frontend_tuner_allocation</code> : FEI allocation request structure</li>
+<li><code>frontend_listener_allocation</code> : FEI listener allocation request structure</li>
+<li><code>advanced</code> : Controls how hardware tuners respond to FEI allocation requests.  Sets threshold values that are monitored to determine if the MSDD radio is in BUSY state. Enables FFT channels for controlling allocations.</li>
+<li><code>gain_configuration</code> : Defined gain settings that can be assigned during an tuner allocations for RCV, WBDDC, and MBDDC modules.</li>
+<li><code>psd_configuration</code> : FFT module settings applied to a controlling allocation when FFT channels are enabled (<code>advanced.enable_fft_channels</code>)</li>
+</ul>
+
+<p>The following run time properties describe the state of the MSDD radio and the frontend tuner devices associated with the MSDD tuner module hardware.</p>
+
+<ul>
+<li><code>frontend_tuner_status</code> : FEI tuner status structure (readonly) describes the current state of each tuner being managed by <code>rh.MSDD</code></li>
+<li><code>connectionTable</code> : Maps connection identifiers to stream identifiers, use to filter out messages to specific connections</li>
+<li><code>msdd_status</code> : Provides the current state of the MSDD radio (readonly)</li>
+</ul>
+
+<h2 id="properties">Properties</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>ACCESS</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">device_kind</td>
+<td align="left">string</td>
+<td align="left">readonly</td>
+<td align="left">kind of device, FRONTEND::TUNER for FEI 2.0</td>
+</tr>
+
+<tr>
+<td align="left">device_model</td>
+<td align="left">string</td>
+<td align="left">readonly</td>
+<td align="left">Information from the console identity command. (MSDD CON IDN?)</td>
+</tr>
+
+<tr>
+<td align="left">frontend_group_id</td>
+<td align="left">string</td>
+<td align="left">readwrite</td>
+<td align="left">Group id for FEI group allocation requests</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#msdd">msdd</a></td>
+<td align="left">structure</td>
+<td align="left">readwrite</td>
+<td align="left">MSDD connection and board setup information</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#time_of_day">time_of_day</a></td>
+<td align="left">structure</td>
+<td align="left">readwrite</td>
+<td align="left">MSDD Time of Day (TOD) module configuration</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#advanced">advanced</a></td>
+<td align="left">structure</td>
+<td align="left">readwrite</td>
+<td align="left">Advanced controls to configure MSDD tuner types, and threshold states to control device usage state</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#tuner_output">tuner_output</a></td>
+<td align="left">structureseq</td>
+<td align="left">readonly</td>
+<td align="left">Output stream configuration from MSDD digital tuners.</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#block_tuner_output">block_tuner_output</a></td>
+<td align="left">structureseq</td>
+<td align="left">readonly</td>
+<td align="left">Output stream configuration for blocks of MSDD digital tuners</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#block_psd_output">block_psd_output</a></td>
+<td align="left">structureseq</td>
+<td align="left">readonly</td>
+<td align="left">Output stream configuration for blocks FFT channels assigned to tuners.</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#psd_configuration">psd_configuration</a></td>
+<td align="left">structure</td>
+<td align="left">readwrite</td>
+<td align="left">FFT module (FFT) parameters used to configure a FFT channel for controlling allocations.</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#gain_configuration">gain_configuration</a></td>
+<td align="left">structure</td>
+<td align="left">readwrite</td>
+<td align="left">Gain settings (GAI) for each MSDD tuner type (RCV,WBDDC,NBDDC)</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#msdd_status">msdd_status</a></td>
+<td align="left">structure</td>
+<td align="left">readonly</td>
+<td align="left">MSDD status information</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#frontend_tuner_status">FRONTEND::tuner_status</a></td>
+<td align="left">structureseq</td>
+<td align="left">readonly</td>
+<td align="left">Frontend tuner status information for each MSDD tuner.</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#frontend_listener_allocation">FRONTEND::listener_allocation</a></td>
+<td align="left">structure</td>
+<td align="left">writeonly</td>
+<td align="left">FRONTEND tuner listener allocation structure, consult REDHAWK manual for details</td>
+</tr>
+
+<tr>
+<td align="left"><a href="#frontend_tuner_allocation">FRONTEND::tuner_allocation</a></td>
+<td align="left">structure</td>
+<td align="left">writeonly</td>
+<td align="left">FRONTEND tuner allocation structure, consult REDHAWK manual for details</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="msdd">msdd</h3>
+
+<p>The <em>msdd</em> structure defines the connection, reference clock, and receiver_identifier properties for the MSDD device.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">msdd::ip_address</td>
+<td align="left">string</td>
+<td align="left">IP address of the MSDD in dot notation (MSDD CON IPP). Default is 127.0.0.1</td>
+</tr>
+
+<tr>
+<td align="left">msdd::port</td>
+<td align="left">string</td>
+<td align="left">Port number the MSDD listens on, default value is 23, (MSDD CON IPP)</td>
+</tr>
+
+<tr>
+<td align="left">msdd::time_out</td>
+<td align="left">double</td>
+<td align="left">Time out to wait if MSDD does not respond to a command request, default value is 0.2.</td>
+</tr>
+
+<tr>
+<td align="left">msdd::clock_ref</td>
+<td align="left">short</td>
+<td align="left">Configures the external reference. INTERNAL reference clock (0), EXTERNAL 10Mhz reference signal (10) (MSDD BRD EXR)</td>
+</tr>
+
+<tr>
+<td align="left">msdd::receiver_id</td>
+<td align="left">string</td>
+<td align="left">Filter WBDDC and NBDDC channels from this receiver source (RCV:1)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="time-of-day">time_of_day</h3>
+
+<p>The <em>time_of_day</em> structure controls the configuration of the MSDD Time of Day module (TOD).  The state of the Time of Day module is reported in the <code>msdd_status</code> structure.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">time_of_day::mode</td>
+<td align="left">string</td>
+<td align="left">Time source (TOD MOD): SIM - simulated, ONE PPS - one pulse per second, IRIG - IRIGB timing source, NAV - Navigation timing source (requires external module), TFN - Time frequency navigation timing source (requires external module). Default is SIM.</td>
+</tr>
+
+<tr>
+<td align="left">time_of_day::reference_adjust</td>
+<td align="left">short</td>
+<td align="left">Adjust internal reference adjustment in ns/sec drift (TOD RFA). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">time_of_day::reference_track</td>
+<td align="left">short</td>
+<td align="left">Tracking mode for the reference signal (TOD RTK): OFF (0), CALIBRATE (1), TRACK (2). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">time_of_day::toy</td>
+<td align="left">short</td>
+<td align="left">(TOD TOY), Time of year offset for IRIGB source, 24 hour offset (0),  Direct from signal (1). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">time_of_day::tracking_interval</td>
+<td align="left">double</td>
+<td align="left">Time between host and radio time status checks. Default is 0 (turn off check)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="advanced">advanced</h3>
+
+<p>The <em>advanced</em> structured property defines a mapping of MSDD tuner modules to FRONTEND tuner types, defines thresholds to control device busy state, enables/disables FFT channels, and controls the use of SWDDC channels for NBDDC modues to provide additional decimation.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">advanced::rcvr_mode</td>
+<td align="left">short</td>
+<td align="left">Maps MSDD RCV module to FEI tuner types: Not allocatable (0), RX Only (8). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::wb_ddc_mode</td>
+<td align="left">short</td>
+<td align="left">Maps MSDD WBDDC module to FEI tuner types: Not allocatable (0), RX_DIGITIZER_CHANNELIZER Only (2), RX_DIGITIZER Only (4), RX_DIGITIZER or RX_DIGITIZER_CHANNELIZER (6). Default is 6.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::hw_ddc_mode</td>
+<td align="left">short</td>
+<td align="left">Maps MSDD NBDDC module  to FEI tuner types: Not allocatable (0), DDC only (1), RX_DIGITIZER Only (4), RX_DIGITIZER or DDC (5). Default is 5.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::enable_fft_channels</td>
+<td align="left">boolean</td>
+<td align="left">True: Link a FFT channel to each NBDDC tuner&rsquo;s output for PSD output. Only controlling allocations will be assigned a FFT channel, False : Disable FTT channels and linking. Default is False.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::max_cpu_load</td>
+<td align="left">float</td>
+<td align="left">Maximum allowable cpu load on the MSDD receiver. A device&rsquo;s BUSY state is enabled if the load (MSDD CON CPL?) exceeds the threshold. Default is 95.0.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::max_nic_percentage</td>
+<td align="left">float</td>
+<td align="left">Maximum network utilization (as a percentage 0.0 to 100.0) that enables a device BUSY state. The MSDD NET BRT command defines the bit rate for a network interface. The total bit output rate is calculated for each enabled output module (i.e. tuner output). If this value exceeds the stated network utilization limit, a BUSY state is enabled. During all tuner allocations, this limit is checked to ensure the limit is not exceeded. Default is 90.0.</td>
+</tr>
+
+<tr>
+<td align="left">advanced::minimum_connected_nic_rate</td>
+<td align="left">float</td>
+<td align="left">Validates the MSDD radio&rsquo;s network interface supports the specified minimum data rate. Controls if the <code>rh.MSDD</code> should connect to the MSDD radio. Default is 1000 Mbps.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="tuner-output">tuner_output</h3>
+
+<p>The <em>tuner_output</em> sequence contains the <em>tuner_output_definition</em> structure that defines the stream output configuration from a specific MSDD digital tuner.  If <em>tuner_output</em> and <em>block_tuner_output</em> values are defined, the <em>tuner_output</em> properties override the <em>block_tuner_output</em> information for a specific tuner.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">tuner_output::tuner_number</td>
+<td align="left">short</td>
+<td align="left">Index of MSDD tuner in sequence of frontend_tuner_status structures (0 based)</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::enabled</td>
+<td align="left">boolean</td>
+<td align="left">Controls output module&rsquo;s enable state for the assigned tuner. (OUT ENB). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::protocol</td>
+<td align="left">string</td>
+<td align="left">Controls output packet format (OUT POL). UDP_SDDS : SDDS packet format, UDP_SDDSX - SDDSX packet format, UDP_SDDSA - SDDSA packet format, UDP_RAW - Raw packet format, UDP_VITA49 - VITA49 Data packet format. Default is UDP_SDDS.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::interface</td>
+<td align="left">short</td>
+<td align="left">Network interface to publish data (0 based). Default 0.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::ip_address</td>
+<td align="left">string</td>
+<td align="left">Destination IP address (OUT IPP)</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::port</td>
+<td align="left">short</td>
+<td align="left">Destination IP port (OUT IPP ). Default is 8800</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::vlan_enable</td>
+<td align="left">boolean</td>
+<td align="left">Enable VLAN tagging (OUT VLANEN). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::vlan</td>
+<td align="left">short</td>
+<td align="left">VLAN ID for 802.1q packets (OUT VLANTCI). Default is -1.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::timestamp_offset</td>
+<td align="left">short</td>
+<td align="left">Offset applied in 1ns increments (OUT TSOFS). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::endianess</td>
+<td align="left">short</td>
+<td align="left">BIG_ENDIAN (0). LITTLE ENDIAN (1) (OUT END). Default is LITTLE_ENDIAN.</td>
+</tr>
+
+<tr>
+<td align="left">tuner_output::mfp_flush</td>
+<td align="left">long</td>
+<td align="left">Packet flush control bit mask (OUT MFP). Default is all bits enabled.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="block-tuner-output">block_tuner_output</h3>
+
+<p>The <em>block_tuner_output</em> sequence contains the <em>block_tuner_output_definition</em> structure that defines the stream output configuration for a block of MSDD tuners. See <em>tuner_output</em> property for precedence of  stream output configuration settings.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">block_tuner_output::tuner_number_start</td>
+<td align="left">short</td>
+<td align="left">Starting tuner number for block</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::tuner_number_stop</td>
+<td align="left">short</td>
+<td align="left">Ending tuner number of block</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::enabled</td>
+<td align="left">boolean</td>
+<td align="left">Controls output module&rsquo;s enable state for the assigned tuner. (OUT ENB). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::protocol</td>
+<td align="left">string</td>
+<td align="left">Controls output packet format (OUT POL). UDP_SDDS : SDDS packet format, UDP_SDDSX - SDDSX packet format, UDP_SDDSA - SDDSA packet format, UDP_RAW - Raw packet format, UDP_VITA49 - VITA49 Data packet format. Default is UDP_SDDS.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::interface</td>
+<td align="left">short</td>
+<td align="left">Network interface to publish data (0 based). Default 0.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::ip_address</td>
+<td align="left">string</td>
+<td align="left">Destination IP address (OUT IPP)</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::port</td>
+<td align="left">short</td>
+<td align="left">Destination IP port (OUT IPP ). Default is 8800</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::vlan_enable</td>
+<td align="left">boolean</td>
+<td align="left">Enable VLAN tagging (OUT VLANEN). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::vlan</td>
+<td align="left">short</td>
+<td align="left">VLAN ID for 802.1q packets (OUT VLANTCI). Default is -1.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::timestamp_offset</td>
+<td align="left">short</td>
+<td align="left">Offset applied in 1ns increments (OUT TSOFS). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::endianess</td>
+<td align="left">short</td>
+<td align="left">BIG_ENDIAN (0). LITTLE ENDIAN (1) (OUT END). Default is LITTLE_ENDIAN.</td>
+</tr>
+
+<tr>
+<td align="left">block_tuner_output::mfp_flush</td>
+<td align="left">long</td>
+<td align="left">Packet flush control bit mask (OUT MFP). Default is all bits enabled.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="block-psd-output">block_psd_output</h3>
+
+<p>The <em>block_psd_output</em> sequence contains the <em>block_psd_output_definition</em> that defines the output stream configuration for a block of MSDD FFT channels.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">block_psd_output::fft_channel_start</td>
+<td align="left">short</td>
+<td align="left">Starting FFT channel of block (0 based)</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::fft_channel_stop</td>
+<td align="left">short</td>
+<td align="left">Ending FFT channel of block</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::enabled</td>
+<td align="left">boolean</td>
+<td align="left">Controls output module&rsquo;s enable state for the assigned tuner. (OUT ENB). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::protocol</td>
+<td align="left">string</td>
+<td align="left">Controls output packet format (OUT POL). UDP_SDDS : SDDS packet format, UDP_SDDSX - SDDSX packet format, UDP_SDDSA - SDDSA packet format, UDP_RAW - Raw packet format, UDP_VITA49 - VITA49 Data packet format. Default is UDP_SDDS.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::interface</td>
+<td align="left">short</td>
+<td align="left">Network interface to publish data (0 based). Default 0.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::ip_address</td>
+<td align="left">string</td>
+<td align="left">Destination IP address (OUT IPP)</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::port</td>
+<td align="left">short</td>
+<td align="left">Destination IP port (OUT IPP ). Default is 8800</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::vlan_enable</td>
+<td align="left">boolean</td>
+<td align="left">Enable VLAN tagging (OUT VLANEN). Default is True.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::vlan</td>
+<td align="left">short</td>
+<td align="left">VLAN ID for 802.1q packets (OUT VLANTCI). Default is -1.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::timestamp_offset</td>
+<td align="left">short</td>
+<td align="left">Offset applied in 1ns increments (OUT TSOFS). Default is 0.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::endianess</td>
+<td align="left">short</td>
+<td align="left">BIG_ENDIAN (0). LITTLE ENDIAN (1) (OUT END). Default is LITTLE_ENDIAN.</td>
+</tr>
+
+<tr>
+<td align="left">block_psd_output::mfp_flush</td>
+<td align="left">long</td>
+<td align="left">Packet flush control bit mask (OUT MFP). Default is all bits enabled.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="psd-configuration">psd_configuration</h3>
+
+<p>The <em>psd_configuration</em> structure defines the FFT module settings.  These settings are applied to the FFT module when controlling allocation is requested and <code>advanced.enable_fft_channels</code> is True.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">psd_configuration::fft_size</td>
+<td align="left">double</td>
+<td align="left">Number of FFT bins (FFT PNT)</td>
+</tr>
+
+<tr>
+<td align="left">psd_configuration::time_average</td>
+<td align="left">double</td>
+<td align="left">Number of averages based on time in seconds. (FFT AVG)</td>
+</tr>
+
+<tr>
+<td align="left">psd_configuration::time_between_ffts</td>
+<td align="left">double</td>
+<td align="left">Time between FFT operations on a tuner channel. (FFT RAT)</td>
+</tr>
+
+<tr>
+<td align="left">psd_configuration::output_bin_size</td>
+<td align="left">double</td>
+<td align="left">The number of FFT bins to output (FFT BIN)</td>
+</tr>
+
+<tr>
+<td align="left">psd_configuration::window_type</td>
+<td align="left">enum</td>
+<td align="left">Windows to apply to each FFT. HANNING, HAMMING, BLACKMAN, RECT (FFT WND)</td>
+</tr>
+
+<tr>
+<td align="left">psd_configuration::peak_mode</td>
+<td align="left">enum</td>
+<td align="left">Peak mode setting: INST, PEAK, BOTH (FFT PMD)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="gain-configuration">gain_configuration</h3>
+
+<p>The <em>gain_configuration</em> structure controls the gain setting for each MSDD tuner module type.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">gain_configuration::rcvr_gain</td>
+<td align="left">float</td>
+<td align="left">Gain setting in db for MSDD RCV modules</td>
+</tr>
+
+<tr>
+<td align="left">gain_configuration::wb_ddc_gain</td>
+<td align="left">float</td>
+<td align="left">Gain setting in db for MSDD WBDDC modules</td>
+</tr>
+
+<tr>
+<td align="left">gain_configuration::hw_ddc_gain</td>
+<td align="left">float</td>
+<td align="left">Gain setting in db for MSDD NBDDC modules</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="msdd-status">msdd_status</h3>
+
+<p>The <em>msdd_status</em> structure defines the set of readonly properties that define the state of the MSDD receiver. This structure is updated after initialization, allocation requests and deallocation requests.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">msdd_status::connected</td>
+<td align="left">boolean</td>
+<td align="left">True if connected to MSDD receiver</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::receiver_identifier</td>
+<td align="left">string</td>
+<td align="left">Receiver identifier for filtering MSDD tuner modules.</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::ip_address</td>
+<td align="left">string</td>
+<td align="left">IP Address assigned to radio</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::port</td>
+<td align="left">string</td>
+<td align="left">Port number assigned to radio</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::model</td>
+<td align="left">string</td>
+<td align="left">Model name from CON CFG? MODEL</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::control_host</td>
+<td align="left">string</td>
+<td align="left">IP Address number from CON IPP?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::control_host_port</td>
+<td align="left">string</td>
+<td align="left">Port number from CON IPP?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::serial</td>
+<td align="left">string</td>
+<td align="left">Serical number from CON CFG? SERIAL</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::software_part_number</td>
+<td align="left">string</td>
+<td align="left">Part number from CON IDN?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::rf_board_type</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? RF_BRD_TYPE</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::fpga_type</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FPGA_TYPE</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::dsp_type</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? DSP_BRD_TYPE</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::minimum_frequency_hz</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? MIN_FREQ</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::maximum_frequency_hz</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? MAX_FREQ</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::dsp_reference_frequency_hz</td>
+<td align="left">string</td>
+<td align="left">Value CON CFG? DSP_REF</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::adc_clock_frequency_hz</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? ADC_CLK</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::num_if_ports</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? IF_PORTS</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::num_eth_ports</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? ETHR_PORTS</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::cpu_type</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? CPU_TYPE</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::cpu_rate</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? CPU_FREQ</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::cpu_load</td>
+<td align="left">string</td>
+<td align="left">Value from CON CPL?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::pps_termination</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? 1PPS_TERM</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::pps_voltage</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? 1PPS_VOLTAGE</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::number_wb_ddc_channels</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FPGA_WBDDC_CHANNELS</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::number_nb_ddc_channels</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FPGA_NBDDC_CHANNELS</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_app</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_APP</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_fpga</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_FPGA</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_batch</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_BATCH</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_boot</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_BOOT</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_loader</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_LOADER</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::filename_config</td>
+<td align="left">string</td>
+<td align="left">Value from CON CFG? FILE_NAME_CONFIG</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_module</td>
+<td align="left">string</td>
+<td align="left">Value from TOD MOD?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_available_module</td>
+<td align="left">string</td>
+<td align="left">Value from TOD MODL?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_meter_list</td>
+<td align="left">string</td>
+<td align="left">Value from TOD MTR?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_reference_adjust</td>
+<td align="left">string</td>
+<td align="left">Value from MSDD TOD RFA?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_track_mode_state</td>
+<td align="left">string</td>
+<td align="left">Value from MSDD TOD RTK?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_bit_state</td>
+<td align="left">string</td>
+<td align="left">Value from MSDD TOD BIT?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_toy</td>
+<td align="left">string</td>
+<td align="left">Value from MSDD TOY?</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::tod_host_delta</td>
+<td align="left">double</td>
+<td align="left">Variance between host&rsquo;s time of day and MSDD clock</td>
+</tr>
+
+<tr>
+<td align="left">msdd_status::ntp_running</td>
+<td align="left">bool</td>
+<td align="left">If the host system is running NTP service for clock synchronization.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="frontend-tuner-status">FRONTEND::tuner_status</h3>
+
+<p>The <em>FRONTEND::tuner_status</em> structure defines the <code>FRONTEND</code> tuner status properties for each defined tuner.  The standard tuner status properties are defined in the REDHAWK documentation.  This table describes the additional properties defined for each MSDD tuner.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><em>NAME</em></th>
+<th align="left"><em>TYPE</em></th>
+<th align="left"><em>DESCRIPTION</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">FRONTEND::tuner_status::output_format</td>
+<td align="left">string</td>
+<td align="left">SDDS data format, fixed to <code>CI</code> (16bit IQ)</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_multicast</td>
+<td align="left">string</td>
+<td align="left">Destination IP address of data packets, (MSDD OUT IPP?)</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_port</td>
+<td align="left">long</td>
+<td align="left">Destination port of data packets, (OUT IPP?)</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_vlan</td>
+<td align="left">long</td>
+<td align="left">VLAN number if VLAN is enabled, (OUT VLANTCI?)</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::msdd_channel_type</td>
+<td align="left">string</td>
+<td align="left">RX, WBDDC, NBDDC, SWDDC</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::msdd_installation_name_csv</td>
+<td align="left">string</td>
+<td align="left">List of MSDD modules assigned to this tuner</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::msdd_registration_name_csv</td>
+<td align="left">string</td>
+<td align="left">List of MSDD registration names assigned to this tuner</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::bits_per_sample</td>
+<td align="left">short</td>
+<td align="left">Number of bits per data sample.</td>
+</tr>
+
+<tr>
+<td align="left">FRONTNED::tuner_status::adc_meter_value</td>
+<td align="left">string</td>
+<td align="left">Meter value from MSDD RCV AMD?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::rcvr_gain</td>
+<td align="left">float</td>
+<td align="left">Value from RCV GAI?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::ddc_gain</td>
+<td align="left">float</td>
+<td align="left">Value from WBDDC/NBDDC GAI?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::allocated</td>
+<td align="left">boolean</td>
+<td align="left">True if tuner is allocated, False otherwise</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::input_sample_rate</td>
+<td align="left">double</td>
+<td align="left">Value from OUT ISR?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_channel</td>
+<td align="left">string</td>
+<td align="left">MSDD output module assigned to this tuner</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_enabled</td>
+<td align="left">boolean</td>
+<td align="left">True if output is enabled, False otherwise</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_vlan_enabled</td>
+<td align="left">boolean</td>
+<td align="left">True if vlan tagging is enabled, OUT VLANEN?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_flow</td>
+<td align="left">string</td>
+<td align="left">MSDD module chain feeding this output module</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_timestamp_offset</td>
+<td align="left">string</td>
+<td align="left">Value from OUT TSOFS?)</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::endianess</td>
+<td align="left">short</td>
+<td align="left">Value from OUT END?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::output_mfp_flush</td>
+<td align="left">long</td>
+<td align="left">Value from OUT MFP?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_fft_size</td>
+<td align="left">double</td>
+<td align="left">Value from FFT PNT?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_averages</td>
+<td align="left">double</td>
+<td align="left">Value from FFT AVG?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_time_between_ffts</td>
+<td align="left">double</td>
+<td align="left">Value from FFT RAT?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_output_bin_size</td>
+<td align="left">double</td>
+<td align="left">Value from FFT BIN?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_window_type</td>
+<td align="left">string</td>
+<td align="left">Value from FFT WND?</td>
+</tr>
+
+<tr>
+<td align="left">FRONTEND::tuner_status::psd_peak_mode</td>
+<td align="left">string</td>
+<td align="left">Value from FFT PMD?</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="installation">Installation</h2>
+
+<p>The following procedure explains how to install <code>rh.MSDD</code> from source. <code>rh.MSDD</code> is one of the <code>REDHAWK Basic Devices</code>. For information about how to install the <code>REDHAWK Basic Devices</code> from RPMs, refer to the <code>REDHAWK Manual</code>.</p>
+
+<ol>
+<li>Ensure <code>OSSIEHOME</code> and <code>SDRROOT</code> are both set.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ source /etc/profile.d/redhawk.sh
+$ source /etc/profile.d/redhawk-sdrroot.sh</code></pre></div>
+<ol>
+<li>To build and install <code>rh.MSDD</code>, enter the following commands from the root directory of the assets repository:</li>
+</ol>
+
+<pre><code>$ cd $(find . -name MSDD)
+$ ./build.sh install
+</code></pre>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<p>The <a href="#msdd">msdd property</a> is used to setup the network connectivity between the MSDD hardware and host computer running the REDHAWK rh.MSDD device.  Set the <code>msdd::ip_address</code> and <code>msdd::port</code> properties for the MSDD receiver you are connecting.</p>
+
+<p>Besides the number of available tuners, the <code>rh.MSDD</code> device will monitor the radio&rsquo;s <code>CPU percent load</code> metrics to determine if the device&rsquo;s usage state. The If the value from the CPL command exceeds the <code>advanced::max_cpu_load</code> the device will be put into a <code>BUSY</code> state. This state is evaluated before and after each tuner allocation/deallocation request.</p>
+
+<p>The <code>rh.MSDD</code> device will track the output bit rate from the MSDD&rsquo;s radios network interface.  Before each tuner allocation request, the expected output rate will be determine from the current allocations and the new request. If the new requests exceeds the &lsquo;advanced::max_nic_percentage` for the interface the allocation will fail.</p>
+
+<p>It has been observed from testing with various FPGA loads on different MSDD hardware, that allocations of WBDDC and NBDDC modules will cause a delay in processing commands.  When this occurrs, the <code>rh.MSDD</code> device will perform a limited retry sequence when processing commands. These events will generate detailed <code>stdout</code> logging messages that are not controllable through normal logging configuration. The net affect would be failed tuner allocation requests and enabled <code>BUSY</code> states, due to invalid response messaging.  When these events are observed, there are two methods to diagnose messaging to and from the radio. You can enable the logging port traffic on the radio with the following command:</p>
+
+<pre><code>nc -u &lt;ip addres of radio&gt; 24
+</code></pre>
+
+<p>This will trigger the LOG module on the radio to report the sequence of messages the radio receives and transmits.  Along with this information you can use the linux <code>tcpdump</code> utility to track the same actvity on the host:</p>
+
+<pre><code>sudo tcpdump -i &lt;host nic connected to radio&gt;  port &lt;port number observed from LOG output&gt;
+</code></pre>
+
+<p>This should allow you to determine if the radio is responding with the proper messages to the host computer.</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

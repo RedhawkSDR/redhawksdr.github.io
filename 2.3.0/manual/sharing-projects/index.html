@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Sharing REDHAWK Projects With Others :: REDHAWK</title>
+<link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/nucleus.css" rel="stylesheet">
+<link href="../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<script src="../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.3.0\/";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<link rel="stylesheet" href="../../css/custom.css">
+<script src="../../js/custom.js"></script>
+
+
+    
+  </head>
+  <body data-url="/manual/sharing-projects/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../"><img src="../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://redhawksdr.github.io"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> <label>Downloads</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>GitHub</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="../../">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/getting-started/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../getting-started/">Getting Started With REDHAWK</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/getting-started/process-management/" class="dd-item">
+        <div>
+          <a href="../../getting-started/process-management/">
+            REDHAWK’s Approach to Process Management and Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/getting-started/" class="dd-item">
+        <div>
+          <a href="../../getting-started/getting-started/">
+            Getting Started
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/ide-quickstart/" class="dd-item">
+        <div>
+          <a href="../../getting-started/ide-quickstart/">
+            IDE Quickstart
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/getting-started/further-reading/" class="dd-item">
+        <div>
+          <a href="../../getting-started/further-reading/">
+            Further Reading
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../manual/">REDHAWK Manual - 2.3.0</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/installation/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/installation/">Installation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/components/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/components/">Components</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/components/redhawk-core-assets/" class="dd-item">
+        <div>
+          <a href="../../manual/components/redhawk-core-assets/">
+            REDHAWK Core Assets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/creating-a-component/" class="dd-item">
+        <div>
+          <a href="../../manual/components/creating-a-component/">
+            Creating a Component Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/octave-components/" class="dd-item">
+        <div>
+          <a href="../../manual/components/octave-components/">
+            Creating Octave Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/running-a-component/" class="dd-item">
+        <div>
+          <a href="../../manual/components/running-a-component/">
+            Running a Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/sandbox/" class="dd-item">
+        <div>
+          <a href="../../manual/components/sandbox/">
+            Sandbox
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/components/hello-world-component/" class="dd-item">
+        <div>
+          <a href="../../manual/components/hello-world-component/">
+            Creating and Running a Hello World Component
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/component-structure/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/component-structure/">Component Structure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/component-structure/auto-generated-files/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/auto-generated-files/">
+            Auto-Generated Component Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/auto-generated-methods/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/auto-generated-methods/">
+            Auto-Generated Component Methods
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/base-component-members/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/base-component-members/">
+            Base Component Members
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/component-implementations/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/component-implementations/">
+            Component Implementations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/java-version/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/java-version/">
+            Java Version
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/managing-defining-properties/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/managing-defining-properties/">
+            Managing and Defining Properties
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/component-structure/working-with-events/" class="dd-item">
+        <div>
+          <a href="../../manual/component-structure/working-with-events/">
+            Working with Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/shared-libraries/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/shared-libraries/">Shared Libraries</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/shared-libraries/creating-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../manual/shared-libraries/creating-a-shared-library-project/">
+            Creating a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/using-a-shared-library-project/" class="dd-item">
+        <div>
+          <a href="../../manual/shared-libraries/using-a-shared-library-project/">
+            Using a REDHAWK Shared Library Project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/packaging-shared-libraries/" class="dd-item">
+        <div>
+          <a href="../../manual/shared-libraries/packaging-shared-libraries/">
+            Packaging Shared Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/shared-libraries/manually-including-external-libraries/" class="dd-item">
+        <div>
+          <a href="../../manual/shared-libraries/manually-including-external-libraries/">
+            Manually Including External Libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/connections/">Connections</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/the-connection-process/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/the-connection-process/">
+            The Connection Process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/why-ports/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/why-ports/">
+            Why Ports?
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/port-access/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/port-access/">
+            Port Access
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/dynamic-connections/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/dynamic-connections/">
+            Dynamic Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/standardized-data-interfaces/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/standardized-data-interfaces/">
+            Standardized Data Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/connections/bulkio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/stream-api/">
+            Stream API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/sri/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/sri/">
+            Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/bit-data/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/bit-data/">
+            Bit Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/examples/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/bulkio/examples/">
+            Examples
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/burstio/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/connections/burstio/">BurstIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/burstio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/sri/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/sri/">
+            Burst Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/burstio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/connections/messaging/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/connections/messaging/">Messaging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/connections/messaging/message-producer/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/messaging/message-producer/">
+            Message Producer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/message-consumer/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/messaging/message-consumer/">
+            Message Consumer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/viewing-messages/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/messaging/viewing-messages/">
+            Viewing Messages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/messaging/connecting-producers-consumers/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/messaging/connecting-producers-consumers/">
+            Connecting Producers and Consumers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/connections/connection-callbacks/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/connection-callbacks/">
+            Connection Callbacks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/custom-idl-interfaces/" class="dd-item">
+        <div>
+          <a href="../../manual/connections/custom-idl-interfaces/">
+            Custom IDL Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/waveforms/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/waveforms/">Waveforms</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/waveforms/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../manual/waveforms/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/sample-waveform/" class="dd-item">
+        <div>
+          <a href="../../manual/waveforms/sample-waveform/">
+            Create and Deploy a Sample Waveform
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/waveforms/deployment-resources/" class="dd-item">
+        <div>
+          <a href="../../manual/waveforms/deployment-resources/">
+            Waveform Deployment and Computing Resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/devices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/devices/">Working with Devices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/devices/interacting-with-hardware/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/devices/interacting-with-hardware/">Using Devices to Interact with Hardware</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
+            Creating a FrontEnd Interfaces Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/interacting-with-hardware/interacting-fei-device-python-package/">
+            Interacting with an FEI Device with the Python Package
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interacting-with-hardware/using-fei-device-ide/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/interacting-with-hardware/using-fei-device-ide/">
+            Using an FEI Device in the IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/devices/associating-a-waveform/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/associating-a-waveform/">
+            Associating a Waveform with an FEI Device
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/running-components/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/running-components/">
+            Using Devices to Run Components
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/interface-with-fpgas/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/interface-with-fpgas/">
+            Using Devices to Interface with FPGAs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/fei-data-structures/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/fei-data-structures/">
+            Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/misc/" class="dd-item">
+        <div>
+          <a href="../../manual/devices/misc/">
+            Miscellaneous FrontEnd Tuner Library Implementation Details
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/nodes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/nodes/">Nodes</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/nodes/running-a-node/" class="dd-item">
+        <div>
+          <a href="../../manual/nodes/running-a-node/">
+            Running a Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/creating-a-new-node/" class="dd-item">
+        <div>
+          <a href="../../manual/nodes/creating-a-new-node/">
+            Creating a New Node
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/nodes/distributed-computing-and-rf-devices/" class="dd-item">
+        <div>
+          <a href="../../manual/nodes/distributed-computing-and-rf-devices/">
+            Distributed Computing and RF Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/sandbox/">Sandbox</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/sandbox/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/sandbox/python/">Python Sandbox</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/sandbox/python/working_with_components/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/working_with_components/">
+            Working with Components, Devices, and Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/helpers/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/helpers/">
+            Helpers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/devices/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/devices/">
+            Devices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/example-interaction/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/example-interaction/">
+            Example Sandbox Interaction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sources-and-sinks/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/sources-and-sinks/">
+            Built-in Sources and Sinks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/sdds-data/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/sdds-data/">
+            Working with SDDS Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/plotting-data/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/plotting-data/">
+            Plotting Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/sandbox/python/misc/" class="dd-item">
+        <div>
+          <a href="../../manual/sandbox/python/misc/">
+            Miscellaneous
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/sandbox/ide/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/sandbox/ide/">IDE Sandbox</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/runtime-environment/">The Runtime Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/runtime-environment/launching-a-domain/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/launching-a-domain/">
+            Launching a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/domain-manager/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/domain-manager/">
+            Domain Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/file-system/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/file-system/">
+            File System
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/applications/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/applications/">
+            Applications
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/application-factory/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/application-factory/">
+            The Application Factory
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/device-manager/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/device-manager/">
+            The Device Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/allocation-manager/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/allocation-manager/">
+            The Allocation Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/connection-manager/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/connection-manager/">
+            The Connection Manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/runtime-environment/events/" class="dd-item">
+        <div>
+          <a href="../../manual/runtime-environment/events/">
+            Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/runtime-inspection/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/runtime-inspection/">Runtime Environment Inspection</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/logging/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/logging/">Logging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/logging/logging-structure/" class="dd-item">
+        <div>
+          <a href="../../manual/logging/logging-structure/">
+            Logging Structure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/configuring-logging-capabilities/" class="dd-item">
+        <div>
+          <a href="../../manual/logging/configuring-logging-capabilities/">
+            Configuring Logger Settings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
+        <div>
+          <a href="../../manual/logging/adjusting-logging-at-runtime/">
+            Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/viewing-logging-events/" class="dd-item">
+        <div>
+          <a href="../../manual/logging/viewing-logging-events/">
+            Viewing Logging Events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/ide/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/ide/">Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/launching-the-ide/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/launching-the-ide/">
+            Launching the REDHAWK IDE for the First Time
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/pydev-overview/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/pydev-overview/">
+            PyDev Overview
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/workbench/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/workbench/">
+            The Workbench
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/ide/editors-and-views/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/ide/editors-and-views/">Editors and Views</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/ide/editors-and-views/softpkg-editor/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/softpkg-editor/">
+            SoftPkg Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/waveform-editor/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/waveform-editor/">
+            Waveform Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/node-editor/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/node-editor/">
+            Node Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/nextmidas-plot-editor/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/nextmidas-plot-editor/">
+            NeXtMidas Plot Editor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-explorer-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/redhawk-explorer-view/">
+            REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/redhawk-plot-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/redhawk-plot-view/">
+            REDHAWK Plot View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/plot-settings-dialog/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/plot-settings-dialog/">
+            Plot Settings Dialog
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/event-viewer-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/event-viewer-view/">
+            Event Viewer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/data-list-statistics-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/data-list-statistics-view/">
+            Data List and Statistics Views
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/port-monitor-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/port-monitor-view/">
+            Port Monitor View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/sri-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/sri-view/">
+            SRI View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/console-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/console-view/">
+            Console View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/editors-and-views/properties-view/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/editors-and-views/properties-view/">
+            Properties View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/ide/creating-redhawk-projects/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/creating-redhawk-projects/">
+            Creating REDHAWK Projects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/namespaces/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/namespaces/">
+            Adding/Changing/Removing REDHAWK Project Namespaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/debugging/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/debugging/">
+            Debugging REDHAWK Components and Devices with Eclipse
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/deploying-projects/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/deploying-projects/">
+            Deploying Projects to the SDRROOT
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/snapshot-tool/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/snapshot-tool/">
+            Snapshot Tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/connect-wizard/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/connect-wizard/">
+            Connect Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/octave-wizard/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/octave-wizard/">
+            Using the Octave Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/ide/plot-port-wizard/" class="dd-item">
+        <div>
+          <a href="../../manual/ide/plot-port-wizard/">
+            Plot Port Wizard
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item parent active
+        ">
+      <div>
+      <a href="../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/exploring-domain/">Exploring a Running Domain Using the REDHAWK IDE</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/exploring-domain/connecting-to-a-domain/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/connecting-to-a-domain/">
+            Connecting to a Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/viewing-domain-contents/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/viewing-domain-contents/">
+            Viewing the Contents of the Domain in the REDHAWK Explorer View
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/working-with-waveforms/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/working-with-waveforms/">
+            Working with Waveforms on a Running Domain
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/plotting-bulkio-ports/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/plotting-bulkio-ports/">
+            Plotting BulkIO Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/increasing-bulkio-connection-bandwidth/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/increasing-bulkio-connection-bandwidth/">
+            Increasing the Bandwidth of BulkIO Connections
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/exploring-domain/getting-error-condition-details/" class="dd-item">
+        <div>
+          <a href="../../manual/exploring-domain/getting-error-condition-details/">
+            Getting Details About Error Conditions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/">Appendices</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/redhawk-yum/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/redhawk-yum/">
+            REDHAWK Yum Repository and Packages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/dependencies/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/dependencies/">
+            External Dependencies
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/standalone-ide/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/standalone-ide/">
+            Installing a Stand-alone IDE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/source-installation/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/source-installation/">
+            Building and Installing REDHAWK from Source
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/optimization/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/optimization/">
+            Optimization
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/adminservice/">REDHAWK System Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/appendices/adminservice/adminservice/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/adminservice/adminservice/">AdminService</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/serviceconfigurations/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/adminservice/serviceconfigurations/">
+            Service Configurations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/adminservice/servicelifecycle/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/adminservice/servicelifecycle/">
+            Service Life Cycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/adminservice/redhawkcoreservices/">REDHAWK Core Services</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/redhawkcoreservices/domainmanager/">
+            REDHAWK Domain Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/redhawkcoreservices/devicemanager/">
+            REDHAWK Device Manager Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/waveform/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/redhawkcoreservices/waveform/">
+            REDHAWK Waveform Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/redhawkcoreservices/domains/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/redhawkcoreservices/domains/">
+            Managing Services By Domains and Types
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/appendices/adminservice/configuration/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/adminservice/configuration/">Configuration Files</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/adminservice/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/configuration/adminservice/">
+            AdminService Configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/domainmanager/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/configuration/domainmanager/">
+            Domain Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/devicemanager/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/configuration/devicemanager/">
+            Device Manager Service Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/configuration/waveform/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/configuration/waveform/">
+            Waveform Configuration File
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/rhadmin/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/rhadmin/">
+            rhadmin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/adminservice/support-files/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/adminservice/support-files/">
+            Linux Support Files
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/fei/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/fei/">
+            FrontEnd Interfaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/persona-device-pattern/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/persona-device-pattern/">
+            REDHAWK Persona Device Pattern
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/shared-memory/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/shared-memory/">
+            Shared Memory Maintenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/logging-config-plugin/">
+            Logging Configuration Plugin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/acronyms/" class="dd-item">
+        <div>
+          <a href="../../manual/appendices/acronyms/">
+            List of Acronyms
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/manual/glossary/" class="dd-item
+        ">
+      <div>
+      <a href="../../manual/glossary/">Glossary</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/getting-started/" >
+   Getting Started With REDHAWK</option>
+    <option value="/manual/" >
+   REDHAWK Manual - 2.3.0</option> 
+    <option value="/manual/installation/" >
+  - 
+   Installation</option>
+    <option value="/manual/components/" >
+  - 
+   Components</option>
+    <option value="/manual/component-structure/" >
+  - 
+   Component Structure</option>
+    <option value="/manual/shared-libraries/" >
+  - 
+   Shared Libraries</option>
+    <option value="/manual/connections/" >
+  - 
+   Connections</option>
+    <option value="/manual/waveforms/" >
+  - 
+   Waveforms</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
+    <option value="/manual/nodes/" >
+  - 
+   Nodes</option>
+    <option value="/manual/sandbox/" >
+  - 
+   Sandbox</option>
+    <option value="/manual/runtime-environment/" >
+  - 
+   The Runtime Environment</option>
+    <option value="/manual/runtime-inspection/" >
+  - 
+   Runtime Environment Inspection</option>
+    <option value="/manual/logging/" >
+  - 
+   Logging</option>
+    <option value="/manual/ide/" >
+  - 
+   Using the REDHAWK IDE</option>
+    <option value="/manual/exploring-sdrroot/" >
+  - 
+   Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/"  selected>
+  - 
+   Sharing REDHAWK Projects With Others</option> 
+  
+    <option value="/manual/exploring-domain/" >
+  - 
+   Exploring a Running Domain Using the REDHAWK IDE</option>
+    <option value="/manual/appendices/" >
+  - 
+   Appendices</option>
+    <option value="/manual/glossary/" >
+  - 
+   Glossary</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="../../js/lunr.min.js"></script>
+        <script type="text/javascript" src="../../js/auto-complete.js"></script>
+        <link href="../../css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.3.0\/";
+          
+        </script>
+        <script type="text/javascript" src="../../js/search.js"></script>
+      </div>
+    
+
+    <h2 class="title">Sharing REDHAWK Projects With Others</h2>
+
+    
+    
+    
+
+
+
+<p>The REDHAWK IDE provides a set of tools that allow for the collaborative development of REDHAWK capabilities. Projects can be exported or imported from the IDE or can be shared via a source code version-control system. The base REDHAWK IDE installation includes support for CVS, and Git and can easily be extended to include support for other systems, such as Mercurial.</p>
+
+<h2 id="redhawk-project-metadata-files">REDHAWK Project Metadata Files</h2>
+
+<p>When sharing projects, it is important to include all of the source code, REDHAWK XML, and project metadata files. The project metadata files contain settings and preferences that allow the REDHAWK IDE to properly generate, build, and analyze the project.</p>
+
+<p>Project metadata files are typically hidden files (i.e., they start with a ’.’ ) and usually do not appear within the <a href="../../manual/glossary/#project-explorer-view">Project Explorer view</a>. Furthermore, many project views also display or hide additional non-file content.</p>
+
+<p>To view all of the files using the <strong>Navigator</strong> view:</p>
+
+<ol>
+<li><p>Select <strong>Window &gt; Show View &gt; Other…</strong>.</p>
+
+<p>The <strong>Show View</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/showView.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Show View Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Expand <strong>General</strong> and select <strong>Navigator</strong>.</p></li>
+
+<li><p>Click <strong>OK</strong>.</p>
+
+<p>The <strong>Navigator</strong> view is displayed:
+
+<figure >
+    
+        <img src="../images/navigator.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Navigator View</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+</ol>
+
+<p>The set of metadata files found in a project varies depending on the type of project. At a minimum, all projects contain a <code>.project</code> file.</p>
+
+<p>Common metadata files are:</p>
+
+<ul>
+<li><code>.project</code> file - Defines the basic Eclipse project settings</li>
+<li><code>.library</code> file - Defines the Interface Description Language (IDL) search path for the project</li>
+<li><code>.PROJECTNAME.wavedev</code> file - Defines REDHAWK specific settings for the project related to code generation.</li>
+<li><code>.cproject</code> file - Defines settings related to the C/C++ Development Tools</li>
+<li><code>.pydevproject</code> file - Defines settings related to the Python Development Tools</li>
+<li><code>.classpath</code> file - Defines settings related to the Java Development Tools</li>
+</ul>
+
+<p>When sharing projects, be sure to include all project metadata files. When in doubt, include all files found in the project.</p>
+
+<h2 id="exporting-projects-as-source-code-archives">Exporting Projects as Source Code Archives</h2>
+
+<p>The quickest way to share projects is to export them as an archive file. A single archive may contain one or more projects of varying types. This allows easy distribution of an archive that includes all of the relevant components, libraries, and REDHAWK XML files that another developer would require.</p>
+
+<p>To export a project as an archive:</p>
+
+<ol>
+<li><p>Select <strong>File &gt; Export…</strong>.</p>
+
+<p>The <strong>Export Select</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/exportselect.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Export Select Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Expand <strong>General</strong> and select <strong>Archive File</strong></p></li>
+
+<li><p>Click <strong>Next</strong>.</p>
+
+<p>The <strong>Export Archive file</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/exportarchive.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Export Archive File Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Select the projects or files to include in the archive.</p>
+
+<div class="notices tip" ><p>When selecting a project, all files within the project are included in the archive by default. To reduce the set of files being exported, click <strong>Filter Types…</strong> and select the desired file extensions to be included in the archive.</p>
+</div>
+</li>
+
+<li><p>Specify the output file in <strong>To archive file</strong>.</p></li>
+
+<li><p>Click <strong>Finish</strong>.</p>
+
+<p>The archive file is created.</p></li>
+</ol>
+
+<h2 id="importing-existing-projects">Importing Existing Projects</h2>
+
+<p>Existing projects can be imported into a REDHAWK IDE <a href="../../manual/glossary/#workspace">workspace</a>.</p>
+
+<p>To import existing projects:</p>
+
+<ol>
+<li><p>Select <strong>File &gt; Import…</strong>.</p>
+
+<p>The <strong>Import Select</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/importselect.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Import Select Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Expand <strong>General</strong> and select <strong>Existing Projects into Workspace</strong>.</p></li>
+
+<li><p>Click <strong>Next</strong>.</p>
+
+<p>The <strong>Import Projects</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/importprojects.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Import Projects Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Select the location of the projects to import.</p>
+
+<ul>
+<li>If the existing projects are stored as a file system, select <strong>Select root directory</strong>, click <strong>Browse…</strong> and navigate to the directory containing the projects.</li>
+<li>If the existing projects are stored in an archive file, select <strong>Select archive file</strong>, click <strong>Browse…</strong> and navigate to the archive file containing the projects.</li>
+</ul></li>
+
+<li><p>Select one or more projects to import.</p></li>
+
+<li><p>Click <strong>Finish</strong>.</p>
+
+<p>The project is imported into the current workspace.</p></li>
+</ol>
+
+<div class="notices warning" ><p>A common error is to attempt to import projects by choosing <strong>General &gt; Archive File</strong> instead of <strong>General &gt; Existing Projects into Workspace</strong>.</p>
+</div>
+
+
+<div class="notices tip" ><p>When importing projects from a directory, you may choose to keep the project’s source code in its original location by deselecting <strong>Copy projects into workspace</strong>. (This may overwrite existing project files.) It is recommended to copy the project into the workspace whenever possible.</p>
+</div>
+
+
+<h2 id="importing-incomplete-projects">Importing Incomplete Projects</h2>
+
+<p>Users may forget to include the hidden files when exporting projects. As long as the Software Package Descriptor (SPD) file and code are included in the archive, the project can be imported into a REDHAWK IDE workspace using the <strong>Redhawk Import Wizard</strong>. This wizard makes a series of assumptions for the project folder layout and format based on the content of the SPD file and dynamically generates the missing project files.</p>
+
+<p>To import incomplete projects:</p>
+
+<ol>
+<li><p>Select <strong>File &gt; Import…</strong>.</p>
+
+<p>The <strong>Import Select</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/importselect2.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Import Select Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Expand <strong>REDHAWK Development</strong> and select <strong>Redhawk Import Wizard</strong>.</p></li>
+
+<li><p>Click <strong>Next</strong>.</p>
+
+<p>The <strong>Import Projects</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/importprojects2.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Import Projects Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Select the location of the projects to import.</p>
+
+<ul>
+<li>If the existing projects are stored as a file system, select <strong>Select root directory</strong>, click <strong>Browse…</strong> and navigate to the directory containing the projects.</li>
+<li>If the existing projects are stored in an archive file, select <strong>Select archive file</strong>, click <strong>Browse…</strong> and navigate to the archive file containing the projects.</li>
+</ul></li>
+
+<li><p>Select one or more projects to import.</p></li>
+
+<li><p>Click <strong>Finish</strong>.</p>
+
+<p>The project is imported into the current workspace.</p></li>
+
+<li><p>To create the missing metadata files, open the SPD file and click <strong>Generate All Implementations</strong>.</p></li>
+</ol>
+
+<div class="notices tip" ><p>When importing projects from a directory, you may choose to keep the project’s source code in its original location by deselecting <strong>Copy projects into workspace</strong>. (This may overwrite existing project files.) It is recommended to copy the project into the workspace whenever possible.</p>
+</div>
+
+
+<h2 id="collaborative-redhawk-development-using-a-version-control-system">Collaborative REDHAWK Development Using a Version Control System</h2>
+
+<p>REDHAWK projects can be shared by multiple developers by using a version-control system such as CVS or Git. When sharing projects via a version-control system, it is important to commit all of the project <a href="#redhawk-project-metadata-files">metadata files</a>.</p>
+
+<p>All version-control system integration within the Eclipse IDE is performed by the <strong>Team Capabilities</strong>. Because the REDHAWK IDE is built upon the Eclipse platform, one can easily install plug-ins that provide support for additional version-control systems. Details for installing these plug-ins can be found on the associated project web pages.</p>
+
+<p>The details for sharing and importing projects differs for each type of version-control system. Documentation for most tools can be found on the Internet or through the built-in Eclipse help system.</p>
+
+<p>To view full documentation:</p>
+
+<ol>
+<li><p>Select <strong>Help &gt; Help Contents</strong>.</p></li>
+
+<li><p>Choose the appropriate topic:</p>
+
+<ul>
+<li><strong><a href="../../manual/glossary/#workbench">Workbench</a> User Guide &gt; Getting Started &gt; Team CVS tutorial</strong>.</li>
+<li><strong>Subversive User Guide</strong>.</li>
+<li>The appropriate topic for the specific tool being used.</li>
+</ul></li>
+</ol>
+
+<p>To share a project:</p>
+
+<ol>
+<li><p>Right-click the project to share and select <strong>Team &gt; Share Project…</strong>.</p>
+
+<p>The <strong>Share Project</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/shareproject.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Share Project Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Choose the appropriate version-control system (e.g. CVS, Git, etc.)</p></li>
+
+<li><p>Follow the steps for sharing the project as described in the relevant documentation.</p></li>
+</ol>
+
+<p>To import a project:</p>
+
+<ol>
+<li>Select <strong>File &gt; Import</strong>.</li>
+<li>Expand the desired item (e.g. CVS, Git, etc.) and click <strong>Next</strong>.</li>
+<li>Follow the steps for importing the project as described in the relevant documentation.</li>
+</ol>
+
+<p>Once a project is being tracked by the Eclipse team system, many additional capabilities are exposed. For example, files that have been modified are decorated to indicate their current status. This provides an “at-a-glance” view of which files need to be committed or reverted.</p>
+
+<p>Other useful features include:</p>
+
+<ul>
+<li>Quick review of outgoing changes using the Eclipse “diff” viewer.</li>
+<li>Commit changes from within the IDE.</li>
+<li>Update the projects with changes from the source repository.</li>
+<li>Review the logs and commit history for files in the project.</li>
+<li>Create and merge branches.</li>
+</ul>
+
+<h3 id="managing-projects-outside-of-the-eclipse-workspace">Managing Projects Outside of the Eclipse Workspace</h3>
+
+<p>An alternate approach is to use the version-control system’s native tools and then <a href="#importing-existing-projects">import the project directories</a> into the REDHAWK IDE. It is important to ensure that projects <em>DO NOT</em> select <strong>Copy projects into workspace</strong> when using the method.</p>
+
+<h2 id="exporting-projects-as-a-deployable-redhawk-project">Exporting Projects as a Deployable REDHAWK Project</h2>
+
+<p>To install a REDHAWK project into the <a href="../../manual/glossary/#target-sdr">Target SDR</a> or share a “ready to run” package, it is necessary to export the project as a <strong>Deployable REDHAWK project</strong>. Unlike a source code export, a deployable export only includes the REDHAWK XML files and the files identified in the SoftPkg implementation.</p>
+
+<div class="notices tip" ><p>If the SoftPkg implementation references a directory, the export includes <em>all</em> files within the directory.</p>
+</div>
+
+
+<p>To export a project as a deployable REDHAWK project:</p>
+
+<ol>
+<li><p>Select <strong>File &gt; Export…</strong>.</p>
+
+<p>The <strong>Export Select</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/exportselect2.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Export Select Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Expand <strong>REDHAWK Development</strong> and select <strong>Deployable REDHAWK Project</strong>.</p></li>
+
+<li><p>Click <strong>Next</strong>.</p>
+
+<p>The <strong>Deployable REDHAWK Project</strong> dialog is displayed:
+
+<figure >
+    
+        <img src="../images/deployredhawk.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Deployable REDHAWK Project Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Select the projects to export.</p></li>
+
+<li><p>Select the export destination.</p>
+
+<ul>
+<li>To export to a directory, select <strong>Directory</strong>, click <strong>Browse…</strong> and navigate to the directory.</li>
+<li>To export to an archive file, select <strong>Archive file</strong>, click <strong>Browse…</strong> and navigate to the archive (zip) file.</li>
+</ul></li>
+
+<li><p>Click <strong>Finish</strong>.</p>
+
+<p>The project has been exported as a deployable REDHAWK project.</p></li>
+</ol>
+
+<div class="notices tip" ><p>Deployable REDHAWK project archives are intended to provide a stop-gap capability to easily install a project into a REDHAWK Target SDR. In general, it is recommended to use the rpm format instead of a deployable REDHAWK project archive.</p>
+</div>
+
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="../../manual/exploring-sdrroot/" title="Exploring SDRROOT Using the REDHAWK IDE"> <i class="fa fa-chevron-left"></i><label>Exploring SDRROOT Using the REDHAWK IDE</label></a>
+    <a class="nav nav-next" href="../../manual/exploring-domain/" title="Exploring a Running Domain Using the REDHAWK IDE" style="margin-right: 0px;"><label>Exploring a Running Domain Using the REDHAWK IDE</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../js/clipboard.min.js"></script>
+
+<link href="../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

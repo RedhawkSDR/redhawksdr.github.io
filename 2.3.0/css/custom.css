@@ -1,0 +1,108 @@
+table {
+  table-layout: auto;
+  word-break: normal;
+}
+h5 {
+  text-align: center;
+}
+
+h1 {
+  font-family:  "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  text-align: left;
+  text-transform: none;
+  color: #5e5e5e;
+  font-weight: 200; }
+
+h2 {
+  font-family: "Helvetica Bold", "Tahoma Bold", "Geneva Bold", "Arial Bold", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 30pt;
+  text-align: left;
+  text-transform: none;
+  color: #060606;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -1px; }
+
+h3 {
+  font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 25pt;
+  text-align: left;
+  text-transform: none;
+  color: #060606;
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: -1px; }
+
+h4 {
+  font-family: "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 20pt;
+  text-align: left;
+  text-transform: none;
+  color: #060606;
+  font-weight: 200;
+  line-height: 25px;
+  letter-spacing: -1px; }
+
+  h5, h6 {
+  font-family: "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #060606;
+  font-weight: 200;
+  letter-spacing: -1px; }
+
+h2.title {
+  font-family: "Helvetica", "Tahoma Bold", "Geneva Bold", "Arial", sans-serif;
+  font-size: 45pt;
+  text-align: center;
+  text-transform: none;
+  color: #5e5e5e;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  line-height: 60px;
+  letter-spacing: -1px; }
+
+h5.figure {
+  font-family: "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 12pt;
+  color: #060606;
+  font-weight: 200;
+  padding-top: 0px;
+  letter-spacing: 0px; }
+
+figure.border {
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+article section.page img {
+    border: 0
+    max-width: 100%;
+    margin: .5rem auto;
+    display: block;
+    text-align: center; }
+
+img.border {
+border: 2px solid #e6e6e6 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: .5rem auto;
+    display: block;
+    text-align: center; }
+
+article section.page div.highlight {
+  position:relative; }
+article section.page pre {
+  display: flex; }
+  article section.page pre .copy-to-clipboard {
+    position:absolute;
+    right: 8px }
+article section.page pre > code {
+  padding-right: 2em; }
