@@ -894,15 +894,6 @@ Core Framework Fixes  Corrected misspellings in loghelpers.cpp. The generated SA
     </item>
     
     <item>
-      <title>rh.AmFmPmBasebandDemod Release Notes</title>
-      <link>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>rh.ArbitraryRateResampler Release Notes</title>
       <link>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.arbitraryrateresampler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -937,10 +928,9 @@ The following changes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.dataconverter/</guid>
-      <description>Release notes for rh.DataConverter 5.0.1 (REDHAWK None)
- Fixed condition when different data type connections were not getting the EOS flag for a stream.  Release notes for rh.DataConverter 5.0.0 (REDHAWK 2.2.2)
+      <description>Release notes for rh.DataConverter 5.0.0 (REDHAWK 2.2.2)
 The following changes
- Optimized processing for available Intel IPP libraries or SSE extensions. Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host. Logging messages use the REDHAWK 2.2.x logging API.</description>
+ Optimized processing for available Intel IPP libraries or SSE extensions. Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host. Logging messages use the REDHAWK 2.2.x logging API. Input and output port names comply with REDHAWK naming conventions. Property types comply with REDHAWK conventions. Improved descriptions for ports and properties. An additional help section (Asset Use) in the Readme.</description>
     </item>
     
     <item>
@@ -997,8 +987,7 @@ The following changes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.filereader/</guid>
-      <description>Release notes for rh.FileReader 5.0.1 (REDHAWK 2.2.6)
- Fixed segfault on release_object() for slow consumer.  Release notes for rh.FileReader 5.0.0 (REDHAWK 2.2.2)
+      <description>Release notes for rh.FileReader 5.0.0 (REDHAWK 2.2.2)
  Added ability to process a meta data file captured by FileWriter to replicate the same context when playing back the data. The following context information is used when processing each data packet:
  SRI Context - streamID, hversion, xstart, xdelta, subsize, ystart, ydelta, mode, keywords/values Packet Context - streamID, data length, EOS, timecode (tcmode,tcstatus, twsec, tfsec, toff)  Added additional unit tests for meta data file handling.</description>
     </item>
@@ -1079,9 +1068,7 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/devices/rh.msdd/</guid>
-      <description>Release notes for rh.MSDD 4.0.0 (REDHAWK None)
- Resolved issue to enable output for tuner modules regardless of MSDD application software.  Release notes for rh.MSDD 3.0.2 (REDHAWK 2.2.6)
- Fixed issue with rh.MSDD to correctly define the available bandwidth for the DDC as reported by the actual receiver device. Bandwidth allocation requests are now evaluated against all supported tuner bandwidths of a DDC module. Resolved issue for RFInfo port connections to update tuner status structure.</description>
+      <description></description>
     </item>
     
     <item>
@@ -1214,9 +1201,8 @@ Fixes  Updated unit test use of sb.DataSink to use the new API. Resolved compone
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.sourcesdds/</guid>
-      <description>Release notes for rh.SourceSDDS 2.0.1 (REDHAWK 2.2.6)
- Resolved issue when connecting to multicast groups with the 4th octet greater than 239.  Release notes for rh.SourceSDDS 2.0.0 (REDHAWK 2.2.2)
- Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host. Logging messages use the REDHAWK 2.2.x logging API. Improved descriptions for ports and properties. An additional help section (Asset Use) in the Readme.</description>
+      <description>Release notes for rh.SourceSDDS 2.0.0 (REDHAWK 2.2.2)
+ Shared process space for component execution. BulkIO shared memory data transfers between processes residing on the same host. Logging messages use the REDHAWK 2.2.x logging API. Improved descriptions for ports and properties. An additional help section (Asset Use) in the Readme.md explaining component configuration and use. Refactored unit tests use the REDHAWK 2.2.x sandbox API. Build support binaries for test execution. Improved performance when checking packets from the same host.</description>
     </item>
     
     <item>
@@ -1292,8 +1278,7 @@ Fixes  Fixed rh.SourceVITA49 to work with multicast input. Removed extra spaces 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/libraries/rh.vita49/</guid>
-      <description>Release notes for rh.VITA49 5.0.1 (REDHAWK 2.2.6)
- Modified code to allow compilation with {{-std=c++11}} in addition to {{-std=c++98}}. Updated leap second table for VITA 49 library.  </description>
+      <description></description>
     </item>
     
     <item>
@@ -1419,7 +1404,7 @@ Fixes  Fixed rh.SourceVITA49 to work with multicast input. Removed extra spaces 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.fastfilter/</guid>
-      <description>Release notes for rh.fastfilter 2.1.0 (REDHAWK None)</description>
+      <description></description>
     </item>
     
     <item>
@@ -1477,9 +1462,7 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.psd/</guid>
-      <description>Release notes for rh.psd 2.0.4 (REDHAWK None)
-Release notes for rh.psd 2.0.3 (REDHAWK 2.2.6)
- Added change to pass SRI.blocking flag through output port.  </description>
+      <description></description>
     </item>
     
     <item>
@@ -1497,6 +1480,15 @@ Release notes for rh.psd 2.0.3 (REDHAWK 2.2.6)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.psk_soft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rh.rh.AmFmPmBasebandDemod Release Notes</title>
+      <link>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</guid>
       <description></description>
     </item>
     

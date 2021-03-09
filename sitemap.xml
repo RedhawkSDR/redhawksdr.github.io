@@ -375,10 +375,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/release-notes/assets/2.2-lts/components/rh.arbitraryrateresampler/</loc>
   </url>
   
@@ -624,6 +620,10 @@
   
   <url>
     <loc>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.psk_soft/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/assets/2.3-lts/components/rh.amfmpmbasebanddemod/</loc>
   </url>
   
   <url>
