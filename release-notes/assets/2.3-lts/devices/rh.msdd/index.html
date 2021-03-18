@@ -443,7 +443,27 @@ ga('send', 'pageview');
     
     
     
-    
+    <p>Release notes for <code>rh.MSDD 4.0.0</code> (REDHAWK 2.3.0)</p>
+
+<ul>
+<li>Fixed connection rate check for rh.MSDD during device startup when the MSDD radio supports multiple network interfaces.</li>
+<li>rh.MSDD  correctly enables the tuner&rsquo;s output module for successful allocations  The rh.MSDD property <code>advanced::max_nic_percentage</code> will now track the total output rate from the radio&rsquo;s network interface against this threshold to disallow allocations that oversubscribe the interface.</li>
+
+<li><p>Resolving issue to correctly set the time-of-day in ONEPPS mode.
+Added properties <code>msdd_status::tod_host_delta</code> (gives the time-of-day offset between the host and the MSDD&rsquo;s TOD module while in ONEPPS mode) and <code>msdd_status::ntp_running</code> (shows whether ntp is running on the host while in ONEPPS mode).</p></li>
+
+<li><p>Resolved issue to enable output for tuner modules regardless of MSDD application software.</p></li>
+</ul>
+
+<p>Release notes for <code>rh.MSDD 3.0.2</code> (REDHAWK 2.2.6)</p>
+
+<ul>
+<li>Fixed issue with <code>rh.MSDD</code> to correctly define the available bandwidth for the DDC as reported by the actual receiver device.</li>
+<li>Bandwidth allocation requests are now evaluated against all supported tuner bandwidths of a DDC module.</li>
+<li>Resolved issue for <code>RFInfo</code> port connections to update tuner status structure.</li>
+<li>Added support to recognized MSDR X000 receivers during proxy device startup.</li>
+</ul>
+
 
     
     
