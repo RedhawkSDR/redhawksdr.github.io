@@ -22,13 +22,13 @@
     </item>
     
     <item>
-      <title>REDHAWK Release Notes - 2.2.7</title>
-      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</link>
+      <title>REDHAWK Release Notes - 2.2.8</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</guid>
-      <description>The effort in REDHAWK 2.2.7 focused on:
- Plugin infrastructure created for GPP to track custom system metrics Queue flush reported on all affected streams in the incoming queue When reading Bulk IO streams, allow the consume size to be greater than the read size (equivalent to read+skip) Resolving an issue with intermittent failures in omniEvents when writing to syslog running on CentOS 7. Components generate from command line with applications like createBinaryComponent generate the correct header on the SCD and PRF files Java message ports are consistent with Python and C++ message ports.</description>
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.8/</guid>
+      <description>The effort in REDHAWK 2.2.8 focused on:
+ EOS condition is reported correctly for all connections when an incoming stream receives an EOS flag. Rate in header for zero-rate SDDS headers is ignored Resolved issue when adding a new stream to an attachable port that would cause a program to segfault. Exiting a python sandbox session will now properly terminate a resource&amp;rsquo;s processes started during the session that threw initialization exceptions.</description>
     </item>
     
     <item>
@@ -770,6 +770,16 @@ Installation This is a waveform project; therefore, it does not need to be built
       <guid>https://redhawksdr.github.io/assets/2.3-lts/waveforms/rh.vita49_loopback_demo.readme/</guid>
       <description>REDHAWK vita49_loopback_demo Description Contains the source and build script for the REDHAWK vita49_loopback_demo waveform. This waveform uses the rh.sourceVITA49 and rh.sinkVITA49 components to demonstrate how VITA49 network data can move into and out of REDHAWK.
 Installation This is a waveform project; therefore, it does not need to be built. It must be installed into the $SDRROOT/dom/waveforms directory. To install it, open the project in the REDHAWK IDE and drag it into the Target SDR folder.</description>
+    </item>
+    
+    <item>
+      <title>REDHAWK Release Notes - 2.2.7</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.7/</guid>
+      <description>The effort in REDHAWK 2.2.7 focused on:
+ Plugin infrastructure created for GPP to track custom system metrics Queue flush reported on all affected streams in the incoming queue When reading Bulk IO streams, allow the consume size to be greater than the read size (equivalent to read+skip) Resolving an issue with intermittent failures in omniEvents when writing to syslog running on CentOS 7. Components generate from command line with applications like createBinaryComponent generate the correct header on the SCD and PRF files Java message ports are consistent with Python and C++ message ports.</description>
     </item>
     
     <item>
