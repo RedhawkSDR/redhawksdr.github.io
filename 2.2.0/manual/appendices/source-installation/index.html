@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Building and Installing REDHAWK from Source :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/source-installation/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1370,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1364,7 +1393,9 @@ ga('send', 'pageview');
       <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
       <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
       <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
-      <option value="/manual/appendices/troubleshooting/" >-- Troubleshooting</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
       <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
       <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
   
@@ -1387,14 +1418,15 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Building and Installing REDHAWK from Source</h1>
+    <h2 class="title">Building and Installing REDHAWK from Source</h2>
+
     
     
     
@@ -1402,9 +1434,11 @@ ga('send', 'pageview');
 
 <h2 id="building-the-framework">Building the Framework</h2>
 
+<p>This section describes how to build and install REDHAWK from source and use the environment variables to run REDHAWK.</p>
+
 <h3 id="installing-build-dependencies">Installing Build Dependencies</h3>
 
-<p>Building REDHAWK from source requires a few additional dependencies beyond those required to run REDHAWK. The following procedure explains how to build REDHAWK from source.</p>
+<p>Building REDHAWK from source requires a few additional dependencies beyond those required to run REDHAWK.  The following procedure explains how to install the additional build dependencies.</p>
 
 <ol>
 <li>First, ensure your system has the necessary <a href="../../../manual/appendices/dependencies/">dependency software</a> provided by RHEL / CentOS and Fedora EPEL.</li>
@@ -1413,12 +1447,15 @@ ga('send', 'pageview');
 
 <h3 id="installing-the-framework-from-source">Installing the Framework from Source</h3>
 
-<p>To install the Core Framework from source, the <code>redhawk-src-&lt;version&gt;.tar.gz</code> must be downloaded.</p>
+<p>To install the Core Framework (CF) from source, the <code>redhawk-src-&lt;version&gt;.tar.gz</code> must be downloaded.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://github.com/RedhawkSDR/redhawk/releases/download/&lt;version&gt;/redhawk-src-&lt;version&gt;.tar.gz</code></pre></div>
 <p>You must set the <code>OSSIEHOME</code> and <code>SDRROOT</code> environment variables (recommended defaults shown below) before running the installation script. You must have write permission for the locations of <code>OSSIEHOME</code> and <code>SDRROOT</code> or the installation will not work.</p>
 
-<div class="notices note" ><p>The installation script is interactive and will prompt you to continue before performing certain tasks.</p>
-</div>
+<div class="notices note" ><p>Recent Linux distributions include newer versions of GCC that default to the C++11 standard or newer.
+REDHAWK is developed and tested using the C++98 standard and may not compile in C++11 mode.</p>
+
+<p>To configure GCC to use the C++98 standard, set the <code>CXXFLAGS</code> environment variable before building REDHAWK from source:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export CXXFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--std=gnu++98&#34;</span></code></pre></div></div>
 
 
 <p>To compile the source, execute the following commands:</p>
@@ -1434,7 +1471,9 @@ export SDRROOT<span style="color:#f92672">=</span>/var/redhawk/sdr
 . $OSSIEHOME/environment-setup</code></pre></div></div>
 
 
-<p>To build the the source code with or without optional features, provide the appropriate build option to the <code>configure</code> setup. The following table describes some common options.</p>
+<p>To build the source code with or without optional features, provide the appropriate build option to the <code>configure</code> setup. The following table describes some common options.</p>
+
+<h5 id="common-build-options-for-the-configure-command">Common Build Options for the <code>Configure</code> Command</h5>
 
 <table>
 <thead>
@@ -1446,8 +1485,8 @@ export SDRROOT<span style="color:#f92672">=</span>/var/redhawk/sdr
 
 <tbody>
 <tr>
-<td align="left"><code>--enable-affinity</code></td>
-<td align="left">Enable numa affinity processing.</td>
+<td align="left"><code>--disable-affinity</code></td>
+<td align="left">Affinity processing is enabled by default. This option will disable <a href="../../../manual/glossary/#numa">NUMA</a> affinity processing.</td>
 </tr>
 
 <tr>
@@ -1456,11 +1495,22 @@ export SDRROOT<span style="color:#f92672">=</span>/var/redhawk/sdr
 </tr>
 
 <tr>
+<td align="left"><code>--disable-persistence</code></td>
+<td align="left">Disable persistence support. This may be desired for specialized builds to eliminate the additional database dependency.</td>
+</tr>
+
+<tr>
 <td align="left"><code>--disable-log4cxx</code></td>
 <td align="left">Disable log4cxx support.</td>
 </tr>
 </tbody>
 </table>
+
+<div class="notices note" ><p>As of REDHAWK 2.2.1, the default setting is to enable persistence using <code>sqlite</code>.
+It is only necessary to specify <code>--enable-persistence</code> to use a different backend database.
+The default setting from prior versions is selectable with <code>--disable-persistence</code>.</p>
+</div>
+
 
 <p>To view a complete list of configurations, enter the following commands:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd &lt;redhawk src directory&gt;
@@ -1482,7 +1532,7 @@ cd redhawk/src
 
 <h3 id="configuring-omniorb">Configuring omniORB</h3>
 
-<p>Refer to <a href="../../../manual/installation/#configuring-omniorb">Configuring omniORB</a> for information on how to edit the omniORB configuration file (<code>/etc/omniORB.cfg</code>) to provide information about how to reach the CORBA event service.</p>
+<p>Refer to <a href="../../../manual/installation/#configuring-omniorb">Configuring omniORB</a> for information on how to edit the omniORB configuration file (<code>/etc/omniORB.cfg</code>) to provide information about how to reach the CORBA <a href="../../../manual/glossary/#event-service">Event Service</a>.</p>
 
 
     
@@ -1505,6 +1555,10 @@ cd redhawk/src
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/source-installation.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

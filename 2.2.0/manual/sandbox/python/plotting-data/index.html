@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Plotting Data :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/sandbox/python/plotting-data/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1358,12 +1387,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1389,30 +1418,44 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Plotting Data</h1>
+    <h2 class="title">Plotting Data</h2>
+
     
     
     
     
 
-<p>The Sandbox includes tools for plotting BulkIO data from components and devices. The built-in matplotlib plots support visualizing BulkIO data in the time and frequency domains, as well as constellations. The plots are fully integrated into the Sandbox, support all numeric BulkIO data types, and may be used as the provides side for component connections.</p>
+<p>The <a href="../../../../manual/glossary/#sandbox">sandbox</a> includes tools for plotting Bulk Input/Output (BulkIO) data from <a href="../../../../manual/glossary/#component">components</a> and <a href="../../../../manual/glossary/#device">devices</a>. The built-in matplotlib plots support visualizing BulkIO data in the time and frequency domains, as well as constellations. The plots are fully integrated into the sandbox, support all numeric BulkIO data types, and may be used as the provides side for component connections.</p>
 
 <p>The following example plots the data from a component as a line plot:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>LinePlot()
 <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>connect(plot)
 <span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>start()</code></pre></div>
-<p>Before displaying data, plots must be started either by calling their <code>start()</code> method or by calling <code>sb.start()</code>. If the Sandbox is already started when the plot is created, then the plot’s initial state is started.</p>
+<p>Before displaying data, plots must be started either by calling their <code>start()</code> method or by calling <code>sb.start()</code>. If the sandbox is already started when the plot is created, then the plot’s initial state is started.</p>
 
-<h5 id="example-of-lineplot">Example of LinePlot</h5>
 
-<p><img src="../../images/LinePlot.png" alt="Example of LinePlot" /></p>
+<figure >
+    
+        <img src="../../images/LinePlot.png" alt="Example of LinePlot" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Example of LinePlot</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <h4 id="frame-size">Frame Size</h4>
 
@@ -1422,43 +1465,69 @@ ga('send', 'pageview');
 </div>
 
 
-<h4 id="fft-size">FFT Size</h4>
+<h4 id="fast-fourier-transform-fft-size">Fast Fourier Transform (FFT) Size</h4>
 
-<p>Plots that display the psd of input data use a default fft size of 1024 points. To increase the frequency resolution, set the <code>nfft</code> argument to a larger fft size:</p>
+<p>Plots that display the Power Spectral Density (PSD) of input data use a default FFT size of 1024 points. To increase the frequency resolution, set the <code>nfft</code> argument to a larger FFT size:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>LinePSD(nfft<span style="color:#f92672">=</span><span style="color:#ae81ff">8192</span>)</code></pre></div>
-<p>The frame size defaults to the fft size, but can be overridden with <code>frameSize</code>. It may be smaller than the fft size; however, it cannot exceed the fft size. If the frame size is smaller than the fft size, the data is zero-padded.</p>
+<p>The frame size defaults to the FFT size, but can be overridden with <code>frameSize</code>. It may be smaller than the FFT size; however, it cannot exceed the FFT size. If the frame size is smaller than the FFT size, the data is zero-padded.</p>
 
-<h5 id="example-of-linepsd">Example of LinePSD</h5>
 
-<p><img src="../../images/LinePSD.png" alt="Example of LinePSD" /></p>
+<figure >
+    
+        <img src="../../images/LinePSD.png" alt="Example of LinePSD" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Example of LinePSD</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <h4 id="line-plots">Line Plots</h4>
 
-<p>Line plots display signal or psd data as a series of colored line segments, similar to an oscilloscope display. Each input signal is represented by a different line color. A new trace is created for each <code>connect()</code> call, and traces may be added and removed dynamically.</p>
+<p>Line plots display signal or PSD data as a series of colored line segments, similar to an oscilloscope display. Each input signal is represented by a different line color. A new trace is created for each <code>connect()</code> call, and traces may be added and removed dynamically.</p>
 
 <div class="notices tip" ><p>All input signals must have the same sample rate or the sources may get out of sync.</p>
 </div>
 
 
-<p>The X range is based on the frame size and input SRI. By default, the Y range is determined automatically per-frame based on the input data. A fixed minimum and maximum may be set independently with the <code>ymin</code> and <code>ymax</code> attributes:</p>
+<p>The X range is based on the frame size and input Signal Related Information (SRI). By default, the Y range is determined automatically per-frame based on the input data. A fixed minimum and maximum may be set independently with the <code>ymin</code> and <code>ymax</code> attributes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>ymin, plot<span style="color:#f92672">.</span>ymax <span style="color:#f92672">=</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">2.5</span>, <span style="color:#ae81ff">2.5</span>)</code></pre></div>
 <p>Automatic scaling can be re-enabled by setting <code>ymin</code> or <code>ymax</code> to <code>None</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>ymin <span style="color:#f92672">=</span> None</code></pre></div>
 <p>The <code>LinePlot</code> plot displays one or more input signals. Time and value are displayed on the X and Y axes, respectively.</p>
 
-<p>The <code>LinePSD</code> plot displays the psd of one or more input signals. The frequency is represented by the X axis, while the magnitude is represented by the Y axis using a logarithmic scale.</p>
+<p>The <code>LinePSD</code> plot displays the PSD of one or more input signals. The frequency is represented by the X axis, while the magnitude is represented by the Y axis using a logarithmic scale.</p>
 
 <h4 id="raster-plots">Raster Plots</h4>
 
-<p>Raster plots display signal or psd data as a two-dimensional image. Each horizontal line represents one frame of data. This plot type is most useful for visualizing an input signal in the frequency domain over time.</p>
+<p>Raster plots display signal or PSD data as a two-dimensional image. Each horizontal line represents one frame of data. This plot type is most useful for visualizing an input signal in the frequency domain over time.</p>
 
 <p>All raster plots allow configuration of the image size at creation time. The default image size is 1024x1024; height and width can be overridden with the <code>imageHeight</code> and <code>imageWidth</code> arguments:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>RasterPSD(imageHeight<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span>, imageWidth<span style="color:#f92672">=</span><span style="color:#ae81ff">768</span>)</code></pre></div>
-<h5 id="example-of-rasterpsd">Example of RasterPSD</h5>
 
-<p><img src="../../images/RasterPSD.png" alt="Example of RasterPSD" /></p>
+<figure >
+    
+        <img src="../../images/RasterPSD.png" alt="Example of RasterPSD" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Example of RasterPSD</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p>The plot X and Y ranges are fixed based on the fft or frame size (X) and image height (Y). The Z range (magnitude) can be set at creation time or changed dynamically with the <code>zmin</code> and <code>zmax</code> attributes:</p>
+
+
+
+
+<p>The plot X and Y ranges are fixed based on the FFT or frame size (X) and image height (Y). The Z range (magnitude) can be set at creation time or changed dynamically with the <code>zmin</code> and <code>zmax</code> attributes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>RasterPSD(zmin<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-12</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>zmax <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e4</span></code></pre></div>
 <p>The <code>RasterPSD</code> plot displays the PSD of an input signal as a falling raster. Time and frequency are displayed on the Y and X axes, respectively. The magnitude of a given frequency bin is represented by a logarithmic colormap. The default Z (magnitude) range is [1e-18, 1].</p>
@@ -1472,9 +1541,22 @@ ga('send', 'pageview');
 <p>By default, the plot is centered at the origin, and both the X and Y ranges are [-1, 1]. The minimum and maximum X and Y values may be set at creation time or changed dynamically with any combination of the <code>xmin</code>, <code>xmax</code>, <code>ymin</code> and <code>ymax</code> attributes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> plot <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>XYPlot(xmin<span style="color:#f92672">=-</span><span style="color:#ae81ff">2.0</span>, xmax<span style="color:#f92672">=</span><span style="color:#ae81ff">2.0</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plot<span style="color:#f92672">.</span>ymin, plot<span style="color:#f92672">.</span>ymax <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">2.0</span></code></pre></div>
-<h5 id="example-of-xyplot">Example of XYPlot</h5>
 
-<p><img src="../../images/XYPlot.png" alt="Example of XYPlot" /></p>
+<figure >
+    
+        <img src="../../images/XYPlot.png" alt="Example of XYPlot" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Example of XYPlot</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 
     
@@ -1497,6 +1579,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/sandbox/python/plotting-data.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

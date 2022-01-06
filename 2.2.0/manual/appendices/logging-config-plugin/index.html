@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Logging Configuration Plugin :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/logging-config-plugin/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item active">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1370,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1364,7 +1393,9 @@ ga('send', 'pageview');
       <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
       <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
       <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
-      <option value="/manual/appendices/troubleshooting/" >-- Troubleshooting</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
       <option value="/manual/appendices/logging-config-plugin/"  selected>-- Logging Configuration Plugin</option>
       <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
   
@@ -1387,56 +1418,69 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Logging Configuration Plugin</h1>
+    <h2 class="title">Logging Configuration Plugin</h2>
+
     
     
     
     
 
-<p>The DomainManager may be extended to use a loadable library that can assist in the resolution of the <code>LOGGING_CONFIG_URI</code> parameter during application deployments. The following code and build files provide a template to build the loadable library: <code>libossielogcfg.so</code>.</p>
+<p>The <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> may be extended to use a loadable library that can assist in the resolution of the <code>LOGGING_CONFIG_URI</code> parameter during <a href="../../../manual/glossary/#application">application</a> deployments. The following code and build files provide a template to build the loadable library: <code>libossielogcfg.so</code>.</p>
 
-<p>The library should be installed in <code>$OSSIEHOME</code><code>/lib64</code> or <code>$OSSIEHOME</code><code>/lib</code> depending on your hardware and operating system. If you choose to install the library in a different directory, you will need to add this path to <code>LD_LIBRARY_PATH</code> before starting the DomainManager. To enable this feature in the DomainManager, use the <code>—useloglib</code> option when launching the <code>nodeBooter</code> program.</p>
+<p>The library should be installed in <code>$OSSIEHOME/lib64</code> or <code>$OSSIEHOME/lib</code> depending on your hardware and operating system. If you choose to install the library in a different directory, you will need to add this path to <code>LD_LIBRARY_PATH</code> before starting the DomainManager. To enable this feature in the DomainManager, use the <code>--useloglib</code> option when launching the <code>nodeBooter</code> program.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nodeBooter -D --useloglib</code></pre></div>
 <h3 id="logconfiguriresolver-class-and-example"><code>LogConfigUriResolver</code> Class and Example</h3>
 
-<p>The <code>LogConfigUriResolver</code> class is the base class that your customized class will inherit. The class contains a single method <code>get_uri</code>, that will be used to resolve the logging configuration file location during deployment. The method accepts a single parameter <code>path</code> that describes the resource’s path in the <code>Domain</code>. The following list describes the different resource paths:</p>
+<p>The <code>LogConfigUriResolver</code> class is the base class that your customized class will inherit. The class contains a single method <code>get_uri</code>, that will be used to resolve the logging configuration file location during deployment. The method accepts a single parameter <code>path</code> that describes the resource’s path in the <a href="../../../manual/glossary/#domain">Domain</a>. The following list describes the different resource paths:</p>
 
 <ul>
-<li><p><strong>Component</strong></p>
+<li><p><a href="../../../manual/glossary/#component">Component</a></p>
 
 <ul>
 <li><p>syntax</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsc:&lt;DomainName&gt;/&lt;Application ID&gt;/&lt;Component<span style="color:#960050;background-color:#1e0010">&#39;</span>s Naming Service Name&gt;</code></pre></div></li>
+
+<pre><code>rsc:&lt;DomainName&gt;/&lt;Application ID&gt;/&lt;Component's Naming Service Name&gt;
+</code></pre></li>
 
 <li><p>example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsc:REDHAWK_DEV/TestWave_2/MyComp_4</code></pre></div></li>
+
+<pre><code>rsc:REDHAWK_DEV/TestWave_2/MyComp_4
+</code></pre></li>
 </ul></li>
 
-<li><p><strong>Device</strong></p>
+<li><p><a href="../../../manual/glossary/#device">Device</a></p>
 
 <ul>
 <li><p>syntax</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dev:&lt;DomainName&gt;/&lt;Node ID&gt;/&lt;Device<span style="color:#960050;background-color:#1e0010">&#39;</span>s Naming Service Name&gt;</code></pre></div></li>
+
+<pre><code>dev:&lt;DomainName&gt;/&lt;Node ID&gt;/&lt;Device's Naming Service Name&gt;
+</code></pre></li>
 
 <li><p>example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dev:REDHAWK_DEV/Node_1/MyDevice_4</code></pre></div></li>
+
+<pre><code>dev:REDHAWK_DEV/Node_1/MyDevice_4
+</code></pre></li>
 </ul></li>
 
-<li><p><strong>Service</strong></p>
+<li><p><a href="../../../manual/glossary/#service">Service</a></p>
 
 <ul>
 <li><p>syntax</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">svc:&lt;DomainName&gt;/&lt;Node ID&gt;/&lt;Service<span style="color:#960050;background-color:#1e0010">&#39;</span>s Naming Service Name&gt;</code></pre></div></li>
+
+<pre><code>svc:&lt;DomainName&gt;/&lt;Node ID&gt;/&lt;Service's Naming Service Name&gt;
+</code></pre></li>
 
 <li><p>example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">svc:REDHAWK_DEV/Node_1/MyRedis_3</code></pre></div></li>
+
+<pre><code>svc:REDHAWK_DEV/Node_1/MyRedis_3
+</code></pre></li>
 </ul></li>
 </ul>
 
@@ -1444,48 +1488,21 @@ ga('send', 'pageview');
 
 <ul>
 <li><p><code>sca://path/to/config/file</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sca://logcfg/comp.log.cfg</code></pre></div></li>
+
+<pre><code>sca://logcfg/comp.log.cfg
+</code></pre></li>
 
 <li><p><code>file:///absolute/path/to/config/file</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file:///var/redhawk/sdr/dom/logcfg/comp.log.cfg</code></pre></div></li>
+
+<pre><code>file:///var/redhawk/sdr/dom/logcfg/comp.log.cfg
+</code></pre></li>
 </ul>
 
-<p>The following example code creates a custom resolver class that provides logging configuration files from the local <code>SDRROOT</code> directory (file:///var/redhawk/sdr/dom/logcfg/device.log.cfg). The macro <code>MAKE_FACTORY</code> allows the class to be dyamically loaded by the Domain Manager.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">/*
-</span><span style="color:#75715e"> * This file is protected by Copyright. Please refer to the COPYRIGHT file
-</span><span style="color:#75715e"> * distributed with this source distribution.
-</span><span style="color:#75715e"> *
-</span><span style="color:#75715e"> * This file is part of REDHAWK core.
-</span><span style="color:#75715e"> *
-</span><span style="color:#75715e"> * REDHAWK core is free software: you can redistribute it and/or modify it
-</span><span style="color:#75715e"> * under the terms of the GNU Lesser General Public License as published by the
-</span><span style="color:#75715e"> * Free Software Foundation, either version 3 of the License, or (at your
-</span><span style="color:#75715e"> * option) any later version.
-</span><span style="color:#75715e"> *
-</span><span style="color:#75715e"> * REDHAWK core is distributed in the hope that it will be useful, but WITHOUT
-</span><span style="color:#75715e"> * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-</span><span style="color:#75715e"> FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
-</span><span style="color:#75715e"> * for more details.
-</span><span style="color:#75715e"> *
-</span><span style="color:#75715e"> * You should have received a copy of the GNU Lesser General Public License
-</span><span style="color:#75715e"> * along with this program.  If not, see http://www.gnu.org/licenses/.
-</span><span style="color:#75715e"> */</span>
-<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ossie/logging/LogConfigUriResolver.h&gt;</span><span style="color:#75715e">
+<p>The following example code creates a custom resolver class that provides logging configuration files from the local <code>SDRROOT</code> directory (file:///var/redhawk/sdr/dom/logcfg/device.log.cfg). The macro <code>MAKE_FACTORY</code> allows the class to be dynamically loaded by the Domain Manager.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ossie/logging/LogConfigUriResolver.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sstream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ossielogcfg</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> ossie<span style="color:#f92672">::</span>logging<span style="color:#f92672">::</span>LogConfigUriResolver {
-
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-
-  ossielogcfg();
-
-  <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>ossielogcfg();
-
-  std<span style="color:#f92672">::</span>string get_uri( <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string <span style="color:#f92672">&amp;</span>path );
-};
-
-
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomLogConfigResolver</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> ossie<span style="color:#f92672">::</span>logging<span style="color:#f92672">::</span>LogConfigUriResolver {
 
 <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
@@ -1501,13 +1518,13 @@ ga('send', 'pageview');
 </span><span style="color:#75715e">    LOGGING_CONFIG_URI parameter. An empty string will be ignored by the DomainManager.
 </span><span style="color:#75715e">
 </span><span style="color:#75715e">    @param path  Path of the resource in the domain.
-</span><span style="color:#75715e">                 for components, rsc:&lt;domain name&gt;/&lt;application name&gt;/&lt;component naming service name&gt;
+</span><span style="color:#75715e">                 for components, rsc:&lt;domain name&gt;/&lt;application name&gt;/&lt;component Naming Service name&gt;
 </span><span style="color:#75715e">                 e.g.            rsc:REDHAWK_DEV/TestWave_2/MyComp_4
 </span><span style="color:#75715e">
-</span><span style="color:#75715e">                 for devices, dev:&lt;domain name&gt;/&lt;node name&gt;/&lt;device&#39;s naming service name&gt;
+</span><span style="color:#75715e">                 for devices, dev:&lt;domain name&gt;/&lt;node name&gt;/&lt;device&#39;s Naming Service name&gt;
 </span><span style="color:#75715e">                 e.g.            dev:REDHAWK_DEV/Node_1/MyDevice_4
 </span><span style="color:#75715e">
-</span><span style="color:#75715e">                 for service, svc:&lt;domain name&gt;/&lt;node name&gt;/&lt;service&#39;s naming service name&gt;
+</span><span style="color:#75715e">                 for service, svc:&lt;domain name&gt;/&lt;node name&gt;/&lt;service&#39;s Naming Service name&gt;
 </span><span style="color:#75715e">                 e.g.            svc:REDHAWK_DEV/Node_1/MyRedis_1
 </span><span style="color:#75715e">  */</span>
 
@@ -1543,15 +1560,19 @@ ga('send', 'pageview');
 MAKE_FACTORY(CustomLogConfigResolver);</code></pre></div>
 <h2 id="build-files">Build Files</h2>
 
-<p>Use the following build files to compile and build the above example code in a file called <code>ossielogcfg.cpp</code>. The compiled code produces a library called <code>libossielogcfg.so</code> that is installed in <code>$OSSIEHOME</code><code>/lib</code> or <code>$OSSIEHOME</code><code>/lib64</code>. The build process follows the same paradigm as standard REDHAWK generated software: <code>reconf; configure; make install</code>.</p>
+<p>Use the following build files to compile and build the above example code in a file called <code>ossielogcfg.cpp</code>. The compiled code produces a library called <code>libossielogcfg.so</code> that is installed in <code>$OSSIEHOME/lib</code> or <code>$OSSIEHOME/lib64</code>. The build process follows the same paradigm as standard REDHAWK generated software: <code>reconf; configure; make install</code>.</p>
 
 <h3 id="reconf"><code>reconf</code></h3>
+
+<p>Save the following code to a file called <code>reconf</code>, and make the file executable.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
 </span><span style="color:#75715e"></span>
 rm -f config.cache
 <span style="color:#f92672">[</span> -d m4 <span style="color:#f92672">]</span> <span style="color:#f92672">||</span> mkdir m4
 autoreconf -i</code></pre></div>
 <h3 id="configure-ac"><code>configure.ac</code></h3>
+
+<p>Save the following code to a file called <code>configure.ac</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">AC_INIT<span style="color:#f92672">(</span>ossielogcfg, <span style="color:#ae81ff">1</span>.0.0<span style="color:#f92672">)</span>
 AM_INIT_AUTOMAKE<span style="color:#f92672">([</span>nostdinc foreign<span style="color:#f92672">])</span>
 AC_CONFIG_MACRO_DIR<span style="color:#f92672">([</span>m4<span style="color:#f92672">])</span>
@@ -1582,6 +1603,12 @@ AX_BOOST_REGEX
 AC_CONFIG_FILES<span style="color:#f92672">([</span>Makefile <span style="color:#f92672">])</span>
 AC_OUTPUT</code></pre></div>
 <h3 id="makefile-am"><code>Makefile.am</code></h3>
+
+<p>Save the following code to a file called <code>Makefile.am</code>.</p>
+
+<div class="notices note" ><p>Remember to replace the spaces before <code>rm -rf m4</code> with a tab to prevent the <code>Makefile.am</code> file from crashing.</p>
+</div>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ACLOCAL_AMFLAGS <span style="color:#f92672">=</span> -I m4 -I<span style="color:#e6db74">${</span>OSSIEHOME<span style="color:#e6db74">}</span>/share/aclocal/ossie
 AUTOMAKE_OPTIONS <span style="color:#f92672">=</span> subdir-objects
 
@@ -1591,18 +1618,18 @@ xmldir <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span
 dist_xml_DATA <span style="color:#f92672">=</span>
 
 distclean-local:
-        rm -rf m4
+    rm -rf m4
 
 libossielogcfg_la_SOURCES <span style="color:#f92672">=</span> ossielogcfg.cpp
 libossielogcfg_la_LIBADD <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>REDHAWK_LIBS<span style="color:#66d9ef">)</span>
 libossielogcfg_la_CPPFLAGS <span style="color:#f92672">=</span> -I . -I <span style="color:#66d9ef">$(</span>srcdir<span style="color:#66d9ef">)</span>/include <span style="color:#66d9ef">$(</span>REDHAWK_CFLAGS<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>BOOST_CPPFLAGS<span style="color:#66d9ef">)</span>
-bossielogcfg_la_CXXFLAGS <span style="color:#f92672">=</span> -Wall</code></pre></div>
+libossielogcfg_la_CXXFLAGS <span style="color:#f92672">=</span> -Wall</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../manual/appendices/troubleshooting/" title="Troubleshooting"> <i class="fa fa-chevron-left"></i><label>Troubleshooting</label></a>
+<a class="nav nav-prev" href="../../../manual/appendices/troubleshooting/omni/" title="omniNames and omniEvents Issues"> <i class="fa fa-chevron-left"></i><label>omniNames and omniEvents Issues</label></a>
     <a class="nav nav-next" href="../../../manual/appendices/acronyms/" title="List of Acronyms" style="margin-right: 0px;"><label>List of Acronyms</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
@@ -1618,6 +1645,10 @@ bossielogcfg_la_CXXFLAGS <span style="color:#f92672">=</span> -Wall</code></pre>
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/logging-config-plugin.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

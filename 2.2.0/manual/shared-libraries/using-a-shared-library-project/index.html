@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Using a REDHAWK Shared Library Project :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/shared-libraries/using-a-shared-library-project/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -312,10 +312,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -326,10 +326,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -508,6 +515,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -523,7 +536,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -579,12 +592,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1322,12 +1351,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1346,12 +1375,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1377,65 +1406,124 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Using a REDHAWK Shared Library Project</h1>
-    
-    
-    
-    
+    <h2 class="title">Using a REDHAWK Shared Library Project</h2>
 
-<p>To add a shared library dependency to a component or device:</p>
+    
+    
+    
+    <p>To add a shared library dependency to a <a href="../../../manual/glossary/#component">component</a> or <a href="../../../manual/glossary/#device">device</a>:</p>
 
 <div class="notices note" ><p>The shared library must be installed to <code>SDRROOT</code> before you can add it to a component or device.</p>
 </div>
 
 
 <ol>
-<li><p>Open the SPD file for the component or device.</p>
+<li><p>Open the Software Package Descriptor (SPD) file for the component or device.
 
-<h5 id="component-spd-file">Component SPD File</h5>
+<figure >
+    
+        <img src="../images/componentSPD.png" alt="Component SPD File" />
+    
+    
+    <figcaption>
+        <h5 class=figure > Component SPD File</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/componentSPD.png" alt="Component SPD File" /></p></li>
 
-<li><p>Select the <strong>Implementations</strong> tab.</p>
 
-<h5 id="component-implementations-tab">Component Implementations Tab</h5>
+</p></li>
 
-<p><img src="../images/componentimplementations.png" alt="Component Implementations Tab" /></p></li>
+<li><p>Select the <strong>Implementations</strong> tab.
+
+<figure >
+    
+        <img src="../images/componentimplementations.png" alt="Component Implementations Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Component Implementations Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>On the left side of the editor, select the appropriate implementation.</p></li>
 
 <li><p>On the right side of the editor, under <strong>Dependencies</strong>, next to the <strong>Dependency</strong> box, click <strong>Add&hellip;</strong></p>
 
-<p>The Edit Dependency dialog is displayed.</p>
+<p>The Edit Dependency dialog is displayed.
 
-<h5 id="edit-dependency-dialog">Edit Dependency Dialog</h5>
+<figure >
+    
+        <img src="../images/editdependency.png" alt="Edit Dependency Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Edit Dependency Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/editdependency.png" alt="Edit Dependency Dialog" /></p></li>
+
+
+</p></li>
 
 <li><p>In the dialog, change the <strong>Kind</strong> to <strong>Shared Library (SoftPkg) Reference</strong>.</p></li>
 
 <li><p>In the <strong>Type</strong> box, select <strong>other</strong>.</p></li>
 
-<li><p>Select a shared library from the list of shared libraries installed in the <code>SDRROOT</code>.</p>
+<li><p>Select a shared library from the list of shared libraries installed in the <code>SDRROOT</code>.
 
-<h5 id="shared-library-dependency-dialog">Shared Library Dependency Dialog</h5>
+<figure >
+    
+        <img src="../images/sharedlibdependimplementationstab.png" alt="Shared Library Dependency Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Shared Library Dependency Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/sharedlibdependimplementationstab.png" alt="Shared Library Dependency Dialog" /></p></li>
+
+
+</p></li>
 
 <li><p>Click <strong>Finish</strong>.</p>
 
-<p>The shared library dependency is displayed under the All Implementations section of the Implementations tab.</p>
+<p>The shared library dependency is displayed under the All Implementations section of the Implementations tab.
 
-<h5 id="shared-library-project-dependency">Shared Library Project Dependency</h5>
+<figure >
+    
+        <img src="../images/sharedlibdependallimpl.png" alt="The Shared Library Project Dependency" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Shared Library Project Dependency</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/sharedlibdependallimpl.png" alt="The Shared Library Project Dependency" /></p></li>
+
+
+</p></li>
 
 <li><p>To update your code to use the dependency, click the <strong>Generate All Implementations</strong> icon.</p></li>
 </ol>
@@ -1461,6 +1549,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/shared-libraries/using-a-shared-library-project.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

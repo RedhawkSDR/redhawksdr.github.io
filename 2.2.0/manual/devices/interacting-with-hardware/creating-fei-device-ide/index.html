@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
-<title>Creating an FEI Device in the IDE :: REDHAWK</title>
+<meta name="generator" content="Hugo 0.36" />
+<title>Creating a FrontEnd Interfaces Device in the IDE :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../../../css/nucleus.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/devices/interacting-with-hardware/creating-fei-device-ide/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item parent haschildren
         ">
       <div>
@@ -524,7 +537,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item active">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -580,12 +593,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,13 +1347,16 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
     <option value="/manual/devices/" >
   - 
    Working with Devices</option> 
     <option value="/manual/devices/interacting-with-hardware/" >
   -- 
    Using Devices to Interact with Hardware</option> 
-      <option value="/manual/devices/interacting-with-hardware/creating-fei-device-ide/"  selected>--- Creating an FEI Device in the IDE</option>
+      <option value="/manual/devices/interacting-with-hardware/creating-fei-device-ide/"  selected>--- Creating a FrontEnd Interfaces Device in the IDE</option>
       <option value="/manual/devices/interacting-with-hardware/interacting-fei-device-python-package/" >--- Interacting with an FEI Device with the Python Package</option>
       <option value="/manual/devices/interacting-with-hardware/using-fei-device-ide/" >--- Using an FEI Device in the IDE</option>
   
@@ -1334,9 +1366,6 @@ ga('send', 'pageview');
       <option value="/manual/devices/fei-data-structures/" >-- Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators</option>
       <option value="/manual/devices/misc/" >-- Miscellaneous FrontEnd Tuner Library Implementation Details</option>
   
-    <option value="/manual/services/" >
-  - 
-   Services</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1355,12 +1384,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1386,79 +1415,166 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Creating an FEI Device in the IDE</h1>
+    <h2 class="title">Creating a FrontEnd Interfaces Device in the IDE</h2>
+
     
     
     
     
+
+<p>This section explains how to create, modify, install, and test a FrontEnd Interfaces (FEI) <a href="../../../../manual/glossary/#device">device</a> using the REDHAWK IDE.</p>
 
 <h4 id="using-the-fei-wizard-to-create-an-fei-device">Using the FEI Wizard to Create an FEI Device</h4>
 
-<p>The <strong>REDHAWK Front End Device Project</strong> wizard enables users to quickly create an FEI compliant receiver or transmitter device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties.</p>
+<p>The <strong>REDHAWK Front End Device Project</strong> wizard enables users to quickly create an FEI compliant receiver or transmitter device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output <a href="../../../../manual/glossary/#port">ports</a>. Additionally, the user can choose to augment the required tuner status <a href="../../../../manual/glossary/#property">properties</a> with additional optional properties.</p>
 
 <ol>
 <li><p>To open the wizard and create a new device, select <strong>File &gt; New &gt; Other</strong>.</p>
 
-<p>The <strong>Select a wizard</strong> page is displayed:</p>
+<p>The <strong>Select a wizard</strong> page is displayed:
 
-<h5 id="select-a-wizard">Select a Wizard</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard1.png" alt="Select a Wizard Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Select a Wizard Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard1.png" alt="Select a Wizard" /></p></li>
+
+
+</p></li>
 
 <li><p>Select <strong>REDHAWK Front End Device Project</strong> and click <strong>Next</strong>.</p>
 
-<p>The <strong>Create a REDHAWK Device Project</strong> page is displayed:</p>
+<p>The <strong>Create a REDHAWK Device Project</strong> page is displayed:
 
-<h5 id="create-a-redhawk-device-project">Create a REDHAWK Device Project</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard2.png" alt="Create a REDHAWK Device Project Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Create a REDHAWK Device Project Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard2.png" alt="Create a REDHAWK Device Project" /></p></li>
+
+
+</p></li>
 
 <li><p>In the <strong>Project name</strong> field, enter a project name and click <strong>Next</strong>.</p>
 
-<p>The <strong>New Implementation</strong> page is displayed:</p>
+<p>The <strong>New Implementation</strong> page is displayed:
 
-<h5 id="new-implementation">New Implementation</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard3.png" alt="New Implementation Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >New Implementation Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard3.png" alt="New Implementation" /></p></li>
+
+
+</p></li>
 
 <li><p>Select the programming language; enter a description for this implementation; and click <strong>Next</strong>.</p>
 
-<p>The <strong>Setup Code Generation</strong> page is displayed:</p>
+<p>The <strong>Setup Code Generation</strong> page is displayed:
 
-<h5 id="setup-code-generation">Setup Code Generation</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard4.png" alt="The Setup Code Generation Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Setup Code Generation Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard4.png" alt="Setup Code Generation" /></p></li>
+
+
+</p></li>
 
 <li><p>Click <strong>Next</strong>.</p>
 
-<p>The <strong>FrontEnd Interfaces Device Type Selection</strong> page is displayed:</p>
+<p>The <strong>FrontEnd Interfaces Device Type Selection</strong> page is displayed:
 
-<h5 id="frontend-interfaces-device-type-selection">FrontEnd Interfaces Device Type Selection</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard5.png" alt="The FrontEnd Interfaces Device Type Selection Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FrontEnd Interfaces Device Type Selection Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard5.png" alt="FrontEnd Interfaces device Type Selection" /></p></li>
+
+
+</p></li>
 
 <li><p>Select the appropriate aspects of the device (needs GPS data or produces GPS data) and its general usage (receive/transmit, scanning capability). Click <strong>Next</strong>.</p>
 
-<p>The <strong>FrontEnd Interface Tuner Options</strong> page is displayed:</p>
+<p>The <strong>FrontEnd Interface Tuner Options</strong> page is displayed:
 
-<h5 id="frontend-interface-tuner-options">FrontEnd Interface Tuner Options</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard6.png" alt="The FrontEnd Interface Tuner Options Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FrontEnd Interface Tuner Options Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard6.png" alt="FrontEnd Interface Tuner Options" /></p></li>
+
+
+</p></li>
 
 <li><p>Specify the types of inputs and outputs that the device supports (analog, digital float) and click <strong>Next</strong>.</p>
 
-<p>The <strong>FrontEnd Interfaces Tuner Status Customization</strong> page is displayed:</p>
+<p>The <strong>FrontEnd Interfaces Tuner Status Customization</strong> page is displayed:
 
-<h5 id="frontend-interfaces-tuner-status-customization">FrontEnd Interfaces Tuner Status Customization</h5>
+<figure >
+    
+        <img src="../../images/NewFEIDeviceWizard7.png" alt="The FrontEnd Interfaces Tuner Status Customization Page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FrontEnd Interfaces Tuner Status Customization Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/NewFEIDeviceWizard7.png" alt="FrontEnd Interfaces Tuner Status Customization" /></p>
+
+
+</p>
 
 <ul>
 <li>To add an optional tuner status properties, click <strong>+</strong>, select the checkboxes for the properties, and click <strong>OK</strong>.</li>
@@ -1467,15 +1583,27 @@ ga('send', 'pageview');
 </ul></li>
 </ol>
 
-<p>Upon exiting this wizard,the FEI device project to is created, and the Overview tab of the project is displayed:</p>
+<p>Upon exiting this wizard,the FEI device project to is created, and the Overview tab of the project is displayed:
 
-<h5 id="fei-device-overview-tab">FEI Device Overview tab</h5>
+<figure >
+    
+        <img src="../../images/FEIDevOverview.png" alt="The FEI Device Overview Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FEI Device Overview Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/FEIDevOverview.png" alt="The FEI Device Overview tab" /></p>
 
-<h4 id="editing-a-frontend-interfaces-device-project">Editing a FrontEnd Interfaces Device Project</h4>
 
-<p>After completing the wizard, you can add ports, properties, and descriptions to an FEI device using the same processes used for all other components and devices. For more information about adding ports, refer to <a href="../../../../manual/ide/editors-and-views/softpkg-editor/#overview-tab">SoftPkg Editor Overview Tab</a>. For more information about adding properties, refer to <a href="../../../../manual/ide/editors-and-views/softpkg-editor/#properties-tab">SoftPkg Editor Properties Tab</a></p>
+</p>
+
+<h4 id="editing-an-fei-device-project">Editing an FEI Device Project</h4>
+
+<p>After completing the wizard, you can add ports, properties, and descriptions to an FEI device using the same processes used for all other <a href="../../../../manual/glossary/#component">components</a> and devices. For more information about adding ports, refer to <a href="../../../../manual/ide/editors-and-views/softpkg-editor/#overview-tab">SoftPkg Editor Overview Tab</a>. For more information about adding properties, refer to <a href="../../../../manual/ide/editors-and-views/softpkg-editor/#properties-tab">SoftPkg Editor Properties Tab</a></p>
 
 <p>For example, it may be useful to add a property used to uniquely identify the target device, such as an IP address.</p>
 
@@ -1494,22 +1622,48 @@ ga('send', 'pageview');
 
 <h4 id="generating-and-customizing-the-source-code">Generating and Customizing the Source Code</h4>
 
+<p>This section describes how to generate and customize the source code for an FEI device.</p>
+
 <ol>
 <li><p>On the <strong>Overview</strong> tab for the project, click the <strong>Generate All Implementations</strong> icon to generate the source code.</p>
 
-<p>The <strong>Regenerate Files</strong> dialog is displayed:</p>
+<p>The <strong>Regenerate Files</strong> dialog is displayed:
 
-<h5 id="regenerate-files">Regenerate Files</h5>
+<figure >
+    
+        <img src="../../images/FEIRegenFiles.png" alt="The Regenerate Files Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Regenerate Files Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/FEIRegenFiles.png" alt="The Regenerate Files Dialog" /></p></li>
+
+
+</p></li>
 
 <li><p>Select the files to be generated and click <strong>OK</strong>.</p>
 
-<p>Files are generated that define the classes for the FEI device. In C++, the FEI base class inherits from the <code>frontend::FrontendTunerDevice</code> class  (or <code>frontend::FrontendScanningTunerDevice</code> for a scanner) to provide much of the FEI capability. The generated FEI device class must be modified to interact with the target device. During generation, intentional compiler warnings are inserted in the main class to indicate where code should be modified to reflect the behavior of the device. The output of the make command for a C++ device, including the compiler warnings, is displayed in the Console view:</p>
+<p>Files are generated that define the classes for the FEI device. In C++, the FEI base class inherits from the <code>frontend::FrontendTunerDevice</code> class  (or <code>frontend::FrontendScanningTunerDevice</code> for a scanner) to provide much of the FEI capability. The generated FEI device class must be modified to interact with the target device. During generation, intentional compiler warnings are inserted in the main class to indicate where code should be modified to reflect the behavior of the device. The output of the make command for a C++ device, including the compiler warnings, is displayed in the <a href="../../../../manual/glossary/#console-view">Console view</a>:
 
-<h5 id="fei-device-compiler-warnings">FEI Device Compiler Warnings</h5>
+<figure >
+    
+        <img src="../../images/FEICompilerWarns.png" alt="FEI Device Compiler Warnings" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FEI Device Compiler Warnings</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/FEICompilerWarns.png" alt="FEI Device Compiler Warnings" /></p>
+
+
+</p>
 
 <p>There are five functions that contain a default implementation that should be modified to match the desired behavior. These functions are <code>constructor</code>, <code>deviceEnable</code>, <code>deviceDisable</code>, <code>deviceSetTuning</code>, and <code>deviceDeleteTuning</code>. The <code>constructor</code> function is called when the device is instantiated. During allocation of an FEI device, <code>deviceSetTuning</code> is called and, if successful, <code>deviceEnable</code> is called. During deallocation, <code>deviceDisable</code> is called followed by a call to <code>deviceDeleteTuning</code>.</p>
 
@@ -1523,7 +1677,7 @@ ga('send', 'pageview');
 </div>
 
 
-<h5 id="functions-methods-in-the-generated-code">Functions/methods in the generated code</h5>
+<h5 id="functions-methods-in-the-generated-code">Functions/Methods in the Generated Code</h5>
 
 <table>
 <thead>
@@ -1546,17 +1700,17 @@ ga('send', 'pageview');
 
 <tr>
 <td align="left"><code>deviceDisable</code></td>
-<td align="left">Command the hardware to disable the output and stop generating data. The FEI tuner status element <code>fts.enabled</code> is updated to reflect the current state of the tuner output. This is a good place to call <code>stop</code> to start the service function.</td>
+<td align="left">Command the hardware to disable the output and stop generating data. The FEI tuner status element <code>fts.enabled</code> is updated to reflect the current state of the tuner output. This is a good place to call <code>stop</code> to stop the service function.</td>
 </tr>
 
 <tr>
 <td align="left"><code>deviceSetTuning</code></td>
-<td align="left">When an allocation is requested against the FEI device, the base class checks to see which tuners are currently available that match the tuner type (for example, <code>RX_DIGITIZER</code>) and that are currently not set. The base class cycles through this list of available tuners by calling <code>deviceSetTuning</code> with a tuner as an argument for the callback. The search is broken when <code>deviceSetTuning</code> returns true. For example, if there are ten available tuners, <code>deviceSetTuning</code> could potentially be called ten times. The tuner is unset when a successful allocation is deallocated; <code>deviceDeleteTuning</code> is the notification that a particular tuner has been deallocated. <br> There are several helper functions (<code>validateRequest</code>, <code>validateRequestVsSRI</code>, <code>validateRequestVsRFInfo</code>, and <code>validateRequestVsDevice</code>) provided in the inherited <code>FrontendTunerDevice</code> class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a <code>BadParameterException</code> if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. <code>fts.center_frequency</code>, <code>fts.bandwidth</code>, <code>fts.sample_rate</code>) with the actual values queried from the hardware rather than with the requested values. Push new SRI within this function. Finally, when using the multi-out capability for BulkIO ports, it is recommended that the <code>matchAllocationIdToStreamId</code> function be called at this point with the stream ID and Allocation id. Return <code>True</code> upon successful configuration of the tuner according to the request, or <code>False</code> otherwise.</td>
+<td align="left">When an allocation is requested against the FEI device, the base class checks to see which tuners are currently available that match the tuner type (for example, <code>RX_DIGITIZER</code>) and that are currently not set. The base class cycles through this list of available tuners by calling <code>deviceSetTuning</code> with a tuner as an argument for the callback. The search is broken when <code>deviceSetTuning</code> returns true. For example, if there are ten available tuners, <code>deviceSetTuning</code> could potentially be called ten times. The tuner is unset when a successful allocation is deallocated; <code>deviceDeleteTuning</code> is the notification that a particular tuner has been deallocated. <br> There are several helper functions (<code>validateRequest</code>, <code>validateRequestVsSRI</code>, <code>validateRequestVsRFInfo</code>, and <code>validateRequestVsDevice</code>) provided in the inherited <code>FrontendTunerDevice</code> class of the device to assist in validation. Then, either configure the hardware with the tuner request, throw a <code>BadParameterException</code> if the request is outside of the capabilities of the tuner, or return false. Update the appropriate FEI tuner status elements (i.e. <code>fts.center_frequency</code>, <code>fts.bandwidth</code>, <code>fts.sample_rate</code>) with the actual values queried from the hardware rather than with the requested values. Push new Signal Related Information (SRI) within this function. Finally, when using the multi-out capability for Bulk Input/Output (BulkIO) ports, it is recommended that the <code>matchAllocationIdToStreamId</code> function be called at this point with the Stream ID and Allocation ID. Return <code>True</code> upon successful configuration of the tuner according to the request, or <code>False</code> otherwise.</td>
 </tr>
 </tbody>
 </table>
 
-<h5 id="additional-functions-methods-in-the-generated-scanner-code">Additional functions/methods in the generated scanner code</h5>
+<h5 id="additional-functions-methods-in-the-generated-scanner-code">Additional Functions/Methods in the Generated Scanner Code</h5>
 
 <table>
 <thead>
@@ -1615,7 +1769,7 @@ frontend<span style="color:#f92672">::</span>SpanStrategy strat(ranges);</code><
 
 <h4 id="installing-the-fei-device">Installing the FEI Device</h4>
 
-<p>To install the FEI device, build the project and export it to the Target SDR. After the FEI device is installed, you can use it in a REDHAWK system.</p>
+<p>To install the FEI device, build the project and export it to the <a href="../../../../manual/glossary/#target-sdr">Target SDR</a>. After the FEI device is installed, you can use it in a REDHAWK system.</p>
 
 <h4 id="test-running-a-sample-fei-device">Test-running a Sample FEI Device</h4>
 
@@ -1633,17 +1787,29 @@ self<span style="color:#f92672">.</span>port_dataShort_out<span style="color:#f9
 <p>To test-run the device, follow these steps:</p>
 
 <ol>
-<li><p>In the <strong>REDHAWK Explorer</strong> tab, expand the <strong>Sandbox</strong> item.</p></li>
+<li><p>In the <strong><a href="../../../../manual/glossary/#redhawk-explorer">REDHAWK Explorer</a></strong> tab, expand the <strong>Sandbox</strong> item.</p></li>
 
-<li><p>In the <strong>Sandbox</strong> item, expand the <strong>Device Manager</strong> item. The devices running in the Sandbox are displayed.</p></li>
+<li><p>In the <strong>Sandbox</strong> item, expand the <strong><a href="../../../../manual/glossary/#device-manager">Device Manager</a></strong> item. The devices running in the <a href="../../../../manual/glossary/#sandbox">sandbox</a> are displayed.</p></li>
 
 <li><p>Right-click the device’s output Port (probably called <code>dataShort_out</code>) and select <strong>Plot Port Data</strong>.</p></li>
 
-<li><p>Right-click the running device and and select <strong>Allocate</strong>. The <strong>Allocate Tuner</strong> wizard is displayed.</p>
+<li><p>Right-click the running device and and select <strong>Allocate</strong>. The <strong>Allocate Tuner</strong> wizard is displayed.
 
-<h5 id="allocate-tuner-wizard">Allocate Tuner Wizard</h5>
+<figure >
+    
+        <img src="../../images/TunerAllocationPage.png" alt="Allocate Tuner Wizard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Allocate Tuner Wizard</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/TunerAllocationPage.png" alt="Allocate Tuner Wizard" /></p></li>
+
+
+</p></li>
 
 <li><p>Enter any arbitrary number in the <strong>Center Frequency</strong>, <strong>Bandwidth</strong>, and <strong>Sample Rate</strong> fields.</p></li>
 
@@ -1677,6 +1843,10 @@ self<span style="color:#f92672">.</span>port_dataShort_out<span style="color:#f9
 
   
 
+    <div class="github-link">
+      <a href="manual/devices/interacting-with-hardware/creating-fei-device-ide.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

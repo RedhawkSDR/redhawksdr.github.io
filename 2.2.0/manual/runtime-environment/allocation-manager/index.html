@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>The Allocation Manager :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/runtime-environment/allocation-manager/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1351,12 +1380,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1382,28 +1411,29 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>The Allocation Manager</h1>
+    <h2 class="title">The Allocation Manager</h2>
+
     
     
     
     
 
-<p>The Allocation Manager provides a single point for creating, inspecting, and delegating allocations.</p>
+<p>The <a href="../../../manual/glossary/#allocation-manager">Allocation Manager</a> provides a single point for creating, inspecting, and delegating allocations.</p>
 
 <h3 id="using-the-allocation-manager">Using the Allocation Manager</h3>
 
-<p>Performing an allocation is more than just allocating against a device; the allocation process involves searching for a device that will satisfy the allocation, making the allocation itself, and then storing the allocation such that it can be deallocated at some later arbitrary time. The Domain Manager uses the Allocation Manager to resolve allocations during application deployment. For example, if an application requires a specific resource, during deployment, the Allocation Manager searches the domain for resources that satisfy the requirement. Alternatively, the Allocation Manager can also be used programmatically through the Allocation Manager interface and the REDHAWK API.</p>
+<p>Performing an allocation is more than just allocating against a <a href="../../../manual/glossary/#device">device</a>; the allocation process involves searching for a device that will satisfy the allocation, making the allocation itself, and then storing the allocation such that it can be deallocated at some later arbitrary time. The <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> uses the Allocation Manager to resolve allocations during <a href="../../../manual/glossary/#application">application</a> deployment. For example, if an application requires a specific resource, during deployment, the Allocation Manager searches the <a href="../../../manual/glossary/#domain">domain</a> for resources that satisfy the requirement. Alternatively, the Allocation Manager can also be used programmatically through the Allocation Manager interface and the REDHAWK API.</p>
 
 <h4 id="creating-allocations">Creating Allocations</h4>
 
-<p>The REDHAWK FEI specification is a powerful tool that allows developers to generalize the selection of RF hardware for use by the system applications. Although it is possible to create any allocation, the set of allocations associated with FEI is the only standardized set of allocations in REDHAWK. While associating a specific FEI allocation with an application is useful, so is creating allocations to be used at a system level (beyond the scope of just one application).</p>
+<p>The REDHAWK FrontEnd Interfaces (FEI) specification is a powerful tool that allows developers to generalize the selection of RF hardware for use by the system applications. Although it is possible to create any allocation, the set of allocations associated with FEI is the only standardized set of allocations in REDHAWK. While associating a specific FEI allocation with an application is useful, so is creating allocations to be used at a system level (beyond the scope of just one application).</p>
 
 <p>To create a new FEI allocation, use the following Python code (assuming an FEI device is running, in this case, the FmRdsSimulator):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> frontend
@@ -1456,9 +1486,9 @@ ga('send', 'pageview');
 
 <p>The Allocation Manager uses the parameters <code>requestId</code> and <code>sourceId</code> to help manage the allocations. For example, in complex systems with multiple subsystems, to manage all the allocation requests for a single application, <code>requestId</code> would be used. If an allocated device unexpectedly terminates, <code>sourceId</code> can be used to determine which allocations are no longer used by any subsystem and then the allocations can be deallocated. Because such management/cleanup is CONOP-specific, it is outside the scope of REDHAWK and must be implemented by system developers to suit their unique needs and environment.</p>
 
-<p>Once the allocation is formulated, a list of requests can be submitted to the Allocation Manager using the <code>allocate</code> method. The <code>allocate</code> function returns a list of <code>AllocationStatusType</code>. This list contains one status for each successful allocation, along with the original allocation properties requested as well as the resulting allocation id. This <code>AllocationProperties</code> member can be useful when inspecting FEI allocations because it contains the values requested in the allocation. The response also contains the allocation ID (generated by the Allocation Manager to guarantee uniqueness within the context of the Allocation Manager). This is required because requestIds can be duplicated. If the request is successful, it is added to the Allocation Manager’s allocations list.</p>
+<p>Once the allocation is formulated, a list of requests can be submitted to the Allocation Manager using the <code>allocate</code> method. The <code>allocate</code> function returns a list of <code>AllocationStatusType</code>. This list contains one status for each successful allocation, along with the original allocation <a href="../../../manual/glossary/#property">properties</a> requested as well as the resulting Allocation ID. This <code>AllocationProperties</code> member can be useful when inspecting FEI allocations because it contains the values requested in the allocation. The response also contains the Allocation ID (generated by the Allocation Manager to guarantee uniqueness within the context of the Allocation Manager). This is required because requestIds can be duplicated. If the request is successful, it is added to the Allocation Manager’s allocations list.</p>
 
-<p>The following Python code demonstrates a successful allocation using the allocation request in the previous code example. In this case, a response is returned; the response contains the submitted request id. The allocation is then deallocated by using the <code>deallocate</code> function on the Allocation Manager; the only required argument is the allocation ID because that allocation ID is unique to the Allocation Manager.</p>
+<p>The following Python code demonstrates a successful allocation using the allocation request in the previous code example. In this case, a response is returned; the response contains the submitted request ID. The allocation is then deallocated by using the <code>deallocate</code> function on the Allocation Manager; the only required argument is the Allocation ID because that Allocation ID is unique to the Allocation Manager.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> ossie.utils <span style="color:#f92672">import</span> redhawk
  <span style="color:#f92672">&gt;&gt;&gt;</span> domain <span style="color:#f92672">=</span> redhawk<span style="color:#f92672">.</span>attach()
  <span style="color:#f92672">&gt;&gt;&gt;</span> am <span style="color:#f92672">=</span> domain<span style="color:#f92672">.</span>getAllocationMgr()
@@ -1482,7 +1512,7 @@ ga('send', 'pageview');
 
 <h4 id="inspecting-allocations-through-the-python-sandbox">Inspecting Allocations through the Python Sandbox</h4>
 
-<p>To inspect the current allocations through the Python Sandbox:</p>
+<p>To inspect the current allocations through the Python <a href="../../../manual/glossary/#sandbox">sandbox</a>:</p>
 
 <p>First, a reference to the running domain is needed. From the Domain Manager, the Allocation Manager can be retrieved:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> ossie.utils <span style="color:#f92672">import</span> redhawk
@@ -1493,11 +1523,11 @@ ga('send', 'pageview');
  <span style="color:#f92672">&lt;</span>ossie<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>redhawk<span style="color:#f92672">.</span>core<span style="color:#f92672">.</span>App object at <span style="color:#ae81ff">0x33092d0</span><span style="color:#f92672">&gt;</span></code></pre></div>
 <p>In this case, the default <code>basic_components_demo</code> application was selected. This application instance was given the name &ldquo;hello&rdquo; to simplify the subsequent output.</p>
 
-<p>The Allocation Manager tracks which device has a component assigned to it, even if no explicit allocations against the device were made. In the case of <code>basic_components_demo</code>, there are a total of six components on the waveform. Viewing the current allocations on the Allocation Manager yields a list of six allocations:</p>
+<p>The Allocation Manager tracks which device has a <a href="../../../manual/glossary/#component">component</a> assigned to it, even if no explicit allocations against the device were made. In the case of <code>basic_components_demo</code>, there are a total of six components on the <a href="../../../manual/glossary/#waveform">waveform</a>. Viewing the current allocations on the Allocation Manager yields a list of six allocations:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> allocs <span style="color:#f92672">=</span> am<span style="color:#f92672">.</span>allocations()
  <span style="color:#f92672">&gt;&gt;&gt;</span> len(allocs)
  <span style="color:#ae81ff">6</span></code></pre></div>
-<p>Each allocation description returned is a <code>CF.AllocationManager.AllocationStatusType</code> instance, which contains the allocation ID,  requesting domain, any properties allocated, the device that satisfied the allocation, the Device Manager that hosts the device that satisfied the allocation, and the ID for the requester for the allocation.</p>
+<p>Each allocation description returned is a <code>CF.AllocationManager.AllocationStatusType</code> instance, which contains the Allocation ID,  requesting domain, any properties allocated, the device that satisfied the allocation, the <a href="../../../manual/glossary/#device-manager">Device Manager</a> that hosts the device that satisfied the allocation, and the ID for the requester for the allocation.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> allocs[<span style="color:#ae81ff">0</span>]
  CF<span style="color:#f92672">.</span>AllocationManager<span style="color:#f92672">.</span>AllocationStatusType(allocationID<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;DCE:15c3ad3e-dbfa-48b6-b0d7-c12b450f9806&#39;</span>, requestingDomain<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;REDHAWK_DEV&#39;</span>, allocationProperties<span style="color:#f92672">=</span>[], allocatedDevice<span style="color:#f92672">=&lt;</span>ossie<span style="color:#f92672">.</span>cf<span style="color:#f92672">.</span>CF<span style="color:#f92672">.</span>_objref_ExecutableDevice object at <span style="color:#ae81ff">0x28cc110</span><span style="color:#f92672">&gt;</span>, allocationDeviceManager<span style="color:#f92672">=&lt;</span>ossie<span style="color:#f92672">.</span>cf<span style="color:#f92672">.</span>CF<span style="color:#f92672">.</span>_objref_DeviceManager object at <span style="color:#ae81ff">0x28cc250</span><span style="color:#f92672">&gt;</span>, sourceID<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;DCE:d4d99400-1a11-11e5-a6ce-3417ebc4aab5:hello_1&#39;</span>)
  <span style="color:#f92672">&gt;&gt;&gt;</span> allocs[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>allocationProperties
@@ -1511,13 +1541,26 @@ ga('send', 'pageview');
 <p>To inspect the current allocations using the IDE:</p>
 
 <ol>
-<li><p>In the REDHAWK Explorer view, right-click a Domain Manager and select <strong>Allocation Manager</strong>.</p>
+<li><p>In the <a href="../../../manual/glossary/#redhawk-explorer-view">REDHAWK Explorer view</a>, right-click a Domain Manager and select <strong>Allocation Manager</strong>.</p>
 
-<p>The Allocation Manager view is displayed. The following figure displays the allocation manager view based on the results of following the instructions in <a href="#inspecting-allocations-through-the-python-sandbox">Inspecting Allocations through the Python Sandbox</a></p>
+<p>The Allocation Manager view is displayed. The following figure displays the Allocation Manager view based on the results of following the instructions in <a href="#inspecting-allocations-through-the-python-sandbox">Inspecting Allocations through the Python Sandbox</a></p>
 
-<h5 id="allocation-manager">Allocation Manager</h5>
 
-<p><img src="../images/AllocationManager.png" alt="Allocation Manager" /></p></li>
+<figure >
+    
+        <img src="../images/AllocationManager.png" alt="Allocation Manager" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Allocation Manager</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>To view the allocation properties associated with an allocation, select the allocation in the Allocation Manager view.</p>
 
@@ -1525,17 +1568,30 @@ ga('send', 'pageview');
 
 <p>The following figure displays the allocation properties from an FEI device allocation.</p>
 
-<h5 id="allocation-manager-properties">Allocation Manager Properties</h5>
 
-<p><img src="../images/AllocMgrPropertiesView.png" alt="Allocation Manager Properties" /></p></li>
+<figure >
+    
+        <img src="../images/AllocMgrPropertiesView.png" alt="Allocation Manager Properties" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Allocation Manager Properties</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>To view the device associated with an allocation, from the Allocation Manager view, right-click the allocation and select <strong>Find Device</strong>.</p>
 
-<p>The device is highlighted in the REDHAWK Explorer View.</p></li>
+<p>The device is highlighted in the REDHAWK Explorer view.</p></li>
 
 <li><p>To view the Device Manager associated with an allocation, from the Allocation Manager view, right-click the allocation and select <strong>Find Device Manager</strong>.</p>
 
-<p>The Device Manager is highlighted in the REDHAWK Explorer View.</p></li>
+<p>The Device Manager is highlighted in the REDHAWK Explorer view.</p></li>
 </ol>
 
 <h4 id="delegating-allocations">Delegating Allocations</h4>
@@ -1573,6 +1629,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/runtime-environment/allocation-manager.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

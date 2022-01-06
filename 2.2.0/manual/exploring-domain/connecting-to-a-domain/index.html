@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Connecting to a Domain :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/exploring-domain/connecting-to-a-domain/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item parent haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1370,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option> 
@@ -1379,20 +1408,21 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Connecting to a Domain</h1>
+    <h2 class="title">Connecting to a Domain</h2>
+
     
     
     
     
 
-<p>In the IDE, you can launch and connect to a domain through the IDE interface or connect to a running domain.</p>
+<p>In the IDE, you can launch and connect to a <a href="../../../manual/glossary/#domain">domain</a> through the IDE interface or connect to a running domain.</p>
 
 <p>You can also <a href="../../../manual/runtime-environment/domain-manager/#launching-a-domain-manager-from-the-command-line">launch a domain and Device Manager from the command line</a>.</p>
 
@@ -1401,27 +1431,51 @@ ga('send', 'pageview');
 <p>The following procedure explains how to launch and connect to a domain through the IDE.</p>
 
 <ol>
-<li><p>In the <strong>REDHAWK Explorer View</strong>, right-click <strong>Target SDR</strong> and select <strong>Launch Domain…</strong></p>
+<li><p>In the <a href="../../../manual/glossary/#redhawk-explorer-view"><strong>REDHAWK Explorer</strong> view</a>, right-click <strong><a href="../../../manual/glossary/#target-sdr">Target SDR</a></strong> and select <strong>Launch Domain…</strong>
 
-<h5 id="launching-a-domain">Launching a Domain</h5>
+<figure >
+    
+        <img src="../images/REDHAWK_Launch_domain.png" alt="Launching a Domain" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Launching a Domain</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/REDHAWK_Launch_domain.png" alt="Launching a Domain" /></p>
 
-<p>The <strong>Launch Domain Manager</strong> window is displayed:</p>
 
-<h5 id="launch-domain-manager">Launch Domain Manager</h5>
+</p>
 
-<p><img src="../images/SelectDomMgr.png" alt="Launch Domain Manager Window" /></p></li>
+<p>The <strong>Launch Domain Manager</strong> window is displayed:
+
+<figure >
+    
+        <img src="../images/SelectDomMgr.png" alt="Launch Domain Manager Window" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Launch Domain Manager Window</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>In the <strong>Domain Name</strong> field, enter a name.</p></li>
 
-<li><p>Optionally, select a Device Manager to start.</p>
+<li><p>Optionally, select a <a href="../../../manual/glossary/#device-manager">Device Manager</a> to start.</p>
 
-<div class="notices note" ><p>A running Device Manager is required to launch applications.</p>
+<div class="notices note" ><p>A running Device Manager is required to launch <a href="../../../manual/glossary/#application">applications</a>.</p>
 </div>
 </li>
 
-<li><p>Optionally, in either the Domain Manager or Device Manager section, select a <strong>Debug Level</strong>. By default, the <strong>Debug Level</strong> is set to <strong>Info</strong>, which displays any messages at the <strong>Info</strong> level or higher: (<strong>Info</strong>, <strong>Warn</strong>, <strong>Error</strong>, and <strong>Fatal</strong> message levels). If this is the first time using REDHAWK, changing the <strong>Debug Level</strong> from <strong>Info</strong> to <strong>Debug</strong> for both the domain and Device Manager may be helpful in the learning process.</p></li>
+<li><p>Optionally, in either the <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> or Device Manager section, select a <strong>Debug Level</strong>. By default, the <strong>Debug Level</strong> is set to <strong>Info</strong>, which displays any messages at the <strong>Info</strong> level or higher: (<strong>Info</strong>, <strong>Warn</strong>, <strong>Error</strong>, and <strong>Fatal</strong> message levels). If this is the first time using REDHAWK, changing the <strong>Debug Level</strong> from <strong>Info</strong> to <strong>Debug</strong> for both the domain and Device Manager may be helpful in the learning process.</p></li>
 
 <li><p>Optionally, in either the Domain Manager or Device Manager section, select <strong>Arguments</strong> for the <code>nodeBooter</code> process. This option is provided to advanced users who are comfortable with <a href="../../../manual/runtime-environment/">command line options</a>.</p></li>
 
@@ -1430,60 +1484,96 @@ ga('send', 'pageview');
 <li><p>Notice that the IDE reacts to the newly launched domain:</p>
 
 <ol>
-<li><p>The new domain has been added to the <strong>REDHAWK Explorer View</strong></p></li>
+<li><p>The new domain has been added to the <strong>REDHAWK Explorer</strong> view</p></li>
 
-<li><p>The new domain, within a short amount of time, is connected and this connection is indicated to the right of the domain name within the <strong>REDHAWK Explorer View</strong>.</p></li>
+<li><p>The new domain, within a short amount of time, is connected and this connection is indicated to the right of the domain name within the <strong>REDHAWK Explorer</strong> view.</p></li>
 
-<li><p>At least one new <strong>Console</strong> view (within the&rdquo; IDE) has been created. One contains a <code>nodeBooter</code> instance for the Domain Manager that launched and one <code>nodeBooter</code> instance for each Device Manager.</p></li>
+<li><p>At least one new <a href="../../../manual/glossary/#console-view">Console view</a> (within the IDE) has been created. One contains a <code>nodeBooter</code> instance for the Domain Manager that launched and one <code>nodeBooter</code> instance for each Device Manager.
+
+<figure >
+    
+        <img src="../images/REDHAWK_Domain_Console.png" alt="Console showing the Domain Manager start up with debug logging and the available Device Manager console" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Console Showing the Domain Manager Start Up</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 </ol></li>
 </ol>
-
-<h5 id="console-showing-the-domain-manager-start-up">Console Showing the Domain Manager Start Up</h5>
-
-<p><img src="../images/REDHAWK_Domain_Console.png" alt="Console showing the Domain Manager start up with debug logging and the available Device Manager console" /></p>
 
 <h3 id="connecting-to-a-running-domain">Connecting to a Running Domain</h3>
 
 <p>To connect to a running domain through the IDE use the following procedure:</p>
 
 <ol>
-<li><p>Click the <strong>New Domain Connection</strong> button (i.e. the plus symbol) in the upper right of the REDHAWK Explorer View.</p>
+<li><p>Click the <strong>New Domain Connection</strong> button (i.e. the plus symbol) in the upper right of the <strong>REDHAWK Explorer</strong> view.
 
-<h5 id="new-domain-connection">New Domain Connection</h5>
+<figure >
+    
+        <img src="../images/NewDomainConnection.png" alt="New Domain Connection Button" />
+    
+    
+    <figcaption>
+        <h5 class=figure >New Domain Connection Button</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/NewDomainConnection.png" alt="New Domain Connection Button" /></p>
 
-<p>The <strong>New Domain Manager</strong> dialog is displayed:</p>
 
-<h5 id="new-domain-manager">New Domain Manager</h5>
+</p>
 
-<p><img src="../images/REDHAWK_New_Domain_Wizard.png" alt="New Domain Manager Dialog" /></p></li>
+<p>The <strong>New Domain Manager</strong> dialog is displayed:
 
-<li><p>Enter the Name Service. This is the CORBA URI of the Naming Service where the domain is registered. By default, this is populated with the value from the IDE’s preferences (set by selecting <strong>Window &gt; Preferences</strong>, <strong>REDHAWK &gt; Domain Connections</strong>, <strong>Default Naming Service</strong>).</p></li>
+<figure >
+    
+        <img src="../images/REDHAWK_New_Domain_Wizard.png" alt="New Domain Manager Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >New Domain Manager Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<li><p>To specify the domain to which you want to connect, chose one of the following options:</p>
+
+
+</p></li>
+
+<li><p>Enter the <a href="../../../manual/glossary/#naming-service"><strong>Name Service</strong></a>. This is the CORBA URI of the Naming Service where the domain is registered. By default, this is populated with the value from the IDE’s preferences (set by selecting <strong>Window &gt; Preferences</strong>, <strong>REDHAWK &gt; Domain Connections</strong>, <strong>Default Naming Service</strong>).</p></li>
+
+<li><p>To specify the domain to which you want to connect, enter a domain name or click the + button and select a running domain. The domain name is the actual name of the domain in the Naming Service.</p></li>
+
+<li><p>Optionally, enter a different display name. The display name is used only in the IDE and does not need to match the domain name.</p>
 
 <ul>
-<li><p>Enter a <strong>Display Name</strong> and a <strong>Domain Name</strong>. The Display Name is a used only in the IDE and does not need to match the Domain Name. The Domain Name is the actual name of the domain in the Naming Service.</p></li>
-
-<li><p>Wait for the IDE to scan the name service for running domains. When the button next to <strong>Display Name</strong> shows a + icon, click it and select a running domain from the list.</p></li>
+<li>Wait for the IDE to scan the Name Service for running domains. When the button next to <strong>Display Name</strong> shows a + icon, click it and select a running domain from the list.</li>
 </ul></li>
 
 <li><p>Click one of the following options under <strong>Connection Settings</strong>:</p>
 
 <ul>
-<li><p><strong>Don’t connect</strong>: This adds the domain to the <strong>REDHAWK Explorer View</strong> but leaves the domain in the disconnected state. When the IDE is restarted, the domain remains in the <strong>REDHAWK Explorer</strong> and is in the disconnected state. After adding a disconnected domain to the <strong>REDHAWK Explorer View</strong>, the domain may be connected by right-clicking the domain and selecting <strong>Connect</strong>.</p></li>
+<li><p><strong>Don’t connect</strong>: This adds the domain to the <strong>REDHAWK Explorer</strong> view but leaves the domain in the disconnected state. When the IDE is restarted, the domain remains in the <a href="../../../manual/glossary/#redhawk-explorer"><strong>REDHAWK Explorer</strong></a> and is in the disconnected state. After adding a disconnected domain to the <strong>REDHAWK Explorer</strong> view, the domain may be connected by right-clicking the domain and selecting <strong>Connect</strong>.</p></li>
 
-<li><p><strong>Connect Once</strong>: This adds the domain to the <strong>REDHAWK Explorer View</strong> and connects the IDE with the domain. When the <strong>REDHAWK IDE</strong> is restarted, the domain remains in the <strong>REDHAWK Explorer</strong> but is in the disconnected state.</p></li>
+<li><p><strong>Connect Once</strong>: This adds the domain to the <strong>REDHAWK Explorer</strong> view and connects the IDE with the domain. When the <strong>REDHAWK IDE</strong> is restarted, the domain remains in the <strong>REDHAWK Explorer</strong> but is in the disconnected state.</p></li>
 
-<li><p><strong>Always Connect</strong>: This adds the domain to the <strong>REDHAWK Explorer View</strong> and connects the IDE with the domain. When the <strong>REDHAWK IDE</strong> is restarted, the domain remains in the <strong>REDHAWK Explorer</strong> and attempts to connect with this domain.</p></li>
+<li><p><strong>Always Connect</strong>: This adds the domain to the <strong>REDHAWK Explorer</strong> view and connects the IDE with the domain. When the <strong>REDHAWK IDE</strong> is restarted, the domain remains in the <strong>REDHAWK Explorer</strong> and attempts to connect with this domain.</p></li>
 </ul></li>
 
 <li><p>Select <strong>Finish</strong> to close the wizard.</p></li>
 
-<li><p>The domain now appears in the <strong>REDHAWK Explorer View</strong>. If <strong>Connect Once</strong> or <strong>Always Connect</strong> was chosen, the domain is connected. If <strong>Don’t Connect</strong> was selected, right-click the domain and select <strong>Connect</strong>.</p>
+<li><p>The domain now appears in the <strong>REDHAWK Explorer</strong> view. If <strong>Connect Once</strong> or <strong>Always Connect</strong> was chosen, the domain is connected. If <strong>Don’t Connect</strong> was selected, right-click the domain and select <strong>Connect</strong>.</p>
 
-<div class="notices tip" ><p>Many of these options may be changed later through the Properties View.</p>
+<div class="notices tip" ><p>Many of these options may be changed later through the <a href="../../../manual/glossary/#properties-view"><strong>Properties</strong> view</a>.</p>
 </div>
 </li>
 </ol>
@@ -1509,6 +1599,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/exploring-domain/connecting-to-a-domain.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

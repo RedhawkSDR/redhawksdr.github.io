@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
-<title>Data Transfers :: REDHAWK</title>
+<meta name="generator" content="Hugo 0.36" />
+<title>pushPacket Data Flow :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../../../css/nucleus.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/connections/bulkio/data-transfers/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -313,10 +313,10 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item active">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -327,10 +327,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item active">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -509,6 +516,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -524,7 +537,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -580,12 +593,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1323,9 +1352,10 @@ ga('send', 'pageview');
     <option value="/manual/connections/bulkio/" >
   -- 
    BulkIO</option> 
-      <option value="/manual/connections/bulkio/data-transfers/"  selected>--- Data Transfers</option>
-      <option value="/manual/connections/bulkio/sri/" >--- Signal Related Information (SRI)</option>
       <option value="/manual/connections/bulkio/stream-api/" >--- Stream API</option>
+      <option value="/manual/connections/bulkio/sri/" >--- Signal Related Information (SRI)</option>
+      <option value="/manual/connections/bulkio/attachablestreams/" >--- Attachable Streams</option>
+      <option value="/manual/connections/bulkio/data-transfers/"  selected>--- pushPacket Data Flow</option>
       <option value="/manual/connections/bulkio/bit-data/" >--- Bit Data</option>
       <option value="/manual/connections/bulkio/multiout-ports/" >--- Multi-out Ports</option>
       <option value="/manual/connections/bulkio/working-with-complex-data/" >--- Working with Complex Data</option>
@@ -1345,12 +1375,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1369,12 +1399,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1400,26 +1430,43 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Data Transfers</h1>
+    <h2 class="title">pushPacket Data Flow</h2>
+
     
     
     
     
 
-<p>Data transfers happen through the <code>pushPacket()</code> method call of a REDHAWK component’s port object. This method transfers the data from the uses-side port to the corresponding connected provides-side port. The data is marshaled by the middleware (omniORB) and placed on a queue for processing by the receiving component. The implementations of the <code>pushPacket()</code> methods are maximized for the efficiency of data throughput while providing network-accessible ingest/egress of data and minimizing the complexity of the implementation.</p>
+<div class="notices note" ><p>It is strongly recommended that for BulkIO data in C++ and Python, you use the Bulk Input/Output (BulkIO) stream API, which provides a high-level interface to sending and receiving data via BulkIO <a href="../../../../manual/glossary/#port">ports</a>. For more information, refer to <a href="../../../../manual/connections/bulkio/stream-api/">Stream API</a> and the Shared Address information in the <a href="https://redhawksdr.github.io/technical-notes/">Technical Notes</a>.</p>
+</div>
 
-<h5 id="bulkio-data-flow-via-pushpacket">BulkIO Data Flow via <code>pushPacket()</code></h5>
 
-<p><img src="../../images/REDHAWK_bulkio_dataflow.png" alt="bulkio Data Flow via pushPacket()" /></p>
+<p>Data transfers happen through the <code>pushPacket()</code> method call of a REDHAWK <a href="../../../../manual/glossary/#component">component</a>’s <a href="../../../../manual/glossary/#port">port</a> object. This method transfers the data from the uses-side port to the corresponding connected provides-side port. The data is marshaled by the middleware (omniORB) and placed on a queue for processing by the receiving component. The implementations of the <code>pushPacket()</code> methods are maximized for the efficiency of data throughput while providing network-accessible ingest/egress of data and minimizing the complexity of the implementation.
 
-<p>Each implementation maintains the required behavior of providing an SRI object before receiving any data transfers. This is accomplished by calling the <code>pushSRI()</code> method of the port with an SRI object. In most cases, a component takes the ingest SRI object received from an input port, makes any required modifications as necessary, and passes this object down stream over its output port. If a component does not provide an SRI object before its first <code>pushPacket()</code>, the port creates a default SRI object with nominal values to pass out the port.</p>
+<figure class="border">
+    
+        <img src="../../images/REDHAWK_bulkio_dataflow.png" alt="BulkIO Data Flow via pushPacket()" />
+    
+    
+    <figcaption>
+        <h5 class=figure >BulkIO Data Flow via pushPacket()</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
+
+<p>Each implementation maintains the required behavior of providing an Signal Related Information (SRI) object before receiving any data transfers. This is accomplished by calling the <code>pushSRI()</code> method of the port with an SRI object. In most cases, a component takes the ingest SRI object received from an input port, makes any required modifications as necessary, and passes this object down stream over its output port. If a component does not provide an SRI object before its first <code>pushPacket()</code>, the port creates a default SRI object with nominal values to pass out the port.</p>
 
 <p>The following sections explain the different methods for transferring supported data types by a component.</p>
 
@@ -1449,6 +1496,8 @@ pkt <span style="color:#f92672">=</span> inFloatPort<span style="color:#f92672">
 }
 
 ...   perform some algorithm on the data:  pkt<span style="color:#f92672">-&gt;</span>dataBuffer ...</code></pre></div>
+<p>The following table describes <code>DataTransfer</code> members.</p>
+
 <h5 id="datatransfer-member-descriptions">DataTransfer Member Descriptions</h5>
 
 <table>
@@ -1488,7 +1537,7 @@ pkt <span style="color:#f92672">=</span> inFloatPort<span style="color:#f92672">
 <tr>
 <td align="left">SRI</td>
 <td align="left"><code>BULKIO::StreamSRI</code></td>
-<td align="left">The Signal Related Information (metadata) associated with the buffer of data.</td>
+<td align="left">The SRI (metadata) associated with the buffer of data.</td>
 </tr>
 
 <tr>
@@ -1505,13 +1554,21 @@ pkt <span style="color:#f92672">=</span> inFloatPort<span style="color:#f92672">
 </tbody>
 </table>
 
-<p>The following code snippet is an example of the <code>pushPacket()</code> method call for vector data with sample parameters. The <code>pushPacket()</code> parameters for vector data are described in the table below.</p>
+<p>A queue flush condition occurs when the number of packets in the queue exceeds the queue depth.
+When a flush occurs, each stream in the queue is replaced with a single packet.
+Each packet contains the last data payload and corresponding timestamp as well as any SRI changes, queue flush, and EOS indications that may have occurred for that stream.
+If a stream contains only a single data packet when the flush occurs, that stream does not have its inputQueueFlushed flag set because no data was lost.
+If a stream identifier occurs multiple times (Stream ID reuse), each of these streams contains a single packet with the proper data payload, time stamp, SRI changes, queue flush, and EOS indicators.</p>
+
+<p>The following code snippet is an example of the <code>pushPacket()</code> method call for vector data with sample parameters.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">short</span><span style="color:#f92672">&gt;</span> data;
 
 ...  perform algorithm and save results to data vector ...
 
 BULKIO<span style="color:#f92672">::</span>PrecisionUTCTime tstamp <span style="color:#f92672">=</span> bulkio<span style="color:#f92672">::</span>time<span style="color:#f92672">::</span>utils<span style="color:#f92672">::</span>now();
 outShortPort<span style="color:#f92672">-&gt;</span>pushPacket( data, tstamp, false, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;sample&#34;</span> );</code></pre></div>
+<p>The following table describes <code>pushPacket()</code> parameters for vector data.</p>
+
 <h5 id="pushpacket-parameter-descriptions-for-vector-data"><code>pushPacket()</code> Parameter Descriptions for Vector Data</h5>
 
 <table>
@@ -1552,12 +1609,14 @@ outShortPort<span style="color:#f92672">-&gt;</span>pushPacket( data, tstamp, fa
 
 <h3 id="string-data-xml-document">String Data/XML Document</h3>
 
-<p>The following code snippet is an example of the <code>pushPacket()</code> method call for string data with sample parameters. The <code>pushPacket()</code> parameters for string data are described in the table below.</p>
+<p>The following code snippet is an example of the <code>pushPacket()</code> method call for string data with sample parameters.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>string data;
 
 ... generate some text data to transfer ...
 
 outStringPort<span style="color:#f92672">-&gt;</span>pushPacket( data.c_str(), false, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;sample&#34;</span> );</code></pre></div>
+<p>The following table describes <code>pushPacket()</code> parameters for string data.</p>
+
 <h5 id="pushpacket-parameter-descriptions-for-string-data"><code>pushPacket()</code> Parameter Descriptions for String Data</h5>
 
 <table>
@@ -1592,7 +1651,7 @@ outStringPort<span style="color:#f92672">-&gt;</span>pushPacket( data.c_str(), f
 
 <h3 id="url-file-data">URL/File Data</h3>
 
-<p>The following code snippet is an example of the <code>pushPacket()</code> method call for file transfers with sample parameters. The <code>pushPacket()</code> parameters for file transfers are described in the table below.</p>
+<p>The following code snippet is an example of the <code>pushPacket()</code> method call for file transfers with sample parameters.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">std<span style="color:#f92672">::</span>string uri;
 
 uri <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;file:///data/samples.8t&#34;</span>;
@@ -1601,6 +1660,8 @@ uri <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><spa
 
 BULKIO<span style="color:#f92672">::</span>PrecisionUTCTime tstamp <span style="color:#f92672">=</span> bulkio<span style="color:#f92672">::</span>time<span style="color:#f92672">::</span>utils<span style="color:#f92672">::</span>now();
 outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstamp, false, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;sample&#34;</span> );</code></pre></div>
+<p>The following table describes <code>pushPacket()</code> parameters for file transfers.</p>
+
 <h5 id="pushpacket-parameter-descriptions-for-file-transfers"><code>pushPacket()</code> Parameter Descriptions for File Transfers</h5>
 
 <table>
@@ -1616,7 +1677,7 @@ outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstam
 <tr>
 <td align="left">url</td>
 <td align="left"><code>string</code></td>
-<td align="left">The URL describing the file. Appropriate schemes for the URLs are file:// and sca://. The file scheme applies to the local file system, while the SCA scheme applies to the SCA File Manager.</td>
+<td align="left">The URL describing the file. Appropriate schemes for the URLs are file:// and sca://. The file scheme applies to the local file system, while the sca scheme applies to the Software Communications Architecture (SCA) <a href="../../../../manual/glossary/#file-manager">File Manager</a>.</td>
 </tr>
 
 <tr>
@@ -1639,9 +1700,13 @@ outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstam
 </tbody>
 </table>
 
-<p>Data files may be sent via the BulkIO <code>dataFile</code> type. When using the BulkIO <code>dataFile</code> type, a filename is passed to the <code>pushPacket()</code> method. The location of the file is specified by a URI that either points to the local file system or the SDR file system. To support portability, use of the SDR file system is recommended. The table below describes the URI options in greater detail.</p>
+<p>Data files may be sent via the Bulk Input/Output (BulkIO) <code>dataFile</code> type. When using the BulkIO <code>dataFile</code> type, a filename is passed to the <code>pushPacket()</code> method. The location of the file is specified by a URI that either points to the local file system or the Software-Defined Radio (SDR) file system. To support portability, use of the SDR file system is recommended.</p>
 
 <h4 id="uri-options">URI Options</h4>
+
+<p>The following table describes the URI path options.</p>
+
+<h5 id="uri-options-1">URI Options</h5>
 
 <table>
 <thead>
@@ -1656,143 +1721,13 @@ outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstam
 <tr>
 <td align="left">file</td>
 <td align="left"><code>file://[localhost]/&lt;path&gt;</code></td>
-<td align="left">A host specific absolute path of the deployed component/device/service.</td>
+<td align="left">A host specific absolute path of the deployed component/device/<a href="../../../../manual/glossary/#service">service</a>.</td>
 </tr>
 
 <tr>
 <td align="left">sdr</td>
 <td align="left"><code>sdr://[ior]/&lt;path&gt;</code></td>
-<td align="left">A path on the Domain Manager’s file system. If the optional IOR is provided, this path provides the reference to the Domain Manager. If not provided, the Domain Manager is the default used by the component/device/service</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="sdds-stream-definition">SDDS Stream Definition</h3>
-
-<p>The SDDS Stream Definition object defines a multicast connection source for data from a network interface. The methods for the SDDS Stream Definition Interface do not follow the normal BulkIO <code>pushPacket()</code> convention. Instead this interface defines <code>attach()</code> and <code>detach()</code> methods as described in the code snippet and tables below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">/**
-</span><span style="color:#75715e"> *  SDDS Stream Definition Interface
-</span><span style="color:#75715e"> */</span>
-
-<span style="color:#75715e">/**
-</span><span style="color:#75715e">  *  attach : request to an attachment to a specified network data source
-</span><span style="color:#75715e">  */</span>
-<span style="color:#66d9ef">char</span>  <span style="color:#f92672">*</span><span style="color:#a6e22e">attach</span>( BULKIO<span style="color:#f92672">::</span>SDDSStreamDefinition stream, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> userid );
-
-<span style="color:#75715e">/**
-</span><span style="color:#75715e">  * detach: unlatch from a network data source
-</span><span style="color:#75715e">  */</span>
-<span style="color:#66d9ef">void</span>  <span style="color:#a6e22e">detach</span>( <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> attachId );</code></pre></div>
-<h5 id="char-attach"><code>char* attach()</code></h5>
-
-<table>
-<thead>
-<tr>
-<th align="left"><strong>Name</strong></th>
-<th align="left"><strong>Type</strong></th>
-<th align="left"><strong>Description</strong></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">return value</td>
-<td align="left">char*</td>
-<td align="left">Attachment identifier assigned to this request.</td>
-</tr>
-
-<tr>
-<td align="left">stream</td>
-<td align="left">SDDSStreamDefinition</td>
-<td align="left">Stream definition object describing a multicast address (<a href="#sdds-stream-definition-member-descriptions">SDDS Stream Definition Member Descriptions</a>).</td>
-</tr>
-
-<tr>
-<td align="left">userid</td>
-<td align="left">const char*</td>
-<td align="left">Identification for the request of the attach call.</td>
-</tr>
-</tbody>
-</table>
-
-<h5 id="void-detach"><code>void detach()</code></h5>
-
-<table>
-<thead>
-<tr>
-<th align="left"><strong>Name</strong></th>
-<th align="left"><strong>Type</strong></th>
-<th align="left"><strong>Description</strong></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">attachId</td>
-<td align="left">char*</td>
-<td align="left">Attachment identifier returned from attach request.</td>
-</tr>
-</tbody>
-</table>
-
-<h5 id="sdds-stream-definition-member-descriptions">SDDS Stream Definition Member Descriptions</h5>
-
-<table>
-<thead>
-<tr>
-<th align="left"><strong>Name</strong></th>
-<th align="left"><strong>Type</strong></th>
-<th align="left"><strong>Description</strong></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">ID</td>
-<td align="left">string</td>
-<td align="left">Unique identifier for the source stream.</td>
-</tr>
-
-<tr>
-<td align="left">dataFormat</td>
-<td align="left">SDDSDataDigraph</td>
-<td align="left">Data format of the data stream samples.</td>
-</tr>
-
-<tr>
-<td align="left">multicastAddress</td>
-<td align="left">string</td>
-<td align="left">IPv4 network address in dot notation form.</td>
-</tr>
-
-<tr>
-<td align="left">vlan</td>
-<td align="left">unsigned long</td>
-<td align="left">Virtual lan identifier as defined by 802.11q.</td>
-</tr>
-
-<tr>
-<td align="left">port</td>
-<td align="left">unsigned long</td>
-<td align="left">IP port number associated with the network connection.</td>
-</tr>
-
-<tr>
-<td align="left">sampleRate</td>
-<td align="left">unsigned long</td>
-<td align="left">Expected sample rate for the data.</td>
-</tr>
-
-<tr>
-<td align="left">timeTagValid</td>
-<td align="left">boolean</td>
-<td align="left">Denotes if data stream can provide valid time stamp values.</td>
-</tr>
-
-<tr>
-<td align="left">privateInfo</td>
-<td align="left">string</td>
-<td align="left">Allows for user-defined values to be passed as a string.</td>
+<td align="left">A path on the <a href="../../../../manual/glossary/#domain-manager">Domain Manager</a>’s file system. If the optional <code>ior</code> is provided, this path provides the reference to the Domain Manager. If not provided, the Domain Manager is the default used by the component/device/service</td>
 </tr>
 </tbody>
 </table>
@@ -1802,8 +1737,8 @@ outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstam
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../../manual/connections/bulkio/" title="BulkIO"> <i class="fa fa-chevron-left"></i><label>BulkIO</label></a>
-    <a class="nav nav-next" href="../../../../manual/connections/bulkio/sri/" title="Signal Related Information (SRI)" style="margin-right: 0px;"><label>Signal Related Information (SRI)</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="../../../../manual/connections/bulkio/attachablestreams/" title="Attachable Streams"> <i class="fa fa-chevron-left"></i><label>Attachable Streams</label></a>
+    <a class="nav nav-next" href="../../../../manual/connections/bulkio/bit-data/" title="Bit Data" style="margin-right: 0px;"><label>Bit Data</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -1818,6 +1753,10 @@ outURLPort<span style="color:#f92672">-&gt;</span>pushPacket( uri.c_str(), tstam
 
   
 
+    <div class="github-link">
+      <a href="manual/connections/bulkio/data-transfers.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

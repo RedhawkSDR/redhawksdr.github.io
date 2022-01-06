@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Port Monitor View :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/editors-and-views/port-monitor-view/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1371,12 +1400,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1402,60 +1431,96 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Port Monitor View</h1>
+    <h2 class="title">Port Monitor View</h2>
+
     
     
     
     
 
-<p>The <strong>Port Monitor</strong> view enables you to monitor the amount of data flowing out of or into a particular port. These statistics are helpful when debugging and can help identify which component is slowing down or dropping information during data processing.</p>
+<p>The Port Monitor view enables you to monitor the amount of data flowing out of or into a particular <a href="../../../../manual/glossary/#port">port</a>. These statistics are helpful when debugging and can help identify which <a href="../../../../manual/glossary/#component">component</a> is slowing down or dropping information during data processing.</p>
 
-<p>To open the <strong>Port Monitor</strong> view, right-click the port of a started component and select <strong>Monitor Ports</strong> from the context menu:</p>
+<p>To open the Port Monitor view, right-click the port of a started component and select <strong>Monitor Ports</strong> from the context menu:
 
-<h5 id="port-context-menu">Port Context Menu</h5>
+<figure >
+    
+        <img src="../../images/MonitorPortMenu.png" alt="The Port Context Menu" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Port Context Menu</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/MonitorPortMenu.png" alt="The Port Context Menu" /></p>
 
-<p>The <strong>Port Monitor</strong> view is opened:</p>
 
-<h5 id="port-monitor-view">Port Monitor View</h5>
+</p>
 
-<p><img src="../../images/portMonitorView.png" alt="Port Monitor View" /></p>
+<p>The Port Monitor view is opened:
 
-<p>The View displays the following information:</p>
+<figure >
+    
+        <img src="../../images/portMonitorView.png" alt="The Port Monitor View with Monitor Ports Selected" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Port Monitor View</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
+
+<p>The view displays the following information:</p>
 
 <ul>
 <li><strong>Name</strong>: The name of the port or port connection.</li>
 <li><strong>Elements/sec</strong>: The rate of elements transferred in the pushPacket data call.</li>
 <li><strong>Bytes/sec</strong>: Bytes transferred per second.</li>
 <li><strong>Calls/sec</strong>: Number of push calls per second to the port.</li>
-<li><strong>Stream ID(s)</strong>: List of all active stream ids.</li>
+<li><strong>Stream ID(s)</strong>: List of all active Stream IDs.</li>
 <li><strong>Avg. Queue Depth</strong>: For components that queue data before processing/sending, the average queue depth measured as a percentage. If a port does not queue data, this value is set to zero.</li>
 <li><strong>Time</strong>: The elapsed time, in seconds, since the last packet was transferred via a push packet call.</li>
 </ul>
 
-<p>The following actions are available in the <strong>Port Monitor</strong> view.</p>
+<p>The following actions are available in the Port Monitor view.</p>
 
 <ol>
-<li><p>To Configure the <strong>Port Monitor</strong> view:</p>
+<li><p>To Configure the Port Monitor view:</p>
 
 <ul>
-<li>Click the <strong>View Menu</strong>.</li>
-<li>Select <strong>Configure</strong>.</li>
+<li>From the View menu, select Configure.</li>
 </ul>
 
-<p>The Port Monitor Configuration dialog box is displayed.</p>
+<p>The Port Monitor Configuration dialog box is displayed.
 
-<h5 id="port-monitor-configuration-dialog">Port Monitor Configuration Dialog</h5>
+<figure >
+    
+        <img src="../../images/configuration.png" alt="The Port Monitor Configuration Dialog Box" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Port Monitor Configuration Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/configuration.png" alt="The Port Monitor Configuration Dialog Box" /></p>
+
+
+</p>
 
 <p>The following options can be configured:</p>
 
@@ -1515,6 +1580,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/editors-and-views/port-monitor-view.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

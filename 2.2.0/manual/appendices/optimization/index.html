@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Optimization :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/optimization/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1370,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1364,7 +1393,9 @@ ga('send', 'pageview');
       <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
       <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
       <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
-      <option value="/manual/appendices/troubleshooting/" >-- Troubleshooting</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
       <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
       <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
   
@@ -1387,26 +1418,27 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Optimization</h1>
+    <h2 class="title">Optimization</h2>
+
     
     
     
     
 
-<p>As a system framework, REDHAWK is affected by system settings beyond the scope of REDHAWK. System optimization is sensitive to the set of applications that the system is intended to support. However, there are some simple settings that can apply to a wide set of applications. This chapter describes some of the effects of these generalized settings.</p>
+<p>As a system framework, REDHAWK is affected by system settings beyond the scope of REDHAWK. System optimization is sensitive to the set of <a href="../../../manual/glossary/#application">applications</a> that the system is intended to support. However, there are some simple settings that can apply to a wide set of applications. This chapter describes some of the effects of these generalized settings.</p>
 
 <h2 id="configuring-omniorb">Configuring omniORB</h2>
 
-<p>By default, omniORB configuration relies on the loopback interface of the operating system. While easy to use and manage, the loopback interface is not the fastest default transport that omniORB supports. omniORB also supports Linux Domain Sockets. Linux Domain Sockets are configured through the omniORB configuration file (/etc/omniORB.cfg).</p>
+<p>By default, omniORB configuration relies on the loopback interface of the operating system. While easy to use and manage, the loopback interface is not the fastest default transport that omniORB supports. omniORB also supports Unix domain sockets. Unix domain sockets are configured through the omniORB configuration file (/etc/omniORB.cfg).</p>
 
-<p>The following steps explain how to configure Linux Domain Sockets.</p>
+<p>The following steps explain how to configure Unix domain sockets.</p>
 
 <div class="notices note" ><p>Root permissions are required to perform the following steps.</p>
 </div>
@@ -1417,25 +1449,25 @@ ga('send', 'pageview');
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">endPoint <span style="color:#f92672">=</span> giop:tcp:127.0.0.1:
          <span style="color:#f92672">=</span> giop:tcp:&lt;computer IP address&gt;:
          <span style="color:#f92672">=</span> giop:unix:</code></pre></div>
-<div class="notices note" ><p>giop(General Inter-ORB Protocol) is the scheme used by the endpoint. tcp is the transport name followed by an IP address or host name. The port is specified after the last colon. Since no port is specified here, the operating system chooses the port. The Unix transport name uses a filename as the name of the socket in the filesystem. Since a name is not specified here, a name based on the process ID and timestamp is used.</p>
+<div class="notices note" ><p>GIOP (General Inter-ORB Protocol) is the scheme used by the endpoint. TCP is the protocol followed by an IP address or host name. The port is specified after the last colon. Since no port is specified here, the operating system chooses the port. The Unix transport name uses a filename as the name of the socket in the filesystem. Since a name is not specified here, a name based on the process ID and timestamp is used.</p>
 </div>
 </li>
 
-<li><p>Set the endpoints that are published in an object’s IOR by adding the following lines to the endPointPublish section of the file:</p>
+<li><p>Set the endpoints that are published in an object’s Interoperable Object Reference (IOR) by adding the following lines to the endPointPublish section of the file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">endPointPublish <span style="color:#f92672">=</span> all<span style="color:#f92672">(</span>addr<span style="color:#f92672">)</span></code></pre></div>
-<p>After changing these settings, the name and event services must be reset, and their associated log files must be deleted. If the log files are not deleted, they preserve iors that are no longer valid.</p></li>
+<p>After changing these settings, the <a href="../../../manual/glossary/#naming-service">naming</a> and <a href="../../../manual/glossary/#event-service">Event Services</a> must be reset, and their associated log files must be deleted. If the log files are not deleted, they preserve IORs that are no longer valid.</p></li>
 
-<li><p>Use the following command to reset the name and event services and delete the associated log files:</p>
+<li><p>Use the following command to reset the name and Event Services and delete the associated log files:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo $OSSIEHOME/bin/cleanomni</code></pre></div>
 <p>Run this script with the <code>-v</code> or <code>--verbose</code> option to print the cleanup process.</p></li>
 
-<li><p>To verify that Linux Domain Sockets are being used, go to /tmp, and verify that the omni-omni and omni-root directories exist. These two directories contain the files for the Linux Domain Sockets. Given that communications are now over file descriptors, verify that read permissions are open when communicating between objects owned by different users.
+<li><p>To verify that Unix domain sockets are being used, go to /tmp, and verify that the omni-omni and omni-root directories exist. These two directories contain the files for the Unix domain sockets. Given that communications are now over file descriptors, verify that read permissions are open when communicating between objects owned by different users.
 This change in the omniORB configuration greatly improves data transport rates.</p></li>
 </ol>
 
 <h2 id="packet-transfer-size">Packet Transfer Size</h2>
 
-<p>REDHAWK transfers data using BulkIO, which is an RPC mechanism. The size of the data sequence that is passed on each of these calls has an effect on the data rate. The size of the transfer is not controlled by the REDHAWK runtime environment; instead, data producers can pass any arbitrary length less than <code>giopMaxMsgSize</code>.</p>
+<p>REDHAWK transfers data using Bulk Input/Output (BulkIO), which is an RPC mechanism. The size of the data sequence that is passed on each of these calls has an effect on the data rate. The size of the transfer is not controlled by the REDHAWK runtime environment; instead, data producers can pass any arbitrary length less than <code>giopMaxMsgSize</code>.</p>
 
 <p>To demonstrate how throughput is affected by the configuration of omniORB and data transfer size, tests were performed on a system with the specifications shown below.</p>
 
@@ -1467,33 +1499,81 @@ This change in the omniORB configuration greatly improves data transport rates.<
 </tbody>
 </table>
 
-<p>The figure below shows the supported data rate in Giga-bytes per second at different transfer sizes when using the loopback interface (the default setting for omniORB). Data rates on the experiment platform plateau when transfer size approaches approximately 500 kB. Using higher transfer sizes, data rate does not improve, while latency increases. The value at which data rates plateau is system-specific.</p>
+<p>The figure below shows the supported data rate in Giga-bytes per second at different transfer sizes when using the loopback interface (the default setting for omniORB). Data rates on the experiment platform plateau when transfer size approaches approximately 500 kB. Using higher transfer sizes, data rate does not improve, while latency increases. The value at which data rates plateau is system-specific.
 
-<h5 id="throughput-for-bulkio-when-using-the-loopback-interface">Throughput for BulkIO When Using the Loopback Interface</h5>
+<figure >
+    
+        <img src="../../images/loopback.jpg" alt="loopback" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Throughput for BulkIO When Using the Loopback Interface</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/loopback.jpg" alt="loopback" /></p>
 
-<p>Another result derived from this experiment is that there is a substantial impact when the number of component pairs transferring data increases.</p>
 
-<p>By following the steps in <a href="#configuring-omniorb">Configuring omniORB</a>, it is possible to achieve higher data rates. The following figure shows the same experiment as the one shown above, but with omniORB configured for Linux Domain Sockets. The sustained data rates on the computer used in this experiment are roughly four times higher when using Linux Domain Sockets compared to using the loopback interface. Even when heavily loaded, the Linux Domain Socket configuration is as fast or faster than the lightly-loaded loopback configuration.</p>
+</p>
 
-<h5 id="throughput-for-bulkio-when-using-linux-domain-sockets">Throughput for BulkIO When Using Linux Domain Sockets</h5>
+<p>Another result derived from this experiment is that there is a substantial impact when the number of <a href="../../../manual/glossary/#component">component</a> pairs transferring data increases.</p>
 
-<p><img src="../../images/linux_domain_sockets.jpg" alt="linux_domain_sockets" /></p>
+<p>By following the steps in <a href="#configuring-omniorb">Configuring omniORB</a>, it is possible to achieve higher data rates. The following figure shows the same experiment as the one shown above, but with omniORB configured for Unix domain sockets. The sustained data rates on the computer used in this experiment are roughly four times higher when using Unix domain sockets compared to using the loopback interface. Even when heavily loaded, the Unix domain socket configuration is as fast or faster than the lightly-loaded loopback configuration.
+
+<figure >
+    
+        <img src="../../images/linux_domain_sockets.jpg" alt="Graph comparing throughput for Unix domain sockets based on number of connections" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Throughput for BulkIO When Using Unix Domain Sockets</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
 
 <h2 id="messaging-latency">Messaging Latency</h2>
 
-<p>Much like BulkIO, messaging is subject to performance issues as the transfer size changes. Testing was performed to determine the impact of message size on the latency per message. The size of the message was modified and the latency per message was measured. The average latency was measured for sets of 1000 messages. The two figures below show the latency results when using the loopback interface and when using Linux Domain Sockets. Latency is a function of the size of the message, where the measured latency ranges between 40-150 microseconds and 50-160 microseconds for Linux Domain Sockets and loopback interface, respectively.</p>
+<p>Much like BulkIO, messaging is subject to performance issues as the transfer size changes. Testing was performed to determine the impact of <a href="../../../manual/glossary/#message">message</a> size on the latency per message. The size of the message was modified and the latency per message was measured. The average latency was measured for sets of 1000 messages. The two figures below show the latency results when using the loopback interface and when using Unix domain sockets. Latency is a function of the size of the message, where the measured latency ranges between 40-150 microseconds and 50-160 microseconds for Unix domain sockets and loopback interface, respectively.
 
-<h5 id="message-latency-when-using-the-loopback-interface">Message Latency When Using the Loopback Interface</h5>
+<figure >
+    
+        <img src="../../images/loop_msg.jpg" alt="loop_msg" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Message Latency When Using the Loopback Interface</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/loop_msg.jpg" alt="loop_msg" /></p>
 
-<h5 id="message-latency-when-using-linux-domain-sockets">Message Latency When Using Linux Domain Sockets</h5>
 
-<p><img src="../../images/lds_msg.jpg" alt="lds_msg" /></p>
 
-<p>Note that in both figures latency is linear as a function of the message size. Furthermore, the number of concurrent messaging components has no discernible impact on the message latency. Finally, the difference shown between Linux Domain Socket performance and loopback interface performance is, while measurable, relatively small.</p>
+
+<figure >
+    
+        <img src="../../images/lds_msg.jpg" alt="lds_msg" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Message Latency When Using Unix Domain Sockets</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
+
+<p>Note that in both figures latency is linear as a function of the message size. Furthermore, the number of concurrent messaging components has no discernible impact on the message latency. Finally, the difference shown between Unix domain socket performance and loopback interface performance is, while measurable, relatively small.</p>
 
 
     
@@ -1516,6 +1596,10 @@ This change in the omniORB configuration greatly improves data transport rates.<
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/optimization.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

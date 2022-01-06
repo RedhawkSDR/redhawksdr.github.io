@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Device Manager Service Configuration File :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../../css/bootstrap.min.css">
 <script src="../../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../../css/custom.css">
 <script src="../../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/adminservice/configuration/devicemanager/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../../"><img src="../../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1239,12 +1246,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1300,7 +1329,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1319,12 +1348,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1343,12 +1372,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1383,7 +1412,9 @@ ga('send', 'pageview');
       <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
       <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
       <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
-      <option value="/manual/appendices/troubleshooting/" >-- Troubleshooting</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
       <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
       <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
   
@@ -1406,24 +1437,25 @@ ga('send', 'pageview');
         <link href="../../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Device Manager Service Configuration File</h1>
+    <h2 class="title">Device Manager Service Configuration File</h2>
+
     
     
     
     
 
-<p>Each REDHAWK Device Manager service is controlled by a file in the <code>/etc/redhawk/nodes.d</code> directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the <code>/etc/redhawk/init.d/node.defaults</code> file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the <code>/etc/redhawk/init.d/node.defaults</code> file).</p>
+<p>Each REDHAWK <a href="../../../../../manual/glossary/#device-manager">Device Manager</a> <a href="../../../../../manual/glossary/#service">service</a> is controlled by a file in the <code>/etc/redhawk/nodes.d</code> directory. The AdminService provides the initial values for the configuration parameters of a service. Any values in the <code>/etc/redhawk/init.d/node.defaults</code> file override the initial configuration. Finally, the values in the INI file override any configuration (defined internally or specified in the <code>/etc/redhawk/init.d/node.defaults</code> file).</p>
 
-<p>Although there are no rules on partitioning nodes for a REDHAWK system, it is recommended that you do not define more than one GPP per computing host. To define multiple nodes for a computing host, create a new configuration file for each node.</p>
+<p>Although there are no rules on partitioning nodes for a REDHAWK system, it is recommended that you do not define more than one <a href="../../../../../manual/glossary/#gpp"><code>GPP</code></a> per computing host. To define multiple <a href="../../../../../manual/glossary/#node">nodes</a> for a computing host, create a new configuration file for each node.</p>
 
-<p>The Device Manager can be configured to start after the Domain Manager has started up, or it can start up at the same time as the Domain Manager, and it will wait for the domain to be available and register its <a href="../../../../../manual/devices/">Devices</a> and <a href="../../../../../manual/services/">Services</a>. If many devices or services need to start, it is recommended that you add a custom script to verify that the Device Manager has started all devices and services and registered them with the Domain Manager (refer to the <code>start_post_script</code> parameter).</p>
+<p>The Device Manager can be configured to start after the <a href="../../../../../manual/glossary/#domain-manager">Domain Manager</a> has started up, or it can start up at the same time as the Domain Manager, and it will wait for the <a href="../../../../../manual/glossary/#domain">domain</a> to be available and register its <a href="../../../../../manual/devices/">Devices</a> and <a href="../../../../../manual/services/">Services</a>. If many <a href="../../../../../manual/glossary/#device">devices</a> or services need to start, it is recommended that you add a custom script to verify that the Device Manager has started all devices and services and registered them with the Domain Manager (refer to the <code>start_post_script</code> parameter).</p>
 
 <p><a href="../../../../../manual/appendices/adminservice/rhadmin/">rhadmin</a> can generate an example Device Manager configuration file with the complete set of parameters that can be used to the control the setup and execution of a REDHAWK Device Manager service. To generate a generic Device Manager configuration, enter the following command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd /etc/redhawk/nodes.d
@@ -1431,7 +1463,9 @@ rhadmin config node &gt; node.ini</code></pre></div>
 <p>To generate a node configuration from an existing Device Manager project, enter the following command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd /etc/redhawk/nodes.d
 rhadmin config node &lt;path/to/node&gt;/DeviceManager.dcd.xml &lt;optional DomainName&gt; &gt; node.ini</code></pre></div>
-<h2 id="configuration-parameters">Configuration Parameters</h2>
+<h2 id="device-manager-configuration-parameters">Device Manager Configuration Parameters</h2>
+
+<p>This section describes all available configuration parameters for the Device Manager service.</p>
 
 <div class="notices note" ><p>Parameter names are case sensitive.<br />
 The following are the valid values for boolean configuration parameters. If no value is present, the feature is disabled.<br />
@@ -1455,7 +1489,7 @@ description: The name of the node to launch with this Device Manager. Must be a 
 <p>parameter: <code>DCD_FILE</code><br />
 required: No<br />
 default: <code>/nodes/$NODE_NAME/DeviceManager.dcd.xml</code><br />
-format: <code>$SDRROOT/dev</code> relative path to a DCD file<br />
+format: <code>$SDRROOT/dev</code> relative path to a Device Configuration Descriptor (DCD) file<br />
 description: The path to the DCD file (<code>DeviceManager.dcd.xml</code> file) describing the Device Manager.</p>
 
 <p>parameter: <code>SDRCACHE</code><br />
@@ -1617,7 +1651,7 @@ description: Specifies to run the process using <code>nice</code> with this nice
 <p>parameter: <code>affinity</code><br />
 required: No<br />
 default value: None<br />
-description: Enables <code>numactl</code> processing. Any valid NUMA control directives will be passed on command line when starting the process.  For more information, refer to the <code>numactl</code> documentation.</p>
+description: Enables <code>numactl</code> processing. Any valid <a href="../../../../../manual/glossary/#numa">NUMA</a> control directives will be passed on command line when starting the process.  For more information, refer to the <code>numactl</code> documentation.</p>
 
 <p>parameter: <code>corefiles</code><br />
 required: No<br />
@@ -1704,6 +1738,10 @@ description: The bash script or directory of bash scripts to run after the proce
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/adminservice/configuration/devicemanager.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

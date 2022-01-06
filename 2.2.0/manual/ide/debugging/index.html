@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Debugging REDHAWK Components and Devices with Eclipse :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/debugging/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -382,6 +389,48 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/burstio/">BurstIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/manual/connections/burstio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/data-transfers/">
+            Data Transfers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/sri/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/sri/">
+            Burst Signal Related Information (SRI)
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/multiout-ports/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/multiout-ports/">
+            Multi-out Ports
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/working-with-complex-data/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/working-with-complex-data/">
+            Working with Complex Data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/time-stamps/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/time-stamps/">
+            Time Stamps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/burstio/port-statistics/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/burstio/port-statistics/">
+            Port Statistics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/manual/connections/messaging/" class="dd-item haschildren
@@ -465,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -480,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -536,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -747,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -955,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1195,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1256,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1275,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1314,12 +1385,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1345,20 +1416,21 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Debugging REDHAWK Components and Devices with Eclipse</h1>
+    <h2 class="title">Debugging REDHAWK Components and Devices with Eclipse</h2>
+
     
     
     
     
 
-<p>The REDHAWK IDE uses the debugging capabilities from the JDT, CDT, PyDev, and REDHAWK Sandbox. The debugger provides tools to detect and diagnose errors in an application during execution. The debugger allows control of execution of the program by setting breakpoints, suspending launched programs, stepping through source code, and examining the contents of variables.</p>
+<p>The REDHAWK IDE uses the debugging capabilities from the JDT, CDT, <a href="../../../manual/glossary/#pydev">PyDev</a>, and REDHAWK <a href="../../../manual/glossary/#sandbox">sandbox</a>. The debugger provides tools to detect and diagnose errors in an <a href="../../../manual/glossary/#application">application</a> during execution. The debugger allows control of execution of the program by setting breakpoints, suspending launched programs, stepping through source code, and examining the contents of variables.</p>
 
 <p>For more details on debugging concepts, consult the Eclipse documentation at <a href="http://help.eclipse.org/">http://help.eclipse.org/</a> or view the embedded documentation from within the REDHAWK IDE by selecting <strong>Help &gt; Help Contents</strong>.</p>
 
@@ -1374,27 +1446,27 @@ ga('send', 'pageview');
 
 <h3 id="running-unit-tests">Running Unit Tests</h3>
 
-<p>Component and device projects created with the IDE have a <code>tests</code> folder that contains a functional example test case. This test case checks that the resource can be started, stopped, and released without error.</p>
+<p><a href="../../../manual/glossary/#component">Component</a> and <a href="../../../manual/glossary/#device">device</a> projects created with the IDE have a <code>tests</code> folder that contains a functional example test case. This test case checks that the resource can be started, stopped, and released without error.</p>
 
 <p>To run the unit test case:</p>
 
 <ol>
-<li>From the <strong>Project Explorer View</strong>, expand the project folder then the <code>tests</code> folder to display the existing test cases.</li>
+<li>From the <a href="../../../manual/glossary/#project-explorer-view"><strong>Project Explorer</strong> view</a>, expand the project folder then the <code>tests</code> folder to display the existing test cases.</li>
 <li>Right-click the test script, select <strong>Run As &gt; Python unit-test</strong>.</li>
-<li>Check the test results from the <strong>Console</strong> and <strong>PyUnit</strong> views.</li>
+<li>Check the test results from the <strong><a href="../../../manual/glossary/#console-view">Console</a></strong> and <strong>PyUnit</strong> views.</li>
 </ol>
 
 <h3 id="running-a-component-or-device-from-the-redhawk-sandbox">Running a Component or Device from the REDHAWK Sandbox</h3>
 
-<p>The REDHAWK Sandbox provides an environment to run components and devices without the need for a domain or device manager. When running a component or device from the Sandbox, it is started as its own forked process. A new <strong>Console View</strong> is created for logging and error messages.</p>
+<p>The REDHAWK sandbox provides an environment to run components and devices without the need for a <a href="../../../manual/glossary/#domain-manager">domain</a> or <a href="../../../manual/glossary/#device-manager">Device Manager</a>. When running a component or device from the sandbox, it is started as its own forked process. A new <strong>Console</strong> view is created for logging and error messages.</p>
 
-<p>To launch a REDHAWK component or device in the Sandbox:</p>
+<p>To launch a REDHAWK component or device in the sandbox:</p>
 
 <ol>
 <li>Open the project’s <code>spd.xml</code> file.</li>
 <li>From the <strong>Overview</strong> tab, in the <strong>Testing</strong> section, click <strong>Launch a local component</strong>.</li>
-<li>From the <strong>REDHAWK Explorer View</strong>, expand the <strong>Sandbox</strong>.</li>
-<li>To view a running component, expand or double click the <strong>Chalkboard</strong>. To view a running device, expand the <strong>Device Manger</strong>.</li>
+<li>From the <a href="../../../manual/glossary/#redhawk-explorer-view">REDHAWK Explorer view</a>, expand the <strong>Sandbox</strong>.</li>
+<li>To view a running component, expand or double click the <strong>Chalkboard</strong>. To view a running device, expand the <strong>Device Manager</strong>.</li>
 <li>To display the corresponding console, right-click the component or device, select <strong>Show Console</strong>.</li>
 </ol>
 
@@ -1403,18 +1475,18 @@ ga('send', 'pageview');
 <p>Releasing a resource invokes a graceful shutdown, which follows the object lifecycle sequence. Release makes a call to the resource’s <code>releaseObject()</code> method to initiate the sequence. There are two ways to release a component using the IDE and one to release a device:</p>
 
 <ul>
-<li><p>Releasing using REDHAWK Explorer View:</p>
+<li><p>Releasing using <strong>REDHAWK Explorer</strong> view:</p>
 
 <ol>
-<li>In the REDHAWK Explorer View, expand <strong>Sandbox &gt; Chalkboard</strong> to display the running component or <strong>Sandbox &gt; Device Manager</strong> to display a running device.</li>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand <strong>Sandbox &gt; Chalkboard</strong> to display the running component or <strong>Sandbox &gt; Device Manager</strong> to display a running device.</li>
 <li>Right-click the component/device, select <strong>Release</strong>.</li>
 </ol></li>
 
-<li><p>Releasing using Chalkboard Diagram:</p>
+<li><p>Releasing using <strong>Chalkboard</strong> diagram:</p>
 
 <ol>
-<li>In the REDHAWK Explorer View, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
-<li>In the Chalkboard Diagram, right-click the REDHAWK component, select <strong>Release</strong>.</li>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
+<li>In the <strong>Chalkboard</strong> diagram, right-click the REDHAWK component, select <strong>Release</strong>.</li>
 </ol></li>
 </ul>
 
@@ -1425,24 +1497,24 @@ ga('send', 'pageview');
 <p>To terminate a component:</p>
 
 <ul>
-<li><p>Terminating using REDHAWK Explorer:</p>
+<li><p>Terminating using <strong>REDHAWK Explorer</strong> view:</p>
 
 <ol>
-<li>In the REDHAWK Explorer View, expand the <strong>Sandbox &gt; Chalkboard</strong>.</li>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox &gt; Chalkboard</strong>.</li>
 <li>Right-click the REDHAWK component, select <strong>Terminate</strong>.</li>
 </ol></li>
 
-<li><p>Terminating using the Chalkboard:</p>
+<li><p>Terminating using the <strong>Chalkboard</strong>:</p>
 
 <ol>
-<li>In the REDHAWK Explorer View, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
-<li>In the Chalkboard Diagram, right-click the REDHAWK component, select <strong>Terminate</strong>.</li>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
+<li>In the <strong>Chalkboard</strong> diagram, right-click the REDHAWK component, select <strong>Terminate</strong>.</li>
 </ol></li>
 
-<li><p>Terminating using the <strong>Console</strong> View:</p>
+<li><p>Terminating using the <strong>Console</strong> view:</p>
 
 <ol>
-<li>In the <strong>Console</strong> View, click the <strong>Display Selected Console</strong> drop down.</li>
+<li>In the <strong>Console</strong> view, click the <strong>Display Selected Console</strong> drop down.</li>
 <li>Select the launched REDHAWK component from the drop-down list to switch to its console.</li>
 <li>Click the <strong>Terminate</strong> icon, indicated by a red square.</li>
 </ol></li>
@@ -1454,7 +1526,7 @@ ga('send', 'pageview');
 
 <h4 id="setting-breakpoints-in-component-source-code">Setting Breakpoints in Component source code</h4>
 
-<p>A breakpoint suspends the execution of a program at the location where the breakpoint is set. Breakpoints can be enabled and disabled via the <strong>Breakpoints</strong> View or from the source code editor.</p>
+<p>A breakpoint suspends the execution of a program at the location where the breakpoint is set. Breakpoints can be enabled and disabled via the <strong>Breakpoints</strong> view or from the source code editor.</p>
 
 <p>To set a breakpoint from the source code editor:</p>
 
@@ -1472,47 +1544,47 @@ ga('send', 'pageview');
 
 <h4 id="launching-a-component-in-the-redhawk-sandbox-in-debug-mode">Launching a Component in the REDHAWK Sandbox in Debug Mode</h4>
 
-<p>To use the REDHAWK IDE’s debugger, a REDHAWK component can be launched in the Sandbox in debug mode.</p>
+<p>To use the REDHAWK IDE’s debugger, a REDHAWK component can be launched in the sandbox in debug mode.</p>
 
 <p>A component can be launched in debug mode in several ways:</p>
 
 <ul>
-<li><p>From the SPD file Editor:</p>
+<li><p>From the Software Package Descriptor (SPD) file Editor:</p>
 
 <ol>
 <li>Open the project’s spd.xml file.</li>
-<li>From the <strong>Overview</strong> tab of the SoftPkg Editor, in the <strong>Testing</strong> section, click <strong>Debug a component in the Sandbox</strong>.</li>
-<li>The REDHAWK component is now launched in the Sandbox in debug mode.</li>
+<li>From the <strong>Overview</strong> tab of the <a href="../../../manual/glossary/#softpkg-editor">SoftPkg Editor</a>, in the <strong>Testing</strong> section, click <strong>Debug a component in the Sandbox</strong>.</li>
+<li>The REDHAWK component is now launched in the sandbox in debug mode.</li>
 </ol></li>
 
 <li><p>From the Project Explorer:</p>
 
 <ol>
-<li>In the <strong>Project Explorer View</strong>, expand the project.</li>
+<li>In the <strong>Project Explorer</strong> view, expand the project.</li>
 <li>Right-click project’s <code>spd.xml</code> file and select <strong>Debug As &gt; 1 Launch component in Sandbox</strong>.</li>
-<li>The REDHAWK component is now launched in the Sandbox in debug mode.</li>
+<li>The REDHAWK component is now launched in the sandbox in debug mode.</li>
 </ol></li>
 </ul>
 
 <p>There are two ways to confirm that the REDHAWK component has been launched in debug mode:</p>
 
 <ul>
-<li>From the Chalkboard Diagram, there is a small bug icon at the top right corner of the REDHAWK component.</li>
-<li>From the REDHAWK Explorer View, expand the <strong>Sandbox &gt; Chalkboard</strong> and a <strong>&lt;DEBUGGING&gt;</strong> decorator is displayed to the right of the REDHAWK component.</li>
+<li>From the <strong>Chalkboard</strong> diagram, there is a small bug icon at the top right corner of the REDHAWK component.</li>
+<li>From the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox &gt; Chalkboard</strong> and a <strong>&lt;DEBUGGING&gt;</strong> decorator is displayed to the right of the REDHAWK component.</li>
 </ul>
 
-<p>The debugger can switch between Python, C++, and Java while debugging. The REDHAWK IDE can also launch other components in the Sandbox to interact with components in debug mode.</p>
+<p>The debugger can switch between Python, C++, and Java while debugging. The REDHAWK IDE can also launch other components in the sandbox to interact with components in debug mode.</p>
 
 <p>Note that there are three separate debuggers for C++, Python, and Java. They all support the basic debugging capabilities such as setting breakpoints, stepping through executing code, and viewing variables. However, some debuggers have additional features that are not available to the others. For example, the Java debugger has the ability to hot swap code as it is executing.</p>
 
-<p>If there are breakpoints set and triggered, a <strong>Confirm Perspective Switch</strong> dialog prompts the user to open the Debug perspective. Clicking <strong>Yes</strong> rearranges the workbench so it is geared towards debugging source code.</p>
+<p>If there are breakpoints set and triggered, a <strong>Confirm Perspective Switch</strong> dialog prompts the user to open the Debug <a href="../../../manual/glossary/#perspective">perspective</a>. Clicking <strong>Yes</strong> rearranges the <a href="../../../manual/glossary/#workbench">workbench</a> so it is geared towards debugging source code.</p>
 
 <p>The Debug perspective displays these additional views:</p>
 
 <ul>
-<li><strong>Debug View</strong>: The <strong>Debug View</strong> displays the stack frame for the suspended threads in debug mode. Each thread in the program appears as a node in the tree. It displays the process for each target that is running. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
-<li><strong>Variables View</strong>: The <strong>Variables View</strong> displays information about the variables associated with the stack frame selected in the <strong>Debug View</strong>. New values can be assigned to variables while stepping through the source code. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
-<li><strong>Breakpoints View</strong>: The <strong>Breakpoints View</strong> lists all the breakpoints currently set in the workspace. Double-click a breakpoint to display its location in the editor. Breakpoints can be enabled, disabled, deleted, created, grouped by working set, triggered by a user supplied hit count, triggered only in certain conditions, or triggered by exceptions. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+<li><strong>Debug</strong> view: The <strong>Debug</strong> view displays the stack frame for the suspended threads in debug mode. Each thread in the program appears as a node in the tree. It displays the process for each target that is running. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+<li><strong>Variables</strong> view: The <strong>Variables</strong> view displays information about the variables associated with the stack frame selected in the <strong>Debug</strong> view. New values can be assigned to variables while stepping through the source code. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+<li><strong>Breakpoints</strong> view: The <strong>Breakpoints</strong> view lists all the breakpoints currently set in the workspace. Double-click a breakpoint to display its location in the editor. Breakpoints can be enabled, disabled, deleted, created, grouped by working set, triggered by a user supplied hit count, triggered only in certain conditions, or triggered by exceptions. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
 </ul>
 
 
@@ -1536,6 +1608,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/debugging.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

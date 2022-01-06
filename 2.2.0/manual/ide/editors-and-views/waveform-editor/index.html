@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Waveform Editor :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/editors-and-views/waveform-editor/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1371,12 +1400,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1402,95 +1431,187 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Waveform Editor</h1>
+    <h2 class="title">Waveform Editor</h2>
+
     
     
     
     
 
-<p><img src="../../images/sadDiagram.png" alt="Waveform Editor" /></p>
+<p>The <a href="../../../../manual/glossary/#waveform-editor">Waveform Editor</a> presents all the content that can be found within the <code>sad.xml</code> file in an editing environment designed for ease of use.</p>
 
-<p>To open the Waveform Editor, double-click a SAD file from the Project Explorer View. It presents all the content that can be found within the <code>sad.xml</code> file in an editing environment designed for ease of use. The Waveform Editor contains an <strong>Overview</strong>, <strong>Properties</strong>, <strong>Components</strong>, <strong>Diagram</strong>, and a raw XML tab, which contains the SAD file content.</p>
+
+<figure >
+    
+        <img src="../../images/sadDiagram.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Editor</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
+
+<p>To open the Waveform Editor, double-click a Software Assembly Descriptor (SAD) file from the <a href="../../../../manual/glossary/#project-explorer-view">Project Explorer view</a>. The Waveform Editor contains an <strong>Overview</strong>, <strong><a href="../../../../manual/glossary/#property">Properties</a></strong>, <strong><a href="../../../../manual/glossary/#component">Components</a></strong>, <strong>Diagram</strong>, and a raw XML tab, which contains the SAD file content.</p>
 
 <h3 id="overview-tab">Overview Tab</h3>
 
-<h5 id="waveform-editor-overview-tab">Waveform Editor Overview Tab</h5>
+<p>The <strong>Overview</strong> tab provides general information about the <a href="../../../../manual/glossary/#waveform">waveform</a> and hyperlinks to additional waveform-related sections within the IDE.</p>
 
-<p><img src="../../images/sadOverview.png" alt="The Waveform Editor Overview Tab" /></p>
 
-<p>The <strong>Overview</strong> tab provides general information about the waveform, and hyperlinks to additional waveform-related sections within the IDE.</p>
+<figure >
+    
+        <img src="../../images/sadOverview.png" alt="The Waveform Editor Overview Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Editor Overview Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
+
+<p>The <strong>Overview</strong> tab contains the following sections:</p>
 
 <ul>
 <li><p>The <strong>General Information</strong> section provides controls to set the <strong>ID</strong>, <strong>Name</strong>, <strong>Version</strong>, <strong>Controller</strong> and <strong>Description</strong> for the waveform.</p></li>
 
-<li><p>The <strong>External Ports</strong> section provides the ability to promote a component&rsquo;s port so it is accessible from the waveform object. By default, an <a href="../../../../manual/runtime-environment/applications/#external-ports">external port</a> name is equal to the name of that port within the component, but the external port can be renamed.</p>
+<li><p>The <strong>Waveform Options</strong> section provides controls to add, edit, and remove the <code>STOP_TIMEOUT</code> and <code>AWARE_APPLICATION</code> options for applications in the SAD file.</p></li>
+
+<li><p>The <strong>Project Documentation</strong> section displays a Header hyperlink, which if clicked, provides the option to create and edit the file “HEADER” in the project. When code generation is performed, the header is applied to your project files.</p></li>
+
+<li><p>The <strong>External Ports</strong> section provides the ability to promote a component&rsquo;s <a href="../../../../manual/glossary/#port">port</a> so it is accessible from the waveform object. By default, an <a href="../../../../manual/runtime-environment/applications/#external-ports">external port</a> name is equal to the name of that port within the component, but the external port can be renamed.</p>
 
 <p>To change the external port name:</p>
 
 <ol>
 <li><p>In the <strong>External Ports</strong> section, locate the port and click the cell in the <strong>External Name</strong> column in the port’s row.</p></li>
 
-<li><p>Enter a new value for the name.</p>
+<li><p>Enter a new value for the name.
 
-<h5 id="renaming-external-ports">Renaming External Ports</h5>
+<figure >
+    
+        <img src="../../images/external_port_rename.png" alt="Renaming External Ports" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Renaming External Ports</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/external_port_rename.png" alt="Renaming External Ports" /></p></li>
+
+
+</p></li>
 
 <li><p>Press <strong>Enter</strong>.</p></li>
 </ol></li>
 
-<li><p>The <strong>Testing</strong> section allows for the launching of local waveforms. A local waveform does not require a running domain or Device Manager and executes within the Sandbox. A local waveform is similar to launching an individual component in the Chalkboard and constructs the waveform within a new Chalkboard instance. You may launch additional components into the waveform running in the Chalkboard using the palette. These newly launched components have standard runtime actions (Plot, Start, Stop, Terminate, and Connect) available. When the local running waveform is released these newly launched components are not saved in the waveform.</p></li>
+<li><p>The <strong>Testing</strong> section allows for the launching of local waveforms. A local waveform does not require a running <a href="../../../../manual/glossary/#domain-manager">Domain</a> or <a href="../../../../manual/glossary/#device-manager">Device Manager</a> and executes within the <a href="../../../../manual/glossary/#sandbox">sandbox</a>. A local waveform is similar to launching an individual component in the Chalkboard and constructs the waveform within a new Chalkboard instance. You may launch additional components into the waveform running in the Chalkboard using the palette. These newly launched components have standard runtime actions (Plot, Start, Stop, Terminate, and Connect) available. When the local running waveform is released these newly launched components are not saved in the waveform.</p></li>
 
-<li><p>The <strong>Exporting</strong> section provides a hyperlink to the <strong>Export Wizard</strong>, which steps through the process of deploying the waveform into the SDR Root.</p></li>
+<li><p>The <strong>Exporting</strong> section provides a hyperlink to the <strong>Export Wizard</strong>, which steps through the process of deploying the waveform into the SDRROOT.</p></li>
 </ul>
 
 <h3 id="properties-tab">Properties Tab</h3>
 
-<h5 id="waveform-editor-properties-tab">Waveform Editor Properties Tab</h5>
+<p>The <strong>Properties</strong> tab provides access to the component’s properties within the waveform.</p>
 
-<p><img src="../../images/sadProperties.png" alt="The Waveform Editor Properties Tab" /></p>
 
-<p>The <strong>Properties</strong> tab provides access to the component’s properties within the waveform. Within the <strong>Properties</strong> tab, you can:</p>
+<figure >
+    
+        <img src="../../images/sadProperties.png" alt="The Waveform Editor Properties Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Editor Properties Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
+
+<p>Within the <strong>Properties</strong> tab, you can:</p>
 
 <ul>
 <li>Assign an external property ID</li>
 <li>Set the overridden value within the SAD file</li>
 <li>Filter and search for properties</li>
-<li>Compare the overridden value to the original PRF value</li>
+<li>Compare the overridden value to the original Properties File (PRF) value</li>
 </ul>
 
-<p>The properties of the component designated as the Assembly Controller are always accessible externally and are grayed out in the <strong>Properties</strong> tab. Additional properties may be assigned an external ID, which allows for a particular component’s property to be designated as accessible to external waveform objects. See <a href="../../../../manual/runtime-environment/applications/#external-properties">External Properties</a> for additional information.</p>
+<p>The properties of the component designated as the <a href="../../../../manual/glossary/#assembly-controller">Assembly Controller</a> are always accessible externally and are grayed out in the <strong>Properties</strong> tab. Additional properties may be assigned an external ID, which allows for a particular component’s property to be designated as accessible to external waveform objects. See <a href="../../../../manual/runtime-environment/applications/#external-properties">External Properties</a> for additional information.</p>
 
 <p>To make a property external:</p>
 
 <ol>
-<li><p>Select the properties tab of the application’s SAD file.</p></li>
+<li><p>Select the <strong>Properties</strong> tab of the application’s SAD file.</p></li>
 
-<li><p>Edit the <code>External ID</code> field by entering the desired ID.</p></li>
+<li><p>Edit the <strong>External ID</strong> field by entering the desired ID.</p></li>
 </ol>
 
 <div class="notices note" ><p>The external IDs must be unique. They can not duplicate another external property&rsquo;s ID, or the ID of a property belonging to the assembly controller.</p>
 </div>
 
 
-<h5 id="waveform-external-properties">Waveform External Properties</h5>
+<p>The following sample <strong>Properties</strong> tab displays several properties with assigned external IDs and several properties with SAD values set to override their PRF values.</p>
 
-<p><img src="../../images/external_property.png" alt="Waveform External Properties" /></p>
+
+<figure >
+    
+        <img src="../../images/external_property.png" alt="Waveform External Properties" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform External Properties</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <h3 id="diagram-tab">Diagram Tab</h3>
 
-<h5 id="waveform-editor-diagram-tab">Waveform Editor Diagram Tab</h5>
+<p>The <strong>Diagram</strong> tab is used to place components into a waveform, connect components together, set waveform-specific properties for components, make a <a href="../../../../manual/runtime-environment/applications/#external-ports">port external</a>, and add a <a href="../../../../manual/devices/associating-a-waveform/">usesdevice relationship</a> to a FrontEnd Tuner <a href="../../../../manual/glossary/#device">device</a>.</p>
 
-<p><img src="../../images/sadDiagram.png" alt="The Waveform Editor Diagram Tab" /></p>
 
-<p>You can use the <strong>Diagram</strong> tab to place components into a waveform, connect components together, set waveform-specific properties for components, make a <a href="../../../../manual/runtime-environment/applications/#external-ports">port external</a>, and add a FrontEnd Tuner device to a waveform.</p>
+<figure >
+    
+        <img src="../../images/sadDiagram.png" alt="The Waveform Editor Diagram Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Editor Diagram Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <div class="notices note" ><p>To zoom in and out on the diagram, press and hold <code>Ctrl</code> then scroll up or down. Alternatively, press and hold <code>Ctrl</code> then press <code>+</code> or <code>-</code>.</p>
 </div>
@@ -1502,7 +1623,7 @@ ga('send', 'pageview');
 <li>Drag the component from the <strong>Palette</strong> onto the diagram.</li>
 <li>Right-click the component.</li>
 <li>Select <strong>Show Properties</strong></li>
-<li>From the <strong>Properties View</strong>, change the desired properties.</li>
+<li>From the <a href="../../../../manual/glossary/#properties-view">Properties view</a>, change the desired properties.</li>
 <li>Press <code>Ctrl+S</code> to save the changes.</li>
 </ol>
 
@@ -1521,39 +1642,87 @@ ga('send', 'pageview');
 
 <li><p>Right-click the port to open the port context menu.</p></li>
 
-<li><p>Select <strong>Mark External Port</strong>.</p>
+<li><p>Select <strong>Mark External Port</strong>.
 
-<h5 id="mark-external-ports">Mark External Ports</h5>
+<figure >
+    
+        <img src="../../images/external_port.png" alt="Mark External Ports" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Mark External Ports</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/external_port.png" alt="Mark External Ports" /></p></li>
+
+
+</p></li>
 </ol>
 
-<p>From the <strong>Diagram</strong> tab, a user may also use the <a href="../../../../manual/runtime-environment/applications/#using-the-find-by-feature"><strong>Find By</strong> feature</a>. The <strong>Find By</strong> feature enables a user to find a resource by name, a service by name or type, or an Event Channel by name.</p>
+<p>From the <strong>Diagram</strong> tab, a user may also use the <a href="../../../../manual/runtime-environment/applications/#using-the-find-by-feature"><strong>Find By</strong> feature</a>. The <strong>Find By</strong> feature enables a user to find a resource by name, a <a href="../../../../manual/glossary/#service">service</a> by name or type, or an <a href="../../../../manual/glossary/#event-channel">event channel</a> by name.</p>
 
 <p>Connections may be made from input to output ports by clicking and dragging from one port to the other. Multiple connections can be drawn to or from ports. Any unsupported or erroneous connection that the IDE can detect is marked with an appropriate indicator. Hovering over the indicator provides information concerning the error.</p>
 
 <p>To add a dependency on a FrontEnd Tuner device that the waveform needs to use at runtime (a <em>usesdevice</em> in the XML):</p>
 
 <ol>
-<li><p>From the <strong>Palette</strong>, in the <strong>Advanced</strong> folder, select <strong>Use FrontEnd Tuner Device</strong> and drag it onto the diagram. The <strong>Allocate Tuner</strong> dialog is displayed.</p>
+<li><p>From the <strong>Palette</strong>, in the <strong>Advanced</strong> folder, select <strong>Use FrontEnd Tuner Device</strong> and drag it onto the diagram. The <strong>Allocate Tuner</strong> dialog is displayed.
 
-<h5 id="select-target-device">Select Target Device</h5>
+<figure >
+    
+        <img src="../../images/Selecttargetdevice.png" alt="Select Target Device" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Select Target Device</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/Selecttargetdevice.png" alt="Select Target Device" /></p></li>
 
-<li><p>Select the FrontEnd Tuner device you want to use. This will complete some of the information in the subsequent wizard pages. Alternatively, select <strong>Generic FrontEnd Device</strong> for defaults. Click <strong>Next</strong>.</p>
 
-<h5 id="allocate-tuner">Allocate Tuner</h5>
+</p></li>
 
-<p><img src="../../images/AllocateTuner.png" alt="Allocate Tuner" /></p></li>
+<li><p>Select the FrontEnd Tuner device you want to use. This will complete some of the information in the subsequent wizard pages. Alternatively, select <strong>Generic FrontEnd Device</strong> for defaults. Click <strong>Next</strong>.
+
+<figure >
+    
+        <img src="../../images/AllocateTuner.png" alt="Allocate Tuner" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Allocate Tuner</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>Enter the <strong>Uses Device ID</strong> and optionally, enter the <strong>Device Model</strong>, and then click <strong>Next</strong>.</p></li>
 
-<li><p>Enter the appropriate information and click <strong>Next</strong>. See <a href="../../../../manual/devices/interacting-with-hardware/using-fei-device-ide/#allocating-a-frontend-tuner"><strong>Allocating a FrontEnd Tuner</strong></a> for more details.</p>
+<li><p>Enter the appropriate information and click <strong>Next</strong>. For more information, refer to <a href="../../../../manual/devices/interacting-with-hardware/using-fei-device-ide/#allocating-a-frontend-tuner"><strong>Allocating a FrontEnd Tuner</strong></a>.
 
-<h5 id="identify-ports">Identify Ports</h5>
+<figure >
+    
+        <img src="../../images/IdentifyPorts.png" alt="Identify Ports" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Identify Ports</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/IdentifyPorts.png" alt="Identify Ports" /></p></li>
+
+
+</p></li>
 
 <li><p>Enter the names of any uses and provides ports that you want to use from the target device and click <strong>Finish</strong>. The <strong>Use FrontEnd Tuner Device</strong> is displayed in the diagram. When you launch the waveform, the FrontEnd Tuner device must be available in order for the waveform to run.</p>
 
@@ -1581,6 +1750,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/editors-and-views/waveform-editor.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Sandbox :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/components/sandbox/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -312,10 +312,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -326,10 +326,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -508,6 +515,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -523,7 +536,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -579,12 +592,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1324,12 +1353,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1348,12 +1377,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1379,24 +1408,25 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Sandbox</h1>
+    <h2 class="title">Sandbox</h2>
+
     
     
     
     
 
-<p>This section briefly describes how to use the sandbox either from a Python shell or via the REDHAWK IDE; a more detailed description is available in the <a href="../../../manual/sandbox/">Sandbox</a> chapter.</p>
+<p>This section briefly describes how to use the <a href="../../../manual/glossary/#sandbox">sandbox</a> either from a Python shell or via the REDHAWK IDE; a more detailed description is available in the <a href="../../../manual/sandbox/">Sandbox</a> chapter.</p>
 
 <h3 id="python-sandbox">Python Sandbox</h3>
 
-<p>The sandbox can be accessed directly from the command line and is used to manipulate new components and waveforms. This provides a very powerful means of testing and scripting tests for REDHAWK systems.</p>
+<p>The sandbox can be accessed directly from the command line and is used to manipulate new <a href="../../../manual/glossary/#component">components</a> and <a href="../../../manual/glossary/#waveform">waveforms</a>. This provides a very powerful means of testing and scripting tests for REDHAWK systems.</p>
 
 <ol>
 <li><p>Open a Python session and import the sandbox:</p>
@@ -1415,7 +1445,7 @@ ga('send', 'pageview');
 <li><p>Create the component object by typing:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> hardLimit <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;rh.HardLimit&#34;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> sigGen <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;rh.SigGen&#34;</span>)</code></pre></div>
-<div class="notices note" ><p>After the constructor is finished, the components run as their own processes. If an absolute file path for a component’s SPD file (<code>&lt;component.spd.xml</code>) is given as a constructor argument for the component instance, then that component is started irrespective of whether or not it is present in <code>$SDRROOT</code>.</p>
+<div class="notices note" ><p>After the constructor is finished, the components run as their own processes. If an absolute file path for a component’s Software Package Descriptor (SPD) file (<code>&lt;component.spd.xml</code>) is given as a constructor argument for the component instance, then that component is started irrespective of whether or not it is present in <code>$SDRROOT</code>.</p>
 </div>
 </li>
 </ul></li>
@@ -1432,7 +1462,7 @@ ga('send', 'pageview');
 <span style="color:#f92672">&gt;&gt;&gt;</span> plot2 <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>Plot()</code></pre></div></li>
 </ul></li>
 
-<li><p>Connect the components together and connect the plots. The <code>connect()</code> method tries to match the port; ambiguities can be resolved with the parameters <code>usesPortName</code> and <code>providesPortName</code>. Connecting the plots to the components displays the <strong>Plot Application</strong> window.</p>
+<li><p>Connect the components together and connect the plots. The <code>connect()</code> method tries to match the <a href="../../../manual/glossary/#port">port</a>; ambiguities can be resolved with the parameters <code>usesPortName</code> and <code>providesPortName</code>. Connecting the plots to the components displays the <strong>Plot Application</strong> window.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sigGen<span style="color:#f92672">.</span>connect(hardLimit)
 <span style="color:#f92672">&gt;&gt;&gt;</span> sigGen<span style="color:#f92672">.</span>connect(plot1)
 <span style="color:#f92672">&gt;&gt;&gt;</span> hardLimit<span style="color:#f92672">.</span>connect(plot2)</code></pre></div></li>
@@ -1443,7 +1473,7 @@ ga('send', 'pageview');
 <li><p>Start everything in the sandbox:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>start()</code></pre></div></li>
 
-<li><p>The property values can now be set on the <code>HardLimit</code> component. The plot reflects the property change:</p>
+<li><p>The <a href="../../../manual/glossary/#property">property</a> values can now be set on the <code>HardLimit</code> component. The plot reflects the property change:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> hardLimit<span style="color:#f92672">.</span>upper_limit <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">8</span></code></pre></div></li>
 
 <li><p>To inspect the properties and input/output ports of a component, invoke the component’s <code>api()</code> method:</p>
@@ -1454,21 +1484,33 @@ ga('send', 'pageview');
 
 <h3 id="the-ide-sandbox">The IDE Sandbox</h3>
 
-<p>This section provides an overview of how to use the sandbox in the REDHAWK IDE. The IDE sandbox provides a graphical environment for launching, inspecting, and debugging components, devices, nodes, services, and waveforms. In addition, via the <strong>REDHAWK Console</strong>, you can use the Python-based sandbox API to interact with objects that are running within the IDE sandbox.</p>
+<p>This section provides an overview of how to use the sandbox in the REDHAWK IDE. The IDE sandbox provides a graphical environment for launching, inspecting, and debugging components, <a href="../../../manual/glossary/#device">devices</a>, <a href="../../../manual/glossary/#node">nodes</a>, <a href="../../../manual/glossary/#service">services</a>, and waveforms. In addition, via the <strong><a href="../../../manual/glossary/#console-view">REDHAWK Console</a></strong>, you can use the Python-based sandbox API to interact with objects that are running within the IDE sandbox.</p>
 
 <p>The following procedure provides an example of launching and interacting with a component in the sandbox in the REDHAWK IDE.</p>
 
 <ol>
-<li><p>In the <strong>REDHAWK Explorer</strong> View:</p>
+<li><p>In the <a href="../../../manual/glossary/#redhawk-explorer-view">REDHAWK Explorer view</a>:</p>
 
 <ol>
 <li><p>Expand the <strong>Sandbox</strong> to expose the <strong>Chalkboard</strong>.</p></li>
 
-<li><p>Double-click the <strong>Chalkboard</strong>.</p>
+<li><p>Double-click the <strong>Chalkboard</strong>.
 
-<h5 id="open-chalkboard">Open Chalkboard</h5>
+<figure >
+    
+        <img src="../images/REDHAWK_Example_HardLimit_Chalkboard_Highlighted.png" alt="Open Chalkboard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Open Chalkboard</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/REDHAWK_Example_HardLimit_Chalkboard_Highlighted.png" alt="Open Chalkboard" /></p></li>
+
+
+</p></li>
 </ol></li>
 
 <li><p>From the <strong>Chalkboard</strong>:</p>
@@ -1483,39 +1525,86 @@ ga('send', 'pageview');
 </div>
 </p></li>
 
-<li><p>Right-click the <code>SigGen</code> component, and select <strong>Start</strong>.</p>
+<li><p>Right-click the <code>SigGen</code> component, and select <strong>Start</strong>.
 
-<h5 id="start-component">Start Component</h5>
+<figure >
+    
+        <img src="../images/REDHAWK_Example_chalkboard_Start_Comp.png" alt="Start Component" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Start Component</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/REDHAWK_Example_chalkboard_Start_Comp.png" alt="Start Component" /></p></li>
 
-<li><p>Left-click the <strong>dataFloat_out</strong> port to select it, then right-click the port to open the port context menu, and select <strong>Plot Port Data</strong>.</p>
 
-<h5 id="plot-port-data">Plot Port Data</h5>
+</p></li>
 
-<p><img src="../images/REDHAWK_Example_chalkboard_Plot_Port.png" alt="Plot Port Data" /></p></li>
+<li><p>Left-click the <strong>dataFloat_out</strong> port to select it, then right-click the port to open the port context menu, and select <strong>Plot Port Data</strong>.
 
-<li><p>Open the <strong>Properties</strong> View and change the following signal properties:</p>
+<figure >
+    
+        <img src="../images/REDHAWK_Example_chalkboard_Plot_Port.png" alt="Plot Port Data" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Plot Port Data</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>Open the <a href="../../../manual/glossary/#properties-view">Properties view</a> and change the following signal properties:</p>
 
 <ul>
 <li>frequency: 100</li>
+<li>magnitude: 10
 
-<li><p>magnitude: 10</p>
+<figure >
+    
+        <img src="../images/REDHAWK_Example_chalkboard_Prop_Change.png" alt="Change Property Value" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Change Property Value</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="change-property-value">Change Property Value</h5>
 
-<p><img src="../images/REDHAWK_Example_chalkboard_Prop_Change.png" alt="Change Property Value" /></p></li>
+
+</li>
 </ul></li>
 
 <li><p>Select the palette on the right, drag the <code>HardLimit</code> component onto the <strong>Chalkboard</strong>.</p></li>
 
 <li><p>Right-click the <code>HardLimit</code> component, click <strong>Start</strong>.</p></li>
 
-<li><p>Connect the <strong>dataFloat_out</strong> port on the <code>SigGen</code> component to the <strong>dataFloat_in</strong> port on the <code>HardLimit</code> component by clicking and dragging from the solid black output port to the input port.</p>
+<li><p>Connect the <strong>dataFloat_out</strong> port on the <code>SigGen</code> component to the <strong>dataFloat_in</strong> port on the <code>HardLimit</code> component by clicking and dragging from the solid black output port to the input port.
 
-<h5 id="connect-ports">Connect Ports</h5>
+<figure >
+    
+        <img src="../images/REDHAWK_Example_chalkboard_Connect_Comp.png" alt="Connect Ports" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Connect Ports</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/REDHAWK_Example_chalkboard_Connect_Comp.png" alt="Connect Ports" /></p></li>
+
+
+</p></li>
 
 <li><p>Right-click the <strong>dataFloat_out</strong> port on the <code>HardLimit</code> component, click <strong>Plot Port Data</strong></p></li>
 
@@ -1544,6 +1633,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/components/sandbox.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REDHAWK</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36" />
+<title>rh.sinksocket :: REDHAWK</title>
+<link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/nucleus.css" rel="stylesheet">
+<link href="../../../../theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<script src="../../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/redhawksdr.github.io";
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114112954-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/assets/3.0-lts/components/rh.sinksocket.readme/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> Home
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr/redhawk/releases"  rel="noopener">
+                  <i class='fa fa-download'></i> Downloads
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
+                  <i class='fa fa-github'></i> GitHub
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+    <li data-nav-id="/manual/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../manual/">Manuals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/manual/3.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/3.0-lts/">REDHAWK 3.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.3-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.2-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/2.0-lts/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/technical-notes/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="../../../../technical-notes/">Technical Notes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/assets/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/">Asset README Files</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/assets/3.0-lts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="../../../../assets/3.0-lts/">Assets 3.0</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/assets/2.3-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.3-lts/">Assets 2.3</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/assets/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../assets/2.2-lts/">Assets 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/">Release Notes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/3.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/3.0-lts/">REDHAWK 3.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/3.0-lts/release-notes-3.0.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/3.0-lts/release-notes-3.0.0/">
+            REDHAWK Release Notes - 3.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.3-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.3-lts/">REDHAWK 2.3</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.3-lts/release-notes-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.3-lts/release-notes-2.3.0/">
+            REDHAWK Release Notes - 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.2-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.2-lts/">REDHAWK 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.8/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.8/">
+            REDHAWK Release Notes - 2.2.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.7/">
+            REDHAWK Release Notes - 2.2.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.6/">
+            REDHAWK Release Notes - 2.2.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.5/">
+            REDHAWK Release Notes - 2.2.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.4/">
+            REDHAWK Release Notes - 2.2.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.3/">
+            REDHAWK Release Notes - 2.2.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.2/">
+            REDHAWK Release Notes - 2.2.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.1/">
+            REDHAWK Release Notes - 2.2.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.2-lts/release-notes-2.2.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.2-lts/release-notes-2.2.0/">
+            REDHAWK Release Notes - 2.2.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/2.0-lts/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/2.0-lts/">REDHAWK 2.0</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.8/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.8/">
+            REDHAWK Release Notes - 2.0.8
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.7/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.7/">
+            REDHAWK Release Notes - 2.0.7
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.6/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.6/">
+            REDHAWK Release Notes - 2.0.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.5/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.5/">
+            REDHAWK Release Notes - 2.0.5
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.4/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.4/">
+            REDHAWK Release Notes - 2.0.4
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.3/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.3/">
+            REDHAWK Release Notes - 2.0.3
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.2/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.2/">
+            REDHAWK Release Notes - 2.0.2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.1/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.1/">
+            REDHAWK Release Notes - 2.0.1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/2.0-lts/release-notes-2.0.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/2.0-lts/release-notes-2.0.0/">
+            REDHAWK Release Notes - 2.0.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/">Assets LTS Releases</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/release-notes/assets/3.0-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/3.0-lts/">Assets 3.0</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/2.3-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.3-lts/">Assets 2.3</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/assets/2.2-lts/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/assets/2.2-lts/">Assets 2.2</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/release-notes/updates/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../release-notes/updates/">Updates Repository 2.2</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-2.3.0/">
+            GPP 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/gpp-profile-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/gpp-profile-2.3.0/">
+            GPP-profile 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/redhawk-codegen-2.3.0/">
+            redhawk-codegen 2.3.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/" class="dd-item">
+        <div>
+          <a href="../../../../release-notes/updates/2.2-lts/rh.sinksocket-2.1.0/">
+            rh.sinksocket 2.1.0
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/specifications/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../specifications/">Specifications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/community/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../community/">Community</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/releases" data-icon="octicon-cloud-download" aria-label="Download REDHAWK on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk" data-icon="octicon-star" data-show-count="true" aria-label="Star redhawksdr/redhawk on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/redhawksdr/redhawk/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork redhawksdr/redhawk on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/manual/" >
+   Manuals</option> 
+    <option value="/manual/3.0-lts/" >
+  - 
+   REDHAWK 3.0</option>
+    <option value="/manual/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/manual/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/manual/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+  
+    <option value="/technical-notes/" >
+   Technical Notes</option> 
+  
+    <option value="/assets/" >
+   Asset README Files</option> 
+    <option value="/assets/3.0-lts/" >
+  - 
+   Assets 3.0</option> 
+  
+    <option value="/assets/2.3-lts/" >
+  - 
+   Assets 2.3</option>
+    <option value="/assets/2.2-lts/" >
+  - 
+   Assets 2.2</option>
+  
+    <option value="/release-notes/" >
+   Release Notes</option> 
+    <option value="/release-notes/3.0-lts/" >
+  - 
+   REDHAWK 3.0</option>
+    <option value="/release-notes/2.3-lts/" >
+  - 
+   REDHAWK 2.3</option>
+    <option value="/release-notes/2.2-lts/" >
+  - 
+   REDHAWK 2.2</option>
+    <option value="/release-notes/2.0-lts/" >
+  - 
+   REDHAWK 2.0</option>
+    <option value="/release-notes/assets/" >
+  - 
+   Assets LTS Releases</option>
+    <option value="/release-notes/updates/" >
+  - 
+   Updates Repository 2.2</option>
+  
+    <option value="/specifications/" >
+   Specifications</option>
+    <option value="/community/" >
+   Community</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>rh.sinksocket</h1>
+    
+    
+    
+    
+
+<h1 id="redhawk-rh-sinksocket">REDHAWK rh.sinksocket</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code>rh.sinksocket</code> component reads data from BulkIO ports and writes the same data to all TCP connections.  Each <code>rh.sinksocket</code> component can operate multiple TCP connections (TCP clients or servers).</p>
+
+<p>The <a href="#properties">Properties</a> section explains how to configure the component and monitor its data throughput.  The component supports the following configurations:</p>
+
+<ul>
+<li>TCP mode (client or server)</li>
+<li>IP address (for TCP client mode)</li>
+<li>ports</li>
+<li>whether Nagle&rsquo;s algorithm for combining TCP packets is allowed</li>
+<li>whether and how endian byte reordering is done</li>
+</ul>
+
+<h3 id="properties">Properties</h3>
+
+<p>The following table describes the top level properties of <code>rh.sinksocket</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>NAME</strong></th>
+<th align="left"><strong>TYPE</strong></th>
+<th align="left"><strong>ACCESS</strong></th>
+<th align="left"><strong>DESCRIPTION</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>total_bytes</code></td>
+<td align="left"><code>double</code></td>
+<td align="left">readonly</td>
+<td align="left">Number of bytes sent over the network by all connections combined.</td>
+</tr>
+
+<tr>
+<td align="left"><code>bytes_per_sec</code></td>
+<td align="left"><code>float</code></td>
+<td align="left">readonly</td>
+<td align="left">Bytes-per-second, for data sent over the network, for all connections combined.</td>
+</tr>
+
+<tr>
+<td align="left"><code>Connections</code></td>
+<td align="left"><code>[Connection]</code></td>
+<td align="left">read/write</td>
+<td align="left">A list of data structures, each defining an <code>rh.sinksocket</code> Connection.</td>
+</tr>
+
+<tr>
+<td align="left"><code>ConnectionStats</code></td>
+<td align="left"><code>[ConnectionStat]</code></td>
+<td align="left">readonly</td>
+<td align="left">A list of data structures, each with information about a TCP connection.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The following table describes the properties within a single Connection.  If an <code>rh.sinksocket</code> is created without properties specified by the user, a single Connection is created with the default values given in the table.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>NAME</strong></th>
+<th align="left"><strong>TYPE</strong></th>
+<th align="left"><strong>DEFAULT</strong></th>
+<th align="left"><strong>DESCRIPTION</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>connection_type</code></td>
+<td align="left"><code>string</code></td>
+<td align="left"><code>server</code></td>
+<td align="left">Enumerated values:  <code>client</code>, <code>server</code>.<br/>Set whether <code>rh.sinksocket</code> is a TCP client or server.</td>
+</tr>
+
+<tr>
+<td align="left"><code>ip_address</code></td>
+<td align="left"><code>string</code></td>
+<td align="left"><code>&quot;&quot;</code></td>
+<td align="left">If this Connection is a TCP client, set the IP address to which it will connect.<br/>If this Connection is a TCP server, this value is ignored.</td>
+</tr>
+
+<tr>
+<td align="left"><code>ports</code></td>
+<td align="left"><code>[ushort]</code></td>
+<td align="left"><code>[32191]</code></td>
+<td align="left">If this Connection is a TCP client, set the list of port numbers to which <code>rh.sinksocket</code> will connect.<br/>If this Connection is a TCP server, set the list of port numbers  on which <code>rh.sinksocket</code> will listen.</td>
+</tr>
+
+<tr>
+<td align="left"><code>tcp_nodelays</code></td>
+<td align="left"><code>[boolean]</code></td>
+<td align="left"><code>[false]</code></td>
+<td align="left">If <code>tcp_nodelay</code> is <code>true</code>, prevent the TCP connection from combining packets with Nagle&rsquo;s algorithm.</td>
+</tr>
+
+<tr>
+<td align="left"><code>byte_swap</code></td>
+<td align="left"><code>[ushort]</code></td>
+<td align="left"><code>[0]</code></td>
+<td align="left">Reorder bytes of integer values between little-endian and big-endian representation.<br/>Values:<br/> - <code>0</code>: no byte swapping<br/> - <code>1</code>: byte swap according to the data size for each port<br/> - <code>&lt;num&gt;</code>: swap bytes as if the data type length was <code>&lt;num&gt;</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>An <code>rh.sinksocket</code> Connection contains a set of TCP connections.  Each TCP connection corresponds to a TCP port number.  These numbers are listed in the <code>ports</code> list.  The <code>byte_swap</code> and <code>tcp_nodelays</code> lists relate to the <code>ports</code> list like associative arrays.  That is, the first element of each corresponds to the same TCP connection.  The same is true for the nth element of each list.</p>
+
+<p>The following table describes the properties within a single <code>ConnectionStat</code>.  Each <code>ConnectionStat</code> contains information about one of the TCP connections within an <code>rh.sinksocket</code> Connection.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><strong>NAME</strong></th>
+<th align="left"><strong>TYPE</strong></th>
+<th align="left"><strong>DESCRIPTION</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>ip_address</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">The IP address of the Connection. If the Connection is type <code>server</code>, this value will be blank.</td>
+</tr>
+
+<tr>
+<td align="left"><code>port</code></td>
+<td align="left"><code>ushort</code></td>
+<td align="left">The TCP port of the connection.</td>
+</tr>
+
+<tr>
+<td align="left"><code>status</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">The status of the connection.<br/>Enumerated values:  <code>startup</code>, <code>not_connected</code>, <code>connected</code>, <code>error</code>.</td>
+</tr>
+
+<tr>
+<td align="left"><code>bytes_per_second</code></td>
+<td align="left"><code>float</code></td>
+<td align="left">Number of bytes sent over the network by the connection.</td>
+</tr>
+
+<tr>
+<td align="left"><code>bytes_sent</code></td>
+<td align="left"><code>double</code></td>
+<td align="left">Bytes-per-second, for data sent over the network, for the connection.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="installation">Installation</h2>
+
+<p>The following procedure explains how to install <code>rh.sinksocket</code> from source. <code>rh.sinksocket</code> is one of the REDHAWK basic assets. For information about how to install the REDHAWK basic assets from RPMs, refer to the REDHAWK Manual.</p>
+
+<ol>
+<li>Ensure <code>OSSIEHOME</code> and <code>SDRROOT</code> are both set. For a standard install, enter the following commands to set them:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd /etc/profile.d
+$ . redhawk.sh
+$ . redhawk-sdrroot.sh</code></pre></div>
+<ol>
+<li>To build and install <code>rh.sinksocket</code>, enter the following commands:</li>
+</ol>
+
+<pre><code>$ cd /path/to/redhawk/assets
+$ cd $(find . -name sinksocket)
+$ ./build.sh install
+</code></pre>
+
+<p>The <code>rh.sinksocket</code> executable is created in the <code>cpp</code> subdirectory, and then the component is installed to <code>SDRROOT</code>.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>The following examples explain how to use the <code>rh.sinksocket</code> component.</p>
+
+<ul>
+<li><a href="#example-1-rhsinksocket-as-a-server-in-the-redhawk-sandbox">Example 1</a>: <code>rh.sinksocket</code> as a server in the REDHAWK sandbox</li>
+<li><a href="#example-2-rhsinksocket-as-a-client-in-the-redhawk-sandbox">Example 2</a>: <code>rh.sinksocket</code> as a client in the REDHAWK sandbox</li>
+<li><a href="#example-3-rhsinksocket-as-a-server-in-a-redhawk-waveform">Example 3</a>: <code>rh.sinksocket</code> as a server in a REDHAWK waveform</li>
+<li><a href="#example-4-rhsinksocket-as-a-client-in-a-redhawk-waveform">Example 4</a>: <code>rh.sinksocket</code> as a client in a REDHAWK waveform</li>
+</ul>
+
+<p>All of the examples configure the component to use two ports.  One port does not swap byte endianness, while the other swaps bytes for a data word size of 2.  The first port allows packet combining with Nagle&rsquo;s algorithm, while the second does not.  However, packet combining is not observable in these examples.</p>
+
+<p><strong>Note: For the sandbox examples, a version of <code>netcat</code> must be installed.</strong></p>
+
+<h3 id="example-1-rh-sinksocket-as-a-server-in-the-redhawk-sandbox">Example 1: <code>rh.sinksocket</code> as a Server in the REDHAWK Sandbox</h3>
+
+<h4 id="running-the-example">Running the Example</h4>
+
+<ol>
+<li>Save the following python code to a file named <code>demo.py</code>.
+```python
+#!/usr/bin/env python3</li>
+</ol>
+
+<p>from pprint import pprint</p>
+
+<p>from ossie.utils import sb</p>
+
+<h1 id="use-a-streamsource-to-provide-demo-data">Use a StreamSource to provide demo data.</h1>
+
+<p>streamsource = sb.StreamSource()</p>
+
+<h1 id="create-the-rh-sinksocket">Create the rh.sinksocket.</h1>
+
+<p>props = {
+    &lsquo;Connections&rsquo;: [
+        {
+            &lsquo;connection_type&rsquo;: &lsquo;server&rsquo;,
+            &lsquo;ports&rsquo;: [32191, 32192],
+            &lsquo;byte_swap&rsquo;: [0, 2],
+            &lsquo;tcp_nodelays&rsquo;: [False, True],
+        }
+    ]
+}
+sinksocket = sb.launch(&lsquo;rh.sinksocket&rsquo;, properties=props)
+streamsource.connect(sinksocket, providesPortName=&lsquo;dataChar_in&rsquo;)</p>
+
+<p>sb.start()</p>
+
+<h1 id="manually-send-data-or-quit">Manually send data, or quit.</h1>
+
+<p>while raw_input() != &lsquo;q&rsquo;:
+    streamsource.write(&lsquo;abcd..&rsquo;)
+streamsource.close()</p>
+
+<h1 id="display-connection-information-supported-by-rh-sinksocket">Display connection information supported by rh.sinksocket.</h1>
+
+<p>print &lsquo;total bytes:  {0}&lsquo;.format(sinksocket.total_bytes)
+print &lsquo;bytes_per_second:  {0}&lsquo;.format(sinksocket.bytes_per_sec)
+print
+for c in sinksocket.Connections:
+    pprint(c, indent=4)
+print
+for c in sinksocket.ConnectionStats:
+    pprint(c, indent=4)
+print</p>
+
+<p>sb.stop()</p>
+
+<pre><code>2. Use three terminals to enter the following commands.  **Note: The order of these operations is important.**
+
+* In terminal 1, enter:
+```bash
+$ python demo.py
+</code></pre>
+
+<ul>
+<li><p>In terminal 2, enter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nc <span style="color:#ae81ff">127</span>.0.0.1 <span style="color:#ae81ff">32191</span></code></pre></div></li>
+
+<li><p>In terminal 3, enter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nc <span style="color:#ae81ff">127</span>.0.0.1 <span style="color:#ae81ff">32192</span></code></pre></div></li>
+</ul>
+
+<ol>
+<li><p>In terminal 1, press <code>Enter</code> a few times.<br />
+Each time you press <code>Enter</code>, the data <code>'abcd..'</code> is sent.</p></li>
+
+<li><p>In terminal 1, press <code>q</code> and <code>Enter</code> to quit.</p></li>
+
+<li><p>In terminals 2 and 3, press <code>Ctrl-c</code> to quit.</p></li>
+</ol>
+
+<h4 id="analyzing-the-output">Analyzing the Output</h4>
+
+<p>Terminal 1 displays the connection information produced by the print statements.</p>
+
+<p>Terminal 2 displays <code>'abcd..'</code> equivalent to the number of times you pressed <code>Enter</code> before pressing <code>q</code> in terminal 1.</p>
+
+<p>Terminal 3 displays the information the same number of times as in terminal 2, but the order of the characters is <code>'badc..'</code>.  The first and second characters are swapped with each other as are the third and fourth, etc.  This change occurred because the <code>byte_swap</code> property was set to <code>2</code>.</p>
+
+<h3 id="example-2-rh-sinksocket-as-a-client-in-the-redhawk-sandbox">Example 2: <code>rh.sinksocket</code> as a Client in the REDHAWK Sandbox</h3>
+
+<p>This is similar to <a href="#example-1-rhsinksocket-as-a-server-in-the-redhawk-sandbox">Example 1</a>, except that the component is a TCP client.</p>
+
+<ol>
+<li>To run the example, make these changes:</li>
+</ol>
+
+<ul>
+<li>in <code>demo.py</code>, replace <code>'server'</code> with <code>'client'</code></li>
+<li>below <code>'connection_type': 'client'</code>, add the following line: <code>'ip_address': '127.0.0.1',</code></li>
+<li>in terminals 2 and 3, add the <code>-l</code> flag after <code>nc</code></li>
+</ul>
+
+<ol>
+<li>Then, run this example in the same way as <a href="#example-1-rhsinksocket-as-a-server-in-the-redhawk-sandbox">Example 1</a>.</li>
+</ol>
+
+<p>The order of operations is less important in this case.  If <code>rh.sinksocket</code> is configured to expect a TCP server, and that server is unavailable, <code>rh.sinksocket</code> skips it.  When the server comes online, <code>rh.sinksocket</code> automatically connects and starts/resumes sending data to it.</p>
+
+<h3 id="example-3-rh-sinksocket-as-a-server-in-a-redhawk-waveform">Example 3: <code>rh.sinksocket</code> as a Server in a REDHAWK Waveform</h3>
+
+<p>A waveform&rsquo;s SAD file contains configuration information for its components.  The following SAD file snippet contains the same configuration as <a href="#example-1-rhsinksocket-as-a-server-in-the-redhawk-sandbox">Example 1</a>.  To use this in a SAD file, replace or insert the <code>&lt;componentproperties&gt;</code> section.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;componentinstantiation</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;sinksocket_1&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;componentproperties&gt;</span>
+    <span style="color:#f92672">&lt;structsequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connections&#34;</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;structvalue&gt;</span>
+        <span style="color:#f92672">&lt;simpleref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::connection_type&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;server&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;simpleref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::ip_address&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::byte_swap&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>0<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>2<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::ports&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>32191<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>32192<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connections::tcp_nodelays&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>false<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>true<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+      <span style="color:#f92672">&lt;/structvalue&gt;</span>
+    <span style="color:#f92672">&lt;/structsequenceref&gt;</span>
+  <span style="color:#f92672">&lt;/componentproperties&gt;</span>
+<span style="color:#f92672">&lt;/componentinstantiation&gt;</span></code></pre></div>
+<h3 id="example-4-rh-sinksocket-as-a-client-in-a-redhawk-waveform">Example 4: <code>rh.sinksocket</code> as a Client in a REDHAWK Waveform</h3>
+
+<p>A waveform&rsquo;s SAD file contains configuration information for its components.  The following SAD file snippet contains the same configuration as <a href="#example-2-rhsinksocket-as-a-client-in-the-redhawk-sandbox">Example 2</a>.  To use this in a SAD file, replace or insert the <code>&lt;componentproperties&gt;</code> section.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;componentinstantiation</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;sinksocket_1&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;componentproperties&gt;</span>
+    <span style="color:#f92672">&lt;structsequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connections&#34;</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;structvalue&gt;</span>
+        <span style="color:#f92672">&lt;simpleref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::connection_type&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;client&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;simpleref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::ip_address&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;127.0.0.1&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::byte_swap&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>0<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>2<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connection::ports&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>32191<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>32192<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+        <span style="color:#f92672">&lt;simplesequenceref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;Connections::tcp_nodelays&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;values&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>false<span style="color:#f92672">&lt;/value&gt;</span>
+            <span style="color:#f92672">&lt;value&gt;</span>true<span style="color:#f92672">&lt;/value&gt;</span>
+          <span style="color:#f92672">&lt;/values&gt;</span>
+        <span style="color:#f92672">&lt;/simplesequenceref&gt;</span>
+      <span style="color:#f92672">&lt;/structvalue&gt;</span>
+    <span style="color:#f92672">&lt;/structsequenceref&gt;</span>
+  <span style="color:#f92672">&lt;/componentproperties&gt;</span>
+<span style="color:#f92672">&lt;/componentinstantiation&gt;</span></code></pre></div>
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+</div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="assets/3.0-lts/components/rh.sinksocket.README.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="../../../../js/clipboard.min.js"></script>
+
+<link href="../../../../css/featherlight.min.css" rel="stylesheet">
+<script src="../../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../../theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

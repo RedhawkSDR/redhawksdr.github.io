@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Applications :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/runtime-environment/applications/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1351,12 +1380,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1382,36 +1411,37 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Applications</h1>
+    <h2 class="title">Applications</h2>
+
     
     
     
     
 
-<p>Applications are software objects representing waveforms. They are used to organize a group of components that are linked together to accomplish a useful computational task. Applications provide a convenient way to move data around in order to achieve these different tasks by allowing for components to easily be interchanged.</p>
+<p><a href="../../../manual/glossary/#application">Applications</a> are software objects representing <a href="../../../manual/glossary/#waveform">waveforms</a>. They are used to organize a group of <a href="../../../manual/glossary/#component">components</a> that are linked together to accomplish a useful computational task. Applications provide a convenient way to move data around in order to achieve these different tasks by allowing for components to easily be interchanged.</p>
 
 <h3 id="application-class">Application Class</h3>
 
-<p>Each application contains a unique application name and profile, which describes the application’s configuration. This profile is a SAD file that is referenced by a File Manager.</p>
+<p>Each application contains a unique application name and profile, which describes the application’s configuration. This profile is a Software Assembly Descriptor (SAD) file that is referenced by a <a href="../../../manual/glossary/#file-manager">File Manager</a>.</p>
 
-<p>An <code>Application</code> object is responsible for providing control, configuration, and status of any application that is instantiated in the domain. In order to accomplish this, each <code>Application</code> object maintains various data structures to monitor all aspects of its execution.</p>
+<p>An <code>Application</code> object is responsible for providing control, configuration, and status of any application that is instantiated in the <a href="../../../manual/glossary/#domain">domain</a>. In order to accomplish this, each <code>Application</code> object maintains various data structures to monitor all aspects of its execution.</p>
 
-<p>A list of SPD implementation IDs and a list of pids are kept for each component that makes up the application in order to manage their life cycles. Since every component has to be associated with at least one device, each component is also stored in a list with the device that it uses, is loaded on or is executed on.</p>
+<p>A list of Software Package Descriptor (SPD) implementation IDs and a list of pids are kept for each component that makes up the application in order to manage their life cycles. Since every component has to be associated with at least one <a href="../../../manual/glossary/#device">device</a>, each component is also stored in a list with the device that it uses, is loaded on or is executed on.</p>
 
 <p>Upon completion, the <code>Application</code>’s <code>releaseObject()</code> function is responsible for various clean up tasks. Any task or process allocated on Executable devices are stopped using the <code>terminate()</code> function. All memory allocated by component instances on Loadable devices is freed using the <code>unload()</code> function. Finally, any additional capacities or resources that were allocated during creation are released using the device’s <code>deallocateCapacity()</code> method. These changes return the devices to the state they were in before the application was launched (the state of the devices may not have changed during application execution).</p>
 
-<p>All object references to components that make up the application are released and all connected ports are disconnected. Any consumers or producers that were connected to a CORBA Event Channel are removed. Finally, all component’s naming contexts are unbound from the Naming Service.</p>
+<p>All object references to components that make up the application are released and all connected <a href="../../../manual/glossary/#port">ports</a> are disconnected. Any consumers or producers that were connected to a CORBA <a href="../../../manual/glossary/#event-channel">event channel</a> are removed. Finally, all component’s naming contexts are unbound from the <a href="../../../manual/glossary/#naming-service">Naming Service</a>.</p>
 
 <h3 id="sad-file">SAD File</h3>
 
-<p>The SAD File is where information about a waveform’s composition and configuration is stored. It is an XML file that contains tags for all of the elements required for the application to be built and is located in: <code>$SDRROOT/dom/waveforms/WAVE_NAME</code>. This file is parsed by the runtime environment and used by an ApplicationFactory to construct the desired waveform.</p>
+<p>The SAD File is where information about a waveform’s composition and configuration is stored. It is an XML file that contains tags for all of the elements required for the application to be built and is located in: <code>$SDRROOT/dom/waveforms/WAVE_NAME</code>. This file is parsed by the runtime environment and used by an <a href="../../../manual/glossary/#application-factory">ApplicationFactory</a> to construct the desired waveform.</p>
 
 <p>Individual elements of the file include:</p>
 
@@ -1422,7 +1452,7 @@ ga('send', 'pageview');
 <li>Required connections to devices</li>
 <li>Name given in Naming Service</li>
 <li>Co-Location (deployment) dependencies</li>
-<li>Assembly Controller</li>
+<li><a href="../../../manual/glossary/#assembly-controller">Assembly Controller</a></li>
 <li>Start order of the components</li>
 </ul>
 
@@ -1439,11 +1469,23 @@ ga('send', 'pageview');
 <li><code>query()</code></li>
 </ul>
 
-<p>By default, the first component added to a waveform is the Assembly Controller. However, the Assembly Controller can be changed to any component in the waveform by right-clicking on the component in the waveform diagram and selecting <strong>Set As Assembly Controller</strong> from the context menu.</p>
+<p>By default, the first component added to a waveform is the Assembly Controller. However, the Assembly Controller can be changed to any component in the waveform by right-clicking on the component in the waveform diagram and selecting <strong>Set As Assembly Controller</strong> from the context menu.
 
-<h5 id="assembly-controller-assignment">Assembly Controller Assignment</h5>
+<figure >
+    
+        <img src="../images/assembly_controller.png" alt="Assembly Controller Assignment" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assembly Controller Assignment</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/assembly_controller.png" alt="Assembly Controller Assignment" /></p>
+
+
+</p>
 
 <p>In the waveform diagram, the circled number in the component indicates the component’s designated start order. This is the order that the <code>start()</code> function is called on the components within the waveform.</p>
 
@@ -1456,12 +1498,23 @@ ga('send', 'pageview');
 <ol>
 <li>In the waveform diagram, right-click the component for which you want to change the start order.</li>
 <li>Select <strong>Move Start Order Earlier</strong> to start the component earlier.</li>
+<li>Select <strong>Move Start Order Later</strong> to start the component later.
 
-<li><p>Select <strong>Move Start Order Later</strong> to start the component later.</p>
+<figure >
+    
+        <img src="../images/start_order.png" alt="Start Order Assignment" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Start Order Assignment</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="start-order-assignment">Start Order Assignment</h5>
 
-<p><img src="../images/start_order.png" alt="Start Order Assignment" /></p></li>
+
+</li>
 </ol>
 
 <h3 id="host-collocation">Host Collocation</h3>
@@ -1472,61 +1525,115 @@ ga('send', 'pageview');
 
 <ol>
 <li>Open the <strong>Advanced</strong> section of the Palette.</li>
+<li>Select <strong>Host Collocation</strong>.
 
-<li><p>Select <strong>Host Collocation</strong>.</p>
+<figure >
+    
+        <img src="../images/select_host_collocation.png" alt="Select Host Collocation" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Select Host Collocation  </h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="select-host-collocation">Select Host Collocation</h5>
 
-<p><img src="../images/select_host_collocation.png" alt="Select Host Collocation" /></p></li>
 
-<li><p>Drag <strong>Host Collocation</strong> onto the Diagram.
-The collocation area is displayed.</p>
+</li>
+<li>Drag <strong>Host Collocation</strong> onto the Diagram.
+The collocation area is displayed.
 
-<h5 id="collocation">Collocation</h5>
+<figure >
+    
+        <img src="../images/collocation.png" alt="Collocation" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Collocation</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/collocation.png" alt="Collocation" /></p></li>
 
-<li><p>Add desired components to the collocated area.</p>
 
-<h5 id="add-components-to-host-collocation">Add Components to Host Collocation</h5>
+</li>
+<li>Add desired components to the collocated area.
 
-<p><img src="../images/add_components.png" alt="Add Components to Host Collocation" /></p></li>
+<figure >
+    
+        <img src="../images/add_components.png" alt="Add Components to Host Collocation" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Add Components to Host Collocation</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<li><p>Finalize other component connections.</p>
 
-<h5 id="finalize-other-component-connections">Finalize Other Component Connections</h5>
 
-<p><img src="../images/final_collocation.png" alt="Finalize other Component connections" /></p></li>
+</li>
+<li>Finalize other component connections.
+
+<figure >
+    
+        <img src="../images/final_collocation.png" alt="Finalize other Component connections" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Finalize Other Component Connections</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 </ol>
 
 <h3 id="external-ports">External Ports</h3>
 
 <p>Within the REDHAWK Framework, a particular component’s port can be designated as an external port so that it is accessible to external waveform objects. Using external ports, a complex waveform may be subdivided into smaller more manageable waveforms. Marking a port as external adds an <code>external</code> ports tag in the SAD XML file containing the component instance that owns the port in question. Additionally, the color of the port’s block in the diagram changes color to mark it as externally accessible. For information about marking a Port as external, refer to <a href="../../../manual/ide/editors-and-views/waveform-editor/#diagram-tab">Waveform Editor Diagram Tab</a>.</p>
 
-<p>External ports can be renamed in the Overview tab of the application’s SAD file. Renaming a port enables other applications to access the port with a different name instance than the one specified in the components SCD file, thus preventing naming collision. For information about renaming an external port, refer to <a href="../../../manual/ide/editors-and-views/waveform-editor/#overview-tab">Waveform Editor Overview Tab</a>).</p>
+<p>External ports can be renamed in the Overview tab of the application’s SAD file. Renaming a port enables other applications to access the port with a different name instance than the one specified in the components Software Component Descriptor (SCD) file, thus preventing naming collision. For information about renaming an external port, refer to <a href="../../../manual/ide/editors-and-views/waveform-editor/#overview-tab">Waveform Editor Overview Tab</a>.</p>
 
 <h3 id="external-properties">External Properties</h3>
 
-<p>Individual component properties can be promoted as external in the properties tab of the application’s SAD file, which enables other applications to access these internal property values through <code>configure()</code> and <code>query()</code>. To prevent naming collision, the property ID can also be assigned an external id. If no external ID is specified, the internal property ID from the components PRF file is used as its external id. For information about making a property external, refer to <a href="../../../manual/ide/editors-and-views/waveform-editor/#properties-tab">Waveform Editor Properties Tab</a>).</p>
+<p>Individual component <a href="../../../manual/glossary/#property">properties</a> can be promoted as external in the properties tab of the application’s SAD file, which enables other applications to access these internal property values through <code>configure()</code> and <code>query()</code>. To prevent naming collision, the property ID can also be assigned an external ID. If no external ID is specified, the internal property ID from the components Properties File (PRF) file is used as its external ID. For information about making a property external, refer to <a href="../../../manual/ide/editors-and-views/waveform-editor/#properties-tab">Waveform Editor Properties Tab</a>.</p>
 
 <h3 id="using-the-find-by-feature">Using the Find By Feature</h3>
 
-<p>A Find By represents an object within a REDHAWK domain that will be available at runtime (when the waveform is launched in a domain). Find Bys contain details that describe the object. For example, the details may specify that it is a domain manager or it is a Service with a specific name. When a waveform is launched in a domain, the Find By details help to locate the appropriate object, and then any connections the user specified in the waveform are established. Those connections are sometimes directly to the object itself, or sometimes to ports on the object, depending on the context. You can search for a resource by name, a service by name or type, or an Event Channel by name.</p>
+<p>A Find By represents an object within a REDHAWK domain that will be available at runtime (when the waveform is launched in a domain). Find Bys contain details that describe the object. For example, the details may specify that it is a <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> or it is a <a href="../../../manual/glossary/#service">service</a> with a specific name. When a waveform is launched in a domain, the Find By details help to locate the appropriate object, and then any connections the user specified in the waveform are established. Those connections are sometimes directly to the object itself, or sometimes to ports on the object, depending on the context. You can search for a resource by name, a service by name or type, or an event channel by name.</p>
 
 <h4 id="find-by-name">Find By Name</h4>
 
 <p>To find a resource in the domain by name:</p>
 
 <ol>
-<li><p>From the <strong>Palette</strong>, in the <strong>Find By</strong> folder, select <strong>Find By Name</strong> and drag it onto the diagram.  The <strong>Find By Name</strong> dialog is displayed.</p>
+<li>From the <strong>Palette</strong>, in the <strong>Find By</strong> folder, select <strong>Find By Name</strong> and drag it onto the diagram.  The <strong>Find By Name</strong> dialog is displayed.
 
-<h5 id="find-by-name-1">Find By Name</h5>
+<figure >
+    
+        <img src="../images/FindByName.png" alt="Find By Name" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Find By Name</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/FindByName.png" alt="Find By Name" /></p></li>
 
-<li><p>Enter the name of the component you want to find.</p></li>
 
-<li><p>Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click <strong>+</strong> next to <strong>Provides Port</strong>. For Uses ports, enter the name and click <strong>+</strong> next to <strong>Uses Port</strong>.</p></li>
+</li>
+<li>Enter the name of the component you want to find.</li>
+<li>Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click <strong>+</strong> next to <strong>Provides Port</strong>. For Uses ports, enter the name and click <strong>+</strong> next to <strong>Uses Port</strong>.</li>
 
 <li><p>Click <strong>Finish</strong>.</p>
 
@@ -1538,17 +1645,26 @@ The collocation area is displayed.</p>
 <p>To find a service in the domain:</p>
 
 <ol>
-<li><p>From the <strong>Palette</strong>, in the <strong>Find By</strong> folder, select <strong>Service</strong> and drag it onto the diagram. The <strong>Find By Service</strong> dialog is displayed.</p>
+<li>From the <strong>Palette</strong>, in the <strong>Find By</strong> folder, select <strong>Service</strong> and drag it onto the diagram. The <strong>Find By Service</strong> dialog is displayed.
 
-<h5 id="find-by-service-1">Find By Service</h5>
+<figure >
+    
+        <img src="../images/Findbyservice.png" alt="Find By Service" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Find By Service</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/Findbyservice.png" alt="Find By Service" /></p></li>
 
-<li><p>If you want to search for a service Name, select the <strong>Service Name</strong> radio button and enter the service Name you want to find.</p></li>
 
-<li><p>If you want to search for a service Type, select the <strong>Service Type</strong> radio button and enter the service Type you want to find. The service Type indicates the interface (IDL) provided by the service. Click <strong>Browse</strong> to select an IDL type the IDE recognizes.</p></li>
-
-<li><p>Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click <strong>+</strong> next to <strong>Provides Port</strong>. For Uses ports, enter the name and click <strong>+</strong> next to <strong>Uses Port</strong>.</p></li>
+</li>
+<li>If you want to search for a service Name, select the <strong>Service Name</strong> radio button and enter the service Name you want to find.</li>
+<li>If you want to search for a service Type, select the <strong>Service Type</strong> radio button and enter the service Type you want to find. The service Type indicates the interface provided by the service. Click <strong>Browse</strong> to select an interface type the IDE recognizes.</li>
+<li>Optionally, enter the component’s ports names that you want to use. For Provides ports, enter the name and click <strong>Add Provides Port</strong>. For Uses ports, enter the name and click <strong>Add Uses Port</strong>.</li>
 
 <li><p>Click <strong>Finish</strong>.</p>
 
@@ -1562,20 +1678,32 @@ The collocation area is displayed.</p>
 <ol>
 <li><p>From the <strong>Palette</strong>, in the <strong>Find By</strong> folder, select <strong>Event Channel</strong> and drag it onto the diagram.</p>
 
-<p>The <strong>Event Channel</strong> dialog is displayed.</p>
+<p>The <strong>Event Channel</strong> dialog is displayed.
 
-<h5 id="event-channel">Event Channel</h5>
+<figure >
+    
+        <img src="../images/NewEventChannel.png" alt="Event Channel" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Event Channel</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/NewEventChannel.png" alt="Event Channel" /></p></li>
 
-<li><p>Enter the name of the Event Channel you want to find and click <strong>OK</strong>.</p>
+
+</p></li>
+
+<li><p>Enter the name of the event channel you want to find and click <strong>OK</strong>.</p>
 
 <p>The <strong>Event Channel</strong> is displayed in the diagram.</p></li>
 </ol>
 
 <h3 id="usesdevice-relationship"><em>usesdevice</em> Relationship</h3>
 
-<p>An application may require that specific devices are running in order for the application to be deployed. The <em>usesdevice</em> relationship is a mechanism for expressing such a requirement. The <em>usesdevice</em> relationship also enables the application to connect ports of components within the SAD file to ports of devices running in a node. These specifications are handled through tags in the application’s SAD XML, which can contain any number of <em>usesdevice</em> relationships. Each <em>usesdevice</em> relationship has a unique ID with a set of <a href="../../../manual/nodes/distributed-computing-and-rf-devices/#allocation-properties">allocation property</a> dependencies required for the relationship to be satisfied..</p>
+<p>An application may require that specific devices are running in order for the application to be deployed. The <a href="../../../manual/glossary/#usesdevice-relationship"><em>usesdevice</em> relationship</a> is a mechanism for expressing such a requirement. The <em>usesdevice</em> relationship also enables the application to connect ports of components within the SAD file to ports of devices running in a <a href="../../../manual/glossary/#node">node</a>. These specifications are handled through tags in the application’s SAD XML, which can contain any number of <em>usesdevice</em> relationships. Each <em>usesdevice</em> relationship has a unique ID with a set of <a href="../../../manual/nodes/distributed-computing-and-rf-devices/#allocation-properties">allocation property</a> dependencies required for the relationship to be satisfied..</p>
 
 <p>The following example XML expresses the <em>usesdevice</em> relationship and must reside within the <code>softwareassembly</code> element of the SAD XML file. The <code>usesdevicedependencies</code> element must be the last element within the <code>softwareassembly</code> element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;usesdevicedependencies&gt;</span>
@@ -1636,21 +1764,59 @@ The collocation area is displayed.</p>
 
 <p>The <strong>Edit Host Collocation</strong> dialog is displayed.</p>
 
-<h5 id="edit-host-collocation">Edit Host Collocation</h5>
 
-<p><img src="../images/EditHostCollocation.png" alt="Edit Host Collocation" /></p></li>
+<figure >
+    
+        <img src="../images/EditHostCollocation.png" alt="Edit Host Collocation" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Edit Host Collocation</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>To add a Device, under <strong>Available uses devices</strong>, select the Device, click <strong>Add</strong>, and click <strong>Finish</strong>. The Device is added to the host collocation.</p>
 
-<h5 id="host-collocation-including-a-usesdevice">Host Collocation Including a <em>usesdevice</em></h5>
 
-<p><img src="../images/hostcollocationusesdeviceref.png" alt="Host Collocation Including a *usesdevice*" /></p></li>
+<figure >
+    
+        <img src="../images/hostcollocationusesdeviceref.png" alt="Host Collocation Including a usesdevice" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Host Collocation Including a usesdevice</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<li><p>To remove a Device, under <strong>Collocated uses devices</strong>, select the Device, click <strong>Remove</strong>, and click <strong>Finish</strong>. The Device is removed.</p>
 
-<h5 id="host-collocation-without-a-usesdevice">Host Collocation without a <em>usesdevice</em></h5>
 
-<p><img src="../images/hostcollocationwithoutusesdevice.png" alt="Host Collocation without a *usesdevice*" /></p></li>
+</li>
+
+<li><p>To remove a Device, under <strong>Collocated uses devices</strong>, select the Device, click <strong>Remove</strong>, and click <strong>Finish</strong>. The Device is removed.
+
+<figure >
+    
+        <img src="../images/hostcollocationwithoutusesdevice.png" alt="Host Collocation without a usesdevice" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Host Collocation without a usesdevice</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 </ol>
 
 
@@ -1674,6 +1840,10 @@ The collocation area is displayed.</p>
 
   
 
+    <div class="github-link">
+      <a href="manual/runtime-environment/applications.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

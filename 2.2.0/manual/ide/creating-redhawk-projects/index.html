@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Creating REDHAWK Projects :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/creating-redhawk-projects/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1356,12 +1385,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1387,14 +1416,15 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Creating REDHAWK Projects</h1>
+    <h2 class="title">Creating REDHAWK Projects</h2>
+
     
     
     
@@ -1411,24 +1441,24 @@ ga('send', 'pageview');
 <p>Some basic fields within the new project Wizard are common to all project types and include:</p>
 
 <ul>
-<li><p><strong>Project Name</strong>: A project name that is unique to the current workspace. Projects can be namespaced by adding dots in the name. Project names may not begin with a number and may not contain special characters other than dots for the namespace. Namespacing projects provides the ability to uniquely identify projects that share the same base name but have different implementations and also provides a logical grouping of resources. For example, the REDHAWK basic assets are namspaced as <code>rh.xxxx</code>.
+<li><p><strong>Project Name</strong>: A project name that is unique to the current <a href="../../../manual/glossary/#workspace">workspace</a>. Projects can be namespaced by adding dots in the name. Project names may not begin with a number and may not contain special characters other than dots for the namespace. Namespacing projects provides the ability to uniquely identify projects that share the same base name but have different implementations and also provides a logical grouping of resources. For example, the REDHAWK basic assets are namspaced as <code>rh.xxxx</code>.
 <div class="notices tip" ><p>The Wizard dialog detects errors and informs the user if there is an invalid entry.</p>
 </div>
 </p></li>
 
 <li><p><strong>Location</strong>: By default the location of the project is set to the current workspace. This may be changed by deselecting the <strong>Use default location</strong> check box and providing a custom location.</p></li>
 
-<li><p><strong>Working sets</strong>: A working set is an Eclipse concept and provides an additional layer of organization to the project workspace. A user may put common projects into a single “working set” to visually organize the <strong>Project Explorer</strong>. Additional options become available when projects are placed in working sets allowing the user to build, refresh, and search based on a specific working set. While it may resemble a folder, a working set does not create a new directory on the file system and the same project may belong to multiple working sets.</p></li>
+<li><p><strong>Working sets</strong>: A working set is an Eclipse concept and provides an additional layer of organization to the project workspace. A user may put common projects into a single “working set” to visually organize the <strong><a href="../../../manual/glossary/#project-explorer-view">Project Explorer</a></strong>. Additional options become available when projects are placed in working sets allowing the user to build, refresh, and search based on a specific working set. While it may resemble a folder, a working set does not create a new directory on the file system and the same project may belong to multiple working sets.</p></li>
 </ul>
 
 <h3 id="redhawk-component-project">REDHAWK Component Project</h3>
 
-<p>The <strong>New Component Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK component, selecting a programming language, and selecting a code generator. Many of the fields found within the component project wizard are also found within the device project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
+<p>The <strong>New Component Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK <a href="../../../manual/glossary/#component">component</a>, selecting a programming language, and selecting a code generator. Many of the fields found within the component project wizard are also found within the device project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
 <p>Page one of the component wizard contains:</p>
 
 <ul>
-<li><strong>Contents</strong>: A REDHAWK component is defined by an SPD file. By default, when creating a new component, the SPD file created is an empty skeleton. A new component may be based off of a previous component’s SPD file by selecting it from the file system.</li>
+<li><strong>Contents</strong>: A REDHAWK component is defined by an Software Package Descriptor (SPD) file. By default, when creating a new component, the SPD file created is an empty skeleton. A new component may be based off of a previous component’s SPD file by selecting it from the file system.</li>
 <li><strong>Component ID</strong>: Every SoftPkg element contains an ID which is used for universally unique identification. The IDE generates a DCE compliant UUID by default.</li>
 </ul>
 
@@ -1466,7 +1496,7 @@ ga('send', 'pageview');
 
 <h3 id="redhawk-device-project">REDHAWK Device Project</h3>
 
-<p>The <strong>New device Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK device, selecting a programming language, and selecting a code generator. Many of the fields found within the device project wizard are also found within the component project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
+<p>The <strong>New Device Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK <a href="../../../manual/glossary/#device">device</a>, selecting a programming language, and selecting a code generator. Many of the fields found within the device project wizard are also found within the component project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
 <p>Page one of the wizard contains:</p>
 
@@ -1501,11 +1531,11 @@ ga('send', 'pageview');
 
 <p>Click <strong>Finish</strong> to complete the new project creation wizard.</p>
 
-<h3 id="redhawk-front-end-device-project">REDHAWK Front End Device Project</h3>
+<h3 id="redhawk-frontend-device-project">REDHAWK FrontEnd Device Project</h3>
 
-<p>The <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/#using-the-fei-wizard-to-create-an-fei-device"><strong>FEI Wizard</strong></a> enables users to quickly create an FEI compliant RX or TX tuner device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output ports. Additionally, the user can choose to augment the required tuner status properties with additional optional properties.</p>
+<p>The <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/#using-the-fei-wizard-to-create-an-fei-device"><strong>FEI Wizard</strong></a> enables users to quickly create an FrontEnd Interfaces (FEI) compliant RX or TX tuner device. In the wizard, the user specifies the physical properties of the device, including whether the device ingests or outputs GPS and if the device has digital or analog input and output <a href="../../../manual/glossary/#port">ports</a>. Additionally, the user can choose to augment the required tuner status <a href="../../../manual/glossary/#property">properties</a> with additional optional properties.</p>
 
-<h3 id="redhawk-idl-project">REDHAWK IDL Project</h3>
+<h3 id="redhawk-interface-description-language-idl-project">REDHAWK Interface Description Language (IDL) Project</h3>
 
 <p>The <strong>IDL Project Wizard</strong> is a one page wizard that walks the user through creating a new REDHAWK IDL project. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
@@ -1523,27 +1553,27 @@ ga('send', 'pageview');
 
 <p>Click <strong>Finish</strong> to complete the new project creation wizard.</p>
 
-<div class="notices note" ><p>If you upgrade to REDHAWK version 2.0, and your custom IDL project references the Core Framework IDLs, compiler errors may be displayed. To resolve the errors, create a new IDL project and import your IDL files into the new project. The new project contains an updated <code>Makefile.am</code> that accounts for changes in the REDHAWK 2.0 IDL files.</p>
+<div class="notices note" ><p>If you upgrade to REDHAWK version 2.0, and your custom IDL project references the Core Framework (CF) IDLs, compiler errors may be displayed. To resolve the errors, create a new IDL project and import your IDL files into the new project. The new project contains an updated <code>Makefile.am</code> that accounts for changes in the REDHAWK 2.0 IDL files.</p>
 </div>
 
 
 <h3 id="redhawk-node-project">REDHAWK Node Project</h3>
 
-<p>The <strong>New Node Project Wizard</strong> is a one to two page wizard that walks the user through creating a new REDHAWK node and optionally, placing devices/services into the new node. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
+<p>The <strong>New Node Project Wizard</strong> is a one to two page wizard that walks the user through creating a new REDHAWK <a href="../../../manual/glossary/#node">node</a> and optionally, placing devices into the new node. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
 <p>Page one of the wizard contains:</p>
 
 <ul>
-<li><p><strong>Domain Manager</strong>: Select the Domain Manager this node is assigned.</p></li>
+<li><p><strong>Domain Manager</strong>: Select the <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> this node is assigned.</p></li>
 
-<li><p><strong>Contents</strong>: A REDHAWK node is defined by a DCD file. By default, when creating a new node, the DCD file created is an empty skeleton. The new node may be based off of a previous node’s DCD file by selecting it from the file system.</p></li>
+<li><p><strong>Contents</strong>: A REDHAWK node is defined by a Device Configuration Descriptor (DCD) file. By default, when creating a new node, the DCD file created is an empty skeleton. The new node may be based off of a previous node’s DCD file by selecting it from the file system.</p></li>
 
 <li><p><strong>Node ID</strong>: Every DCD contains an ID which is used for universally unique identification. The IDE generates a DCE compliant UUID by default.</p></li>
 </ul>
 
 <p>The wizard may be completed at this point by clicking <strong>Finish</strong> or the user may continue to the optional second page.</p>
 
-<p>On page two the user chooses what devices/services make up this node. This may be changed after the node’s creation from the node’s Editor.</p>
+<p>On page two the user chooses what devices/services make up this node. This may be changed after the node’s creation from the <a href="../../../manual/glossary/#node-editor">Node Editor</a>.</p>
 
 <p>Select <strong>Finish</strong> to complete the new project creation wizard.</p>
 
@@ -1553,12 +1583,12 @@ ga('send', 'pageview');
 
 <h3 id="redhawk-service-project">REDHAWK Service Project</h3>
 
-<p>The <strong>New service Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK service selecting a programming language, and selecting a code generator. Many of the fields found within the service project wizard are also found within the component and device project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
+<p>The <strong>New Service Project Wizard</strong> is a three page wizard that walks the user through creating a new REDHAWK <a href="../../../manual/glossary/#service">service</a> selecting a programming language, and selecting a code generator. Many of the fields found within the service project wizard are also found within the component and device project wizard. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
 <p>Page one of the wizard contains:</p>
 
 <ul>
-<li><strong>Service Interface</strong>: Select, from the Core Framework’s list of installed IDLs the interface which this service uses.</li>
+<li><strong>Service Interface</strong>: Select from the list of installed IDLs the interface which this service uses.</li>
 <li><strong>Contents</strong>: A REDHAWK service is defined by an SPD file. By default, when creating a new service, the SPD file created is an empty skeleton. The new service may be based off of a previous service’s SPD file by selecting it from the file system.</li>
 <li><strong>Service ID</strong>: Every SoftPkg element contains an ID which is used for universally unique identification. The IDE generates a DCE compliant UUID by default.</li>
 </ul>
@@ -1593,12 +1623,12 @@ ga('send', 'pageview');
 
 <h2 id="redhawk-waveform-project">REDHAWK Waveform Project</h2>
 
-<p>The <strong>New waveform Project Wizard</strong> is a one to two page wizard that walks the user through creating a new REDHAWK waveform and optionally, assigning an Assembly Controller. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
+<p>The <strong>New Waveform Project Wizard</strong> is a one to two page wizard that walks the user through creating a new REDHAWK <a href="../../../manual/glossary/#waveform">waveform</a> and optionally, assigning an <a href="../../../manual/glossary/#assembly-controller">Assembly Controller</a>. Fields common to all new project wizards are defined in <a href="#common-fields">Common Fields</a>.</p>
 
 <p>Page one of the wizard contains:</p>
 
 <ul>
-<li><strong>Contents</strong>: An waveform is defined by an SAD file. By default, when creating a new waveform, the SAD file created is an empty skeleton. The new waveform may be based off of a previous waveform’s SAD file by selecting it from the file system.</li>
+<li><strong>Contents</strong>: An waveform is defined by an Software Assembly Descriptor (SAD) file. By default, when creating a new waveform, the SAD file created is an empty skeleton. The new waveform may be based off of a previous waveform’s SAD file by selecting it from the file system.</li>
 <li><strong>REDHAWK Waveform ID</strong>: Every SAD file contains an ID which is used for universally unique identification. The IDE generates a DCE compliant UUID by default.</li>
 </ul>
 
@@ -1627,6 +1657,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/creating-redhawk-projects.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

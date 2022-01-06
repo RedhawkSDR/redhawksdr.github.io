@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Working with Components, Devices, and Services :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/sandbox/python/working_with_components/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1358,12 +1387,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1389,20 +1418,21 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Working with Components, Devices, and Services</h1>
+    <h2 class="title">Working with Components, Devices, and Services</h2>
+
     
     
     
     
 
-<p>The Sandbox contains the following commands for working with components, devices, and services:</p>
+<p>The <a href="../../../../manual/glossary/#sandbox">sandbox</a> contains the following commands for working with <a href="../../../../manual/glossary/#component">components</a>, <a href="../../../../manual/glossary/#device">devices</a>, and <a href="../../../../manual/glossary/#service">services</a>:</p>
 
 <ul>
 <li>The <code>show()</code> Command</li>
@@ -1419,7 +1449,7 @@ ga('send', 'pageview');
 <span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>catalog(objType<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;services&#34;</span>)</code></pre></div>
 <p>An alternative to <code>catalog()</code> is <code>browse()</code>. The function <code>browse()</code> provides formatted human-readable text that describes the items that are installed on the system rather than the computer-friendly list that <code>catalog()</code> provides.</p>
 
-<p>The <code>api()</code> method displays the ports and properties for a running component:</p>
+<p>The <code>api()</code> method displays the <a href="../../../../manual/glossary/#port">ports</a> and <a href="../../../../manual/glossary/#property">properties</a> for a running component:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> comp<span style="color:#f92672">.</span>api()
 Component [FloatToShort]:
 Provides (Input) Ports <span style="color:#f92672">==============</span>
@@ -1437,13 +1467,13 @@ Property Name   (Data Type)     [Default Value] Current Value
 <span style="color:#f92672">-------------</span>   <span style="color:#f92672">-----------</span>     <span style="color:#f92672">---------------</span> <span style="color:#f92672">-------------</span>
 max_value       (float<span style="color:#f92672">/</span>SF<span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>f)  <span style="color:#ae81ff">1.0</span>             <span style="color:#ae81ff">1.0</span>
 min_value       (float<span style="color:#f92672">/</span>SF<span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>f)  <span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>            <span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span></code></pre></div>
-<p>The <code>launch()</code> command launches components, devices, and services. The first argument identifies the object to launch. It may be either a path to an SPD file or, for objects installed to the current <code>SDRROOT</code>, the name of the object as given in the SPD. The path can be absolute or relative and does not need to reside in <code>SDRROOT</code>.</p>
+<p>The <code>launch()</code> command launches components, devices, and services. The first argument identifies the object to launch. It may be either a path to an Software Package Descriptor (SPD) file or, for objects installed to the current <code>SDRROOT</code>, the name of the object as given in the SPD. The path can be absolute or relative and does not need to reside in <code>SDRROOT</code>.</p>
 
 <p>The following example demonstrates how to launch a device from the current working directory using the path:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_dev <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyDevice.spd.xml&#34;</span>)</code></pre></div>
 <p>The following example demonstrates how to launch a device named <code>SigGen</code> from the current working directory using the name:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_dev <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;rh.SigGen&#34;</span>)</code></pre></div>
-<p>A component&rsquo;s properties, either normal or with the <code>commandline</code> attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument <code>properties</code>. These values override the default values listed in the PRF file.</p>
+<p>A component&rsquo;s properties, either normal or with the <code>commandline</code> attribute, may be overridden at launch time by passing a dictionary of property IDs and values to the keyword argument <code>properties</code>. These values override the default values listed in the Properties File (PRF) file.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;MyComponent&#34;</span>, properties<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;EXECPARAM_1&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;value&#34;</span>,
                                                    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;normalparam&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;somevalue&#34;</span>})</code></pre></div>
 <div class="notices note" ><p>The <code>execparams</code> named parameter is deprecated but may be in use by legacy systems.  Refer to the documentation for pre-REDHAWK 2.0 releases for details about its use.</p>
@@ -1458,9 +1488,9 @@ min_value       (float<span style="color:#f92672">/</span>SF<span style="color:#
 </div>
 
 
-<p>By default, the Sandbox launches the first component implementation with an entry point that exists on the file system. A particular implementation may be specified by passing the implementation ID to the <code>impl</code> argument:</p>
+<p>By default, the sandbox launches the first component implementation with an entry point that exists on the file system. A particular implementation may be specified by passing the implementation ID to the <code>impl</code> argument:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;MyComponent&#34;</span>, impl<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;cpp&#34;</span>)</code></pre></div>
-<p>The Sandbox includes limited support for attaching a debugger to a component process. The debugger console opens in a new XTerm window to allow continued interaction on the Sandbox console.</p>
+<p>The sandbox includes limited support for attaching a debugger to a component process. The debugger console opens in a new XTerm window to allow continued interaction on the Sandbox Console.</p>
 
 <p>In the case of C++, to launch a component and attach <code>gdb</code> to the process, enter the following command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyComponent.spd.xml&#34;</span>, debugger<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;gdb&#34;</span>)</code></pre></div>
@@ -1470,14 +1500,14 @@ min_value       (float<span style="color:#f92672">/</span>SF<span style="color:#
 
 <p>To provide arguments to the supported debuggers, the debugger needs to be instantiated outside the scope of the launch function. For example, to perform a full leak check using Valgrind, use the following argument:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> ossie.utils.sandbox.debugger <span style="color:#f92672">import</span> GDB, JDB, PDB, Valgrind
- <span style="color:#f92672">&gt;&gt;&gt;</span> vg_option <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;--leak-check&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;full&#39;</span>}
+ <span style="color:#f92672">&gt;&gt;&gt;</span> vg_option <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;leak-check&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;full&#39;</span>}
  <span style="color:#f92672">&gt;&gt;&gt;</span> vg <span style="color:#f92672">=</span> Valgrind(<span style="color:#f92672">**</span>vg_option)
  <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>launch(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;./MyComponent.spd.xml&#34;</span>, debugger<span style="color:#f92672">=</span>vg)</code></pre></div>
 <p>If incorrect arguments are passed, the component fails to deploy. Note that the Python debugger does not take arguments.</p>
 
 <h4 id="properties">Properties</h4>
 
-<p>In addition to the standard REDHAWK <code>query()</code> and <code>configure()</code> functions, the Sandbox presents a simplified interface to properties for components and devices. Properties can be accessed as attributes on the component object:</p>
+<p>In addition to the standard REDHAWK <code>query()</code> and <code>configure()</code> functions, the sandbox presents a simplified interface to properties for components and devices. Properties can be accessed as attributes on the component object:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>string_prop <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Hello World!&#34;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>long_prop
 <span style="color:#ae81ff">1</span></code></pre></div>
@@ -1517,7 +1547,7 @@ ossie<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</spa
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_prop[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;mode&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Hello World!&#34;</span></code></pre></div></div>
 
 
-<div class="notices note" ><p>Setting a struct member as an attribute uses the simple property’s name, while setting the member via a dictionary uses the simple property’s id.</p>
+<div class="notices note" ><p>Setting a struct member as an attribute uses the simple property’s name, while setting the member via a dictionary uses the simple property’s ID.</p>
 </div>
 
 
@@ -1542,13 +1572,13 @@ ossie<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</spa
 <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;a&#34;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;third&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;b&#34;</span>:<span style="color:#ae81ff">3</span>}
 <span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>struct_seq
 [{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;new value&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">1</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;a&#39;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;third&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;b&#39;</span>:<span style="color:#ae81ff">3</span>}]</code></pre></div>
-<p>The Sandbox generates a low-level CORBA <code>configure()</code> call each time a property value is set. However, Sandbox components also support setting multiple property values at once using a Python dictionary:</p>
+<p>The sandbox generates a low-level CORBA <code>configure()</code> call each time a property value is set. However, sandbox components also support setting multiple property values at once using a Python dictionary:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> my_comp<span style="color:#f92672">.</span>configure({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;long_prop&#34;</span>:<span style="color:#ae81ff">1</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;string_prop&#34;</span>:<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;new value&#34;</span>})</code></pre></div>
-<p>The keys may be either the property names or ids. The values are converted in the same manner as setting the individual property directly.</p>
+<p>The keys may be either the property names or IDs. The values are converted in the same manner as setting the individual property directly.</p>
 
 <h4 id="property-listener">Property Listener</h4>
 
-<p>It is possible to asynchronously listen to changes in properties such that it is not necessary to poll the component to see the state of a particular property. This is done through property change listeners. To implement this listener, create a property change listener and register it with the component. Note that the listener can be a local object or an eventchannel</p>
+<p>It is possible to asynchronously listen to changes in properties such that it is not necessary to poll the component to see the state of a particular property. This is done through property change listeners. To implement this listener, create a property change listener and register it with the component. Note that the listener can be a local object or an <a href="../../../../manual/glossary/#event-channel">event channel</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">property_change_callback</span>(self, event_id, registration_id, resource_id, properties, timestamp):
          <span style="color:#66d9ef">print</span> event_id, registration_id, resource_id, properties, timestamp
  <span style="color:#f92672">&gt;&gt;&gt;</span> listener <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>PropertyChangeListener(changeCallbacks<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;prop_1&#39;</span>:callback_fn})
@@ -1574,6 +1604,10 @@ ossie<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</spa
 
   
 
+    <div class="github-link">
+      <a href="manual/sandbox/python/working_with_components.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

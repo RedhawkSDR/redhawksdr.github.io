@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Waveform Editor :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/waveforms/waveform-editor/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -508,6 +515,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -523,7 +536,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -579,12 +592,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1321,12 +1350,12 @@ ga('send', 'pageview');
       <option value="/manual/waveforms/sample-waveform/" >-- Create and Deploy a Sample Waveform</option>
       <option value="/manual/waveforms/deployment-resources/" >-- Waveform Deployment and Computing Resources</option>
   
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1345,12 +1374,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1376,28 +1405,29 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Waveform Editor</h1>
+    <h2 class="title">Waveform Editor</h2>
+
     
     
     
     
 
-<p>The following sections further describe the definition of the waveform as well as its creation and manipulation within the IDE. Like the PRF, SCD, and SPD XML files of a component, a waveform is completely represented by its SAD file (<code>*.sad.xml</code>). The REDHAWK IDE provides a means of modifying the XML files without the need to directly edit this file by hand.</p>
+<p>The following sections further describe the definition of the <a href="../../../manual/glossary/#waveform">waveform</a> as well as its creation and manipulation within the IDE. Like the Properties File (PRF), Software Component Descriptor (SCD), and Software Package Descriptor (SPD) XML files of a <a href="../../../manual/glossary/#component">component</a>, a waveform is completely represented by its Software Assembly Descriptor (SAD) file (<code>*.sad.xml</code>). The REDHAWK IDE provides a means of modifying the XML files without the need to directly edit this file by hand.</p>
 
 <h3 id="overview-tab">Overview Tab</h3>
 
-<p>Within the Overview tab, the name, Assembly Controller, and external ports of a waveform are defined.</p>
+<p>Within the Overview tab, the name, <a href="../../../manual/glossary/#assembly-controller">Assembly Controller</a>, and external <a href="../../../manual/glossary/#port">ports</a> of a waveform are defined.</p>
 
 <p>The Assembly Controller is a component instance in the waveform that is designated as the component where the waveform-level <code>start()</code>, <code>stop()</code>, <code>configure()</code>, and <code>query()</code> calls are delegated. In complex waveforms, the Assembly Controller can be used to orchestrate the life cycle of components. In trivial waveforms, the identity of the Assembly Controller is of less importance.</p>
 
-<p>External ports are used to make component ports available to other applications, facilitating inter-application connectivity.</p>
+<p>External ports are used to make component ports available to other <a href="../../../manual/glossary/#application">applications</a>, facilitating inter-application connectivity.</p>
 
 <p>Developers use the Overview tab to set the Assembly Controller for the waveform and describe the waveform.</p>
 
@@ -1405,75 +1435,125 @@ ga('send', 'pageview');
 
 <ol>
 <li>On the Overview tab of the Waveform, from the <strong>Controller</strong> drop-down menu, ensure <code>SigGen_1</code> is selected.</li>
+<li>In the <strong>Description</strong> field, enter a description for the waveform.
 
-<li><p>In the <strong>Description</strong> field, enter a description for the waveform.</p>
+<figure >
+    
+        <img src="../images/REDHAWK_Waveform_Overview_Tab.png" alt="Waveform Overview Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Overview Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="waveform-overview-tab">Waveform Overview Tab</h5>
 
-<p><img src="../images/REDHAWK_Waveform_Overview_Tab.png" alt="Waveform Overview Tab" /></p></li>
+
+</li>
 </ol>
 
 <h3 id="components-tab">Components Tab</h3>
 
-<p>The components tab displays a master/details form with individual component instantiation elements and their associated details, which can be modified.</p>
+<p>The Components tab displays the individual component instantiation elements and their associated details, which can be modified.
 
-<p>The master section (on the left) displays all components currently in the waveform. The <strong>Add&hellip;</strong> and <strong>Remove</strong> buttons can be used to add and remove components from the waveform.</p>
+<figure >
+    
+        <img src="../images/Components_Tab.png" alt="Waveform Components Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Components Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p>The details section displays the following fields, which can be selected to modify the current values:</p>
+
+
+</p>
+
+<p>The All Components section displays all components currently in the waveform as well as Add&hellip; and Remove buttons, which can be used to add or remove selected components from the waveform.</p>
+
+<p>The Components section displays the following field, which can be selected to modify the current values:</p>
 
 <ul>
-<li>Component ID - Edit the selected component instantiations ID element.</li>
-<li>Usage Name - Edit the selected component instantiations Usage Name element and Naming Service name, which is based on the component’s usage name.</li>
-<li>Logging Configuration checkbox - Add or remove a Logging Configuration element to the selected component instantiation.</li>
-<li>Log Level combo box - Select predefined Logging Levels, including: <code>OFF</code>, <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>, and <code>ALL</code>. For more information, refer to .</li>
-<li>Logging URI - Populate the selected component instantiations logging URI element and provide some context-specific validation.</li>
+<li>Usage Name - Edit the selected component instantiations Usage Name element and <a href="../../../manual/glossary/#naming-service">Naming Service</a> name, which is based on the component’s usage name.</li>
+</ul>
+
+<p>The Logging section displays the following fields, which can be selected to modify the current values:</p>
+
+<ul>
+<li>Enabled checkbox - Enable or disable a logging configuration element for the selected component instantiation.</li>
+<li>Log Level combo box - Select predefined logging Levels, including: <code>OFF</code>, <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>, and <code>ALL</code>. For more information, refer to <a href="../../../manual/logging/">Logging</a>.</li>
+<li>Logging URI - Specify a URI of a logging configuration file.</li>
 </ul>
 
 <h3 id="diagram-tab">Diagram Tab</h3>
 
-<p>Most of the work done on waveforms takes place within the Diagram tab. The Diagram tab is very similar to the Sandbox/Chalkboard. Unlike the Sandbox, only components that exist within the <code>$SDRROOT</code> can be added to the waveform. The Palette contains a list of components residing within the <code>$SDRROOT</code>. From the Diagram tab, external ports of the waveform can be indicated and the role of Assembly Controller can be assigned to a component.</p>
+<p>Most of the work done on waveforms takes place within the Diagram tab. The Diagram tab is very similar to the <a href="../../../manual/glossary/#sandbox">sandbox</a>/Chalkboard. Unlike the sandbox, only components that exist within the <code>$SDRROOT</code> can be added to the waveform. The Palette contains a list of components residing within the <code>$SDRROOT</code>. From the Diagram tab, external ports of the waveform can be indicated and the role of Assembly Controller can be assigned to a component.</p>
 
 <h4 id="editing-component-properties-in-a-waveform">Editing Component Properties in a Waveform</h4>
 
-<p>From the Diagram tab, properties of components can be set. When these properties are set, they become specific to the waveform and are written to the <code>*.sad.xml</code> file, which describes this waveform.</p>
+<p>From the Diagram tab, <a href="../../../manual/glossary/#property">properties</a> of components can be set. When these properties are set, they become specific to the waveform and are written to the <code>*.sad.xml</code> file, which describes this waveform.</p>
 
 <p>The following steps explain how to edit the properties of a component in a waveform.</p>
 
 <ol>
 <li>On the Diagram tab of the waveform, select the component.</li>
+<li>In the <a href="../../../manual/glossary/#properties-view">Properties view</a>, verify the Properties tab is selected.
 
-<li><p>In the Properties View, verify the Properties tab is selected.</p>
+<figure >
+    
+        <img src="../images/properties.png" alt="Waveforms: Properties View" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Properties View</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="properties-view">Properties View</h5>
 
-<p><img src="../images/properties.png" alt="Waveforms: Properties View" /></p></li>
 
-<li><p>Select the Property you want to set, and edit the value.</p></li>
+</li>
+<li>Select the property you want to set, and edit the value.</li>
 </ol>
 
 <h4 id="editing-the-devicerequires-set-in-a-waveform">Editing the <code>devicerequires</code> Set in a Waveform</h4>
 
-<p>The <code>devicerequires</code> set for a Component is managed through the Requirements tab of the Properties view. When these Requirements are set, they become specific to the waveform and are written to the <code>*.sad.xml</code> file. For more information about the <code>devicrequires</code> set, Refer to .</p>
+<p>The <code>devicerequires</code> set for a component is managed through the Requirements tab of the Properties view. When these Requirements are set, they become specific to the waveform and are written to the <code>*.sad.xml</code> file. For more information about the <code>devicrequires</code> set, refer to <a href="../../../manual/waveforms/deployment-resources/#binding-components-to-executable-devices">Binding Components to Executable Devices</a>.</p>
 
 <p>The following steps explain how to edit the <code>devicerequires</code> set.</p>
 
 <ol>
-<li>On the Diagram tab of the Waveform, select the Component.</li>
+<li>On the Diagram tab of the waveform, select the component.</li>
+<li>In the Properties view, verify the Requirements tab is selected.
 
-<li><p>In the Properties View, verify the Requirements tab is selected.</p>
+<figure >
+    
+        <img src="../images/requirementstab.png" alt="Waveforms: Properties View Requirements Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure > Properties View Requirements Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="properties-view-requirements-tab">Properties View Requirements Tab</h5>
 
-<p><img src="../images/requirementstab.png" alt="Waveforms: Properties View Requirements Tab" /></p></li>
 
-<li><p>To add an ID and value, click + and add the ID and value. The ID and value can be any alphanumeric string value. This assigns a <code>devicerequires</code> key/value pair to the Component.</p></li>
-
-<li><p>To remove an ID and value, select the ID and click X.</p></li>
+</li>
+<li>To add an ID and value, click + and add the ID and value. The ID and value can be any alphanumeric string value. This assigns a <code>devicerequires</code> key/value pair to the component.</li>
+<li>To remove an ID and value, select the ID and click X.</li>
 </ol>
 
 <h4 id="start-order">Start Order</h4>
 
-<p>Each of the components within the waveform contain a number with a circle around it which represents that component’s start order. The start order represents the order in which its <code>start()</code> method is called by the Assembly Controller. The only component that does not have a start order is the Assembly Controller, which always has an assumed start order of 0. The Assembly Controller has a yellow circle containing 0. The start order may be changed by right-clicking a component and selecting <strong>Move Start Order Earlier</strong> or <strong>Move Start Order Later</strong> from the context menu. The Assembly Controller may be changed by right-clicking a component and selecting <strong>Set As Assembly Controller</strong> from the context menu.</p>
+<p>Each of the components within the waveform contain a number with a circle around it which represents that component’s start order. The start order represents the order in which its <code>start()</code> method is called by the Assembly Controller. The only component that does not have a start order is the Assembly Controller, which always has an assumed start order of 0. The Assembly Controller has a yellow circle containing 0. The start order may be changed by right-clicking a component and selecting Move Start Order Earlier or Move Start Order Later from the context menu. The Assembly Controller may be changed by right-clicking a component and selecting Set As Assembly Controller from the context menu.</p>
 
 <h3 id="sad-file-tab">SAD File Tab</h3>
 
@@ -1482,7 +1562,7 @@ ga('send', 'pageview');
 <p>Instructions for inspecting the SAD file are below:</p>
 
 <ol>
-<li>Open the <code>myWaveform.sad.xml</code> tab of the waveform Editor.</li>
+<li>Open the <code>myWaveform.sad.xml</code> tab of the <a href="../../../manual/glossary/#waveform-editor">Waveform Editor</a>.</li>
 <li>Look through the SAD file and identify:
 
 <ul>
@@ -1493,7 +1573,7 @@ ga('send', 'pageview');
 <li>The start order of each component</li>
 <li>The property is changed on the <code>SigGen</code> component</li>
 </ul></li>
-<li>Before continuing, return to the Diagram tab and change the <strong>dataDouble_out</strong> port so that it is no longer marked as an external port.</li>
+<li>Before continuing, return to the Diagram tab and change the <code>dataDouble_out</code> port so that it is no longer marked as an external port.</li>
 </ol>
 
 <h4 id="application-options">Application Options</h4>
@@ -1502,14 +1582,27 @@ ga('send', 'pageview');
 
 <ul>
 <li><code>STOP_TIMEOUT</code> - controls the time allowed before a timeout occurs. The application’s <code>stop</code> function is delegated to each component in the application. In some cases, the component may require an unusually long amount of time to reach a stopped state. To prevent this timeout, configure the application’s option for <code>STOP_TIMEOUT</code> to the desired value. The default timeout value is 3 seconds. To remove the timeout altogether, set the value to 0 or -1.</li>
-<li><code>AWARE_APPLICATION</code> - controls the Component’s ability for domain awareness. The default domain awareness value is true. To remove a component’s pointer to the domain, set the option <code>AWARE_APPLICATION</code> to false.</li>
+<li><code>AWARE_APPLICATION</code> - controls the component’s ability for domain awareness. The default domain awareness value is true. To remove a component’s pointer to the <a href="../../../manual/glossary/#domain">domain</a>, set the option <code>AWARE_APPLICATION</code> to false.</li>
 </ul>
 
 <p>To set the application options from the SAD File Overview Tab in the IDE:</p>
 
-<h5 id="sad-file-overview-tab">SAD File Overview Tab</h5>
 
-<p><img src="../images/sad_options.png" alt="SAD File Overview Tab" /></p>
+<figure >
+    
+        <img src="../images/sad_options.png" alt="SAD File Overview Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >SAD File Overview Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <ul>
 <li>To add an option, expand the waveform Options section, click Add, and enter the value.</li>
@@ -1571,6 +1664,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/waveforms/waveform-editor.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

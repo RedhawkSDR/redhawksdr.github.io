@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
-<title>REDHAWK Manual - 2.2.0 :: REDHAWK</title>
+<meta name="generator" content="Hugo 0.36" />
+<title>REDHAWK Manual - 2.2.8 :: REDHAWK</title>
 <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link href="../css/font-awesome.min.css" rel="stylesheet">
 <link href="../css/nucleus.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <script src="../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../css/custom.css">
 <script src="../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../"><img src="../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent active alwaysopen haschildren
         ">
       <div>
-      <a href="../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1236,12 +1243,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1297,7 +1326,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/"  selected>
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1316,12 +1345,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1340,12 +1369,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1371,14 +1400,15 @@ ga('send', 'pageview');
         <link href="../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../js/search.js"></script>
       </div>
     
 
-    <h1>REDHAWK Manual - 2.2.0</h1>
+    <h2 class="title">REDHAWK Manual - 2.2.8</h2>
+
     
     
     
@@ -1387,7 +1417,7 @@ ga('send', 'pageview');
 
 <p>REDHAWK is a software framework designed to support the <strong>design, development, deployment, management, upgrade, and recycling</strong> of real-time distributed applications as well as the systems that run them.</p>
 
-<p>To support the <strong>design and development</strong> of software applications, REDHAWK provides tools that allow development and testing of software modules, or “components”. In addition, REDHAWK provides tools to facilitate composure of components into “waveforms” that can be seamlessly deployed as “applications” on a single host computer or a network-enabled system of computers.</p>
+<p>To support the <strong>design and development</strong> of software applications, REDHAWK provides tools that allow development and testing of software modules, or <a href="../manual/glossary/#component">“components”</a>. In addition, REDHAWK provides tools to facilitate composure of components into  <a href="../manual/glossary/#waveform">“waveforms”</a> that can be seamlessly deployed as <a href="../manual/glossary/#application">“applications”</a> on a single host computer or a network-enabled system of computers.</p>
 
 <p><strong>Deployment, management, and upgrade</strong> of real-time distributed applications is supported by providing a runtime environment.</p>
 
@@ -1413,7 +1443,7 @@ ga('send', 'pageview');
 <li>Enables seamless deployment of software applications to one or more computing resources.</li>
 <li>Decouples specialized hardware from processing algorithms; this allows processing algorithms to be easily ported to new platforms.</li>
 <li>Supports language agnosticism, allowing appropriate languages to be used for various aspects of the system.</li>
-<li>Decouples processing software from the UI, allowing for any number of custom uis to operate with the same underlying Core Framework.</li>
+<li>Decouples processing software from the UI, allowing for any number of custom UIs to operate with the same underlying Core Framework (CF).</li>
 <li>Supports metadata-tagging of data streams.</li>
 <li>Supports precision-time-stamping of data API.</li>
 <li>Provides a powerful and flexible IDE based on the extensible Eclipse Framework.</li>
@@ -1435,7 +1465,7 @@ ga('send', 'pageview');
 <li>Supports shifting deployment work from the development team to a deployment team.</li>
 </ul>
 
-<h3 id="relationship-to-the-sca">Relationship to the SCA</h3>
+<h3 id="relationship-to-the-software-communications-architecture-sca">Relationship to the Software Communications Architecture (SCA)</h3>
 
 <p>REDHAWK adopts a significant number of concepts from the SCA (specifically, version 2.2.2). As a result, the SCA specification is a very useful piece of supplemental reading to the REDHAWK documentation.</p>
 
@@ -1445,9 +1475,9 @@ ga('send', 'pageview');
 
 <p>The basic processing element in REDHAWK is a component, which is described in detail in <a href="../manual/components/">Components</a> and <a href="../manual/component-structure/">Component Structure</a>. A component is a single linux process. Components interact with each other through connections, which are described in <a href="../manual/connections/">Connections</a>.  An application, described in <a href="../manual/waveforms/">Waveforms</a>, is a logical association of interconnected components.</p>
 
-<p>Hardware interaction elements are called devices. Devices are described in <a href="../manual/devices/">Working with Devices</a>. Devices can be logically associated together in nodes, which are described in <a href="../manual/nodes/">Nodes</a>. A specialized device called <code>GPP</code> is used to model the processing availability of a single computer. Each node contains no more than one <code>GPP</code>, and is generally mapped to a single computer. By deploying components through different <code>GPP</code> devices, an application can be automatically distributed over multiple computers. The distributed processing aspects of REDHAWK are discussed in <a href="../manual/nodes/distributed-computing-and-rf-devices/">Distributed Computing and RF Devices</a>.</p>
+<p>Hardware interaction elements are called <a href="../manual/glossary/#device">devices</a>. Devices are described in <a href="../manual/devices/">Working with Devices</a>. Devices can be logically associated together in <a href="../manual/glossary/#node">nodes</a>, which are described in <a href="../manual/nodes/">Nodes</a>. A specialized device called <a href="../manual/glossary/#gpp"><code>GPP</code></a> is used to model the processing availability of a single computer. Each node contains no more than one <code>GPP</code>, and is generally mapped to a single computer. By deploying components through different <code>GPP</code> devices, an application can be automatically distributed over multiple computers. The distributed processing aspects of REDHAWK are discussed in <a href="../manual/nodes/distributed-computing-and-rf-devices/">Distributed Computing and RF Devices</a>.</p>
 
-<p>Components can either be deployed through a distributed environment called a domain, as seen in <a href="../manual/runtime-environment/">The Runtime Environment</a>, or standalone through a <a href="../manual/sandbox/">Sandbox</a>.</p>
+<p>Components can either be deployed through a distributed environment called a <a href="../manual/glossary/#domain">domain</a>, as seen in <a href="../manual/runtime-environment/">The Runtime Environment</a>, or standalone through a <a href="../manual/glossary/#sandbox">sandbox</a>. The sandbox environment is explained in <a href="../manual/sandbox/">Sandbox</a>.</p>
 
 <p>REDHAWK contains code generators and visualization tools. Descriptions of this tooling are available throughout this document.</p>
 
@@ -1473,6 +1503,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

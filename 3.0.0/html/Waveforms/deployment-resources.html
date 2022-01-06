@@ -1,0 +1,1440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Waveform Deployment and Computing Resources</title>
+<link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+  <script src="../../js/jquery-3.6.0.js"></script>
+  <script src="../../js/jquery-ui-1.13.0.custom/jquery-ui.js"></script>
+  <script src="../../js/default.js"></script>
+  <link href="../../js/jquery-ui-1.13.0.custom/jquery-ui.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+  <script>
+  </script>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+<div id="navigation">
+<div id="back-to-redhawksdr"><a href=/ title=redhawksdr.org><span class="ui-icon ui-icon-arrowthick-1-w"></span> redhawksdr.org Home<span class="ui-icon ui-icon-home"></span></a></div>
+<div id="tree-of-files">
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.0/html/index.html title="REDHAWK Manual - 3.0.0">REDHAWK Manual - 3.0.0</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Introduction
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Introduction/introduction.html title="Introduction">Introduction</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Introduction/process-management.html title="Process Management and Interaction">Process Management and Interaction</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Introduction/basic-sandbox-example.html title="Basic Sandbox Example">Basic Sandbox Example</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Introduction/basic-ide-example.html title="Basic IDE Example">Basic IDE Example</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Introduction/further-reading.html title="Further Reading">Further Reading</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Install
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/install-from-rpm.html title="Install from RPMs">Install from RPMs</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/install-from-source.html title="Install from Source">Install from Source</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/external-dependencies.html title="External Dependencies">External Dependencies</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/redhawk-yum-repo.html title="Yum Repository">Yum Repository</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/cpp.html title="C++">C++</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/java-and-jacorb.html title="Java and JacORB">Java and JacORB</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/python.html title="Python">Python</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/ide.html title="IDE">IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Install/troubleshooting.html title="Troubleshooting">Troubleshooting</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Components
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/components.html title="Components">Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/redhawk-core-assets.html title="REDHAWK Core Assets">REDHAWK Core Assets</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/creating-a-component.html title="Creating a Component Project">Creating a Component Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/octave-components.html title="Creating Octave Components">Creating Octave Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/running-a-component.html title="Running a Component">Running a Component</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/sandbox.html title="Sandbox">Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Components/hello-world-component.html title="A Hello World Component">A Hello World Component</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Component Structure
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/component-structure.html title="Component Structure">Component Structure</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/generated-files.html title="Generated Component Files">Generated Component Files</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/generated-methods.html title="Generated Component Methods">Generated Component Methods</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/base-component-members.html title="Base Component Members">Base Component Members</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/component-implementations.html title="Component Implementations">Component Implementations</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/java-version.html title="Java Version">Java Version</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/manage-properties.html title="Managing Properties">Managing Properties</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Component-Structure/events.html title="Events">Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Libraries
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Libraries/shared-libraries.html title="Shared Libraries">Shared Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Libraries/creating-a-shared-library-project.html title="Creating a REDHAWK Shared Library Project">Creating a REDHAWK Shared Library Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Libraries/using-a-shared-library-project.html title="Using a REDHAWK Shared Library Project">Using a REDHAWK Shared Library Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Libraries/packaging-shared-libraries.html title="Packaging Shared Libraries">Packaging Shared Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Libraries/manually-including-external-libraries.html title="Manually Including External Libraries">Manually Including External Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Connections
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/connections.html title="Connections">Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/the-connection-process.html title="The Connection Process">The Connection Process</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/why-ports.html title="Why Ports?">Why Ports?</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/port-access.html title="Port Access">Port Access</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/dynamic-connections.html title="Dynamic Connections">Dynamic Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/standardized-data-interfaces.html title="Standardized Data Interfaces">Standardized Data Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Bulkio
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/bulkio.html title="BulkIO">BulkIO</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/stream-api.html title="Stream API">Stream API</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/sri.html title="Signal Related Information (SRI)">Signal Related Information (SRI)</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/attachablestreams.html title="Attachable Streams">Attachable Streams</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/data-transfers.html title="pushPacket Data Flow">pushPacket Data Flow</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/bit-data.html title="Bit Data">Bit Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/multiout-ports.html title="Multi-out Ports">Multi-out Ports</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/working-with-complex-data.html title="Working with Complex Data">Working with Complex Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/time-stamps.html title="Time Stamps">Time Stamps</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/port-statistics.html title="Port Statistics">Port Statistics</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Bulkio/examples.html title="Examples">Examples</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Burstio
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/burstio.html title="BurstIO">BurstIO</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/data-transfers.html title="Data Transfers">Data Transfers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/sri.html title="Burst Signal Related Information (SRI)">Burst Signal Related Information (SRI)</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/multiout-ports.html title="Multi-out Ports">Multi-out Ports</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/working-with-complex-data.html title="Working with Complex Data">Working with Complex Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/time-stamps.html title="Time Stamps">Time Stamps</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Burstio/port-statistics.html title="Port Statistics">Port Statistics</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Messaging
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Messaging/messaging.html title="Messaging">Messaging</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Messaging/message-producer.html title="Message Producer">Message Producer</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Messaging/message-consumer.html title="Message Consumer">Message Consumer</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Messaging/viewing-messages.html title="Viewing Messages">Viewing Messages</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Connections/Messaging/connecting-producers-consumers.html title="Connecting Producers and Consumers">Connecting Producers and Consumers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/connection-callbacks.html title="Connection Callbacks">Connection Callbacks</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/custom-idl-interfaces.html title="Custom IDL Interfaces">Custom IDL Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Connections/add-transport.html title="Creating Connections between Components in FPGA">Creating Connections between Components in FPGA</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Waveforms
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Waveforms/waveforms.html title="Waveforms">Waveforms</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Waveforms/waveform-editor.html title="Waveform Editor">Waveform Editor</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Waveforms/sample-waveform.html title="Create and Deploy a Sample Waveform">Create and Deploy a Sample Waveform</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Waveforms/deployment-resources.html title="Waveform Deployment and Computing Resources">Waveform Deployment and Computing Resources</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Services
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Services/services.html title="Services">Services</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Devices
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/devices.html title="Devices">Devices</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/fei.html title="FrontEnd Interfaces">FrontEnd Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Interacting with Hardware
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Devices/Interacting-with-Hardware/devices-w-hardware.html title="Device Interaction with Hardware">Device Interaction with Hardware</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Devices/Interacting-with-Hardware/creating-fei-device-ide.html title="Creating a FrontEnd Interfaces Device">Creating a FrontEnd Interfaces Device</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Devices/Interacting-with-Hardware/interacting-fei-device-python-package.html title="Interacting with an FEI Device with the Python Package">Interacting with an FEI Device with the Python Package</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Devices/Interacting-with-Hardware/using-fei-device-ide.html title="Using an FEI Device in the IDE">Using an FEI Device in the IDE</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/associating-a-waveform.html title="Associating a Waveform with an FEI Device">Associating a Waveform with an FEI Device</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/running-components.html title="Using Devices to Run Components">Using Devices to Run Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/interface-with-fpgas.html title="Using Devices to Interface with FPGAs">Using Devices to Interface with FPGAs</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/fei-data-structures.html title="Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators">Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/misc.html title="Miscellaneous FrontEnd Tuner Library Implementation Details">Miscellaneous FrontEnd Tuner Library Implementation Details</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Devices/persona-device-pattern.html title="Persona Device Pattern">Persona Device Pattern</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Nodes
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Nodes/nodes.html title="Nodes">Nodes</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Nodes/running-a-node.html title="Running a Node">Running a Node</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Nodes/creating-a-new-node.html title="Creating a New Node">Creating a New Node</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Nodes/distributed-computing-and-rf-devices.html title="Distributed Computing and RF Devices">Distributed Computing and RF Devices</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Nodes/gpp-plugins.html title="Customizing Resources per GPP">Customizing Resources per GPP</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Address
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Address/components-howto.html title="Shared Address">Shared Address</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Address/component-model.html title="Component Model Overview">Component Model Overview</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Address/component-examples.html title="Examples">Examples</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Memory
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Memory/shared-memory.html title="Shared Memory">Shared Memory</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Memory/shared-memory-ipc.html title="Shared Memory IPC">Shared Memory IPC</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Memory/metrics.html title="Metrics">Metrics</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Shared-Memory/tuning.html title="Tuning">Tuning</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Sandbox
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Sandbox/sandbox.html title="Sandbox">Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Python
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/sandbox-python.html title="Python Sandbox">Python Sandbox</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/working_with_components.html title="Working with Components, Devices, and Services">Working with Components, Devices, and Services</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/helpers.html title="Helpers">Helpers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/devices.html title="Devices">Devices</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/example-interaction.html title="Example Sandbox Interaction">Example Sandbox Interaction</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/sources-and-sinks.html title="Built-in Sources and Sinks">Built-in Sources and Sinks</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/sdds-data.html title="Working with SDDS Data">Working with SDDS Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/plotting-data.html title="Plotting Data">Plotting Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/Python/misc.html title="Miscellaneous">Miscellaneous</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            IDE
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/Sandbox/IDE/sandbox-ide.html title="IDE Sandbox">IDE Sandbox</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Runtime Environment
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/runtime-environment.html title="Runtime Environment">Runtime Environment</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/launching-a-domain.html title="Launching a Domain">Launching a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/domain-manager.html title="Domain Manager">Domain Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/file-system.html title="File System">File System</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/applications.html title="Applications">Applications</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/application-factory.html title="The Application Factory">The Application Factory</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/device-manager.html title="The Device Manager">The Device Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/allocation-manager.html title="The Allocation Manager">The Allocation Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/connection-manager.html title="The Connection Manager">The Connection Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/events.html title="Events">Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Runtime-Environment/inspection.html title="Runtime Environment Inspection">Runtime Environment Inspection</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Logging
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/logging.html title="Logging">Logging</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/logging-structure.html title="Logging Structure">Logging Structure</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/configuring-logging-capabilities.html title="Configuring Logger Settings">Configuring Logger Settings</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/adjusting-logging-at-runtime.html title="Adjusting Logging at Runtime">Adjusting Logging at Runtime</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/logging-within-a-resource.html title="Logging Within A Resource">Logging Within A Resource</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/viewing-logging-events.html title="Viewing Logging Events">Viewing Logging Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Logging/logging-config-plugin.html title="Logging Configuration Plugin">Logging Configuration Plugin</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Containers
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Containers/containers.html title="Containers">Containers</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Containers/in-sandbox.html title="Use in Python Sandbox">Use in Python Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Containers/in-a-domain.html title="Use in a Domain">Use in a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Containers/plugin-class.html title="Plugin Class">Plugin Class</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Containers/containerized-components.html title="Docker REDHAWK Components">Docker REDHAWK Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        IDE
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/ide.html title="IDE">IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/launching-the-ide.html title="Launching the REDHAWK IDE for the First Time">Launching the REDHAWK IDE for the First Time</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/pydev-overview.html title="PyDev Overview">PyDev Overview</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/workbench.html title="The Workbench">The Workbench</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Editors and Views
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/editors-and-views.html title="Editors and Views">Editors and Views</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/softpkg-editor.html title="SoftPkg Editor">SoftPkg Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/waveform-editor.html title="Waveform Editor">Waveform Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/node-editor.html title="Node Editor">Node Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/nextmidas-plot-editor.html title="NeXtMidas Plot Editor">NeXtMidas Plot Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/redhawk-explorer-view.html title="REDHAWK Explorer View">REDHAWK Explorer View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/redhawk-plot-view.html title="REDHAWK Plot View">REDHAWK Plot View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/plot-settings-dialog.html title="Plot Settings Dialog">Plot Settings Dialog</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/event-viewer-view.html title="Event Viewer View">Event Viewer View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/data-list-statistics-view.html title="Data List and Statistics Views">Data List and Statistics Views</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/port-monitor-view.html title="Port Monitor View">Port Monitor View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/sri-view.html title="SRI View">SRI View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/console-view.html title="Console View">Console View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.0/html/IDE/Editors-and-Views/properties-view.html title="Properties View">Properties View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/creating-redhawk-projects.html title="Creating REDHAWK Projects">Creating REDHAWK Projects</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/namespaces.html title="Adding/Changing/Removing REDHAWK Project Namespaces">Adding/Changing/Removing REDHAWK Project Namespaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/debugging.html title="Debugging REDHAWK Components and Devices with Eclipse">Debugging REDHAWK Components and Devices with Eclipse</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/deploying-projects.html title="Deploying Projects to the SDRROOT">Deploying Projects to the SDRROOT</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/snapshot-tool.html title="Snapshot Tool">Snapshot Tool</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/connect-wizard.html title="Connect Wizard">Connect Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/octave-wizard.html title="Using the Octave Wizard">Using the Octave Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/plot-port-wizard.html title="Plot Port Wizard">Plot Port Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/IDE/exploring-sdrroot.html title="SDRROOT in the IDE">SDRROOT in the IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Exploring Domain
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/exploring-domain.html title="Running Domain in the IDE">Running Domain in the IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/connecting-to-a-domain.html title="Connecting to a Domain">Connecting to a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/viewing-domain-contents.html title="Viewing the Contents of the Domain in the REDHAWK Explorer View">Viewing the Contents of the Domain in the REDHAWK Explorer View</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/working-with-waveforms.html title="Working with Waveforms on a Running Domain">Working with Waveforms on a Running Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/plotting-bulkio-ports.html title="Plotting BulkIO Ports">Plotting BulkIO Ports</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/increasing-bulkio-connection-bandwidth.html title="Increasing the Bandwidth of BulkIO Connections">Increasing the Bandwidth of BulkIO Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Exploring-Domain/getting-error-condition-details.html title="Getting Details About Error Conditions">Getting Details About Error Conditions</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Appendices
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Appendices/optimization.html title="Optimization">Optimization</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Appendices/sharing-projects.html title="Share Projects With Others">Share Projects With Others</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Appendices/troubleshoot-connections.html title="Troubleshoot Connections">Troubleshoot Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.0/html/Appendices/troubleshoot-omni.html title="Troubleshoot omniNames and omniEvents">Troubleshoot omniNames and omniEvents</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.0/html/glossary.html title="Glossary">Glossary</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.0/html/acronyms.html title="Acronyms">Acronyms</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+</div>  <!-- end div id=tree-of-files -->
+<div id="TOC">
+<a href="#waveform-deployment-and-computing-resources" class="depth0">Waveform Deployment and Computing Resources</a>
+    <a href="#gpp-device" class="depth1">GPP Device</a>
+        <a href="#deployment-process" class="depth2">Deployment Process</a>
+        <a href="#using-valgrind-to-debug-components" class="depth2">Using Valgrind to Debug Components</a>
+    <a href="#monitoring-computing-resources-per-application" class="depth1">Monitoring Computing Resources per Application</a>
+        <a href="#monitoring-computing-resources-per-gpp" class="depth2">Monitoring Computing Resources per GPP</a>
+    <a href="#componenthost" class="depth1">ComponentHost</a>
+    <a href="#binding-components-to-executable-devices" class="depth1">Binding Components to Executable Devices</a>
+    <a href="#capacity-reservation" class="depth1">Capacity Reservation</a>
+        <a href="#specialized-reservation" class="depth2">Specialized Reservation</a>
+    <a href="#resource-affinity" class="depth1">Resource Affinity</a>
+</div>  <!-- end div id=TOC -->
+</div>  <!-- end div id=navigation -->
+<div id="content">
+<h1 id="waveform-deployment-and-computing-resources">Waveform Deployment and Computing Resources</h1>
+<p><abbr title="See Glossary.">Components</abbr> are processes that run on a computer. As such, each component takes up some arbitrary, often time-varying amount of spare capacity (for example, CPU computing load, memory, network I/O). REDHAWK manages computing resources on every computer under its <abbr title="See Glossary.">domain</abbr> to minimize the likelihood that computing resources are over-subscribed. Each computer under REDHAWK's domain is managed through the <abbr title="See Glossary.">GPP</abbr> process.</p>
+<h3 id="gpp-device">GPP Device</h3>
+<p>The GPP <abbr title="See Glossary.">device</abbr> is a specialized REDHAWK device that manages the deployment of components onto the computer and can be inspected like any other REDHAWK device.</p>
+<p>GPP can be in three possible usage states: <code>IDLE</code>, <code>ACTIVE</code>, or <code>BUSY</code>.</p>
+<ul>
+<li><code>IDLE</code> indicates the GPP is not running any REDHAWK components.</li>
+<li><code>ACTIVE</code> indicates the GPP is running at least one component, but has spare capacity to run additional components.</li>
+<li><code>BUSY</code> indicates the GPP does not have any spare capacity to run additional components.</li>
+</ul>
+<p>The usage state of any device can be accessed through its <code>usageState</code> member. To inspect the usage state:</p>
+<ul>
+<li>In the IDE, select the &quot;Advanced&quot; tab of the &quot;Properties&quot; tab for the deployed device.</li>
+<li><p>In a Python session, run the following script (assuming a domain is running):</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="ch">from</span> ossie.utils <span class="ch">import</span> redhawk
+&gt;&gt;&gt; dom=redhawk.attach()
+&gt;&gt;&gt; dev = dom.devMgrs[<span class="dv">0</span>].devs[<span class="dv">0</span>]
+&gt;&gt;&gt; <span class="dt">print</span> dev._get_usageState()</code></pre></li>
+</ul>
+<p>The GPP contains several <abbr title="See Glossary.">properties</abbr> that are critical for the deployment of components to a device. When a <abbr title="See Glossary.">waveform</abbr> is deployed, the framework scans through all <code>IDLE</code> and <code>ACTIVE</code> GPP devices. The component's <code>os</code> and/or <code>processor</code> elements from its Software Package Descriptor (SPD) file are compared against the GPP's <code>os_name</code> and/or <code>processor_name</code> properties, respectively. If there is a match, the component is assigned to that GPP. This search/assignment is performed for all components in the waveform. Once all components have been assigned to specific GPPs, the deployment process begins.</p>
+<h4 id="deployment-process">Deployment Process</h4>
+<p>The deployment of a component to a GPP begins by copying all relevant files from <code>$SDRROOT/dom/components/&lt;component&gt;/</code> to the GPP's cache. The GPP cache is a temporary directory on the computer used to run each component (recall that REDHAWK is designed to support distributed processing). The cache is located in the local computer's <code>$SDRROOT/dev/.&lt;Device Manager name&gt;/&lt;Device Name&gt;</code>. Note that the component's working directory is the GPP's cache directory.</p>
+<p>After all files are copied, the component is started in its own process space using the <code>fork</code> system call. At program startup, the component registers with the <abbr title="See Glossary.">Domain Manager</abbr> and the initial property state is applied to the component's property values. Next, connections are created as defined in the waveform file. The waveform is successfully deployed when all waveform components are registered with the Domain Manager and all component initialization is complete.</p>
+<h5 id="shared-address-space-components">Shared Address Space Components</h5>
+<p>Shared address space components (C++ only) are deployed differently than executable components. The component files are still copied, but an additional specialized component called <code>ComponentHost</code> is deployed to the GPP to manage the components. The GPP only executes the <code>ComponentHost</code> via <code>fork</code> and <code>exec</code>. Once the <code>ComponentHost</code> registers with the Domain Manager, all of the shared address space components assigned to the GPP are executed in the <code>ComponentHost</code>. The remainder of the deployment process is the same as for executable components.</p>
+<h4 id="using-valgrind-to-debug-components">Using Valgrind to Debug Components</h4>
+<p>The GPP supports launching components using Valgrind, an open source tool that helps detect memory errors and leaks.</p>
+<p>The <code>VALGRIND</code> environment variable controls this behavior:</p>
+<ul>
+<li>If <code>VALGRIND</code> is not set, components launch as usual.</li>
+<li>If <code>VALGRIND</code> is set but has no value, the GPP searches the path for <code>valgrind</code>.</li>
+<li>If <code>VALGRIND</code> has a value, it is assumed to be the full path to the <code>valgrind</code> executable.</li>
+</ul>
+<p>Valgrind log files are written to the same directory as the component entry point within the GPP's cache. For example, if the component, <code>MyComponent</code>, has an entry point of <code>cpp/MyComponent</code>, the logs are written to <code>MyComponent/cpp</code>. The log file name follows the pattern <code>valgrind.&lt;PID&gt;.log</code>, where PID is the process ID of the component.</p>
+<h3 id="monitoring-computing-resources-per-application">Monitoring Computing Resources per Application</h3>
+<p>Each <abbr title="See Glossary.">application</abbr> object has a <code>metrics</code> function that provides access to application-level metrics. The available metrics include:</p>
+<ul>
+<li><code>cores</code>: number of cores used</li>
+<li><code>memory</code>: amount of memory occupied</li>
+<li><code>processes</code>: how many processes make up the component</li>
+<li><code>files</code>: how many file handles the component has open</li>
+<li><code>threads</code>: how many threads the component has open</li>
+<li><code>shared</code>: whether or not it is a shared address space component (C++ only)</li>
+<li><p><code>componenthost</code>: The ID for the component's host</p>
+<ul>
+<li>Component ID for C++ components generated in RH 2.0 or earlier, and Python and Java components</li>
+<li><code>ComponentHost_GPP_1</code> for shared address space C++ components</li>
+</ul></li>
+</ul>
+<p>The metrics are available on a per-component basis or aggregated for the whole application.</p>
+<p>The <code>metrics</code> function takes two arguments, the list of components to report and the metrics to report, where the ID &quot;application utilization&quot; is used to retrieve the application's aggregated metrics. Both arguments to the <code>metrics</code> function are lists of strings. To retrieve all metrics for all components as well as the aggregated application, use empty lists for both arguments.</p>
+<p>To display metrics in the IDE, select a running waveform, and in the <abbr title="See Glossary.">Properties view</abbr>, select the <strong>Metrics</strong> tab.</p>
+<p><img src="img/Metrics.png" alt="Waveform Metrics" /></p>
+<h4 id="monitoring-computing-resources-per-gpp">Monitoring Computing Resources per GPP</h4>
+<p>The GPP monitors the following resources:</p>
+<ul>
+<li>System: CPU utilization, memory usage, <abbr title="See Glossary.">nic</abbr> usage, total number of threads, and number of open files</li>
+<li>For each component: CPU usage, memory usage, and process state</li>
+</ul>
+<p>When a component fails (for example, segfault), the GPP issues a <code>AbnormalComponentTerminationEventType</code> message on the <code>IDM_Channel</code>. The message contains the component ID of the component that failed, the application ID for the component's waveform, and the device ID for the GPP that is running the component.</p>
+<p>The GPP contains a <code>thresholds</code> structure with five elements. If at any point any of these thresholds is exceeded (because of any process's usage, not just those forked by the GPP), the GPP usage state changes to <code>BUSY</code>.</p>
+<p>The following table describes the elements of the <code>thresholds</code> structured property:</p>
+<h5 id="thresholds-structured-property">Thresholds Structured Property</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Element</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>mem_free</code></td>
+<td align="left">Amount of free memory available that triggers a threshold condition (default units in MB).</td>
+</tr>
+<tr class="even">
+<td align="left"><code>nic_usage</code></td>
+<td align="left">Amount of network capacity used by the NIC interface that triggers a threshold condition.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>threads</code></td>
+<td align="left">Percentage of threads available to the GPP that triggers a threshold condition.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>files_available</code></td>
+<td align="left">Percentage of file handles remaining to the GPP that triggers a threshold condition.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>cpu_idle</code></td>
+<td align="left">Amount of CPU idle percentage that triggers a threshold condition.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>ignore</code></td>
+<td align="left">Ignore all thresholds and never enter into a <code>BUSY</code> state.</td>
+</tr>
+</tbody>
+</table>
+<p>To disable the GPP's response to any threshold, set <code>thresholds.ignore</code> to True. If <code>thresholds.ignore</code> is True, the GPP will either be in an <code>IDLE</code> state if no components are deployed, or an <code>ACTIVE</code> state if one or more component is deployed, but never <code>BUSY</code>, irresepecitve of the overall computer usage.</p>
+<p>Setting any element of the <code>thresholds</code> structure to -1 disables the GPP's response to that particular element.</p>
+<p>For example, to ignore the processor's usage, set <code>thresholds.cpu_idle</code> to -1. The GPP state will be <code>IDLE</code> if no components are deployed, and <code>ACTIVE</code> if one or more component is deployed, irrespective of the cpu idle percentage.</p>
+<p>Setting any element of the <code>thresholds</code> structure to 0 changes the GPP usage state to <code>BUSY</code>, and thus, the GPP cannot launch any addtional components.</p>
+<p>The GPP contains a <code>utilization</code> structured property that shows the overall system utilization at any time. The following table describes the elements of the <code>utilization</code> structured property.</p>
+<h5 id="utilization-structured-property">Utilization Structured Property</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Element</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>description</code></td>
+<td align="left">Human-readable description of the content. In the case of CPU usage, this element's content is &quot;CPU cores&quot;. The numbers in this structure reflect the effective number of cores that are being utilized.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>component_load</code></td>
+<td align="left">Overall load by all the components that were forked by the GPP.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>system_load</code></td>
+<td align="left">Total load from every process, irrespective of whether or not it was forked by this GPP.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>subscribed</code></td>
+<td align="left">Sum of the total system load and however much is reserved. (Refer to <a href="#capacity-reservation">Capacity Reservation</a>).</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>maximum</code></td>
+<td align="left">Maximum load that the GPP will accept before switching to a BUSY state.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="componenthost">ComponentHost</h3>
+<p><code>ComponentHost</code> is a specialized REDHAWK component that launches and manages shared address space components in a waveform. It is installed in <code>$SDRROOT</code> on the DomainManager and deployed to the GPP as required. There is no need to explicitly include <code>ComponentHost</code> in a Software Assembly Descriptor (SAD) file, as the <abbr title="See Glossary.">Application Factory</abbr> automatically creates one (or more) as part of the waveform deployment.</p>
+<p>One <code>ComponentHost</code> instance is created per GPP, per waveform; all shared address space components assigned to the same GPP in a waveform reside within the same <code>ComponentHost</code>. Within <code>ComponentHost</code>, each started component runs as a separate thread, named according to the component's label. The individual component's main threads may be viewed in common Linux utilities such as <code>top</code> by enabling the display of threads. Other threads, such as those used for I/O by the middleware layer, are typically named according to the <code>ComponentHost</code> instance.</p>
+<h3 id="binding-components-to-executable-devices">Binding Components to Executable Devices</h3>
+<p>For standard application/component deployment, the Application Factory searches the domain to find a matching executable device using the OS and architecture implementation properties and optional implementation dependencies. The first available executable device matching those properties is selected as the deployment device for the component. The SAD and Device Configuration Definition (DCD) files now allow system integrators to define additional id/value pairs to match against when deploying a component to an executable device. The following example describes the new xml elements (<code>devicerequires</code> and <code>deployerrequires</code>), that allow <code>Component_1</code> to be deployed only on <code>RED_NODE:GPP_1</code>.</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- example of ID/value pairs for a component in a SAD file</span>
+<span class="co">&lt;componentplacement&gt;</span>
+<span class="co">  &lt;componentfileref refid=&quot;Component_SPD_1&quot;/&gt;</span>
+<span class="co">  &lt;componentinstantiation id=&quot;Component_1&quot; startorder=&quot;0&quot;&gt;</span>
+<span class="co">    &lt;usagename&gt;Component_1&lt;/usagename&gt;</span>
+<span class="co">    &lt;findcomponent&gt;</span>
+<span class="co">      &lt;namingservice name=&quot;Component_1&quot;/&gt;</span>
+<span class="co">    &lt;/findcomponent&gt;</span>
+<span class="co">    &lt;devicerequires&gt;</span>
+<span class="co">        &lt;simpleref refid=&quot;color&quot; value=&quot;RED&quot;/&gt;</span>
+<span class="co">        &lt;simpleref refid=&quot;rank&quot; value=&quot;15&quot;/&gt;</span>
+<span class="co">    &lt;/devicerequires&gt;</span>
+<span class="co">  &lt;/componentinstantiation&gt;</span>
+<span class="co">&lt;/componentplacement&gt;</span></code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- example of ID/value pairs for a GPP in a DCD file</span>
+<span class="co">&lt;componentplacement&gt;</span>
+<span class="co">   &lt;componentfileref refid=&quot;GPP1_SPD_1&quot;/&gt;</span>
+<span class="co">   &lt;componentinstantiation id=&quot;RED_NODE:GPP_1&quot;&gt;</span>
+<span class="co">      &lt;usagename&gt;RED_NODE:GPP_1&lt;/usagename&gt;</span>
+<span class="co">      &lt;deployerrequires&gt;</span>
+<span class="co">          &lt;requires id=&quot;color&quot; value=&quot;RED&quot;/&gt;</span>
+<span class="co">          &lt;requires id=&quot;rank&quot; value=&quot;15&quot;/&gt;</span>
+<span class="co">      &lt;/deployerrequires&gt;</span>
+<span class="co">   &lt;/componentinstantiation&gt;</span>
+<span class="co">&lt;/componentplacement&gt;</span></code></pre>
+<p>During the deployment process, when a component has a <code>devicerequires</code> id/value set defined in a SAD file, the list of available executable devices in the domain is filtered based on the entire id/value set. The Application Factory performs a match against the <code>devicerequires</code> id/value pairs and the executable devices's <code>devicerequires</code> id/value pairs. If there is an exact match between both sets, that executable device is selected as the deployment device. If no matching executable devices are found, then the waveform fails to deploy and an exception is raised.</p>
+<p>In addition to allowing components to select deployment devices, an executable device with a <code>devicerequires</code> id/value set restricts deployment to only components with a matching id/value set. All other requests for deployment to that executable device fail.</p>
+<p>For host collocation and regular deployment requests, the following table explains the deployment behavior for <code>devicerequires</code> and <code>deployerrequires</code> id/value sets:</p>
+<h5 id="deployment-matching">Deployment Matching</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>device requires</strong></th>
+<th align="left"><strong>deployer requires</strong></th>
+<th align="left"><strong>Host Collocation</strong></th>
+<th align="left"><strong>Match</strong></th>
+<th align="left"><strong>Deployment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+<td align="left">Yes, deploy on matching device.</td>
+</tr>
+<tr class="even">
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+<td align="left">No</td>
+<td align="left">No, matching failed.</td>
+</tr>
+<tr class="odd">
+<td align="left">Yes</td>
+<td align="left">No</td>
+<td align="left">No</td>
+<td align="left">No</td>
+<td align="left">No, device not used for deployment.</td>
+</tr>
+<tr class="even">
+<td align="left">No</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+<td align="left">No</td>
+<td align="left">No, skip this device.</td>
+</tr>
+<tr class="odd">
+<td align="left">Yes (single set)</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes, entire host collocation on this device.</td>
+</tr>
+<tr class="even">
+<td align="left">Yes (mixed sets)</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">No, different <code>devicerequire</code> sets will fail.</td>
+</tr>
+<tr class="odd">
+<td align="left">Yes (same sets)</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes, entire host collocation on this device.</td>
+</tr>
+<tr class="even">
+<td align="left">No</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">No, skip this device.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capacity-reservation">Capacity Reservation</h3>
+<p>A non-reservation strategy assumes that each process is running at full capacity at the time of execution. This is clearly not the case when the waveform is initially deployed because all of the waveform's components are in a <code>stopped</code> state, thus taking little to no system resources. Only after the waveform is switched to a <code>started</code> state do the components begin to consume system resources. Those system resources that are monitored for threshold changes by the GPP will directly affect the Device's <code>usageState</code>: <code>IDLE</code>, <code>ACTIVE</code>, or <code>BUSY</code>.</p>
+<p>A non-reservation strategy with a deployment pattern where multiple waveforms are launched and not initially started but are delayed due to system events or predefined behavior, can create an over-utilized system. For example, a system may initially create twenty instances of a waveform and later, start them as a result of an aperiodic event. All twenty waveforms are created, but starting the 15th instance causes the CPU utilization for the entire system to reach 100%. When the next five waveforms are started, the system will be over utilized, and all running components will be affected leading to degraded system performance, such as data loss or lack of timely response to message events.</p>
+<p>To mitigate this issue, the GPP maintains a reservation-based strategy to properly forecast the CPU load for each component it manages. During initial waveform deployment, the forecasted load for each component of the waveform is reserved against the current system's available CPU capacity. As components are moved to the <code>start</code> state, the forecasted load is tabled, and the actual load or a minimum utilitization load (whichever is greater), is used for determining the system load, and thus, the available CPU capacity. The available CPU capacity is one of the system resources that will directly determine the system's <code>usageState</code>, (i.e., <code>IDLE</code>, <code>ACTIVE</code>, or <code>BUSY</code> ). The GPP's <code>utilization.subscribed</code> property maintains the runtime value of the total reservation for the system.</p>
+<p><img src="img/reservation_schema.png" alt="Example Reservation Schema" /></p>
+<p>In the figure above, an example of the reservation schema is shown where actual usage is shown in green, reserved capacity is shown in blue, and the maximum for the host is shown in orange. In the figure shown, the GPP's capacity calculation is affected by the components deployed and whether or not its host application is started.</p>
+<p>The property, <code>reserved_capacity_per_component</code>, is the default forecasted load for every component deployed by the GPP.</p>
+<h4 id="specialized-reservation">Specialized Reservation</h4>
+<p>The generalized reservation schema based on a common value set for all components is functional but often too generic. Furthermore, as the load imposed by a component changes (for example, as the noise environment changes), a floor for the component's load is needed. For such a case, a per-component load floor can be set. This floor is maintained when the component's load is lower than the specified value. However, the component's load is computed as the actual load when it exceeds the floor value set. In other words, the component's effective load is the higher of the floor or actual load. Currently, this floor is only available through the REDHAWK Python package when the waveform is created. The following example describes how to set the reserved forecasted load for a component. In this example, the component, <code>my_comp_1</code>, on the waveform, <code>my_wave</code>, has a reservation floor of <code>4</code> cpu cores.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> ossie.utils <span class="ch">import</span> redhawk
+<span class="ch">from</span> ossie.cf <span class="ch">import</span> CF
+<span class="ch">from</span> omniORB <span class="ch">import</span> <span class="dt">any</span>, CORBA
+dom=redhawk.attach()
+dev = dom.devMgrs[<span class="dv">0</span>].devs[<span class="dv">0</span>]
+extra_reservation = <span class="dv">4</span>  <span class="co"># number of cores to reserve/utilize</span>
+_value=<span class="dt">any</span>.to_any(extra_reservation)
+_value._t=CORBA.TC_double  <span class="co"># make sure that the number is packed as a double</span>
+app_1=dom.createApplication(<span class="st">&#39;/waveforms/my_wave/my_wave.sad.xml&#39;</span>,<span class="st">&#39;my_wave&#39;</span>,[CF.DataType(<span class="dt">id</span>=<span class="st">&#39;SPECIALIZED_CPU_RESERVATION&#39;</span>,value=<span class="dt">any</span>.to_any([CF.DataType(<span class="dt">id</span>=<span class="st">&#39;my_comp_1&#39;</span>,value=_value)]))])
+<span class="dt">print</span> dev._get_usageState()  <span class="co"># view the reservation effect</span></code></pre>
+<p>In other cases, an aggregate load for a whole waveform is needed rather than loads for individual components. To support this need, it is possible to provide a reservation floor on a per-host collocation basis rather than on a per-component basis. The reservation floor can be set through the SAD file or as a waveform creation parameter.</p>
+<p>When the reservation is based on the SAD file, it is added through an additional child element to the <code>hostcollocation</code> element. The additional child element is <code>reservation</code>, with two attributes: <code>kind</code> (&quot;cpucores&quot; for processing) and <code>value</code> (in this case, the number of cores that should be reserved). For example, if a host collocation were to include a reservation for a <code>hostcollocation</code> with component &quot;some_comp&quot; and an aggregate reservation of 3 cores, it would follow a pattern similar to this:</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;hostcollocation</span><span class="ot"> id=</span><span class="st">&quot;ID_TEST_SET1&quot;</span><span class="ot"> name=</span><span class="st">&quot;COLLOC_SET1&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;componentplacement&gt;</span>
+    <span class="kw">&lt;componentfileref</span><span class="ot"> refid=</span><span class="st">&quot;some_comp_ref&quot;</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;componentinstantiation</span><span class="ot"> id=</span><span class="st">&quot;SigGen_1&quot;</span><span class="ot"> startorder=</span><span class="st">&quot;0&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;usagename&gt;</span>SigGen_1<span class="kw">&lt;/usagename&gt;</span>
+      <span class="kw">&lt;findcomponent&gt;</span>
+        <span class="kw">&lt;namingservice</span><span class="ot"> name=</span><span class="st">&quot;SigGen_1&quot;</span><span class="kw">/&gt;</span>
+      <span class="kw">&lt;/findcomponent&gt;</span>
+    <span class="kw">&lt;/componentinstantiation&gt;</span>
+  <span class="kw">&lt;/componentplacement&gt;</span>
+  <span class="kw">&lt;reservation</span><span class="ot"> kind=</span><span class="st">&quot;cpucores&quot;</span><span class="ot"> value=</span><span class="st">&quot;3&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/hostcollocation&gt;</span></code></pre>
+<p>Alternatively, the reservation can be made in the IDE by selecting a host collocation in the SAD editor diagram and editing the reservation in the Properties view. The following procedure explains how to set the reservation using the IDE.</p>
+<ol>
+<li>Create a new Waveform project.</li>
+<li>In the SAD diagram, add a host collocation.</li>
+<li>Edit the host collocation's name to match the XML (<code>COLLOC_SET1</code>).</li>
+<li>Add <code>rh.SigGen</code> to the host collocation.</li>
+<li>Select the host collocation.</li>
+<li>Open the Properties view, select the <strong>Reservations</strong> tab. <img src="img/propertiesreservationstab.png" alt="Properties View Reservations Tab" /></li>
+<li>Click the <strong>+</strong> button.</li>
+<li>Set the <strong>Kind</strong> and <strong>Value</strong> to match the XML (<code>cpucores</code> and <code>3</code>, respectively).</li>
+</ol>
+<p>When a waveform contains a single host collocation, it is possible to provide an override value for that host collocation by providing an empty ID to the <code>SPECIALIZED_CPU_RESERVATION</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> ossie.utils <span class="ch">import</span> redhawk
+<span class="ch">from</span> ossie.cf <span class="ch">import</span> CF
+<span class="ch">from</span> omniORB <span class="ch">import</span> <span class="dt">any</span>, CORBA
+dom=redhawk.attach()
+dev = dom.devMgrs[<span class="dv">0</span>].devs[<span class="dv">0</span>]
+extra_reservation = <span class="dv">4</span>  <span class="co"># number of cores to reserve/utilize for the host collocation</span>
+_value=<span class="dt">any</span>.to_any(extra_reservation)
+_value._t=CORBA.TC_double  <span class="co"># make sure that the number is packed as a double</span>
+app_1=dom.createApplication(<span class="st">&#39;/waveforms/my_wave/my_wave.sad.xml&#39;</span>,<span class="st">&#39;my_wave&#39;</span>,[CF.DataType(<span class="dt">id</span>=<span class="st">&#39;SPECIALIZED_CPU_RESERVATION&#39;</span>,value=<span class="dt">any</span>.to_any([CF.DataType(<span class="dt">id</span>=<span class="st">&#39;&#39;</span>,value=_value)]))])
+<span class="dt">print</span> dev._get_usageState()  <span class="co"># view the reservation effect</span></code></pre>
+<p>If the waveform contains more than one host collocation, it can be overloaded through the host collocation's id. For example, if the SAD example above were to be overloaded with 4 cores rather than 3, the code would look as follows:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> ossie.utils <span class="ch">import</span> redhawk
+<span class="ch">from</span> ossie.cf <span class="ch">import</span> CF
+<span class="ch">from</span> omniORB <span class="ch">import</span> <span class="dt">any</span>, CORBA
+dom=redhawk.attach()
+dev = dom.devMgrs[<span class="dv">0</span>].devs[<span class="dv">0</span>]
+extra_reservation = <span class="dv">4</span>  <span class="co"># number of cores to reserve/utilize for the host collocation</span>
+_value=<span class="dt">any</span>.to_any(extra_reservation)
+_value._t=CORBA.TC_double  <span class="co"># make sure that the number is packed as a double</span>
+app_1=dom.createApplication(<span class="st">&#39;/waveforms/my_wave/my_wave.sad.xml&#39;</span>,<span class="st">&#39;my_wave&#39;</span>,[CF.DataType(<span class="dt">id</span>=<span class="st">&#39;SPECIALIZED_CPU_RESERVATION&#39;</span>,value=<span class="dt">any</span>.to_any([CF.DataType(<span class="dt">id</span>=<span class="st">&#39;ID_TEST_SET1&#39;</span>,value=_value)]))])
+<span class="dt">print</span> dev._get_usageState()  <span class="co"># view the reservation effect</span></code></pre>
+<h3 id="resource-affinity">Resource Affinity</h3>
+<p>Modern Linux kernels support the ability to define memory and processor affinity using the <abbr title="See Glossary.">NUMA</abbr> library. REDHAWK has added support to define processor affinity during the component deployment process as specified in a waveform's SAD file. The <code>affinity</code> element can be added to the <code>componentplacement</code>/<code>componentinstantiation</code> element for the resource. During deployment, the REDHAWK GPP recognizes these options and performs the appropriate affinity requests when the resource is executed. An affinity request is defined by the following two intrinsic Property identifiers added to the <code>affinity</code> element.</p>
+<ul>
+<li><code>affinity::exec_directive_class</code> - The context classification of affinity directive to perform.</li>
+<li><code>affinity::exec_directive_value</code> - Value to use when processing the affinity directive.</li>
+</ul>
+<h5 id="affinity-class-directives">Affinity Class Directives</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Directive Class</strong></th>
+<th align="left"><strong>Description</strong></th>
+<th align="left"><strong>Values</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>socket</code></td>
+<td align="left">Processor affinity using a processor socket identifier set.</td>
+<td align="left">Supported values are defined by the NUMA library's <code>numa_parse_nodestring method</code>; consult the NUMA man page for further clarification.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>cpu</code></td>
+<td align="left">CPU affinity using a cpu identifier set.</td>
+<td align="left">Supported values are defined by NUMA library's <code>numa_parse_cpustring method</code>; consult the NUMA man page for further clarification.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>nic</code></td>
+<td align="left">Determine which CPU manages the nic's interrupts then assign processor affiliation to that CPU.</td>
+<td align="left">Name of a host's network interface. Processor identification is resolved by processing/proc/interrupts for the requested interface name.</td>
+</tr>
+</tbody>
+</table>
+<p>The current REDHAWK development tool set does not support the inclusion of the <code>affinity</code> element into a SAD file. Adding this element requires manual editing of the file with a text editor. The following example restricts the processor affinity for component <code>C2_1</code> to CPU number 5.</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;componentplacement&gt;</span>
+  <span class="kw">&lt;componentfileref</span><span class="ot"> refid=</span><span class="st">&quot;C2_5fb7296e-b543-43fc-bc14-88a9299b458b&quot;</span><span class="kw">/&gt;</span>
+  <span class="kw">&lt;componentinstantiation</span><span class="ot"> id=</span><span class="st">&quot;C2_1&quot;</span><span class="ot"> startorder=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;usagename&gt;</span>C2_1<span class="kw">&lt;/usagename&gt;</span>
+    <span class="kw">&lt;affinity&gt;</span>
+      <span class="kw">&lt;simpleref</span><span class="ot"> refid=</span><span class="st">&quot;affinity::exec_directive_class&quot;</span><span class="ot"> value=</span><span class="st">&quot;cpu&quot;</span> <span class="kw">/&gt;</span>
+      <span class="kw">&lt;simpleref</span><span class="ot"> refid=</span><span class="st">&quot;affinity::exec_directive_value&quot;</span><span class="ot"> value=</span><span class="st">&quot;5&quot;</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;/affinity&gt;</span>
+    <span class="kw">&lt;findcomponent&gt;</span>
+     <span class="kw">&lt;namingservice</span><span class="ot"> name=</span><span class="st">&quot;C2_1&quot;</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;/findcomponent&gt;</span>
+  <span class="kw">&lt;/componentinstantiation&gt;</span>
+<span class="kw">&lt;/componentplacement&gt;</span></code></pre>
+</div>  <!-- end div id=content -->
+</body>
+</html>

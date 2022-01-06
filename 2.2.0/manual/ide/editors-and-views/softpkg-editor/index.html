@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>SoftPkg Editor :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/editors-and-views/softpkg-editor/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1371,12 +1400,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1402,28 +1431,46 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>SoftPkg Editor</h1>
+    <h2 class="title">SoftPkg Editor</h2>
+
     
     
     
     
 
-<p><img src="../../images/spdOverview.png" alt="SoftPkg Editor" /></p>
+<p>The <a href="../../../../manual/glossary/#softpkg-editor">SoftPkg Editor</a> presents all the content that can be found within the <code>spd.xml</code> file in an editing environment designed for ease of use.</p>
 
-<p>To open the SoftPkg Editor, double-click an SPD file from the Project Explorer View. It presents all the content that can be found within the <code>spd.xml</code> file in an editing environment designed for ease of use. If the SPD file references a PRF or SCD file, additional tabs are made available that represent these files in similar fashion.</p>
+
+<figure >
+    
+        <img src="../../images/spdOverview.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >SoftPkg Editor</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
+
+<p>To open the SoftPkg Editor, double-click a Software Package Descriptor (SPD) file from the <a href="../../../../manual/glossary/#project-explorer-view">Project Explorer view</a>. If the SPD file references a Properties File (PRF) or Software Component Descriptor (SCD) file, additional tabs are made available that represent these files in similar fashion.</p>
 
 <p>Each of the editor tabs, with the exception of the raw XML tabs, have the following buttons located in the top right corner:</p>
 
 <ul>
-<li><strong>Generate All Implementations</strong> Button: This button is used to generate the code implementation of the SPD file. The generated code is based on the code generator template that was chosen during the <strong>New Project Wizard</strong> and the content found within the SPD, PRF, and SCD files.
-<div class="notices note" ><p>Code generation is not exhaustive, and custom port types may not compile.</p>
+<li><strong>Generate All Implementations</strong> Button: This button is used to generate the code implementation of the SPD file. The generated code is based on the code generator template that was chosen during the <strong>New Project Wizard</strong> and content found in the SPD, PRF, and SCD files.
+<div class="notices note" ><p>Code generation is not exhaustive, and custom <a href="../../../../manual/glossary/#port">port</a> types may not compile.</p>
 </div>
 </li>
 <li><strong>New Control Panel</strong> Button: This button is used to generate a new control panel.</li>
@@ -1433,8 +1480,8 @@ ga('send', 'pageview');
 
 <ul>
 <li>Basic information about the SoftPkg can be edited from the <strong>Overview</strong> tab</li>
-<li>Properties and messages can be edited from the <strong>Properties</strong> tab</li>
-<li>Ports can be edited from the <strong>Ports</strong> tab</li>
+<li><a href="../../../../manual/glossary/#property">Properties</a> and <a href="../../../../manual/glossary/#message">messages</a> can be edited from the <strong>Properties</strong> tab</li>
+<li><a href="../../../../manual/components/creating-a-component/#ports">Ports</a> can be edited from the <strong>Ports</strong> tab</li>
 <li>Implementations and code generation settings can be edited from the <strong>Implementations</strong> tab.</li>
 </ul>
 
@@ -1442,15 +1489,15 @@ ga('send', 'pageview');
 
 <h3 id="overview-tab">Overview Tab</h3>
 
-<p>The <strong>Overview</strong> tab is a representation of the content found within the SPD file and contains five sections:</p>
+<p>The Overview tab is a representation of content found in the SPD file and contains five sections:</p>
 
 <ol>
 <li>The <strong>General Information</strong> section provides the ability to view and set (if write permissions are granted) the resource’s <strong>ID</strong> and <strong>Name</strong> as well as the location of the PRF and SCD files. The initial content of these fields is auto-generated when the project is created and is generally left unaltered. The optional fields, <strong>Version</strong>, <strong>Title</strong>, and <strong>Description</strong>, may be set to aid in the project’s documentation.</li>
-<li>The <strong>Project Documentation</strong> section displays a Header hyperlink, which if clicked, provides the option to create and edit the file &ldquo;HEADER&rdquo; in the project. When code generation is performed, the header is applied to your project files.</li>
-<li>The <strong>Interfaces</strong> section lists the IDLs that this resource inherits. This includes IDLs used by the resource’s ports, lifecycle, and properties. This table is <em>read only</em>, and additional IDL interfaces cannot be added here.</li>
-<li>The <strong>Testing</strong> section displays two hyperlinks. <strong>Launch a local component</strong> launches a local instantiation of this resource within the Sandbox. <strong>Launch a local component in debug mode</strong> provides additional runtime control, including the ability to place breakpoints, pause execution, and inspect and modify variables. See <a href="../../../../manual/ide/debugging/">Debugging REDHAWK Components and Devices with Eclipse</a> for more information.</li>
+<li>The <strong>Project Documentation</strong> section displays a Header hyperlink, which if clicked, provides the option to create and edit the file “HEADER” in the project. When code generation is performed, the header is applied to your project files.</li>
+<li>The <strong>Interfaces</strong> section lists the Interface Description Language (IDL) interfaces that this resource inherits. This includes IDLs used by the resource’s ports, lifecycle, and properties. This table is <em>read only</em>, and additional IDL interfaces cannot be added here.</li>
+<li>The <strong>Testing</strong> section displays two hyperlinks. <strong>Launch resource in the sandbox</strong> launches a local instantiation of this resource within the <a href="../../../../manual/glossary/#sandbox">sandbox</a>. <strong>Debug resource in the sandbox</strong> provides additional runtime control, including the ability to place breakpoints, pause execution, and inspect and modify variables. See <a href="../../../../manual/ide/debugging/">Debugging REDHAWK Components and Devices with Eclipse</a> for more information.</li>
 
-<li><p>The <strong>Exporting</strong> section provides a hyperlink for deploying a project to the SDR Root.
+<li><p>The <strong>Exporting</strong> section provides a hyperlink for deploying a project to the SDRROOT.
 Use the following procedure to export a project using the <strong>Export Wizard</strong>:</p>
 
 <ol>
@@ -1463,18 +1510,33 @@ Use the following procedure to export a project using the <strong>Export Wizard<
 
 <h3 id="properties-tab">Properties Tab</h3>
 
-<h5 id="softpkg-editor-properties-tab">SoftPkg Editor Properties Tab</h5>
+<p>The Properties tab provides a view of all of the <a href="../../../../manual/components/creating-a-component/#properties">properties</a> defined for a component or <a href="../../../../manual/glossary/#device">device</a>.</p>
 
-<p><img src="../../images/spdProperties.png" alt="SoftPkg Editor Properties Tab" /></p>
 
-<p>Within the <strong>Properties</strong> tab, the <strong>All Properties</strong> section displays all of the <a href="../../../../manual/components/creating-a-component/#properties">properties</a> defined for the component or device.</p>
+<figure >
+    
+        <img src="../../images/spdProperties.png" alt="SoftPkg Editor Properties Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >SoftPkg Editor Properties Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p>To add a property, click on one of <strong>Add Simple</strong>, <strong>Add Sequence</strong>, <strong>Add Struct</strong> or <strong>Add StructSeq</strong> to create a new property of the corresponding type. To remove a property, select it in the <strong>All Properties</strong> section and click the <strong>Remove</strong> button on the right. To clone existing properties, click <strong>Browse&hellip;</strong> and select from items in the SDRROOT, projects in the workspace, or well-known properties.
+
+
+
+
+<p>Within the <strong>Properties</strong> tab, the <strong>All Properties</strong> section displays all of the properties defined for the selected component or device.</p>
+
+<p>To add a property, click on one of <strong>Add Simple</strong>, <strong>Add Sequence</strong>, <strong>Add Struct</strong> or <strong>Add StructSeq</strong> to create a new property of the corresponding type. To remove a property, select it in the <strong>All Properties</strong> section and click the <strong>Remove</strong> button on the right. To clone existing properties, click <strong>Browse&hellip;</strong> and select from items in the SDRROOT, projects in the <a href="../../../../manual/glossary/#workspace">workspace</a>, or well-known properties.
 In addition to creating a new property from scratch, a user may also copy an existing property from a deployed resource:</p>
 
 <ol>
 <li>In the <strong>All Properties</strong> Section, click <strong>Browse…</strong>.</li>
-<li>Expand <strong>Target SDR</strong>.</li>
+<li>Expand <strong><a href="../../../../manual/glossary/#target-sdr">Target SDR</a></strong>.</li>
 <li>Drill down to and select the desired property.</li>
 <li>Click <strong>Finish</strong>.</li>
 </ol>
@@ -1494,7 +1556,7 @@ In addition to creating a new property from scratch, a user may also copy an exi
 <p>The <strong>Simple Property</strong> details section includes additional fields:</p>
 
 <ul>
-<li><strong>Type</strong> describes the basic data type of the property (e.g., <code>float</code>). For complex numeric types, select <code>complex</code> in the the combo box next to the type.</li>
+<li><strong>Type</strong> describes the basic data type of the property (e.g., <code>float</code>). For complex numeric types, select <code>complex</code> in the combo box next to the type.</li>
 <li><strong>Value</strong> is the initial value for the property. If not given, the initial value is undefined.</li>
 <li><strong>Units</strong> is strictly informative, but may be displayed in user interfaces.</li>
 <li><strong>Enumerations</strong> is a mapping of human-readable string labels to values. User interfaces may use the enumerations to present the labels in place of values.</li>
@@ -1525,11 +1587,24 @@ In addition to creating a new property from scratch, a user may also copy an exi
 
 <h3 id="ports-tab">Ports Tab</h3>
 
-<h5 id="softpkg-editor-ports-tab">SoftPkg Editor Ports Tab</h5>
+<p>The Ports tab provides the ability to add, edit, and view port information.</p>
 
-<p><img src="../../images/spdPorts.png" alt="SoftPkg Editor Ports Tab" /></p>
 
-<p>The <strong>Ports</strong> tab provides the ability to add, edit, and view <a href="../../../../manual/components/creating-a-component/#ports">port</a> information.</p>
+<figure >
+    
+        <img src="../../images/spdPorts.png" alt="SoftPkg Editor Ports Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >SoftPkg Editor Ports Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <p>Click <strong>Add</strong> to create a new port with default values. The <strong>Port Details</strong> section shows the new port, which can be modified as needed:</p>
 
@@ -1545,7 +1620,7 @@ In addition to creating a new property from scratch, a user may also copy an exi
 <ul>
 <li>The <strong>Type</strong> is optional and strictly informative. A port may have one or more type, defaulting to control if none is selected.</li>
 <li>Select the IDL <strong>Interface</strong> that this port implements. Click <strong>Browse…</strong> to open the selection dialog.
-<div class="notices note" ><p>By default, the interface selection dialog only shows the most common interfaces used in REDHAWK. Select the <strong>Show all interfaces</strong> checkbox to show the complete list for IDL interfaces within the Core Framework’s install location.</p>
+<div class="notices note" ><p>By default, the interface selection dialog only shows the most common interfaces used in REDHAWK. Select the <strong>Show all interfaces</strong> checkbox to show the complete list for IDL interfaces within the Core Framework’s (CF) install location.</p>
 </div>
 </li>
 <li>Optionally, enter a <strong>Description</strong> of the port, such as its intended use.</li>
@@ -1557,9 +1632,24 @@ In addition to creating a new property from scratch, a user may also copy an exi
 
 <h3 id="implementations-tab">Implementations Tab</h3>
 
-<p><img src="../../images/spdImplementation.png" alt="SoftPkg Editor Implementations Tab" /></p>
+<p>The Implementations tab is a representation of content found in the SPD file. It describes the programming language implementations that are generated and the hardware dependencies required for this resource.</p>
 
-<p>The <strong>Implementations Tab</strong> is a representation of the content found within the SCD file. It describes the programming language implementations that are generated and the hardware dependencies required for this resource.</p>
+
+<figure >
+    
+        <img src="../../images/spdImplementation.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >SoftPkg Editor Implementations Tab</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <p>During the <strong>New Project Wizard</strong>, the initial programming language and code generation template were selected. In the <strong>All Implementations</strong> section there is the option to add additional programming language implementations.</p>
 
@@ -1593,6 +1683,10 @@ In addition to creating a new property from scratch, a user may also copy an exi
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/editors-and-views/softpkg-editor.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

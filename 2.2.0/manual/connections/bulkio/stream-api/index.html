@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Stream API :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/connections/bulkio/stream-api/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -313,10 +313,10 @@ ga('send', 'pageview');
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item active">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -327,10 +327,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item active">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -509,6 +516,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -524,7 +537,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -580,12 +593,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1323,9 +1352,10 @@ ga('send', 'pageview');
     <option value="/manual/connections/bulkio/" >
   -- 
    BulkIO</option> 
-      <option value="/manual/connections/bulkio/data-transfers/" >--- Data Transfers</option>
-      <option value="/manual/connections/bulkio/sri/" >--- Signal Related Information (SRI)</option>
       <option value="/manual/connections/bulkio/stream-api/"  selected>--- Stream API</option>
+      <option value="/manual/connections/bulkio/sri/" >--- Signal Related Information (SRI)</option>
+      <option value="/manual/connections/bulkio/attachablestreams/" >--- Attachable Streams</option>
+      <option value="/manual/connections/bulkio/data-transfers/" >--- pushPacket Data Flow</option>
       <option value="/manual/connections/bulkio/bit-data/" >--- Bit Data</option>
       <option value="/manual/connections/bulkio/multiout-ports/" >--- Multi-out Ports</option>
       <option value="/manual/connections/bulkio/working-with-complex-data/" >--- Working with Complex Data</option>
@@ -1345,12 +1375,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1369,12 +1399,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1400,20 +1430,21 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Stream API</h1>
+    <h2 class="title">Stream API</h2>
+
     
     
     
     
 
-<p>The BulkIO stream API provides a high-level interface to sending and receiving data via BulkIO ports. Each stream is tied to a port, and encapsulates both the SRI and the data associated with it.</p>
+<p>The Bulk Input/Output (BulkIO) stream API provides a high-level interface to sending and receiving data via BulkIO <a href="../../../../manual/glossary/#port">ports</a>. Each stream is tied to a port, and encapsulates both the Signal Related Information (SRI) and the data associated with it. For more information, refer to the Shared Address information in the <a href="https://redhawksdr.github.io/technical-notes/">Technical Notes</a> and the <a href="https://github.com/RedhawkSDR/core-framework/tree/develop-2.2/bulkioInterfaces/libsrc/cpp/include/bulkio">BulkIO header files</a>.</p>
 
 <p>Streams are automatically managed by the port that creates them. User code does not own the stream itself; instead, user instances are opaque stream handles. This allows them to be passed around by value or safely stored in other data structures.</p>
 
@@ -1421,13 +1452,15 @@ ga('send', 'pageview');
 
 <p>Most stream methods are not thread-safe; it is assumed that each stream will be written to or read from by a single thread. However, it is safe to use multiple streams simultaneously.</p>
 
-<div class="notices note" ><p>The BulkIO stream API is not supported in Java as of REDHAWK 2.2.0</p>
+<div class="notices note" ><p>The BulkIO stream API is not supported in Java as of REDHAWK 2.2.0.</p>
 </div>
 
 
 <h3 id="data-types">Data Types</h3>
 
-<p>The data type of a typical read or write operation is as follows:</p>
+<p>The following table describes the data types of a typical read or write operation.</p>
+
+<h5 id="data-types-for-read-or-write-operations">Data Types for Read or Write Operations</h5>
 
 <table>
 <thead>
@@ -1519,7 +1552,9 @@ ga('send', 'pageview');
 </tbody>
 </table>
 
-<p>Where &ldquo;T&rdquo; is one of the element types below:</p>
+<p>The following table describes the element types for the variable &ldquo;T&rdquo;.</p>
+
+<h5 id="element-types">Element Types</h5>
 
 <table>
 <thead>
@@ -1715,8 +1750,8 @@ stream<span style="color:#f92672">.</span>setKeyword(<span style="color:#e6db74"
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">stream.sri(newSri);</code></pre></div>
 <p>In Python, assign a new SRI to the <code>sri</code> attribute:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">stream<span style="color:#f92672">.</span>sri <span style="color:#f92672">=</span> newSri</code></pre></div>
-<p>All SRI fields are updated from the new SRI, with the exception of the stream ID.
-The stream ID is immutable and cannot be changed after creation.</p>
+<p>All SRI fields are updated from the new SRI, with the exception of the Stream ID.
+The Stream ID is immutable and cannot be changed after creation.</p>
 
 <p>Updates to the SRI are stored and pushed before the next packet goes out.</p>
 
@@ -1745,7 +1780,7 @@ stream<span style="color:#f92672">.</span>write(data, bulkio<span style="color:#
 <p>When writing scalar data to a complex stream, make sure that the size is a multiple of 2.</p>
 
 <p>In Python, data written to a complex stream is assumed to be a list of complex values.
-If an element in the list is not a Python <code>complex</code>, its imaginary component is treated as 0.</p>
+If an element in the list is not a Python <code>complex</code>, its imaginary <a href="../../../../manual/glossary/#component">component</a> is treated as 0.</p>
 
 <h4 id="write-buffering">Write Buffering</h4>
 
@@ -1769,13 +1804,13 @@ If precise time information is required, disable write buffering.</p>
 <h4 id="closing">Closing</h4>
 
 <p>When an output stream is complete, close the stream.
-The <code>close()</code> method sends an end-of-stream packet and dissociates the stream from the output port.</p>
+The <code>close()</code> method sends an End of Stream (EOS) packet and dissociates the stream from the output port.</p>
 
 <h3 id="input-streams">Input Streams</h3>
 
-<p>An input stream encapsulates SRI and all received packets associated with that stream ID. Buffering and overlap are built in, removing the need for client code to implement these features.</p>
+<p>An input stream encapsulates SRI and all received packets associated with that Stream ID. Buffering and overlap are built in, removing the need for client code to implement these features.</p>
 
-<p>Input streams are created automatically by the input port when an SRI is received with a new stream ID. Only one stream per port can exist with a given stream ID; in the event that an input stream has an unacknowledged end-of-stream waiting, a new SRI with the same stream ID will be queued until the end-of-stream has been reached.</p>
+<p>Input streams are created automatically by the input port when an SRI is received with a new Stream ID. Only one stream per port can exist with a given Stream ID; in the event that an input stream has an unacknowledged EOS waiting, a new SRI with the same Stream ID will be queued until the EOS has been reached.</p>
 
 <p>Methods that accept or return a number of samples take the input stream’s complex mode into account. For example, requesting 1024 samples from a complex stream returns 1024 complex pairs, which is equivalent to 2048 scalar values.</p>
 
@@ -1893,25 +1928,25 @@ The returned block may contain less than the requested number of samples if the 
 
 <h4 id="overlapping-reads">Overlapping Reads</h4>
 
-<p>For algorithms that require data to overlap between iterations, you may also pass the number of samples to consume.
+<p>For algorithms that require the read pointer to move to a point other than the end of the requested data set, you may also pass the number of samples to consume.
 The following examples read 1K samples with 50% overlap.</p>
 
 <p>C++:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">bulkio<span style="color:#f92672">::</span>FloatDataBlock block <span style="color:#f92672">=</span> dataFloat_in<span style="color:#f92672">-&gt;</span>read(<span style="color:#ae81ff">1024</span>, <span style="color:#ae81ff">512</span>);</code></pre></div>
 <p>Python:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">block <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>port_dataFloat_in<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">1024</span>, <span style="color:#ae81ff">512</span>)</code></pre></div>
-<p>The input stream’s read pointer is advanced up to the consume length. The next call to <code>read()</code> will return data starting at that point.</p>
+<p>The input stream’s read pointer is advanced up to the consume length. The next call to <code>read()</code> will return data starting at that point.
+If the consume length is greater than the requested data length, the read call will block until the requested consume length is satisfied.</p>
 
-<div class="notices note" ><p>XML and File streams do not support overlapping reads.</p>
+<div class="notices note" ><p>XML and File streams do not support custom consume amounts.</p>
 </div>
 
 
 <h4 id="read-failures">Read Failures</h4>
 
-<p>If the an end-of-stream flag is received, or the component is interrupted, <code>read()</code> may return early.
-In the overlap case, if end-of-stream is reached before receiving the requested number of samples, all remaining data is consumed and no further reads are possible.</p>
+<p>If the EOS flag is received, or the component is interrupted, <code>read()</code> may return early. In the overlap case, if EOS is reached before receiving the requested number of samples, all remaining data is consumed and no further reads are possible.</p>
 
-<p>When a <code>read()</code> returns an invalid block, it is important to check for an end-of-stream.</p>
+<p>When a <code>read()</code> returns an invalid block, it is important to check for an EOS.</p>
 
 <p>C++:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>block) {
@@ -2076,15 +2111,15 @@ This returns the <code>PrecisionUTCTime</code> of the first sample.</p>
 <p>Some components may prefer to only handle one stream at a time.
 Unwanted input streams can be disabled by calling the <code>disable()</code> method.</p>
 
-<p>All data for the stream will be discarded until end-of-stream is reached, preventing queue backups due to unhandled data.</p>
+<p>All data for the stream will be discarded until EOS is reached, preventing queue backups due to unhandled data.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../../manual/connections/bulkio/sri/" title="Signal Related Information (SRI)"> <i class="fa fa-chevron-left"></i><label>Signal Related Information (SRI)</label></a>
-    <a class="nav nav-next" href="../../../../manual/connections/bulkio/bit-data/" title="Bit Data" style="margin-right: 0px;"><label>Bit Data</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="../../../../manual/connections/bulkio/" title="BulkIO"> <i class="fa fa-chevron-left"></i><label>BulkIO</label></a>
+    <a class="nav nav-next" href="../../../../manual/connections/bulkio/sri/" title="Signal Related Information (SRI)" style="margin-right: 0px;"><label>Signal Related Information (SRI)</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -2099,6 +2134,10 @@ Unwanted input streams can be disabled by calling the <code>disable()</code> met
 
   
 
+    <div class="github-link">
+      <a href="manual/connections/bulkio/stream-api.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

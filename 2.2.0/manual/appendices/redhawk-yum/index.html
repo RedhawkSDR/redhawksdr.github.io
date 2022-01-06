@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>REDHAWK Yum Repository and Packages :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/redhawk-yum/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,81 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
+    <option value="/manual/installation/" >
+  - 
+   Installation</option>
+    <option value="/manual/components/" >
+  - 
+   Components</option>
+    <option value="/manual/component-structure/" >
+  - 
+   Component Structure</option>
+    <option value="/manual/shared-libraries/" >
+  - 
+   Shared Libraries</option>
+    <option value="/manual/connections/" >
+  - 
+   Connections</option>
+    <option value="/manual/waveforms/" >
+  - 
+   Waveforms</option>
+    <option value="/manual/services/" >
+  - 
+   Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
+    <option value="/manual/nodes/" >
+  - 
+   Nodes</option>
+    <option value="/manual/sandbox/" >
+  - 
+   Sandbox</option>
+    <option value="/manual/runtime-environment/" >
+  - 
+   The Runtime Environment</option>
+    <option value="/manual/runtime-inspection/" >
+  - 
+   Runtime Environment Inspection</option>
+    <option value="/manual/logging/" >
+  - 
+   Logging</option>
+    <option value="/manual/ide/" >
+  - 
+   Using the REDHAWK IDE</option>
+    <option value="/manual/exploring-sdrroot/" >
+  - 
+   Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
+    <option value="/manual/exploring-domain/" >
+  - 
+   Exploring a Running Domain Using the REDHAWK IDE</option>
+    <option value="/manual/appendices/" >
+  - 
+   Appendices</option> 
+      <option value="/manual/appendices/redhawk-yum/"  selected>-- REDHAWK Yum Repository and Packages</option>
+      <option value="/manual/appendices/dependencies/" >-- External Dependencies</option>
+      <option value="/manual/appendices/standalone-ide/" >-- Installing a Stand-alone IDE</option>
+      <option value="/manual/appendices/source-installation/" >-- Building and Installing REDHAWK from Source</option>
+      <option value="/manual/appendices/optimization/" >-- Optimization</option>
+    <option value="/manual/appendices/adminservice/" >
+  -- 
+   REDHAWK System Services</option>
+      <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
+      <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
+      <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
+    <option value="/manual/appendices/troubleshooting/" >
+  -- 
+   Troubleshooting</option>
+      <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
+      <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
+  
+    <option value="/manual/glossary/" >
+  - 
+   Glossary</option>
   
 
 
@@ -1315,14 +1418,15 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>REDHAWK Yum Repository and Packages</h1>
+    <h2 class="title">REDHAWK Yum Repository and Packages</h2>
+
     
     
     
@@ -1336,11 +1440,15 @@ ga('send', 'pageview');
 
 <h2 id="redhawk-yum-repository">REDHAWK Yum Repository</h2>
 
-<p>All of the REDHAWK packages are included in a yum repository, which can be configured as described in <a href="../../../manual/installation/#setting-up-the-redhawk-repository">Setting Up the REDHAWK Repository</a>. The repository contains two yum groups (REDHAWK Runtime, and REDHAWK Development) and additional OS dependencies. The yum groups and additional OS dependencies are described in the following sections:</p>
+<p>All of the REDHAWK packages are included in a yum repository, which can be configured as described in <a href="../../../manual/installation/#setting-up-the-redhawk-repository">Setting Up the REDHAWK Repository</a>.</p>
 
 <h3 id="redhawk-yum-groups">REDHAWK Yum Groups</h3>
 
+<p>The repository contains two yum groups (REDHAWK Runtime and REDHAWK Development). The yum groups are described in the following sections.</p>
+
 <h4 id="redhawk-runtime">REDHAWK Runtime</h4>
+
+<p>The REDHAWK Runtime yum group includes the following packages:</p>
 
 <ul>
 <li><code>bulkioInterfaces</code></li>
@@ -1355,6 +1463,8 @@ ga('send', 'pageview');
 </ul>
 
 <h4 id="redhawk-development">REDHAWK Development</h4>
+
+<p>The REDHAWK Development yum group includes the following packages:</p>
 
 <ul>
 <li><code>redhawk-basic-components</code></li>
@@ -1372,7 +1482,11 @@ ga('send', 'pageview');
 
 <h3 id="dependencies-packaged-with-redhawk">Dependencies Packaged with REDHAWK</h3>
 
+<p>This section identifies the dependencies that are packaged with REDHAWK.</p>
+
 <h4 id="dependencies-for-rhel-centos-6">Dependencies for RHEL/CentOS 6</h4>
+
+<p>The following list of dependencies are required for RHEL/CentOS 6 systems.</p>
 
 <ul>
 <li><code>libomniEvents2</code></li>
@@ -1402,6 +1516,8 @@ ga('send', 'pageview');
 </span><span style="color:#ae81ff"></span>    omniORBpy-libs python-omniORB uhd uhd-debuginfo uhd-devel uhd-doc uhd-firmware</code></pre></div>
 <h4 id="dependencies-for-rhel-centos-7">Dependencies for RHEL/CentOS 7</h4>
 
+<p>The following list of dependencies are required for RHEL/CentOS 7 systems.</p>
+
 <ul>
 <li><code>libomniEvents2</code></li>
 <li><code>libomniEvents2-devel</code></li>
@@ -1410,6 +1526,12 @@ ga('send', 'pageview');
 <li><code>omniEvents-doc</code></li>
 <li><code>omniEvents-server</code></li>
 <li><code>omniEvents-utils</code></li>
+<li><code>omniORB</code></li>
+<li><code>omniORB-debuginfo</code></li>
+<li><code>omniORB-devel</code></li>
+<li><code>omniORB-doc</code></li>
+<li><code>omniORB-servers</code></li>
+<li><code>omniORB-utils</code></li>
 <li><code>omniORBpy-debuginfo</code></li>
 <li><code>omniORBpy-devel</code></li>
 <li><code>omniORBpy-libs</code></li>
@@ -1419,16 +1541,49 @@ ga('send', 'pageview');
 <p>To install the dependencies for RHEL/CentOS 7, enter the following commands:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install libomniEvents2 libomniEvents2-devel omniEvents-bootscripts <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    omniEvents-debuginfo omniEvents-doc omniEvents-server omniEvents-utils <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    omniORBpy-debuginfo omniORBpy-devel omniORBpy-libs python-omniORB <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    uhd uhd-debuginfo uhd-devel uhd-doc uhd-firmware</code></pre></div>
+</span><span style="color:#ae81ff"></span>    omniORB omniORB-debuginfo omniORB-devel omniORB-doc omniORB-servers omniORB-utils <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    omniORBpy-debuginfo omniORBpy-devel omniORBpy-libs python-omniORB</code></pre></div>
 <h3 id="selective-installation">Selective Installation</h3>
 
 <p>After you set up the REDHAWK yum repository as described in <a href="../../../manual/installation/#setting-up-the-redhawk-repository">Setting Up the REDHAWK Repository</a>, you can also install individual packages via yum for selective installations.</p>
 
-<p>For example, to perform a selective installation that includes the GPP, enter the following command:</p>
+<p>For example, to perform a selective installation that includes the <a href="../../../manual/glossary/#gpp">GPP</a>, enter the following command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install GPP</code></pre></div>
 <p>To perform a selective development installation that includes the REDHAWK IDE, enter the following command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install redhawk-ide</code></pre></div>
+<h3 id="installing-rpms-from-the-redhawk-updates-repository">Installing RPMS from the REDHAWK Updates Repository</h3>
+
+<p>You can install RPMs from the REDHAWK Updates repository. The following steps and examples explain how to set up the REDHAWK Updates repository and install the individual RPMs.</p>
+
+<div class="notices warning" ><p>Updating with these RPMs may break API compatibility with your current REDHAWK LTS version.</p>
+</div>
+
+
+<h4 id="setting-up-the-redhawk-updates-repository">Setting Up the REDHAWK Updates Repository</h4>
+
+<ol>
+<li><p>In the directory that you want to use for the REDHAWK Updates yum repository, extract the contents of the tar file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar xzvf redhawk-updates-yum-rh2.2-&lt;updates-version&gt;-&lt;dist&gt;-&lt;arch&gt;.tar.gz
+cd redhawk-updates-rh2.2-&lt;updates-version&gt;-&lt;dist&gt;-&lt;arch&gt;</code></pre></div></li>
+
+<li><p>Enter the following commands to add the following file, <code>/etc/yum.repos.d/redhawk-updates.repo</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat<span style="color:#e6db74">&lt;&lt;EOF|sed &#39;s@LDIR@&#39;`pwd`&#39;@g&#39;|sudo tee /etc/yum.repos.d/redhawk-updates.repo
+</span><span style="color:#e6db74">[redhawk-updates]
+</span><span style="color:#e6db74">name=REDHAWK Updates Repository
+</span><span style="color:#e6db74">baseurl=file://LDIR/
+</span><span style="color:#e6db74">enabled=0
+</span><span style="color:#e6db74">gpgcheck=1
+</span><span style="color:#e6db74">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhawk
+</span><span style="color:#e6db74">EOF</span></code></pre></div></li>
+</ol>
+
+<h4 id="using-the-redhawk-updates-repository">Using the REDHAWK Updates Repository</h4>
+
+<p>After adding the <code>redhawk-updates.repo</code> file, you can update any of the available packages. For example, you can update to the latest version of a package using the <code>yum update &lt;package name&gt;</code> command. Enter the following command to update to the latest version of <code>rh.sinksocket</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum --enablerepo<span style="color:#f92672">=</span>redhawk-updates update rh.sinksocket</code></pre></div>
+<p>Alternatively, you can update to a specific version of a package using the <code>yum install &lt;full rpm name&gt;</code> command. Enter the following commands to update to this specfic version of <code>rh.sinksocket</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum --showduplicates list rh.sinksocket
+sudo yum --enablerepo<span style="color:#f92672">=</span>redhawk-updates install rh.sinksocket-2.1.0.0.rh2.2.el7.x86_64</code></pre></div>
 
     
     
@@ -1450,6 +1605,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/redhawk-yum.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

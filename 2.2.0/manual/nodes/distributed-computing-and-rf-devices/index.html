@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Distributed Computing and RF Devices :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/nodes/distributed-computing-and-rf-devices/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item parent haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option> 
@@ -1345,12 +1374,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1376,14 +1405,15 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Distributed Computing and RF Devices</h1>
+    <h2 class="title">Distributed Computing and RF Devices</h2>
+
     
     
     
@@ -1391,9 +1421,9 @@ ga('send', 'pageview');
 
 <h3 id="dependencies">Dependencies</h3>
 
-<p>A component can be described as <a href="../../../manual/nodes/running-a-node/#creating-a-component-that-consumes-resources">consuming an arbitrary amount of capacity from a device</a>; this relationship is called a <strong>dependency</strong>. Dependencies are generalized, so it is possible to create a dependency based on attributes (properties of kind allocation) of devices irrespective of the specific nature of a device.</p>
+<p>A <a href="../../../manual/glossary/#component">component</a> can be described as <a href="../../../manual/nodes/running-a-node/#creating-a-component-that-consumes-resources">consuming an arbitrary amount of capacity from a device</a>; this relationship is called a <strong>dependency</strong>. Dependencies are generalized, so it is possible to create a dependency based on attributes (<a href="../../../manual/glossary/#property">property</a> of kind allocation) of <a href="../../../manual/glossary/#device">devices</a> irrespective of the specific nature of a device.</p>
 
-<p>A dependency is defined by how much of a particular device resource is required. For example, a component dependency could be a requirement of 1.7 units of device property <strong>some_id</strong>. Testing this description requires the runtime environment to only determine whether a device contains an allocation property with the ID <strong>some_id</strong>; this concept can be generalized to any physical constraint that a device might have, requiring only a convention between the component developer and the device developer regarding a device’s property ID and units, both of which are publicized in a device’s PRF  file (<code>prf.xml</code>).</p>
+<p>A dependency is defined by how much of a particular device resource is required. For example, a component dependency could be a requirement of 1.7 units of device property <strong>some_id</strong>. Testing this description requires the runtime environment to only determine whether a device contains an allocation property with the ID <strong>some_id</strong>; this concept can be generalized to any physical constraint that a device might have, requiring only a convention between the component developer and the device developer regarding a device’s property ID and units, both of which are publicized in a device’s Properties File (PRF)  file (<code>prf.xml</code>).</p>
 
 <h3 id="allocation-properties">Allocation Properties</h3>
 
@@ -1401,7 +1431,7 @@ ga('send', 'pageview');
 
 <h4 id="non-external-properties">Non-External Properties</h4>
 
-<p>Non-external properties are evaluated by the runtime environment without querying the device. For example, a component dependency on an allocation property with operation <strong>eq</strong> might be <em>blue</em>. The runtime environment then checks the device’s PRF file (<code>prf.xml</code>) and the Device Manager’s configuration file for the deployment of that device (<code>dcd.xml</code>) to determine whether that property’s value is equal to <em>blue</em>.</p>
+<p>Non-external properties are evaluated by the runtime environment without querying the device. For example, a component dependency on an allocation property with operation <strong>eq</strong> might be <em>blue</em>. The runtime environment then checks the device’s PRF file (<code>prf.xml</code>) and the <a href="../../../manual/glossary/#device-manager">Device Manager’s</a> configuration file for the deployment of that device (<code>dcd.xml</code>) to determine whether that property’s value is equal to <em>blue</em>.</p>
 
 <h4 id="external-properties">External Properties</h4>
 
@@ -1409,19 +1439,19 @@ ga('send', 'pageview');
 
 <h3 id="allocation-usage">Allocation Usage</h3>
 
-<p>Capacity allocation can be defined at either the component level or the application level. When defining the capacity allocation at a component level, that means that every time this component is deployed, that capacity must be available. When defining the capacity allocation at a application level, that means that every time that this application is deployed, that capacity must be available, irrespective of which components make up the application.</p>
+<p>Capacity allocation can be defined at either the component level or the <a href="../../../manual/glossary/#application">application</a> level. When defining the capacity allocation at a component level, that means that every time this component is deployed, that capacity must be available. When defining the capacity allocation at a application level, that means that every time that this application is deployed, that capacity must be available, irrespective of which components make up the application.</p>
 
-<p>Even though capacity allocation can be used to describe any dependency that a component may have, in reality there are two kinds of capacities that concern REDHAWK: <a href="../../../manual/appendices/acronyms/#rf">RF</a> and computing.</p>
+<p>Even though capacity allocation can be used to describe any dependency that a component may have, in reality there are two kinds of capacities that concern REDHAWK: RF and computing.</p>
 
 <h4 id="rf-allocation">RF Allocation</h4>
 
-<p>The allocation of RF capacities is with properties that are defined as part of the <a href="../../../manual/appendices/fei/">FrontendInterfaces</a>. It generally makes more sense to define the RF capacity allocation at the application level rather than the component level, since the application understands the context for the deployment. However, RF capacity dependencies can be declared at either the component level or the application level.</p>
+<p>Although RF capacity dependencies can be declared at either the component level or the application level, it is recommended that the allocation be defined at the application level because the application understands the context for the deployment. REDHAWK defines RF allocations using the <code>FrontendInterfaces</code> specification. For more information, refer to <a href="../../../manual/appendices/fei/">Frontend Interfaces</a> (FEI).</p>
 
 <h4 id="computing-allocation">Computing Allocation</h4>
 
 <p>Determining capacity for computation is different from determining RF needs. RF needs are fairly straightforward (i.e.: I need to tune to 100 MHz with a 200 kHz bandwidth). Computing resources, on the other hand, can vary substantially. A program (i.e.: a component) consumes different amount of computing resources depending on the nature of the computing platform. Things like L2 cache size and the layout of the processor (from a <a href="../../../manual/glossary/#numa">NUMA</a> perspective) can have a dramatic impact on the computational load a program has on the processor.</p>
 
-<p>Due to the variability intrinsic to computing resources, REDHAWK does not rely on hardcoded estimates for the selection of a computing platform. Instead, <a href="../../../manual/glossary/#gpp">GPP</a> implements a reservation mechanism. When a component is loaded onto the GPP, the GPP reserves an arbitrary, and tunable, amount of resources. GPP tracks the state of the component, and when the component changes state from stopped to started, the reservation is tabled, and GPP inspects the actual usage by the component. When the state of the component changes from started to stopped, the tabled reservation is applied again.</p>
+<p>Due to the variability intrinsic to computing resources, REDHAWK does not rely on hardcoded estimates for the selection of a computing platform. Instead, the <a href="../../../manual/glossary/#gpp">GPP</a> implements a reservation mechanism. When a component is loaded onto the GPP, the GPP reserves an arbitrary, and tunable, amount of resources. GPP tracks the state of the component, and when the component changes state from stopped to started, the reservation is tabled, and GPP inspects the actual usage by the component. When the state of the component changes from started to stopped, the tabled reservation is applied again.</p>
 
 <p>Using this reservation/observation behavior, components can be automatically distributed over an arbitrary number of computers with no planning needed on the part of the user.</p>
 
@@ -1429,13 +1459,13 @@ ga('send', 'pageview');
 
 <h4 id="the-deployment-process">The Deployment Process</h4>
 
-<p>The runtime environment scans all non-busy executable devices registered in the domain to determine which GPP matches the processor/operating system dependency. A device is busy when its state is returned as <strong>BUSY</strong>, otherwise it is either <strong>IDLE</strong> or <strong>ACTIVE</strong>. When a device is found that satisfies all component dependencies, it marks that device as assigned to the deployment of that component and moves on to whatever other components make up the waveform. Once all components have been found an assigned GPP, the components are deployed to all those GPPs.</p>
+<p>The runtime environment scans all non-busy executable devices registered in the <a href="../../../manual/glossary/#domain">domain</a> to determine which GPP matches the processor/operating system dependency. A device is busy when its state is returned as <strong>BUSY</strong>, otherwise it is either <strong>IDLE</strong> or <strong>ACTIVE</strong>. When a device is found that satisfies all component dependencies, it marks that device as assigned to the deployment of that component and moves on to whatever other components make up the <a href="../../../manual/glossary/#waveform">waveform</a>. Once all components have been found an assigned GPP, the components are deployed to all those GPPs.</p>
 
 <h4 id="binding-a-component-s-deployments-to-executable-devices">Binding a Component’s Deployments to Executable Devices</h4>
 
-<p>When deploying Components, you may want to bind a Component’s deployment to a specific Executable Device without going through the allocation process. For more information about binding a Component’s deployment to an Executable Device, refer to . The Node definition file (DCD) provides the necessary <code>deployerrequires</code> id/value pairs to be associated with an Executable Device. These id/value pairs are alphanumeric strings that are matched during a Component’s deployments. If a Component defines a set of <code>devicerrequires</code>, then the Domain is searched for ExecutableDevices that have a matching set. For Components that do not have an id/value set, but request to deploy on an ExecutableDevice with an id/value set, that request for deployment fails.</p>
+<p>When deploying components, you may want to bind a component’s deployment to a specific executable device without going through the allocation process. The <a href="../../../manual/glossary/#node">node</a>&rsquo;s definition file, the Device Configuration Descriptor (DCD), provides the necessary <code>deployerrequires</code> id/value pairs to be associated with an executable device. These id/value pairs are alphanumeric strings that are matched during a component’s deployments. If a component defines a set of <code>devicerrequires</code>, then the domain is searched for an <code>ExecutableDevice</code> that has a matching set. For components that do not have an id/value set, but request to deploy on an <code>ExecutableDevice</code> with an id/value set, that request for deployment fails.</p>
 
-<p>The following example describes the new xml elements <code>deployerrequires</code> that can be assigned to a GPP device (ExecutableDevice):</p>
+<p>The following example describes the new xml elements <code>deployerrequires</code> that can be assigned to a GPP device (<code>ExecutableDevice</code>):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- example of ID/value pairs for a GPP in a DCD file
 </span><span style="color:#75715e">&lt;componentplacement&gt;
 </span><span style="color:#75715e">  &lt;componentfileref refid=&#34;GPP1_SPD_1&#34;/&gt;
@@ -1449,7 +1479,7 @@ ga('send', 'pageview');
 </span><span style="color:#75715e">&lt;/componentplacement&gt;</span></code></pre></div>
 <h4 id="distribution-of-files">Distribution of Files</h4>
 
-<p>All component binaries and descriptor files reside in <code>$SDRROOT/dom</code> on whatever host is running the Domain Manager. In every host that is running a Device Manager, a cache directory is created in <code>$SDRROOT/dev/.&lt;Device Manager name&gt;</code>, with a directory entry for each device that the Device Manager manages. When a component runs on any given device, the binary (or module or <a href="../../../manual/appendices/acronyms/#jar">JAR</a> file) is copied from <code>$SDRROOT/dom</code> to the device’s cache directory. Using this mechanism, the device can start the component process on a remote host.</p>
+<p>All component binaries and descriptor files reside in <code>$SDRROOT/dom</code> on whatever host is running the <a href="../../../manual/glossary/#domain-manager">Domain Manager</a>. In every host that is running a Device Manager, a cache directory is created in <code>$SDRROOT/dev/.&lt;Device Manager name&gt;</code>, with a directory entry for each device that the Device Manager manages. When a component runs on any given device, the binary (or module or JAR file) is copied from <code>$SDRROOT/dom</code> to the device’s cache directory. Using this mechanism, the device can start the component process on a remote host.</p>
 
 <h4 id="dependency-management">Dependency Management</h4>
 
@@ -1476,6 +1506,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/nodes/distributed-computing-and-rf-devices.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Troubleshooting :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/appendices/troubleshooting/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -432,31 +439,38 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/messaging/">Messaging</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/messaging/message-producer/" class="dd-item">
+      <li data-nav-id="/manual/devices/associating-a-waveform/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/messaging/message-producer/">
-            Message Producer
+          <a href="../../../manual/devices/associating-a-waveform/">
+            Associating a Waveform with an FEI Device
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/messaging/message-consumer/" class="dd-item">
+      <li data-nav-id="/manual/devices/running-components/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/messaging/message-consumer/">
-            Message Consumer
+          <a href="../../../manual/devices/running-components/">
+            Using Devices to Run Components
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/messaging/viewing-messages/" class="dd-item">
+      <li data-nav-id="/manual/devices/interface-with-fpgas/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/messaging/viewing-messages/">
-            Viewing Messages
+          <a href="../../../manual/devices/interface-with-fpgas/">
+            Using Devices to Interface with FPGAs
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/messaging/connecting-producers-consumers/" class="dd-item">
+      <li data-nav-id="/manual/devices/fei-data-structures/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/messaging/connecting-producers-consumers/">
-            Connecting Producers and Consumers
+          <a href="../../../manual/devices/fei-data-structures/">
+            Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/devices/misc/" class="dd-item">
+        <div>
+          <a href="../../../manual/devices/misc/">
+            Miscellaneous FrontEnd Tuner Library Implementation Details
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +521,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +542,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +598,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +803,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1010,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1251,35 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item active">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item parent active haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1335,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1354,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1378,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1364,7 +1401,13 @@ ga('send', 'pageview');
       <option value="/manual/appendices/fei/" >-- FrontEnd Interfaces</option>
       <option value="/manual/appendices/persona-device-pattern/" >-- REDHAWK Persona Device Pattern</option>
       <option value="/manual/appendices/shared-memory/" >-- Shared Memory Maintenance</option>
-      <option value="/manual/appendices/troubleshooting/"  selected>-- Troubleshooting</option>
+    <option value="/manual/appendices/troubleshooting/"  selected>
+  -- 
+   Troubleshooting</option> 
+      <option value="/manual/appendices/troubleshooting/installation/" >--- REDHAWK Installation Issues</option>
+      <option value="/manual/appendices/troubleshooting/connections/" >--- Connection Issues</option>
+      <option value="/manual/appendices/troubleshooting/omni/" >--- omniNames and omniEvents Issues</option>
+  
       <option value="/manual/appendices/logging-config-plugin/" >-- Logging Configuration Plugin</option>
       <option value="/manual/appendices/acronyms/" >-- List of Acronyms</option>
   
@@ -1387,142 +1430,27 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Troubleshooting</h1>
+    <h2 class="title">Troubleshooting</h2>
+
     
     
     
-    
 
-<p>This appendix explains how to troubleshoot and resolve <code>omniNames/omniEvents</code> failures.</p>
-
-<h2 id="performing-a-hard-reset-using-the-cleanomni-script">Performing a Hard Reset Using the <code>cleanomni</code> Script</h2>
-
-<p>The <code>cleanomni</code> script is used to perform a hard reset of <code>omniNames</code> and <code>omniEvents</code> and delete the associated log files. To run this script, enter the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo $OSSIEHOME/bin/cleanomni</code></pre></div>
-<p>The <code>cleanomni</code> script performs the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /etc/init.d/omniEvents stop
-sudo /etc/init.d/omniNames stop
-sudo rm -rf /var/log/omniORB/* /var/lib/omniEvents/*
-sudo /etc/init.d/omniNames start
-sudo /etc/init.d/omniEvents start</code></pre></div>
-<h2 id="diagnosing-problems-using-the-rh-net-diag-script">Diagnosing Problems Using the <code>rh_net_diag</code> Script</h2>
-
-<p>The <code>rh_net_diag</code> script is a Python script used to diagnose various omniORB-related problems and to perform other system checks to diagnose potential problems that may impact a REDHAWK installation. To run this script, enter the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rh_net_diag</code></pre></div>
-<p>By default, the <code>--ns</code> (naming service), <code>--dom</code> (Domain Manager), and <code>--dev</code> (Device Manager) options are enabled when the script is executed. These options assume that <code>omniNames</code>, the Domain Manager, and the Device Manager are all running on the host executing the script. For help with <code>rh_net_diag</code>, enable the <code>-h</code> option. For more detailed output, enable the <code>-v</code> option. The four test categories include:</p>
+<p>For information on how to troubleshoot and resolve REDHAWK installation issues, <code>omniNames</code> and <code>omniEvents</code> failures, and connection issues, refer to the following:</p>
 
 <ul>
-<li><p>Standard tests performed every time <code>rh_net_diag</code> is executed.</p>
-
-<ul>
-<li>Check if <code>OSSIEHOME</code>, <code>SDRROOT</code>, and <code>/etc/omniORB.cfg</code> are readable.</li>
-<li>Check that omniORB is installed.</li>
-<li>If <code>/etc/omniORB.cfg</code> is not readable or if omniORB is not installed, the script terminates.</li>
-</ul></li>
-
-<li><p>Tests that diagnose potential problems with the naming service. They are performed if <code>--ns</code> is enabled.</p>
-
-<ul>
-<li>Check if <code>omniNames</code> is running.</li>
-<li>Check if <code>omniEvents</code> is running and if it is running locally. If it is not running at all, refer to <a href="#performing-a-hard-reset-using-the-cleanomni-script">Performing a Hard Reset Using the cleanonmi Script</a>. If it is not running locally, assume it is running on another host.</li>
-<li>Retrieve entries currently stored in the naming service. Refer to <a href="#common-causes-for-omninames-failure">Common Causes for omniNames Failure</a> for further assistance.</li>
-<li>Check <code>/etc/omniORB.cfg</code> to ensure that all defined endPoints are correct.</li>
-<li>If all the above checks pass but the Domain Manager and Device Manager still cannot communicate with the naming service, manually check the firewall settings on the host running <code>omniNames</code>.</li>
-</ul></li>
-
-<li><p>Tests that diagnose potential problems with the Domain Manager. They are performed if <code>--dom</code> is enabled.</p>
-
-<ul>
-<li>Attempt to retrieve entries currently stored in the naming service.</li>
-<li>Check if <code>omniEvents</code> is running and if it is running locally. If it is not running at all, refer to <a href="#performing-a-hard-reset-using-the-cleanomni-script">Performing a Hard Reset Using the cleanonmi Script</a>. If it is not running locally, assume it is running on another host.</li>
-<li>Check <code>/etc/omniORB.cfg</code> to ensure all defined endPoints are correct.</li>
-</ul></li>
-
-<li><p>Tests that diagnose potential problems with the Device Manager. They are performed if <code>--dev</code> is enabled.</p>
-
-<ul>
-<li>Check if <code>InitRef</code> was overwritten with the <code>rh_net_diag</code> script <code>--ORBInitRef</code> option or if we are using the <code>InitRef</code> specified in <code>/etc/omniORB.cfg</code>.</li>
-<li>If <code>InitRef</code> is valid, attempt to retrieve entries currently stored in the naming service. Refer to <a href="#common-causes-for-omninames-failure">Common Causes for omniNames Failure</a> for further assistance.</li>
-<li>Check if <code>omniEvents</code> is running and if it is running locally. If it is not running at all, refer to <a href="#performing-a-hard-reset-using-the-cleanomni-script">Performing a Hard Reset Using the cleanonmi Script</a>. If it is not running locally, assume it is running on another host.</li>
-<li>Try to connect to the Domain Manager if one exists in the naming service.</li>
-<li>Check that the IP address for the host running this script is listed in <code>ifconfig</code>. If there is no matching entry with the Device Manager, then the Java components fail on initialization.</li>
-</ul></li>
+<li><a href="../../../manual/appendices/troubleshooting/installation/">REDHAWK Installation Issues</a></li>
+<li><a href="../../../manual/appendices/troubleshooting/omni/">omniNames and omniEvents Issues</a></li>
+<li><a href="../../../manual/appendices/troubleshooting/connections/">Connection Issues</a></li>
 </ul>
 
-<h2 id="performing-a-soft-reset-of-omninames-and-omnievents">Performing a Soft Reset of omniNames and omniEvents</h2>
-
-<p>If the runtime-error indicates a naming service failure, enter the following command to attempt a soft reset on <code>omniNames</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /sbin/service omniNames restart</code></pre></div>
-<p>This process first performs a stop and then performs a start. If the stop process fails, <code>omniNames</code> was never started, stopped due to an error condition, or is in a non-recoverable state. If the start process fails, <code>omniNames</code> is either misconfigured or already running (i.e., <code>omniNames</code> was not stopped).</p>
-
-<div class="notices note" ><p><code>omniNames</code> can potentially report a successful start and then fail soon after. If the <code>omniNames</code> service appears to fail after reporting a successful start, a reconfiguration and hard reset of <code>omniNames</code> may be necessary. For more information, refer to <a href="#common-causes-for-omninames-failure">Common Failures</a> and <a href="#performing-a-hard-reset-using-the-cleanomni-script">Using <code>cleanomni</code></a>.</p>
-</div>
-
-
-<p>A restart of <code>omniEvents</code> may be necessary when restarting <code>omniNames</code>. To perform a soft reset of <code>omniEvents</code>, enter the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /sbin/service omniEvents restart</code></pre></div>
-<h2 id="setting-omni-log-levels">Setting Omni Log Levels</h2>
-
-<p>When diagnosing <code>omniNames/omniEvents</code> problems, it is often useful to set the omni logging levels. Use the following procedure to set the omni logging levels (requires root permissions):</p>
-
-<ol>
-<li>Open the <code>/etc/omniORB.cfg</code> file.</li>
-<li>Set a traceLevel value. For example:
-<code>bash
-traceLevel = 10
-</code></li>
-</ol>
-
-<p>Details on the available trace levels can be found in Chapter 4 of the omniORB User’s Guide (<a href="http://omniorb.sourceforge.net/omni41/omniORB/omniORB004.html">http://omniorb.sourceforge.net/omni41/omniORB/omniORB004.html</a> or on your local system at <a href="file:///usr/share/doc/omniORB-devel-4.1.6/doc/omniORB/omniORB004.html">file:///usr/share/doc/omniORB-devel-4.1.6/doc/omniORB/omniORB004.html</a>).</p>
-
-<p>For the changes to take effect, restart <code>omniNames/omniEvents</code>.</p>
-
-<p>Log messages are displayed in the terminal and in the files contained in <code>/var/log/omniORB</code> and <code>/var/lib/omniEvents</code>.</p>
-
-<h2 id="common-causes-for-omninames-failure">Common Causes for omniNames Failure</h2>
-
-<h3 id="ip-version-6-conflicts">IP Version 6 Conflicts</h3>
-
-<p>Certain combinations of IP Version 6 (IPv6) configurations and <code>/etc/omniORB.cfg</code> configurations can cause <code>omniNames</code> failures.</p>
-
-<p>Specifically, if the <code>InitRef</code> section of <code>/etc/omniORB.cfg</code> is set to point to <code>localhost</code> rather than pointing explicitly to <code>127.0.0.1</code>, the operating system may resolve <code>localhost</code> to <code>::1</code> (the IPv6 localhost) and not to <code>127.0.0.1</code> (the IPv4 localhost). If this occurs, <code>omniNames</code> fails. There are three options for preventing this failure condition:</p>
-
-<ul>
-<li>Explicitly set <code>127.0.0.1</code> in the <code>InitRef</code> section instead of using <code>localhost</code>.</li>
-<li>Disable IPv6 in the operating system (refer to operating system documentation).</li>
-<li>Modify the <code>/etc/hosts</code> file to prevent <code>localhost</code> from being resolved as <code>::1</code>.</li>
-</ul>
-
-<h4 id="preventing-ipv6-localhost-resolution">Preventing IPv6 <code>localhost</code> Resolution</h4>
-
-<p>Below is an example <code>/etc/hosts</code> file from an older CentOS distribution:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-/etc/hosts" data-lang="/etc/hosts">127.0.0.1   localhost.localdomain     localhost
-::1         localhost6.localdomain6   localhost6</code></pre></div>
-<p>Below is an example <code>/etc/hosts</code> file from a newer CentOS distribution:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-/etc/hosts" data-lang="/etc/hosts">127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1       localhost localhost.localdomain localhost6 localhost6.localdomain6</code></pre></div>
-<p>In the older <code>/etc/hosts file</code>, <code>localhost</code> resolves unambiguously to <code>127.0.0.1</code>. In the newer <code>/etc/hosts</code> file, <code>localhost</code> can resolve to either <code>127.0.0.1</code> or <code>::1</code> (where resolving to <code>::1</code> causes an <code>omniNames</code> failure).</p>
-
-<p>The newer <code>/etc/hosts</code> file can be modified to read:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-/etc/hosts" data-lang="/etc/hosts">127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1       localhost6 localhost6.localdomain6</code></pre></div>
-<p>Alternatively, <code>localhost4</code> can be used in the <code>InitRef</code> section of <code>/etc/omniORB.cfg</code>.</p>
-
-<p>The line pertaining to IPv6 can also be completely removed from the file; however, some operating systems, depending on IPv6 configurations, may automatically repopulate IPv6 localhost settings on reboot.</p>
-
-<h3 id="invalid-ip-addresses-in-etc-hosts">Invalid IP Addresses in <code>/etc/hosts</code></h3>
-
-<p>Invalid entries in the <code>/etc/hosts</code> file may induce an <code>omniNames</code> failure. Invalid entries may be in the form of an IP address that cannot be reached or in the form of an entry that is not valid according to the <code>/etc/hosts</code> grammar.
-<div class="notices note" ><p>Firewall IP and port settings on both the server and client side may cause the target <code>omniNames</code> service to be unreachable.</p>
-</div>
-</p>
 
 
     
@@ -1530,7 +1458,7 @@ traceLevel = 10
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="../../../manual/appendices/shared-memory/" title="Shared Memory Maintenance"> <i class="fa fa-chevron-left"></i><label>Shared Memory Maintenance</label></a>
-    <a class="nav nav-next" href="../../../manual/appendices/logging-config-plugin/" title="Logging Configuration Plugin" style="margin-right: 0px;"><label>Logging Configuration Plugin</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="../../../manual/appendices/troubleshooting/installation/" title="REDHAWK Installation Issues" style="margin-right: 0px;"><label>REDHAWK Installation Issues</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -1545,6 +1473,10 @@ traceLevel = 10
 
   
 
+    <div class="github-link">
+      <a href="manual/appendices/troubleshooting/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

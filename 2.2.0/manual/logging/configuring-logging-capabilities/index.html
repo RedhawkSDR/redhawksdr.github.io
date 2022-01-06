@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Configuring Logger Settings :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/logging/configuring-logging-capabilities/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1340,19 +1369,19 @@ ga('send', 'pageview');
    Logging</option> 
       <option value="/manual/logging/logging-structure/" >-- Logging Structure</option>
       <option value="/manual/logging/configuring-logging-capabilities/"  selected>-- Configuring Logger Settings</option>
-      <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
       <option value="/manual/logging/adjusting-logging-at-runtime/" >-- Adjusting Logging at Runtime</option>
+      <option value="/manual/logging/logging-within-a-resource/" >-- Logging Within A Resource</option>
       <option value="/manual/logging/viewing-logging-events/" >-- Viewing Logging Events</option>
   
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1378,14 +1407,15 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Configuring Logger Settings</h1>
+    <h2 class="title">Configuring Logger Settings</h2>
+
     
     
     
@@ -1398,34 +1428,55 @@ ga('send', 'pageview');
 <p>A log configuration file can be:</p>
 
 <ul>
-<li><p>Passed as a command-line argument when the Domain Manager is started</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nodeBooter -D -logcfgfile logconfiguration.cfg</code></pre></div>
-<div class="notices note" ><p>When passed through the Domain Manager, every component that does not have a logging configuration set will use the domain&rsquo;s logging configuration.</p>
+<li><p>Passed as a command-line argument when the <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> is started</p>
+
+<pre><code>nodeBooter -D -logcfgfile logconfiguration.cfg
+</code></pre>
+
+<div class="notices note" ><p>When passed through the Domain Manager, every <a href="../../../manual/glossary/#component">component</a> that does not have a logging configuration set will use the <a href="../../../manual/glossary/#domain">domain</a>&rsquo;s logging configuration.</p>
 </div>
 </li>
 
-<li><p>Passed as an initialization property when an application is created</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt;&gt; app <span style="color:#f92672">=</span> dom.createApplication<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/waveforms/example/example.sad.xml&#34;</span>, initConfiguration<span style="color:#f92672">={</span><span style="color:#e6db74">&#39;LOGGING_CONFIG_URI&#39;</span>:<span style="color:#e6db74">&#39;file:///home/user/logconfiguration.cfg&#39;</span><span style="color:#f92672">})</span></code></pre></div>
+<li><p>Passed as an initialization <a href="../../../manual/glossary/#property">property</a> when an <a href="../../../manual/glossary/#application">application</a> is created</p>
+
+<pre><code>&gt;&gt;&gt; app = dom.createApplication(&quot;/waveforms/example/example.sad.xml&quot;, initConfiguration={'LOGGING_CONFIG_URI':'file:///home/user/logconfiguration.cfg'})
+</code></pre>
+
 <div class="notices note" ><p>When passed through the <code>createApplication</code> function, the <code>LOGGING_CONFIG_URI</code> is passed to all components in the application.</p>
 </div>
 </li>
 
-<li><p>Added to the component instance in a SAD file</p>
+<li><p>Added to the component instance in a Software Assembly Descriptor (SAD) file</p>
 
-<h5 id="add-logging-configuration-to-a-component">Add Logging Configuration to a Component</h5>
 
-<p><img src="../images/LoggingApp.png" alt="Add Logging Configuration to a Component" /></p></li>
+<figure >
+    
+        <img src="../images/LoggingApp.png" alt="Add Logging Configuration to a Component" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Add Logging Configuration to a Component</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>Passed at runtime through the <a href="../../../manual/logging/adjusting-logging-at-runtime/">logging API</a></p></li>
 </ul>
 
-<p>For devices and services, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.</p>
+<p>For <a href="../../../manual/glossary/#device">devices</a> and <a href="../../../manual/glossary/#service">services</a>, the log configuration URI is resolved using a slightly different set of rules than REDHAWK components.</p>
 
 <ul>
-<li><p>Passed as a command-line argument when the Device Manager is started</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg</code></pre></div></li>
+<li><p>Passed as a command-line argument when the <a href="../../../manual/glossary/#device-manager">Device Manager</a> is started</p>
 
-<li><p>Added to the device <code>componentinstantiation</code> element as element <code>loggingconfig</code> in the DCD file</p></li>
+<pre><code>nodeBooter -d $SDRROOT/dev/nodes/DevMgr_hostname/DeviceManager.dcd.xml -logcfgfile logconfiguration.cfg
+</code></pre></li>
+
+<li><p>Added to the device <code>componentinstantiation</code> element as element <code>loggingconfig</code> in the Device Configuration Descriptor (DCD) file</p></li>
 
 <li><p>Added to a device instance as property <code>LOGGING_CONFIG_URI</code> in the DCD file</p></li>
 </ul>
@@ -1441,10 +1492,13 @@ ga('send', 'pageview');
 <p>If the relative path to the file is provided as a command-line argument to <code>nodeBooter</code>, the file location is converted to an absolute path directory and then passed as a file URI to subsequent processes.</p>
 
 <p>If no log configuration file is provided, the following log configuration is used by default:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,STDOUT
-log4j.appender.STDOUT<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
-log4j.appender.STDOUT.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.STDOUT.layout.ConversionPattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n \n&#34;</span></code></pre></div>
+
+<pre><code>log4j.rootLogger=INFO,STDOUT
+log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
+log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
+log4j.appender.STDOUT.layout.ConversionPattern=&quot;%d{yyyy-MM-dd HH:mm:ss} %-5p %c{3}:%L - %m%n \n&quot;
+</code></pre>
+
 <p>A resource has the ability to provide a severity level (logging level) with each logging message. The following severity levels are listed in order of decreasing severity. <code>FATAL</code> messages describe events that are unrecoverable to the resource through a decreasing level to <code>TRACE</code>, which is used to log fine-grained behavior. Setting a lower severity threshold increases verbosity.</p>
 
 <ul>
@@ -1512,7 +1566,7 @@ log4j.appender.STDOUT.layout.ConversionPattern<span style="color:#f92672">=</spa
 
 <tr>
 <td align="left"><code>@@@DOMAIN.PATH@@@</code></td>
-<td align="left">The contents of the <code>DOM_PATH</code> parameter on the command line.</td>
+<td align="left">The contents of the DOM_PATH parameter on the command line.</td>
 </tr>
 
 <tr>
@@ -1557,12 +1611,12 @@ log4j.appender.STDOUT.layout.ConversionPattern<span style="color:#f92672">=</spa
 
 <tr>
 <td align="left"><code>@@@WAVEFORM.NAME@@@</code></td>
-<td align="left">Name of the waveform from the <code>DOM_PATH</code> command line variable.</td>
+<td align="left">Name of the <a href="../../../manual/glossary/#waveform">waveform</a> from the DOM_PATH command line variable.</td>
 </tr>
 
 <tr>
 <td align="left"><code>@@@WAVEFORM.INSTANCE@@@</code></td>
-<td align="left">Instance name of the waveform from the <code>DOM_PATH</code> command line variable.</td>
+<td align="left">Instance name of the waveform from the DOM_PATH command line variable.</td>
 </tr>
 
 <tr>
@@ -1786,43 +1840,46 @@ log4j.appender.STDOUT.layout.ConversionPattern<span style="color:#f92672">=</spa
 <p>In the following example, the root most logger passes logging messages with a severity level <code>INFO</code> or higher. Those messages are sent to the appenders called: <code>CONSOLE</code> and <code>FILE</code>. The <code>CONSOLE</code> appender messages are displayed in the console of the running application. The <code>FILE</code> appender writes log messages to a file called <code>allmsgs.out</code>.</p>
 
 <p>If the resource uses a named logger, <code>EDET_1.user.detections</code>, then log messages to this logger with a severity of <code>DEBUG</code> or higher are diverted to a file called <code>edet_log.out</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Set root logger default levels and appender
-</span><span style="color:#75715e"></span>log4j.rootLogger<span style="color:#f92672">=</span>INFO, CONSOLE, FILE
 
-<span style="color:#75715e"># Console Appender
-</span><span style="color:#75715e"></span>log4j.appender.CONSOLE<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
-log4j.appender.STDERR<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
-log4j.appender.STDERR.Threshold<span style="color:#f92672">=</span>ERROR
-log4j.appender.STDERR.Target<span style="color:#f92672">=</span>System.err
+<pre><code># Set root logger default levels and appender
+log4j.rootLogger=INFO, CONSOLE, FILE
 
-<span style="color:#75715e"># Default Log Appender
-</span><span style="color:#75715e"></span>log4j.appender.FILE<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
-log4j.appender.FILE.Append<span style="color:#f92672">=</span>true
-log4j.appender.FILE.File<span style="color:#f92672">=</span>allmsgs.out
+# Console Appender
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.STDERR=org.apache.log4j.ConsoleAppender
+log4j.appender.STDERR.Threshold=ERROR
+log4j.appender.STDERR.Target=System.err
 
-<span style="color:#75715e"># Edet Appender
-</span><span style="color:#75715e"></span>log4j.appender.edetLog<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
-log4j.appender.edetLog.Append<span style="color:#f92672">=</span>true
-log4j.appender.edetLog.File<span style="color:#f92672">=</span>edet_log.out
+# Default Log Appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.Append=true
+log4j.appender.FILE.File=allmsgs.out
 
-<span style="color:#75715e"># Appender layout
-</span><span style="color:#75715e"></span>log4j.appender.CONSOLE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.CONSOLE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
-    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
-log4j.appender.STDERR.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.STDERR.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
-    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
-log4j.appender.FILE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
-    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
-log4j.appender.edetLog.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.edetLog.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>:
-    %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n
-log4j.appender.NULL.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.NULL.layout.ConversionPattern<span style="color:#f92672">=</span>%n
+# Edet Appender
+log4j.appender.edetLog=org.apache.log4j.FileAppender
+log4j.appender.edetLog.Append=true
+log4j.appender.edetLog.File=edet_log.out
 
-log4j.category.EDET_1.user.detections<span style="color:#f92672">=</span>DEBUG, edetLog
-log4j.additivity.EDET_1.user.detections<span style="color:#f92672">=</span>false</code></pre></div>
+# Appender layout
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{ISO8601}:
+    %p:%c - %m [%F:%L]%n
+log4j.appender.STDERR.layout=org.apache.log4j.PatternLayout
+log4j.appender.STDERR.layout.ConversionPattern=%d{ISO8601}:
+    %p:%c - %m [%F:%L]%n
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern=%d{ISO8601}:
+    %p:%c - %m [%F:%L]%n
+log4j.appender.edetLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.edetLog.layout.ConversionPattern=%d{ISO8601}:
+    %p:%c - %m [%F:%L]%n
+log4j.appender.NULL.layout=org.apache.log4j.PatternLayout
+log4j.appender.NULL.layout.ConversionPattern=%n
+
+log4j.category.EDET_1.user.detections=DEBUG, edetLog
+log4j.additivity.EDET_1.user.detections=false
+</code></pre>
+
 <h3 id="log-configuration-example-configuring-a-component-with-token-macros">Log Configuration Example - Configuring a Component with Token Macros</h3>
 
 <p>The logging configuration information for component <code>MEGA_WORKER</code> is configured from <code>$SDRROOT/dom/logcfg/component.log4j.cfg</code>. Prior to configuring the underlying logging library, the configuration information is processed for the context macros (in this example, <code>@@@WAVEFORM.NAME@@@</code>, <code>@@@COMPONENT.NAME@@@</code> and <code>@@@COMPONENT.PID@@@</code>). The root most logger passes logging messages with a severity level <code>INFO</code> or higher, to the appenders called: <code>CONSOLE</code> and <code>FILE</code>. The <code>CONSOLE</code> appender messages are displayed in the console of the running application. For the <code>FILE</code> appender, the destination file is: <code>/data/logdir/MY_EXAMPLE_1/MEGA_WORKER_1.212.log</code>.</p>
@@ -1842,24 +1899,27 @@ Component: MEGA_WORKER<br />
  &nbsp;&nbsp;&nbsp;&nbsp;<br />
  &nbsp;&nbsp;&nbsp;&nbsp;<br />
  /data/logdir/</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Set root logger default levels and appender
-</span><span style="color:#75715e"></span>log4j.rootLogger<span style="color:#f92672">=</span>INFO, CONSOLE, FILE
 
-<span style="color:#75715e"># Console Appender
-</span><span style="color:#75715e"></span>log4j.appender.CONSOLE<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
+<pre><code># Set root logger default levels and appender
+log4j.rootLogger=INFO, CONSOLE, FILE
 
-<span style="color:#75715e"># File Appender
-</span><span style="color:#75715e"></span>log4j.appender.FILE<span style="color:#f92672">=</span>org.apache.log4j.FileAppender
-log4j.appender.FILE.File<span style="color:#f92672">=</span>/data/logdir/@@@WAVEFORM.NAME@@@/@@@COMPONENT.NAME@@@.@@@COMPONENT.PID@@@.log
-log4j.appender.FILE.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>ISO8601<span style="color:#f92672">}</span>: %p:%c - %m <span style="color:#f92672">[</span>%F:%L<span style="color:#f92672">]</span>%n</code></pre></div>
+# Console Appender
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+
+# File Appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=/data/logdir/@@@WAVEFORM.NAME@@@/@@@COMPONENT.NAME@@@.@@@COMPONENT.PID@@@.log
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern=%d{ISO8601}: %p:%c - %m [%F:%L]%n
+</code></pre>
+
 <p>When the waveform <code>MY_EXAMPLE</code> is deployed on the domain, the component is launched with the following logging configuration:</p>
 
 <p><code>MEGA_WORKER &quot;.....&quot; LOGGING_CONFIG_URI sca:///logcfg/component.log4j.cfg?fs=IOR:010…</code></p>
 
 <h3 id="logging-with-event-channels-for-components-devices-and-services">Logging with Event Channels for Components, Devices, and Services</h3>
 
-<p>For REDHAWK resources, the underlying logging functionality has been extended to include support for publishing log messages to a specified Event Channel. To include this capability, add the <code>org.ossie.logging.RH_LogEventAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
+<p>For REDHAWK resources, the underlying logging functionality has been extended to include support for publishing log messages to a specified <a href="../../../manual/glossary/#event-channel">event channel</a>. To include this capability, add the <code>org.ossie.logging.RH_LogEventAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
 
 <h5 id="rh-logeventappender-configuration-options">RH_LogEventAppender Configuration Options</h5>
 
@@ -1874,7 +1934,7 @@ log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>
 <tbody>
 <tr>
 <td align="left"><code>EVENT_CHANNEL</code></td>
-<td align="left">Event Channel name where logging messages are published.</td>
+<td align="left">Event channel name where logging messages are published.</td>
 </tr>
 
 <tr>
@@ -1894,7 +1954,7 @@ log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>
 
 <tr>
 <td align="left"><code>RETRIES</code></td>
-<td align="left">Number of times to retry connecting to the Event Channel. (Integer)</td>
+<td align="left">Number of times to retry connecting to the event channel. (Integer)</td>
 </tr>
 
 <tr>
@@ -1904,28 +1964,31 @@ log4j.appender.FILE.layout.ConversionPattern<span style="color:#f92672">=</span>
 </tbody>
 </table>
 
-<p>In the following example, a component configured with this log4j properties file publishes log messages with a severity of <code>ERROR</code> or higher to the Event Channel <code>ERROR_LOG_CHANNEL</code> in the domain <code>REDHAWK_DEV</code>. The threshold level for the appender supersedes the <code>rootLogger</code>’s logging level.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,stdout,pse
+<p>In the following example, a component configured with this log4j properties file publishes log messages with a severity of <code>ERROR</code> or higher to the event channel <code>ERROR_LOG_CHANNEL</code> in the domain <code>REDHAWK_DEV</code>. The threshold level for the appender supersedes the <code>rootLogger</code>’s logging level.</p>
 
-<span style="color:#75715e"># Direct log messages to stdout
-</span><span style="color:#75715e"></span>log4j.appender.stdout<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
-log4j.appender.stdout.Target<span style="color:#f92672">=</span>System.out
-log4j.appender.stdout.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.stdout.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c<span style="color:#f92672">{</span><span style="color:#ae81ff">1</span><span style="color:#f92672">}</span>:%L - %m%n
+<pre><code>log4j.rootLogger=INFO,stdout,pse
 
-<span style="color:#75715e"># Direct error messages to an event channel
-</span><span style="color:#75715e"></span>log4j.appender.pse<span style="color:#f92672">=</span>org.ossie.logging.RH_LogEventAppender
-log4j.appender.pse.Threshold<span style="color:#f92672">=</span>ERROR
-log4j.appender.pse.event_channel<span style="color:#f92672">=</span>ERROR_LOG_CHANNEL
-log4j.appender.pse.name_context<span style="color:#f92672">=</span>@@@DOMAIN.NAME@@@
-log4j.appender.pse.producer_id<span style="color:#f92672">=</span>@@@COMPONENT.INSTANCE@@@
-log4j.appender.pse.producer_name<span style="color:#f92672">=</span>@@@COMPONENT.NAME@@
-log4j.appender.pse.producer_FQN<span style="color:#f92672">=</span>@@@DOMAIN.NAME@@@.@@@WAVEFORM.NAME@@@.@@@COMPONENT.NAME@@@
-log4j.appender.pse.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.pse.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c:%L - %m%n</code></pre></div>
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{3}:%L - %m%n
+
+# Direct error messages to an event channel
+log4j.appender.pse=org.ossie.logging.RH_LogEventAppender
+log4j.appender.pse.Threshold=ERROR
+log4j.appender.pse.event_channel=ERROR_LOG_CHANNEL
+log4j.appender.pse.name_context=@@@DOMAIN.NAME@@@
+log4j.appender.pse.producer_id=@@@COMPONENT.INSTANCE@@@
+log4j.appender.pse.producer_name=@@@COMPONENT.NAME@@
+log4j.appender.pse.producer_FQN=@@@DOMAIN.NAME@@@.@@@WAVEFORM.NAME@@@.@@@COMPONENT.NAME@@@
+log4j.appender.pse.layout=org.apache.log4j.PatternLayout
+log4j.appender.pse.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n
+</code></pre>
+
 <h3 id="synchronous-logging-for-c-devices-and-components">Synchronous Logging for C++ Devices and Components</h3>
 
-<p>In versions of log4cxx older than 0.10.0, logging messages from different sources could be interleaved in the same line when using the default file appender. To deal with this issue, the REDHAWK Core Framework libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the <code>org.ossie.logging.RH_SyncRollingAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
+<p>In versions of log4cxx older than 0.10.0, logging messages from different sources could be interleaved in the same line when using the default file appender. To deal with this issue, the REDHAWK Core Framework (CF) libraries provide a Synchronous Rolling File Appender that will allow atomic write operations to a common file. To include this capability, add the <code>org.ossie.logging.RH_SyncRollingAppender</code> in your log4j configuration file. This appender responds to the following configuration options (all options are string values unless otherwise noted):</p>
 
 <h5 id="rh-syncrollingappender-configuration-options">RH_SyncRollingAppender Configuration Options</h5>
 
@@ -1971,24 +2034,27 @@ log4j.appender.pse.layout.ConversionPattern<span style="color:#f92672">=</span>%
 </table>
 
 <p>In the following example, a component configured with this log4j properties file publishes a log message to the file <code>MP_RedhawkTest</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">log4j.rootLogger<span style="color:#f92672">=</span>INFO,stdout,mp
 
-<span style="color:#75715e"># Direct log messages to stdout
-</span><span style="color:#75715e"></span>log4j.appender.stdout<span style="color:#f92672">=</span>org.apache.log4j.ConsoleAppender
-log4j.appender.stdout.Target<span style="color:#f92672">=</span>System.out
-log4j.appender.stdout.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.stdout.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c<span style="color:#f92672">{</span><span style="color:#ae81ff">1</span><span style="color:#f92672">}</span>:%L - %m%n
+<pre><code>log4j.rootLogger=INFO,stdout,mp
 
-log4j.appender.mp<span style="color:#f92672">=</span>org.ossie.logging.RH_SyncRollingAppender
-log4j.appender.mp.Retries<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
-log4j.appender.mp.WaitOnLock<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
-log4j.appender.mp.MaxFileSize<span style="color:#f92672">=</span>5MB
-log4j.appender.mp.MaxBackupIndex<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
-log4j.appender.mp.File<span style="color:#f92672">=</span>MP_RedhawkTest
-log4j.appender.mp.Cleanup<span style="color:#f92672">=</span>False
-log4j.appender.mp.layout<span style="color:#f92672">=</span>org.apache.log4j.PatternLayout
-log4j.appender.mp.layout.ConversionPattern<span style="color:#f92672">=</span>%d<span style="color:#f92672">{</span>yyyy-MM-dd HH:mm:ss<span style="color:#f92672">}</span> %-5p %c:%L - %m%n</code></pre></div>
-<div class="notices note" ><p>The synchronous appender only works for single GPP systems. The synchronization resources used require all the processes to reside on the same host.</p>
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{3}:%L - %m%n
+
+log4j.appender.mp=org.ossie.logging.RH_SyncRollingAppender
+log4j.appender.mp.Retries=2
+log4j.appender.mp.WaitOnLock=30
+log4j.appender.mp.MaxFileSize=5MB
+log4j.appender.mp.MaxBackupIndex=10
+log4j.appender.mp.File=MP_RedhawkTest
+log4j.appender.mp.Cleanup=False
+log4j.appender.mp.layout=org.apache.log4j.PatternLayout
+log4j.appender.mp.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n
+</code></pre>
+
+<div class="notices note" ><p>The synchronous appender only works for single <a href="../../../manual/glossary/#gpp">GPP</a> systems. The synchronization resources used require all the processes to reside on the same host.</p>
 </div>
 
 
@@ -1998,7 +2064,7 @@ log4j.appender.mp.layout.ConversionPattern<span style="color:#f92672">=</span>%d
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="../../../manual/logging/logging-structure/" title="Logging Structure"> <i class="fa fa-chevron-left"></i><label>Logging Structure</label></a>
-    <a class="nav nav-next" href="../../../manual/logging/logging-within-a-resource/" title="Logging Within A Resource" style="margin-right: 0px;"><label>Logging Within A Resource</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="../../../manual/logging/adjusting-logging-at-runtime/" title="Adjusting Logging at Runtime" style="margin-right: 0px;"><label>Adjusting Logging at Runtime</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -2013,6 +2079,10 @@ log4j.appender.mp.layout.ConversionPattern<span style="color:#f92672">=</span>%d
 
   
 
+    <div class="github-link">
+      <a href="manual/logging/configuring-logging-capabilities.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

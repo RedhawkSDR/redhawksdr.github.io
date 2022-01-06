@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Working with Events :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/component-structure/working-with-events/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -312,10 +312,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -326,10 +326,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -508,6 +515,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -523,7 +536,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -579,12 +592,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1325,12 +1354,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1349,12 +1378,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1380,32 +1409,35 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Working with Events</h1>
+    <h2 class="title">Working with Events</h2>
+
     
     
     
     
 
-<p>In addition to using message event Properties and message Ports, the REDHAWK library enables developers to interface with Event Channels to send and receive non-REDHAWK structured messages using the CORBA Any object. The library provides both Publisher and Subscriber interfaces for sending and receiving data. The libraries make use of existing marshaling and unmarshaling support for simple data types (i.e., int, float, string, etc.), REDHAWK Core Framework event messages, and defined structured messages used by your Component. For custom structured data, it is the developer’s responsibility to implement the marshaling and unmarshaling methods into and out of a CORBA Any or serialize the data structure into string type that can be marshaled. This API is considered an advanced topic to support custom behavior using CORBA’s Event Channels.</p>
+<p>In addition to using <a href="../../../manual/glossary/#message">message</a> event <a href="../../../manual/glossary/#property">properties</a> and message <a href="../../../manual/glossary/#port">ports</a>, the REDHAWK library enables developers to interface with <a href="../../../manual/glossary/#event-channel">event channels</a> to send and receive non-REDHAWK structured messages using the CORBA <code>Any</code> object. The library provides both publisher and subscriber interfaces for sending and receiving data. The libraries make use of existing marshaling and unmarshaling support for simple data types (i.e., <code>int</code>, <code>float</code>, <code>string</code>, etc.), REDHAWK Core Framework (CF) event messages, and defined structured messages used by your <a href="../../../manual/glossary/#component">component</a>. For custom structured data, it is the developer’s responsibility to implement the marshaling and unmarshaling methods into and out of a CORBA <code>Any</code> object or serialize the data structure into <code>string</code> type that can be marshaled. This API is considered an advanced topic to support custom behavior using CORBA’s event channels.</p>
 
 <h3 id="publisher-support">Publisher Support</h3>
 
-<p>To publish data to an Event Channel, the Publisher role provides the following method:</p>
+<p>To publish data to an event channel, the publisher provides the following method:</p>
 
 <ul>
-<li><code>push</code> - Accepts data to forward to an Event Channel. For C++, structured data types require the overload of &ldquo;operator&lt;&lt;=&ldquo;. For Python and Java, structured data should be marshaled into the CORBA Any object.</li>
+<li><code>push</code> - Accepts data to forward to an event channel. For C++, structured data types require the overload of <code>operator&lt;&lt;=</code>. For Python and Java, structured data should be marshaled into the CORBA <code>Any</code> object.</li>
 </ul>
 
-<h4 id="c-example-of-publisher">C++ Example of Publisher</h4>
+<h4 id="c-example-of-a-publisher">C++ Example of a Publisher</h4>
 
-<h5 id="component-h">Component.h</h5>
+<p>This section provides an example of a C++ publisher.</p>
+
+<h5 id="component-h"><code>Component.h</code></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">struct</span> MsgData {
    <span style="color:#66d9ef">int</span> id;
    std<span style="color:#f92672">::</span>string data;
@@ -1416,10 +1448,10 @@ redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::
 <h5 id="component-cpp"><code>Component.cpp</code></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Component<span style="color:#f92672">::</span>constructor {
 
-   <span style="color:#75715e">// get access to the Event Channel Manager
+   <span style="color:#75715e">// get access to the [Event Channel](/manual/glossary/#event-channel) Manager
 </span><span style="color:#75715e"></span>   ecm <span style="color:#f92672">=</span> redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>GetManager( <span style="color:#66d9ef">this</span> );
 
-   <span style="color:#75715e">// request a Publisher object for an Event Channel
+   <span style="color:#75715e">// request a Publisher object for an event channel
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> ( ecm ) {
        pub <span style="color:#f92672">=</span> ecm<span style="color:#f92672">-&gt;</span>Publisher(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>);
    }
@@ -1441,9 +1473,11 @@ Component<span style="color:#f92672">::</span>serviceFunction {
   <span style="color:#75715e">// or simple text based messages
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ( pub )  pub<span style="color:#f92672">-&gt;</span>push( <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;simple message to send&#34;</span> );
 }</code></pre></div>
-<h4 id="python-example-of-publisher">Python Example of Publisher</h4>
+<h4 id="python-example-of-a-publisher">Python Example of a Publisher</h4>
 
-<h5 id="component-py">Component.py</h5>
+<p>This section provides an example of a Python publisher.</p>
+
+<h5 id="component-py"><code>Component.py</code></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> omniORB <span style="color:#f92672">import</span> CORBA, any
 <span style="color:#f92672">from</span> ossie.events <span style="color:#f92672">import</span> Manager
 
@@ -1462,7 +1496,7 @@ Component<span style="color:#f92672">::</span>serviceFunction {
       <span style="color:#75715e"># get access to the Event Channel Manager</span>
       self<span style="color:#f92672">.</span>ecm <span style="color:#f92672">=</span> Manager<span style="color:#f92672">.</span>GetManager( self );
       <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>ecm:
-         <span style="color:#75715e"># request a Publisher object for an Event Channel</span>
+         <span style="color:#75715e"># request a Publisher object for an event channel</span>
          self<span style="color:#f92672">.</span>pub <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>ecm<span style="color:#f92672">.</span>Publisher(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>);
 
   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(self):
@@ -1471,9 +1505,11 @@ Component<span style="color:#f92672">::</span>serviceFunction {
           self<span style="color:#f92672">.</span>pub<span style="color:#f92672">.</span>push( msgdata<span style="color:#f92672">.</span>encode() )
        <span style="color:#f92672">//</span> <span style="color:#f92672">or</span> simple text based messages
        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>pub : self<span style="color:#f92672">.</span>pub<span style="color:#f92672">.</span>push( <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;simple text message&#34;</span>);</code></pre></div>
-<h4 id="java-example-of-publisher">Java Example of Publisher</h4>
+<h4 id="java-example-of-a-publisher">Java Example of a Publisher</h4>
 
-<h5 id="component-java">Component.java</h5>
+<p>This section provides an example of a Java publisher.</p>
+
+<h5 id="component-java"><code>Component.java</code></h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// add required imports
 </span><span style="color:#75715e"></span><span style="color:#f92672">import</span> org.omg.CORBA.ORB<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> org.ossie.events.Manager<span style="color:#f92672">;</span>
@@ -1530,17 +1566,19 @@ Component<span style="color:#f92672">::</span>serviceFunction {
 <span style="color:#f92672">}</span></code></pre></div>
 <h3 id="subscriber-support">Subscriber Support</h3>
 
-<p>The Subscriber role provides two modes (polling vs callback), for receiving data from an Event Channel. Both methods require the developer to unmarshal data from a CORBA Any. For C++, structured data types require the overload of &ldquo;operator&gt;&gt;=&rdquo;. For Python and Java, structured data should be unmarshaled from the CORBA Any object.</p>
+<p>The subscriber provides two modes (polling vs callback), for receiving data from an event channel. Both methods require the developer to unmarshal data from a CORBA <code>Any</code>  object. For C++, structured data types require the overload of <code>operator&gt;&gt;=</code>. For Python and Java, structured data should be unmarshaled from the CORBA <code>Any</code> object.</p>
 
 <ul>
-<li><p><code>getData</code> - (polling) Grab a message from the Event Channel. If no messages are available then return -1. For Python, a CORBA Any is returned or None for no messages available.</p></li>
+<li><p><code>getData</code> - (polling) Grab a message from the event channel. If no messages are available, then return <code>-1</code>. For Python, a CORBA <code>Any</code> object is returned or <code>None</code> is returned if no messages are available.</p></li>
 
-<li><p><code>callback</code> - Provide a callback to the Subscriber object. As data arrives from the Event Channel, this callback is notified.</p></li>
+<li><p><code>callback</code> - Provide a callback to the subscriber object. As data arrives from the event channel, this callback is notified.</p></li>
 </ul>
 
-<h4 id="example-of-c-subscriber-role-using-getdata-method">Example of C++ Subscriber Role Using <code>getData</code> Method</h4>
+<h4 id="example-of-a-c-subscriber-using-the-getdata-method">Example of a C++ Subscriber Using the <code>getData</code> Method</h4>
 
-<h5 id="component-h-polling-example">Component.h Polling Example</h5>
+<p>The following is an example of a C++ subscriber using the <code>getData</code> method.</p>
+
+<h5 id="component-h-polling-example"><code>Component.h</code> Polling Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>ManagerPtr    ecm;
 redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>SubscriberPtr sub;
 
@@ -1548,7 +1586,7 @@ redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::
    <span style="color:#66d9ef">int</span> id;
    std<span style="color:#f92672">::</span>string data;
 };</code></pre></div>
-<h5 id="component-cpp-polling-example">Component.cpp Polling Example</h5>
+<h5 id="component-cpp-polling-example"><code>Component.cpp</code> Polling Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// required to unmarshall data from the CORBA::Any
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&gt;&gt;=</span>( <span style="color:#66d9ef">const</span> CORBA<span style="color:#f92672">::</span>Any <span style="color:#f92672">&amp;</span>any, <span style="color:#66d9ef">const</span> MsgData <span style="color:#f92672">*&amp;</span>msg ) {
    <span style="color:#75715e">//unmarshall Any into MsgData
@@ -1558,7 +1596,7 @@ Component<span style="color:#f92672">::</span>constructor {
    <span style="color:#75715e">// get access to the Event Channel Manager
 </span><span style="color:#75715e"></span>   ecm <span style="color:#f92672">=</span> redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>GetManager( <span style="color:#66d9ef">this</span> );
 
-   <span style="color:#75715e">// request a Subscriber object for an Event Channel
+   <span style="color:#75715e">// request a Subscriber object for an event channel
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> ( ecm ) {
       sub <span style="color:#f92672">=</span> ecm<span style="color:#f92672">-&gt;</span>Subscriber(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>);
    }
@@ -1570,9 +1608,11 @@ Component<span style="color:#f92672">::</span>serviceFunction {
   RH_NL_INFO(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;mylogger&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Received msg =&#34;</span> <span style="color:#f92672">&lt;&lt;</span> msgin.id);
  }
 }</code></pre></div>
-<h4 id="example-of-c-subscriber-role-using-callback-method">Example of C++ Subscriber Role Using <code>callback</code> Method</h4>
+<h4 id="example-of-a-c-subscriber-using-the-callback-method">Example of a C++ Subscriber Using the <code>callback</code> Method</h4>
 
-<h5 id="component-h-callback-example">Component.h Callback Example</h5>
+<p>The following is an example of a C++ subscriber using the <code>callback</code> method.</p>
+
+<h5 id="component-h-callback-example"><code>Component.h</code> Callback Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>ManagerPtr    ecm;
 redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>SubscriberPtr sub;
 
@@ -1582,7 +1622,7 @@ redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::
 };
 
 <span style="color:#66d9ef">void</span>  <span style="color:#a6e22e">my_msg_cb</span>( <span style="color:#66d9ef">const</span> CORBA<span style="color:#f92672">::</span>Any <span style="color:#f92672">&amp;</span>data );</code></pre></div>
-<h5 id="component-cpp-callback-example">Component.cpp Callback Example</h5>
+<h5 id="component-cpp-callback-example"><code>Component.cpp</code> Callback Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// required to unmarshall data from the CORBA::Any
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&gt;&gt;=</span>( <span style="color:#66d9ef">const</span> CORBA<span style="color:#f92672">::</span>Any <span style="color:#f92672">&amp;</span>any, <span style="color:#66d9ef">const</span> MsgData <span style="color:#f92672">*&amp;</span>msg ) {
    <span style="color:#75715e">//unmarshall Any into MsgData
@@ -1600,15 +1640,17 @@ Component<span style="color:#f92672">::</span>constructor {
    <span style="color:#75715e">// get access to the Event Channel Manager
 </span><span style="color:#75715e"></span>   ecm <span style="color:#f92672">=</span> redhawk<span style="color:#f92672">::</span>events<span style="color:#f92672">::</span>GetManager( <span style="color:#66d9ef">this</span> );
 
-   <span style="color:#75715e">// request a Subscriber object for an Event Channel
+   <span style="color:#75715e">// request a Subscriber object for an event channel
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> ( ecm ) {
       sub <span style="color:#f92672">=</span> ecm<span style="color:#f92672">-&gt;</span>Subscriber(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>);
       sub<span style="color:#f92672">-&gt;</span>setDataArrivedListener( <span style="color:#66d9ef">this</span> , <span style="color:#f92672">&amp;</span>Component<span style="color:#f92672">::</span>my_msg_cb );
    }
 }</code></pre></div>
-<h4 id="example-of-python-subscriber-role-using-getdata-method">Example of Python Subscriber Role Using <code>getData</code> Method</h4>
+<h4 id="example-of-a-python-subscriber-using-the-getdata-method">Example of a Python Subscriber Using the <code>getData</code> Method</h4>
 
-<h5 id="component-py-polling-example">Component.py Polling Example</h5>
+<p>The following is an example of a Python subscriber using the <code>getData</code> method.</p>
+
+<h5 id="component-py-polling-example"><code>Component.py</code> Polling Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> ossie.events <span style="color:#f92672">import</span> Manager
 <span style="color:#f92672">from</span> omniORB <span style="color:#f92672">import</span> CORBA, any
 
@@ -1621,7 +1663,7 @@ Component<span style="color:#f92672">::</span>constructor {
         <span style="color:#75715e"># get access to the Event Channel Manager</span>
         self<span style="color:#f92672">.</span>ecm <span style="color:#f92672">=</span> Manager<span style="color:#f92672">.</span>GetManager( self )
         <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>ecm:
-            <span style="color:#75715e"># request a Subscriber object for an Event Channel</span>
+            <span style="color:#75715e"># request a Subscriber object for an event channel</span>
             self<span style="color:#f92672">.</span>sub <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>ecm<span style="color:#f92672">.</span>Subscriber(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>)
 
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decodeMsg</span>(self, raw ):
@@ -1638,9 +1680,11 @@ Component<span style="color:#f92672">::</span>constructor {
             <span style="color:#66d9ef">if</span> raw:
                 msgin <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>decodeMsg(raw)
                 self<span style="color:#f92672">.</span>_log<span style="color:#f92672">.</span>info(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Received message  = &#34;</span> <span style="color:#f92672">+</span>str(msgin<span style="color:#f92672">.</span>id))</code></pre></div>
-<h4 id="example-of-python-subscriber-role-using-callback-method">Example of Python Subscriber Role Using <code>callback</code> Method</h4>
+<h4 id="example-of-a-python-subscriber-using-the-callback-method">Example of a Python Subscriber Using the <code>callback</code> Method</h4>
 
-<h5 id="component-py-callback-example">Component.py Callback Example</h5>
+<p>The following is an example of a Python subscriber using the <code>callback</code> method.</p>
+
+<h5 id="component-py-callback-example"><code>Component.py</code> Callback Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># Callback snippet example, define in Component.py</span>
 <span style="color:#f92672">from</span> ossie.events <span style="color:#f92672">import</span> Manager
 <span style="color:#f92672">from</span> omniORB <span style="color:#f92672">import</span> CORBA, any
@@ -1664,12 +1708,14 @@ Component<span style="color:#f92672">::</span>constructor {
         <span style="color:#75715e"># get access to the Event Channel Manager</span>
         self<span style="color:#f92672">.</span>ecm <span style="color:#f92672">=</span> Manager<span style="color:#f92672">.</span>GetManager( self );
         <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>ecm:
-            <span style="color:#75715e"># request a Subscriber object for an Event Channel</span>
+            <span style="color:#75715e"># request a Subscriber object for an event channel</span>
             self<span style="color:#f92672">.</span>sub <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>ecm<span style="color:#f92672">.</span>Subscriber(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;test1&#34;</span>)
             self<span style="color:#f92672">.</span>sub<span style="color:#f92672">.</span>setDataArrivedCB( self<span style="color:#f92672">.</span>msg_cb )</code></pre></div>
-<h4 id="example-of-java-subscriber-role-using-getdata-method">Example of Java Subscriber Role Using <code>getData</code> Method</h4>
+<h4 id="example-of-a-java-subscriber-using-the-getdata-method">Example of a Java Subscriber Using the <code>getData</code> Method</h4>
 
-<h5 id="component-java-polling-example">Component.java Polling Example</h5>
+<p>The following is an example of a Java subscriber using the <code>getData</code> method.</p>
+
+<h5 id="component-java-polling-example"><code>Component.java</code> Polling Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">// add required imports
 </span><span style="color:#75715e"></span>  <span style="color:#f92672">import</span> org.omg.CORBA.Any<span style="color:#f92672">;</span>
   <span style="color:#f92672">import</span> org.omg.CORBA.ORB<span style="color:#f92672">;</span>
@@ -1720,9 +1766,11 @@ Component<span style="color:#f92672">::</span>constructor {
      <span style="color:#f92672">}</span>
 
     <span style="color:#f92672">}</span></code></pre></div>
-<h4 id="example-of-java-subscriber-role-using-callback-method">Example of Java Subscriber Role Using <code>callback</code> Method</h4>
+<h4 id="example-of-a-java-subscriber-using-the-callback-method">Example of a Java Subscriber Using the <code>callback</code> Method</h4>
 
-<h5 id="component-java-callback-example">Component.java Callback Example</h5>
+<p>The following is an example of a Java subscriber using the <code>callback</code> method.</p>
+
+<h5 id="component-java-callback-example"><code>Component.java</code> Callback Example</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// add required imports
 </span><span style="color:#75715e"></span><span style="color:#f92672">import</span> org.omg.CORBA.Any<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> org.omg.CORBA.ORB<span style="color:#f92672">;</span>
@@ -1740,7 +1788,7 @@ Component<span style="color:#f92672">::</span>constructor {
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MsgArrived</span>  <span style="color:#66d9ef">implements</span> DataArrivedListener <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> Component parent<span style="color:#f92672">=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#f92672">[</span>Component<span style="color:#f92672">](</span><span style="color:#f92672">)</span> parent<span style="color:#f92672">=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MsgArrived</span> <span style="color:#f92672">(</span> Component inParent <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
        parent <span style="color:#f92672">=</span> inParent<span style="color:#f92672">;</span>
@@ -1795,6 +1843,10 @@ Component<span style="color:#f92672">::</span>constructor {
 
   
 
+    <div class="github-link">
+      <a href="manual/component-structure/working-with-events.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

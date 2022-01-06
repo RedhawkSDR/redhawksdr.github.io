@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Snapshot Tool :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/snapshot-tool/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1356,12 +1385,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1387,49 +1416,72 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Snapshot Tool</h1>
-    
-    
-    
-    
+    <h2 class="title">Snapshot Tool</h2>
 
-<p>The Snapshot Tool enables users to save data from any BulkIO port to a file. The following procedure explains how to use the Snapshot Tool.</p>
+    
+    
+    
+    <p>The Snapshot Tool enables users to save data from any Bulk Input/Output (BulkIO) <a href="../../../manual/glossary/#port">port</a> to a file. The following procedure explains how to use the Snapshot Tool.</p>
 
 <ol>
-<li><p>To open the <strong>Snapshot Wizard</strong>, right-click an output port in the Chalkboard or the REDHAWK Explorer and select <strong>Snapshot</strong> from the context menu:</p>
+<li><p>To open the <strong>Snapshot Wizard</strong>, right-click an output port in the Chalkboard or the <a href="../../../manual/glossary/#redhawk-explorer">REDHAWK Explorer</a> and select <strong>Snapshot</strong> from the context menu:
 
-<h5 id="output-port-context-menu">Output Port Context Menu</h5>
+<figure >
+    
+        <img src="../images/snapshotContextMenu.png" alt="The Output Port Context Menu" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Output Port Context Menu</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/snapshotContextMenu.png" alt="The Output Port Context Menu" /></p>
 
-<p>The <strong>Snapshot Wizard</strong> is displayed:</p>
 
-<h5 id="snapshot-wizard">Snapshot Wizard</h5>
+</p>
 
-<p><img src="../images/snapshotWizard.png" alt="The Snapshot Wizard" /></p></li>
+<p>The <strong>Snapshot Wizard</strong> is displayed:
+
+<figure >
+    
+        <img src="../images/snapshotWizard.png" alt="The Snapshot Wizard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot Wizard</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>To specify how much data is captured, select the capture mode from the first combo box. The following capture modes are supported:</p>
 
 <ul>
 <li><strong>Number of Samples</strong>: Collects the number of samples specified by the text field to the right.</li>
-<li><strong>Indefinitely</strong>: Collects samples until the user stops the snapshot or an end of stream occurs.</li>
+<li><strong>Indefinitely</strong>: Collects samples until the user stops the snapshot or an End of Stream (EOS) occurs.</li>
 <li><strong>Clock Time</strong>: Collects samples for a set period of time in real time set by the text field to the right (in seconds).</li>
 <li><strong>Sample Time</strong>: Collects samples for a period of time as specified by the delta and number of samples (time = delta * number of samples), set in the text field to the right.</li>
 </ul></li>
 
 <li><p>Optionally, enter a custom Connection ID in the <strong>Connection ID (Optional)</strong> field.</p></li>
 
-<li><p>To specify the the file type to use when saving data, select a file type from the <strong>File Type</strong> combo box. The supported file types include:</p>
+<li><p>To specify the file type to use when saving data, select a file type from the <strong>File Type</strong> combo box. The supported file types include:</p>
 
 <ul>
-<li><strong>Binary files (.bin &amp; .SRI)</strong>: Saves data from the port to a <code>.bin</code> file and saves the metadata (SRI, start time, end time, data type, and number of samples) to an <code>.SRI</code> file.</li>
+<li><strong>Binary files (.bin &amp; .SRI)</strong>: Saves data from the port to a <code>.bin</code> file and saves the metadata (Signal Related Information (SRI), start time, end time, data type, and number of samples) to an <code>.SRI</code> file.</li>
 <li><strong>Binary files (.bin &amp; .xml)</strong>: Saves data from the port to a <code>.bin</code> file and saves the metadata (SRI, start time, end time, data type, and number of samples) to an <code>.xml</code> file.</li>
 <li><strong>Midas BLUE File (.tmp)</strong>: Saves output data and metadata to a BLUE <code>.tmp</code> file.</li>
 </ul></li>
@@ -1437,19 +1489,43 @@ ga('send', 'pageview');
 <li><p>To specify where to save the file, you have two options.</p>
 
 <ul>
-<li>To save the file to a location other than the workspace, deselect the <strong>Save to Workspace</strong> checkbox, click <strong>Browse</strong>, navigate to the desired location, and click <strong>OK</strong>.</li>
+<li>To save the file to a location other than the <a href="../../../manual/glossary/#workspace">workspace</a>, deselect the <strong>Save to Workspace</strong> checkbox, click <strong>Browse</strong>, navigate to the desired location, and click <strong>OK</strong>.</li>
 
-<li><p>To save the file in the workspace, select the <strong>Save to Workspace</strong> checkbox and select the file or directory in the displayed tree of workspace files and folders. Saving the file in the workspace automatically refreshes the project, and the files can be accessed in the IDE.</p>
+<li><p>To save the file in the workspace, select the <strong>Save to Workspace</strong> checkbox and select the file or directory in the displayed tree of workspace files and folders. Saving the file in the workspace automatically refreshes the project, and the files can be accessed in the IDE.
 
-<h5 id="snapshot-save-to-workspace-navigation-tree">Snapshot Save to Workspace Navigation Tree</h5>
+<figure >
+    
+        <img src="../images/snapshotWizard5.png" alt="The Snapshot Save to Workspace Navigation Tree" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot Save to Workspace Navigation Tree</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/snapshotWizard5.png" alt="The Snapshot Save to Workspace Navigation Tree" /></p>
 
-<p>To add folders to the workspace, right-click the existing folder where the new folder is desired. A <strong>New Folder</strong> window is displayed. Enter the name of the folder and click <strong>Finish</strong>.</p>
 
-<h5 id="snapshot-new-folder-window">Snapshot New Folder Window</h5>
+</p>
 
-<p><img src="../images/newFolder.png" alt="The Snapshot New Folder Window" /></p>
+<p>To add folders to the workspace, right-click the existing folder where the new folder is desired. A <strong>New Folder</strong> window is displayed. Enter the name of the folder and click <strong>Finish</strong>.
+
+<figure >
+    
+        <img src="../images/newFolder.png" alt="The Snapshot New Folder Window" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot New Folder Window</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
 
 <p>To delete files from the workspace, right-click the item you want to delete and select <strong>Delete</strong>. When prompted, verify the deletion request.</p></li>
 </ul></li>
@@ -1458,23 +1534,60 @@ ga('send', 'pageview');
 
 <li><p>Click <strong>Finish</strong>.</p>
 
-<p>The progress view is displayed. To stop a snapshot prematurely, click <strong>Cancel Operation</strong> (the red square icon) next to the job in the progress view.</p>
+<p>The Progress view is displayed. To stop a snapshot prematurely, click <strong>Cancel Operation</strong> (the red square icon) next to the job in the Progress view.
 
-<h5 id="snapshot-progress-view">Snapshot - Progress View</h5>
+<figure >
+    
+        <img src="../images/progressView.png" alt="Snapshot - Progress View" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot - Progress View</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/progressView.png" alt="Snapshot - Progress View" /></p>
 
-<p>When the snapshot completes, the completed job is shown in the progress view:</p>
 
-<h5 id="snapshot-completed-job">Snapshot - Completed Job</h5>
+</p>
 
-<p><img src="../images/progressViewDone.png" alt="Snapshot - Completed Job" /></p></li>
+<p>When the snapshot completes, the completed job is shown in the Progress view:</p>
 
-<li><p>To view the results of the snapshot, click <strong>Finished</strong>. The following output message is displayed:</p>
 
-<h5 id="snapshot-results-dialog">Snapshot - Results Dialog</h5>
+<figure >
+    
+        <img src="../images/progressViewDone.png" alt="Snapshot - Completed Job" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot - Completed Job</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/results.png" alt="Snapshot - Results Dialog" /></p>
+
+
+</li>
+
+<li><p>To view the results of the snapshot, click <strong>Finished</strong>. The following output message is displayed:
+
+<figure >
+    
+        <img src="../images/results.png" alt="Snapshot - Results Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Snapshot - Results Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p>
 
 <p>If only a few files are written, then the output message lists all the files created by the snapshot. If a large number of files are written, the output message lists the base name of the files and the number of each type of file made.</p></li>
 
@@ -1502,6 +1615,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/snapshot-tool.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

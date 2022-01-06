@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Working with Waveforms on a Running Domain :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/exploring-domain/working-with-waveforms/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -996,16 +1003,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item parent haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1341,12 +1370,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option> 
@@ -1379,37 +1408,62 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Working with Waveforms on a Running Domain</h1>
+    <h2 class="title">Working with Waveforms on a Running Domain</h2>
+
     
     
     
     
 
-<p>If you have a running Domain Manager and Device Manager, you may create and work with <a href="../../../manual/waveforms/">waveforms</a>.  You can launch the waveform on the domain, launch additional components into the running waveform, stop the running waveform, and release the waveform from the domain.</p>
+<p>If you have a running <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> and <a href="../../../manual/glossary/#device-manager">Device Manager</a>, you may create and work with <a href="../../../manual/waveforms/">waveforms</a>.  You can launch the waveform on the <a href="../../../manual/glossary/#domain">domain</a>, launch additional <a href="../../../manual/glossary/#component">components</a> into the running waveform, stop the running waveform, and release the waveform from the domain.</p>
 
 <h3 id="launching-a-waveform">Launching a Waveform</h3>
 
 <p>To launch a waveform:</p>
 
 <ol>
-<li><p>Right-click the domain and from the domain context menu, select <strong>Launch Waveform…</strong>:</p>
+<li><p>Right-click the domain and from the domain context menu, select <strong>Launch Waveform…</strong>:
 
-<h5 id="domain-context-menu">Domain Context Menu</h5>
+<figure >
+    
+        <img src="../images/DomainContextMenu.png" alt="Domain context menu" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Domain Context Menu</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/DomainContextMenu.png" alt="Domain context menu" /></p>
 
-<p>The <strong>Launch Waveform</strong> wizard is displayed:</p>
 
-<h5 id="launch-waveform-wizard">Launch Waveform Wizard</h5>
+</p>
 
-<p><img src="../images/REDHAWK_Launch_Waveform_p1.png" alt="Launch Waveform wizard" /></p></li>
+<p>The <strong>Launch Waveform</strong> wizard is displayed:
+
+<figure >
+    
+        <img src="../images/REDHAWK_Launch_Waveform_p1.png" alt="Launch Waveform wizard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Launch Waveform Wizard</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>On the <strong>Select a Waveform</strong> page of the <strong>Launch Waveform</strong> wizard, perform the following procedure:</p>
 
@@ -1421,41 +1475,89 @@ ga('send', 'pageview');
 <li><p>Click <strong>Next</strong>.</p></li>
 </ol>
 
-<p>The <strong>Assign Initial Properties</strong> page is displayed.</p>
+<p>The <strong>Assign Initial Properties</strong> page is displayed.
 
-<h5 id="assign-initial-properties">Assign Initial Properties</h5>
+<figure >
+    
+        <img src="../images/assignproperties.png" alt="Assign Initial Properties page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assign Initial Properties Page</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/assignproperties.png" alt="Assign Initial Properties page" /></p></li>
 
-<li><p>On the <strong>Assign Initial Properties</strong> page, set the properties of the components within the waveform. Any property modified here is specific to this waveform and does not impact the component‘s execution in other environments. As the properties are changed from their default values, the now non-default values appear in bold as shown below:</p>
 
-<h5 id="application-properties-non-default">Application Properties: Non-Default</h5>
+</p></li>
 
-<p><img src="../images/REDHAWK_Launch_Waveform_p2b.png" alt="Application Properties turn bold when non-default values are set" /></p>
+<li><p>On the <strong>Assign Initial Properties</strong> page, set the <a href="../../../manual/glossary/#property">properties</a> of the components within the waveform. Any property modified here is specific to this waveform and does not impact the component‘s execution in other environments. As the properties are changed from their default values, the now non-default values appear in bold as shown below:
 
-<p>When you are finished assigning properties, click <strong>Next</strong>. The <strong>Assign Components to Devices</strong> page is displayed:</p>
+<figure >
+    
+        <img src="../images/REDHAWK_Launch_Waveform_p2b.png" alt="Application Properties turn bold when non-default values are set" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assign Initial Properties Page: Non-Default</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="assign-components-to-devices">Assign Components to Devices</h5>
 
-<p><img src="../images/assigncomps.png" alt="Assign Components to Devices page" /></p></li>
 
-<li><p>The <strong>Assign Components to Devices</strong> page enables you to specify what executable device on which each of the components launches. If the device setting is <strong>Auto</strong>, REDHAWK determines the executable device based on any allocation properties and dependencies set on the components and devices.</p></li>
+</p>
+
+<p>When you are finished assigning properties, click <strong>Next</strong>. The <strong>Assign Components to Devices</strong> page is displayed:
+
+<figure >
+    
+        <img src="../images/assigncomps.png" alt="Assign Components to Devices page" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assign Components to Devices Page</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
+
+<li><p>The <strong>Assign Components to Devices</strong> page enables you to specify what executable <a href="../../../manual/glossary/#device">device</a> on which each of the components launches. If the device setting is <strong>Auto</strong>, REDHAWK determines the executable device based on any allocation properties and dependencies set on the components and devices.</p></li>
 
 <li><p>To launch the waveform, click <strong>Finish</strong>.</p>
 
-<div class="notices tip" ><p>In the REDHAWK Explorer View, the Domain Manager now displays the launched waveform within the <strong>Waveforms</strong> folder.</p>
+<div class="notices tip" ><p>In the <a href="../../../manual/glossary/#redhawk-explorer-view">REDHAWK Explorer view</a>, the Domain Manager now displays the launched waveform within the <strong>Waveforms</strong> folder.</p>
 </div>
 
 
-<div class="notices note" ><p>If you did not select the <strong>Start the waveform after launching</strong> checkbox, the waveform has not been started. To start the waveform, in the <strong>REDHAWK Explorer View</strong>, right-click the waveform from the domain’s waveforms folder and select <strong>Start</strong>.</p>
+<div class="notices note" ><p>If you did not select the <strong>Start the waveform after launching</strong> checkbox, the waveform has not been started. To start the waveform, in the REDHAWK Explorer view, right-click the waveform from the domain’s waveforms folder and select <strong>Start</strong>.</p>
 </div>
 
 
-<p>Once the waveform is started, the <strong>REDHAWK Explorer View</strong> indicates that the waveform and components within the waveform are in the started state by displaying <strong>STARTED</strong> next to the waveform’s instance and the instance of each component:</p>
+<p>Once the waveform is started, the REDHAWK Explorer view indicates that the waveform and components within the waveform are in the started state by displaying <strong>STARTED</strong> next to the waveform’s instance and the instance of each component:
 
-<h5 id="started-waveform">Started Waveform</h5>
+<figure >
+    
+        <img src="../images/startedwave.png" alt="Started Waveform" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Started Waveform</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/startedwave.png" alt="Started Waveform" /></p></li>
+
+
+</p></li>
 </ol>
 
 <h3 id="launching-additional-components-into-a-running-waveform">Launching Additional Components into a Running Waveform</h3>
@@ -1463,17 +1565,41 @@ ga('send', 'pageview');
 <p>Once a waveform has been started, additional components may be launched into the running waveform. These additional components run on the local machine and not on the domain.</p>
 
 <ol>
-<li><p>In the <strong>REDHAWK Explorer View</strong>, right-click the waveform and select <strong>Open With &gt; Chalkboard</strong>:</p>
+<li><p>In the REDHAWK Explorer view, right-click the waveform and select <strong>Open With &gt; Chalkboard</strong>:
 
-<h5 id="opening-a-running-waveform-in-the-chalkboard">Opening a Running Waveform in the Chalkboard</h5>
+<figure >
+    
+        <img src="../images/runninglaunch.png" alt="Opening a running Waveform in the Chalkboard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Opening a Running Waveform in the Chalkboard</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/runninglaunch.png" alt="Opening a running Waveform in the Chalkboard" /></p>
 
-<p>This displays the running waveform in the Chalkboard:</p>
 
-<h5 id="running-waveform-in-the-chalkboard">Running Waveform in the Chalkboard</h5>
+</p>
 
-<p><img src="../images/runningchalk.png" alt="Running Waveform in the Chalkboard" /></p></li>
+<p>This displays the running waveform in the Chalkboard:
+
+<figure >
+    
+        <img src="../images/runningchalk.png" alt="Running Waveform in the Chalkboard" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Running Waveform in the Chalkboard</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</p></li>
 
 <li><p>From the Palette, add additional components to the waveform.</p>
 
@@ -1484,19 +1610,43 @@ ga('send', 'pageview');
 
 <h3 id="stopping-a-waveform">Stopping a Waveform</h3>
 
-<p>To stop a running waveform but keep it on the domain, in the <strong>REDHAWK Explorer View</strong>, right-click the running waveform and select <strong>Stop</strong> from the context menu:</p>
+<p>To stop a running waveform but keep it on the domain, in the REDHAWK Explorer view, right-click the running waveform and select <strong>Stop</strong> from the context menu:
 
-<h5 id="stopping-a-waveform-1">Stopping a Waveform</h5>
+<figure >
+    
+        <img src="../images/stopwave.png" alt="Stopping a Waveform" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Stopping a Waveform</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/stopwave.png" alt="Stopping a Waveform" /></p>
+
+
+</p>
 
 <h3 id="releasing-a-waveform">Releasing a Waveform</h3>
 
-<p>To stop a running waveform and release it from the domain, in the <strong>REDHAWK Explorer View</strong>, right-click the running waveform and select <strong>Release</strong> from the context menu:</p>
+<p>To stop a running waveform and release it from the domain, in the REDHAWK Explorer view, right-click the running waveform and select <strong>Release</strong> from the context menu:
 
-<h5 id="releasing-a-waveform-1">Releasing a Waveform</h5>
+<figure >
+    
+        <img src="../images/releasewave.png" alt="Releasing a Waveform" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Releasing a Waveform</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../images/releasewave.png" alt="Releasing a Waveform" /></p>
+
+
+</p>
 
 <div class="notices tip" ><p>It is not necessary to select <strong>Stop</strong> prior to releasing the waveform. The IDE stops the waveform before releasing it.</p>
 </div>
@@ -1523,6 +1673,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/exploring-domain/working-with-waveforms.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

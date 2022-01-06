@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Waveform Deployment and Computing Resources :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/waveforms/deployment-resources/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -508,6 +515,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -523,7 +536,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -579,12 +592,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1321,12 +1350,12 @@ ga('send', 'pageview');
       <option value="/manual/waveforms/sample-waveform/" >-- Create and Deploy a Sample Waveform</option>
       <option value="/manual/waveforms/deployment-resources/"  selected>-- Waveform Deployment and Computing Resources</option>
   
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1345,12 +1374,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1376,24 +1405,25 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Waveform Deployment and Computing Resources</h1>
+    <h2 class="title">Waveform Deployment and Computing Resources</h2>
+
     
     
     
     
 
-<p>Components are processes that run on a computer. As such, each component takes up some arbitrary, often time-varying amount of spare capacity (for example, CPU computing load, memory, network I/O). REDHAWK manages computing resources on every computer under its domain to minimize the likelihood that computing resources are over-subscribed. Each computer under REDHAWK’s domain is managed through the GPP process.</p>
+<p><a href="../../../manual/glossary/#component">Components</a> are processes that run on a computer. As such, each component takes up some arbitrary, often time-varying amount of spare capacity (for example, CPU computing load, memory, network I/O). REDHAWK manages computing resources on every computer under its <a href="../../../manual/glossary/#domain">domain</a> to minimize the likelihood that computing resources are over-subscribed. Each computer under REDHAWK’s domain is managed through the <a href="../../../manual/glossary/#gpp">GPP</a> process.</p>
 
 <h3 id="gpp-device">GPP Device</h3>
 
-<p>The GPP device is a specialized REDHAWK device that manages the deployment of components onto the computer and can be inspected like any other REDHAWK device.</p>
+<p>The GPP <a href="../../../manual/glossary/#device">device</a> is a specialized REDHAWK device that manages the deployment of components onto the computer and can be inspected like any other REDHAWK device.</p>
 
 <p>GPP can be in three possible usage states: <code>IDLE</code>, <code>ACTIVE</code>, or <code>BUSY</code>.</p>
 
@@ -1415,13 +1445,13 @@ ga('send', 'pageview');
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span> dev<span style="color:#f92672">.</span>_get_usageState()</code></pre></div></li>
 </ul>
 
-<p>The GPP contains several properties that are critical for the deployment of components to a device. When a waveform is deployed, the framework scans through all <code>IDLE</code> and <code>ACTIVE</code> GPP devices. The component’s <code>os</code> and/or <code>processor</code> elements from its SPD file are compared against the GPP’s <code>os_name</code> and/or <code>processor_name</code> properties, respectively. If there is a match, the component is assigned to that GPP. This search/assignment is performed for all components in the waveform. Once all components have been assigned to specific GPPs, the deployment process begins.</p>
+<p>The GPP contains several <a href="../../../manual/glossary/#property">properties</a> that are critical for the deployment of components to a device. When a <a href="../../../manual/glossary/#waveform">waveform</a> is deployed, the framework scans through all <code>IDLE</code> and <code>ACTIVE</code> GPP devices. The component’s <code>os</code> and/or <code>processor</code> elements from its Software Package Descriptor (SPD) file are compared against the GPP’s <code>os_name</code> and/or <code>processor_name</code> properties, respectively. If there is a match, the component is assigned to that GPP. This search/assignment is performed for all components in the waveform. Once all components have been assigned to specific GPPs, the deployment process begins.</p>
 
 <h4 id="deployment-process">Deployment Process</h4>
 
 <p>The deployment of a component to a GPP begins by copying all relevant files from <code>$SDRROOT/dom/components/&lt;component&gt;/</code> to the GPP’s cache. The GPP cache is a temporary directory on the computer used to run each component (recall that REDHAWK is designed to support distributed processing). The cache is located in the local computer’s <code>$SDRROOT/dev/.&lt;Device Manager name&gt;/&lt;Device Name&gt;</code>. Note that the component’s working directory is the GPP’s cache directory.</p>
 
-<p>After all files are copied, the component is started in its own process space using the <code>fork</code> system call. At program startup, the component registers with the Domain Manager and the initial property state is applied to the component’s property values. Next, connections are created as defined in the waveform file. The waveform is successfully deployed when all waveform components are registered with the Domain Manager and all component initialization is complete.</p>
+<p>After all files are copied, the component is started in its own process space using the <code>fork</code> system call. At program startup, the component registers with the <a href="../../../manual/glossary/#domain-manager">Domain Manager</a> and the initial property state is applied to the component’s property values. Next, connections are created as defined in the waveform file. The waveform is successfully deployed when all waveform components are registered with the Domain Manager and all component initialization is complete.</p>
 
 <h5 id="shared-address-space-components">Shared Address Space Components</h5>
 
@@ -1443,7 +1473,7 @@ ga('send', 'pageview');
 
 <h3 id="monitoring-computing-resources-per-application">Monitoring Computing Resources per Application</h3>
 
-<p>Each application object has a <code>metrics</code> function that provides access to application-level metrics. The available metrics include:</p>
+<p>Each <a href="../../../manual/glossary/#application">application</a> object has a <code>metrics</code> function that provides access to application-level metrics. The available metrics include:</p>
 
 <ul>
 <li><code>cores</code>: number of cores used</li>
@@ -1452,30 +1482,43 @@ ga('send', 'pageview');
 <li><code>files</code>: how many file handles the component has open</li>
 <li><code>threads</code>: how many threads the component has open</li>
 <li><code>shared</code>: whether or not it is a shared address space component (C++ only)</li>
-<li><code>componenthost</code>: The id for the component’s host
+<li><code>componenthost</code>: The ID for the component’s host
 
 <ul>
-<li>Component id for C++ components generated in RH 2.0 or earlier, and Python and Java components</li>
+<li>Component ID for C++ components generated in RH 2.0 or earlier, and Python and Java components</li>
 <li><code>ComponentHost_GPP_1</code> for shared address space C++ components</li>
 </ul></li>
 </ul>
 
 <p>The metrics are available on a per-component basis or aggregated for the whole application.</p>
 
-<p>The <code>metrics</code> function takes two arguments, the list of components to report and the metrics to report, where the id &ldquo;application utilization&rdquo; is used to retrieve the application’s aggregated metrics. Both arguments to the <code>metrics</code> function are lists of strings. To retrieve all metrics for all components as well as the aggregated application, use empty lists for both arguments.</p>
+<p>The <code>metrics</code> function takes two arguments, the list of components to report and the metrics to report, where the ID &ldquo;application utilization&rdquo; is used to retrieve the application’s aggregated metrics. Both arguments to the <code>metrics</code> function are lists of strings. To retrieve all metrics for all components as well as the aggregated application, use empty lists for both arguments.</p>
 
-<p>To display metrics in the IDE, select a running waveform, and in the Properties view, select the <strong>Metrics</strong> tab.</p>
+<p>To display metrics in the IDE, select a running waveform, and in the <a href="../../../manual/glossary/#properties-view">Properties view</a>, select the <strong>Metrics</strong> tab.</p>
 
-<h5 id="waveform-metrics">Waveform Metrics</h5>
 
-<p><img src="../images/Metrics.png" alt="Waveform Metrics" /></p>
+<figure >
+    
+        <img src="../images/Metrics.png" alt="Waveform Metrics" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Waveform Metrics</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <h4 id="monitoring-computing-resources-per-gpp">Monitoring Computing Resources per GPP</h4>
 
 <p>The GPP monitors the following resources:</p>
 
 <ul>
-<li>System: CPU utilization, memory usage, nic usage, total number of threads, and number of open files</li>
+<li>System: CPU utilization, memory usage, <a href="../../../manual/glossary/#nic">nic</a> usage, total number of threads, and number of open files</li>
 <li>For each component: CPU usage, memory usage, and process state</li>
 </ul>
 
@@ -1532,8 +1575,7 @@ ga('send', 'pageview');
 
 <p>Setting any element of the <code>thresholds</code> structure to -1 disables the GPP’s response to that particular element.</p>
 
-<p>For example, to ignore the processor’s usage, set <code>thresholds.cpu_idle</code> to -1. The GPP state will be <code>IDLE</code> if no components are deployed, and <code>ACTIVE</code> if one or more component is deployed, irrespective of the cpu idle percentage.
-254a406,467</p>
+<p>For example, to ignore the processor’s usage, set <code>thresholds.cpu_idle</code> to -1. The GPP state will be <code>IDLE</code> if no components are deployed, and <code>ACTIVE</code> if one or more component is deployed, irrespective of the cpu idle percentage.</p>
 
 <p>Setting any element of the <code>thresholds</code> structure to 0 changes the GPP usage state to <code>BUSY</code>, and thus, the GPP cannot launch any addtional components.</p>
 
@@ -1579,13 +1621,13 @@ ga('send', 'pageview');
 
 <h3 id="componenthost">ComponentHost</h3>
 
-<p><code>ComponentHost</code> is a specialized REDHAWK component that launches and manages shared address space components in a waveform. It is installed in <code>$SDRROOT</code> on the DomainManager and deployed to the GPP as required. There is no need to explicitly include <code>ComponentHost</code> in a sad file, as the applicationfactory automatically creates one (or more) as part of the waveform deployment.</p>
+<p><code>ComponentHost</code> is a specialized REDHAWK component that launches and manages shared address space components in a waveform. It is installed in <code>$SDRROOT</code> on the DomainManager and deployed to the GPP as required. There is no need to explicitly include <code>ComponentHost</code> in a Software Assembly Descriptor (SAD) file, as the <a href="../../../manual/glossary/#application-factory">Application Factory</a> automatically creates one (or more) as part of the waveform deployment.</p>
 
 <p>One <code>ComponentHost</code> instance is created per GPP, per waveform; all shared address space components assigned to the same GPP in a waveform reside within the same <code>ComponentHost</code>. Within <code>ComponentHost</code>, each started component runs as a separate thread, named according to the component’s label. The individual component’s main threads may be viewed in common Linux utilities such as <code>top</code> by enabling the display of threads. Other threads, such as those used for I/O by the middleware layer, are typically named according to the <code>ComponentHost</code> instance.</p>
 
 <h3 id="binding-components-to-executable-devices">Binding Components to Executable Devices</h3>
 
-<p>For standard Application/Component deployment, the Application Factory searches the Domain to find a matching Executable Device using the OS and architecture implementation properties and optional implementation dependencies. The first available Executable Device matching those properties is selected as the deployment Device for the Component. The Software Assembly Definition (SAD) and Device Configuration Definition (DCD) files now allow system integrators to define additional id/value pairs to match against when deploying a Component to an Executeable Device. The following example describes the new xml elements (<code>devicerequires</code> and <code>deployerrequires</code>), that allow <code>Component_1</code> to be deployed only on <code>RED_NODE:GPP_1</code>.</p>
+<p>For standard application/component deployment, the Application Factory searches the domain to find a matching executable device using the OS and architecture implementation properties and optional implementation dependencies. The first available executable device matching those properties is selected as the deployment device for the component. The SAD and Device Configuration Definition (DCD) files now allow system integrators to define additional id/value pairs to match against when deploying a component to an executable device. The following example describes the new xml elements (<code>devicerequires</code> and <code>deployerrequires</code>), that allow <code>Component_1</code> to be deployed only on <code>RED_NODE:GPP_1</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- example of ID/value pairs for a component in a SAD file
 </span><span style="color:#75715e">&lt;componentplacement&gt;
 </span><span style="color:#75715e">  &lt;componentfileref refid=&#34;Component_SPD_1&#34;/&gt;
@@ -1610,11 +1652,11 @@ ga('send', 'pageview');
 </span><span style="color:#75715e">      &lt;/deployerrequires&gt;
 </span><span style="color:#75715e">   &lt;/componentinstantiation&gt;
 </span><span style="color:#75715e">&lt;/componentplacement&gt;</span></code></pre></div>
-<p>During the deployment process, when a Component has a <code>devicerequires</code> id/value set defined in a SAD file, the list of available Executable Devices in the Domain is filtered based on the entire id/value set. The Application Factory performs a match against the <code>devicerequires</code> id/value pairs and the Executable Devices’s <code>devicerequires</code> id/value pairs. If there is an exact match between both sets, that Executable Device is selected as the deployment Device. If no matching Executable Devices are found, then the Waveform fails to deploy and an exception is raised.</p>
+<p>During the deployment process, when a component has a <code>devicerequires</code> id/value set defined in a SAD file, the list of available executable devices in the domain is filtered based on the entire id/value set. The Application Factory performs a match against the <code>devicerequires</code> id/value pairs and the executable devices’s <code>devicerequires</code> id/value pairs. If there is an exact match between both sets, that executable device is selected as the deployment device. If no matching executable devices are found, then the waveform fails to deploy and an exception is raised.</p>
 
-<p>In addition to allowing Components to select deployment Devices, an Executable Device with a <code>devicerequires</code> id/value set restricts deployment to only Components with a matching id/value set. All other requests for deployment to that Executable Device fail.</p>
+<p>In addition to allowing components to select deployment devices, an executable device with a <code>devicerequires</code> id/value set restricts deployment to only components with a matching id/value set. All other requests for deployment to that executable device fail.</p>
 
-<p>For Host Collocation and regular deployment requests, the following table explains the deployment behavior for <code>devicerequires</code> and <code>deployerrequires</code> id/value sets:</p>
+<p>For host collocation and regular deployment requests, the following table explains the deployment behavior for <code>devicerequires</code> and <code>deployerrequires</code> id/value sets:</p>
 
 <h5 id="deployment-matching">Deployment Matching</h5>
 
@@ -1635,7 +1677,7 @@ ga('send', 'pageview');
 <td align="left">Yes</td>
 <td align="left">No</td>
 <td align="left">Yes</td>
-<td align="left">Yes, deploy on matching Device.</td>
+<td align="left">Yes, deploy on matching device.</td>
 </tr>
 
 <tr>
@@ -1651,7 +1693,7 @@ ga('send', 'pageview');
 <td align="left">No</td>
 <td align="left">No</td>
 <td align="left">No</td>
-<td align="left">No, Device not used for deployment.</td>
+<td align="left">No, device not used for deployment.</td>
 </tr>
 
 <tr>
@@ -1659,7 +1701,7 @@ ga('send', 'pageview');
 <td align="left">Yes</td>
 <td align="left">No</td>
 <td align="left">No</td>
-<td align="left">No, skip this Device.</td>
+<td align="left">No, skip this device.</td>
 </tr>
 
 <tr>
@@ -1667,7 +1709,7 @@ ga('send', 'pageview');
 <td align="left">Yes</td>
 <td align="left">Yes</td>
 <td align="left">Yes</td>
-<td align="left">Yes, entire host collocaton on this Device.</td>
+<td align="left">Yes, entire host collocation on this device.</td>
 </tr>
 
 <tr>
@@ -1683,7 +1725,7 @@ ga('send', 'pageview');
 <td align="left">Yes</td>
 <td align="left">Yes</td>
 <td align="left">Yes</td>
-<td align="left">Yes, entire host collocation on this Device.</td>
+<td align="left">Yes, entire host collocation on this device.</td>
 </tr>
 
 <tr>
@@ -1691,7 +1733,7 @@ ga('send', 'pageview');
 <td align="left">Yes</td>
 <td align="left">Yes</td>
 <td align="left">Yes</td>
-<td align="left">No, skip this Device.</td>
+<td align="left">No, skip this device.</td>
 </tr>
 </tbody>
 </table>
@@ -1704,13 +1746,26 @@ ga('send', 'pageview');
 
 <p>To mitigate this issue, the GPP maintains a reservation-based strategy to properly forecast the CPU load for each component it manages. During initial waveform deployment, the forecasted load for each component of the waveform is reserved against the current system’s available CPU capacity. As components are moved to the <code>start</code> state, the forecasted load is tabled, and the actual load or a minimum utilitization load (whichever is greater), is used for determining the system load, and thus, the available CPU capacity. The available CPU capacity is one of the system resources that will directly determine the system’s <code>usageState</code>, (i.e., <code>IDLE</code>, <code>ACTIVE</code>, or <code>BUSY</code> ). The GPP’s <code>utilization.subscribed</code> property maintains the runtime value of the total reservation for the system.</p>
 
-<h5 id="example-reservation-schema">Example Reservation Schema</h5>
 
-<p><img src="../images/reservation_schema.png" alt="Example Reservation Schema" /></p>
+<figure >
+    
+        <img src="../images/reservation_schema.png" alt="Example Reservation Schema" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Example Reservation Schema</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <p>In the figure above, an example of the reservation schema is shown where actual usage is shown in green, reserved capacity is shown in blue, and the maximum for the host is shown in orange. In the figure shown, the GPP’s capacity calculation is affected by the components deployed and whether or not its host application is started.</p>
 
-<p>The Property, <code>reserved_capacity_per_component</code>, is the default forecasted load for every component deployed by the GPP.</p>
+<p>The property, <code>reserved_capacity_per_component</code>, is the default forecasted load for every component deployed by the GPP.</p>
 
 <h4 id="specialized-reservation">Specialized Reservation</h4>
 
@@ -1725,9 +1780,9 @@ _value<span style="color:#f92672">=</span>any<span style="color:#f92672">.</span
 _value<span style="color:#f92672">.</span>_t<span style="color:#f92672">=</span>CORBA<span style="color:#f92672">.</span>TC_double  <span style="color:#75715e"># make sure that the number is packed as a double</span>
 app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>createApplication(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;/waveforms/my_wave/my_wave.sad.xml&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;my_wave&#39;</span>,[CF<span style="color:#f92672">.</span>DataType(id<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SPECIALIZED_CPU_RESERVATION&#39;</span>,value<span style="color:#f92672">=</span>any<span style="color:#f92672">.</span>to_any([CF<span style="color:#f92672">.</span>DataType(id<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;my_comp_1&#39;</span>,value<span style="color:#f92672">=</span>_value)]))])
 <span style="color:#66d9ef">print</span> dev<span style="color:#f92672">.</span>_get_usageState()  <span style="color:#75715e"># view the reservation effect</span></code></pre></div>
-<p>In other cases, an aggregate load for a whole waveform is needed rather than loads for individual components. To support this need, it is possible to provide a reservation floor on a per-host collocation basis rather than on a per-component basis. The reservation floor can be set through the sad file or as a waveform creation parameter.</p>
+<p>In other cases, an aggregate load for a whole waveform is needed rather than loads for individual components. To support this need, it is possible to provide a reservation floor on a per-host collocation basis rather than on a per-component basis. The reservation floor can be set through the SAD file or as a waveform creation parameter.</p>
 
-<p>When the reservation is based on the sad file, it is added through an additional child element to the <code>hostcollocation</code> element. The additional child element is <code>reservation</code>, with two attributes: <code>kind</code> (“cpucores&rdquo; for processing) and <code>value</code> (in this case, the number of cores that should be reserved). For example, if a host collocation were to include a reservation for a <code>hostcollocation</code> with component “some_comp&rdquo; and an aggregate reservation of 3 cores, it would follow a pattern similar to this:</p>
+<p>When the reservation is based on the SAD file, it is added through an additional child element to the <code>hostcollocation</code> element. The additional child element is <code>reservation</code>, with two attributes: <code>kind</code> (“cpucores&rdquo; for processing) and <code>value</code> (in this case, the number of cores that should be reserved). For example, if a host collocation were to include a reservation for a <code>hostcollocation</code> with component “some_comp&rdquo; and an aggregate reservation of 3 cores, it would follow a pattern similar to this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;hostcollocation</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;ID_TEST_SET1&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;COLLOC_SET1&#34;</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;componentplacement&gt;</span>
     <span style="color:#f92672">&lt;componentfileref</span> <span style="color:#a6e22e">refid=</span><span style="color:#e6db74">&#34;some_comp_ref&#34;</span><span style="color:#f92672">/&gt;</span>
@@ -1748,19 +1803,28 @@ app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>
 <li>Edit the host collocation’s name to match the XML (<code>COLLOC_SET1</code>).</li>
 <li>Add <code>rh.SigGen</code> to the host collocation.</li>
 <li>Select the host collocation.</li>
+<li>Open the Properties view, select the <strong>Reservations</strong> tab.
 
-<li><p>Open the Properties view, select the <strong>Reservations</strong> tab.</p>
+<figure >
+    
+        <img src="../images/propertiesreservationstab.png" alt="Properties View Reservations Tab" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Properties View Reservations Tab</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="properties-view-reservations-tab">Properties View Reservations Tab</h5>
 
-<p><img src="../images/propertiesreservationstab.png" alt="Properties View Reservations Tab" /></p></li>
 
-<li><p>Click the <strong>+</strong> button.</p></li>
-
-<li><p>Set the <strong>Kind</strong> and <strong>Value</strong> to match the XML (<code>cpucores</code> and <code>3</code>, respectively).</p></li>
+</li>
+<li>Click the <strong>+</strong> button.</li>
+<li>Set the <strong>Kind</strong> and <strong>Value</strong> to match the XML (<code>cpucores</code> and <code>3</code>, respectively).</li>
 </ol>
 
-<p>When a waveform contains a single host collocation, it is possible to provide an override value for that host collocation by providing an empty id to the <code>SPECIALIZED_CPU_RESERVATION</code>.</p>
+<p>When a waveform contains a single host collocation, it is possible to provide an override value for that host collocation by providing an empty ID to the <code>SPECIALIZED_CPU_RESERVATION</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> ossie.utils <span style="color:#f92672">import</span> redhawk
 <span style="color:#f92672">from</span> ossie.cf <span style="color:#f92672">import</span> CF
 <span style="color:#f92672">from</span> omniORB <span style="color:#f92672">import</span> any, CORBA
@@ -1771,7 +1835,7 @@ _value<span style="color:#f92672">=</span>any<span style="color:#f92672">.</span
 _value<span style="color:#f92672">.</span>_t<span style="color:#f92672">=</span>CORBA<span style="color:#f92672">.</span>TC_double  <span style="color:#75715e"># make sure that the number is packed as a double</span>
 app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>createApplication(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;/waveforms/my_wave/my_wave.sad.xml&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;my_wave&#39;</span>,[CF<span style="color:#f92672">.</span>DataType(id<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;SPECIALIZED_CPU_RESERVATION&#39;</span>,value<span style="color:#f92672">=</span>any<span style="color:#f92672">.</span>to_any([CF<span style="color:#f92672">.</span>DataType(id<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;&#39;</span>,value<span style="color:#f92672">=</span>_value)]))])
 <span style="color:#66d9ef">print</span> dev<span style="color:#f92672">.</span>_get_usageState()  <span style="color:#75715e"># view the reservation effect</span></code></pre></div>
-<p>If the waveform contains more than one host collocation, it can be overloaded through the host collocation’s id. For example, if the sad example above were to be overloaded with 4 cores rather than 3, the code would look as follows:</p>
+<p>If the waveform contains more than one host collocation, it can be overloaded through the host collocation’s id. For example, if the SAD example above were to be overloaded with 4 cores rather than 3, the code would look as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> ossie.utils <span style="color:#f92672">import</span> redhawk
 <span style="color:#f92672">from</span> ossie.cf <span style="color:#f92672">import</span> CF
 <span style="color:#f92672">from</span> omniORB <span style="color:#f92672">import</span> any, CORBA
@@ -1784,7 +1848,7 @@ app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>
 <span style="color:#66d9ef">print</span> dev<span style="color:#f92672">.</span>_get_usageState()  <span style="color:#75715e"># view the reservation effect</span></code></pre></div>
 <h3 id="resource-affinity">Resource Affinity</h3>
 
-<p>Modern Linux kernels support the ability to define memory and processor affinity using the Non Uniformed Memory Access (NUMA) library. REDHAWK has added support to define processor affinity during the Component deployment process as specified in a Waveform’s SAD file. The <code>affinity</code> element can be added to the <code>componentplacement</code>/<code>componentinstantiation</code> element for the resource. During deployment, the REDHAWK GPP recognizes these options and performs the appropriate affinity requests when the resource is executed. An affinity request is defined by the following two intrinsic Property identifiers added to the <code>affinity</code> element.</p>
+<p>Modern Linux kernels support the ability to define memory and processor affinity using the <a href="../../../manual/glossary/#numa">NUMA</a> library. REDHAWK has added support to define processor affinity during the component deployment process as specified in a waveform’s SAD file. The <code>affinity</code> element can be added to the <code>componentplacement</code>/<code>componentinstantiation</code> element for the resource. During deployment, the REDHAWK GPP recognizes these options and performs the appropriate affinity requests when the resource is executed. An affinity request is defined by the following two intrinsic Property identifiers added to the <code>affinity</code> element.</p>
 
 <ul>
 <li><code>affinity::exec_directive_class</code> - The context classification of affinity directive to perform.</li>
@@ -1806,18 +1870,18 @@ app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>
 <tr>
 <td align="left"><code>socket</code></td>
 <td align="left">Processor affinity using a processor socket identifier set.</td>
-<td align="left">Supported values are defined by the numa library’s <code>numa_parse_nodestring method</code>; consult the numa man page for further clarification.</td>
+<td align="left">Supported values are defined by the NUMA library’s <code>numa_parse_nodestring method</code>; consult the NUMA man page for further clarification.</td>
 </tr>
 
 <tr>
 <td align="left"><code>cpu</code></td>
 <td align="left">CPU affinity using a cpu identifier set.</td>
-<td align="left">Supported values are defined by numa library’s <code>numa_parse_cpustring method</code>; consult the numa man page for futher clarification.</td>
+<td align="left">Supported values are defined by NUMA library’s <code>numa_parse_cpustring method</code>; consult the NUMA man page for further clarification.</td>
 </tr>
 
 <tr>
 <td align="left"><code>nic</code></td>
-<td align="left">Determine which CPU manages the nic’s interrupts then assign processor affiliation to that cpu.</td>
+<td align="left">Determine which CPU manages the nic’s interrupts then assign processor affiliation to that CPU.</td>
 <td align="left">Name of a host’s network interface. Processor identification is resolved by processing/proc/interrupts for the requested interface name.</td>
 </tr>
 </tbody>
@@ -1843,7 +1907,7 @@ app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="../../../manual/waveforms/sample-waveform/" title="Create and Deploy a Sample Waveform"> <i class="fa fa-chevron-left"></i><label>Create and Deploy a Sample Waveform</label></a>
-    <a class="nav nav-next" href="../../../manual/devices/" title="Working with Devices" style="margin-right: 0px;"><label>Working with Devices</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="../../../manual/services/" title="Services" style="margin-right: 0px;"><label>Services</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -1858,6 +1922,10 @@ app_1<span style="color:#f92672">=</span>dom<span style="color:#f92672">.</span>
 
   
 
+    <div class="github-link">
+      <a href="manual/waveforms/deployment-resources.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

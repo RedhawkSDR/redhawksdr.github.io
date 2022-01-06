@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>IDE Sandbox :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/sandbox/ide/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -790,17 +797,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -997,16 +1004,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1237,12 +1244,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1298,7 +1327,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1317,12 +1346,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1349,12 +1378,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1380,74 +1409,120 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>IDE Sandbox</h1>
+    <h2 class="title">IDE Sandbox</h2>
+
     
     
     
 
 
 
-<p>The IDE-based Sandbox provides a graphical environment for launching, inspecting, and debugging components, devices, services, and waveforms. The IDE-based Sandbox can host an instance of a <a href="../../../manual/sandbox/python/">Python-based Sandbox</a>, with both interlinked, allowing artifacts from the Python environment to interact with those on the graphical UI.</p>
+<p>The IDE-based sandbox provides a graphical environment for launching, inspecting, and debugging <a href="../../../manual/glossary/#component">components</a>, <a href="../../../manual/glossary/#device">devices</a>, <a href="../../../manual/glossary/#service">services</a>, and <a href="../../../manual/glossary/#waveform">waveforms</a>. The IDE-based sandbox can host an instance of a Python-based <a href="../../../manual/glossary/#sandbox">sandbox</a>, with both interlinked, allowing artifacts from the Python environment to interact with those on the graphical UI.</p>
 
 <h3 id="launching-components-in-the-ide-sandbox">Launching Components in the IDE Sandbox</h3>
 
-<p>The following procedures explain how to launch a component in the IDE Sandbox.</p>
+<p>The following procedures explain how to launch a component in the IDE sandbox.</p>
 
 <h4 id="default-property-values">Default Property Values</h4>
 
 <ol>
-<li><p>To launch an implementation of a component with default property values, from the REDHAWK Explorer View, right-click the component, select <strong>Launch in Sandbox</strong>, and select an implementation of the component to start within the Sandbox’s Chalkboard.</p>
+<li><p>To launch an implementation of a component with default <a href="../../../manual/glossary/#property">property</a> values, from the <a href="../../../manual/glossary/#redhawk-explorer-view">REDHAWK Explorer view</a>, right-click the component, select <strong>Launch in Sandbox</strong>, and select an implementation of the component to start within the sandbox’s Chalkboard.</p>
 
-<p>The component is launched in the Sandbox. The component will initially be gray in color until launching is complete. When the component is finished loading, its background color is blue.</p></li>
+<p>The component is launched in the sandbox. The component will initially be gray in color until launching is complete. When the component is finished loading, its background color is blue.</p></li>
 </ol>
 
 <h4 id="customized-property-values">Customized Property Values</h4>
 
 <ol>
-<li><p>To launch an implementation of a component with customized property values, from the REDHAWK Explorer View, right-click the component, select <strong>Launch in Sandbox</strong>, and select <strong>Advanced</strong>.</p>
+<li><p>To launch an implementation of a component with customized property values, from the REDHAWK Explorer view, right-click the component, select <strong>Launch in Sandbox</strong>, and select <strong>Advanced</strong>.</p>
 
 <p>If the component has multiple implementations, the Select Implementation dialog of the Launch wizard is displayed. Select the implementation and click Next.</p>
 
-<p><img src="../../images/SelectImplementationlaunch.png" alt="The Select Implementation Dialog" /></p>
+
+<figure >
+    
+        <img src="../../images/SelectImplementationlaunch.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Select Implementation Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
 
 <p>The Assign Initial Properties dialog of the Launch wizard is displayed.</p>
 
-<p><img src="../../images/AssignInitialProperties.png" alt="The Assign Initial Properties Dialog" /></p></li>
+
+<figure >
+    
+        <img src="../../images/AssignInitialProperties.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assign Initial Properties Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>Enter the Properties information and click Next.</p>
 
 <p>The Launch Configuration Options dialog is displayed.</p>
 
-<p><img src="../../images/LaunchConfigurationOptions.png" alt="The Launch Configuration Options Dialog" /></p></li>
+
+<figure >
+    
+        <img src="../../images/LaunchConfigurationOptions.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Launch Configuration Options Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>Specify the launch options and click Finish.</p>
 
-<p>The component is launched in the IDE Sandbox. The component will initially be gray in color until launching is complete. When the component is finished loading, its background color is blue.</p></li>
+<p>The component is launched in the IDE sandbox. The component will initially be gray in color until launching is complete. When the component is finished loading, its background color is blue.</p></li>
 </ol>
 
 <h3 id="launching-devices-in-the-ide-sandbox">Launching Devices in the IDE Sandbox</h3>
 
-<p>The following procedures explain how to launch a device in the IDE Sandbox.</p>
+<p>The following procedures explain how to launch a device in the IDE sandbox.</p>
 
 <h4 id="default-property-values-1">Default Property Values</h4>
 
 <ol>
-<li><p>To launch an implementation of a device with default property values, from the REDHAWK Explorer View, right-click the device, select <strong>Launch in Sandbox</strong>, and select an implementation of the device to start within the Sandbox’s Chalkboard.</p>
+<li><p>To launch an implementation of a device with default property values, from the REDHAWK Explorer view, right-click the device, select <strong>Launch in Sandbox</strong>, and select an implementation of the device to start within the sandbox’s Chalkboard.</p>
 
-<p>The device is launched in the Sandbox.</p></li>
+<p>The device is launched in the sandbox.</p></li>
 </ol>
 
 <h4 id="customized-property-values-1">Customized Property Values</h4>
 
 <ol>
-<li><p>To launch an implementation of a device with customized property values, from the REDHAWK Explorer View, right-click the device, select <strong>Launch in Sandbox</strong>, and select <strong>Advanced</strong>.</p>
+<li><p>To launch an implementation of a device with customized property values, from the REDHAWK Explorer view, right-click the device, select <strong>Launch in Sandbox</strong>, and select <strong>Advanced</strong>.</p>
 
 <p>If the device has multiple implementations, the Select Implementation dialog of the Launch wizard is displayed. Select the implementation and click Next.</p>
 
@@ -1459,19 +1534,19 @@ ga('send', 'pageview');
 
 <li><p>Specify the launch options and click Finish.</p>
 
-<p>The device is launched in the IDE Sandbox.</p></li>
+<p>The device is launched in the IDE sandbox.</p></li>
 </ol>
 
 <h3 id="launching-services-in-the-ide-sandbox">Launching Services in the IDE Sandbox</h3>
 
-<p>The following procedures explain how to launch a service in the IDE Sandbox.</p>
+<p>The following procedures explain how to launch a service in the IDE sandbox.</p>
 
 <h4 id="default-property-values-2">Default Property Values</h4>
 
 <ol>
-<li><p>To launch an implementation of a service with default property values, from the REDHAWK Explorer View, right-click the service, select <strong>Launch in Sandbox</strong>, and select an implementation of the service to start within the Sandbox’s Chalkboard.</p>
+<li><p>To launch an implementation of a service with default property values, from the REDHAWK Explorer view, right-click the service, select <strong>Launch in Sandbox</strong>, and select an implementation of the service to start within the sandbox’s Chalkboard.</p>
 
-<p>The service is launched in the Sandbox.</p></li>
+<p>The service is launched in the sandbox.</p></li>
 </ol>
 
 <h4 id="customized-property-values-2">Customized Property Values</h4>
@@ -1489,19 +1564,19 @@ ga('send', 'pageview');
 
 <li><p>Specify the launch options and click Finish.</p>
 
-<p>The service is launched in the IDE Sandbox.</p></li>
+<p>The service is launched in the IDE sandbox.</p></li>
 </ol>
 
 <h3 id="launching-waveforms-in-the-ide-sandbox">Launching Waveforms in the IDE Sandbox</h3>
 
-<p>The following procedures explain how to launch a waveform in the IDE Sandbox.</p>
+<p>The following procedures explain how to launch a waveform in the IDE sandbox.</p>
 
 <h4 id="default-property-values-3">Default Property Values</h4>
 
 <ol>
 <li><p>To launch a waveform with default property values, right-click the waveform, select <strong>Launch in Sandbox</strong>, and select Default.</p>
 
-<p>The waveform is launched in the Sandbox.</p></li>
+<p>The waveform is launched in the sandbox.</p></li>
 </ol>
 
 <h4 id="customized-property-values-3">Customized Property Values</h4>
@@ -1511,17 +1586,47 @@ ga('send', 'pageview');
 
 <p>The Assign Initial Properties dialog of the Launch waveform wizard is displayed.</p>
 
-<p><img src="../../images/WaveformInitProp.png" alt="The Assign Initial Properties Dialog" /></p></li>
+
+<figure >
+    
+        <img src="../../images/WaveformInitProp.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Assign Initial Properties Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>Enter the Properties information and click Next.</p>
 
 <p>The Launch Configuration Options dialog of the Launch waveform wizard is displayed.</p>
 
-<p><img src="../../images/WaveformLaunchConfigOptions.png" alt="The Launch Configuration Options Dialog" /></p></li>
+
+<figure >
+    
+        <img src="../../images/WaveformLaunchConfigOptions.png"  />
+    
+    
+    <figcaption>
+        <h5 class=figure >Launch Configuration Options Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+</li>
 
 <li><p>Specify the launch options and click Finish.</p>
 
-<p>The waveform is launched in the IDE Sandbox.</p></li>
+<p>The waveform is launched in the IDE sandbox.</p></li>
 </ol>
 
 
@@ -1546,6 +1651,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/sandbox/ide/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Plot Settings Dialog :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 <script src="../../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../../css/custom.css">
 <script src="../../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/ide/editors-and-views/plot-settings-dialog/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../../"><img src="../../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -789,17 +796,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1371,12 +1400,12 @@ ga('send', 'pageview');
       <option value="/manual/ide/octave-wizard/" >-- Using the Octave Wizard</option>
       <option value="/manual/ide/plot-port-wizard/" >-- Plot Port Wizard</option>
   
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1402,24 +1431,37 @@ ga('send', 'pageview');
         <link href="../../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../../js/search.js"></script>
       </div>
     
 
-    <h1>Plot Settings Dialog</h1>
+    <h2 class="title">Plot Settings Dialog</h2>
+
     
     
     
     
 
-<p>The <strong>Plot Settings</strong> dialog enables the user to adjust certain plot settings.</p>
+<p>The <strong>Plot Settings</strong> dialog enables the user to adjust certain plot settings.
 
-<h5 id="plot-settings">Plot Settings</h5>
+<figure >
+    
+        <img src="../../images/plotsettings.png" alt="Plot Settings Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Plot Settings Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/plotsettings.png" alt="Plot Settings" /></p>
+
+
+</p>
 
 <h3 id="plot">Plot</h3>
 
@@ -1431,52 +1473,84 @@ ga('send', 'pageview');
 <li><strong>Max</strong>: Set the maximum value for the plot. The default value is to automatically determine the maximum.</li>
 <li><strong>Refresh Rate (fps)</strong>: Set the desired refresh rate in frames per second (fps) to perform smart thinning of the data. Enter 0 to disable smart thinning. The default value is 30 fps.</li>
 <li><strong>Enable plot configure menu using mouse</strong>: This checkbox enables the NeXtMidas plot configure menu using the mouse.</li>
-<li><strong>Enable quick access control widgets</strong>: This checkbox enables the quick access control widgets to change plot settings from the View. When enabled, Plot Port FFT has a quick control widget for adjusting the FFT number of averages directly in the View.</li>
+<li><strong>Enable quick access control widgets</strong>: This checkbox enables the quick access control widgets to change plot settings from the view. When enabled, Plot Port FFT has a quick control widget for adjusting the Fast Fourier Transform (FFT) number of averages directly in the view.</li>
 </ul>
 
 <h3 id="output-port-name">Output Port Name</h3>
 
-<p>Selecting the Output Port Name in the left-hand navigation pane displays the Output Port Settings dialog:</p>
+<p>Selecting the Output <a href="../../../../manual/glossary/#port">Port</a> Name in the left-hand navigation pane displays the Output Port Settings dialog:
 
-<h5 id="output-port-settings">Output Port Settings</h5>
+<figure >
+    
+        <img src="../../images/outportset.png" alt="Output Port Settings Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Output Port Settings Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/outportset.png" alt="Output Port Settings" /></p>
+
+
+</p>
 
 <p>The Output Port Settings enable you to modify how the source is being displayed.</p>
 
 <ul>
 <li>The <strong>Show</strong> checkbox enables you to turn the plotting of individual data streams on and off.</li>
 <li>The <strong>Stream ID</strong> displays the Stream ID for each data stream in the plot.</li>
+<li>Clicking on <strong>Color</strong> brings up the Color Palette dialog, which enables you to select a color for the specified stream on the plot.
 
-<li><p>Clicking on <strong>Color</strong> brings up the color palette window, which enables you to select a color for the specified stream on the plot.</p>
+<figure >
+    
+        <img src="../../images/colorpal.png" alt="Color Palette Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >Color Palette Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<h5 id="color-palette">Color Palette</h5>
 
-<p><img src="../../images/colorpal.png" alt="Color Palette" /></p></li>
 
-<li><p><strong>Framesize</strong>: Enables you to override the displayed default frame size.</p></li>
-
-<li><p>The <strong>IF</strong> and <strong>RF</strong> radio buttons enable you to toggle between IF and RF frequency values for the x-axis on FFT plots.</p></li>
-
-<li><p><strong>Center Freq</strong>: Enables you to override the center frequency value for RF plots. This field is grayed out for IF plots.</p></li>
+</li>
+<li><strong>Framesize</strong>: Enables you to override the displayed default frame size.</li>
+<li>The <strong>IF</strong> and <strong>RF</strong> radio buttons enable you to toggle between Intermediate Frequency (IF) and RF values for the x-axis on FFT plots.</li>
+<li><strong>Center Freq</strong>: Enables you to override the center frequency value for RF plots. This field is grayed out for IF plots.</li>
 </ul>
 
-<p>Expanding the Output Port Name in the left-hand navigation pane makes the BULKIO and FFT settings available.</p>
+<p>Expanding the Output Port Name in the left-hand navigation pane makes the Bulk Input/Output (BulkIO) and FFT settings available.</p>
 
-<h3 id="bulkio">BULKIO</h3>
+<h3 id="bulkio">BulkIO</h3>
 
-<p>Selecting BULKIO in the left-hand navigation pane displays the <strong>BULKIO</strong> settings dialog:</p>
+<p>Selecting BULKIO in the left-hand navigation pane displays the <strong>BULKIO</strong> Settings dialog:
 
-<h5 id="bulkio-settings">BULKIO Settings</h5>
+<figure >
+    
+        <img src="../../images/bulkioset.png" alt="BULKIO settings Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >BULKIO Settings Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/bulkioset.png" alt="BULKIO settings dialog" /></p>
 
-<p>The <strong>BULKIO</strong> settings dialog enables you to modify how the data is received via the CORBA Bulk Data.</p>
+
+</p>
+
+<p>The <strong>BULKIO</strong> Settings dialog enables you to modify how the data is received via the CORBA Bulk Data.</p>
 
 <ul>
 <li><strong>Connection ID</strong>: Displays the Connection ID of the current connection.</li>
 <li><strong>Sample Rate</strong>: Enables you to set a custom sample rate to override the value in StreamSRI. Enter 0, or leave on AUTO, to use the value from StreamSRI.</li>
-<li><strong>Remove on ‘End of Stream’</strong>: This checkbox enables you to select whether the stream is removed from the plot when an eos is received for the selected Stream ID.</li>
+<li><strong>Remove on ‘End of Stream’</strong>: This checkbox enables you to select whether the stream is removed from the plot when an End of Stream (EOS) is received for the selected Stream ID.</li>
 <li><strong>Blocking Option</strong>: This enables you to select a blocking option for <code>pushPacket</code> when the plot is not able to keep up with the data stream by selecting one of the radio buttons.
 
 <ul>
@@ -1488,11 +1562,23 @@ ga('send', 'pageview');
 
 <h3 id="fft">FFT</h3>
 
-<p>Selecting FFT in the left-hand navigation pane displays the <strong>FFT</strong> settings dialog:</p>
+<p>Selecting FFT in the left-hand navigation pane displays the <strong>FFT</strong> Settings dialog:
 
-<h5 id="fft-settings">FFT Settings</h5>
+<figure >
+    
+        <img src="../../images/fftset.png" alt="FFT settings Dialog" />
+    
+    
+    <figcaption>
+        <h5 class=figure >FFT Settings Dialog</h5>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="../../images/fftset.png" alt="FFT settings dialog" /></p>
+
+
+</p>
 
 <p>The <strong>FFT</strong> section enables you to change various settings on the FFT primitive.</p>
 
@@ -1525,6 +1611,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/ide/editors-and-views/plot-settings-dialog.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 

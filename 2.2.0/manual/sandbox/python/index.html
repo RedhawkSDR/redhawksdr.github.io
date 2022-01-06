@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>REDHAWK</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.36.1" />
+<meta name="generator" content="Hugo 0.36" />
 <title>Python Sandbox :: REDHAWK</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <script src="../../../js/jquery-2.x.min.js"></script>
 <script type="text/javascript">
-      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+      var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
 </script>
 
 <script>
@@ -30,7 +31,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="../../../css/custom.css">
 <script src="../../../js/custom.js"></script>
 
-
     
   </head>
   <body data-url="/manual/sandbox/python/">
@@ -40,7 +40,7 @@ ga('send', 'pageview');
     
 	
   
-    <p><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</p>
+    <p><a href="../../../../"><img src="../../../images/RedHawk_Logo_ALT_B_121px.png" alt="logo" /> REDHAWK</a></p>
 
   
 
@@ -48,8 +48,8 @@ ga('send', 'pageview');
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://redhawksdr.github.io"  rel="noopener">
-                  <i class='fa fa-book'></i> <label>Documentation</label>
+                <a href="../../../"  rel="noopener">
+                  <i class='fa fa-home'></i> <label>Home</label>
                 </a>
             </li>
             <li class="" role="">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
                 </a>
             </li>
             <li class="" role="">
-                <a href="https://github.com/redhawksdr/docs"  rel="noopener">
+                <a href="https://github.com/redhawksdr"  rel="noopener">
                   <i class='fa fa-github'></i> <label>GitHub</label>
                 </a>
             </li>
@@ -111,7 +111,7 @@ ga('send', 'pageview');
     <li data-nav-id="/manual/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
-      <a href="../../../manual/">REDHAWK Manual - 2.2.0</a>
+      <a href="../../../manual/">REDHAWK Manual - 2.2.8</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
@@ -311,10 +311,10 @@ ga('send', 'pageview');
       <a href="../../../manual/connections/bulkio/">BulkIO</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/data-transfers/">
-            Data Transfers
+          <a href="../../../manual/connections/bulkio/stream-api/">
+            Stream API
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -325,10 +325,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/connections/bulkio/stream-api/" class="dd-item">
+      <li data-nav-id="/manual/connections/bulkio/attachablestreams/" class="dd-item">
         <div>
-          <a href="../../../manual/connections/bulkio/stream-api/">
-            Stream API
+          <a href="../../../manual/connections/bulkio/attachablestreams/">
+            Attachable Streams
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/connections/bulkio/data-transfers/" class="dd-item">
+        <div>
+          <a href="../../../manual/connections/bulkio/data-transfers/">
+            pushPacket Data Flow
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -507,6 +514,12 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
+    <li data-nav-id="/manual/services/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
     <li data-nav-id="/manual/devices/" class="dd-item haschildren
         ">
       <div>
@@ -522,7 +535,7 @@ ga('send', 'pageview');
       <li data-nav-id="/manual/devices/interacting-with-hardware/creating-fei-device-ide/" class="dd-item">
         <div>
           <a href="../../../manual/devices/interacting-with-hardware/creating-fei-device-ide/">
-            Creating an FEI Device in the IDE
+            Creating a FrontEnd Interfaces Device in the IDE
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -578,12 +591,6 @@ ga('send', 'pageview');
         </div>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/manual/services/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/services/">Services</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
     </li>
     <li data-nav-id="/manual/nodes/" class="dd-item haschildren
         ">
@@ -791,17 +798,17 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
-        <div>
-          <a href="../../../manual/logging/logging-within-a-resource/">
-            Logging Within A Resource
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
       <li data-nav-id="/manual/logging/adjusting-logging-at-runtime/" class="dd-item">
         <div>
           <a href="../../../manual/logging/adjusting-logging-at-runtime/">
             Adjusting Logging at Runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/logging/logging-within-a-resource/" class="dd-item">
+        <div>
+          <a href="../../../manual/logging/logging-within-a-resource/">
+            Logging Within A Resource
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -998,16 +1005,16 @@ ga('send', 'pageview');
     </li>
         </ul>
     </li>
-    <li data-nav-id="/manual/sharing-projects/" class="dd-item
-        ">
-      <div>
-      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
     <li data-nav-id="/manual/exploring-sdrroot/" class="dd-item
         ">
       <div>
       <a href="../../../manual/exploring-sdrroot/">Exploring SDRROOT Using the REDHAWK IDE</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/manual/sharing-projects/" class="dd-item
+        ">
+      <div>
+      <a href="../../../manual/sharing-projects/">Sharing REDHAWK Projects With Others</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
     <li data-nav-id="/manual/exploring-domain/" class="dd-item haschildren
@@ -1238,12 +1245,34 @@ ga('send', 'pageview');
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item">
+    <li data-nav-id="/manual/appendices/troubleshooting/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="../../../manual/appendices/troubleshooting/">Troubleshooting</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/manual/appendices/troubleshooting/installation/" class="dd-item">
         <div>
-          <a href="../../../manual/appendices/troubleshooting/">
-            Troubleshooting
+          <a href="../../../manual/appendices/troubleshooting/installation/">
+            REDHAWK Installation Issues
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/connections/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/connections/">
+            Connection Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/manual/appendices/troubleshooting/omni/" class="dd-item">
+        <div>
+          <a href="../../../manual/appendices/troubleshooting/omni/">
+            omniNames and omniEvents Issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/manual/appendices/logging-config-plugin/" class="dd-item">
         <div>
@@ -1299,7 +1328,7 @@ ga('send', 'pageview');
     <option value="/getting-started/" >
    Getting Started With REDHAWK</option>
     <option value="/manual/" >
-   REDHAWK Manual - 2.2.0</option> 
+   REDHAWK Manual - 2.2.8</option> 
     <option value="/manual/installation/" >
   - 
    Installation</option>
@@ -1318,12 +1347,12 @@ ga('send', 'pageview');
     <option value="/manual/waveforms/" >
   - 
    Waveforms</option>
-    <option value="/manual/devices/" >
-  - 
-   Working with Devices</option>
     <option value="/manual/services/" >
   - 
    Services</option>
+    <option value="/manual/devices/" >
+  - 
+   Working with Devices</option>
     <option value="/manual/nodes/" >
   - 
    Nodes</option>
@@ -1358,12 +1387,12 @@ ga('send', 'pageview');
     <option value="/manual/ide/" >
   - 
    Using the REDHAWK IDE</option>
-    <option value="/manual/sharing-projects/" >
-  - 
-   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-sdrroot/" >
   - 
    Exploring SDRROOT Using the REDHAWK IDE</option>
+    <option value="/manual/sharing-projects/" >
+  - 
+   Sharing REDHAWK Projects With Others</option>
     <option value="/manual/exploring-domain/" >
   - 
    Exploring a Running Domain Using the REDHAWK IDE</option>
@@ -1389,31 +1418,32 @@ ga('send', 'pageview');
         <link href="../../../css/auto-complete.css" rel="stylesheet">
         <script type="text/javascript">
           
-              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0\/";
+              var baseurl = "https:\/\/redhawksdr.github.io\/2.2.0";
           
         </script>
         <script type="text/javascript" src="../../../js/search.js"></script>
       </div>
     
 
-    <h1>Python Sandbox</h1>
+    <h2 class="title">Python Sandbox</h2>
+
     
     
     
 
 
 
-<p>The Python-based Sandbox is a Python package that is imported as any other Python package. Included in the Python package are tools that provide a means for passing <a href="../../../manual/appendices/acronyms/#bulkio">BulkIO</a> data to and from components or devices. Plotting is also supported from the Python package. This section discusses how to instantiate and test a component using the provided Sandbox tools.</p>
+<p>The Python-based <a href="../../../manual/glossary/#sandbox">sandbox</a> is a Python package that is imported as any other Python package. Included in the Python package are tools that provide a means for passing Bulk Input/Output (BulkIO) data to and from <a href="../../../manual/glossary/#component">components</a> or <a href="../../../manual/glossary/#device">devices</a>. Plotting is also supported from the Python package. This section discusses how to instantiate and test a component using the provided sandbox tools.</p>
 
-<p>The Sandbox is Python-centric, so its use requires some basic Python knowledge.</p>
+<p>The sandbox is Python-centric, so its use requires some basic Python knowledge.</p>
 
 <h3 id="setup">Setup</h3>
 
-<p>In order to run the Sandbox, REDHAWK must be installed and the <code>OSSIEHOME</code> and <code>SDRROOT</code> environment variables must be <a href="../../../manual/appendices/source-installation/#installing-the-framework-from-source">set correctly</a>.</p>
+<p>In order to run the sandbox, REDHAWK must be installed and the <code>OSSIEHOME</code> and <code>SDRROOT</code> environment variables must be <a href="../../../manual/appendices/source-installation/#installing-the-framework-from-source">set correctly</a>.</p>
 
-<p>To use the Sandbox <em>none</em> of the following programs need to be running: omniNames, omniEvents, Domain Manager, Device Manager, nodeBooter</p>
+<p>To use the sandbox <em>none</em> of the following programs need to be running: omniNames, omniEvents, <a href="../../../manual/glossary/#domain-manager">Domain Manager</a>, <a href="../../../manual/glossary/#device-manager">Device Manager</a>, nodeBooter</p>
 
-<p>The Python-based Sandbox includes basic analytical plotting tools based on the matplotlib Python plotting library. To use these plots, the following Python packages must be installed:</p>
+<p>The Python-based sandbox includes basic analytical plotting tools based on the matplotlib Python plotting library. To use these plots, the following Python packages must be installed:</p>
 
 <ul>
 <li><code>matplotlib</code></li>
@@ -1422,22 +1452,22 @@ ga('send', 'pageview');
 
 <h3 id="starting-the-sandbox">Starting the Sandbox</h3>
 
-<p>The Python-based Sandbox, like any other Python module, may be used in another Python program or run directly within the Python interpreter. The following examples assume that the Sandbox is being used within the Python interpreter.</p>
+<p>The Python-based sandbox, like any other Python module, may be used in another Python program or run directly within the Python interpreter. The following examples assume that the sandbox is being used within the Python interpreter.</p>
 
-<p>To begin, start a Python interpreter session and import the Sandbox:</p>
+<p>To begin, start a Python interpreter session and import the sandbox:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> ossie.utils <span style="color:#f92672">import</span> sb</code></pre></div>
 <p>As with any other Python module, the built-in functions <code>help()</code> and <code>dir()</code> are useful when searching for available commands.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> help(sb)
 <span style="color:#f92672">&gt;&gt;&gt;</span> dir(sb)</code></pre></div>
-<p>To exit the Sandbox, press <code>Ctrl+D</code> at the Python prompt. On exit, the Sandbox terminates and cleans up all of the components and helpers it creates.</p>
+<p>To exit the sandbox, press <code>Ctrl+D</code> at the Python prompt. On exit, the sandbox terminates and cleans up all of the components and helpers it creates.</p>
 
 <h3 id="running-the-sandbox">Running the Sandbox</h3>
 
-<p>Within the Sandbox, components and helpers are launched in an idle state. In order to begin processing (e.g., <code>serviceFunction()</code> in C++ components), each object must be started.</p>
+<p>Within the sandbox, components and helpers are launched in an idle state. In order to begin processing (e.g., <code>serviceFunction()</code> in C++ components), each object must be started.</p>
 
 <p>After the desired components and helpers are created, the <code>start()</code> method starts all registered objects:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>start()</code></pre></div>
-<p>It is not necessary to stop the Sandbox prior to exiting, as this is handled as part of normal exit cleanup. However, if you wish to stop processing, the <code>stop()</code> method stops all registered objects:</p>
+<p>It is not necessary to stop the sandbox prior to exiting, as this is handled as part of normal exit cleanup. However, if you wish to stop processing, the <code>stop()</code> method stops all registered objects:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>stop()</code></pre></div>
 <p>In non-interactive scripts, the Python interpreter exits after the last statement. This may be undesirable, such as in the case where a set of components should run for an arbitrary amount of time, with their output monitored via plots. The built-in Python method <code>raw_input()</code> can be used to prevent the interpreter from exiting:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">&gt;&gt;&gt;</span> raw_input()</code></pre></div>
@@ -1445,13 +1475,13 @@ ga('send', 'pageview');
 </div>
 
 
-<p>Items launched in the Sandbox are registered in the Sandbox’s internal state. To view the items that are deployed in the Sandbox, use the <code>show</code> command:</p>
+<p>Items launched in the sandbox are registered in the sandbox’s internal state. To view the items that are deployed in the sandbox, use the <code>show</code> command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> sb<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>The items shown by the <code>show</code> command are referenced by a unique name. To recover an item by its Sandbox internal name, use the <code>getComponent</code> function:</p>
+<p>The items shown by the <code>show</code> command are referenced by a unique name. To recover an item by its sandbox internal name, use the <code>getComponent</code> function:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"> <span style="color:#f92672">&gt;&gt;&gt;</span> comp <span style="color:#f92672">=</span> sb<span style="color:#f92672">.</span>getComponent(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;name&#34;</span>)</code></pre></div>
 <h4 id="connecting-to-a-running-domain">Connecting to a Running Domain</h4>
 
-<p>The Python Sandbox allows a developer to not only launch components, but it also allows one to interact with a live Domain. This is accomplished through the <a href="../../../manual/runtime-inspection/#redhawk-module">redhawk package</a>.</p>
+<p>The Python sandbox allows a developer to not only launch components, but it also allows one to interact with a live Domain. This is accomplished through the <a href="../../../manual/runtime-inspection/#redhawk-module">redhawk package</a>.</p>
 
 
 
@@ -1475,6 +1505,10 @@ ga('send', 'pageview');
 
   
 
+    <div class="github-link">
+      <a href="manual/sandbox/python/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
   </div>
 
 
