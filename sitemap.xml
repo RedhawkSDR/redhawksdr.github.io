@@ -935,10 +935,6 @@
   </url>
   
   <url>
-    <loc>https://redhawksdr.github.io/manual/2.0-lts/</loc>
-  </url>
-  
-  <url>
     <loc>https://redhawksdr.github.io/release-notes/2.0-lts/</loc>
   </url>
   
@@ -972,6 +968,14 @@
   
   <url>
     <loc>https://redhawksdr.github.io/manual/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://redhawksdr.github.io/release-notes/2.3-lts/release-notes-2.3.1/</loc>
   </url>
   
   <url>
