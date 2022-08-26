@@ -2235,9 +2235,9 @@ Core Framework Fixes  Replace log4j with reload4j.  IDE Fixes  Replace log4j wit
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redhawksdr.github.io/release-notes/2.3-lts/release-notes-2.3.1/</guid>
-      <description> The effort in REDHAWK 2.3.1 focused on:
- Replace log4j with reload4j in the Core Framework and in the IDE.  Fixes The following fixes were completed in REDHAWK 2.3.1:
-Core Framework Fixes  Replace log4j with reload4j.  IDE Fixes  Replace log4j with reload4j.  </description>
+      <description>The effort in REDHAWK 2.3.1 focused on:
+ Replace log4j with reload4j in the Core Framework and in the IDE. Fixed a bug in the Java Streams API that was causing null pointer exceptions when making calls to the SRI.  Fixes The following fixes were completed in REDHAWK 2.3.1:
+Core Framework Fixes  Replace log4j with reload4j. Fixed a bug in the Java Streams API that was causing null pointer exceptions when making calls to the SRI.</description>
     </item>
     
     <item>
