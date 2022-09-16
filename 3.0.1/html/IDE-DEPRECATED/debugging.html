@@ -1,0 +1,1179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Debugging REDHAWK Components and Devices with Eclipse</title>
+<link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+  <script src="../../js/jquery-3.6.0.js"></script>
+  <script src="../../js/jquery-ui-1.13.0.custom/jquery-ui.js"></script>
+  <script src="../../js/default.js"></script>
+  <link href="../../js/jquery-ui-1.13.0.custom/jquery-ui.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+  <script>
+  </script>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="navigation">
+<div id="back-to-redhawksdr"><a href=/ title=redhawksdr.org><span class="ui-icon ui-icon-arrowthick-1-w"></span> redhawksdr.org Home<span class="ui-icon ui-icon-home"></span></a></div>
+<div id="tree-of-files">
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.1/html/index.html title="REDHAWK Manual - 3.0.1">REDHAWK Manual - 3.0.1</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Introduction
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Introduction/introduction.html title="Introduction">Introduction</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Introduction/process-management.html title="Process Management and Interaction">Process Management and Interaction</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Introduction/basic-sandbox-example.html title="Basic Sandbox Example">Basic Sandbox Example</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Introduction/basic-ide-example.html title="Basic IDE Example">Basic IDE Example</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Introduction/further-reading.html title="Further Reading">Further Reading</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Install
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/install-from-rpm.html title="Install from RPMs">Install from RPMs</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/install-from-source.html title="Install from Source">Install from Source</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/external-dependencies.html title="External Dependencies">External Dependencies</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/redhawk-yum-repo.html title="Yum Repository">Yum Repository</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/cpp.html title="C++">C++</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/java-and-jacorb.html title="Java and JacORB">Java and JacORB</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/python.html title="Python">Python</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/ide.html title="IDE (DEPRECATED)">IDE (DEPRECATED)</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Install/troubleshooting.html title="Troubleshooting">Troubleshooting</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Components
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/components.html title="Components">Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/redhawk-core-assets.html title="REDHAWK Core Assets">REDHAWK Core Assets</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/creating-a-component.html title="Creating a Component Project">Creating a Component Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/octave-components.html title="Creating Octave Components">Creating Octave Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/running-a-component.html title="Running a Component">Running a Component</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/sandbox.html title="Sandbox">Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Components/hello-world-component.html title="A Hello World Component">A Hello World Component</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Component Structure
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/_index.html title="Component Structure">Component Structure</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/generated-files.html title="Generated Component Files">Generated Component Files</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/generated-methods.html title="Generated Component Methods">Generated Component Methods</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/base-component-members.html title="Base Component Members">Base Component Members</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/component-implementations.html title="Component Implementations">Component Implementations</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/java-version.html title="Java Version">Java Version</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/manage-properties.html title="Managing Properties">Managing Properties</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Component-Structure/events.html title="Events">Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Libraries
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Libraries/_index.html title="Shared Libraries">Shared Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Libraries/creating-a-shared-library-project.html title="Creating a REDHAWK Shared Library Project">Creating a REDHAWK Shared Library Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Libraries/using-a-shared-library-project.html title="Using a REDHAWK Shared Library Project">Using a REDHAWK Shared Library Project</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Libraries/packaging-shared-libraries.html title="Packaging Shared Libraries">Packaging Shared Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Libraries/manually-including-external-libraries.html title="Manually Including External Libraries">Manually Including External Libraries</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Connections
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/_index.html title="Connections">Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/the-connection-process.html title="The Connection Process">The Connection Process</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/why-ports.html title="Why Ports?">Why Ports?</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/port-access.html title="Port Access">Port Access</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/dynamic-connections.html title="Dynamic Connections">Dynamic Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/standardized-data-interfaces.html title="Standardized Data Interfaces">Standardized Data Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Bulkio
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/_index.html title="BulkIO">BulkIO</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/stream-api.html title="Stream API">Stream API</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/sri.html title="Signal Related Information (SRI)">Signal Related Information (SRI)</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/attachablestreams.html title="Attachable Streams">Attachable Streams</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/data-transfers.html title="pushPacket Data Flow">pushPacket Data Flow</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/bit-data.html title="Bit Data">Bit Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/multiout-ports.html title="Multi-out Ports">Multi-out Ports</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/working-with-complex-data.html title="Working with Complex Data">Working with Complex Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/time-stamps.html title="Time Stamps">Time Stamps</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/port-statistics.html title="Port Statistics">Port Statistics</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Bulkio/examples.html title="Examples">Examples</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Burstio
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/_index.html title="BurstIO">BurstIO</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/data-transfers.html title="Data Transfers">Data Transfers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/sri.html title="Burst Signal Related Information (SRI)">Burst Signal Related Information (SRI)</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/multiout-ports.html title="Multi-out Ports">Multi-out Ports</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/working-with-complex-data.html title="Working with Complex Data">Working with Complex Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/time-stamps.html title="Time Stamps">Time Stamps</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Burstio/port-statistics.html title="Port Statistics">Port Statistics</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Messaging
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Messaging/_index.html title="Messaging">Messaging</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Messaging/message-producer.html title="Message Producer">Message Producer</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Messaging/message-consumer.html title="Message Consumer">Message Consumer</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Messaging/viewing-messages.html title="Viewing Messages">Viewing Messages</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Connections/Messaging/connecting-producers-consumers.html title="Connecting Producers and Consumers">Connecting Producers and Consumers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/connection-callbacks.html title="Connection Callbacks">Connection Callbacks</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/custom-idl-interfaces.html title="Custom IDL Interfaces">Custom IDL Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Connections/add-transport.html title="Creating Connections between Components in FPGA">Creating Connections between Components in FPGA</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Waveforms
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Waveforms/_index.html title="Waveforms">Waveforms</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Waveforms/waveform-editor.html title="Waveform Editor">Waveform Editor</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Waveforms/sample-waveform.html title="Create and Deploy a Sample Waveform">Create and Deploy a Sample Waveform</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Waveforms/deployment-resources.html title="Waveform Deployment and Computing Resources">Waveform Deployment and Computing Resources</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Services
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Services/_index.html title="Services">Services</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Devices
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/_index.html title="Devices">Devices</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/fei.html title="FrontEnd Interfaces">FrontEnd Interfaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Interacting with Hardware
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Devices/Interacting-with-Hardware/_index.html title="Device Interaction with Hardware">Device Interaction with Hardware</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Devices/Interacting-with-Hardware/creating-fei-device-ide.html title="Creating a FrontEnd Interfaces Device">Creating a FrontEnd Interfaces Device</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Devices/Interacting-with-Hardware/interacting-fei-device-python-package.html title="Interacting with an FEI Device with the Python Package">Interacting with an FEI Device with the Python Package</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Devices/Interacting-with-Hardware/using-fei-device-ide.html title="Using an FEI Device in the IDE">Using an FEI Device in the IDE</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/associating-a-waveform.html title="Associating a Waveform with an FEI Device">Associating a Waveform with an FEI Device</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/running-components.html title="Using Devices to Run Components">Using Devices to Run Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/interface-with-fpgas.html title="Using Devices to Interface with FPGAs">Using Devices to Interface with FPGAs</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/fei-data-structures.html title="Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators">Functions and Data Structures Provided by the FrontEnd Interfaces Library and Code Generators</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/misc.html title="Miscellaneous FrontEnd Tuner Library Implementation Details">Miscellaneous FrontEnd Tuner Library Implementation Details</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Devices/persona-device-pattern.html title="Persona Device Pattern">Persona Device Pattern</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Nodes
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Nodes/_index.html title="Nodes">Nodes</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Nodes/running-a-node.html title="Running a Node">Running a Node</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Nodes/creating-a-new-node.html title="Creating a New Node">Creating a New Node</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Nodes/distributed-computing-and-rf-devices.html title="Distributed Computing and RF Devices">Distributed Computing and RF Devices</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Nodes/gpp-plugins.html title="Customizing Resources per GPP">Customizing Resources per GPP</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Address
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Address/components-howto.html title="Shared Address">Shared Address</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Address/component-model.html title="Component Model Overview">Component Model Overview</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Address/component-examples.html title="Examples">Examples</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Shared Memory
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Memory/shared-memory.html title="Shared Memory">Shared Memory</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Memory/shared-memory-ipc.html title="Shared Memory IPC">Shared Memory IPC</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Memory/metrics.html title="Metrics">Metrics</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Shared-Memory/tuning.html title="Tuning">Tuning</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Sandbox
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Sandbox/_index.html title="Sandbox">Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Python
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/_index.html title="Python Sandbox">Python Sandbox</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/working_with_components.html title="Working with Components, Devices, and Services">Working with Components, Devices, and Services</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/helpers.html title="Helpers">Helpers</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/devices.html title="Devices">Devices</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/example-interaction.html title="Example Sandbox Interaction">Example Sandbox Interaction</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/sources-and-sinks.html title="Built-in Sources and Sinks">Built-in Sources and Sinks</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/sdds-data.html title="Working with SDDS Data">Working with SDDS Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/plotting-data.html title="Plotting Data">Plotting Data</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/Python/misc.html title="Miscellaneous">Miscellaneous</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            IDE DEPRECATED
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/Sandbox/IDE-DEPRECATED/_index.html title="IDE Sandbox (DEPRECATED)">IDE Sandbox (DEPRECATED)</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Runtime Environment
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/_index.html title="Runtime Environment">Runtime Environment</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/launching-a-domain.html title="Launching a Domain">Launching a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/domain-manager.html title="Domain Manager">Domain Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/file-system.html title="File System">File System</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/applications.html title="Applications">Applications</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/application-factory.html title="The Application Factory">The Application Factory</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/device-manager.html title="The Device Manager">The Device Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/allocation-manager.html title="The Allocation Manager">The Allocation Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/connection-manager.html title="The Connection Manager">The Connection Manager</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/events.html title="Events">Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Runtime-Environment/inspection.html title="Runtime Environment Inspection">Runtime Environment Inspection</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Logging
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/_index.html title="Logging">Logging</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/logging-structure.html title="Logging Structure">Logging Structure</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/configuring-logging-capabilities.html title="Configuring Logger Settings">Configuring Logger Settings</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/adjusting-logging-at-runtime.html title="Adjusting Logging at Runtime">Adjusting Logging at Runtime</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/logging-within-a-resource.html title="Logging Within A Resource">Logging Within A Resource</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/viewing-logging-events.html title="Viewing Logging Events">Viewing Logging Events</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Logging/logging-config-plugin.html title="Logging Configuration Plugin">Logging Configuration Plugin</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Containers
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Containers/containers.html title="Containers">Containers</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Containers/in-sandbox.html title="Use in Python Sandbox">Use in Python Sandbox</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Containers/in-a-domain.html title="Use in a Domain">Use in a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Containers/plugin-class.html title="Plugin Class">Plugin Class</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Containers/containerized-components.html title="Docker REDHAWK Components">Docker REDHAWK Components</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        IDE DEPRECATED
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/_index.html title="IDE(DEPRECATED)">IDE(DEPRECATED)</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/launching-the-ide.html title="Launching the REDHAWK IDE for the First Time">Launching the REDHAWK IDE for the First Time</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/pydev-overview.html title="PyDev Overview">PyDev Overview</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/workbench.html title="The Workbench">The Workbench</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-dir depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+            Editors and Views
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-dir -->
+        <div class="tree-of-files-children dontshow">
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/_index.html title="Editors and Views">Editors and Views</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/softpkg-editor.html title="SoftPkg Editor">SoftPkg Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/waveform-editor.html title="Waveform Editor">Waveform Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/node-editor.html title="Node Editor">Node Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/nextmidas-plot-editor.html title="NeXtMidas Plot Editor">NeXtMidas Plot Editor</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/redhawk-explorer-view.html title="REDHAWK Explorer View">REDHAWK Explorer View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/redhawk-plot-view.html title="REDHAWK Plot View">REDHAWK Plot View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/plot-settings-dialog.html title="Plot Settings Dialog">Plot Settings Dialog</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/event-viewer-view.html title="Event Viewer View">Event Viewer View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/data-list-statistics-view.html title="Data List and Statistics Views">Data List and Statistics Views</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/port-monitor-view.html title="Port Monitor View">Port Monitor View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/sri-view.html title="SRI View">SRI View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/console-view.html title="Console View">Console View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+            <div class="tree-of-files-child depth2">
+                <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+                <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/Editors-and-Views/properties-view.html title="Properties View">Properties View</a>
+                <div style="clear: left;"></div>
+            </div>  <!-- end tree-of-files-child -->
+        </div>  <!-- end tree-of-files-children -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/creating-redhawk-projects.html title="Creating REDHAWK Projects">Creating REDHAWK Projects</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/namespaces.html title="Adding/Changing/Removing REDHAWK Project Namespaces">Adding/Changing/Removing REDHAWK Project Namespaces</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/debugging.html title="Debugging REDHAWK Components and Devices with Eclipse">Debugging REDHAWK Components and Devices with Eclipse</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/deploying-projects.html title="Deploying Projects to the SDRROOT">Deploying Projects to the SDRROOT</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/snapshot-tool.html title="Snapshot Tool">Snapshot Tool</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/connect-wizard.html title="Connect Wizard">Connect Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/octave-wizard.html title="Using the Octave Wizard">Using the Octave Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/plot-port-wizard.html title="Plot Port Wizard">Plot Port Wizard</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/IDE-DEPRECATED/exploring-sdrroot.html title="SDRROOT in the IDE">SDRROOT in the IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Exploring Domain
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/_index.html title="Running Domain in the IDE">Running Domain in the IDE</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/connecting-to-a-domain.html title="Connecting to a Domain">Connecting to a Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/viewing-domain-contents.html title="Viewing the Contents of the Domain in the REDHAWK Explorer View">Viewing the Contents of the Domain in the REDHAWK Explorer View</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/working-with-waveforms.html title="Working with Waveforms on a Running Domain">Working with Waveforms on a Running Domain</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/plotting-bulkio-ports.html title="Plotting BulkIO Ports">Plotting BulkIO Ports</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/increasing-bulkio-connection-bandwidth.html title="Increasing the Bandwidth of BulkIO Connections">Increasing the Bandwidth of BulkIO Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Exploring-Domain/getting-error-condition-details.html title="Getting Details About Error Conditions">Getting Details About Error Conditions</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-dir depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></div>
+        Appendices
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-dir -->
+    <div class="tree-of-files-children dontshow">
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Appendices/optimization.html title="Optimization">Optimization</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Appendices/sharing-projects.html title="Share Projects With Others">Share Projects With Others</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Appendices/troubleshoot-connections.html title="Troubleshoot Connections">Troubleshoot Connections</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+        <div class="tree-of-files-child depth1">
+            <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+            <a class="save-tree" href=/3.0.1/html/Appendices/troubleshoot-omni.html title="Troubleshoot omniNames and omniEvents">Troubleshoot omniNames and omniEvents</a>
+            <div style="clear: left;"></div>
+        </div>  <!-- end tree-of-files-child -->
+    </div>  <!-- end tree-of-files-children -->
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.1/html/glossary.html title="Glossary">Glossary</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+    <div class="tree-of-files-child depth0">
+        <div class="ui-accordion-header-icon ui-icon ui-icon-blank"></div>
+        <a class="save-tree" href=/3.0.1/html/acronyms.html title="Acronyms">Acronyms</a>
+        <div style="clear: left;"></div>
+    </div>  <!-- end tree-of-files-child -->
+</div>  <!-- end div id=tree-of-files -->
+<div id="TOC">
+<a href="#debugging-redhawk-components-and-devices-with-eclipse" class="depth0">Debugging REDHAWK Components and Devices with Eclipse</a>
+    <a href="#running-unit-tests" class="depth1">Running Unit Tests</a>
+    <a href="#running-a-component-or-device-from-the-redhawk-sandbox" class="depth1">Running a Component or Device from the REDHAWK Sandbox</a>
+        <a href="#releasing-a-componentdevice-from-the-redhawk-sandbox" class="depth2">Releasing a Component/Device from the REDHAWK Sandbox</a>
+        <a href="#terminating-a-component-from-the-redhawk-sandbox" class="depth2">Terminating a Component from the REDHAWK Sandbox</a>
+    <a href="#using-the-debugger-with-the-sandbox" class="depth1">Using the Debugger with the Sandbox</a>
+        <a href="#setting-breakpoints-in-component-source-code" class="depth2">Setting Breakpoints in Component source code</a>
+        <a href="#launching-a-component-in-the-redhawk-sandbox-in-debug-mode" class="depth2">Launching a Component in the REDHAWK Sandbox in Debug Mode</a>
+</div>  <!-- end div id=TOC -->
+</div>  <!-- end div id=navigation -->
+<div id="content">
+<h1 id="debugging-redhawk-components-and-devices-with-eclipse">Debugging REDHAWK Components and Devices with Eclipse</h1>
+<p>The REDHAWK IDE uses the debugging capabilities from the JDT, CDT, <abbr title="See Glossary.">PyDev</abbr>, and REDHAWK <abbr title="See Glossary.">sandbox</abbr>. The debugger provides tools to detect and diagnose errors in an <abbr title="See Glossary.">application</abbr> during execution. The debugger allows control of execution of the program by setting breakpoints, suspending launched programs, stepping through source code, and examining the contents of variables.</p>
+<p>For more details on debugging concepts, consult the Eclipse documentation at <a href="https://help.eclipse.org">https://help.eclipse.org</a> or view the embedded documentation from within the REDHAWK IDE by selecting <strong>Help &gt; Help Contents</strong>.</p>
+<p>In the Eclipse documentation browser refer to the following sections for additional debugging concepts and details:</p>
+<ul>
+<li><strong>Java development user guide &gt; Concepts &gt; Debugger</strong></li>
+<li><strong>Java development user guide &gt; Concepts &gt; Breakpoints</strong></li>
+<li><strong>Java development user guide &gt; Tasks &gt; Running and Debugging</strong></li>
+<li><strong>C/C++ Development User Guide &gt; Concepts &gt; Debug</strong></li>
+<li><strong>C/C++ Development User Guide &gt; Tasks &gt; Running and debugging projects &gt; Debugging</strong></li>
+</ul>
+<h3 id="running-unit-tests">Running Unit Tests</h3>
+<p><abbr title="See Glossary.">Component</abbr> and <abbr title="See Glossary.">device</abbr> projects created with the IDE have a <code>tests</code> folder that contains a functional example test case. This test case checks that the resource can be started, stopped, and released without error.</p>
+<p>To run the unit test case:</p>
+<ol>
+<li>From the <abbr title="See Glossary."><strong>Project Explorer</strong> view</abbr>, expand the project folder then the <code>tests</code> folder to display the existing test cases.</li>
+<li>Right-click the test script, select <strong>Run As &gt; Python unit-test</strong>.</li>
+<li>Check the test results from the <strong><abbr title="See Glossary.">Console</abbr></strong> and <strong>PyUnit</strong> views.</li>
+</ol>
+<h3 id="running-a-component-or-device-from-the-redhawk-sandbox">Running a Component or Device from the REDHAWK Sandbox</h3>
+<p>The REDHAWK sandbox provides an environment to run components and devices without the need for a <abbr title="See Glossary.">domain</abbr> or <abbr title="See Glossary.">Device Manager</abbr>. When running a component or device from the sandbox, it is started as its own forked process. A new <strong>Console</strong> view is created for logging and error messages.</p>
+<p>To launch a REDHAWK component or device in the sandbox:</p>
+<ol>
+<li>Open the project's <code>spd.xml</code> file.</li>
+<li>From the <strong>Overview</strong> tab, in the <strong>Testing</strong> section, click <strong>Launch a local component</strong>.</li>
+<li>From the <abbr title="See Glossary.">REDHAWK Explorer view</abbr>, expand the <strong>Sandbox</strong>.</li>
+<li>To view a running component, expand or double click the <strong>Chalkboard</strong>. To view a running device, expand the <strong>Device Manager</strong>.</li>
+<li>To display the corresponding console, right-click the component or device, select <strong>Show Console</strong>.</li>
+</ol>
+<h4 id="releasing-a-componentdevice-from-the-redhawk-sandbox">Releasing a Component/Device from the REDHAWK Sandbox</h4>
+<p>Releasing a resource invokes a graceful shutdown, which follows the object lifecycle sequence. Release makes a call to the resource's <code>releaseObject()</code> method to initiate the sequence. There are two ways to release a component using the IDE and one to release a device:</p>
+<ul>
+<li><p>Releasing using <strong>REDHAWK Explorer</strong> view:</p>
+<ol>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand <strong>Sandbox &gt; Chalkboard</strong> to display the running component or <strong>Sandbox &gt; Device Manager</strong> to display a running device.</li>
+<li>Right-click the component/device, select <strong>Release</strong>.</li>
+</ol></li>
+<li><p>Releasing using <strong>Chalkboard</strong> diagram:</p>
+<ol>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
+<li>In the <strong>Chalkboard</strong> diagram, right-click the REDHAWK component, select <strong>Release</strong>.</li>
+</ol></li>
+</ul>
+<h4 id="terminating-a-component-from-the-redhawk-sandbox">Terminating a Component from the REDHAWK Sandbox</h4>
+<p>Sometimes a REDHAWK component fails to respond to input. In these cases the component may need to be terminated. Terminate kills the processes of the resource.</p>
+<p>To terminate a component:</p>
+<ul>
+<li><p>Terminating using <strong>REDHAWK Explorer</strong> view:</p>
+<ol>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox &gt; Chalkboard</strong>.</li>
+<li>Right-click the REDHAWK component, select <strong>Terminate</strong>.</li>
+</ol></li>
+<li><p>Terminating using the <strong>Chalkboard</strong>:</p>
+<ol>
+<li>In the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox</strong>, double-click <strong>Chalkboard</strong>.</li>
+<li>In the <strong>Chalkboard</strong> diagram, right-click the REDHAWK component, select <strong>Terminate</strong>.</li>
+</ol></li>
+<li><p>Terminating using the <strong>Console</strong> view:</p>
+<ol>
+<li>In the <strong>Console</strong> view, click the <strong>Display Selected Console</strong> drop down.</li>
+<li>Select the launched REDHAWK component from the drop-down list to switch to its console.</li>
+<li>Click the <strong>Terminate</strong> icon, indicated by a red square.</li>
+</ol></li>
+</ul>
+<h3 id="using-the-debugger-with-the-sandbox">Using the Debugger with the Sandbox</h3>
+<p>The REDHAWK IDE provides an infrastructure-free way to use, test, and debug a REDHAWK components. This section describes how to use the debugging features of the IDE.</p>
+<h4 id="setting-breakpoints-in-component-source-code">Setting Breakpoints in Component source code</h4>
+<p>A breakpoint suspends the execution of a program at the location where the breakpoint is set. Breakpoints can be enabled and disabled via the <strong>Breakpoints</strong> view or from the source code editor.</p>
+<p>To set a breakpoint from the source code editor:</p>
+<ol>
+<li>Open the source code file.</li>
+<li>Choose a line to set the breakpoint.</li>
+<li><p>Directly to the left of the line of code, in the vertical marker bar, perform one of the following actions:</p>
+<ul>
+<li>Right-click, select <strong>Add Breakpoint</strong> or <strong>Toggle Breakpoint</strong>.</li>
+<li>Double-click in the marker bar.</li>
+</ul></li>
+<li><p>A small solid blue (for C/C++/Java code) or green (for Python code) circle marks the breakpoint location.</p></li>
+</ol>
+<h4 id="launching-a-component-in-the-redhawk-sandbox-in-debug-mode">Launching a Component in the REDHAWK Sandbox in Debug Mode</h4>
+<p>To use the REDHAWK IDE's debugger, a REDHAWK component can be launched in the sandbox in debug mode.</p>
+<p>A component can be launched in debug mode in several ways:</p>
+<ul>
+<li><p>From the Software Package Descriptor (SPD) file Editor:</p>
+<ol>
+<li>Open the project's spd.xml file.</li>
+<li>From the <strong>Overview</strong> tab of the <abbr title="See Glossary.">SoftPkg Editor</abbr>, in the <strong>Testing</strong> section, click <strong>Debug a component in the Sandbox</strong>.</li>
+<li>The REDHAWK component is now launched in the sandbox in debug mode.</li>
+</ol></li>
+<li><p>From the Project Explorer:</p>
+<ol>
+<li>In the <strong>Project Explorer</strong> view, expand the project.</li>
+<li>Right-click project's <code>spd.xml</code> file and select <strong>Debug As &gt; 1 Launch component in Sandbox</strong>.</li>
+<li>The REDHAWK component is now launched in the sandbox in debug mode.</li>
+</ol></li>
+</ul>
+<p>There are two ways to confirm that the REDHAWK component has been launched in debug mode:</p>
+<ul>
+<li>From the <strong>Chalkboard</strong> diagram, there is a small bug icon at the top right corner of the REDHAWK component.</li>
+<li>From the <strong>REDHAWK Explorer</strong> view, expand the <strong>Sandbox &gt; Chalkboard</strong> and a <strong>\<DEBUGGING\></strong> decorator is displayed to the right of the REDHAWK component.</li>
+</ul>
+<p>The debugger can switch between Python, C++, and Java while debugging. The REDHAWK IDE can also launch other components in the sandbox to interact with components in debug mode.</p>
+<p>Note that there are three separate debuggers for C++, Python, and Java. They all support the basic debugging capabilities such as setting breakpoints, stepping through executing code, and viewing variables. However, some debuggers have additional features that are not available to the others. For example, the Java debugger has the ability to hot swap code as it is executing.</p>
+<p>If there are breakpoints set and triggered, a <strong>Confirm Perspective Switch</strong> dialog prompts the user to open the Debug <abbr title="See Glossary.">perspective</abbr>. Clicking <strong>Yes</strong> rearranges the <abbr title="See Glossary.">workbench</abbr> so it is geared towards debugging source code.</p>
+<p>The Debug perspective displays these additional views:</p>
+<ul>
+<li><strong>Debug</strong> view: The <strong>Debug</strong> view displays the stack frame for the suspended threads in debug mode. Each thread in the program appears as a node in the tree. It displays the process for each target that is running. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+<li><strong>Variables</strong> view: The <strong>Variables</strong> view displays information about the variables associated with the stack frame selected in the <strong>Debug</strong> view. New values can be assigned to variables while stepping through the source code. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+<li><strong>Breakpoints</strong> view: The <strong>Breakpoints</strong> view lists all the breakpoints currently set in the workspace. Double-click a breakpoint to display its location in the editor. Breakpoints can be enabled, disabled, deleted, created, grouped by working set, triggered by a user supplied hit count, triggered only in certain conditions, or triggered by exceptions. Refer to <strong>Help &gt; Help Contents</strong> or the Eclipse documentation for more details.</li>
+</ul>
+</div>  <!-- end div id=content -->
+</body>
+</html>
