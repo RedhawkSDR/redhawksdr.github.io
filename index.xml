@@ -2353,6 +2353,17 @@ Core Framework Features  Redesigned FrontEnd Interfaces  Created a hierarchical 
     </item>
     
     <item>
+      <title>REDHAWK Release Notes - 3.0.1</title>
+      <link>https://redhawksdr.github.io/release-notes/3.0-lts/release-notes-3.0.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/3.0-lts/release-notes-3.0.1/</guid>
+      <description>The effort in REDHAWK 3.0.1 focused on:
+ Replace log4j with reload4j in the Core Framework and in the IDE. Resolved bug preventing fei3-generator from generating python code Resolved bug preventing IDE from connecting to a running redhawk-3.0.0 domain  Fixes The following fixes were completed in REDHAWK 3.0.1:
+Core Framework Fixes  Replaced log4j dependency with reload4j Fixed a bug in the Java Streams API that was causing null pointer exceptions when making calls to the SRI Resolved bug preventing fei3-generator from generating python code  IDE Fixes  Resolved bug preventing IDE from connecting to a running redhawk-3.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://redhawksdr.github.io/_footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
