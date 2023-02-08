@@ -2219,6 +2219,17 @@ Fixes  Resolved component deployment with valgrind by removing a trailing space 
     </item>
     
     <item>
+      <title>REDHAWK Release Notes - 2.2.10</title>
+      <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.10/</guid>
+      <description>The effort in REDHAWK 2.2.10 focused on:
+ Python sandbox bug fixes OmniOrb depencency version configuration fix  Fixes The following fixes were completed in REDHAWK 2.2.10:
+Core Framework Fixes  Fixed some problems with the Python sandbox: ** PRFs are no longer invalid when the kind-type is not specified for some properties. ** External properties via command line are now properly passed to launch components. Fixed problem with EPEL overriding required OmniOrb version.</description>
+    </item>
+    
+    <item>
       <title>REDHAWK Release Notes - 2.2.9</title>
       <link>https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
