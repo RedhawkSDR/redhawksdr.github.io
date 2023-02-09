@@ -1698,7 +1698,7 @@
 	"title": "REDHAWK Release Notes - 2.2.10",
 	"tags": [],
 	"description": "",
-	"content": " The effort in REDHAWK 2.2.10 focused on:\n Python sandbox bug fixes OmniOrb depencency version configuration fix  Fixes The following fixes were completed in REDHAWK 2.2.10:\nCore Framework Fixes  Fixed some problems with the Python sandbox: ** PRFs are no longer invalid when the kind-type is not specified for some properties. ** External properties via command line are now properly passed to launch components. Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.  "
+	"content": " The effort in REDHAWK 2.2.10 focused on:\n Python sandbox bug fixes OmniOrb depencency version configuration fix  Fixes The following fixes were completed in REDHAWK 2.2.10:\nCore Framework Fixes  Fixed some problems with the Python sandbox:  PRFs are no longer invalid when the kind-type is not specified for some properties. External properties via command line are now properly passed to launch components.  Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.9/",
