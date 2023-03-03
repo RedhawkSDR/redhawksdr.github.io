@@ -4,7 +4,7 @@
 	"title": "Home",
 	"tags": [],
 	"description": "",
-	"content": " Description REDHAWK is a software-defined radio (SDR) framework designed to support the development, deployment, and management of real-time software radio applications. To support the design and development of software applications, REDHAWK provides tools that allow development and testing of software modules called \u0026ldquo;Components\u0026rdquo; and composition of Components into \u0026ldquo;Waveform Applications\u0026rdquo; that can be seamlessly deployed on a single computer or multiple network-enabled computers.\nThe REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.\nRecent Announcements Release of REDHAWK 2.2.10  (February 2023) Release of REDHAWK 3.0.1  (September 2022) Release of REDHAWK 2.3.1  (August 2022) License REDHAWK is licensed under a combination of the GNU Lesser General Public License (LGPL), the Eclipse Public License (EPL), the Apache (v.2.0) License, the Python Software Foundation (PSF) license agreement, Mozilla Public License (v.1.1), and the GNU General Public License (GPL). For more information, refer to the LICENSE file in the respective repositories. REDHAWK documentation is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. REDHAWK documentation is built with Hugo which is licensed under the Apache License 2.0 and uses the Hugo DocDock Theme, licensed under the MIT License.\nCopyright This work is protected by Copyright. For updated copyright information, refer to the Copyright file.\n"
+	"content": " Description REDHAWK is a software-defined radio (SDR) framework designed to support the development, deployment, and management of real-time software radio applications. To support the design and development of software applications, REDHAWK provides tools that allow development and testing of software modules called \u0026ldquo;Components\u0026rdquo; and composition of Components into \u0026ldquo;Waveform Applications\u0026rdquo; that can be seamlessly deployed on a single computer or multiple network-enabled computers.\nThe REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.\nRecent Announcements Release of REDHAWK 2.3.2  (February 2023) Release of REDHAWK 2.2.10  (February 2023) Release of REDHAWK 3.0.1  (September 2022) License REDHAWK is licensed under a combination of the GNU Lesser General Public License (LGPL), the Eclipse Public License (EPL), the Apache (v.2.0) License, the Python Software Foundation (PSF) license agreement, Mozilla Public License (v.1.1), and the GNU General Public License (GPL). For more information, refer to the LICENSE file in the respective repositories. REDHAWK documentation is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. REDHAWK documentation is built with Hugo which is licensed under the Apache License 2.0 and uses the Hugo DocDock Theme, licensed under the MIT License.\nCopyright This work is protected by Copyright. For updated copyright information, refer to the Copyright file.\n"
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.8/",
@@ -823,14 +823,14 @@
 	"title": "REDHAWK 2.3",
 	"tags": [],
 	"description": "",
-	"content": "REDHAWK 2.3 is a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor (2.3.x) releases.\n REDHAWK 2.3.1 Manual - No changes from the 2.3.0 manual. REDHAWK 2.3.0 Manual  "
+	"content": "REDHAWK 2.3 is a feature complete series that may include sub-minor version releases consisting of bug fixes only. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor (2.3.x) releases.\n REDHAWK 2.3.2 Manual - No changes from the 2.3.0 manual. REDHAWK 2.3.1 Manual - No changes from the 2.3.0 manual. REDHAWK 2.3.0 Manual  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.3-lts/",
 	"title": "REDHAWK 2.3",
 	"tags": [],
 	"description": "",
-	"content": "REDHAWK 2.3.x is a feature complete series that may include sub-minor version releases consisting of only bug fixes. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Please contact the program office for support-related requests.\n REDHAWK Release Notes - 2.3.1   REDHAWK Release Notes - 2.3.0   "
+	"content": "REDHAWK 2.3.x is a feature complete series that may include sub-minor version releases consisting of only bug fixes. Both API and ABI forwards/backwards compatibility are guaranteed between sub-minor releases. Please contact the program office for support-related requests.\n REDHAWK Release Notes - 2.3.2   REDHAWK Release Notes - 2.3.1   REDHAWK Release Notes - 2.3.0   "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.0-lts/release-notes-2.0.7/",
@@ -1699,6 +1699,13 @@
 	"tags": [],
 	"description": "",
 	"content": " The effort in REDHAWK 2.2.10 focused on:\n Python sandbox bug fixes OmniOrb depencency version configuration fix  Fixes The following fixes were completed in REDHAWK 2.2.10:\nCore Framework Fixes  Fixed some problems with the Python sandbox:  PRFs are no longer invalid when the kind-type is not specified for some properties. External properties via command line are now properly passed to launch components.  Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.  "
+},
+{
+	"uri": "https://redhawksdr.github.io/release-notes/2.3-lts/release-notes-2.3.2/",
+	"title": "REDHAWK Release Notes - 2.3.2",
+	"tags": [],
+	"description": "",
+	"content": " The effort in REDHAWK 2.3.2 focused on:\n Python sandbox bug fixes OmniOrb depencency version configuration fix  Fixes The following fixes were completed in REDHAWK 2.3.2:\nCore Framework Fixes  Fixed some problems with the Python sandbox:  PRFs are no longer invalid when the kind-type is not specified for some properties. External properties via command line are now properly passed to launch components.  Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.  "
 },
 {
 	"uri": "https://redhawksdr.github.io/release-notes/2.2-lts/release-notes-2.2.9/",
